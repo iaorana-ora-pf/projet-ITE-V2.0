@@ -16,7 +16,8 @@
         }
       ],
       "start": 2016,
-      "end": 2016
+      "end": 2016,
+      "added": "2025-06-14"
     },
     {
       "name": "Politique de Santé de la Polynésie française 2016-2025",
@@ -34,7 +35,8 @@
         }
       ],
       "start": 2016,
-      "end": 2016
+      "end": 2016,
+      "added": "2025-06-14"
     },
     {
       "name": "Enquête santé - Jeunes",
@@ -54,7 +56,8 @@
         }
       ],
       "start": 2016,
-      "end": 2016
+      "end": 2016,
+      "added": "2025-06-14"
     },
     {
       "name": "Données sur la santé - Jeunes",
@@ -73,7 +76,8 @@
         }
       ],
       "start": 2016,
-      "end": 2016
+      "end": 2016,
+      "added": "2025-06-14"
     }
   ],
   "2018": [
@@ -94,7 +98,8 @@
         }
       ],
       "start": 2018,
-      "end": 2018
+      "end": 2018,
+      "added": "2025-06-14"
     },
     {
       "name": "Schéma de Prévention et de Promotion de la Santé 2018-2022",
@@ -112,7 +117,8 @@
         }
       ],
       "start": 2018,
-      "end": 2018
+      "end": 2018,
+      "added": "2025-06-14"
     }
   ],
   "2001": [
@@ -132,7 +138,8 @@
         }
       ],
       "start": 2001,
-      "end": 2001
+      "end": 2001,
+      "added": "2025-06-14"
     }
   ],
   "2015": [
@@ -153,7 +160,8 @@
         }
       ],
       "start": 2015,
-      "end": 2015
+      "end": 2015,
+      "added": "2025-06-14"
     },
     {
       "name": "Données sur la santé - Cancer",
@@ -171,7 +179,8 @@
         }
       ],
       "start": 2015,
-      "end": 2015
+      "end": 2015,
+      "added": "2025-06-14"
     },
     {
       "name": "Création du dispositif \"Entreprises actives\" pour la santé des salariés",
@@ -190,7 +199,8 @@
         }
       ],
       "start": 2015,
-      "end": 2015
+      "end": 2015,
+      "added": "2025-06-14"
     }
   ],
   "1996": [
@@ -211,7 +221,8 @@
         }
       ],
       "start": 1996,
-      "end": 1996
+      "end": 1996,
+      "added": "2025-06-14"
     }
   ],
   "2024": [
@@ -233,7 +244,8 @@
         }
       ],
       "start": 2024,
-      "end": 2024
+      "end": 2024,
+      "added": "2025-06-14"
     },
     {
       "name": "Données sur la santé - Jeunes",
@@ -253,7 +265,8 @@
         }
       ],
       "start": 2024,
-      "end": 2024
+      "end": 2024,
+      "added": "2025-06-14"
     }
   ],
   "2020": [
@@ -274,7 +287,8 @@
         }
       ],
       "start": 2020,
-      "end": 2020
+      "end": 2020,
+      "added": "2025-06-14"
     }
   ],
   "2010": [
@@ -297,7 +311,8 @@
         }
       ],
       "start": 2010,
-      "end": 2010
+      "end": 2010,
+      "added": "2025-06-14"
     }
   ],
   "1772": [
@@ -318,7 +333,8 @@
         }
       ],
       "start": 1772,
-      "end": 1772
+      "end": 1772,
+      "added": "2025-06-14"
     }
   ],
   "1863": [
@@ -339,10 +355,33 @@
         }
       ],
       "start": 1863,
-      "end": 1863
+      "end": 1864,
+      "added": "2025-06-14"
     }
   ],
- "1918": [
+  "1864": [
+    {
+      "name": "Épidémie de variole aux Marquises",
+      "category": [
+        "Données surveillance et recherche"
+      ],
+      "keywords": [
+        "Épidémies",
+        "Variole"
+      ],
+      "description": "En août 1863, l’aviso Le Diamant accoste à Nuku Hiva avec à son bord des Polynésiens rapatriés du Pérou, dont plusieurs étaient infectés par la variole. Malgré les tentatives d’isolement, la maladie se propage rapidement à Nuku Hiva et Ua Pou, touchant surtout les populations indigènes. En mars 1864, Nuku Hiva aurait perdu la moitié de sa population (958 morts pour 998 survivants), et Ua Pou, les deux tiers.\nEn février 1864, un chirurgien est envoyé pour vacciner la population à Taiohae, alors que l’épidémie déclinait.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1863,
+      "end": 1864,
+      "added": "2025-06-14"
+    }
+  ],
+  "1918": [
     {
       "name": "Epidémie de grippe espagnole",
       "category": [
@@ -361,7 +400,8 @@
         }
       ],
       "start": 1918,
-      "end": 1918
+      "end": 1918,
+      "added": "2025-06-14"
     }
   ],
   "1850": [
@@ -383,7 +423,8 @@
         }
       ],
       "start": 1850,
-      "end": 1850
+      "end": 1850,
+      "added": "2025-06-14"
     }
   ],
   "1931": [
@@ -403,7 +444,8 @@
         }
       ],
       "start": 1931,
-      "end": 1931
+      "end": 1931,
+      "added": "2025-06-14"
     }
   ],
   "1986": [
@@ -423,7 +465,8 @@
         }
       ],
       "start": 1986,
-      "end": 1986
+      "end": 1986,
+      "added": "2025-06-14"
     }
   ],
   "2017": [
@@ -441,16 +484,13 @@
       "description": "Ces dispositifs ont pour objectif de promouvoir la santé à l’école, en permettant aux enfants d’acquérir dès le plus jeune âge des compétences et de développer des comportements favorables à leur santé et leur bien-être.\n",
       "sources": [
         {
-  "label": "Direction de la santé",
-  "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/"
-},
-{
-  "label": "Guide de présentation du dispositif école et CJA en santé",
-  "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2022/02/dsp-ecole-en-sante-guide-de-presentation.pdf"
-}
+          "label": "Direction de la santé",
+          "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/, Guide de présentation du dispositif école et CJA en santé | https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2022/02/dsp-ecole-en-sante-guide-de-presentation.pdf"
+        }
       ],
       "start": 2017,
-      "end": 2017
+      "end": 2017,
+      "added": "2025-06-14"
     }
   ],
   "2014": [
@@ -466,11 +506,12 @@
       "sources": [
         {
           "label": "Tahiti info",
-          "url": "https://www.tahiti-infos.c/Parcours-sante-Le-parc-Paofai-s-equipe-pour-le-sport-en-plein-air_a101528.html"
+          "url": "https://www.tahiti-infos.com/Parcours-sante-Le-parc-Paofai-s-equipe-pour-le-sport-en-plein-air_a101528.html"
         }
       ],
       "start": 2014,
-      "end": 2014
+      "end": 2014,
+      "added": "2025-06-14"
     }
   ],
   "2022": [
@@ -492,7 +533,8 @@
         }
       ],
       "start": 2022,
-      "end": 2022
+      "end": 2022,
+      "added": "2025-06-14"
     }
   ],
   "2003": [
@@ -515,7 +557,8 @@
         }
       ],
       "start": 2003,
-      "end": 2003
+      "end": 2003,
+      "added": "2025-06-14"
     }
   ],
   "2019": [
@@ -539,7 +582,8 @@
         }
       ],
       "start": 2019,
-      "end": 2019
+      "end": 2019,
+      "added": "2025-06-14"
     }
   ],
   "1949": [
@@ -562,7 +606,8 @@
         }
       ],
       "start": 1949,
-      "end": 1949
+      "end": 1949,
+      "added": "2025-06-14"
     }
   ]
 }
