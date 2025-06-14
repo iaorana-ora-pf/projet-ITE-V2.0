@@ -12,7 +12,11 @@
       "sources": [
         {
           "label": "SOS 2016-2021",
-          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/06/Sche%CC%81ma-dorganisation-Sanitaire-en-PF-2016-2021-web.pdf, Conseil des ministres du 15/12/2021|https://www.presidence.pf/conseil_ministres/conseil-des-ministres-du-15-decembre-2021"
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/06/Sche%CC%81ma-dorganisation-Sanitaire-en-PF-2016-2021-web.pdf"
+        },
+        {
+          "label": "Conseil des ministres du 15/12/2021",
+          "url": "https://www.presidence.pf/conseil_ministres/conseil-des-ministres-du-15-decembre-2021"
         }
       ],
       "start": 2016,
@@ -485,7 +489,11 @@
       "sources": [
         {
           "label": "Direction de la santé",
-          "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/, Guide de présentation du dispositif école et CJA en santé | https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2022/02/dsp-ecole-en-sante-guide-de-presentation.pdf"
+          "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/"
+        },
+        {
+          "label": "Guide de présentation du dispositif école et CJA en santé",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2022/02/dsp-ecole-en-sante-guide-de-presentation.pdf"
         }
       ],
       "start": 2017,
