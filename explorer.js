@@ -5,7 +5,7 @@ let currentIndex = -1;
 let isAdmin = false; // devient vrai quand tu actives l'interface
 function toggleAdmin() {
   const pass = prompt("Mot de passe admin :");
-  if (pass === "iteadmin2025") {
+  if (pass === "Bazinga") {
     isAdmin = true;
     document.getElementById("admin-panel").style.display = "block";
   } else {
@@ -409,4 +409,40 @@ function toggleFilters() {
     icon.classList.remove("fa-chevron-down");
     icon.classList.add("fa-chevron-up");
   }
+}
+function filterRecent() {
+  const output = document.getElementById("admin-output");
+  const recentEvents = Object.values(events).flat().filter(ev => {
+    if (!ev.added) return false;
+    const addedDate = new Date(ev.added);
+    return addedDate > new Date(Date.now() - 14 * 24 * 60 * 60 * 1000);
+  });
+  output.innerHTML = `<p><strong>${recentEvents.length}</strong> événements récents trouvés.</p><ul>` +
+    recentEvents.map(ev => `<li>${ev.name} (${ev.added})</li>`).join("") + "</ul>";
+}
+function checkBrokenLinks() {
+  const output = document.getElementById("admin-output");
+  const links = Object.values(events).flatMap(ev =>
+    (ev.sources || []).filter(s => s.startsWith("http"))
+  );
+  
+  let checked = 0;
+  let broken = [];
+
+  output.innerHTML = "Vérification des liens en cours...";
+
+  links.forEach(link => {
+    fetch(link, { method: 'HEAD' })
+      .then(res => {
+        if (!res.ok) broken.push(link);
+      })
+      .catch(() => broken.push(link))
+      .finally(() => {
+        checked++;
+        if (checked === links.length) {
+          output.innerHTML = `<p><strong>${broken.length}</strong> lien(s) cassé(s) :</p><ul>` +
+            broken.map(b => `<li><a href="${b}" target="_blank">${b}</a></li>`).join("") + "</ul>";
+        }
+      });
+  });
 }
