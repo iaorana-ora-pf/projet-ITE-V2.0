@@ -2,7 +2,16 @@
 let events = {};
 let currentEvents = [];
 let currentIndex = -1;
-
+let isAdmin = false; // devient vrai quand tu actives l'interface
+function toggleAdmin() {
+  const pass = prompt("Mot de passe admin :");
+  if (pass === "iteadmin2025") {
+    isAdmin = true;
+    document.getElementById("admin-panel").style.display = "block";
+  } else {
+    alert("Mot de passe incorrect");
+  }
+}
 // Catégories fixes avec icônes associées
 const categoryColors = {
   "Gouvernance et pilotage stratégique": "#007b7f",
