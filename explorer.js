@@ -425,7 +425,7 @@ function checkBrokenLinks() {
 
   const links = Object.values(events).flatMap(ev =>
     (ev.sources || [])
-      .map(s => typeof s === "object" && s.url ? s.url : s) // support des sources avec label/url
+      .map(s => typeof s === "object" && s.url ? s.url : s)
       .filter(url => typeof url === "string" && url.startsWith("http"))
   );
 
@@ -435,16 +435,25 @@ function checkBrokenLinks() {
   output.innerHTML = `<span style="color: #007b7f;"><i class="fa fa-spinner fa-spin"></i> Vérification des liens en cours...</span>`;
 
   links.forEach(link => {
-    fetch(link, { method: 'GET', mode: 'no-cors' }) // on contourne CORS mais on ne peut pas lire la réponse
-      .catch(() => broken.push(link)) // les vrais échecs
+    fetch(link, { method: 'HEAD', mode: 'no-cors' }) // no-cors empêche toute lecture fiable
+      .catch(() => broken.push(link)) // erreurs réseau
       .finally(() => {
         checked++;
         if (checked === links.length) {
           output.innerHTML = broken.length === 0
-            ? "✅ Tous les liens semblent valides (ou bloqués par CORS)."
+            ? "✅ Tous les liens semblent valides (mais CORS limite la vérification réelle)."
             : `<p><strong>${broken.length}</strong> lien(s) potentiellement cassé(s) :</p><ul>` +
               broken.map(b => `<li><a href="${b}" target="_blank">${b}</a></li>`).join("") + "</ul>";
         }
       });
+
+    // ⚠️ 🔁 on ajoute une **sécurité** au cas où `fetch()` ne renvoie rien :
+    setTimeout(() => {
+      checked++;
+      if (checked === links.length && broken.length === 0) {
+        output.innerHTML = "✅ Tous les liens semblent corrects (vérification partielle uniquement).";
+      }
+    }, 5000); // délai de sécurité (ex : 5 secondes max par lien)
   });
 }
+
