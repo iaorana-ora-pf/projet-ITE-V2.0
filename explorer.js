@@ -422,26 +422,28 @@ function filterRecent() {
 }
 function checkBrokenLinks() {
   const output = document.getElementById("admin-output");
+
   const links = Object.values(events).flatMap(ev =>
-    (ev.sources || []).filter(s => s.startsWith("http"))
+    (ev.sources || [])
+      .map(s => typeof s === "object" && s.url ? s.url : s) // support des sources avec label/url
+      .filter(url => typeof url === "string" && url.startsWith("http"))
   );
-  
+
   let checked = 0;
   let broken = [];
 
-  output.innerHTML = "Vérification des liens en cours...";
+  output.innerHTML = `<span style="color: #007b7f;"><i class="fa fa-spinner fa-spin"></i> Vérification des liens en cours...</span>`;
 
   links.forEach(link => {
-    fetch(link, { method: 'HEAD' })
-      .then(res => {
-        if (!res.ok) broken.push(link);
-      })
-      .catch(() => broken.push(link))
+    fetch(link, { method: 'GET', mode: 'no-cors' }) // on contourne CORS mais on ne peut pas lire la réponse
+      .catch(() => broken.push(link)) // les vrais échecs
       .finally(() => {
         checked++;
         if (checked === links.length) {
-          output.innerHTML = `<p><strong>${broken.length}</strong> lien(s) cassé(s) :</p><ul>` +
-            broken.map(b => `<li><a href="${b}" target="_blank">${b}</a></li>`).join("") + "</ul>";
+          output.innerHTML = broken.length === 0
+            ? "✅ Tous les liens semblent valides (ou bloqués par CORS)."
+            : `<p><strong>${broken.length}</strong> lien(s) potentiellement cassé(s) :</p><ul>` +
+              broken.map(b => `<li><a href="${b}" target="_blank">${b}</a></li>`).join("") + "</ul>";
         }
       });
   });
