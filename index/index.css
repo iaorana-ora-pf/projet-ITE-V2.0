@@ -59,22 +59,25 @@ ACCUEIL Fenêtre flottante
   color: #363B40;
 }
 
-/* Style du bouton */
-.popup-content button {
-  background-color: #166F76;
+/* Style des boutons dans la fenêtre flottante */
+.popup-btn {
+  background-color: #166F76; /* Couleur du bouton */
   color: white;
   border: none;
-  padding: 15px 20px; /* Augmenter le padding pour donner plus d'espace dans les boutons */
+  padding: 15px 20px; /* Taille des boutons */
   font-size: 1.1em;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
-  margin-bottom: 10px; /* Ajouter de l'espace en-dessous du bouton */
+  width: 48%; /* Largeur des boutons égale */
+  margin-bottom: 10px; /* Espace entre les boutons */
+  text-align: center;
 }
 
-.popup-content button:hover {
+/* Changement de couleur au survol des boutons */
+.popup-btn:hover {
   background-color: #128c8c;
 }
+
 /* Appliquer le même style aux boutons à l'intérieur des balises <a> */
 .popup-content a button {
   background-color: #4CAF50;
@@ -90,6 +93,7 @@ ACCUEIL Fenêtre flottante
 .popup-content a button:hover {
   background-color: #45a049;
 }
+
 /* Conteneur pour les boutons (flexbox) */
 .popup-content .button-container {
   display: flex;
@@ -97,6 +101,7 @@ ACCUEIL Fenêtre flottante
   gap: 15px; /* Espace entre les boutons */
   margin-top: 20px; /* Marge au-dessus des boutons */
 }
+
 /* Animation d'apparition */
 @keyframes popupAnimation {
   from {
@@ -115,29 +120,10 @@ ACCUEIL Fenêtre flottante
   visibility: hidden;
 }
 
-/* Style des boutons dans la fenêtre flottante */
-.popup-btn {
-  background-color: #4CAF50; /* Couleur du bouton */
-  color: white;
-  border: none;
-  padding: 15px 20px; /* Taille des boutons */
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 48%; /* Largeur des boutons égale */
-  margin-bottom: 10px; /* Espace entre les boutons */
-  text-align: center;
-}
-
-.popup-btn:hover {
-  background-color: #45a049; /* Changement de couleur au survol */
-}
-
 /* Style pour les liens contenant des boutons */
 .popup-content a {
   text-decoration: none; /* Enlever les soulignements des liens */
 }
-
 
 
 
