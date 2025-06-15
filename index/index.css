@@ -11,6 +11,17 @@
  OK
 -----------------------------------*/
 /*-----------------------------------
+ Général
+-----------------------------------*/
+
+.title-3 {
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--main-green);
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+/*-----------------------------------
 ACCUEIL Fenêtre flottante 
 -----------------------------------*/
 
@@ -121,10 +132,31 @@ ACCUEIL Fenêtre flottante
 }
 
 
-
-
-
-
+/*-----------------------------------
+Barre latérale
+-----------------------------------*/
+.layout-with-sidebar {
+  display: flex;
+  transition: all 0.3s ease;
+}
+.layout-with-sidebar.sidebar-hidden .side-panel {
+  display: none;
+}
+.layout-with-sidebar.sidebar-hidden .main-content {
+  margin-left: 0;
+  padding-left: 1.5rem; /* ou comme tu veux */
+}
+.filters-block {
+  background: var(--light-bg);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
+#filters-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
 
 
 
@@ -158,13 +190,7 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 3rem;
 }
 
-.title-3 {
-  text-align: left;
-  font-size: 1.2rem;
-  color: var(--main-green);
-  margin-top: 0.25rem;
-  margin-bottom: 0.1rem;
-}
+
 
 .title-4 {
   text-align: left;
@@ -267,10 +293,6 @@ ACCUEIL Fenêtre flottante
 
 .hidden {
   display: none;
-}
-#filters-content {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
 }
 
 .filters-collapsed {
@@ -407,13 +429,6 @@ a.button {
 /*-----------------------------------
   BLOCS FILTRES
 -----------------------------------*/
-.filters-block {
-  background: var(--light-bg);
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  margin-bottom: 1.5rem;
-}
 
 .filtres-ligne {
   display: flex;
@@ -875,19 +890,7 @@ a.button {
   cursor: pointer;
   z-index: 999;
 }
-.layout-with-sidebar {
-  display: flex;
-  transition: all 0.3s ease;
-}
 
-.layout-with-sidebar.sidebar-hidden .side-panel {
-  display: none;
-}
-
-.layout-with-sidebar.sidebar-hidden .main-content {
-  margin-left: 0;
-  padding-left: 1.5rem; /* ou comme tu veux */
-}
 
 
 .side-btn {
