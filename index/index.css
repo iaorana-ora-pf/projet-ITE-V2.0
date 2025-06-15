@@ -11,17 +11,6 @@
  OK
 -----------------------------------*/
 /*-----------------------------------
- Général
------------------------------------*/
-
-.title-3 {
-  text-align: left;
-  font-size: 1.2rem;
-  color: var(--main-green);
-  margin-top: 0.25rem;
-  margin-bottom: 0.1rem;
-}
-/*-----------------------------------
 ACCUEIL Fenêtre flottante 
 -----------------------------------*/
 
@@ -132,60 +121,12 @@ ACCUEIL Fenêtre flottante
 }
 
 
-/*-----------------------------------
-Barre latérale
------------------------------------*/
-.layout-with-sidebar {
-  display: flex;
-  transition: all 0.3s ease;
-}
-.layout-with-sidebar.sidebar-hidden .side-panel {
-  display: none;
-}
-.layout-with-sidebar.sidebar-hidden .main-content {
-  margin-left: 0;
-  padding-left: 1.5rem; /* ou comme tu veux */
-}
-.filters-block {
-  background: var(--light-bg);
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  margin-bottom: 1.5rem;
-}
-#filters-content {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
-}
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 300px;
-  display: block;
-  min-width: 280px;
-}
-.dropdown-checkbox div {
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
-.dropdown-checkbox, .search-box {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-}
-.dropdown-checkbox div,
-.search-box textarea {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  height: 100px;
-}
-.title-4.inline-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 40px;
-}
+
+
+
+
+
+
 
 
 
@@ -217,7 +158,13 @@ Barre latérale
   margin-bottom: 3rem;
 }
 
-
+.title-3 {
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--main-green);
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem;
+}
 
 .title-4 {
   text-align: left;
@@ -277,7 +224,12 @@ Barre latérale
   align-items: flex-start;
 }
 
-
+.dropdown-checkbox,
+.search-box {
+  flex: 1 1 300px;
+  display: block;
+  min-width: 280px;
+}
 
 /* Modale d’info */
 .info-modal {
@@ -316,18 +268,21 @@ Barre latérale
 .hidden {
   display: none;
 }
+#filters-content {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
 
 .filters-collapsed {
   max-height: 0 !important;
   opacity: 0;
   pointer-events: none;
 }
-
-.title-4-inline {
-  display: flex;
+.title-4.inline-icon {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  gap: 6px;
+}
 /*-----------------------------------
   STRUCTURE GÉNÉRALE
 -----------------------------------*/
@@ -452,6 +407,13 @@ a.button {
 /*-----------------------------------
   BLOCS FILTRES
 -----------------------------------*/
+.filters-block {
+  background: var(--light-bg);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
+}
 
 .filtres-ligne {
   display: flex;
@@ -460,6 +422,25 @@ a.button {
   gap: 2rem;
 }
 
+.dropdown-checkbox, .search-box {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-checkbox div,
+.search-box textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 100px;
+}
+
+.dropdown-checkbox div {
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
 
 .search-box textarea {
   resize: none;
@@ -894,7 +875,19 @@ a.button {
   cursor: pointer;
   z-index: 999;
 }
+.layout-with-sidebar {
+  display: flex;
+  transition: all 0.3s ease;
+}
 
+.layout-with-sidebar.sidebar-hidden .side-panel {
+  display: none;
+}
+
+.layout-with-sidebar.sidebar-hidden .main-content {
+  margin-left: 0;
+  padding-left: 1.5rem; /* ou comme tu veux */
+}
 
 
 .side-btn {
@@ -1001,7 +994,11 @@ a.button {
 .hidden {
   display: none;
 }
-
+.title-4-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 .event-details-container p,
 .event-details-container ul,
