@@ -135,7 +135,7 @@ const total = Object.values(events).flat().filter(e =>
 
 const countEl = document.getElementById("event-count-display");
 if (countEl) {
-  countEl.innerHTML = `<strong>${total}</strong>`;
+  countEl.innerHTML = `Découvrez l'histoire de la santé publique à travers <strong>${total}</strong> événements clés.`;
 }
 }
 
