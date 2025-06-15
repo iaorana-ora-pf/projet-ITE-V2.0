@@ -67,7 +67,6 @@ ACCUEIL Fenêtre flottante
   border-radius: 5px;
   margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
   margin-bottom: 10px; /* Ajouter de l'espace en-dessous du bouton */
-  width: 48%;
 }
 
 .popup-content button:hover {
