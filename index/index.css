@@ -34,7 +34,7 @@ ACCUEIL Fenêtre flottante
 .popup-content {
   background-color: white;
   padding: 20px;
-  width: 70%;  /* Augmente la largeur pour le rendre plus rectangulaire */
+  width: 65%;  /* Augmente la largeur pour le rendre plus rectangulaire */
   max-width: 800px;  /* Fixe une largeur maximale si nécessaire */
   height: auto; /* Laisse la hauteur s'ajuster en fonction du contenu */
   border-radius: 10px; /* Garder des coins légèrement arrondis (si tu veux plus angulaire, mets à 0) */
