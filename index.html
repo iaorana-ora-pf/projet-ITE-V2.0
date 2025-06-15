@@ -1,7 +1,8 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+
+  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projet 'ITE</title>
@@ -9,25 +10,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-<body>
-  <div id="welcomePopup" class="popup">
-  <div class="popup-content">
-    <h1>Bienvenue sur la Frise Chronologique !</h1>
-    <p>Découvrez l'histoire à travers plus de 1000 événements clés. Explorez, filtrez et plongez dans les détails de chaque moment historique.</p>
-    <button id="closePopup">Commencer</button>
-  </div>
-</div>
-  <div id="app-layout" class="layout-with-sidebar">
 
-    <!-- ✅ Barre latérale -->
-    <div id="side-panel" class="side-panel">
-      <div class="side-panel-header">
-  <h1 class="side-title">Projet'ITE</h1>
-  <p class="side-subtitle">Base de connaissances dédiée à la santé publique<br>en Polynésie française</p>
-</div>
+<body>
+ <!-- ✅ Ecran d'acceuil -->
+<div id="welcomePopup" class="popup">
+  <div class="popup-content">
+    <h1>Bienvenue sur 'ITE, la base de connaissances dédiée à la santé publique en Polynésie française</h1>
+    <p>Découvrez l'histoire de la santé publique à travers </p>
       <p id="event-count-display" class="event-count-highlight">
   <!-- Ce texte sera mis à jour dynamiquement -->
 </p>
+    <p>événements clés. <br>
+      Explorez, filtrez et plongez dans les détails de chaque moment historique.</p>
+    <button id="closePopup">Explorer la frise</button>
+  </div>
+</div>
+
+  <!-- ✅ Barre latérale -->
+  <div id="app-layout" class="layout-with-sidebar">
+
+   
+    <div id="side-panel" class="side-panel">
+        
       <div class="side-panel-buttons">
   <button class="side-btn" onclick="toggleNewModal()" title="À propos">
     <i class="fa-solid fa-circle-info"></i>
