@@ -135,7 +135,7 @@ const total = Object.values(events).flat().filter(e =>
 
 const countEl = document.getElementById("event-count-display");
 if (countEl) {
-  countEl.innerHTML = `Découvrez l'histoire de la santé publique à travers <strong>${total}</strong> événements clés.`;
+  countEl.innerHTML = `Explorez, filtrez et plongez dans les détails de <strong>${total}</strong> événements de santé publique en Polynésie française .`;
 }
 }
 
