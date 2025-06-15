@@ -120,9 +120,15 @@ ACCUEIL Fenêtre flottante
   text-decoration: none; /* Enlever les soulignements des liens */
 }
 
-
-
-
+.info-modal-content a {
+  all: unset;
+  color: var(--link-green);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.info-modal-content a:hover {
+  color: var(--hover-green);
+}
 
 
 
