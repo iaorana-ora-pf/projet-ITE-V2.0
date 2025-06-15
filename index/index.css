@@ -157,8 +157,35 @@ Barre latérale
   transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
-
-
+.dropdown-checkbox,
+.search-box {
+  flex: 1 1 300px;
+  display: block;
+  min-width: 280px;
+}
+.dropdown-checkbox div {
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+.dropdown-checkbox, .search-box {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-checkbox div,
+.search-box textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 100px;
+}
+.title-4.inline-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 40px;
+}
 
 
 
@@ -250,12 +277,7 @@ Barre latérale
   align-items: flex-start;
 }
 
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 300px;
-  display: block;
-  min-width: 280px;
-}
+
 
 /* Modale d’info */
 .info-modal {
@@ -300,11 +322,12 @@ Barre latérale
   opacity: 0;
   pointer-events: none;
 }
-.title-4.inline-icon {
-  display: inline-flex;
+
+.title-4-inline {
+  display: flex;
   align-items: center;
-  gap: 6px;
-}
+  justify-content: space-between;
+  gap: 0.5rem;
 /*-----------------------------------
   STRUCTURE GÉNÉRALE
 -----------------------------------*/
@@ -437,25 +460,6 @@ a.button {
   gap: 2rem;
 }
 
-.dropdown-checkbox, .search-box {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-checkbox div,
-.search-box textarea {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  height: 100px;
-}
-
-.dropdown-checkbox div {
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
 
 .search-box textarea {
   resize: none;
@@ -997,11 +1001,7 @@ a.button {
 .hidden {
   display: none;
 }
-.title-4-inline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+
 }
 .event-details-container p,
 .event-details-container ul,
