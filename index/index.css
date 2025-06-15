@@ -62,7 +62,7 @@ ACCUEIL Fenêtre flottante
 
 /* Style du texte descriptif */
 .popup-content p {
-  font-size: 1em;
+  font-size: 0.8em;
   margin-bottom: 20px;
   color: #363B40;
 }
