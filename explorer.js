@@ -457,3 +457,16 @@ function checkBrokenLinks() {
       });
   });
 }
+// Obtenir les éléments du DOM
+const popup = document.getElementById("welcomePopup");
+const closePopupButton = document.getElementById("closePopup");
+
+// Fonction pour fermer la fenêtre flottante
+function closePopup() {
+  popup.classList.add("hide");
+  // Afficher la frise ou tout autre contenu après la fermeture
+  // Par exemple, tu peux faire apparaître un élément supplémentaire ou activer des fonctionnalités
+}
+
+// Ajouter un écouteur d'événement pour fermer la fenêtre quand le bouton est cliqué
+closePopupButton.addEventListener("click", closePopup);
