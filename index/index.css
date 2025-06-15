@@ -80,7 +80,7 @@ ACCUEIL Fenêtre flottante
 }
 
 /* Conteneur pour les boutons (flexbox) */
-.button-container {
+.popup-content .button-container {
   display: flex;
   justify-content: space-between;
   gap: 15px;
