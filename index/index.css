@@ -67,12 +67,20 @@ ACCUEIL Fenêtre flottante
   border-radius: 5px;
   margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
   margin-bottom: 10px; /* Ajouter de l'espace en-dessous du bouton */
+  width: 48%;
 }
 
 .popup-content button:hover {
   background-color: #128c8c;
 }
 
+/* Conteneur pour les boutons (flexbox) */
+.popup-content .button-container {
+  display: flex;
+  justify-content: space-between; /* Espacement égal entre les boutons */
+  gap: 20px; /* Espace entre les boutons */
+  margin-top: 20px; /* Marge au-dessus des boutons */
+}
 /* Animation d'apparition */
 @keyframes popupAnimation {
   from {
