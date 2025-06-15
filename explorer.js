@@ -470,3 +470,17 @@ function closePopup() {
 
 // Ajouter un écouteur d'événement pour fermer la fenêtre quand le bouton est cliqué
 closePopupButton.addEventListener("click", closePopup);
+document.addEventListener("DOMContentLoaded", function () {
+    const exploreBtn = document.getElementById("exploreBtn");
+    const welcomePopup = document.getElementById("welcomePopup");
+
+    exploreBtn.addEventListener("click", function (e) {
+      e.preventDefault(); // empêcher le saut immédiat à l'ancre
+      welcomePopup.classList.add("hide");
+
+      // attendre un peu avant de sauter à la section
+      setTimeout(() => {
+        window.location.hash = "frise";
+      }, 300); // temps pour jouer la transition
+    });
+  });
