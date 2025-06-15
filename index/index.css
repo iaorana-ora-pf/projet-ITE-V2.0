@@ -77,7 +77,7 @@ ACCUEIL Fenêtre flottante
 .popup-content .button-container {
   display: flex;
   justify-content: space-between; /* Espacement égal entre les boutons */
-  gap: 30px; /* Espace entre les boutons */
+  gap: 20px; /* Espace entre les boutons */
   margin-top: 20px; /* Marge au-dessus des boutons */
 }
 /* Animation d'apparition */
