@@ -75,7 +75,21 @@ ACCUEIL Fenêtre flottante
 .popup-content button:hover {
   background-color: #128c8c;
 }
+/* Appliquer le même style aux boutons à l'intérieur des balises <a> */
+.popup-content a button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 48%; /* Pour que les boutons soient de taille égale */
+}
 
+.popup-content a button:hover {
+  background-color: #45a049;
+}
 /* Conteneur pour les boutons (flexbox) */
 .popup-content .button-container {
   display: flex;
