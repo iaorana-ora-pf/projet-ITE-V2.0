@@ -34,13 +34,13 @@ ACCUEIL Fenêtre flottante
 .popup-content {
   background-color: white;
   padding: 40px;
-  width: 65%;  /* Augmente la largeur pour le rendre plus rectangulaire */
-  max-width: 800px;  /* Fixe une largeur maximale si nécessaire */
-  height: auto; /* Laisse la hauteur s'ajuster en fonction du contenu */
-  border-radius: 10px; /* Garder des coins légèrement arrondis (si tu veux plus angulaire, mets à 0) */
+  width: 65%;  /* Largeur de la fenêtre */
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
   text-align: justify;
   animation: popupAnimation 0.5s ease-out;
-  margin-bottom: 40px; /* Marge plus grande en bas du rectangle */
+  margin-bottom: 40px;
 }
 
 /* Style du titre */
@@ -48,8 +48,8 @@ ACCUEIL Fenêtre flottante
   font-size: 2em;
   margin-bottom: 20px;
   color: #166F76;
-  text-align: center; /* Garder le titre centré */
-  margin-top: 0; /* Enlever toute marge au-dessus du titre */
+  text-align: center;
+  margin-top: 0;
 }
 
 /* Style du texte descriptif */
@@ -61,15 +61,15 @@ ACCUEIL Fenêtre flottante
 
 /* Style des boutons dans la fenêtre flottante */
 .popup-btn {
-  background-color: #166F76; /* Couleur du bouton */
+  background-color: #166F76;
   color: white;
   border: none;
-  padding: 15px 20px; /* Taille des boutons */
+  padding: 15px 20px;
   font-size: 1.1em;
   cursor: pointer;
   border-radius: 5px;
   width: 48%; /* Largeur des boutons égale */
-  margin-bottom: 10px; /* Espace entre les boutons */
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -78,28 +78,12 @@ ACCUEIL Fenêtre flottante
   background-color: #128c8c;
 }
 
-/* Appliquer le même style aux boutons à l'intérieur des balises <a> */
-.popup-content a button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 15px 20px;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 48%; /* Pour que les boutons soient de taille égale */
-}
-
-.popup-content a button:hover {
-  background-color: #45a049;
-}
-
 /* Conteneur pour les boutons (flexbox) */
 .popup-content .button-container {
   display: flex;
-  justify-content: space-between; /* Espacement égal entre les boutons */
-  gap: 15px; /* Espace entre les boutons */
-  margin-top: 20px; /* Marge au-dessus des boutons */
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 /* Animation d'apparition */
