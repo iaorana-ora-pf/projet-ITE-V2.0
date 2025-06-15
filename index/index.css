@@ -33,13 +33,14 @@ ACCUEIL Fenêtre flottante
 /* Contenu de la fenêtre flottante */
 .popup-content {
   background-color: white;
-  padding: 20px;
+  padding: 40px;
   width: 65%;  /* Augmente la largeur pour le rendre plus rectangulaire */
   max-width: 800px;  /* Fixe une largeur maximale si nécessaire */
   height: auto; /* Laisse la hauteur s'ajuster en fonction du contenu */
   border-radius: 10px; /* Garder des coins légèrement arrondis (si tu veux plus angulaire, mets à 0) */
   text-align: justify;
   animation: popupAnimation 0.5s ease-out;
+  margin-bottom: 40px; /* Marge plus grande en bas du rectangle */
 }
 
 /* Style du titre */
@@ -47,6 +48,8 @@ ACCUEIL Fenêtre flottante
   font-size: 2em;
   margin-bottom: 20px;
   color: #166F76;
+  text-align: center; /* Garder le titre centré */
+  margin-top: 0; /* Enlever toute marge au-dessus du titre */
 }
 
 /* Style du texte descriptif */
