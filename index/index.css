@@ -61,10 +61,12 @@ ACCUEIL Fenêtre flottante
   background-color: #166F76;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 15px 20px; /* Augmenter le padding pour donner plus d'espace dans les boutons */
   font-size: 1.1em;
   cursor: pointer;
   border-radius: 5px;
+  margin-top: 20px; /* Ajouter de l'espace au-dessus du bouton */
+  margin-bottom: 10px; /* Ajouter de l'espace en-dessous du bouton */
 }
 
 .popup-content button:hover {
