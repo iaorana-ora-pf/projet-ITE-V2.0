@@ -135,7 +135,7 @@ const total = Object.values(events).flat().filter(e =>
 
 const countEl = document.getElementById("event-count-display");
 if (countEl) {
-  countEl.innerHTML = `La frise contient <strong>${total}</strong> <strong>événement${total > 1 ? "s" : ""}</strong>.`;
+  countEl.innerHTML = `<strong>${total}</strong>`;
 }
 }
 
