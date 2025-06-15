@@ -115,7 +115,28 @@ ACCUEIL Fenêtre flottante
   visibility: hidden;
 }
 
+/* Style des boutons dans la fenêtre flottante */
+.popup-btn {
+  background-color: #4CAF50; /* Couleur du bouton */
+  color: white;
+  border: none;
+  padding: 15px 20px; /* Taille des boutons */
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 48%; /* Largeur des boutons égale */
+  margin-bottom: 10px; /* Espace entre les boutons */
+  text-align: center;
+}
 
+.popup-btn:hover {
+  background-color: #45a049; /* Changement de couleur au survol */
+}
+
+/* Style pour les liens contenant des boutons */
+.popup-content a {
+  text-decoration: none; /* Enlever les soulignements des liens */
+}
 
 
 
