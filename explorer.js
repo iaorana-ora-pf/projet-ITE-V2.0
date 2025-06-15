@@ -486,3 +486,11 @@ function closePopup() {
       });
     }
   });
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchInput");
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      updateTimeline(); // Met à jour les résultats dès que l'utilisateur tape
+    });
+  }
+});
