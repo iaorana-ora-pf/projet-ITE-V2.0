@@ -468,19 +468,21 @@ function closePopup() {
   // Par exemple, tu peux faire apparaître un élément supplémentaire ou activer des fonctionnalités
 }
 
-// Ajouter un écouteur d'événement pour fermer la fenêtre quand le bouton est cliqué
-closePopupButton.addEventListener("click", closePopup);
-document.addEventListener("DOMContentLoaded", function () {
-    const exploreBtn = document.getElementById("exploreBtn");
-    const welcomePopup = document.getElementById("welcomePopup");
+ window.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("welcomePopup");
+    const exploreLink = document.getElementById("exploreBtn");
 
-    exploreBtn.addEventListener("click", function (e) {
-      e.preventDefault(); // empêcher le saut immédiat à l'ancre
-      welcomePopup.classList.add("hide");
+    if (popup && exploreLink) {
+      exploreLink.addEventListener("click", function (e) {
+        e.preventDefault(); // évite le saut brutal
 
-      // attendre un peu avant de sauter à la section
-      setTimeout(() => {
-        window.location.hash = "frise";
-      }, 300); // temps pour jouer la transition
-    });
+        // Ajoute la classe 'hide' pour animer la fermeture
+        popup.classList.add("hide");
+
+        // Navigue vers la frise après la transition
+        setTimeout(() => {
+          window.location.hash = "frise";
+        }, 400); // délai pour laisser le temps à l'animation CSS
+      });
+    }
   });
