@@ -71,6 +71,7 @@ ACCUEIL Fenêtre flottante
   flex: 1;
   margin-bottom: 10px;
   text-align: center;
+  width: 100%;
 }
 
 /* Changement de couleur au survol des boutons */
@@ -83,7 +84,7 @@ ACCUEIL Fenêtre flottante
   display: flex;
   justify-content: space-between;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 40px;
   flex-wrap: wrap; /* Pour que ça passe en colonne si écran étroit */
 }
 
@@ -107,6 +108,7 @@ ACCUEIL Fenêtre flottante
 
 /* Style pour les liens contenant des boutons */
 .popup-content a {
+  flex: 1;
   text-decoration: none; /* Enlever les soulignements des liens */
 }
 
