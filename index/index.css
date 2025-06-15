@@ -51,7 +51,7 @@ ACCUEIL Fenêtre flottante
 
 /* Style du sous titre */
 .event-count-highlight {
-  font-size: 1.6rem;         /* Texte un peu plus grand */
+  font-size: 2rem;         /* Texte un peu plus grand */
   font-weight: 500;
   text-align: center;
   color: #166F76;               /* Couleur foncée lisible */
