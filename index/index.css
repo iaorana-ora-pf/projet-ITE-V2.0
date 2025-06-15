@@ -72,8 +72,8 @@
   font-weight: 500;
   text-align: center;
   color: #333;               /* Couleur foncée lisible */
-  margin-top: 3rem;        /* Espace après les boutons info/mail */
-  margin-bottom: 5rem;       /* Grand espace avant le bloc orange */
+  margin-top: 0;        /* Espace après les boutons info/mail */
+  margin-bottom: 0;       /* Grand espace avant le bloc orange */
   line-height: 1.5;
 }
 
