@@ -62,11 +62,15 @@ ACCUEIL Fenêtre flottante
 
 /* Style du texte descriptif */
 .popup-content p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-bottom: 20px;
   color: #363B40;
 }
-
+.popup-description {
+  font-size: 1rem;
+  color: #363B40;
+  text-align: justify;
+}
 /* Style des boutons dans la fenêtre flottante */
 .popup-btn {
   background-color: #166F76;
