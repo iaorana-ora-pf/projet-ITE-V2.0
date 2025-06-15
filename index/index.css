@@ -68,7 +68,7 @@ ACCUEIL Fenêtre flottante
   font-size: 1.1em;
   cursor: pointer;
   border-radius: 5px;
-  width: 48%; /* Largeur des boutons égale */
+  flex: 1;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -79,11 +79,12 @@ ACCUEIL Fenêtre flottante
 }
 
 /* Conteneur pour les boutons (flexbox) */
-.popup-content .button-container {
+.button-container {
   display: flex;
   justify-content: space-between;
   gap: 15px;
   margin-top: 20px;
+  flex-wrap: wrap; /* Pour que ça passe en colonne si écran étroit */
 }
 
 /* Animation d'apparition */
