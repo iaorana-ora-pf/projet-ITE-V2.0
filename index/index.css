@@ -824,12 +824,10 @@ a.button {
   text-align: center;
 }
 
-.side-panel button,
-.side-panel a {
+.side-panel .icon-btn {
   width: 44px;
   height: 44px;
   font-size: 1.2rem;
-  border: none;
   border-radius: 50%;
   background-color: var(--main-green);
   color: white;
