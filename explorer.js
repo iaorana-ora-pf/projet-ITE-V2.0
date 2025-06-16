@@ -48,7 +48,7 @@ function getIconForCategory(cat) {
 fetch('explorer.json')
   .then(r => r.json())
   .then(data => {
-    events = data;
+    events = data; // ✅ on utilise le JSON directement, sans duplication pluriannuelle
     initDropdowns();
     updateTimeline();
     document.getElementById("event-details-container").innerHTML = `<p style="text-align:center; font-style:italic; color:#555;">Cliquez sur un événement pour accéder à sa fiche détaillée.</p>`;
@@ -97,7 +97,7 @@ function updateTimeline() {
             const contextClass = isContext ? "context-event" : "";
            const iconHTML = (Array.isArray(ev.category) ? ev.category : [ev.category])
   .map(cat => getIconForCategory(cat)).join("");
-            return `<li class="${contextClass}" data-uid="${ev.name}-${year}" onclick='showDetails(window["${id}"], "${year}")'>${iconHTML}<span>${ev.name}</span> : ""}</li>`;
+            return `<li class="${contextClass}" data-uid="${ev.name}-${year}" onclick='showDetails(window["${id}"], "${year}")'>${iconHTML}<span>${ev.name}</span></li>`;
           }).join("")}
         </ul>`;
       container.appendChild(block);
@@ -182,31 +182,45 @@ function showDetails(ev, year) {
   currentEvents = collectFilteredEvents();
   currentIndex = currentEvents.findIndex(e => e.uid === ev.uid);
   const container = document.getElementById("event-details-container");
- <p><strong>Année :</strong> ${ev.start || year}</p>
+
+  const catList = (Array.isArray(ev.category) ? ev.category : [ev.category])
+    .map(cat => `<li>${getIconForCategory(cat)} ${cat}</li>`).join("");
+  const sourceList = (ev.sources || []).map(src => {
+    if (typeof src === "object" && src.url) {
+      return `<li><a href="${src.url}" target="_blank">${src.label || src.url}</a></li>`;
+    } else {
+      return `<li>${src}</li>`;
+    }
+  }).join("");
+  const keywordList = (ev.keywords || []).map(k => `• ${k}`).join("<br>");
+
+  container.innerHTML = `
+    <h2 style="color:#007b7f; font-size:1.2rem; margin-bottom: 1rem;">${ev.name}</h2>
+    <p><strong>Année :</strong> ${ev.start || year}</p>
     <div>
-    <strong>Catégorie(s) :</strong>
-    <ul style="list-style: none; padding-left: 0; text-align: left;">
-      ${catList}
-    </ul>
-  </div>
-  <p><strong>Mots-clés :</strong><br>${keywordList}</p>
-  <p><strong>Description :</strong><br>${ev.description || "N/A"}</p>
-  <div>
-    <strong>Source(s) :</strong>
-    ${sourceList ? `<ul style="padding-left: 1rem; text-align: left;">${sourceList}</ul>` : "<p>N/A</p>"}
-  </div>
-  <div style="display:flex; justify-content: space-between; margin-top: 1.5rem;">
-    <button class="button" onclick="navigateEvent(-1)">◀ Précédent</button>
-    <button class="button" onclick="navigateEvent(1)">Suivant ▶</button>
-  </div>
-`;
+      <strong>Catégorie(s) :</strong>
+      <ul style="list-style: none; padding-left: 0; text-align: left;">
+        ${catList}
+      </ul>
+    </div>
+    <p><strong>Mots-clés :</strong><br>${keywordList}</p>
+    <p><strong>Description :</strong><br>${ev.description || "N/A"}</p>
+    <div>
+      <strong>Source(s) :</strong>
+      ${sourceList ? `<ul style="padding-left: 1rem; text-align: left;">${sourceList}</ul>` : "<p>N/A</p>"}
+    </div>
+    <div style="display:flex; justify-content: space-between; margin-top: 1.5rem;">
+      <button class="button" onclick="navigateEvent(-1)">◀ Précédent</button>
+      <button class="button" onclick="navigateEvent(1)">Suivant ▶</button>
+    </div>
+  `;
 
   document.querySelectorAll(".year-block li").forEach(li => li.classList.remove("selected-event"));
   const selected = document.querySelector(`li[data-uid="${ev.name}-${year}"]`);
   if (selected) {
-  selected.classList.add("selected-event");
-  selected.scrollIntoView({ behavior: "smooth", block: "center" });
-}
+    selected.classList.add("selected-event");
+    selected.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
 }
 function navigateEvent(dir) {
   if (currentEvents.length === 0 || currentIndex === -1) return;
