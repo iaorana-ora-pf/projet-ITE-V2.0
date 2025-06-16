@@ -299,7 +299,7 @@ ACCUEIL Fenêtre flottante
 }
 body {
   background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
  }
@@ -351,7 +351,7 @@ main {
   BOUTONS
 -----------------------------------*/
 .button, .close-btn-bottom {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lato', sans-serif;
   background-color: var(--main-green);
   color: #fff;
   font-weight: 500;
