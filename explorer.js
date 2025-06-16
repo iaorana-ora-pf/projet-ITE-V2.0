@@ -282,11 +282,14 @@ function updateActiveFilterBadges() {
     ...filters.categories.map(c => ({ type: "category", value: c })),
     ...filters.keywords.map(k => ({ type: "keyword", value: k }))
   ];
-  if (all.length === 0) {
-    section.style.display = "none";
-    return;
-  }
-  section.style.display = "block";
+  section.classList.remove("empty");
+container.innerHTML = "";
+
+if (all.length === 0) {
+  container.innerHTML = '<span style="color:#999;font-style:italic;">Aucun filtre sélectionné</span>';
+  section.classList.add("empty");
+  return;
+}
   all.forEach(({ type, value }) => {
     const badge = document.createElement("span");
     badge.className = "filter-badge";
