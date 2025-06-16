@@ -293,12 +293,9 @@ ACCUEIL Fenêtre flottante
   box-sizing: border-box;
 }
 #filters-content > .button {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  width: calc(100% - 40px);
-  z-index: 10;
+  margin-top: auto; /* pousse en bas naturellement */
+  margin-bottom: 1rem;
+  width: 100%;
 }
 .filters-collapsed {
   max-height: 0 !important;
