@@ -298,7 +298,8 @@ ACCUEIL Fenêtre flottante
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: 40px;
+  margin-bottom: 0.3rem; /* au lieu de 40px ! */
+  margin-top: 0.5rem;
   
 }
 /*-----------------------------------
@@ -423,7 +424,7 @@ a.button {
 }
 .filtres-ligne > .dropdown-checkbox,
 .filtres-ligne > .search-box {
-  margin-bottom: 1rem; /* 🟢 même espacement entre tous les filtres */
+  margin-bottom: 0.5rem; /* 🟢 même espacement entre tous les filtres */
 }
 /*-----------------------------------
   BLOCS FILTRES
@@ -465,9 +466,12 @@ a.button {
 
 .search-box textarea {
   resize: none;
-  padding: 12px 15px;
+  padding: 8px 12px;
   font-size: 1rem;
-  }
+  height: 50px;         /* ← Réduction ici */
+  min-height: 40px;     /* ← Sécurité */
+  line-height: 1.3;
+}
 
 .search-box textarea::placeholder {
   color: #363B40;
