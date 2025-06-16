@@ -366,14 +366,6 @@ function toggleNewModal() {
   modal.style.display = modal.style.display === "flex" ? "none" : "flex";
 }
 
-window.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector("header"); // ← tu avais oublié de définir "header"
-  const main = document.querySelector(".main-content");
-  if (header && main) {
-    const headerHeight = header.offsetHeight;
-    main.style.paddingTop = headerHeight + "px";
-  }
-});
 function toggleCategoryInfo() {
   const box = document.getElementById("category-info-box");
   box.classList.toggle("hidden");
