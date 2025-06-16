@@ -169,16 +169,20 @@ function initDropdowns() {
   });
 
    document.getElementById("categoryDropdown").innerHTML =
-    fixedCategories.map(c => {
-      const iconHTML = getIconForCategory(c);
-      return `<label>
-        <input type="checkbox" class="category-filter" value="${c}" onchange="updateTimeline(); updateDependentFilters(); updateActiveFilterBadges()">
-        ${iconHTML} ${c}
-      </label><br>`;
-    }).join("");
+    fixedCategories
+  .slice().sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }))
+  .map(c => {
+    const iconHTML = getIconForCategory(c);
+    return `<label>
+      <input type="checkbox" class="category-filter" value="${c}" onchange="updateTimeline(); updateDependentFilters(); updateActiveFilterBadges()">
+      ${iconHTML} ${c}
+    </label><br>`;
+  }).join("");
 
   document.getElementById("keywordDropdown").innerHTML =
-    Array.from(keywords).map(k => `
+  Array.from(keywords)
+    .sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }))
+    .map(k => `
       <label><input type="checkbox" class="keyword-filter" value="${k}" onchange="updateTimeline(); updateDependentFilters(); updateActiveFilterBadges()"> ${k}</label><br>
     `).join("");
 }
