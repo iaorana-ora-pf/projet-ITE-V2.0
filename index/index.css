@@ -129,7 +129,10 @@ ACCUEIL Fenêtre flottante
 .info-modal-content a:hover {
   color: var(--hover-green);
 }
-
+.info-modal-content ul li {
+  margin-bottom: 0.8rem;  /* 🟢 espace vertical entre les lignes */
+  line-height: 1.6;       /* 🟢 espace interne dans chaque ligne */
+}
 
 
 
