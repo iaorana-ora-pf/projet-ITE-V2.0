@@ -50,8 +50,10 @@
 
   <!-- ✅ Barre latérale -->
   <div id="app-layout" class="layout-with-sidebar">
-     <div id="side-panel" class="side-panel">
-       <div class="filters-block"> 
+    <div id="side-panel" class="side-panel">
+        <!-- Contenu scrollable -->
+  <div class="side-scrollable-content">
+    <div class="filters-block"> 
          <div class="filters-block-header" style="display: flex; align-items: center; justify-content: space-between;">
            <h3 class="title-3 inline-icon">Filtres</h3>
          </div>
@@ -121,12 +123,12 @@
 
   <!--Bouton réiniitaliser -->
     <button class="button" onclick="resetFilters()">Réinitialiser les filtres</button>
-
-   <!-- Footer -->
-  <div class="side-footer">© 2025 – Tous droits réservés</div>
-          
  </div> <!-- /#filters-content -->
 </div> <!-- /.filters-block -->
+             
+ <!-- Footer fixe -->
+  <div class="side-footer">© 2025 – Tous droits réservés</div>
+</div>
       
   <!-- Bouton Admin -->     
   <button id="admin-toggle-btn" style="position:fixed; bottom:10px; right:10px; opacity:0.2;" onclick="toggleAdmin()">🔧</button>
