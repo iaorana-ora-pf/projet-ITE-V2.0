@@ -298,7 +298,7 @@ ACCUEIL Fenêtre flottante
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 0.3rem; /* au lieu de 40px ! */
+  margin-bottom: 0.5rem; /* au lieu de 40px ! */
   margin-top: 0.5rem;
   
 }
@@ -424,7 +424,7 @@ a.button {
 }
 .filtres-ligne > .dropdown-checkbox,
 .filtres-ligne > .search-box {
-  margin-bottom: 0.5rem; /* 🟢 même espacement entre tous les filtres */
+  margin-bottom: 0.4rem; /* 🟢 même espacement entre tous les filtres */
 }
 /*-----------------------------------
   BLOCS FILTRES
