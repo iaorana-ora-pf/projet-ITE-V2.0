@@ -447,7 +447,7 @@ a.button {
 .dropdown-checkbox div {
   padding: 10px;
   overflow-y: auto;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .search-box textarea {
