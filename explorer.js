@@ -122,14 +122,14 @@ const countEl = document.getElementById("event-count-number");
 if (countEl) {
   countEl.textContent = total;
 }
-  const countText = document.getElementById("event-count-text");
+const countText = document.getElementById("event-count-text");
 if (countText) {
   if (total === 0) {
-    countText.textContent = "Aucun événement ne correspond aux critères sélectionnés.";
+    countText.innerHTML = "Aucun événement ne correspond aux critères sélectionnés.";
   } else if (total === 1) {
-    countText.textContent = "La frise contient 1 événement.";
+    countText.innerHTML = `La frise contient <strong>1</strong> événement.`;
   } else {
-    countText.textContent = `La frise contient ${total} événements.`;
+    countText.innerHTML = `La frise contient <strong>${total}</strong> événements.`;
   }
 }
 }
