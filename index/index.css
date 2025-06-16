@@ -133,9 +133,16 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
   line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
 }
+#active-filters-section {
+  min-height: 3.5rem; /* Réserve une hauteur même vide */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
+}
 
-
-
+#active-filters-section.empty {
+  opacity: 0.3;
+}
 
 
 
