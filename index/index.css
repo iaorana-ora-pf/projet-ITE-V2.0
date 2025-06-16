@@ -423,9 +423,9 @@ a.button {
 .contact-btn:hover {
   background-color: var(--hover-green);
 }
-.filtres-ligne > .dropdown-checkbox,
-.filtres-ligne > .search-box {
-  margin-bottom: 1.5rem; /* ou 2rem si tu veux plus d'espace */
+.filters-block .dropdown-checkbox,
+.filters-block .search-box {
+  margin-bottom: 1.8rem;  /* augmente l’espace entre chaque bloc */
 }
 /*-----------------------------------
   BLOCS FILTRES
