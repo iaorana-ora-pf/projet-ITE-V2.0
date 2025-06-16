@@ -360,13 +360,9 @@ a:hover {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .main-content {
-  padding-bottom: 2rem;
   height: 100vh; /* prend toute la hauteur de la fenêtre */
   overflow-y: auto; /* permet le scroll si besoin */
   padding-left: 340px; /* largeur de ta sidebar */
@@ -376,11 +372,10 @@ a:hover {
 }
 
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto; /* ✅ permet le scroll si nécessaire */
+  overflow: hidden; /* important pour éviter les scrolls globaux */
 }
 #page-wrapper {
   display: flex;
@@ -538,24 +533,22 @@ a.button {
   LAYOUT FRISE
 -----------------------------------*/
 .timeline-layout {
- display: flex;
+  display: flex;
   align-items: stretch;
   justify-content: space-between;
   gap: 1.5rem;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0.75rem 1rem;
-  min-height: 600px; /* valeur approx. pour 10 événements */
-   margin-bottom: 1.5rem
+  min-height: 600px;
+  margin-bottom: 1.5rem;
   height: 100%;
 }
 
 .timeline-section {
   flex: 2;
   overflow-y: auto;
-  max-height: none;
   height: 100%;
-  padding: 1.5rem 0;
 }
 
 .timeline-year {
@@ -623,6 +616,8 @@ a.button {
 -----------------------------------*/
 .event-details-container {
   flex: 1;
+  overflow-y: auto;
+  height: 100%;
   padding: 1.5rem;
   max-width: 450px;
   min-width: 300px;
@@ -837,9 +832,15 @@ a.button {
   word-wrap: break-word;
   overflow: hidden;
 }
+.side-panel,
+.main-content,
+.timeline-layout {
+  height: 100%;
+}
 .side-scrollable-content {
   flex: 1;
   overflow-y: auto;
+  height: 100%;
   padding: 1rem;
 }
 .side-footer {
@@ -922,7 +923,7 @@ a.button {
 }
 .layout-with-sidebar {
   display: flex;
-  transition: all 0.3s ease;
+  height: 100vh;
 }
 
 .layout-with-sidebar.sidebar-hidden .side-panel {
