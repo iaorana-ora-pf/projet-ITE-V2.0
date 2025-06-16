@@ -414,7 +414,10 @@ a.button {
 .contact-btn:hover {
   background-color: var(--hover-green);
 }
-
+.filtres-ligne > .dropdown-checkbox,
+.filtres-ligne > .search-box {
+  margin-bottom: 1rem; /* 🟢 même espacement entre tous les filtres */
+}
 /*-----------------------------------
   BLOCS FILTRES
 -----------------------------------*/
@@ -450,7 +453,7 @@ a.button {
 .dropdown-checkbox div {
   padding: 10px;
   overflow-y: auto;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .search-box textarea {
