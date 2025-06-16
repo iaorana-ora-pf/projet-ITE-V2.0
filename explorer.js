@@ -152,20 +152,26 @@ function updateDependentFilters() {
   const visibleKeywords = new Set();
   const visibleCategories = new Set();
 
+  // Étape 1 : on collecte uniquement les catégories/keywords visibles
   Object.values(events).flat().forEach(ev => {
     const matchCat = !filters.categories.length || (Array.isArray(ev.category) ? ev.category.some(cat => filters.categories.includes(cat)) : filters.categories.includes(ev.category));
     const matchKey = !filters.keywords.length || ev.keywords.some(k => filters.keywords.includes(k));
+    
     if (matchCat && matchKey) {
       ev.keywords.forEach(k => visibleKeywords.add(k));
       (Array.isArray(ev.category) ? ev.category : [ev.category]).forEach(cat => visibleCategories.add(cat));
     }
   });
 
-    document.querySelectorAll(".keyword-filter").forEach(cb => {
-    cb.parentElement.style.color = visibleKeywords.has(cb.value) ? "black" : "#999";
+  // Étape 2 : appliquer les couleurs – toutes noires si aucun filtre actif
+  const allClear = filters.categories.length === 0 && filters.keywords.length === 0;
+
+  document.querySelectorAll(".keyword-filter").forEach(cb => {
+    cb.parentElement.style.color = allClear || visibleKeywords.has(cb.value) ? "black" : "#999";
   });
+
   document.querySelectorAll(".category-filter").forEach(cb => {
-    cb.parentElement.style.color = visibleCategories.has(cb.value) ? "black" : "#999";
+    cb.parentElement.style.color = allClear || visibleCategories.has(cb.value) ? "black" : "#999";
   });
 }
 
