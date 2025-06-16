@@ -13,7 +13,13 @@
 /*-----------------------------------
 ACCUEIL Fenêtre flottante 
 -----------------------------------*/
-
+/* Espacement vertical entre chaque section de filtre */
+.side-scrollable-content > * {
+  margin-bottom: 1.5rem;
+}
+.side-scrollable-content > *:last-child {
+  margin-bottom: 0.5rem;
+}
 /* Style de la fenêtre flottante */
 .popup {
   position: fixed;
@@ -422,10 +428,6 @@ a.button {
 .help-btn:hover,
 .contact-btn:hover {
   background-color: var(--hover-green);
-}
-.filters-block .dropdown-checkbox,
-.filters-block .search-box {
-  margin-bottom: 2rem;  /* augmente l’espace entre chaque bloc */
 }
 /*-----------------------------------
   BLOCS FILTRES
