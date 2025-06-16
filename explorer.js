@@ -48,33 +48,12 @@ function getIconForCategory(cat) {
 fetch('explorer.json')
   .then(r => r.json())
   .then(data => {
-    events = expandMultiYearEvents(data);
+    events = data;
     initDropdowns();
     updateTimeline();
     document.getElementById("event-details-container").innerHTML = `<p style="text-align:center; font-style:italic; color:#555;">Cliquez sur un événement pour accéder à sa fiche détaillée.</p>`;
   })
   .catch(err => console.error("Erreur de chargement :", err));
-
-function expandMultiYearEvents(data) {
-  const expanded = {};
-  for (const year in data) {
-    data[year].forEach(ev => {
-      const start = parseInt(ev.start || year);
-      const end = parseInt(ev.end || year);
-  for (let y = start; y <= end; y++) {
-  const yStr = y.toString();
-  if (!expanded[yStr]) expanded[yStr] = [];
-  const key = `${ev.name}-${ev.start || year}-${ev.end || year}`;
-  if (!expanded[yStr].some(e => `${e.name}-${e.start || year}-${e.end || year}` === key)) {
-    const clone = { ...ev };
-clone.uid = key;
-expanded[yStr].push(clone);
-  }
-}
-        });
-  }
-  return expanded;
-}
 
 function getFilters() {
   const getChecked = cls => [...document.querySelectorAll('.' + cls + '-filter:checked')].map(e => e.value);
@@ -203,22 +182,8 @@ function showDetails(ev, year) {
   currentEvents = collectFilteredEvents();
   currentIndex = currentEvents.findIndex(e => e.uid === ev.uid);
   const container = document.getElementById("event-details-container");
-  const isMulti = ev.start && ev.end && ev.start !== ev.end;
- const catList = (Array.isArray(ev.category) ? ev.category : [ev.category])
-  .map(cat => `<li>${getIconForCategory(cat)} ${cat}</li>`).join("");
- const sourceList = (ev.sources || []).map(src => {
-  if (typeof src === "object" && src.url) {
-    return `<li><a href="${src.url}" target="_blank">${src.label || src.url}</a></li>`;
-  } else {
-    return `<li>${src}</li>`;
-  }
-}).join("");
-  const keywordList = (ev.keywords || []).map(k => `• ${k}`).join("<br>");
-
- container.innerHTML = `
-  <h2 style="color:#007b7f; font-size:1.2rem; margin-bottom: 1rem;">${ev.name}</h2>
-  <p><strong>Année :</strong> ${year}</p>
-  <div>
+ <p><strong>Année :</strong> ${ev.start || year}</p>
+    <div>
     <strong>Catégorie(s) :</strong>
     <ul style="list-style: none; padding-left: 0; text-align: left;">
       ${catList}
