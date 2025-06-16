@@ -122,6 +122,16 @@ const countEl = document.getElementById("event-count-number");
 if (countEl) {
   countEl.textContent = total;
 }
+  const countText = document.getElementById("event-count-text");
+if (countText) {
+  if (total === 0) {
+    countText.textContent = "Aucun événement ne correspond aux critères sélectionnés.";
+  } else if (total === 1) {
+    countText.textContent = "La frise contient 1 événement.";
+  } else {
+    countText.textContent = `La frise contient ${total} événements.`;
+  }
+}
 }
 
 function updateDependentFilters() {
