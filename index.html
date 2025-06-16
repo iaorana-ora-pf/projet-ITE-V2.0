@@ -53,11 +53,10 @@
 
   <!-- Contenu scrollable -->
   <div class="side-scrollable-content">
-    <div class="filters-block"> 
       <h3 class="title-3 inline-icon">Filtres</h3>
 
       <!-- Bloc Catégories -->
-      <div class="dropdown-checkbox" style="position: relative;">
+     <div class="dropdown-checkbox">
         <h4 class="title-4 inline-icon">
           Catégories
           <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
@@ -66,7 +65,7 @@
       </div>
 
       <!-- Modale pour l’info Catégories -->
-      <div id="infoModal" class="info-modal hidden">
+      <div class="info-modal">
         <div class="info-modal-content">
           <button class="info-close-btn" onclick="toggleInfoModal()">×</button>
           <h3 class="title-3">À propos des catégories</h3>
@@ -84,7 +83,7 @@
       </div>
 
       <!-- Bloc Mots-clés -->
-      <div class="dropdown-checkbox" style="position: relative;">
+      <div class="dropdown-checkbox">
         <h4 class="title-4 inline-icon">
           Mots-clés
           <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
@@ -93,7 +92,7 @@
       </div>
 
       <!-- Modale info mots-clés -->
-      <div id="keywordModal" class="info-modal hidden">
+      <div class="info-modal">
         <div class="info-modal-content">
           <button class="info-close-btn" onclick="toggleKeywordModal()">×</button>
           <h3 class="title-3">À propos des mots-clés</h3>
@@ -117,7 +116,7 @@
       <!-- Bouton réinitialiser -->
       <button class="button" onclick="resetFilters()">Réinitialiser les filtres</button>
     </div> <!-- /.filters-block -->
-  </div> <!-- /.side-scrollable-content -->
+ 
 
   <!-- Footer toujours visible -->
   <div class="side-footer">© 2025 – Tous droits réservés</div>
