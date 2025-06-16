@@ -64,23 +64,7 @@
         <div id="categoryDropdown"></div>
       </div>
 
-      <!-- Modale pour l’info Catégories -->
-      <div class="info-modal">
-        <div class="info-modal-content">
-          <button class="info-close-btn" onclick="toggleInfoModal()">×</button>
-          <h3 class="title-3">À propos des catégories</h3>
-          <p>Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :</p>
-          <ul>
-            <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
-            <li><strong>Données surveillance et recherche</strong> : production, analyse et utilisation de l'information sanitaire</li>
-            <li><strong>Promotion de la santé et prévention</strong> : actions comportementales, sociales et populationnelles</li>
-            <li><strong>Protection sanitaire et gestion des risques</strong> : réponse aux menaces sanitaires, environnementales ou réglementaires</li>
-            <li><strong>Accès aux services et aux moyens</strong> : ressources humaines, infrastructures, technologies, accès aux soins</li>
-          </ul>
-          <p>La catégorie <strong>Contexte</strong> regroupe des événements ayant un impact indirect sur la santé publique.</p>
-          <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
-        </div>
-      </div>
+     
 
       <!-- Bloc Mots-clés -->
       <div class="dropdown-checkbox">
@@ -91,15 +75,7 @@
         <div id="keywordDropdown"></div>
       </div>
 
-      <!-- Modale info mots-clés -->
-      <div class="info-modal">
-        <div class="info-modal-content">
-          <button class="info-close-btn" onclick="toggleKeywordModal()">×</button>
-          <h3 class="title-3">À propos des mots-clés</h3>
-          <p>Les <strong>mots-clés</strong> sont issus autant que possible du thésaurus <a href="https://decs.bvsalud.org/fr" target="_blank">DeCS</a>.</p>
-          <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
-        </div>
-      </div>
+    
 
       <!-- Bloc Recherche -->
       <div class="search-box">
@@ -124,7 +100,33 @@
       
   <!-- Bouton Admin -->     
   <button id="admin-toggle-btn" style="position:fixed; bottom:10px; right:10px; opacity:0.2;" onclick="toggleAdmin()">🔧</button>
-
+ <!-- Modale pour l’info Catégories -->
+     <div id="infoModal" class="info-modal hidden">
+        <div class="info-modal-content">
+          <button class="info-close-btn" onclick="toggleInfoModal()">×</button>
+          <h3 class="title-3">À propos des catégories</h3>
+          <p>Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :</p>
+          <ul>
+            <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
+            <li><strong>Données surveillance et recherche</strong> : production, analyse et utilisation de l'information sanitaire</li>
+            <li><strong>Promotion de la santé et prévention</strong> : actions comportementales, sociales et populationnelles</li>
+            <li><strong>Protection sanitaire et gestion des risques</strong> : réponse aux menaces sanitaires, environnementales ou réglementaires</li>
+            <li><strong>Accès aux services et aux moyens</strong> : ressources humaines, infrastructures, technologies, accès aux soins</li>
+          </ul>
+          <p>La catégorie <strong>Contexte</strong> regroupe des événements ayant un impact indirect sur la santé publique.</p>
+          <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
+        </div>
+      </div>
+  
+  <!-- Modale info mots-clés -->
+      <div id="keywordModal" class="info-modal hidden">
+        <div class="info-modal-content">
+          <button class="info-close-btn" onclick="toggleKeywordModal()">×</button>
+          <h3 class="title-3">À propos des mots-clés</h3>
+          <p>Les <strong>mots-clés</strong> sont issus autant que possible du thésaurus <a href="https://decs.bvsalud.org/fr" target="_blank">DeCS</a>.</p>
+          <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
+        </div>
+      </div>
    
  <!-- ✅ Contenu principal -->
     <main class="main-content">
@@ -147,7 +149,11 @@
 ⚠️ Certains liens valides peuvent être marqués comme cassés à cause de restrictions de sécurité du navigateur (CORS). Testez-les manuellement si vous avez un doute.
 </p>
 </div>
- </div> 
+ </div>
+
+
+
+      
 </main>
   
  <script src="explorer.js"></script>
