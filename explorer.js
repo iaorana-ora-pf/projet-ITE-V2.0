@@ -114,7 +114,6 @@ function updateTimeline() {
           ${filtered.map((ev, i) => {
             const id = `event-${year}-${i}`;
             window[id] = ev;
-            const isMulti = ev.start && ev.end && ev.start !== ev.end;
             const isContext = Array.isArray(ev.category) ? ev.category.includes("Contexte") : ev.category === "Contexte";
             const contextClass = isContext ? "context-event" : "";
            const iconHTML = (Array.isArray(ev.category) ? ev.category : [ev.category])
@@ -218,7 +217,7 @@ function showDetails(ev, year) {
 
  container.innerHTML = `
   <h2 style="color:#007b7f; font-size:1.2rem; margin-bottom: 1rem;">${ev.name}</h2>
-  <p><strong>${isMulti ? "Période" : "Année"} :</strong> ${isMulti ? `${ev.start} – ${ev.end}` : year}</p>
+  <p><strong>Année :</strong> ${year}</p>
   <div>
     <strong>Catégorie(s) :</strong>
     <ul style="list-style: none; padding-left: 0; text-align: left;">
