@@ -131,7 +131,7 @@ ACCUEIL Fenêtre flottante
 }
 .info-modal-content ul li {
   margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
-  line-height: 1.6;       /* 🟢 espace interne dans chaque ligne */
+  line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
 }
 
 
