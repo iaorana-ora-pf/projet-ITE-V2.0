@@ -149,8 +149,16 @@ ACCUEIL Fenêtre flottante
 #active-filters-section.empty {
   opacity: 0.3;
 }
+#event-count-text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
 
-
+#event-count-text strong {
+  color: #007b7f;
+}
 
 
 
