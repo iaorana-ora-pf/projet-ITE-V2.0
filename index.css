@@ -149,16 +149,7 @@ ACCUEIL Fenêtre flottante
 #active-filters-section.empty {
   opacity: 0.3;
 }
-#event-count-text {
-  text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  font-style: normal;
-}
 
-#event-count-text strong {
-  color: #007b7f;
-}
 
 
 
@@ -198,6 +189,21 @@ ACCUEIL Fenêtre flottante
 .title-3.inline-icon {
   margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
 }
+#event-count-text {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 2rem;
+  font-style: normal;
+  font-weight: normal;
+}
+
+#event-count-text strong {
+  color: #007b7f;
+  font-weight: 600;
+}
+
+
+
 .title-4 {
   text-align: left;
   font-size: 1rem;
