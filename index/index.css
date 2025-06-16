@@ -18,7 +18,7 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 1.5rem;
 }
 .side-scrollable-content > *:last-child {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 /* Style de la fenêtre flottante */
 .popup {
@@ -185,9 +185,11 @@ ACCUEIL Fenêtre flottante
   font-size: 1.1rem;
   color: var(--main-green);
   margin-top: 0.25rem;
-  margin-bottom: 0.1rem;
+  margin-bottom: 1.5rem;
 }
-
+.title-3.inline-icon {
+  margin-bottom: 1.5rem; /* ou 1.5rem pour plus d'espace */
+}
 .title-4 {
   text-align: left;
   font-size: 1rem;
@@ -287,9 +289,6 @@ ACCUEIL Fenêtre flottante
   color: #666;
 }
 
-.hidden {
-  display: none;
-}
 #filters-content {
   transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
@@ -502,7 +501,7 @@ a.button {
 }
 
 .contribution-text {
-  margin-top: 4rem
+  margin-top: 4rem;
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--dark-text);
@@ -978,9 +977,6 @@ a.button {
   margin-top: 8px;
 }
 
-.hidden {
-  display: none;
-}
 .info-modal {
   position: fixed;
   top: 0;
@@ -1017,9 +1013,6 @@ a.button {
   color: #666;
 }
 
-.hidden {
-  display: none;
-}
 .title-4-inline {
   display: flex;
   align-items: center;
