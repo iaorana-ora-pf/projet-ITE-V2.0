@@ -344,10 +344,12 @@ a:hover {
  padding-bottom: 2rem;
 }
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden; /* ← temporairement utile pour test visuel */
 }
-
 #page-wrapper {
   display: flex;
   flex-direction: column;
@@ -356,6 +358,12 @@ html, body {
 
 main {
   flex: 1;
+}
+body::after {
+  content: "DEBUG";
+  background: red;
+  display: block;
+  height: 1px;
 }
 /*-----------------------------------
   BOUTONS
@@ -695,12 +703,7 @@ a.button {
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
+
 /*-----------------------------------
   MODALE D'AIDE
 -----------------------------------*/
