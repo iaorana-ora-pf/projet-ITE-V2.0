@@ -578,15 +578,6 @@ a.button {
   background: #e6f7ff;
 }
 
-.event-grid li .multi-year-badge {
-  background: #fff9c4;
-  color: #333;
-  font-size: 0.75rem;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-left: auto;
-}
-
 .selected-event {
   border-left: 4px solid var(--main-green);
   background-color: #f5ef87;
