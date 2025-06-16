@@ -809,6 +809,7 @@ a.button {
   top: 0;
   left: 0;
   height: 100vh;
+  overflow-y: auto;
   width: 300px; /* ou ta valeur choisie */
   background-color: #f0f8f8;
   z-index: 100;
