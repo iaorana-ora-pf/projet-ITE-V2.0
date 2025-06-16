@@ -285,10 +285,21 @@ ACCUEIL Fenêtre flottante
   display: none;
 }
 #filters-content {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* pour forcer l'étirement */
+  padding-bottom: 70px; /* espace réservé pour le bouton */
+  box-sizing: border-box;
 }
-
+#filters-content > .button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 40px);
+  z-index: 10;
+}
 .filters-collapsed {
   max-height: 0 !important;
   opacity: 0;
@@ -801,7 +812,7 @@ a.button {
   margin-right: 0.5rem;
 }
 .side-panel {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   height: 100vh;
