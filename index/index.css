@@ -425,7 +425,7 @@ a.button {
 }
 .filtres-ligne > .dropdown-checkbox,
 .filtres-ligne > .search-box {
-  margin-bottom: 0.4rem; /* 🟢 même espacement entre tous les filtres */
+  margin-bottom: 1.5rem; /* ou 2rem si tu veux plus d'espace */
 }
 /*-----------------------------------
   BLOCS FILTRES
