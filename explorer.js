@@ -51,7 +51,7 @@ fetch('explorer.json')
     events = data; // ✅ on utilise le JSON directement, sans duplication pluriannuelle
     initDropdowns();
     updateTimeline();
-    document.getElementById("event-details-container").innerHTML = `<p style="text-align:center; font-style:italic; color:#555;">Cliquez sur un événement pour accéder à sa fiche détaillée.</p>`;
+    document.getElementById("event-details-container").innerHTML = `<p style="text-align:center; font-style:italic; color:#555;">  Cliquez sur un événement pour accéder à sa fiche détaillée puis utilisez les flèches “◀” et “▶” pour naviguer entre les événements (filtrés).</p>`;
   })
   .catch(err => console.error("Erreur de chargement :", err));
 
