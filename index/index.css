@@ -808,8 +808,8 @@ a.button {
   top: 0;
   left: 0;
   height: 100vh;
-  overflow-y: auto;
-  width: 300px; /* ou ta valeur choisie */
+  overflow-x: hidden;
+  width: 340px; /* ou ta valeur choisie */
   background-color: #f0f8f8;
   z-index: 100;
   display: flex;
@@ -818,6 +818,8 @@ a.button {
   padding: 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
+  word-wrap: break-word;
+  overflow-x: hidden;
 }
 }
 
