@@ -119,10 +119,9 @@ function updateTimeline() {
             const contextClass = isContext ? "context-event" : "";
            const iconHTML = (Array.isArray(ev.category) ? ev.category : [ev.category])
   .map(cat => getIconForCategory(cat)).join("");
-            return `<li class="${contextClass}" data-uid="${ev.name}-${year}" onclick='showDetails(window["${id}"], "${year}")'>${iconHTML}<span>${ev.name}</span>${isMulti ? `<span class="multi-year-badge">Pluriannuel</span>` : ""}</li>`;
+            return `<li class="${contextClass}" data-uid="${ev.name}-${year}" onclick='showDetails(window["${id}"], "${year}")'>${iconHTML}<span>${ev.name}</span> : ""}</li>`;
           }).join("")}
-        </ul>
-`;
+        </ul>`;
       container.appendChild(block);
     }
   }
