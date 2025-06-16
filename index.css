@@ -360,12 +360,21 @@ a:hover {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content {
- padding-left: 300px;
- padding-bottom: 2rem;
+  padding-bottom: 2rem;
+  height: 100vh; /* prend toute la hauteur de la fenêtre */
+  overflow-y: auto; /* permet le scroll si besoin */
+  padding-left: 340px; /* largeur de ta sidebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 html, body {
   margin: 0;
   padding: 0;
