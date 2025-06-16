@@ -695,7 +695,12 @@ a.button {
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
 /*-----------------------------------
   MODALE D'AIDE
 -----------------------------------*/
@@ -815,7 +820,8 @@ a.button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
+  padding: 0;              /* ⛔ annule tout espacement interne */
+  margin: 0;               /* ⛔ supprime les marges externes */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
   word-wrap: break-word;
