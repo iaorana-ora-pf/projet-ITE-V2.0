@@ -425,7 +425,7 @@ a.button {
 }
 .filters-block .dropdown-checkbox,
 .filters-block .search-box {
-  margin-bottom: 1.6rem;  /* augmente l’espace entre chaque bloc */
+  margin-bottom: 2rem;  /* augmente l’espace entre chaque bloc */
 }
 /*-----------------------------------
   BLOCS FILTRES
