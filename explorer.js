@@ -392,16 +392,10 @@ function closeTooltipOnClickOutside(e) {
   }
 }
 function toggleInfoModal() {
-  const modal = document.getElementById("infoModal");
-  modal.classList.toggle("hidden");
-}
-function toggleInfoModal() {
-  const modal = document.getElementById("infoModal");
-  modal.classList.toggle("hidden");
+  document.getElementById("infoModal").classList.toggle("hidden");
 }
 function toggleKeywordModal() {
-  const modal = document.getElementById("keywordModal");
-  modal.classList.toggle("hidden");
+  document.getElementById("keywordModal").classList.toggle("hidden");
 }
 function toggleFilters() {
   const content = document.getElementById("filters-content");
