@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 
   <head>
@@ -58,7 +58,8 @@
          </div>
         <div id="filters-content">
       <div class="filtres-ligne">
-    <!-- Bloc Catégories -->
+    
+      <!-- Bloc Catégories -->
        <div class="dropdown-checkbox" style="position: relative;">
          <h4 class="title-4 inline-icon">
          Catégories
@@ -67,7 +68,7 @@
          <div id="categoryDropdown"></div>
       </div>
 
-    <!-- Modale flottante pour l’info Catégories -->
+    <!-- Modale pour l’info Catégories -->
     <div id="infoModal" class="info-modal hidden">
       <div class="info-modal-content">
         <button class="info-close-btn" onclick="toggleInfoModal()">×</button>
@@ -88,54 +89,54 @@
       
 
     <!-- Bloc Mots-clés -->
- <div class="dropdown-checkbox" style="position: relative;">
-  <h4 class="title-4 inline-icon">
-  Mots-clés
-  <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
-</h4>
-  <div id="keywordDropdown"></div>
-</div>
+     <div class="dropdown-checkbox" style="position: relative;">
+        <h4 class="title-4 inline-icon">
+        Mots-clés
+        <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
+        </h4>
+        <div id="keywordDropdown"></div>
+    </div>
 
-<!-- ✅ Modale info mots-clés -->
-<div id="keywordModal" class="info-modal hidden">
-  <div class="info-modal-content">
-    <button class="info-close-btn" onclick="toggleKeywordModal()">×</button>
-    <h3 class="title-3">À propos des mots-clés</h3>
-    <p>Les événements peuvent être filtrés par <strong>mots-clés</strong>, issus autant que possible du thésaurus <a href="https://decs.bvsalud.org/fr" target="_blank">DeCS</a>.</p>
-    <p>Les mots-clés permettent une recherche plus précise selon les thématiques.</p>
-    <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET")."</p>
+  <!-- Modale info mots-clés -->
+  <div id="keywordModal" class="info-modal hidden">
+    <div class="info-modal-content">
+      <button class="info-close-btn" onclick="toggleKeywordModal()">×</button>
+      <h3 class="title-3">À propos des mots-clés</h3>
+      <p>Les <strong>mots-clés</strong> sont issus autant que possible du thésaurus <a href="https://decs.bvsalud.org/fr" target="_blank">DeCS</a>.</p>
+      <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET")."</p>
+     </div>
   </div>
-</div>
 
-    <!-- Bloc Recherche -->
+  <!-- Bloc Recherche -->
     <div class="search-box">
       <h4 class="title-4">Chercher dans tous les champs</h4>
       <textarea id="searchInput" placeholder="Tapez le mot souhaité et il sera recherché dans les champs titre, description, catégorie et mots-clés." oninput="updateTimeline()"></textarea>
+      </div>
     </div>
-</div>
-      <!-- Filtres sélectionnés -->
+  
+  <!-- Filtres sélectionnés -->
     <div id="active-filters-section">
       <h4 class="title-4">Filtres sélectionnés :</h4>
       <div id="active-filters"></div>
     </div>
 
-  <!-- ✅ Bouton à masquer aussi -->
+  <!--Bouton réiniitaliser -->
     <button class="button" onclick="resetFilters()">Réinitialiser les filtres</button>
 
-  </div> <!-- /#filters-content -->
+ </div> <!-- /#filters-content -->
 </div> <!-- /.filters-block -->
       
-<!-- ✅ Bloc séparateur avec texte -->
-<div class="contribution-invite">
-  <p class="contribution-text">Une info à partager ?<br>Aidez-nous à enrichir la frise en proposant un événement !</p>
+  <!-- Footer -->
+  <div class="side-footer">© 2025 – Tous droits réservés</div>
+  
+  <!-- Bouton Admin -->     
+  <button id="admin-toggle-btn" style="position:fixed; bottom:10px; right:10px; opacity:0.2;" onclick="toggleAdmin()">🔧</button>
+
+  </div>
 </div>
-<!-- ✅ Bouton "Ajouter" -->
-    <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" class="contribute-btn" target="_blank" rel="noopener noreferrer">
-  Proposer un évènement</a>
-<div class="side-footer">© 2025 – Tous droits réservés</div>
-      <button id="admin-toggle-btn" style="position:fixed; bottom:10px; right:10px; opacity:0.2;" onclick="toggleAdmin()">🔧</button>
-      </div>
-    </div>
+
+
+
   
  <!-- ✅ Contenu principal -->
     <main class="main-content">
