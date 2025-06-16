@@ -231,7 +231,7 @@ ACCUEIL Fenêtre flottante
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 .filtres-ligne {
   display: flex;
