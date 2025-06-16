@@ -12,6 +12,13 @@ function toggleAdmin() {
     alert("Mot de passe incorrect");
   }
 }
+function normalize(str) {
+  return (str || "")
+    .toString()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
 // Catégories fixes avec icônes associées
 const categoryColors = {
   "Gouvernance et pilotage stratégique": "#007b7f",
@@ -74,7 +81,7 @@ function getFilters() {
   return {
     categories: getChecked("category"),
     keywords: getChecked("keyword"),
-    search: document.getElementById("searchInput").value.toLowerCase()
+    search: normalize(document.getElementById("searchInput").value)
   };
 }
 
@@ -87,13 +94,14 @@ function updateTimeline() {
     const filtered = events[year].filter(e =>
       (!filters.categories.length || (Array.isArray(e.category) ? e.category.some(c => filters.categories.includes(c)) : filters.categories.includes(e.category))) &&
       (!filters.keywords.length || filters.keywords.some(k => e.keywords.includes(k))) &&
-      (!filters.search || (
-  e.name?.toLowerCase().includes(filters.search) ||
-  e.description?.toLowerCase().includes(filters.search) ||
-  (Array.isArray(e.keywords) && e.keywords.some(k => k.toLowerCase().includes(filters.search))) ||
-  (Array.isArray(e.sources) && e.sources.some(s => s.toLowerCase().includes(filters.search))) ||
-  (Array.isArray(e.category) ? e.category.join(',').toLowerCase() : e.category.toLowerCase()).includes(filters.search) ||
-  `${e.start}`.includes(filters.search) || `${e.end}`.includes(filters.search)
+   (!filters.search || (
+  normalize(e.name).includes(filters.search) ||
+  normalize(e.description).includes(filters.search) ||
+  (Array.isArray(e.keywords) && e.keywords.some(k => normalize(k).includes(filters.search))) ||
+  (Array.isArray(e.sources) && e.sources.some(s => normalize(s).includes(filters.search))) ||
+  (Array.isArray(e.category) ? e.category.some(c => normalize(c).includes(filters.search)) : normalize(e.category).includes(filters.search)) ||
+  normalize(e.start).includes(filters.search) ||
+  normalize(e.end).includes(filters.search)
 ))
     );
 
@@ -262,12 +270,13 @@ function collectFilteredEvents() {
       (!filters.categories.length || (Array.isArray(e.category) ? e.category.some(cat => filters.categories.includes(cat)) : filters.categories.includes(e.category))) &&
       (!filters.keywords.length || filters.keywords.some(k => e.keywords.includes(k))) &&
       (!filters.search || (
-  e.name?.toLowerCase().includes(filters.search) ||
-  e.description?.toLowerCase().includes(filters.search) ||
-  (Array.isArray(e.keywords) && e.keywords.some(k => k.toLowerCase().includes(filters.search))) ||
-  (Array.isArray(e.sources) && e.sources.some(s => s.toLowerCase().includes(filters.search))) ||
-  (Array.isArray(e.category) ? e.category.join(',').toLowerCase() : e.category.toLowerCase()).includes(filters.search) ||
-  `${e.start}`.includes(filters.search) || `${e.end}`.includes(filters.search)
+  normalize(e.name).includes(filters.search) ||
+  normalize(e.description).includes(filters.search) ||
+  (Array.isArray(e.keywords) && e.keywords.some(k => normalize(k).includes(filters.search))) ||
+  (Array.isArray(e.sources) && e.sources.some(s => normalize(s).includes(filters.search))) ||
+  (Array.isArray(e.category) ? e.category.some(c => normalize(c).includes(filters.search)) : normalize(e.category).includes(filters.search)) ||
+  normalize(e.start).includes(filters.search) ||
+  normalize(e.end).includes(filters.search)
 ))
     )
   );
