@@ -1,3 +1,10 @@
+/*
+ Nettoyé automatiquement par CodeNinja 🥷
+ Fichier : explorer.js
+ Date : Juin 2025
+ Ne pas modifier cet en-tête à la main.
+*/
+
 // === Fichier JavaScript complet avec catégories fixes et gestion du filtre ===
 let events = {};
 let currentEvents = [];
@@ -143,7 +150,7 @@ function updateDependentFilters() {
   Object.values(events).flat().forEach(ev => {
     const matchCat = !filters.categories.length || (Array.isArray(ev.category) ? ev.category.some(cat => filters.categories.includes(cat)) : filters.categories.includes(ev.category));
     const matchKey = !filters.keywords.length || ev.keywords.some(k => filters.keywords.includes(k));
-    
+
     if (matchCat && matchKey) {
       ev.keywords.forEach(k => visibleKeywords.add(k));
       (Array.isArray(ev.category) ? ev.category : [ev.category]).forEach(cat => visibleCategories.add(cat));
@@ -164,7 +171,7 @@ function updateDependentFilters() {
 
 function initDropdowns() {
   const keywords = new Set();
-  
+
  Object.values(events).flat().forEach(e => {
   e.keywords.forEach(k => keywords.add(k));
   });
@@ -368,9 +375,9 @@ function toggleCategoryTooltip(event) {
 
   const tooltip = document.getElementById("categoryTooltip");
   const isVisible = !tooltip.classList.contains("hidden");
-  
+
   document.querySelectorAll(".tooltip-floating").forEach(el => el.classList.add("hidden"));
-  
+
   if (!isVisible) {
     tooltip.classList.remove("hidden");
     document.addEventListener("click", closeTooltipOnClickOutside);
@@ -393,7 +400,7 @@ function toggleKeywordModal() {
 function toggleFilters() {
   const content = document.getElementById("filters-content");
   const icon = document.getElementById("filtersArrow");
-  
+
   content.classList.toggle("filters-collapsed");
 
   // Change l'icône flèche haut/bas
