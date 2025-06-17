@@ -69,7 +69,7 @@
     Sont exclues les données personnelles, sensibles ou confidentielles, les documents non publics
     (sauf autorisation expresse) et les contenus invérifiables ou hors du champ de la santé publique.</p>
 
-  <form name="ajout-event" method="POST" data-netlify="true">
+ <form name="ajout-event" method="POST" data-netlify="true" action="/merci.html">
     <input type="hidden" name="form-name" value="ajout-event" />
     
     <input type="text" name="titre" placeholder="Titre de l'événement" required />
@@ -130,5 +130,13 @@ https://inserm.fr/epidemie-pdf" required></textarea>
 
     <button type="submit">📤 Envoyer</button>
   </form>
+  <!-- Ce bloc invisible permet à Netlify de détecter le formulaire -->
+<form name="ajout-event" netlify hidden>
+  <input type="text" name="titre" />
+  <input type="number" name="annee" />
+  <textarea name="description"></textarea>
+  <input type="text" name="sources" />
+  <input type="text" name="documents" />
+</form>
 </body>
 </html>
