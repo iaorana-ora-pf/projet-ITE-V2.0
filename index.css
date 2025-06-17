@@ -149,7 +149,42 @@ ACCUEIL Fenêtre flottante
 #active-filters-section.empty {
   opacity: 0.3;
 }
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
 
+/* ✅ Corrige aussi le layout principal */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-left: 340px;
+  overflow: hidden;
+}
+
+/* ✅ Correct layout for scroll area */
+.timeline-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ✅ Scrolls indépendants */
+.timeline-section {
+  flex: 2;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.event-details-container {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
 
 
 
