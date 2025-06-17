@@ -157,12 +157,7 @@ ACCUEIL Fenêtre flottante
   padding-left: 340px;
   overflow: hidden;
 }
-/* ✅ Correct layout for scroll area */
-.timeline-layout {
-  flex: 1;
-  display: flex;
-  overflow: hidden;
-  min-height: 0;
+
 }
 /* ✅ Scrolls indépendants */
 .timeline-section {
@@ -211,6 +206,10 @@ ACCUEIL Fenêtre flottante
   margin: 1.5rem 0 2rem;
   font-style: normal;
   font-weight: normal;
+}
+.title-3:empty,
+#event-count-text:empty {
+  display: none;
 }
 #event-count-text strong {
   color: #007b7f;
@@ -501,9 +500,11 @@ a.button {
   color: var(--dark-text);
   line-height: 1.5;
 }
+
 /*-----------------------------------
   LAYOUT FRISE
 -----------------------------------*/
+
 .timeline-layout {
   display: flex;
   align-items: stretch;
