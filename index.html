@@ -1,159 +1,238 @@
+
+<!--
+ Nettoyé automatiquement par CodeNinja 🥷
+ Fichier : index.html
+ Date : Juin 2025
+ Ne pas modifier cet en-tête à la main.
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projet 'ITE1</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-</head>
-
-<body>
- <!-- ✅ Ecran d'acceuil -->
-<div id="welcomePopup" class="popup">
-  <div class="popup-content">
-    <h1>Bienvenue sur 'ITE</h1>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Projet 'ITE2
+  </title>
+  <link href="index.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+ </head>
+ <body>
+  <!-- ✅ Ecran d'acceuil -->
+  <div class="popup" id="welcomePopup">
+   <div class="popup-content">
+    <h1>
+     Bienvenue sur 'ITE
+    </h1>
     <p class="event-count-highlight">
-      Explorez et plongez dans les détails de 
-      <span id="event-count-number">0</span>
-      événements de santé publique en Polynésie française à travers une frise chronologique interactive.
+     Explorez et plongez dans les détails de
+     <span id="event-count-number">
+      0
+     </span>
+     événements de santé publique en Polynésie française à travers une frise chronologique interactive.
     </p>
-
     <p class="popup-description">
-      'ITE est une base de connaissances qui rassemble, organise et partage des informations sur la santé publique en Polynésie française.
-      Grâce à ce projet, vous pouvez explorer les événements par année, catégorie ou mots-clés, et accéder à des fiches descriptives.<br><br>
-      Porté par Emmanuelle RUPP-TERRIS, ‘ITE est un projet personnel, collaboratif et en constante évolution. Il s'enrichit progressivement grâce
+     'ITE est une base de connaissances qui rassemble, organise et partage des informations sur la santé publique en Polynésie française.
+      Grâce à ce projet, vous pouvez explorer les événements par année, catégorie ou mots-clés, et accéder à des fiches descriptives.
+     <br/>
+     <br/>
+     Porté par Emmanuelle RUPP-TERRIS, ‘ITE est un projet personnel, collaboratif et en constante évolution. Il s'enrichit progressivement grâce
       aux contributions et aux données collectées au fil du temps. N’hésitez pas à proposer un événement, chaque contribution sera étudiée avec attention.
     </p>
-
     <!-- Conteneur pour les boutons -->
     <div class="button-container">
-      <!-- Bouton pour explorer la frise -->
-       <a href="#frise">
-          <button class="popup-btn" id="exploreBtn">Explorer la frise</button>
-      </a>
-      
-      <!-- Bouton pour proposer un événement -->
-      <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" target="_blank" rel="noopener noreferrer">
-        <button class="popup-btn">Proposer un événement</button>
-      </a>
-
-      <!-- Lien mailto pour le contact -->
-      <a href="mailto:contact@paanapf.com">
-        <button class="popup-btn">Contact</button>
-      </a>
+     <!-- Bouton pour explorer la frise -->
+     <a href="#frise">
+      <button class="popup-btn" id="exploreBtn">
+       Explorer la frise
+      </button>
+     </a>
+     <!-- Bouton pour proposer un événement -->
+     <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" rel="noopener noreferrer" target="_blank">
+      <button class="popup-btn">
+       Proposer un événement
+      </button>
+     </a>
+     <!-- Lien mailto pour le contact -->
+     <a href="mailto:contact@paanapf.com">
+      <button class="popup-btn">
+       Contact
+      </button>
+     </a>
     </div>
+   </div>
   </div>
-</div>
-  
-
   <!-- ✅ Barre latérale -->
-<div id="side-panel" class="side-panel">
-
-  <!-- Contenu scrollable -->
-  <div class="side-scrollable-content">
-      <h3 class="title-3 inline-icon">Filtres</h3>
-
-      <!-- Bloc Catégories -->
-     <div class="dropdown-checkbox">
-        <h4 class="title-4 inline-icon">
-          Catégories
-          <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
-        </h4>
-        <div id="categoryDropdown"></div>
-      </div>
-
-     
-
-      <!-- Bloc Mots-clés -->
-      <div class="dropdown-checkbox">
-        <h4 class="title-4 inline-icon">
-          Mots-clés
-          <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
-        </h4>
-        <div id="keywordDropdown"></div>
-      </div>
-
-    
-
-      <!-- Bloc Recherche -->
-      <div class="search-box">
-        <h4 class="title-4">Chercher dans tous les champs</h4>
-        <textarea id="searchInput" placeholder="Tapez le mot recherché" oninput="updateTimeline()"></textarea>
-      </div>
-
-      <!-- Filtres sélectionnés -->
-      <div id="active-filters-section">
-        <h4 class="title-4">Filtres sélectionnés :</h4>
-        <div id="active-filters"></div>
-      </div>
-
-      <!-- Bouton réinitialiser -->
-      <button class="button centered-button" onclick="resetFilters()">Réinitialiser les filtres</button>
-    </div> <!-- /.filters-block -->
- 
-
-  <!-- Footer toujours visible -->
-  <div class="side-footer">© 2025 – Tous droits réservés</div>
-</div>
-      
-  <!-- Bouton Admin -->     
-  <button id="admin-toggle-btn" style="position:fixed; bottom:10px; right:10px; opacity:0.2;" onclick="toggleAdmin()">🔧</button>
- <!-- Modale pour l’info Catégories -->
-     <div id="infoModal" class="info-modal hidden">
-        <div class="info-modal-content">
-          <button class="info-close-btn" onclick="toggleInfoModal()">×</button>
-          <h3 class="title-3">À propos des catégories</h3>
-          <p>Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :</p>
-          <ul>
-            <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
-            <li><strong>Données surveillance et recherche</strong> : production, analyse et utilisation de l'information sanitaire</li>
-            <li><strong>Promotion de la santé et prévention</strong> : actions comportementales, sociales et populationnelles</li>
-            <li><strong>Protection sanitaire et gestion des risques</strong> : réponse aux menaces sanitaires, environnementales ou réglementaires</li>
-            <li><strong>Accès aux services et aux moyens</strong> : ressources humaines, infrastructures, technologies, accès aux soins</li>
-          </ul>
-          <p>La catégorie <strong>Contexte</strong> regroupe des événements ayant un impact indirect sur la santé publique.</p>
-          <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
-        </div>
-      </div>
-  
-  <!-- Modale info mots-clés -->
-      <div id="keywordModal" class="info-modal hidden">
-        <div class="info-modal-content">
-          <button class="info-close-btn" onclick="toggleKeywordModal()">×</button>
-          <h3 class="title-3">À propos des mots-clés</h3>
-          <p>Les <strong>mots-clés</strong> sont issus autant que possible du thésaurus <a href="https://decs.bvsalud.org/fr" target="_blank">DeCS</a>.</p>
-          <p>Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
-        </div>
-      </div>
-   
- <!-- ✅ Contenu principal -->
-    <main class="main-content">
-      <div class="container timeline-wrapper">
-       <h3 class="title-3"></h3>
-<!-- Zone pour afficher le nombre d’événements -->
-        <div id="event-count-text"></div>
-        <div class="timeline-layout" id="frise">
-       <div id="timeline" class="timeline-section"></div>
-    <div id="event-details-container" class="event-details-container">
-      <p style="text-align:center; font-style:italic; color:#5F5F5F;">
-  Cliquez sur un événement pour accéder à sa fiche détaillée puis utilisez les flèches “◀” et “▶” pour naviguer entre les événements (filtrés).
-</p>
+  <div class="side-panel" id="side-panel">
+   <!-- Contenu scrollable -->
+   <div class="side-scrollable-content">
+    <h3 class="title-3 inline-icon">
+     Filtres
+    </h3>
+    <!-- Bloc Catégories -->
+    <div class="dropdown-checkbox">
+     <h4 class="title-4 inline-icon">
+      Catégories
+      <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories">
+      </i>
+     </h4>
+     <div id="categoryDropdown">
+     </div>
     </div>
+    <!-- Bloc Mots-clés -->
+    <div class="dropdown-checkbox">
+     <h4 class="title-4 inline-icon">
+      Mots-clés
+      <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés">
+      </i>
+     </h4>
+     <div id="keywordDropdown">
+     </div>
+    </div>
+    <!-- Bloc Recherche -->
+    <div class="search-box">
+     <h4 class="title-4">
+      Chercher dans tous les champs
+     </h4>
+     <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
+    </div>
+    <!-- Filtres sélectionnés -->
+    <div id="active-filters-section">
+     <h4 class="title-4">
+      Filtres sélectionnés :
+     </h4>
+     <div id="active-filters">
+     </div>
+    </div>
+    <!-- Bouton réinitialiser -->
+    <button class="button centered-button" onclick="resetFilters()">
+     Réinitialiser les filtres
+    </button>
+   </div>
+   <!-- /.filters-block -->
+   <!-- Footer toujours visible -->
+   <div class="side-footer">
+    © 2025 – Tous droits réservés
+   </div>
   </div>
-        <div id="admin-panel" style="display:none; padding:2rem; background:#f8f8f8; border-top: 2px solid #ccc;">
-  <h3>🔧 Mode Administration</h3>
-  <button onclick="filterRecent()">Filtrer événements récents</button>
- </div>
- </div>
-
-
-
-      
-</main>
-  
- <script src="explorer.js"></script>
-</div>
-</body>
+  <!-- Bouton Admin -->
+  <button id="admin-toggle-btn" onclick="toggleAdmin()" style="position:fixed; bottom:10px; right:10px; opacity:0.2;">
+   🔧
+  </button>
+  <!-- Modale pour l’info Catégories -->
+  <div class="info-modal hidden" id="infoModal">
+   <div class="info-modal-content">
+    <button class="info-close-btn" onclick="toggleInfoModal()">
+     ×
+    </button>
+    <h3 class="title-3">
+     À propos des catégories
+    </h3>
+    <p>
+     Ce filtre s’appuie sur les
+     <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">
+      Fonctions Essentielles de Santé Publique (FESP)
+     </a>
+     de l’OMS, regroupées en 5 grandes familles :
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Gouvernance et pilotage stratégique
+      </strong>
+      : coordination, planification, participation, qualité et équité
+     </li>
+     <li>
+      <strong>
+       Données surveillance et recherche
+      </strong>
+      : production, analyse et utilisation de l'information sanitaire
+     </li>
+     <li>
+      <strong>
+       Promotion de la santé et prévention
+      </strong>
+      : actions comportementales, sociales et populationnelles
+     </li>
+     <li>
+      <strong>
+       Protection sanitaire et gestion des risques
+      </strong>
+      : réponse aux menaces sanitaires, environnementales ou réglementaires
+     </li>
+     <li>
+      <strong>
+       Accès aux services et aux moyens
+      </strong>
+      : ressources humaines, infrastructures, technologies, accès aux soins
+     </li>
+    </ul>
+    <p>
+     La catégorie
+     <strong>
+      Contexte
+     </strong>
+     regroupe des événements ayant un impact indirect sur la santé publique.
+    </p>
+    <p>
+     Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").
+    </p>
+   </div>
+  </div>
+  <!-- Modale info mots-clés -->
+  <div class="info-modal hidden" id="keywordModal">
+   <div class="info-modal-content">
+    <button class="info-close-btn" onclick="toggleKeywordModal()">
+     ×
+    </button>
+    <h3 class="title-3">
+     À propos des mots-clés
+    </h3>
+    <p>
+     Les
+     <strong>
+      mots-clés
+     </strong>
+     sont issus autant que possible du thésaurus
+     <a href="https://decs.bvsalud.org/fr" target="_blank">
+      DeCS
+     </a>
+     .
+    </p>
+    <p>
+     Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").
+    </p>
+   </div>
+  </div>
+  <!-- ✅ Contenu principal -->
+  <main class="main-content">
+   <div class="container timeline-wrapper">
+    <h3 class="title-3">
+    </h3>
+    <!-- Zone pour afficher le nombre d’événements -->
+    <div id="event-count-text">
+    </div>
+    <div class="timeline-layout" id="frise">
+     <div class="timeline-section" id="timeline">
+     </div>
+     <div class="event-details-container" id="event-details-container">
+      <p style="text-align:center; font-style:italic; color:#5F5F5F;">
+       Cliquez sur un événement pour accéder à sa fiche détaillée puis utilisez les flèches “◀” et “▶” pour naviguer entre les événements (filtrés).
+      </p>
+     </div>
+    </div>
+    <div id="admin-panel" style="display:none; padding:2rem; background:#f8f8f8; border-top: 2px solid #ccc;">
+     <h3>
+      🔧 Mode Administration
+     </h3>
+     <button onclick="filterRecent()">
+      Filtrer événements récents
+     </button>
+    </div>
+   </div>
+  </main>
+  <script src="explorer.js">
+  </script>
+ </body>
 </html>
