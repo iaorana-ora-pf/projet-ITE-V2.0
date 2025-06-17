@@ -129,14 +129,11 @@ https://inserm.fr/epidemie-pdf" required></textarea>
     <input type="text" name="documents" placeholder="IDs des documents (zone réservée à l'administrateur)" />
 
     <button type="submit">📤 Envoyer</button>
-  </form>
-  <!-- Ce bloc invisible permet à Netlify de détecter le formulaire -->
-<form name="ajout-event" netlify hidden>
-  <input type="text" name="titre" />
-  <input type="number" name="annee" />
-  <textarea name="description"></textarea>
-  <input type="text" name="sources" />
-  <input type="text" name="documents" />
-</form>
+ <!-- Ce bloc rend le formulaire détectable par Netlify lors du build -->
+<noscript>
+  <input type="hidden" name="form-name" value="ajout-event">
+</noscript>
+ </form>
+  
 </body>
 </html>
