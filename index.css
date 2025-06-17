@@ -197,6 +197,10 @@ ACCUEIL Fenêtre flottante
   margin-top: 0.25rem;
   margin-bottom: 1.5rem;
 }
+.title-3:empty,
+#event-count-text:empty {
+  display: none;
+}
 .title-3.inline-icon {
   margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
 }
