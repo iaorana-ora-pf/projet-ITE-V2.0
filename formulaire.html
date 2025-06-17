@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposer un événement</title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h1 {
+      color: #166F76;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea, select, button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #166F76;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #128c8c;
+    }
+  </style>
+</head>
+<body>
+  <h1>Proposer un événement</h1>
+
+  <form name="ajout-event" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="ajout-event" />
+
+    <label for="titre">Titre de l'événement *</label>
+    <input type="text" id="titre" name="titre" required />
+
+    <label for="annee">Année *</label>
+    <input type="number" id="annee" name="annee" required />
+
+    <label for="description">Description *</label>
+    <textarea id="description" name="description" rows="5" required></textarea>
+
+    <label for="categorie">Catégorie(s) *</label>
+    <select name="categorie" id="categorie" multiple required size="6">
+      <option value="Accès aux services et aux moyens">Accès aux services et aux moyens</option>
+      <option value="Contexte">Contexte</option>
+      <option value="Données surveillance et recherche">Données surveillance et recherche</option>
+      <option value="Gouvernance et pilotage stratégique">Gouvernance et pilotage stratégique</option>
+      <option value="Promotion de la santé et prévention">Promotion de la santé et prévention</option>
+      <option value="Protection sanitaire et gestion des risques">Protection sanitaire et gestion des risques</option>
+    </select>
+
+    <label for="motscles">Mots-clés *</label>
+    <select name="motscles" id="motscles" multiple required size="8">
+      <option>Adolescent</option>
+      <option>Allaitement naturel</option>
+      <option>Comportement</option>
+      <option>Dépistage de masse</option>
+      <option>Dysenterie</option>
+      <option>Ecole et CJA en santé</option>
+      <option>Enfant</option>
+      <option>Épidémies</option>
+      <option>Femmes</option>
+      <option>Grippe humaine</option>
+      <option>RAA</option>
+      <option>Tuberculose</option>
+      <option>Variole</option>
+    </select>
+
+    <label for="motscles-autres">Autres mots-clés</label>
+    <input type="text" id="motscles-autres" name="motscles-autres" placeholder="Ex: Hygiène, VIH" />
+
+    <label for="sources">Sources (texte ou lien PDF)</label>
+    <textarea name="sources" id="sources" rows="4" placeholder="Ex: https://site.org/doc.pdf&#10;Rapport OMS 2023"></textarea>
+
+    <label for="documents">ID Document(s) (ex: doc001,doc002)</label>
+    <input type="text" name="documents" id="documents" />
+
+    <button type="submit">📤 Envoyer</button>
+  </form>
+</body>
+</html>
