@@ -1,3 +1,10 @@
+/*
+ Nettoyé automatiquement par CodeNinja 🥷
+ Fichier : index.css
+ Date : Juin 2025
+ Ne pas modifier cet en-tête à la main.
+*/
+
 :root {
   --main-green: #166F76;
   --hover-green: #128c8c;
@@ -6,12 +13,11 @@
   --neutral-text: #5F5F5F;
   --dark-text: #363B40;
 }
-
 /*-----------------------------------
  OK
 -----------------------------------*/
 /*-----------------------------------
-ACCUEIL Fenêtre flottante 
+ACCUEIL Fenêtre flottante
 -----------------------------------*/
 /* Espacement vertical entre chaque section de filtre */
 .side-scrollable-content > * {
@@ -33,7 +39,6 @@ ACCUEIL Fenêtre flottante
   align-items: center;
   z-index: 1000;
 }
-
 /* Contenu de la fenêtre flottante */
 .popup-content {
   background-color: white;
@@ -45,7 +50,6 @@ ACCUEIL Fenêtre flottante
   text-align: justify;
   margin-bottom: 40px;
 }
-
 /* Style du titre */
 .popup-content h1 {
   font-size: 2em;
@@ -54,7 +58,6 @@ ACCUEIL Fenêtre flottante
   text-align: center;
   margin-top: 0;
 }
-
 /* Style du sous titre */
 .event-count-highlight {
   font-size: 1.2rem;         /* Texte un peu plus grand */
@@ -65,9 +68,7 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 0;       /* Grand espace avant le bloc orange */
   line-height: 1.5;
 }
-
 /* Style du texte descriptif */
-
 .popup-description {
   font-size: 1rem;
   color: #363B40;
@@ -87,12 +88,10 @@ ACCUEIL Fenêtre flottante
   text-align: center;
   width: 100%;
 }
-
 /* Changement de couleur au survol des boutons */
 .popup-btn:hover {
   background-color: #128c8c;
 }
-
 /* Conteneur pour les boutons (flexbox) */
 .popup-content .button-container {
   display: flex;
@@ -101,7 +100,6 @@ ACCUEIL Fenêtre flottante
   margin-top: 40px;
   flex-wrap: wrap; /* Pour que ça passe en colonne si écran étroit */
 }
-
 /* Animation d'apparition */
 @keyframes popupAnimation {
   from {
@@ -113,19 +111,16 @@ ACCUEIL Fenêtre flottante
     transform: translateY(0);
   }
 }
-
 /* Lorsque la fenêtre flottante est fermée */
 .popup.hide {
   opacity: 0;
   visibility: hidden;
 }
-
 /* Style pour les liens contenant des boutons */
 .popup-content a {
   flex: 1;
   text-decoration: none; /* Enlever les soulignements des liens */
 }
-
 .info-modal-content a {
   all: unset;
   color: var(--link-green);
@@ -145,7 +140,6 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 1rem;
   transition: opacity 0.3s ease;
 }
-
 #active-filters-section.empty {
   opacity: 0.3;
 }
@@ -155,7 +149,6 @@ ACCUEIL Fenêtre flottante
   flex: 1;
   min-height: 0;
 }
-
 /* ✅ Corrige aussi le layout principal */
 .main-content {
   display: flex;
@@ -164,7 +157,6 @@ ACCUEIL Fenêtre flottante
   padding-left: 340px;
   overflow: hidden;
 }
-
 /* ✅ Correct layout for scroll area */
 .timeline-layout {
   flex: 1;
@@ -172,29 +164,20 @@ ACCUEIL Fenêtre flottante
   overflow: hidden;
   min-height: 0;
 }
-
 /* ✅ Scrolls indépendants */
 .timeline-section {
   flex: 2;
   overflow-y: auto;
   min-height: 0;
 }
-
 .event-details-container {
   flex: 1;
   overflow-y: auto;
   min-height: 0;
 }
-
-
-
-
-
 /*-----------------------------------
  STOP OK
 -----------------------------------*/
-
-
 /*-----------------------------------
   TYPOGRAPHIE & TITRES
 -----------------------------------*/
@@ -205,7 +188,6 @@ ACCUEIL Fenêtre flottante
   font-weight: bold;
   margin-bottom: 0;
 }
-
 .title-2 {
   text-align: center;
   font-size: 1.6rem;
@@ -213,7 +195,6 @@ ACCUEIL Fenêtre flottante
   margin-top: 0;
   margin-bottom: 3rem;
 }
-
 .title-3 {
   text-align: left;
   font-size: 1.1rem;
@@ -231,14 +212,10 @@ ACCUEIL Fenêtre flottante
   font-style: normal;
   font-weight: normal;
 }
-
 #event-count-text strong {
   color: #007b7f;
   font-weight: 600;
 }
-
-
-
 .title-4 {
   text-align: left;
   font-size: 1rem;
@@ -250,7 +227,6 @@ ACCUEIL Fenêtre flottante
   text-align: center;
   margin-bottom: 2rem;
 }
-
 .side-title {
   font-size: 1.8rem;
   color: var(--main-green);
@@ -258,7 +234,6 @@ ACCUEIL Fenêtre flottante
   margin: 0;
   margin-top: 1.5rem;
 }
-
 .side-subtitle {
   font-size: 1rem;
   color: var(--neutral-text);
@@ -276,10 +251,6 @@ ACCUEIL Fenêtre flottante
   margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
   text-align: center;
 }
-
-
-
-
 .category-info-box {
   background-color: #fefefe;
   border: 1px solid #ccc;
@@ -290,7 +261,6 @@ ACCUEIL Fenêtre flottante
   color: #333;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .hidden {
   display: none !important;
 }
@@ -300,14 +270,12 @@ ACCUEIL Fenêtre flottante
   gap: 2rem;
   align-items: flex-start;
 }
-
 .dropdown-checkbox,
 .search-box {
   flex: 1 1 300px;
   display: block;
   min-width: 280px;
 }
-
 /* Modale d’info */
 .info-modal {
   position: fixed;
@@ -318,7 +286,6 @@ ACCUEIL Fenêtre flottante
   align-items: center;
   z-index: 9999;
 }
-
 .info-modal-content {
   background: white;
   padding: 2rem;
@@ -330,7 +297,6 @@ ACCUEIL Fenêtre flottante
   position: relative;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
-
 .info-close-btn {
   position: absolute;
   top: 10px;
@@ -341,12 +307,10 @@ ACCUEIL Fenêtre flottante
   cursor: pointer;
   color: #666;
 }
-
 #filters-content {
   transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
-
 .filters-collapsed {
   max-height: 0 !important;
   opacity: 0;
@@ -358,7 +322,6 @@ ACCUEIL Fenêtre flottante
   gap: 6px;
   margin-bottom: 0.5rem; /* au lieu de 40px ! */
   margin-top: 0.5rem;
-  
 }
 /*-----------------------------------
   STRUCTURE GÉNÉRALE
@@ -372,31 +335,25 @@ body {
   margin: 0;
   padding-top: 0;
  }
-
 ul {
   margin-left: 0;
   padding-left: 1rem;
 }
-
 p + ul {
   margin-top: 0;
 }
-
 a {
   color: var(--link-green);
   text-decoration: underline;
 }
-
 a:hover {
   color: var(--main-green);
 }
-
 .container {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .main-content {
   height: 100vh; /* prend toute la hauteur de la fenêtre */
   padding-left: 340px; /* largeur de ta sidebar */
@@ -405,7 +362,6 @@ a:hover {
   justify-content: flex-start;
   overflow: hidden; /* ✅ on bloque scroll ici pour gérer en dessous */
 }
-
 html, body {
   height: 100%;
   margin: 0;
@@ -416,7 +372,6 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
 }
-
 main {
   flex: 1;
 }
@@ -434,21 +389,17 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .button {
   padding: 0.75rem 1.5rem;
   text-align: center;
   margin-top: 2rem;
 }
-
 .button:hover, .close-btn-bottom:hover {
   background-color: var(--hover-green);
 }
-
 a.button {
   text-decoration: none;
 }
-
 .new-btn,
 .help-btn,
 .contact-btn {
@@ -465,21 +416,17 @@ a.button {
   transition: background-color 0.3s ease;
   border: none;
 }
-
 .new-btn {
   background-color: var(--main-green);
 }
-
 .new-btn:hover {
   background-color: var(--hover-green);
 }
-
 .help-btn,
 .contact-btn {
   background-color: var(--main-green);
   text-decoration: none;
 }
-
 .help-btn:hover,
 .contact-btn:hover {
   background-color: var(--hover-green);
@@ -493,13 +440,11 @@ a.button {
   align-items: flex-start;
   gap: 2rem;
 }
-
 .dropdown-checkbox, .search-box {
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
 }
-
 .dropdown-checkbox div,
 .search-box textarea {
   background: #fff;
@@ -507,13 +452,11 @@ a.button {
   border-radius: 6px;
   height: 100px;
 }
-
 .dropdown-checkbox div {
   padding: 10px;
   overflow-y: auto;
   font-size: 0.9rem;
 }
-
 .search-box textarea {
   resize: none;
   padding: 8px 12px;
@@ -522,13 +465,11 @@ a.button {
   min-height: 40px;     /* ← Sécurité */
   line-height: 1.3;
 }
-
 .search-box textarea::placeholder {
   color: #363B40;
   font-size: 0.9rem;
   opacity:0.8;
 }
-
 .filter-badge {
   display: inline-block;
   background-color: #d0e9e9;
@@ -539,14 +480,12 @@ a.button {
   font-size: 0.9rem;
   font-weight: 500;
 }
-
 .remove-badge {
   margin-left: 0.5rem;
   cursor: pointer;
   font-weight: bold;
   color: var(--hover-green);
 }
-
 .remove-badge:hover {
   color: #c0392b;
 }
@@ -555,7 +494,6 @@ a.button {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-
 .contribution-text {
   margin-top: 4rem;
   font-size: 1.3rem;
@@ -576,17 +514,15 @@ a.button {
   padding: 0.75rem 1rem;
   min-height:0;
   margin-bottom: 1.5rem;
- flex: 1;    
-  overflow: hidden; 
+ flex: 1;
+  overflow: hidden;
 }
-
 .timeline-section {
   flex: 2;
   overflow-y: auto;
   height: 100%;
   min-height: 0;
 }
-
 .timeline-year {
   font-size: 1.15rem;
   color: var(--main-green);
@@ -595,25 +531,21 @@ a.button {
   padding-left: 0;
   margin-bottom: 0.75rem;
 }
-
 .year-block {
   padding-left: 0;
   margin-bottom: 3rem;
 }
-
 .year-block h3 {
   position: relative;
   padding-left: 1.5rem;
   margin-left: 0;
 }
-
 .event-grid {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 0;
 }
-
 .event-grid li {
   list-style: none;
   padding: 0.75rem 1rem;
@@ -627,26 +559,21 @@ a.button {
   font-weight: 500;
   font-size: 1.05rem;
 }
-
 .event-grid li:hover {
   background: #e6f7ff;
 }
-
 .selected-event {
   border-left: 4px solid var(--main-green);
   background-color: #f5ef87;
 }
-
 .context-event {
   background-color: #f4f0ec;
 }
-
 @media (max-width: 768px) {
   #filters {
     display: none;
   }
 }
-
 /*-----------------------------------
   DÉTAILS ÉVÉNEMENT
 -----------------------------------*/
@@ -662,7 +589,6 @@ a.button {
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
-
 /*-----------------------------------
   BLOCS FLOTTANTS
 -----------------------------------*/
@@ -686,7 +612,6 @@ a.button {
   font-style: italic;
   color: var(--neutral-text);
 }
-
 .encart {
   flex: 1 1 33%;
   background-color: #F1EBE7;
@@ -699,7 +624,6 @@ a.button {
   margin-left: auto;
   margin-right: auto;
 }
-
 /*-----------------------------------
   FOOTER
 -----------------------------------*/
@@ -712,12 +636,10 @@ a.button {
   text-align: center;
   margin-top: 0;
 }
-
 .footer-link {
   color: var(--link-green);
   text-decoration: underline;
 }
-
 /*-----------------------------------
   PANNEAU D'AIDE
 -----------------------------------*/
@@ -735,13 +657,11 @@ a.button {
   border-top: 5px solid var(--main-green);
   padding: 1.5rem;
 }
-
 .help-panel-content {
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
-
 /*-----------------------------------
   MODALE D'AIDE
 -----------------------------------*/
@@ -756,7 +676,6 @@ a.button {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
 }
-
 .help-modal-content {
   background: white;
   border-radius: 10px;
@@ -768,7 +687,6 @@ a.button {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
  }
-
 .close-btn {
   position: absolute;
   top: 10px;
@@ -807,7 +725,6 @@ a.button {
   border: none;
   text-decoration: none;
 }
-
 .contrib-btn:hover {
   background-color:#a63917;
   transform: scale(1.1);
@@ -824,12 +741,10 @@ a.button {
   color: var(--dark-text);
   font-size: 1.1rem;
 }
-
 .contribution-banner p {
   margin-bottom: 1rem;
   font-weight: 500;
 }
-
 .contribute-button {
   background-color: var(--link-green);
   padding: 0.75rem 1.5rem;
@@ -840,7 +755,6 @@ a.button {
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
-
 .contribute-button:hover {
   background-color: var(--hover-green);
 }
@@ -905,7 +819,6 @@ a.button {
   margin: 2rem 0 1rem;
   text-align: center;
 }
-
 .side-panel .icon-btn {
   width: 44px;
   height: 44px;
@@ -919,7 +832,6 @@ a.button {
   cursor: pointer;
   text-decoration: none;
 }
-
 .side-panel .contribute-btn {
   border-radius: 6px;
   font-size: 1rem;
@@ -927,11 +839,9 @@ a.button {
   width: auto;
   background-color: #FE9C1A;
 }
-
 .side-panel .contribute-btn:hover {
   background-color: #FEBB5F;
 }
-
 .close-side-panel {
   position: absolute;
   top: 0.5rem;
@@ -942,7 +852,6 @@ a.button {
   border: none;
   cursor: pointer;
 }
-
 /* Bouton flottant pour rouvrir */
 .open-panel-btn {
   position: fixed;
@@ -961,17 +870,13 @@ a.button {
   display: flex;
   height: 100vh;
 }
-
 .layout-with-sidebar.sidebar-hidden .side-panel {
   display: none;
 }
-
 .layout-with-sidebar.sidebar-hidden .main-content {
   margin-left: 0;
   padding-left: 1.5rem; /* ou comme tu veux */
 }
-
-
 .side-btn {
   width: 70px;
   height: 70px;
@@ -987,7 +892,6 @@ a.button {
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
-
 .side-btn:hover {
   background-color: var(--hover-green);
 }
@@ -999,7 +903,6 @@ a.button {
   justify-content: center;
   margin-top: 1rem;
 }
-
 .side-inline-btn {
   display: flex;
   align-items: center;
@@ -1016,7 +919,6 @@ a.button {
   text-decoration: none;
   white-space: nowrap;
 }
-
 .side-inline-btn:hover {
   background-color: var(--hover-green);
 }
@@ -1033,7 +935,6 @@ a.button {
   z-index: 9999;
   margin-top: 8px;
 }
-
 .info-modal {
   position: fixed;
   top: 0;
@@ -1046,7 +947,6 @@ a.button {
   justify-content: center;
   z-index: 9999;
 }
-
 .info-modal-content {
   background: white;
   padding: 2rem;
@@ -1058,7 +958,6 @@ a.button {
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   position: relative;
 }
-
 .info-close-btn {
   position: absolute;
   top: 10px;
@@ -1069,7 +968,6 @@ a.button {
   cursor: pointer;
   color: #666;
 }
-
 .title-4-inline {
   display: flex;
   align-items: center;
