@@ -27,8 +27,12 @@ body {
   padding: 2rem 1.5rem 1rem;
   box-sizing: border-box;
 }
-.info-modal-content {
-  background-color: white;
+.info-modal-content,
+.keyword-modal-content {
+  background-color: white !important;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .info-modal-content a {
   all: unset;
