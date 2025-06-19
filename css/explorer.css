@@ -156,18 +156,14 @@ ACCUEIL Fenêtre flottante
   height: 100vh;
   padding-left: 340px;
   overflow: hidden;
-}
-
+  justify-content: flex-start;
 }
 /* ✅ Scrolls indépendants */
+
 .timeline-section {
   flex: 2;
   overflow-y: auto;
-  min-height: 0;
-}
-.event-details-container {
-  flex: 1;
-  overflow-y: auto;
+  height: 100%;
   min-height: 0;
 }
 /*-----------------------------------
@@ -357,14 +353,7 @@ a:hover {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-.main-content {
-  height: 100vh; /* prend toute la hauteur de la fenêtre */
-  padding-left: 340px; /* largeur de ta sidebar */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden; /* ✅ on bloque scroll ici pour gérer en dessous */
-}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -509,25 +498,8 @@ a.button {
   LAYOUT FRISE
 -----------------------------------*/
 
-.timeline-layout {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
-  min-height:0;
-  margin-bottom: 1.5rem;
- flex: 1;
-  overflow: hidden;
-}
-.timeline-section {
-  flex: 2;
-  overflow-y: auto;
-  height: 100%;
-  min-height: 0;
-}
+
+
 .timeline-year {
   font-size: 1.15rem;
   color: var(--main-green);
@@ -589,6 +561,7 @@ a.button {
   padding: 1.5rem;
   max-width: 450px;
   min-width: 300px;
+  min-height: 0;
   width: 100%;
   background: white;
   border-radius: 8px;
@@ -787,12 +760,7 @@ a.button {
   word-wrap: break-word;
   overflow: hidden;
 }
-.side-panel,
-.main-content,
-.timeline-layout {
-  height: 100%;
-}
-.side-scrollable-content {
+side-scrollable-content {
   flex: 1;
   overflow-y: auto;
   height: 100%;
@@ -1006,4 +974,17 @@ a.button {
 }
 #resourceList a:hover {
   text-decoration: underline;
+}
+.timeline-layout {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  min-height:0;
+  margin-bottom: 1.5rem;
+ flex: 1;
+  overflow: hidden;
 }
