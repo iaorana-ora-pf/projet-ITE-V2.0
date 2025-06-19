@@ -106,7 +106,7 @@ body {
 
 /* === BLOC DES FILTRES === */
 .filters-section {
-  background-color: var(--light-bg);
+  background-color: rgba(255, 255, 255, 0.85); /* blanc semi-transparent */
   border-bottom: 1px solid #ddd;
   padding: 2rem;
 }
