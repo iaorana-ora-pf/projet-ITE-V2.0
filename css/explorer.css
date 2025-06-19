@@ -26,6 +26,13 @@ ACCUEIL Fenêtre flottante
 .side-scrollable-content > *:last-child {
   margin-bottom: 0.3rem;
 }
+.side-scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding: 2rem 1.5rem 1rem;
+  box-sizing: border-box;
+}
 /* Style de la fenêtre flottante */
 .popup {
   position: fixed;
