@@ -358,19 +358,17 @@ body {
   top: 0;
   left: 0;
   height: 100vh;
-  overflow-x: hidden;
-  width: 340px; /* ou ta valeur choisie */
-  background-color: #ede7e3;
-  z-index: 100;
+  width: 340px;
+  background: url("images/accueil.png") no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;              /* ⛔ annule tout espacement interne */
-  margin: 0;               /* ⛔ supprime les marges externes */
+  padding: 0;
+  margin: 0;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-  word-wrap: break-word;
-  overflow: hidden;
+  z-index: 100;
 }
 
 .side-footer {
@@ -395,18 +393,6 @@ body {
   text-decoration: none;
 }
 
-.side-panel .contribute-btn {
-  border-radius: 6px;
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
-  width: auto;
-  background-color: #FE9C1A;
-}
-
-.side-panel .contribute-btn:hover {
-  background-color: #FEBB5F;
-}
-
 .tooltip-floating {
   position: absolute;
   top: 100%;
@@ -420,7 +406,19 @@ body {
   z-index: 9999;
   margin-top: 8px;
 }
+.side-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);  /* ou rgba(0,0,0,.2) si tu veux sombre */
+  z-index: 0;
+}
 
+.side-scrollable-content,
+.side-footer {
+  position: relative;
+  z-index: 1;
+}
 .event-details-container p,
 .event-details-container ul,
 .event-details-container li,
