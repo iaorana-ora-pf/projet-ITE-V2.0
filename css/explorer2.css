@@ -1,1 +1,24 @@
+:root {
+  --main-green: #048B9A;
+  --hover-green: #02616B;
+  --link-green: #048B9A;
+  --light-bg: #EDE7E3;
+  --neutral-text: #5F5F5F;
+  --dark-text: #1e2124;
+  --font-main: 'Lato', sans-serif;
+  --bg-white: #ffffff;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-white);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: var(--dark-text);
+  overflow: hidden;
+}
