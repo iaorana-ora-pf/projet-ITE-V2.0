@@ -1,990 +1,238 @@
-/*
+
+
+
+<!--
  Nettoyé automatiquement par CodeNinja 🥷
- Fichier : index.css
+ Fichier : index.html
  Date : Juin 2025
  Ne pas modifier cet en-tête à la main.
-*/
+-->
 
-:root {
-  --main-green: #166F76;
-  --hover-green: #128c8c;
-  --link-green: #2a9d8f;
-  --light-bg: #EDE7E3;
-  --neutral-text: #5F5F5F;
-  --dark-text: #363B40;
-}
-/*-----------------------------------
- OK
------------------------------------*/
-/*-----------------------------------
-ACCUEIL Fenêtre flottante
------------------------------------*/
-/* Espacement vertical entre chaque section de filtre */
-.side-scrollable-content > * {
-  margin-bottom: 1.5rem;
-}
-.side-scrollable-content > *:last-child {
-  margin-bottom: 0.3rem;
-}
-/* Style de la fenêtre flottante */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-/* Contenu de la fenêtre flottante */
-.popup-content {
-  background-color: white;
-  padding: 40px;
-  width: 65%;  /* Largeur de la fenêtre */
-  max-width: 800px;
-  height: auto;
-  border-radius: 10px;
-  text-align: justify;
-  margin-bottom: 40px;
-}
-/* Style du titre */
-.popup-content h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #166F76;
-  text-align: center;
-  margin-top: 0;
-}
-/* Style du sous titre */
-.event-count-highlight {
-  font-size: 1.2rem;         /* Texte un peu plus grand */
-  font-weight: 500;
-  text-align: center;
-  color: #166F76;               /* Couleur foncée lisible */
-  margin-top: 0;        /* Espace après les boutons info/mail */
-  margin-bottom: 0;       /* Grand espace avant le bloc orange */
-  line-height: 1.5;
-}
-/* Style du texte descriptif */
-.popup-description {
-  font-size: 1rem;
-  color: #363B40;
-  text-align: justify;
-}
-/* Style des boutons dans la fenêtre flottante */
-.popup-btn {
-  background-color: #166F76;
-  color: white;
-  border: none;
-  padding: 15px 20px;
-  font-size: 1.1em;
-  cursor: pointer;
-  border-radius: 5px;
-  flex: 1;
-  margin-bottom: 10px;
-  text-align: center;
-  width: 100%;
-}
-/* Changement de couleur au survol des boutons */
-.popup-btn:hover {
-  background-color: #128c8c;
-}
-/* Conteneur pour les boutons (flexbox) */
-.popup-content .button-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 40px;
-  flex-wrap: wrap; /* Pour que ça passe en colonne si écran étroit */
-}
-/* Animation d'apparition */
-@keyframes popupAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* Lorsque la fenêtre flottante est fermée */
-.popup.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-/* Style pour les liens contenant des boutons */
-.popup-content a {
-  flex: 1;
-  text-decoration: none; /* Enlever les soulignements des liens */
-}
-.info-modal-content a {
-  all: unset;
-  color: var(--link-green);
-  text-decoration: underline;
-  cursor: pointer;
-}
-.info-modal-content a:hover {
-  color: var(--hover-green);
-}
-.info-modal-content ul li {
-  margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
-  line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
-}
-#active-filters-section {
-  min-height: 3.5rem; /* Réserve une hauteur même vide */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: opacity 0.3s ease;
-}
-#active-filters-section.empty {
-  opacity: 0.3;
-}
-.timeline-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
-}
-/* ✅ Corrige aussi le layout principal */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding-left: 340px;
-  overflow: hidden;
-}
-
-}
-/* ✅ Scrolls indépendants */
-.timeline-section {
-  flex: 2;
-  overflow-y: auto;
-  min-height: 0;
-}
-.event-details-container {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 0;
-}
-/*-----------------------------------
- STOP OK
------------------------------------*/
-/*-----------------------------------
-  TYPOGRAPHIE & TITRES
------------------------------------*/
-.title-1 {
-  text-align: center;
-  color: var(--main-green);
-  font-size: 2.4rem;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-.title-2 {
-  text-align: center;
-  font-size: 1.6rem;
-  color: var(--neutral-text);
-  margin-top: 0;
-  margin-bottom: 3rem;
-}
-.title-3 {
-  text-align: left;
-  font-size: 1.1rem;
-  color: var(--main-green);
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-}
-.title-3:empty,
-#event-count-text:empty {
-  display: none;
-}
-.title-3.inline-icon {
-  margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
-}
-#event-count-text {
-  text-align: center;
-  font-size: 1.3rem;
-  margin: 1.5rem 0 2rem;
-  font-style: normal;
-  font-weight: normal;
-}
-.title-3:empty,
-#event-count-text:empty {
-  display: none;
-}
-#event-count-text strong {
-  color: #007b7f;
-  font-weight: 600;
-}
-.title-4 {
-  text-align: left;
-  font-size: 1rem;
-  color: var(--dark-text);
-  margin-top: 0.6rem;
-  margin-bottom: 0.25rem;
-}
-.side-panel-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.side-title {
-  font-size: 1.8rem;
-  color: var(--main-green);
-  font-weight: 700;
-  margin: 0;
-  margin-top: 1.5rem;
-}
-.side-subtitle {
-  font-size: 1rem;
-  color: var(--neutral-text);
-  margin-top: 0.5rem;
-  line-height: 1.3;
-}
-.info-icon {
-  margin-left: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  color: #5f5f5f;
-}
-.centered-button {
-  display: block;
-  margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
-  text-align: center;
-}
-.category-info-box {
-  background-color: #fefefe;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 10px;
-  margin-top: 8px;
-  font-size: 14px;
-  color: #333;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-.hidden {
-  display: none !important;
-}
-.filtres-ligne {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-}
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 300px;
-  display: block;
-  min-width: 280px;
-}
-/* Modale d’info */
-.info-modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-.info-modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-.info-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #666;
-}
-#filters-content {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
-}
-.filters-collapsed {
-  max-height: 0 !important;
-  opacity: 0;
-  pointer-events: none;
-}
-.title-4.inline-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 0.5rem; /* au lieu de 40px ! */
-  margin-top: 0.5rem;
-}
-/*-----------------------------------
-  STRUCTURE GÉNÉRALE
------------------------------------*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-body {
-  background-color: #ffffff;
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  padding-top: 0;
- }
-ul {
-  margin-left: 0;
-  padding-left: 1rem;
-}
-p + ul {
-  margin-top: 0;
-}
-a {
-  color: var(--link-green);
-  text-decoration: underline;
-}
-a:hover {
-  color: var(--main-green);
-}
-.container {
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-.main-content {
-  height: 100vh; /* prend toute la hauteur de la fenêtre */
-  padding-left: 340px; /* largeur de ta sidebar */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden; /* ✅ on bloque scroll ici pour gérer en dessous */
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-#page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-main {
-  flex: 1;
-}
-/*-----------------------------------
-  BOUTONS
------------------------------------*/
-.button, .close-btn-bottom {
-  font-family: 'Lato', sans-serif;
-  background-color: var(--main-green);
-  color: #fff;
-  font-weight: 500;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.button {
-  padding: 0.75rem 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-.button:hover, .close-btn-bottom:hover {
-  background-color: var(--hover-green);
-}
-a.button {
-  text-decoration: none;
-}
-.new-btn,
-.help-btn,
-.contact-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-}
-.new-btn {
-  background-color: var(--main-green);
-}
-.new-btn:hover {
-  background-color: var(--hover-green);
-}
-.help-btn,
-.contact-btn {
-  background-color: var(--main-green);
-  text-decoration: none;
-}
-.help-btn:hover,
-.contact-btn:hover {
-  background-color: var(--hover-green);
-}
-/*-----------------------------------
-  BLOCS FILTRES
------------------------------------*/
-.filtres-ligne {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
-}
-.dropdown-checkbox, .search-box {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-}
-.dropdown-checkbox div,
-.search-box textarea {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  height: 100px;
-}
-.dropdown-checkbox div {
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
-.search-box textarea {
-  resize: none;
-  padding: 8px 12px;
-  font-size: 1rem;
-  height: 50px;         /* ← Réduction ici */
-  min-height: 40px;     /* ← Sécurité */
-  line-height: 1.3;
-}
-.search-box textarea::placeholder {
-  color: #363B40;
-  font-size: 0.9rem;
-  opacity:0.8;
-}
-.filter-badge {
-  display: inline-block;
-  background-color: #d0e9e9;
-  color: var(--dark-text);
-  padding: 0.4rem 0.75rem;
-  margin: 0.3rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-.remove-badge {
-  margin-left: 0.5rem;
-  cursor: pointer;
-  font-weight: bold;
-  color: var(--hover-green);
-}
-.remove-badge:hover {
-  color: #c0392b;
-}
-.contribution-invite {
-  margin-top: 5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-.contribution-text {
-  margin-top: 4rem;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: var(--dark-text);
-  line-height: 1.5;
-}
-
-/*-----------------------------------
-  LAYOUT FRISE
------------------------------------*/
-
-.timeline-layout {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
-  min-height:0;
-  margin-bottom: 1.5rem;
- flex: 1;
-  overflow: hidden;
-}
-.timeline-section {
-  flex: 2;
-  overflow-y: auto;
-  height: 100%;
-  min-height: 0;
-}
-.timeline-year {
-  font-size: 1.15rem;
-  color: var(--main-green);
-  font-weight: bold;
-  margin-left: 0;
-  padding-left: 0;
-  margin-bottom: 0.75rem;
-}
-.year-block {
-  padding-left: 0;
-  margin-bottom: 3rem;
-}
-.year-block h3 {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-left: 0;
-}
-.event-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-left: 0;
-}
-.event-grid li {
-  list-style: none;
-  padding: 0.75rem 1rem;
-  background: #f9f9f9;
-  border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-.event-grid li:hover {
-  background: #e6f7ff;
-}
-.selected-event {
-  border-left: 4px solid var(--main-green);
-  background-color: #f5ef87;
-}
-.context-event {
-  background-color: #f4f0ec;
-}
-@media (max-width: 768px) {
-  #filters {
-    display: none;
-  }
-}
-/*-----------------------------------
-  DÉTAILS ÉVÉNEMENT
------------------------------------*/
-.event-details-container {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1.5rem;
-  max-width: 450px;
-  min-width: 300px;
-  width: 100%;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
-/*-----------------------------------
-  BLOCS FLOTTANTS
------------------------------------*/
-.floating-buttons {
-  position: fixed;
-  top: 1rem;              /* ancré en haut */
-  right: 1rem;            /* aligné à droite */
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  z-index: 150;
-}
-/*-----------------------------------
-  INTRO & ENCART
------------------------------------*/
-.intro-bloc {
-  background-color: transparent;
-  border-left: 4px solid var(--link-green);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--neutral-text);
-}
-.encart {
-  flex: 1 1 33%;
-  background-color: #F1EBE7;
-  border-left: 5px solid var(--main-green);
-  padding: 2.5rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-/*-----------------------------------
-  FOOTER
------------------------------------*/
-.footer {
-  background-color: #ffffff;
-  border-top: 1px solid #ccc;
-  color: #666;
-  font-size: 0.875rem;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  margin-top: 0;
-}
-.footer-link {
-  color: var(--link-green);
-  text-decoration: underline;
-}
-/*-----------------------------------
-  PANNEAU D'AIDE
------------------------------------*/
-.help-panel {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  max-height: 35vh;
-  background: white;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  overflow-y: auto;
-  z-index: 100;
-  display: none;
-  border-top: 5px solid var(--main-green);
-  padding: 1.5rem;
-}
-.help-panel-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1rem 1.5rem;
-}
-/*-----------------------------------
-  MODALE D'AIDE
------------------------------------*/
-.help-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 2rem;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-}
-.help-modal-content {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 90%;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  position: relative;
- }
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.close-btn-bottom {
-  display: block;
-  margin: 2rem auto 0 auto; /* top auto bottom auto */
-  padding: 0.75rem 1.5rem;
-  background-color: var(--main-green);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-.contrib-btn {
-  width:44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: #ff5722; /* orange pour attirer l'attention */
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  border: none;
-  text-decoration: none;
-}
-.contrib-btn:hover {
-  background-color:#a63917;
-  transform: scale(1.1);
-}
-.contribution-banner {
-  background-color: #e6f7ff;
-  border-left: 5px solid var(--link-green);
-  padding: 1.5rem;
-  margin: 1.5rem auto;
-  max-width: 900px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  color: var(--dark-text);
-  font-size: 1.1rem;
-}
-.contribution-banner p {
-  margin-bottom: 1rem;
-  font-weight: 500;
-}
-.contribute-button {
-  background-color: var(--link-green);
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-.contribute-button:hover {
-  background-color: var(--hover-green);
-}
-.icon {
-  font-size: 3rem;
-  color: var(--main-green);
-  margin-right: 0.5rem;
-}
-.side-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow-x: hidden;
-  width: 340px; /* ou ta valeur choisie */
-  background-color: #ede7e3;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;              /* ⛔ annule tout espacement interne */
-  margin: 0;               /* ⛔ supprime les marges externes */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-  word-wrap: break-word;
-  overflow: hidden;
-}
-.side-panel,
-.main-content,
-.timeline-layout {
-  height: 100%;
-}
-.side-scrollable-content {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1rem;
-}
-.side-footer {
-  font-size: 0.75rem;
-  color: #888;
-  text-align: center;
-  padding: 1rem;
-  flex-shrink: 0;
-}
-.side-panel-text {
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  margin: 1rem 0;
-  color: var(--main-green);
-}
-.side-panel-buttons {
-  display: flex;
-  flex-direction: row; /* ✅ alignement horizontal */
-  gap: 1.3rem;            /* ✅ espace entre les boutons */
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;      /* ✅ au cas où ça déborde en hauteur */
-}
-.side-panel-separator {
-  margin: 2rem 0 1rem;
-  text-align: center;
-}
-.side-panel .icon-btn {
-  width: 44px;
-  height: 44px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--main-green);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-}
-.side-panel .contribute-btn {
-  border-radius: 6px;
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
-  width: auto;
-  background-color: #FE9C1A;
-}
-.side-panel .contribute-btn:hover {
-  background-color: #FEBB5F;
-}
-.close-side-panel {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: none;
-  color: #888;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-}
-/* Bouton flottant pour rouvrir */
-.open-panel-btn {
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  background-color: var(--main-green);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 0.75rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-  z-index: 999;
-}
-.layout-with-sidebar {
-  display: flex;
-  height: 100vh;
-}
-.layout-with-sidebar.sidebar-hidden .side-panel {
-  display: none;
-}
-.layout-with-sidebar.sidebar-hidden .main-content {
-  margin-left: 0;
-  padding-left: 1.5rem; /* ou comme tu veux */
-}
-.side-btn {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: var(--main-green);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.7rem;
-  cursor: pointer;
-  transition: background-color 0.1s ease;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-}
-.side-btn:hover {
-  background-color: var(--hover-green);
-}
-.side-buttons-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-.side-inline-btn {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0.8rem;
-  background-color: var(--main-green);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.side-inline-btn:hover {
-  background-color: var(--hover-green);
-}
-.tooltip-floating {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  width: 260px;
-  z-index: 9999;
-  margin-top: 8px;
-}
-.info-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-.info-modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  position: relative;
-}
-.info-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #666;
-}
-.title-4-inline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-.event-details-container p,
-.event-details-container ul,
-.event-details-container li,
-.event-details-container strong,
-.event-details-container a {
-  font-style: normal;
-  color: var(--dark-text);
-  text-align: left;
-}
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Projet 'ITE3
+  </title>
+  <link href="index.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+ </head>
+ <body>
+  <!-- ✅ Ecran d'acceuil -->
+  <div class="popup" id="welcomePopup">
+   <div class="popup-content">
+    <h1>
+     Bienvenue sur 'ITE
+    </h1>
+    <p class="event-count-highlight">
+     Explorez et plongez dans les détails de
+     <span id="event-count-number">
+      0
+     </span>
+     événements de santé publique en Polynésie française à travers une frise chronologique interactive.
+    </p>
+    <p class="popup-description">
+     'ITE est une base de connaissances qui rassemble, organise et partage des informations sur la santé publique en Polynésie française.
+      Grâce à ce projet, vous pouvez explorer les événements par année, catégorie ou mots-clés, et accéder à des fiches descriptives.
+     <br/>
+     <br/>
+     Porté par Emmanuelle RUPP-TERRIS, ‘ITE est un projet personnel, collaboratif et en constante évolution. Il s'enrichit progressivement grâce
+      aux contributions et aux données collectées au fil du temps. N’hésitez pas à proposer un événement, chaque contribution sera étudiée avec attention.
+    </p>
+    <!-- Conteneur pour les boutons -->
+    <div class="button-container">
+     <!-- Bouton pour explorer la frise -->
+     <a href="#frise">
+      <button class="popup-btn" id="exploreBtn">
+       Explorer la frise
+      </button>
+     </a>
+     <!-- Bouton pour proposer un événement -->
+     <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" target="_blank" rel="noopener noreferrer">
+        <button class="popup-btn">Proposer un événement</button>
+      </a>
+     <!-- Lien mailto pour le contact -->
+     <a href="mailto:contact@paanapf.com">
+      <button class="popup-btn">
+       Contact
+      </button>
+     </a>
+    </div>
+   </div>
+  </div>
+  <!-- ✅ Barre latérale -->
+  <div class="side-panel" id="side-panel">
+   <!-- Contenu scrollable -->
+   <div class="side-scrollable-content">
+    <h3 class="title-3 inline-icon">
+     Filtres
+    </h3>
+    <!-- Bloc Catégories -->
+    <div class="dropdown-checkbox">
+     <h4 class="title-4 inline-icon">
+      Catégories
+      <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories">
+      </i>
+     </h4>
+     <div id="categoryDropdown">
+     </div>
+    </div>
+    <!-- Bloc Mots-clés -->
+    <div class="dropdown-checkbox">
+     <h4 class="title-4 inline-icon">
+      Mots-clés
+      <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés">
+      </i>
+     </h4>
+     <div id="keywordDropdown">
+     </div>
+    </div>
+    <!-- Bloc Recherche -->
+    <div class="search-box">
+     <h4 class="title-4">
+      Chercher dans tous les champs
+     </h4>
+     <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
+    </div>
+    <!-- Filtres sélectionnés -->
+    <div id="active-filters-section">
+     <h4 class="title-4">
+      Filtres sélectionnés :
+     </h4>
+     <div id="active-filters">
+     </div>
+    </div>
+    <!-- Bouton réinitialiser -->
+    <button class="button centered-button" onclick="resetFilters()">
+     Réinitialiser les filtres
+    </button>
+   </div>
+   <!-- /.filters-block -->
+   <!-- Footer toujours visible -->
+   <div class="side-footer">
+    © 2025 – Tous droits réservés
+   </div>
+  </div>
+  <!-- Bouton Admin -->
+  <button id="admin-toggle-btn" onclick="toggleAdmin()" style="position:fixed; bottom:10px; right:10px; opacity:0.2;">
+   🔧
+  </button>
+  <!-- Modale pour l’info Catégories -->
+  <div class="info-modal hidden" id="infoModal">
+   <div class="info-modal-content">
+    <button class="info-close-btn" onclick="toggleInfoModal()">
+     ×
+    </button>
+    <h3 class="title-3">
+     À propos des catégories
+    </h3>
+    <p>
+     Ce filtre s’appuie sur les
+     <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">
+      Fonctions Essentielles de Santé Publique (FESP)
+     </a>
+     de l’OMS, regroupées en 5 grandes familles :
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Gouvernance et pilotage stratégique
+      </strong>
+      : coordination, planification, participation, qualité et équité
+     </li>
+     <li>
+      <strong>
+       Données surveillance et recherche
+      </strong>
+      : production, analyse et utilisation de l'information sanitaire
+     </li>
+     <li>
+      <strong>
+       Promotion de la santé et prévention
+      </strong>
+      : actions comportementales, sociales et populationnelles
+     </li>
+     <li>
+      <strong>
+       Protection sanitaire et gestion des risques
+      </strong>
+      : réponse aux menaces sanitaires, environnementales ou réglementaires
+     </li>
+     <li>
+      <strong>
+       Accès aux services et aux moyens
+      </strong>
+      : ressources humaines, infrastructures, technologies, accès aux soins
+     </li>
+    </ul>
+    <p>
+     La catégorie
+     <strong>
+      Contexte
+     </strong>
+     regroupe des événements ayant un impact indirect sur la santé publique.
+    </p>
+    <p>
+     Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").
+    </p>
+   </div>
+  </div>
+  <!-- Modale info mots-clés -->
+  <div class="info-modal hidden" id="keywordModal">
+   <div class="info-modal-content">
+    <button class="info-close-btn" onclick="toggleKeywordModal()">
+     ×
+    </button>
+    <h3 class="title-3">
+     À propos des mots-clés
+    </h3>
+    <p>
+     Les
+     <strong>
+      mots-clés
+     </strong>
+     sont issus autant que possible du thésaurus
+     <a href="https://decs.bvsalud.org/fr" target="_blank">
+      DeCS
+     </a>
+     .
+    </p>
+    <p>
+     Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").
+    </p>
+   </div>
+  </div>
+  <!-- ✅ Contenu principal -->
+  <main class="main-content">
+   <div class="container timeline-wrapper">
+    <h3 class="title-3">
+    </h3>
+    <!-- Zone pour afficher le nombre d’événements -->
+    <div id="event-count-text">
+    </div>
+    <div class="timeline-layout" id="frise">
+     <div class="timeline-section" id="timeline">
+     </div>
+     <div class="event-details-container" id="event-details-container">
+      <p style="text-align:center; font-style:italic; color:#5F5F5F;">
+       Cliquez sur un événement pour accéder à sa fiche détaillée puis utilisez les flèches “◀” et “▶” pour naviguer entre les événements (filtrés).
+      </p>
+     </div>
+    </div>
+    <div id="admin-panel" style="display:none; padding:2rem; background:#f8f8f8; border-top: 2px solid #ccc;">
+     <h3>
+      🔧 Mode Administration
+     </h3>
+     <button onclick="filterRecent()">
+      Filtrer événements récents
+     </button>
+    </div>
+   </div>
+  </main>
+  <script src="explorer.js">
+  </script>
+ </body>
+</html>
