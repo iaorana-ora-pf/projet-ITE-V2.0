@@ -20,9 +20,18 @@
  <aside class="filters-sidebar" id="filtersSidebar">
   
 <section class="filters-section">
-  <h2 class="title-2">Filtres</h2>
+  <h2 class="title-2">Trier et filtrer</h2>
 
   <div class="filters-row">
+
+   <!-- 🔽 Contrôle du tri chronologique -->
+<div class="sort-control">
+  <label for="sortOrder">Trier les événements :</label>
+  <select id="sortOrder" onchange="sortTimeline()">
+    <option value="asc">Chronologique (↑)</option>
+    <option value="desc">Anti-chronologique (↓)</option>
+  </select>
+</div>
 
     <!-- ✅ Bloc Catégories -->
     <div class="dropdown-checkbox">
