@@ -38,16 +38,16 @@ body {
 /* === Colonne droite : Contenu === */
 .welcome-content {
   flex: 1;
-  padding: 3rem 2rem;
+  padding: 2rem;
   color: var(--dark-text);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  max-height: 100vh;
-  overflow-y: auto;
+  height: 100vh;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .welcome-content h1 {
@@ -65,9 +65,9 @@ body {
 }
 
 .welcome-content p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
   max-width: 600px;
   text-align: justify;
 }
