@@ -183,6 +183,7 @@ ACCUEIL Fenêtre flottante
   background: white;
   padding: 1rem 2rem;
   box-sizing: border-box;
+ overflow-x: hidden;
 }
 /*-----------------------------------
  STOP OK
@@ -1064,4 +1065,18 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 .timeline-layout {
   outline: 2px dashed blue;
+}
+/* Correction quand il n'y a aucun événement filtré */
+.timeline-layout:has(.year-block:empty) .timeline-section {
+  flex-grow: 1;
+}
+
+.timeline-layout .timeline-section:only-child {
+  flex-grow: 1;
+}
+
+/* Fix: éviter une colonne vide quand aucune année ne correspond */
+.timeline-section:empty {
+  flex-grow: 1;
+  min-height: 200px; /* ou hauteur fixe pour garder un aspect stable */
 }
