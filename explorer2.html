@@ -24,13 +24,20 @@
 
   <div class="filters-row">
 
-   <!-- 🔽 Contrôle du tri chronologique -->
-<div class="sort-control">
-  <label for="sortOrder">Trier les événements :</label>
-  <select id="sortOrder" onchange="sortTimeline()">
-    <option value="asc">Chronologique (↑)</option>
-    <option value="desc">Anti-chronologique (↓)</option>
-  </select>
+<!-- 🔁 Bloc Trier stylé comme Catégories -->
+<div class="dropdown-checkbox">
+  <div class="filter-label">
+    <h4 class="title-4">Trier les événements</h4>
+    <i class="fa-solid fa-circle-info" title="Choisissez l’ordre d’affichage chronologique"></i>
+  </div>
+  
+  <!-- 🧊 Enveloppe dans scrollable-box pour style homogène -->
+  <div class="scrollable-box">
+    <select id="sortOrder" onchange="sortTimeline()">
+      <option value="asc">Chronologique (↑)</option>
+      <option value="desc">Anti-chronologique (↓)</option>
+    </select>
+  </div>
 </div>
 
     <!-- ✅ Bloc Catégories -->
