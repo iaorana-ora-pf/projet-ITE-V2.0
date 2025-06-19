@@ -110,6 +110,15 @@ function updateTimeline() {
       container.appendChild(block);
     }
   }
+ // Pansement : masque la colonne vide si aucun événement
+const timelineLayout = document.querySelector(".timeline-layout");
+const hasEvents = container.querySelectorAll(".year-block").length > 0;
+
+if (!hasEvents) {
+  timelineLayout.classList.add("no-events");
+} else {
+  timelineLayout.classList.remove("no-events");
+}
   updateDependentFilters();
   updateActiveFilterBadges();
 const total = Object.values(events).flat().filter(e =>
