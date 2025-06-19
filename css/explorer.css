@@ -116,6 +116,13 @@ h4 {
 .side-scrollable-content > *:last-child {
   margin-bottom: 0.3rem;
 }
+.filter-block {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
 .dropdown-checkbox, .search-box {
   flex: 1 1 220px;
   display: flex;
