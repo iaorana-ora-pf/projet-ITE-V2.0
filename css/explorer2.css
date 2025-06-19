@@ -25,14 +25,14 @@ body {
   color: var(--dark-text);
 }
 
-/* === LAYOUT PRINCIPAL (2 colonnes) === */
+/* === LAYOUT PRINCIPAL === */
 .explorer-layout {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
 
-/* === SIDEBAR FILTRES À GAUCHE === */
+/* === SIDEBAR FILTRES === */
 .filters-sidebar {
   width: 360px;
   background-image: url('../images/accueil.png');
@@ -55,21 +55,7 @@ body {
   background-color: var(--bg-white);
 }
 
-/* === FRISE === */
-.timeline {
-  border-left: 3px solid var(--main-green);
-  padding-left: 2rem;
-}
-
-/* === FICHE DÉTAILS À DROITE === */
-.sidebar-details {
-  margin-top: 2rem;
-  background-color: var(--light-bg);
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-/* === HEADER TITRE DE LA PAGE === */
+/* === HEADER === */
 .explorer-header {
   background-color: var(--main-green);
   color: white;
@@ -83,7 +69,7 @@ body {
   font-weight: 600;
 }
 
-/* === BOUTON ACCUEIL FLOTTANT EN BAS À DROITE === */
+/* === BOUTON FLOTANT ACCUEIL === */
 .floating-home-button {
   position: fixed;
   bottom: 1.5rem;
@@ -104,60 +90,59 @@ body {
   background-color: var(--hover-green);
 }
 
-/* === BLOC DES FILTRES === */
+/* === ZONE DES FILTRES === */
 .filters-section {
-  background-color: rgba(255, 255, 255, 0.9); /* blanc semi-transparent */
-   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
   padding: 1.5rem;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
+
 .filters-section h2.title-2 {
-  color: var(--main-green); /* Bleu ITE */
-  margin-top: 0.5rem;        /* Réduction éventuelle de l’espace */
+  color: var(--main-green);
+  margin-top: 0.5rem;
 }
+
+/* === BLOCS INDIVIDUELS === */
 .filters-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.2rem;
   margin-bottom: 1.5rem;
 }
 
-/* Label + icône info */
+.dropdown-checkbox,
+.search-box {
+  width: 100%;
+}
+
+/* === TITRES DE FILTRES === */
+.filters-section h4.title-4 {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-main);
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+  color: var(--dark-text);
+}
+
+/* === LABEL + ICÔNE INFO === */
 .filter-label {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 0.3rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .filter-label i {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--neutral-text);
-  cursor: pointer;
+  cursor: help;
 }
-/* Réduction de l'espacement entre les titres et les boîtes en dessous */
-.dropdown-checkbox h4.title-4,
-.search-box h4.title-4 {
-  margin-bottom: 0.4rem; /* Réduit l'espace vertical */
-}
-.scrollable-box,
-.search-box textarea {
-  margin-top: 0rem; /* Supprime l’espace par défaut au-dessus */
-}
-#active-filters-section h4.title-4 {
-  margin-bottom: 0.4rem; /* même marge que "Catégories", "Mots-clés" */
-}
-.filters-section h4.title-4 {
-  margin-bottom: 0.4rem;
-}
-#active-filters {
-  margin-top: 0rem; /* colle bien sous le titre */
-}
-/* Listes déroulantes scrollables */
+
+/* === SCROLLABLE BOXES (catégories, mots-clés) === */
 .scrollable-box {
   max-height: 100px;
   overflow-y: auto;
@@ -165,42 +150,41 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: white;
-  margin-bottom: 0.6rem; /* ou 0.6rem pour un look plus serré */
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
 }
+
 .scrollable-box label {
-  font-size: 0.85rem;  /* ou 0.8rem pour plus petit */
+  display: block;
+  font-size: 0.9rem;
+  font-family: var(--font-main);
 }
-/* Zone de recherche */
+
+/* === SELECT (tri) dans une scrollable-box aussi) === */
+.scrollable-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-family: var(--font-main);
+  background-color: transparent;
+  padding: 0.4rem 0.2rem;
+}
+
+/* === ZONE DE RECHERCHE === */
 .search-box textarea {
   width: 100%;
-  box-sizing: border-box; /* ✅ garantit que padding ne déborde pas */
+  box-sizing: border-box;
   min-height: 60px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 0.5rem;
   background-color: white;
   margin-top: 0;
 }
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 100%; /* ✅ met tous les blocs à pleine largeur */
-  margin-top: 0; /* pour éviter un double espacement */
-}
-.filters-row > * {
-  margin-bottom: 0.5rem;
-}
-/* 🧱 tri par ordre chronologique  */
-.dropdown-checkbox select {
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 0.85rem;
-  font-family: var(--font-main);
-  background-color: transparent;
-  padding: 0.4rem 0.2rem;
-}
-/* Bouton Réinitialiser */
+
+/* === BOUTON RÉINITIALISER === */
 .centered-button {
   display: block;
   margin: 2rem auto 0;
@@ -216,19 +200,21 @@ body {
 .centered-button:hover {
   background-color: var(--hover-green);
 }
+
+/* === FILTRES ACTIFS === */
 #active-filters {
-  background-color: white;      /* ✅ fond blanc visible */
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 0.8rem;
   margin-top: 0.5rem;
-
   display: flex;
-  flex-direction: column;       /* ✅ affichage vertical */
-  gap: 0.6rem;                  /* ✅ espace entre chaque tag */
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.9rem;
 }
 
-/* Style individuel des tags (si pas encore stylés) */
+/* === TAGS VISUELS DES FILTRES ACTIFS === */
 #active-filters .tag {
   background-color: var(--main-green);
   color: white;
@@ -238,72 +224,4 @@ body {
   display: inline-block;
   max-width: 100%;
   word-wrap: break-word;
-}
-/* Uniformise les titres (catégories, mots-clés, tri, recherche, etc.) */
-.filters-section h4.title-4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  margin-top: 1rem;
-  font-family: var(--font-main);
-  color: var(--dark-text);
-}
-
-/* Réduit l'espace sous chaque boîte + empilement logique */
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 100%;
-  margin-bottom: 1rem;
-}
-
-/* Boîtes style uniforme */
-.scrollable-box,
-.scrollable-box select,
-.search-box textarea {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 0.85rem;
-  font-family: var(--font-main);
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: white;
-  box-sizing: border-box;
-}
-
-/* Police spécifique aux checkboxs (dans label) */
-.scrollable-box label {
-  font-size: 0.85rem;
-  font-family: var(--font-main);
-}
-
-/* Espace cohérent entre blocs enfants */
-.filters-row > * {
-  margin-bottom: 0.5rem;
-}
-.filters-sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-image: url('images/accueil.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  padding: 0;
-}
-
-.filters-scrollable {
-  flex: 1; /* Prend tout l'espace dispo */
-  overflow-y: auto;
-  padding: 1.5rem;
-}
-
-.sidebar-footer {
-  padding: 1rem 1.5rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--neutral-text);
-  background-color: rgba(255, 255, 255, 0.85); /* blanc transparent */
-  border-top: 1px solid #ccc;
 }
