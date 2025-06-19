@@ -136,12 +136,26 @@ body {
 /* === SIDEBAR À GAUCHE (Filtres) === */
 .filters-sidebar {
   width: 320px;
-  background-color: var(--light-bg);
+ background-image: url('../img/fond-accueil.jpg'); /* Chemin vers ton image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: rgba(255, 255, 255, 0.9); /* fallback semi-transparent */
+
   padding: 1.5rem;
   overflow-y: auto;
   border-right: 1px solid #ccc;
 }
 
+  /* Superposition douce pour lisibilité */
+  backdrop-filter: blur(4px); /* floute le fond derrière si supporté */
+  -webkit-backdrop-filter: blur(4px);
+
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
 /* === CONTENU PRINCIPAL (frise + fiche) === */
 .explorer-main {
   flex: 1;
