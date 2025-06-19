@@ -1003,6 +1003,9 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+ max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 #active-filters-section {
   max-width: 100%;
