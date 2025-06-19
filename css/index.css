@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* === Mise en page principale === */
@@ -21,6 +22,7 @@ body {
   flex-direction: row;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* === Colonne gauche : Image === */
@@ -40,31 +42,31 @@ body {
 /* === Colonne droite : Contenu === */
 .welcome-content {
   flex: 1;
-  padding: 2rem;
+  padding: 3vh 2vw;
   color: var(--dark-text);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .welcome-content h1 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
   color: var(--main-green);
+  flex-shrink: 1;
 }
 
 .event-count-highlight {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--main-green);
   font-style: bold;
-  text-align: center;
+  flex-shrink: 1;
 }
 
 .welcome-content p {
@@ -73,6 +75,7 @@ body {
   margin-bottom: 1.2rem;
   max-width: 600px;
   text-align: justify;
+  flex-shrink: 1;
 }
 
 /* === Boutons === */
@@ -81,6 +84,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  flex-shrink: 1;
 }
 
 .welcome-btn {
