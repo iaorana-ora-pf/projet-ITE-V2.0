@@ -552,6 +552,7 @@ a.button {
 .selected-event {
   border-left: 4px solid var(--main-green);
   background-color: #f5ef87;
+padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 .context-event {
   background-color: #f4f0ec;
@@ -992,4 +993,7 @@ a.button {
   margin-bottom: 1.5rem;
   flex: 1;
   overflow: hidden;
+}
+.year-block {
+  width: 100%;
 }
