@@ -146,6 +146,8 @@ ACCUEIL Fenêtre flottante
   margin-top: 1rem;
   margin-bottom: 1rem;
   transition: opacity 0.3s ease;
+max-height: 120px; /* par exemple */
+  overflow-y: auto;
 }
 #active-filters-section.empty {
   opacity: 0.3;
