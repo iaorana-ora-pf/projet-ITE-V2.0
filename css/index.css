@@ -8,123 +8,108 @@
 }
 
 body {
-  background-color: #166F76;
+  background-color: var(--main-green);
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('images/tiare.png') repeat center center, #007b7f;
-  background-size: 180px;
-  background-blend-mode: overlay;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-content {
+/* === Mise en page principale === */
+.welcome-layout {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 5vh auto;
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 1.5rem;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.92);
-  max-width: 1000px;
-  width: 90%;
-  animation: popupAnimation 0.2s ease-out;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
-.popup-description {
-  padding: 2rem 2.5rem;
-  font-size: 1rem;
-  color: var(--dark-text);
+/* === Colonne gauche : Image === */
+.welcome-image {
   flex: 1;
-  text-align: justify;
+  background-color: #f0f0f0;
 }
 
-.popup-description h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.welcome-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Colonne droite : Contenu === */
+.welcome-content {
+  flex: 1;
+  padding: 3rem 2rem;
+  color: var(--dark-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-content h1 {
   color: var(--main-green);
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .event-count-highlight {
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-align: center;
   color: var(--main-green);
-  margin: 0 0 1.5rem 0;
-  line-height: 1.5;
-}
-
-.popup.hide {
-  opacity: 0;
-  visibility: hidden;
-}
-
-/* Icônes flottantes */
-.floating-icons {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 1100;
-  background: none;
-}
-
-.floating-icons a {
-  font-size: 2.8rem;
-  color: white;
   text-align: center;
-  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
 }
 
-.floating-icons a:hover {
-  transform: scale(1.2);
-  color: var(--hover-green);
+/* === Boutons === */
+.welcome-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
+.welcome-btn {
+  background-color: var(--main-green);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-btn:hover {
+  background-color: var(--hover-green);
+}
+
+.welcome-btn i {
+  font-size: 1.2rem;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
-  .popup-content {
+  .welcome-layout {
     flex-direction: column;
   }
 
-  .floating-icons {
-    flex-direction: row;
-    height: auto;
+  .welcome-image {
+    height: 200px;
+  }
+
+  .welcome-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .welcome-btn {
     width: 100%;
-    bottom: 0;
-    top: auto;
-    padding: 1rem;
     justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .floating-icons a {
-    font-size: 2rem;
-  }
-}
-
-@keyframes popupAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
