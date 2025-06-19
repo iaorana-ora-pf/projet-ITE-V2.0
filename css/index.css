@@ -31,31 +31,20 @@ body {
 
 .popup-content {
   display: flex;
+  flex-direction: row;
   border-radius: 1.5rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.92);
-  max-width: 1200px;
+  max-width: 1000px;
   width: 90%;
   animation: popupAnimation 0.5s ease-out;
-  flex-direction: row-reverse; /* ⬅️ Inverse l'ordre des colonnes */
-}
-
-.popup-sidebar {
-  background-color: #f8f1e8;
-  padding: 2rem 1rem;
-  flex: 0 0 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
 }
 
 .popup-description {
   padding: 2rem 2.5rem;
   font-size: 1rem;
-  color: #363B40;
+  color: var(--dark-text);
   flex: 1;
   text-align: justify;
 }
@@ -76,95 +65,12 @@ body {
   line-height: 1.5;
 }
 
-.popup-btn {
-  background: none;
-  border: none;
-  color: var(--main-green);
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.popup-btn:hover {
-  transform: scale(1.15);
-  color: var(--hover-green);
-}
-
 .popup.hide {
   opacity: 0;
   visibility: hidden;
 }
-.popup-btn[title] {
-  position: relative;
-}
 
-.popup-btn[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  bottom: 120%;
-  background-color: #444;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  z-index: 10;
-  opacity: 1;
-  transition: opacity 0.2s ease-in;
-}
-@media (max-width: 768px) {
-  .popup-content {
-    flex-direction: column;
-  }
-
-  .popup-sidebar {
-    flex-direction: row;
-    justify-content: center;
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .popup-btn {
-    font-size: 1.5rem;
-  }
-}
-
-@keyframes popupAnimation {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.floating-icons {
-  position: fixed;
-  top: 50%;
-  right: 1.5rem;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  background-color: #f8f1e8;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1100;
-}
-
-.floating-icons a {
-  font-size: 2rem;
-  color: var(--main-green);
-  text-align: center;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.floating-icons a:hover {
-  transform: scale(1.2);
-  color: var(--hover-green);
-}
+/* Icônes flottantes */
 .floating-icons {
   position: fixed;
   top: 0;
@@ -173,7 +79,7 @@ body {
   width: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   z-index: 1100;
   background: none;
@@ -189,4 +95,36 @@ body {
 .floating-icons a:hover {
   transform: scale(1.2);
   color: var(--hover-green);
+}
+
+@media (max-width: 768px) {
+  .popup-content {
+    flex-direction: column;
+  }
+
+  .floating-icons {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    padding: 1rem;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .floating-icons a {
+    font-size: 2rem;
+  }
+}
+
+@keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
