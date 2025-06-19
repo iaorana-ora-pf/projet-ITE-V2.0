@@ -157,7 +157,9 @@ body {
   border-radius: 6px;
   background-color: white;
 }
-
+.scrollable-box label {
+  font-size: 0.85rem;  /* ou 0.8rem pour plus petit */
+}
 /* Zone de recherche */
 .search-box textarea {
   width: 100%;
@@ -185,4 +187,27 @@ body {
 
 .centered-button:hover {
   background-color: var(--hover-green);
+}
+#active-filters {
+  background-color: white;      /* ✅ fond blanc visible */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+
+  display: flex;
+  flex-direction: column;       /* ✅ affichage vertical */
+  gap: 0.6rem;                  /* ✅ espace entre chaque tag */
+}
+
+/* Style individuel des tags (si pas encore stylés) */
+#active-filters .tag {
+  background-color: var(--main-green);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
 }
