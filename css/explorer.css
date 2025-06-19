@@ -153,6 +153,20 @@ h4 {
   font-size: 0.9rem;
   opacity:0.8;
 }
+.filter-content {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  min-height: 45px;
+  color: var(--dark-text);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  box-sizing: border-box;
+}
 #active-filters {
   display: flex;
   flex-wrap: wrap;
@@ -248,39 +262,7 @@ overflow-y: auto;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.timeline-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
- overflow-x: hidden;
-}
-
-/* ✅ Corrige aussi le layout principal */
+/************************** Contenu prinicipal*************************/
 .main-content {
   display: flex;
   flex-direction: column;
@@ -290,9 +272,39 @@ overflow-y: auto;
   overflow-y: scroll; /* Force une scrollbar même si le contenu ne dépasse pas */
   justify-content: flex-start;
 }
-
-/* ✅ Scrolls indépendants */
-
+.timeline-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+ overflow-x: hidden;
+}
+#event-count-text {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 1.5rem 0 2rem;
+  font-style: normal;
+  font-weight: normal;
+}
+#event-count-text strong {
+  color: #007b7f;
+  font-weight: 600;
+}
+.timeline-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between; /* tu peux changer en `start` si besoin */
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  background-color: white;
+  max-width: 100%;
+  margin: 0 auto 1.5rem auto;
+  padding: 0.75rem 1rem;
+  min-height: 0;
+  flex: 1;
+  overflow-x: auto; /* ✅ utile pour petits écrans */
+}
 .timeline-section {
   width: 600px; /* valeur fixe, à ajuster selon ton design */
   flex-shrink: 0;
@@ -304,60 +316,58 @@ overflow-y: auto;
   background: white;
   padding: 1rem 2rem;
   box-sizing: border-box;
- overflow-x: hidden;
+  overflow-x: hidden;
 }
-
-
-
-.title-3:empty,
-#event-count-text:empty {
-  display: none;
+.event-details-container {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 450px;
+  min-width: 300px;
+  min-height: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
-
-
-#event-count-text {
-  text-align: center;
-  font-size: 1.3rem;
-  margin: 1.5rem 0 2rem;
+.event-details-container p,
+.event-details-container ul,
+.event-details-container li,
+.event-details-container strong,
+.event-details-container a {
   font-style: normal;
-  font-weight: normal;
+  color: var(--dark-text);
+  text-align: left;
+  word-break: break-word; /* casse les mots longs */
+  overflow-wrap: anywhere;
 }
 
-#event-count-text strong {
-  color: #007b7f;
-  font-weight: 600;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 .hidden {
   display: none !important;
 }
 
-
-
-/* Modale d’info */
-
 #filters-content {
   transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
-
-
-
 .container {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
-/*-----------------------------------
-  BOUTONS
-  🔘 Styles des boutons généraux
------------------------------------*/
-
-
-
-
-
 
 .remove-badge {
   margin-left: 0.5rem;
@@ -365,7 +375,6 @@ overflow-y: auto;
   font-weight: bold;
   color: var(--hover-green);
 }
-
 .remove-badge:hover {
   color: #c0392b;
 }
@@ -413,21 +422,6 @@ overflow-y: auto;
   DÉTAILS ÉVÉNEMENT
   🗂 Détails des événements affichés
 -----------------------------------*/
-.event-details-container {
-  flex-shrink: 0;
-  flex-grow: 0;
- flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1.5rem;
-  max-width: 450px;
-  min-width: 300px;
-  min-height: 0;
-  width: 100%;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
 
 
 
@@ -453,37 +447,8 @@ overflow-y: auto;
 
 
 
-.event-details-container p,
-.event-details-container ul,
-.event-details-container li,
-.event-details-container strong,
-.event-details-container a {
-  font-style: normal;
-  color: var(--dark-text);
-  text-align: left;
-}
 
-.timeline-layout {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: center; /* ou 'start' selon ton besoin */
-  gap: 1.5rem;
-  flex-wrap: nowrap;
-  overflow-x: auto; /* utile si écran trop petit */
- background-color: white;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  gap: 1.5rem;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0.75rem 1rem;
-  min-height:0;
-  margin-bottom: 1.5rem;
-  flex: 1;
-  overflow: hidden;
-}
+
 
 .year-block {
   width: 100%;
@@ -513,20 +478,4 @@ overflow-y: auto;
   background-color: var(--hover-green);
 }
 
-.event-grid span,
-.event-details-container p,
-.event-details-container ul,
-.event-details-container li {
-  word-break: break-word; /* casse les mots longs */
-  overflow-wrap: anywhere;
-}
 
-/* DEBUG TEMPORAIRE */
-
-.timeline-layout.no-events {
-  justify-content: center;
-}
-
-.timeline-layout.no-events .timeline-section {
-  display: none;
-}
