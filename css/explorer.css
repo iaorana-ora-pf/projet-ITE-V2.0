@@ -175,7 +175,8 @@ ACCUEIL Fenêtre flottante
 
 .timeline-section {
   flex: 2;
-  overflow-y: scroll;
+  overflow-y:  auto;
+ min-width: 0;
  scrollbar-gutter: stable;
   height: 100%;
   min-height: 0;
@@ -1011,7 +1012,6 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
  max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
- flex-shrink: 0;
 }
 
 .welcome-btn {
@@ -1056,4 +1056,11 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 
 .home-btn:hover {
   background-color: var(--hover-green);
+}
+/* DEBUG TEMPORAIRE */
+#active-filters {
+  outline: 2px dashed red;
+}
+.timeline-layout {
+  outline: 2px dashed blue;
 }
