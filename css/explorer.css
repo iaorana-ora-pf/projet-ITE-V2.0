@@ -10,8 +10,6 @@
 body {
   font-family: 'Lato', sans-serif;
 }
-
-
 .title-3 {
   text-align: left;
   font-size: 1.3rem;
@@ -113,7 +111,6 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
-
 .side-scrollable-content {
   flex: 1;
   overflow-y: auto;
@@ -128,7 +125,6 @@ body {
 .side-scrollable-content > *:last-child {
   margin-bottom: 0.3rem;
 }
-
 .dropdown-checkbox, .search-box {
   flex: 1 1 220px;
   display: flex;
@@ -146,7 +142,6 @@ body {
   font-size: 0.9rem;
   overflow-y: auto;
 }
-
 .search-box textarea {
   resize: none;
   padding: 8px 12px;
@@ -161,7 +156,6 @@ body {
   font-size: 0.9rem;
   opacity:0.8;
 }
-
 #active-filters {
   display: flex;
   flex-wrap: wrap;
@@ -202,7 +196,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 /************************** Fenetres aide *************************/
 /* FENÊTRE MODALE CENTRÉE */
 .info-modal {
@@ -214,7 +207,6 @@ body {
   align-items: center;
   z-index: 9999;
 }
-
 /* CONTENU DES MODALES (toutes unifiées) */
 .info-modal-content,
 .keyword-modal-content,
@@ -229,7 +221,6 @@ body {
   position: relative;
   font-family: 'Lato', sans-serif;
 }
-
 /* CROIX DE FERMETURE BLEUE EN HAUT À GAUCHE */
 .info-close-btn {
   position: absolute;
@@ -241,7 +232,6 @@ body {
   color: #007bff;
   cursor: pointer;
 }
-
 /* LIENS DANS MODALE */
 .info-modal-content a {
   all: unset;
@@ -252,7 +242,6 @@ body {
 .info-modal-content a:hover {
   color: var(--hover-green);
 }
-
 /* LISTES UL */
 .info-modal-content ul li {
   margin-bottom: 0.4rem;
