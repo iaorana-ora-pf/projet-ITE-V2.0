@@ -7,6 +7,9 @@
   --neutral-text: #5F5F5F;
   --dark-text: #1e2124;
 }
+body {
+  font-family: 'Lato', sans-serif;
+}
 
 /* Espacement vertical entre chaque section de filtre */
 .side-scrollable-content > * {
