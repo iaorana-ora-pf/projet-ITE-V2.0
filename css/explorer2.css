@@ -113,7 +113,10 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
+.filters-section h2.title-2 {
+  color: var(--main-green); /* Bleu ITE */
+  margin-top: 0.5rem;        /* Réduction éventuelle de l’espace */
+}
 .filters-row {
   display: flex;
   flex-wrap: wrap;
@@ -136,7 +139,15 @@ body {
   color: var(--neutral-text);
   cursor: pointer;
 }
-
+/* Réduction de l'espacement entre les titres et les boîtes en dessous */
+.dropdown-checkbox h4.title-4,
+.search-box h4.title-4 {
+  margin-bottom: 0.4rem; /* Réduit l'espace vertical */
+}
+.scrollable-box,
+.search-box textarea {
+  margin-top: 0rem; /* Supprime l’espace par défaut au-dessus */
+}
 /* Listes déroulantes scrollables */
 .scrollable-box {
   max-height: 130px;
