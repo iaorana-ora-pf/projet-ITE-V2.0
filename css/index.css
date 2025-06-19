@@ -45,10 +45,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .welcome-content h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
   color: var(--main-green);
 }
@@ -58,6 +61,7 @@ body {
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--main-green);
+  font-style: italic;
 }
 
 .welcome-content p {
