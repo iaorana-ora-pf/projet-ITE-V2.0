@@ -203,6 +203,7 @@ ACCUEIL Fenêtre flottante
 -----------------------------------*/
 /*-----------------------------------
   TYPOGRAPHIE & TITRES
+  🔤 Typographie et Titres (H1, H2, etc.)
 -----------------------------------*/
 .title-1 {
   text-align: center;
@@ -327,6 +328,7 @@ ACCUEIL Fenêtre flottante
 }
 /*-----------------------------------
   STRUCTURE GÉNÉRALE
+  📐 Structure HTML générale (body, container, etc.)
 -----------------------------------*/
 *, *::before, *::after {
   box-sizing: border-box;
@@ -373,6 +375,7 @@ main {
 }
 /*-----------------------------------
   BOUTONS
+  🔘 Styles des boutons généraux
 -----------------------------------*/
 .button, .close-btn-bottom {
   font-family: 'Lato', sans-serif;
@@ -429,6 +432,7 @@ a.button {
 }
 /*-----------------------------------
   BLOCS FILTRES
+  🔍 Blocs de filtres (catégories, mots-clés, recherche)
 -----------------------------------*/
 .filtres-ligne {
   display: flex;
@@ -501,6 +505,7 @@ a.button {
 
 /*-----------------------------------
   LAYOUT FRISE
+  📊 Layout de la frise chronologique (timeline)
 -----------------------------------*/
 
 
@@ -559,6 +564,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /*-----------------------------------
   DÉTAILS ÉVÉNEMENT
+  🗂 Détails des événements affichés
 -----------------------------------*/
 .event-details-container {
   flex-shrink: 0;
@@ -577,6 +583,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /*-----------------------------------
   BLOCS FLOTTANTS
+  📌 Boutons ou blocs flottants
 -----------------------------------*/
 .floating-buttons {
   position: fixed;
@@ -589,6 +596,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /*-----------------------------------
   INTRO & ENCART
+  ℹ️ Blocs intro et encarts informatifs
 -----------------------------------*/
 .intro-bloc {
   background-color: transparent;
@@ -612,6 +620,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /*-----------------------------------
   FOOTER
+  🔚 Pied de page
 -----------------------------------*/
 .footer {
   background-color: #ffffff;
@@ -628,6 +637,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /*-----------------------------------
   PANNEAU D'AIDE
+  🆘 Panneau d’aide (en bas de page)
 -----------------------------------*/
 .help-panel {
   position: fixed;
@@ -650,6 +660,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /*-----------------------------------
   MODALE D'AIDE
+  💬 Modale d’aide flottante
 -----------------------------------*/
 .help-modal {
   display: none;
