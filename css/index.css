@@ -31,21 +31,41 @@ body {
 }
 
 .popup-content {
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 3rem;
-  max-width: 900px;
-  width: 90%;
+  display: flex;
   border-radius: 1.5rem;
-  text-align: justify;
-  margin: auto;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.92);
+  max-width: 1000px;
+  width: 90%;
   animation: popupAnimation 0.5s ease-out;
 }
 
-.popup-content h1 {
+/* ✅ Colonne d’icônes à gauche */
+.popup-sidebar {
+  background-color: #f8f1e8;
+  padding: 2rem 1rem;
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ✅ Zone texte à droite */
+.popup-description {
+  padding: 2rem 2.5rem;
+  font-size: 1rem;
+  color: #363B40;
+  flex: 1;
+  text-align: justify;
+}
+
+.popup-description h1 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #166F76;
+  color: var(--main-green);
   text-align: center;
 }
 
@@ -53,48 +73,24 @@ body {
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
-  color: #166F76;
+  color: var(--main-green);
   margin: 0 0 1.5rem 0;
   line-height: 1.5;
 }
 
-.popup-description {
-  font-size: 1rem;
-  color: #363B40;
-  text-align: justify;
-}
-
-.popup-content .button-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-.popup-content a {
-  text-decoration: none;
-  flex: 1 1 220px;
-  max-width: 250px;
-}
-
-/* ✅ Boutons uniformes */
+/* ✅ Boutons icônes avec info-bulles */
 .popup-btn {
-  background-color: #007b7f;
-  color: white;
+  background: none;
   border: none;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  height: 50px;
-  width: 100%;
+  color: var(--main-green);
+  font-size: 2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
 .popup-btn:hover {
-  background-color: #005f63;
+  transform: scale(1.15);
+  color: var(--hover-green);
 }
 
 .popup.hide {
@@ -102,7 +98,25 @@ body {
   visibility: hidden;
 }
 
-/* Animation */
+/* ✅ Responsive (mobile-friendly) */
+@media (max-width: 768px) {
+  .popup-content {
+    flex-direction: column;
+  }
+
+  .popup-sidebar {
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .popup-btn {
+    font-size: 1.5rem;
+  }
+}
+
+/* ✅ Animation d’apparition */
 @keyframes popupAnimation {
   from {
     opacity: 0;
