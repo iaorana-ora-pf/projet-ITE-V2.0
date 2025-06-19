@@ -44,9 +44,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  max-height: 100vh;
-  overflow: hidden;
+  text-align: center;
 }
 
 .welcome-content h1 {
