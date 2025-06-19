@@ -55,9 +55,10 @@ body {
 }
 
 .event-count-highlight {
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 1.5rem;      /* ✅ Taille agrandie */
+  font-weight: 700;       /* ✅ Texte en gras (plus que 500) */
   margin-bottom: 2rem;
+  color: var(--main-green);
 }
 
 .welcome-content p {
