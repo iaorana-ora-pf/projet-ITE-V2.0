@@ -148,6 +148,15 @@ body {
 .search-box textarea {
   margin-top: 0rem; /* Supprime l’espace par défaut au-dessus */
 }
+#active-filters-section h4.title-4 {
+  margin-bottom: 0.4rem; /* même marge que "Catégories", "Mots-clés" */
+}
+.filters-section h4.title-4 {
+  margin-bottom: 0.4rem;
+}
+#active-filters {
+  margin-top: 0rem; /* colle bien sous le titre */
+}
 /* Listes déroulantes scrollables */
 .scrollable-box {
   max-height: 130px;
@@ -164,7 +173,7 @@ body {
 .search-box textarea {
   width: 100%;
   box-sizing: border-box; /* ✅ garantit que padding ne déborde pas */
-  min-height: 100px;
+  min-height: 60px;
   font-size: 0.95rem;
   border: 1px solid #ccc;
   border-radius: 6px;
