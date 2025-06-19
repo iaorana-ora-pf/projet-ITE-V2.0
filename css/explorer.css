@@ -11,9 +11,9 @@
 */
 
 :root {
---main-green: #36a7c3;
-  --hover-green: #4f98aa;
-  --link-green: #2a9d8f;
+--main-green: #048B9A;
+  --hover-green: #02616B;
+  --link-green: #048B9A;
   --light-bg: #EDE7E3;
   --neutral-text: #5F5F5F;
   --dark-text: #363B40;
@@ -66,7 +66,7 @@ background-color: white;
 .popup-content h1 {
 font-size: 2em;
   margin-bottom: 20px;
-  color: #36a7c3;
+  color: #048B9A;
   text-align: center;
   margin-top: 0;
 }
@@ -75,7 +75,7 @@ font-size: 2em;
 font-size: 1.2rem;         /* Texte un peu plus grand */
   font-weight: 500;
   text-align: center;
-  color: #36a7c3;               /* Couleur foncée lisible */
+  color: #048B9A;               /* Couleur foncée lisible */
   margin-top: 0;        /* Espace après les boutons info/mail */
   margin-bottom: 0;       /* Grand espace avant le bloc orange */
   line-height: 1.5;
@@ -88,7 +88,7 @@ font-size: 1rem;
 }
 /* Style des boutons dans la fenêtre flottante */
 .popup-btn {
-background-color: #36a7c3;
+background-color: #048B9A;
   color: white;
   border: none;
   padding: 15px 20px;
@@ -102,7 +102,7 @@ background-color: #36a7c3;
 }
 /* Changement de couleur au survol des boutons */
 .popup-btn:hover {
-background-color: #4f98aa;
+background-color: #02616B;
 }
 /* Animation d'apparition */
 @keyframes popupAnimation {
