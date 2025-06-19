@@ -168,7 +168,8 @@ ACCUEIL Fenêtre flottante
   flex-direction: column;
   height: 100vh;
   padding-left: 340px;
-  overflow: hidden;
+ scrollbar-gutter: stable;
+  overflow-y: scroll; /* Force une scrollbar même si le contenu ne dépasse pas */
   justify-content: flex-start;
 }
 /* ✅ Scrolls indépendants */
@@ -351,6 +352,7 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
+ overflow-x: hidden;
  }
 ul {
   margin-left: 0;
