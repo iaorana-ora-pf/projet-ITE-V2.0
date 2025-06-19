@@ -225,7 +225,7 @@ body {
 .info-close-btn {
   position: absolute;
   top: 10px;
-  left: 15px; /* ← correctif ici */
+  right: 15px; /* ← correctif ici */
   font-size: 1.5rem;
   background: none;
   border: none;
