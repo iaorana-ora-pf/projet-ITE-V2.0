@@ -50,6 +50,7 @@ body {
 .welcome-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
+  color: #166F76;
 }
 
 .event-count-highlight {
@@ -59,8 +60,8 @@ body {
 }
 
 .welcome-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.4;
   margin-bottom: 2rem;
   max-width: 600px;
 }
@@ -74,7 +75,7 @@ body {
 }
 
 .welcome-btn {
-  background-color: black;
+  background-color: #166F76;
   color: white;
   text-decoration: none;
   padding: 1rem 1.5rem;
@@ -88,7 +89,7 @@ body {
 }
 
 .welcome-btn:hover {
-  background-color: #333;
+  background-color: #128c8c;
 }
 
 .welcome-btn i {
