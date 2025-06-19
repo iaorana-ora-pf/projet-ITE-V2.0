@@ -142,12 +142,15 @@ ACCUEIL Fenêtre flottante
   line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
 }
 #active-filters-section {
-  min-height: 3.5rem; /* Réserve une hauteur même vide */
+  min-height: 3rem; /* Réserve une hauteur même vide */
   margin-top: 1rem;
   margin-bottom: 1rem;
   transition: opacity 0.3s ease;
-max-height: 120px; /* par exemple */
+  max-height: 120px; /* par exemple */
   overflow-y: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 }
 #active-filters-section.empty {
   opacity: 0.3;
@@ -1008,11 +1011,9 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
  max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
+ flex-shrink: 0;
 }
-#active-filters-section {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+
 .welcome-btn {
   background-color: var(--main-green);
   color: white;
