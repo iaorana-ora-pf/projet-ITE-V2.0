@@ -69,7 +69,7 @@ body {
 .info-close-btn {
   position: absolute;
   top: 10px;
-  left: 15px;                     /* ✅ à gauche */
+  right: 15px;                     /* ✅ à gauche */
   font-size: 1.5rem;
   background: none;
   border: none;
@@ -241,7 +241,7 @@ body {
 }
 
 .dropdown-checkbox, .search-box {
-  flex: 1 1 250px;
+  flex: 1 1 200px;
   display: flex;
   flex-direction: column;
 }
@@ -251,7 +251,10 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
-  height: 100px;
+  height: 60px;                /* ✅ hauteur réduite */
+  padding: 8px;
+  font-size: 0.9rem;
+  overflow-y: auto;
 }
 
 .dropdown-checkbox div {
@@ -264,7 +267,7 @@ body {
   resize: none;
   padding: 8px 12px;
   font-size: 1rem;
-  height: 50px;         /* ← Réduction ici */
+  height: 45px;         /* ← Réduction ici */
   min-height: 40px;     /* ← Sécurité */
   line-height: 1.3;
 }
