@@ -34,7 +34,7 @@ body {
 
 /* === SIDEBAR FILTRES À GAUCHE === */
 .filters-sidebar {
-  width: 320px;
+  width: 360px;
   background-image: url('../images/accueil.png');
   background-size: cover;
   background-position: center;
@@ -106,7 +106,7 @@ body {
 
 /* === BLOC DES FILTRES === */
 .filters-section {
-  background-color: rgba(255, 255, 255, 0.85); /* blanc semi-transparent */
+  background-color: rgba(255, 255, 255, 0.9); /* blanc semi-transparent */
   border-bottom: 1px solid #ddd;
   padding: 2rem;
 }
