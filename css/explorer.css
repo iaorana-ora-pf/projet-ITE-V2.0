@@ -151,7 +151,6 @@ ACCUEIL Fenêtre flottante
   max-width: 100%;
   overflow-x: hidden;
 }
-}
 #active-filters-section.empty {
   opacity: 0.3;
 }
@@ -175,7 +174,9 @@ ACCUEIL Fenêtre flottante
 /* ✅ Scrolls indépendants */
 
 .timeline-section {
-  flex: 2;
+  width: 600px; /* valeur fixe, à ajuster selon ton design */
+  flex-shrink: 0;
+  flex-grow: 0;
   overflow-y: auto; /* <- auto et non scroll */
   scrollbar-gutter: stable; /* <- garde l’espace de la scrollbar */
   height: 100%;
@@ -576,7 +577,9 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   DÉTAILS ÉVÉNEMENT
 -----------------------------------*/
 .event-details-container {
-  flex: 1;
+  flex-shrink: 0;
+  flex-grow: 0;
+ flex: 1;
   overflow-y: auto;
   height: 100%;
   padding: 1.5rem;
@@ -991,7 +994,14 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   text-decoration: underline;
 }
 .timeline-layout {
-  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center; /* ou 'start' selon ton besoin */
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* utile si écran trop petit */
+ background-color: white;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -1058,6 +1068,13 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 
 .home-btn:hover {
   background-color: var(--hover-green);
+}
+.event-grid span,
+.event-details-container p,
+.event-details-container ul,
+.event-details-container li {
+  word-break: break-word; /* casse les mots longs */
+  overflow-wrap: anywhere;
 }
 /* DEBUG TEMPORAIRE */
 #active-filters {
