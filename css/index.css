@@ -139,3 +139,29 @@ body {
     transform: translateY(0);
   }
 }
+.floating-icons {
+  position: fixed;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #f8f1e8;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+}
+
+.floating-icons a {
+  font-size: 2rem;
+  color: var(--main-green);
+  text-align: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.2);
+  color: var(--hover-green);
+}
