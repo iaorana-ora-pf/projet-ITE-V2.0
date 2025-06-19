@@ -1,3 +1,8 @@
+/* === Simplified & Sectioned CSS for explorer page === */
+
+/* === GENERAL === */
+/* === Simplified CSS for explorer page === */
+
 /*
  Nettoyé automatiquement par CodeNinja 🥷
  Fichier : index.css
@@ -6,7 +11,7 @@
 */
 
 :root {
-  --main-green: #36a7c3;
+--main-green: #36a7c3;
   --hover-green: #4f98aa;
   --link-green: #2a9d8f;
   --light-bg: #EDE7E3;
@@ -21,13 +26,13 @@ ACCUEIL Fenêtre flottante
 -----------------------------------*/
 /* Espacement vertical entre chaque section de filtre */
 .side-scrollable-content > * {
-  margin-bottom: 1.5rem;
+margin-bottom: 1.5rem;
 }
 .side-scrollable-content > *:last-child {
-  margin-bottom: 0.3rem;
+margin-bottom: 0.3rem;
 }
 .side-scrollable-content {
-  flex: 1;
+flex: 1;
   overflow-y: auto;
   height: 100%;
   padding: 2rem 1.5rem 1rem;
@@ -35,7 +40,7 @@ ACCUEIL Fenêtre flottante
 }
 /* Style de la fenêtre flottante */
 .popup {
-  position: fixed;
+position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -48,7 +53,7 @@ ACCUEIL Fenêtre flottante
 }
 /* Contenu de la fenêtre flottante */
 .popup-content {
-  background-color: white;
+background-color: white;
   padding: 3rem;
   width: 65%;  /* Largeur de la fenêtre */
   max-width: 1000px;
@@ -59,7 +64,7 @@ ACCUEIL Fenêtre flottante
 }
 /* Style du titre */
 .popup-content h1 {
-  font-size: 2em;
+font-size: 2em;
   margin-bottom: 20px;
   color: #36a7c3;
   text-align: center;
@@ -67,7 +72,7 @@ ACCUEIL Fenêtre flottante
 }
 /* Style du sous titre */
 .event-count-highlight {
-  font-size: 1.2rem;         /* Texte un peu plus grand */
+font-size: 1.2rem;         /* Texte un peu plus grand */
   font-weight: 500;
   text-align: center;
   color: #36a7c3;               /* Couleur foncée lisible */
@@ -77,13 +82,13 @@ ACCUEIL Fenêtre flottante
 }
 /* Style du texte descriptif */
 .popup-description {
-  font-size: 1rem;
+font-size: 1rem;
   color: #363B40;
   text-align: justify;
 }
 /* Style des boutons dans la fenêtre flottante */
 .popup-btn {
-  background-color: #36a7c3;
+background-color: #36a7c3;
   color: white;
   border: none;
   padding: 15px 20px;
@@ -97,94 +102,37 @@ ACCUEIL Fenêtre flottante
 }
 /* Changement de couleur au survol des boutons */
 .popup-btn:hover {
-  background-color: #4f98aa;
-}
-/* Conteneur pour les boutons (flexbox) */
-.popup-content .button-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-top: 40px;
-  flex-wrap: wrap; /* Pour que ça passe en colonne si écran étroit */
+background-color: #4f98aa;
 }
 /* Animation d'apparition */
 @keyframes popupAnimation {
-  from {
+from {
     opacity: 0;
     transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
+}
+to {
+opacity: 1;
     transform: translateY(0);
-  }
 }
 /* Lorsque la fenêtre flottante est fermée */
 .popup.hide {
-  opacity: 0;
+opacity: 0;
   visibility: hidden;
 }
 /* Style pour les liens contenant des boutons */
 .popup-content a {
-  flex: 1;
+flex: 1;
   text-decoration: none; /* Enlever les soulignements des liens */
-}
-.info-modal-content a {
-  all: unset;
-  color: var(--link-green);
-  text-decoration: underline;
-  cursor: pointer;
-}
-.info-modal-content a:hover {
-  color: var(--hover-green);
-}
-.info-modal-content ul li {
-  margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
-  line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
-}
-#active-filters-section {
-  min-height: 3rem; /* Réserve une hauteur même vide */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: opacity 0.3s ease;
-  max-height: 120px; /* par exemple */
-  overflow-y: auto;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-#active-filters-section.empty {
-  opacity: 0.3;
-}
-.timeline-wrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-height: 0;
- overflow-x: hidden;
 }
 /* ✅ Corrige aussi le layout principal */
 .main-content {
-  display: flex;
+display: flex;
   flex-direction: column;
   height: 100vh;
   padding-left: 340px;
  scrollbar-gutter: stable;
   overflow-y: scroll; /* Force une scrollbar même si le contenu ne dépasse pas */
   justify-content: flex-start;
-}
-/* ✅ Scrolls indépendants */
-
-.timeline-section {
-  width: 600px; /* valeur fixe, à ajuster selon ton design */
-  flex-shrink: 0;
-  flex-grow: 0;
-  overflow-y: auto; /* <- auto et non scroll */
-  scrollbar-gutter: stable; /* <- garde l’espace de la scrollbar */
-  height: 100%;
-  min-height: 0;
-  background: white;
-  padding: 1rem 2rem;
-  box-sizing: border-box;
- overflow-x: hidden;
 }
 /*-----------------------------------
  STOP OK
@@ -193,21 +141,21 @@ ACCUEIL Fenêtre flottante
   TYPOGRAPHIE & TITRES
 -----------------------------------*/
 .title-1 {
-  text-align: center;
+text-align: center;
   color: var(--main-green);
   font-size: 2.4rem;
   font-weight: bold;
   margin-bottom: 0;
 }
 .title-2 {
-  text-align: center;
+text-align: center;
   font-size: 1.6rem;
   color: var(--neutral-text);
   margin-top: 0;
   margin-bottom: 3rem;
 }
 .title-3 {
-  text-align: left;
+text-align: left;
   font-size: 1.1rem;
   color: var(--main-green);
   margin-top: 0.25rem;
@@ -215,63 +163,51 @@ ACCUEIL Fenêtre flottante
 }
 .title-3:empty,
 #event-count-text:empty {
-  display: none;
+display: none;
 }
 .title-3.inline-icon {
-  margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
+margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
 }
 #event-count-text {
-  text-align: center;
+text-align: center;
   font-size: 1.3rem;
   margin: 1.5rem 0 2rem;
   font-style: normal;
   font-weight: normal;
 }
 .title-3:empty,
-#event-count-text:empty {
-  display: none;
-}
 #event-count-text strong {
-  color: #007b7f;
+color: #007b7f;
   font-weight: 600;
 }
 .title-4 {
-  text-align: left;
+text-align: left;
   font-size: 1rem;
   color: var(--dark-text);
   margin-top: 0.6rem;
   margin-bottom: 0.25rem;
 }
-.side-panel-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
 .side-title {
-  font-size: 1.8rem;
+font-size: 1.8rem;
   color: var(--main-green);
   font-weight: 700;
   margin: 0;
   margin-top: 1.5rem;
 }
 .side-subtitle {
-  font-size: 1rem;
+font-size: 1rem;
   color: var(--neutral-text);
   margin-top: 0.5rem;
   line-height: 1.3;
 }
 .info-icon {
-  margin-left: 8px;
+margin-left: 8px;
   font-size: 14px;
   cursor: pointer;
   color: #5f5f5f;
 }
-.centered-button {
-  display: block;
-  margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
-  text-align: center;
-}
 .category-info-box {
-  background-color: #fefefe;
+background-color: #fefefe;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
@@ -281,43 +217,22 @@ ACCUEIL Fenêtre flottante
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .hidden {
-  display: none !important;
+display: none !important;
 }
 .filtres-ligne {
-  display: flex;
+display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
 }
 .dropdown-checkbox,
 .search-box {
-  flex: 1 1 300px;
+flex: 1 1 300px;
   display: block;
   min-width: 280px;
 }
-/* Modale d’info */
-.info-modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-.info-modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
 .info-close-btn {
-  position: absolute;
+position: absolute;
   top: 10px;
   right: 15px;
   font-size: 1.5rem;
@@ -326,17 +241,8 @@ ACCUEIL Fenêtre flottante
   cursor: pointer;
   color: #666;
 }
-#filters-content {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
-}
-.filters-collapsed {
-  max-height: 0 !important;
-  opacity: 0;
-  pointer-events: none;
-}
 .title-4.inline-icon {
-  display: inline-flex;
+display: inline-flex;
   align-items: center;
   gap: 6px;
   margin-bottom: 0.5rem; /* au lieu de 40px ! */
@@ -346,77 +252,51 @@ ACCUEIL Fenêtre flottante
   STRUCTURE GÉNÉRALE
 -----------------------------------*/
 *, *::before, *::after {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 body {
-  background-color:white;
+background-color:white;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
  overflow-x: hidden;
- }
+}
 ul {
-  margin-left: 0;
+margin-left: 0;
   padding-left: 1rem;
 }
 p + ul {
-  margin-top: 0;
+margin-top: 0;
 }
 a {
-  color: var(--link-green);
+color: var(--link-green);
   text-decoration: underline;
 }
 a:hover {
-  color: var(--main-green);
+color: var(--main-green);
 }
 .container {
-  max-width: 1500px;
+max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 html, body {
-  height: 100%;
+height: 100%;
   margin: 0;
   padding: 0;
 }
 #page-wrapper {
-  display: flex;
+display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 main {
-  flex: 1;
-}
-/*-----------------------------------
-  BOUTONS
------------------------------------*/
-.button, .close-btn-bottom {
-  font-family: 'Lato', sans-serif;
-  background-color: var(--main-green);
-  color: #fff;
-  font-weight: 500;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.button {
-  padding: 0.75rem 1.5rem;
-  text-align: center;
-  margin-top: 2rem;
-}
-.button:hover, .close-btn-bottom:hover {
-  background-color: var(--hover-green);
-}
-a.button {
-  text-decoration: none;
+flex: 1;
 }
 .new-btn,
 .help-btn,
 .contact-btn {
-  width: 44px;
+width: 44px;
   height: 44px;
   border-radius: 50%;
   color: white;
@@ -430,61 +310,43 @@ a.button {
   border: none;
 }
 .new-btn {
-  background-color: var(--main-green);
+background-color: var(--main-green);
 }
 .new-btn:hover {
-  background-color: var(--hover-green);
+background-color: var(--hover-green);
 }
 .help-btn,
-.contact-btn {
-  background-color: var(--main-green);
-  text-decoration: none;
-}
 .help-btn:hover,
 .contact-btn:hover {
-  background-color: var(--hover-green);
+background-color: var(--hover-green);
 }
 /*-----------------------------------
   BLOCS FILTRES
 -----------------------------------*/
-.filtres-ligne {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 2rem;
-}
 .dropdown-checkbox, .search-box {
-  flex: 1 1 250px;
+flex: 1 1 250px;
   display: flex;
   flex-direction: column;
 }
 .dropdown-checkbox div,
 .search-box textarea {
-  background: #fff;
+background: #fff;
   border: 1px solid #ccc;
   border-radius: 6px;
   height: 100px;
 }
 .dropdown-checkbox div {
-  padding: 10px;
+padding: 10px;
   overflow-y: auto;
   font-size: 0.9rem;
 }
-.search-box textarea {
-  resize: none;
-  padding: 8px 12px;
-  font-size: 1rem;
-  height: 50px;         /* ← Réduction ici */
-  min-height: 40px;     /* ← Sécurité */
-  line-height: 1.3;
-}
 .search-box textarea::placeholder {
-  color: #363B40;
+color: #363B40;
   font-size: 0.9rem;
   opacity:0.8;
 }
 .filter-badge {
-  display: inline-block;
+display: inline-block;
   background-color: #d0e9e9;
   color: var(--dark-text);
   padding: 0.4rem 0.75rem;
@@ -494,58 +356,43 @@ a.button {
   font-weight: 500;
 }
 .remove-badge {
-  margin-left: 0.5rem;
+margin-left: 0.5rem;
   cursor: pointer;
   font-weight: bold;
   color: var(--hover-green);
 }
 .remove-badge:hover {
-  color: #c0392b;
+color: #c0392b;
 }
 .contribution-invite {
-  margin-top: 5rem;
+margin-top: 5rem;
   margin-bottom: 1.5rem;
   text-align: center;
 }
 .contribution-text {
-  margin-top: 4rem;
+margin-top: 4rem;
   font-size: 1.3rem;
   font-weight: 500;
   color: var(--dark-text);
   line-height: 1.5;
 }
-
-/*-----------------------------------
-  LAYOUT FRISE
------------------------------------*/
-
-
-
-.timeline-year {
-  font-size: 1.15rem;
-  color: var(--main-green);
-  font-weight: bold;
-  margin-left: 0;
-  padding-left: 0;
-  margin-bottom: 0.75rem;
-}
 .year-block {
-  padding-left: 0;
+padding-left: 0;
   margin-bottom: 3rem;
 }
 .year-block h3 {
-  position: relative;
+position: relative;
   padding-left: 1.5rem;
   margin-left: 0;
 }
 .event-grid {
-  display: flex;
+display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 0;
 }
 .event-grid li {
-  list-style: none;
+list-style: none;
   padding: 0.75rem 1rem;
   background: #f9f9f9;
   border-radius: 6px;
@@ -558,56 +405,21 @@ a.button {
   font-size: 1.05rem;
 }
 .event-grid li:hover {
-  background: #e6f7ff;
+background: #e6f7ff;
 }
 .selected-event {
-  border-left: 4px solid var(--main-green);
+border-left: 4px solid var(--main-green);
   background-color: #f5ef87;
 padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 .context-event {
-  background-color: #f4f0ec;
-}
-@media (max-width: 768px) {
-  #filters {
-    display: none;
-  }
-}
-/*-----------------------------------
-  DÉTAILS ÉVÉNEMENT
------------------------------------*/
-.event-details-container {
-  flex-shrink: 0;
-  flex-grow: 0;
- flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1.5rem;
-  max-width: 450px;
-  min-width: 300px;
-  min-height: 0;
-  width: 100%;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
-/*-----------------------------------
-  BLOCS FLOTTANTS
------------------------------------*/
-.floating-buttons {
-  position: fixed;
-  top: 1rem;              /* ancré en haut */
-  right: 1rem;            /* aligné à droite */
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  z-index: 150;
+background-color: #f4f0ec;
 }
 /*-----------------------------------
   INTRO & ENCART
 -----------------------------------*/
 .intro-bloc {
-  background-color: transparent;
+background-color: transparent;
   border-left: 4px solid var(--link-green);
   padding: 1rem 1.5rem;
   margin: 1.5rem 0;
@@ -615,7 +427,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   color: var(--neutral-text);
 }
 .encart {
-  flex: 1 1 33%;
+flex: 1 1 33%;
   background-color: #F1EBE7;
   border-left: 5px solid var(--main-green);
   padding: 2.5rem 1.5rem;
@@ -627,26 +439,10 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   margin-right: auto;
 }
 /*-----------------------------------
-  FOOTER
------------------------------------*/
-.footer {
-  background-color: #ffffff;
-  border-top: 1px solid #ccc;
-  color: #666;
-  font-size: 0.875rem;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  margin-top: 0;
-}
-.footer-link {
-  color: var(--link-green);
-  text-decoration: underline;
-}
-/*-----------------------------------
   PANNEAU D'AIDE
 -----------------------------------*/
 .help-panel {
-  position: fixed;
+position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -660,37 +456,12 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   padding: 1.5rem;
 }
 .help-panel-content {
-  max-width: 1400px;
+max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
-/*-----------------------------------
-  MODALE D'AIDE
------------------------------------*/
-.help-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 2rem;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-}
-.help-modal-content {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 90%;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  position: relative;
- }
 .close-btn {
-  position: absolute;
+position: absolute;
   top: 10px;
   right: 15px;
   font-size: 1.5rem;
@@ -699,7 +470,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   cursor: pointer;
 }
 .close-btn-bottom {
-  display: block;
+display: block;
   margin: 2rem auto 0 auto; /* top auto bottom auto */
   padding: 0.75rem 1.5rem;
   background-color: var(--main-green);
@@ -712,7 +483,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   text-align: center;
 }
 .contrib-btn {
-  width:44px;
+width:44px;
   height: 44px;
   border-radius: 50%;
   background-color: #ff5722; /* orange pour attirer l'attention */
@@ -728,11 +499,11 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   text-decoration: none;
 }
 .contrib-btn:hover {
-  background-color:#a63917;
+background-color:#a63917;
   transform: scale(1.1);
 }
 .contribution-banner {
-  background-color: #e6f7ff;
+background-color: #e6f7ff;
   border-left: 5px solid var(--link-green);
   padding: 1.5rem;
   margin: 1.5rem auto;
@@ -744,29 +515,16 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   font-size: 1.1rem;
 }
 .contribution-banner p {
-  margin-bottom: 1rem;
+margin-bottom: 1rem;
   font-weight: 500;
 }
-.contribute-button {
-  background-color: var(--link-green);
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-.contribute-button:hover {
-  background-color: var(--hover-green);
-}
 .icon {
-  font-size: 3rem;
+font-size: 3rem;
   color: var(--main-green);
   margin-right: 0.5rem;
 }
 .side-panel {
-  position: fixed;
+position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
@@ -784,34 +542,19 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   word-wrap: break-word;
   overflow: hidden;
 }
-.side-footer {
-  font-size: 0.75rem;
-  color: #888;
-  text-align: center;
-  padding: 1rem;
-  flex-shrink: 0;
-}
 .side-panel-text {
-  font-weight: 600;
+font-weight: 600;
   font-size: 1rem;
   text-align: center;
   margin: 1rem 0;
   color: var(--main-green);
 }
-.side-panel-buttons {
-  display: flex;
-  flex-direction: row; /* ✅ alignement horizontal */
-  gap: 1.3rem;            /* ✅ espace entre les boutons */
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;      /* ✅ au cas où ça déborde en hauteur */
-}
 .side-panel-separator {
-  margin: 2rem 0 1rem;
+margin: 2rem 0 1rem;
   text-align: center;
 }
 .side-panel .icon-btn {
-  width: 44px;
+width: 44px;
   height: 44px;
   font-size: 1.2rem;
   border-radius: 50%;
@@ -824,17 +567,17 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   text-decoration: none;
 }
 .side-panel .contribute-btn {
-  border-radius: 6px;
+border-radius: 6px;
   font-size: 1rem;
   padding: 0.5rem 0.75rem;
   width: auto;
   background-color: #FE9C1A;
 }
 .side-panel .contribute-btn:hover {
-  background-color: #FEBB5F;
+background-color: #FEBB5F;
 }
 .close-side-panel {
-  position: absolute;
+position: absolute;
   top: 0.5rem;
   right: 0.5rem;
   background: none;
@@ -845,7 +588,7 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 }
 /* Bouton flottant pour rouvrir */
 .open-panel-btn {
-  position: fixed;
+position: fixed;
   top: 1rem;
   left: 1rem;
   background-color: var(--main-green);
@@ -858,18 +601,18 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   z-index: 999;
 }
 .layout-with-sidebar {
-  display: flex;
+display: flex;
   height: 100vh;
 }
 .layout-with-sidebar.sidebar-hidden .side-panel {
-  display: none;
+display: none;
 }
 .layout-with-sidebar.sidebar-hidden .main-content {
-  margin-left: 0;
+margin-left: 0;
   padding-left: 1.5rem; /* ou comme tu veux */
 }
 .side-btn {
-  width: 70px;
+width: 70px;
   height: 70px;
   border-radius: 50%;
   background-color: var(--main-green);
@@ -884,18 +627,10 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 .side-btn:hover {
-  background-color: var(--hover-green);
-}
-.side-buttons-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
+background-color: var(--hover-green);
 }
 .side-inline-btn {
-  display: flex;
+display: flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 0.8rem;
@@ -911,10 +646,10 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   white-space: nowrap;
 }
 .side-inline-btn:hover {
-  background-color: var(--hover-green);
+background-color: var(--hover-green);
 }
 .tooltip-floating {
-  position: absolute;
+position: absolute;
   top: 100%;
   left: 0;
   background-color: #fff;
@@ -926,75 +661,285 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   z-index: 9999;
   margin-top: 8px;
 }
-.info-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-.info-modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  position: relative;
-}
-.info-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #666;
-}
 .title-4-inline {
-  display: flex;
+display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
 }
-.event-details-container p,
-.event-details-container ul,
-.event-details-container li,
-.event-details-container strong,
-.event-details-container a {
-  font-style: normal;
-  color: var(--dark-text);
-  text-align: left;
-}
 #resourceList {
-  list-style: none;
+list-style: none;
   padding: 0;
   margin: 1rem 0;
 }
 #resourceList li {
-  padding: 0.75rem;
+padding: 0.75rem;
   border-bottom: 1px solid #ccc;
 }
 #resourceList li:last-child {
-  border-bottom: none;
+border-bottom: none;
 }
 #resourceList a {
-  color: #007bff;
+color: #007bff;
   text-decoration: none;
 }
 #resourceList a:hover {
+text-decoration: underline;
+}
+.welcome-btn {
+background-color: var(--main-green);
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.welcome-btn:hover {
+background-color: var(--hover-green);
+}
+.welcome-btn i {
+font-size: 1.1rem;
+}
+.home-btn {
+position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  background-color: var(--main-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+.home-btn:hover {
+background-color: var(--hover-green);
+}
+
+/* === BUTTONS === */
+/* Conteneur pour les boutons (flexbox) */
+.popup-content .button-container {
+display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Pour que ça passe en colonne si écran étroit */
+}
+.centered-button {
+display: block;
+  margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
+  text-align: center;
+}
+/*-----------------------------------
+  BOUTONS
+-----------------------------------*/
+.button, .close-btn-bottom {
+font-family: 'Lato', sans-serif;
+  background-color: var(--main-green);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button {
+padding: 0.75rem 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.button:hover, .close-btn-bottom:hover {
+background-color: var(--hover-green);
+}
+a.button {
+text-decoration: none;
+}
+/*-----------------------------------
+  BLOCS FLOTTANTS
+-----------------------------------*/
+.floating-buttons {
+position: fixed;
+  top: 1rem;              /* ancré en haut */
+  right: 1rem;            /* aligné à droite */
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  z-index: 150;
+}
+.contribute-button {
+background-color: var(--link-green);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.contribute-button:hover {
+background-color: var(--hover-green);
+}
+.side-panel-buttons {
+display: flex;
+  flex-direction: row; /* ✅ alignement horizontal */
+  gap: 1.3rem;            /* ✅ espace entre les boutons */
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;      /* ✅ au cas où ça déborde en hauteur */
+}
+.side-buttons-row {
+display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* === MODALS / POPUPS === */
+.info-modal-content a {
+all: unset;
+  color: var(--link-green);
   text-decoration: underline;
+  cursor: pointer;
+}
+.info-modal-content a:hover {
+color: var(--hover-green);
+}
+.info-modal-content ul li {
+margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
+  line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
+}
+/* Modale d’info */
+.info-modal {
+position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.info-modal-content {
+background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+/*-----------------------------------
+  MODALE D'AIDE
+-----------------------------------*/
+.help-modal {
+display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.help-modal-content {
+background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* === FILTERS === */
+#active-filters-section {
+min-height: 3rem; /* Réserve une hauteur même vide */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
+  max-height: 120px; /* par exemple */
+  overflow-y: auto;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+#active-filters-section.empty {
+opacity: 0.3;
+}
+#filters-content {
+transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+.filters-collapsed {
+max-height: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+#active-filters {
+display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+ max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* === TIMELINE === */
+.timeline-wrapper {
+display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+ overflow-x: hidden;
+}
+/* ✅ Scrolls indépendants */
+
+.timeline-section {
+width: 600px; /* valeur fixe, à ajuster selon ton design */
+  flex-shrink: 0;
+  flex-grow: 0;
+  overflow-y: auto; /* <- auto et non scroll */
+  scrollbar-gutter: stable; /* <- garde l’espace de la scrollbar */
+  height: 100%;
+  min-height: 0;
+  background: white;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+ overflow-x: hidden;
+}
+/*-----------------------------------
+  LAYOUT FRISE
+-----------------------------------*/
+
+
+
+.timeline-year {
+font-size: 1.15rem;
+  color: var(--main-green);
+  font-weight: bold;
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0.75rem;
 }
 .timeline-layout {
-  display: flex;
+display: flex;
   flex-direction: row;
   align-items: stretch;
   justify-content: center; /* ou 'start' selon ton besoin */
@@ -1014,79 +959,83 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   flex: 1;
   overflow: hidden;
 }
-.year-block {
+/* DEBUG TEMPORAIRE */
+.timeline-layout.no-events {
+justify-content: center;
+}
+.timeline-layout.no-events .timeline-section {
+display: none;
+}
+
+/* === HEADER === */
+.side-panel-header {
+text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* === RESPONSIVE / MEDIA QUERIES === */
+@media (max-width: 768px) {
+#filters {
+    display: none;
+}
+
+/* === DETAILS / SIDEBAR === */
+/*-----------------------------------
+  DÉTAILS ÉVÉNEMENT
+-----------------------------------*/
+.event-details-container {
+flex-shrink: 0;
+  flex-grow: 0;
+ flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding: 1.5rem;
+  max-width: 450px;
+  min-width: 300px;
+  min-height: 0;
   width: 100%;
-}
-#active-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
- max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-.welcome-btn {
-  background-color: var(--main-green);
-  color: white;
-  text-decoration: none;
-  padding: 0.9rem 1.5rem;
+  background: white;
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
-
-.welcome-btn:hover {
-  background-color: var(--hover-green);
-}
-
-.welcome-btn i {
-  font-size: 1.1rem;
-}
-.home-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  width: 48px;
-  height: 48px;
-  background-color: var(--main-green);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  z-index: 999;
-}
-
-.home-btn:hover {
-  background-color: var(--hover-green);
+.event-details-container p,
+.event-details-container ul,
+.event-details-container li,
+.event-details-container strong,
+.event-details-container a {
+font-style: normal;
+  color: var(--dark-text);
+  text-align: left;
 }
 .event-grid span,
 .event-details-container p,
 .event-details-container ul,
 .event-details-container li {
-  word-break: break-word; /* casse les mots longs */
+word-break: break-word; /* casse les mots longs */
   overflow-wrap: anywhere;
 }
-/* DEBUG TEMPORAIRE */
-#active-filters {
-  outline: 2px dashed red;
-}
-.timeline-layout {
-  outline: 2px dashed blue;
-}
-.timeline-layout.no-events {
-  justify-content: center;
-}
 
-.timeline-layout.no-events .timeline-section {
-  display: none;
+/* === FOOTER === */
+/*-----------------------------------
+  FOOTER
+-----------------------------------*/
+.footer {
+background-color: #ffffff;
+  border-top: 1px solid #ccc;
+  color: #666;
+  font-size: 0.875rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin-top: 0;
+}
+.footer-link {
+color: var(--link-green);
+  text-decoration: underline;
+}
+.side-footer {
+font-size: 0.75rem;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0;
 }
