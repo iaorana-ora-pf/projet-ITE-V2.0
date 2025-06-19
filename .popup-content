@@ -42,11 +42,11 @@ ACCUEIL Fenêtre flottante
 /* Contenu de la fenêtre flottante */
 .popup-content {
   background-color: white;
-  padding: 40px;
+  padding: 3rem;
   width: 65%;  /* Largeur de la fenêtre */
-  max-width: 800px;
+  max-width: 1000px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 1.5rem;
   text-align: justify;
   margin-bottom: 40px;
 }
@@ -333,7 +333,7 @@ ACCUEIL Fenêtre flottante
   box-sizing: border-box;
 }
 body {
-  background-color: #ffffff;
+  background-color: #EDE7E3;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
