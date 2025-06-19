@@ -225,3 +225,10 @@ body {
   max-width: 100%;
   word-wrap: break-word;
 }
+/* Réduction de l’interligne dans les boîtes de filtres */
+.scrollable-box label,
+.scrollable-box option,
+.scrollable-box select {
+  line-height: 1.2; /* réduit l’espace entre les lignes */
+  font-size: 0.85rem; /* optionnel : pour plus de compacité */
+}
