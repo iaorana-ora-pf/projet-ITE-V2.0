@@ -21,7 +21,7 @@
       <h3 class="title-3">Filtrer et trier</h3>
       
       <!-- Bloc Catégories -->
-      <div class="dropdown-checkbox">
+      <div class="dropdown-checkbox filter-block">
         <h4 class="title-4">
           Catégories
           <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
@@ -30,7 +30,7 @@
       </div>
 
       <!-- Bloc Mots-clés -->
-      <div class="dropdown-checkbox">
+      <div class="dropdown-checkbox filter-block">
         <h4 class="title-4">
           Mots-clés
           <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
@@ -39,16 +39,16 @@
       </div>
 
       <!-- Recherche -->
-      <div class="search-box">
+     <div class="search-box filter-block">
         <h4 class="title-4">Chercher dans tous les champs</h4>
         <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
       </div>
 
       <!-- Filtres actifs -->
-         <h4>Filtres sélectionnés</h4>
-        <div id="active-filters-section">
-        <div id="active-filters"></div>
-      </div>
+         <h4 class="title-4">Filtres sélectionnés</h4>
+          <div id="active-filters-section" class="filter-block">
+          <div id="active-filters"></div>
+        </div>
 
       <button class="button centered-button" onclick="resetFilters()">
         Réinitialiser les filtres
