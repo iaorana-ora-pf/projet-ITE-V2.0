@@ -141,10 +141,12 @@ body {
   margin-bottom: 0.5rem;
 }
 .scrollable-box label {
-  display: block;
+    display: flex;
+  align-items: center;
   font-size: 0.85rem;
-  line-height: 1;
-  margin-bottom: 0.1rem;
+  line-height: 1.1;
+  margin-bottom: 0.15rem; /* très peu d'espacement */
+  gap: 0.35rem; /* espace entre checkbox et texte */
 }
 .scrollable-box select {
   border: none;
@@ -152,7 +154,10 @@ body {
   background: transparent;
   padding: 0.4rem 0.2rem;
 }
-
+.scrollable-box input[type="checkbox"] {
+  margin: 0; /* annule tout espace par défaut */
+  padding: 0;
+}
 /* === TEXTAREA RECHERCHE === */
 .search-box textarea {
   min-height: 60px;
