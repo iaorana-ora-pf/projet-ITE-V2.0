@@ -26,7 +26,7 @@
           Catégories
           <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
         </h4>
-        <div id="categoryDropdown"></div>
+        <div id="categoryDropdown" class="filter-content"></div>
       </div>
 
       <!-- Bloc Mots-clés -->
@@ -35,20 +35,23 @@
           Mots-clés
           <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
         </h4>
-        <div id="keywordDropdown"></div>
+        <div id="keywordDropdown" class="filter-content"></div>
       </div>
 
       <!-- Recherche -->
      <div class="search-box filter-block">
         <h4 class="title-4">Chercher dans tous les champs</h4>
+       <div class="filter-content">
         <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
-      </div>
+        </div>
+     </div>
 
       <!-- Filtres actifs -->
-         <h4 class="title-4">Filtres sélectionnés</h4>
-          <div id="active-filters-section" class="filter-block">
-          <div id="active-filters"></div>
-        </div>
+    <div id="active-filters-section" class="filter-block">
+      <div id="active-filters" class="filter-content">
+      <span class="placeholder">Aucun filtre sélectionné</span>
+      </div>
+  </div>
 
       <button class="button centered-button" onclick="resetFilters()">
         Réinitialiser les filtres
@@ -102,6 +105,8 @@
     </div>
   </div>
 
+
+  
   <!-- ✅ Contenu principal -->
   <main class="main-content">
     <div class="container timeline-wrapper">
