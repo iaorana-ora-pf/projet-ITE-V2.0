@@ -359,7 +359,7 @@ body {
   left: 0;
   height: 100vh;
   width: 340px;
-  background: url("images/accueil.png") no-repeat center center;
+  background: url("../images/accueil.png") no-repeat center center;
   background-size: cover;
   backdrop-filter: blur(2px);
   display: flex;
