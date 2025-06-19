@@ -176,13 +176,12 @@ ACCUEIL Fenêtre flottante
 
 .timeline-section {
   flex: 2;
-  overflow-y:  auto;
- min-width: 0;
- scrollbar-gutter: stable;
+  overflow-y: auto; /* <- auto et non scroll */
+  scrollbar-gutter: stable; /* <- garde l’espace de la scrollbar */
   height: 100%;
   min-height: 0;
- background: white;           /* ✅ Pour garantir la cohérence du fond */
-  padding: 1rem 2rem;          /* ✅ Pour de l’espace intérieur */
+  background: white;
+  padding: 1rem 2rem;
   box-sizing: border-box;
 }
 /*-----------------------------------
