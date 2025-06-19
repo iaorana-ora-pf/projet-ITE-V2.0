@@ -496,3 +496,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+// ➕ Affiche le total des événements dans la page d'accueil
+document.addEventListener("DOMContentLoaded", function () {
+  const countEl = document.getElementById("event-count-number");
+  if (countEl) {
+    fetch('explorer.json')
+      .then(response => response.json())
+      .then(data => {
+        const total = Object.values(data).flat().length;
+        countEl.textContent = total;
+      })
+      .catch(err => console.error("Erreur lors du chargement des événements :", err));
+  }
+});
