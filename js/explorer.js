@@ -340,25 +340,10 @@ function toggleFilters() {
   const el = document.getElementById("filters");
   el.style.display = (el.style.display === "none" || el.style.display === "") ? "block" : "none";
 }
-function toggleSidePanel() {
-  const panel = document.getElementById('side-panel');
-  panel.style.display = (panel.style.display === 'none') ? 'flex' : 'none';
-}
-function toggleSidePanel() {
-  const panel = document.getElementById('side-panel');
-  const openBtn = document.getElementById('open-panel-btn');
-
-  if (panel.style.display === 'none') {
-    panel.style.display = 'flex';
-    openBtn.style.display = 'none';
-  } else {
+else {
     panel.style.display = 'none';
     openBtn.style.display = 'block';
   }
-}
-function toggleSidePanel() {
-  const layout = document.getElementById("app-layout");
-  layout.classList.toggle("sidebar-hidden");
 }
 function toggleHelpPanel() {
   const panel = document.getElementById('help-panel');
@@ -513,7 +498,7 @@ document.querySelectorAll(".timeline-section").forEach(el => {
 document.querySelectorAll(".event-grid").forEach(el => {
   el.style.outline = "2px solid green";
 });
-console.log("Width timeline-section:", getComputedStyle(document.querySelector('.timeline-section')).width);
+
 
 /**
  * Trie les événements de la frise selon l'ordre choisi (asc ou desc).
@@ -537,4 +522,9 @@ function sortTimeline() {
   // 🧹 Vide la frise et réinsère les événements dans l'ordre trié
   timelineContainer.innerHTML = "";
   events.forEach(event => timelineContainer.appendChild(event));
+}
+
+function toggleSidePanel() {
+  const layout = document.getElementById("app-layout");
+  layout.classList.toggle("sidebar-hidden");
 }
