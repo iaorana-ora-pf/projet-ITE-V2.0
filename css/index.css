@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: var(--main-green);
+  background-color: white;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
@@ -22,10 +22,6 @@ body {
   justify-content: center;
   max-width: 1200px;
   margin: 5vh auto;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
 /* === Colonne gauche : Image === */
@@ -44,20 +40,20 @@ body {
 .welcome-content {
   flex: 1;
   padding: 3rem 2rem;
-  color: var(--dark-text);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .welcome-content h1 {
-  color: var(--main-green);
+  color: white;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 .event-count-highlight {
-  color: var(--main-green);
+  color: white;
   text-align: center;
   font-size: 1.1rem;
   font-weight: 500;
@@ -74,8 +70,8 @@ body {
 }
 
 .welcome-btn {
-  background-color: var(--main-green);
-  color: white;
+  background-color: white;
+  color: var(--main-green);
   text-decoration: none;
   padding: 0.8rem 1.2rem;
   border-radius: 8px;
@@ -84,10 +80,11 @@ body {
   align-items: center;
   gap: 0.5rem;
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .welcome-btn:hover {
-  background-color: var(--hover-green);
+  background-color: var(--light-bg);
 }
 
 .welcome-btn i {
@@ -106,6 +103,7 @@ body {
 
   .welcome-content {
     padding: 2rem 1.5rem;
+    text-align: center;
   }
 
   .welcome-btn {
