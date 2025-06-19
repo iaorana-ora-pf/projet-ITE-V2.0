@@ -767,12 +767,6 @@ a.button {
   word-wrap: break-word;
   overflow: hidden;
 }
-side-scrollable-content {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1rem;
-}
 .side-footer {
   font-size: 0.75rem;
   color: #888;
