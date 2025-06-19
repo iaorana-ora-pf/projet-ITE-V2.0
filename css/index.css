@@ -62,7 +62,7 @@ body {
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--main-green);
-  font-style: italic;
+  font-style: bold;
 }
 
 .welcome-content p {
