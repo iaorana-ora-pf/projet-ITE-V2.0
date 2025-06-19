@@ -14,7 +14,6 @@ body {
   padding: 0;
 }
 
-/* ✅ Fenêtre flottante d’accueil */
 .popup {
   position: fixed;
   top: 0;
@@ -41,7 +40,6 @@ body {
   animation: popupAnimation 0.5s ease-out;
 }
 
-/* ✅ Colonne d’icônes à gauche */
 .popup-sidebar {
   background-color: #f8f1e8;
   padding: 2rem 1rem;
@@ -53,7 +51,6 @@ body {
   gap: 1.5rem;
 }
 
-/* ✅ Zone texte à droite */
 .popup-description {
   padding: 2rem 2.5rem;
   font-size: 1rem;
@@ -78,7 +75,6 @@ body {
   line-height: 1.5;
 }
 
-/* ✅ Boutons icônes avec info-bulles */
 .popup-btn {
   background: none;
   border: none;
@@ -98,7 +94,6 @@ body {
   visibility: hidden;
 }
 
-/* ✅ Responsive (mobile-friendly) */
 @media (max-width: 768px) {
   .popup-content {
     flex-direction: column;
@@ -116,7 +111,6 @@ body {
   }
 }
 
-/* ✅ Animation d’apparition */
 @keyframes popupAnimation {
   from {
     opacity: 0;
