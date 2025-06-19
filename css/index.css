@@ -38,6 +38,7 @@ body {
   max-width: 1200px;
   width: 90%;
   animation: popupAnimation 0.5s ease-out;
+  flex-direction: row-reverse; /* ⬅️ Inverse l'ordre des colonnes */
 }
 
 .popup-sidebar {
