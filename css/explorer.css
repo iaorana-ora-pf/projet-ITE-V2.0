@@ -172,7 +172,8 @@ max-height: 120px; /* par exemple */
 
 .timeline-section {
   flex: 2;
-  overflow-y: auto;
+  overflow-y: scroll;
+ scrollbar-gutter: stable;
   height: 100%;
   min-height: 0;
  background: white;           /* ✅ Pour garantir la cohérence du fond */
