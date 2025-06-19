@@ -1,23 +1,16 @@
-// Met à jour dynamiquement le nombre total d'événements depuis explorer.json
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async () => {
   const countEl = document.getElementById("event-count-number");
+  if (!countEl) return;
 
-  if (countEl) {
-    fetch("explorer.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("explorer.json introuvable");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        const total = Object.values(data).flat().length;
-        countEl.textContent = total;
-      })
-      .catch((error) => {
-        console.error("Erreur de chargement des événements :", error);
-        countEl.textContent = "—";
-      });
+  try {
+    const response = await fetch("explorer.json");
+    if (!response.ok) throw new Error("explorer.json introuvable");
+
+    const data = await response.json();
+    const total = Object.values(data).flat().length;
+    countEl.textContent = total;
+  } catch (err) {
+    console.error("Erreur de chargement des événements :", err);
+    countEl.textContent = "—";
   }
 });
