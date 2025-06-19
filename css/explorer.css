@@ -7,7 +7,7 @@
 
 :root {
   --main-green: #36a7c3;
-  --hover-green: #128c8c;
+  --hover-green: #4f98aa;
   --link-green: #2a9d8f;
   --light-bg: #EDE7E3;
   --neutral-text: #5F5F5F;
@@ -97,7 +97,7 @@ ACCUEIL Fenêtre flottante
 }
 /* Changement de couleur au survol des boutons */
 .popup-btn:hover {
-  background-color: #128c8c;
+  background-color: #4f98aa;
 }
 /* Conteneur pour les boutons (flexbox) */
 .popup-content .button-container {
