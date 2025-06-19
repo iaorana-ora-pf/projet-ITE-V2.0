@@ -1012,3 +1012,24 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
   max-width: 100%;
   overflow-x: hidden;
 }
+.welcome-btn {
+  background-color: var(--main-green);
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-btn:hover {
+  background-color: var(--hover-green);
+}
+
+.welcome-btn i {
+  font-size: 1.1rem;
+}
