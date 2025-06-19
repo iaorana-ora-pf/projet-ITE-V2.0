@@ -1,74 +1,50 @@
-<!--
- Nettoyé automatiquement par CodeNinja 🥷
- Fichier : index.html
- Date : Juin 2025
- Ne pas modifier cet en-tête à la main.
--->
-
 <!DOCTYPE html>
 <html lang="fr">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Projet 'ITE3
-  </title>
-  <link href="css/index.css" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
- </head>
- <body>
-  <!-- ✅ Ecran d'acceuil -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet 'ITE3</title>
+
+  <!-- ✅ CSS spécifique à la page d’accueil -->
+  <link href="css/index.css" rel="stylesheet" />
+  <!-- ✅ Icônes FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+
+  <!-- ✅ Ecran d'accueil -->
   <div class="popup" id="welcomePopup">
-   <div class="popup-content">
-    <h1>
-     Bienvenue sur 'ITE
-    </h1>
-    <p class="event-count-highlight">
-     Explorez et plongez dans les détails de
-     <span id="event-count-number">
-      0
-     </span>
-     événements de santé publique en Polynésie française à travers une frise chronologique interactive.
-    </p>
-    <p class="popup-description">
-     'ITE est une base de connaissances qui rassemble, organise et partage des informations sur la santé publique en Polynésie française.
-     Grâce à ce projet, vous pouvez explorer les événements par année, catégorie ou mots-clés, et accéder à des fiches descriptives.
-     Les documents liés peuvent être consultés directement depuis ces fiches ou en naviguant dans la bibliothèque.
-     <br/>
-     <br/>
-     Porté par Emmanuelle RUPP-TERRIS, ‘ITE est un projet personnel, collaboratif et en constante évolution. Il s'enrichit progressivement grâce
-      aux contributions et aux données collectées au fil du temps. N’hésitez pas à proposer un événement, chaque contribution sera étudiée avec attention.
-    </p>
-    <!-- Conteneur pour les boutons -->
-    <div class="button-container">
-     <!-- Bouton pour explorer la frise -->
-     <a href="explorer.html">
-      <button class="popup-btn" id="exploreBtn">
-       Explorer la frise
-      </button>
-     </a>
-      <!-- Bouton pour explorer la bibliothèquue des ressources -->
-     <a href="consulter.html">
-      <button class="popup-btn" id="exploreBtn">
-       Consulter les documents
-      </button>
-     </a>
-     <!-- Bouton pour proposer un événement -->
-     <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" target="_blank" rel="noopener noreferrer">
-        <button class="popup-btn">Proposer un événement</button>
-      </a>
-     <!-- Lien mailto pour le contact -->
-     <a href="mailto:contact@paanapf.com">
-      <button class="popup-btn">
-       Contact
-      </button>
-     </a>
+    <div class="popup-content">
+      <h1>Bienvenue sur 'ITE</h1>
+      <p class="event-count-highlight">
+        Explorez et plongez dans les détails de
+        <span id="event-count-number">0</span>
+        événements de santé publique en Polynésie française à travers une frise chronologique interactive.
+      </p>
+      <p class="popup-description">
+        'ITE est une base de connaissances qui rassemble, organise et partage des informations sur la santé publique en Polynésie française.
+        Grâce à ce projet, vous pouvez explorer les événements par année, catégorie ou mots-clés, et accéder à des fiches descriptives.
+        Les documents liés peuvent être consultés directement depuis ces fiches ou en naviguant dans la bibliothèque.
+        <br /><br />
+        Porté par Emmanuelle RUPP-TERRIS, ‘ITE est un projet personnel, collaboratif et en constante évolution. Il s'enrichit progressivement grâce
+        aux contributions et aux données collectées au fil du temps. N’hésitez pas à proposer un événement, chaque contribution sera étudiée avec attention.
+      </p>
+
+      <!-- ✅ Boutons d'action -->
+      <div class="button-container">
+        <a href="explorer.html"><button class="popup-btn">Explorer la frise</button></a>
+        <a href="consulter.html"><button class="popup-btn">Consulter les documents</button></a>
+        <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" target="_blank" rel="noopener noreferrer">
+          <button class="popup-btn">Proposer un événement</button>
+        </a>
+        <a href="mailto:contact@paanapf.com"><button class="popup-btn">Contact</button></a>
+      </div>
     </div>
-   </div>
   </div>
-  </main>
-   <script src="explorer.js">
-  </script>
- </body>
+
+  <!-- ✅ JS spécifique à la page d’accueil -->
+  <script src="js/index.js" defer></script>
+
+</body>
 </html>
