@@ -38,7 +38,7 @@ body {
   background-color: rgba(255, 255, 255, 0.92);
   max-width: 1000px;
   width: 90%;
-  animation: popupAnimation 0.5s ease-out;
+  animation: popupAnimation 0.2s ease-out;
 }
 
 .popup-description {
