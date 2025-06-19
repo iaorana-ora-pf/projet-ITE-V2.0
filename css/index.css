@@ -61,14 +61,14 @@ body {
 }
 
 .event-count-highlight {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--main-green);
   flex-shrink: 1;
   display: block;
   width: 100%;
-  text-align: center;
+  text-align:  center !important;
 }
 
 .welcome-content p {
