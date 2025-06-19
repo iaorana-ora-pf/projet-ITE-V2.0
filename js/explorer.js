@@ -496,3 +496,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+document.querySelectorAll(".timeline-section").forEach(el => {
+  el.style.outline = "2px solid red";
+});
+document.querySelectorAll(".event-grid").forEach(el => {
+  el.style.outline = "2px solid green";
+});
+console.log("Width timeline-section:", getComputedStyle(document.querySelector('.timeline-section')).width);
