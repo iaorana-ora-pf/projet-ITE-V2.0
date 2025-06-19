@@ -172,6 +172,7 @@ ACCUEIL Fenêtre flottante
   overflow-y: auto;
   height: 100%;
   min-height: 0;
+ padding-right: 0.75rem; /* ou 1rem */
 }
 /*-----------------------------------
  STOP OK
@@ -978,7 +979,7 @@ a.button {
 }
 .timeline-layout {
   background-color: white;
- display: flex;
+  display: flex;
   align-items: stretch;
   justify-content: space-between;
   gap: 1.5rem;
