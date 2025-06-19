@@ -165,3 +165,28 @@ body {
   transform: scale(1.2);
   color: var(--hover-green);
 }
+.floating-icons {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1100;
+  background: none;
+}
+
+.floating-icons a {
+  font-size: 2.8rem;
+  color: white;
+  text-align: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.floating-icons a:hover {
+  transform: scale(1.2);
+  color: var(--hover-green);
+}
