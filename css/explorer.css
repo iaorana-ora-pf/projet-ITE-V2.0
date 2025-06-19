@@ -999,3 +999,12 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 .year-block {
   width: 100%;
 }
+#active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+#active-filters-section {
+  max-width: 100%;
+  overflow-x: hidden;
+}
