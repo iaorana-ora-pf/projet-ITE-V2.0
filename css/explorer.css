@@ -172,7 +172,9 @@ ACCUEIL Fenêtre flottante
   overflow-y: auto;
   height: 100%;
   min-height: 0;
- padding-right: 0.75rem; /* ou 1rem */
+ background: white;           /* ✅ Pour garantir la cohérence du fond */
+  padding: 1rem 2rem;          /* ✅ Pour de l’espace intérieur */
+  box-sizing: border-box;
 }
 /*-----------------------------------
  STOP OK
