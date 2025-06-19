@@ -239,3 +239,71 @@ body {
   max-width: 100%;
   word-wrap: break-word;
 }
+/* Uniformise les titres (catégories, mots-clés, tri, recherche, etc.) */
+.filters-section h4.title-4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  margin-top: 1rem;
+  font-family: var(--font-main);
+  color: var(--dark-text);
+}
+
+/* Réduit l'espace sous chaque boîte + empilement logique */
+.dropdown-checkbox,
+.search-box {
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
+}
+
+/* Boîtes style uniforme */
+.scrollable-box,
+.scrollable-box select,
+.search-box textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  font-family: var(--font-main);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* Police spécifique aux checkboxs (dans label) */
+.scrollable-box label {
+  font-size: 0.85rem;
+  font-family: var(--font-main);
+}
+
+/* Espace cohérent entre blocs enfants */
+.filters-row > * {
+  margin-bottom: 0.5rem;
+}
+.filters-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('images/accueil.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 0;
+}
+
+.filters-scrollable {
+  flex: 1; /* Prend tout l'espace dispo */
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+.sidebar-footer {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--neutral-text);
+  background-color: rgba(255, 255, 255, 0.85); /* blanc transparent */
+  border-top: 1px solid #ccc;
+}
