@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Projet 'ITE
+  </title>
+  <link href="css/explorer2.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+ </head>
+ <body>
+ <a href="index.html" class="home-btn" title="Retour à l’accueil">
+  <i class="fas fa-home"></i>
+</a>
+  <!-- ✅ Barre latérale -->
+  <div class="side-panel" id="side-panel">
+   <!-- Contenu scrollable -->
+   <div class="side-scrollable-content">
+    <h3 class="title-3 inline-icon">
+     Filtres
+    </h3>
+    <!-- Bloc Catégories -->
+    <div class="dropdown-checkbox">
+     <h4 class="title-4 inline-icon">
+      Catégories
+      <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories">
+      </i>
+     </h4>
+     <div id="categoryDropdown">
+     </div>
+    </div>
+    <!-- Bloc Mots-clés -->
+    <div class="dropdown-checkbox">
+     <h4 class="title-4 inline-icon">
+      Mots-clés
+      <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés">
+      </i>
+     </h4>
+     <div id="keywordDropdown">
+     </div>
+    </div>
+    <!-- Bloc Recherche -->
+    <div class="search-box">
+     <h4 class="title-4">
+      Chercher dans tous les champs
+     </h4>
+     <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
+    </div>
+    <!-- Filtres sélectionnés -->
+    <div id="active-filters-section">
+     <h4 class="title-4">
+      Filtres sélectionnés :
+     </h4>
+     <div id="active-filters">
+     </div>
+    </div>
+    <!-- Bouton réinitialiser -->
+    <button class="button centered-button" onclick="resetFilters()">
+     Réinitialiser les filtres
+    </button>
+   </div>
+   <!-- /.filters-block -->
+   <!-- Footer toujours visible -->
+   <div class="side-footer">
+    © 2025 – Tous droits réservés
+   </div>
+  </div>
+  <!-- Bouton Admin -->
+  <button id="admin-toggle-btn" onclick="toggleAdmin()" style="position:fixed; bottom:10px; right:10px; opacity:0.2;">
+   🔧
+  </button>
+  <!-- Modale pour l’info Catégories -->
+  <div class="info-modal hidden" id="infoModal">
+   <div class="info-modal-content">
+    <button class="info-close-btn" onclick="toggleInfoModal()">
+     ×
+    </button>
+    <h3 class="title-3">
+     À propos des catégories
+    </h3>
+    <p>
+     Ce filtre s’appuie sur les
+     <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">
+      Fonctions Essentielles de Santé Publique (FESP)
+     </a>
+     de l’OMS, regroupées en 5 grandes familles :
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Gouvernance et pilotage stratégique
+      </strong>
+      : coordination, planification, participation, qualité et équité
+     </li>
+     <li>
+      <strong>
+       Données surveillance et recherche
+      </strong>
+      : production, analyse et utilisation de l'information sanitaire
+     </li>
+     <li>
+      <strong>
+       Promotion de la santé et prévention
+      </strong>
+      : actions comportementales, sociales et populationnelles
+     </li>
+     <li>
+      <strong>
+       Protection sanitaire et gestion des risques
+      </strong>
+      : réponse aux menaces sanitaires, environnementales ou réglementaires
+     </li>
+     <li>
+      <strong>
+       Accès aux services et aux moyens
+      </strong>
+      : ressources humaines, infrastructures, technologies, accès aux soins
+     </li>
+    </ul>
+    <p>
+     La catégorie
+     <strong>
+      Contexte
+     </strong>
+     regroupe des événements ayant un impact indirect sur la santé publique.
+    </p>
+    <p>
+     Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").
+    </p>
+   </div>
+  </div>
+  <!-- Modale info mots-clés -->
+  <div class="info-modal hidden" id="keywordModal">
+   <div class="info-modal-content">
+    <button class="info-close-btn" onclick="toggleKeywordModal()">
+     ×
+    </button>
+    <h3 class="title-3">
+     À propos des mots-clés
+    </h3>
+    <p>
+     Les
+     <strong>
+      mots-clés
+     </strong>
+     sont issus autant que possible du thésaurus
+     <a href="https://decs.bvsalud.org/fr" target="_blank">
+      DeCS
+     </a>
+     .
+    </p>
+    <p>
+     Dans la liste des cases à cocher, vous pouvez sélectionner plusieurs options, mais elles sont traitées comme des choix séparés ("OU") et non combinés ("ET").
+    </p>
+   </div>
+  </div>
+  <!-- ✅ Contenu principal -->
+  <main class="main-content">
+   <div class="container timeline-wrapper">
+   
+    <!-- Zone pour afficher le nombre d’événements -->
+    <div id="event-count-text">
+    </div>
+    <div class="timeline-layout" id="frise">
+     <div class="timeline-section" id="timeline">
+     </div>
+     <div class="event-details-container" id="event-details-container">
+      <p style="text-align:center; font-style:italic; color:#5F5F5F;">
+       Cliquez sur un événement pour accéder à sa fiche détaillée puis utilisez les flèches “◀” et “▶” pour naviguer entre les événements (filtrés).
+      </p>
+     </div>
+    </div>
+
+    <a href="index.html" class="home-btn" title="Retour à l’accueil">
+  <i class="fas fa-home"></i>
+</a>
+    
+    <div id="admin-panel" style="display:none; padding:2rem; background:#f8f8f8; border-top: 2px solid #ccc;">
+     <h3>
+      🔧 Mode Administration
+     </h3>
+     <button onclick="filterRecent()">
+      Filtrer événements récents
+     </button>
+    </div>
+   </div>
+   
+  </main>
+  <script src="js/explorer.js">
+  </script>
+ </body>
+</html>
