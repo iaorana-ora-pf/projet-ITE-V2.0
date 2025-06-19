@@ -88,6 +88,11 @@ body {
   overflow-y: auto;
   max-width: 100%;
   overflow-x: hidden;
+  background: white;                  /* ✅ fond blanc */
+  border: 1px solid #ccc;             /* ✅ bordure douce */
+  border-radius: 6px;
+  padding: 1rem;                      /* ✅ espace intérieur */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 #active-filters-section.empty {
