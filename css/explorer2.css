@@ -163,15 +163,19 @@ body {
 /* Zone de recherche */
 .search-box textarea {
   width: 100%;
-  min-height: 60px;
+  box-sizing: border-box; /* ✅ garantit que padding ne déborde pas */
+  min-height: 100px;
   font-size: 0.95rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 0.5rem;
-  resize: vertical;
   background-color: white;
+  margin-top: 0;
 }
-
+.dropdown-checkbox,
+.search-box {
+  flex: 1 1 100%; /* ✅ met tous les blocs à pleine largeur */
+}
 /* Bouton Réinitialiser */
 .centered-button {
   display: block;
