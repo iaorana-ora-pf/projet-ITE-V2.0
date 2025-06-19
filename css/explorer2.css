@@ -1,103 +1,36 @@
-/* === VARIABLES GLOBALES === */
 :root {
   --main-green: #048B9A;
   --hover-green: #02616B;
-  --light-bg: #EDE7E3;
-  --neutral-text: #5F5F5F;
-  --dark-text: #1e2124;
+  --text-color: #1e2124;
+  --bg-white: #fff;
   --font-main: 'Lato', sans-serif;
-  --bg-white: #ffffff;
-}
-
-/* === RESET GLOBAL === */
-* {
-  box-sizing: border-box;
+  --box-border: 1px solid #ccc;
 }
 
 body {
   margin: 0;
-  padding: 0;
-  height: 100vh;
-  overflow: hidden;
   font-family: var(--font-main);
+  color: var(--text-color);
   background-color: var(--bg-white);
-  color: var(--dark-text);
 }
 
-/* === LAYOUT === */
-.explorer-layout {
-  display: flex;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.filters-sidebar {
-  width: 360px;
-  background: rgba(255, 255, 255, 0.9) url('../images/accueil.png') center/cover no-repeat;
-  backdrop-filter: blur(4px);
-  padding: 0;
-  overflow-y: auto;
-  border-right: 1px solid #ccc;
-}
-
-.explorer-main {
-  flex: 1;
-  overflow-y: auto;
-  padding: 2rem;
-}
-
-/* === HEADER === */
-.explorer-header {
-  background-color: var(--main-green);
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
-}
-.explorer-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
-/* === BOUTON ACCUEIL === */
-.floating-home-button {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background: var(--main-green);
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: background 0.3s ease;
-}
-.floating-home-button:hover {
-  background: var(--hover-green);
-}
-
-/* === FILTRES === */
 .filters-section {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 1.5rem;
-  margin: 0 auto;
   width: 100%;
 }
 
 .filters-section h2.title-2 {
   color: var(--main-green);
-  margin-top: 0.5rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
 }
 
 .filters-row {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
 }
 
 .dropdown-checkbox,
@@ -105,141 +38,78 @@ body {
   width: 100%;
 }
 
-/* === LABELS, TITRES === */
-.filters-section h4.title-4 {
+/* Titres des filtres */
+h4.title-4 {
   font-size: 1rem;
   font-weight: 600;
-  margin: 1rem 0 0.4rem;
-  color: var(--dark-text);
-}
-.filter-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.4rem;
-}
-.filter-label i {
-  font-size: 0.9rem;
-  color: var(--neutral-text);
-  cursor: help;
+  margin: 0 0 0.4rem 0;
 }
 
-/* === BOXES === */
-.scrollable-box,
+/* Boîtes avec scroll : Catégories, Mots-clés */
+.scrollable-box {
+  max-height: 110px;
+  overflow-y: auto;
+  border: var(--box-border);
+  border-radius: 6px;
+  padding: 0.4rem 0.5rem;
+  background: white;
+}
+
+/* Checkbox + libellé */
+.scrollable-box label {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  gap: 0.4rem;
+}
+
+.scrollable-box input[type="checkbox"] {
+  transform: scale(0.9);
+  margin: 0;
+}
+
+/* Zone de recherche */
 .search-box textarea {
   width: 100%;
-  padding: 0.5rem;
-  font-size: 0.85rem;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.scrollable-box {
-  max-height: 100px;
-  overflow-y: auto;
-  margin-bottom: 0.5rem;
-}
-.scrollable-box label {
-    display: flex;
-  align-items: center;
-  font-size: 0.85rem;
-  line-height: 1.1;
-  margin-bottom: 0.15rem; /* très peu d'espacement */
-  gap: 0.35rem; /* espace entre checkbox et texte */
-}
-.scrollable-box select {
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 0.4rem 0.2rem;
-}
-.scrollable-box input[type="checkbox"] {
-  margin: 0; /* annule tout espace par défaut */
-  padding: 0;
-}
-/* === TEXTAREA RECHERCHE === */
-.search-box textarea {
   min-height: 60px;
-  box-sizing: border-box;
-  margin-top: 0;
-}
-
-/* === BOUTON RÉINITIALISER === */
-.centered-button {
-  display: block;
-  margin: 2rem auto 0;
-  padding: 0.6rem 1.5rem;
-  font-size: 0.95rem;
-  background: var(--main-green);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-}
-.centered-button:hover {
-  background: var(--hover-green);
-}
-
-/* === FILTRES ACTIFS === */
-#active-filters {
-  background: white;
-  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  border: var(--box-border);
   border-radius: 6px;
-  padding: 0.8rem;
-  margin-top: 0.5rem;
+  background: white;
+  resize: vertical;
+}
+
+/* Menu déroulant Tri */
+.scrollable-box select {
+  width: 100%;
+  font-size: 0.85rem;
+  border: none;
+  background: transparent;
+  padding: 0.4rem 0;
+  font-family: var(--font-main);
+}
+
+/* Filtres sélectionnés */
+#active-filters {
+  margin-top: 1rem;
+  background: white;
+  border: var(--box-border);
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-size: 0.85rem;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  font-size: 0.9rem;
+  gap: 0.4rem;
 }
+
 #active-filters .tag {
-  background: var(--main-green);
+  background-color: var(--main-green);
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.85rem;
   display: inline-block;
   max-width: 100%;
-  word-wrap: break-word;
-}
-
-/* === MODALES === */
-.info-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-.info-modal-content {
- position: relative;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 600px;
-  width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-.hidden {
-  display: none;
-}
-.info-close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
 }
