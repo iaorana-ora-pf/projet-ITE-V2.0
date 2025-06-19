@@ -159,12 +159,13 @@ body {
 }
 /* Listes déroulantes scrollables */
 .scrollable-box {
-  max-height: 130px;
+  max-height: 110px;
   overflow-y: auto;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   background-color: white;
+  margin-bottom: 0.8rem; /* ou 0.6rem pour un look plus serré */
 }
 .scrollable-box label {
   font-size: 0.85rem;  /* ou 0.8rem pour plus petit */
@@ -184,6 +185,10 @@ body {
 .dropdown-checkbox,
 .search-box {
   flex: 1 1 100%; /* ✅ met tous les blocs à pleine largeur */
+  margin-top: 0; /* pour éviter un double espacement */
+}
+.filters-row > * {
+  margin-bottom: 1rem;
 }
 /* Bouton Réinitialiser */
 .centered-button {
