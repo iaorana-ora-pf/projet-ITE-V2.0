@@ -59,11 +59,12 @@ body {
 }
 
 .event-count-highlight {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--main-green);
-  font-style: italic;
+  font-style: bold;
+  text-align: center;
 }
 
 .welcome-content p {
