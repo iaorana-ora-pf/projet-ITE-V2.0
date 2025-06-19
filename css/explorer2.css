@@ -33,7 +33,7 @@ body {
 /* Style du titre H1 dans le header */
 .explorer-header h1 {
   margin: 0;                          /* Supprime marge par défaut */
-  font-size: 2rem;                    /* Taille confortable */
+  font-size: 1.8rem;                    /* Taille confortable */
   font-weight: 600;                   /* Gras modéré pour lisibilité */
 }
 
@@ -57,4 +57,123 @@ body {
 /* Hover du bouton */
 .floating-home-button:hover {
   background-color: var(--hover-green); /* Teinte foncée au survol */
+}
+/* === SECTION DES FILTRES === */
+.filters-section {
+  padding: 2rem;
+  background-color: var(--light-bg); /* Fond doux */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Conteneur flex pour les 3 types de filtres */
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* Bloc de chaque filtre (catégories, mots-clés, recherche) */
+.dropdown-checkbox,
+.search-box {
+  flex: 1 1 30%;
+  min-width: 250px;
+}
+
+/* Titres de sous-sections (catégories, mots-clés...) */
+.title-4.inline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Icône info à côté des titres */
+.title-4.inline-icon i {
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+/* Champ de recherche */
+.search-box textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+/* Filtres actifs (affichage des tags cochés) */
+#active-filters-section {
+  margin-top: 1rem;
+}
+
+#active-filters {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Bouton de réinitialisation */
+.centered-button {
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.6rem 1.2rem;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.centered-button:hover {
+  background-color: #333;
+}
+
+/* === MODALES D'INFORMATION === */
+.info-modal {
+  display: none; /* visible uniquement en JS */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  overflow-y: auto;
+}
+
+/* Contenu central de la modale */
+.info-modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  color: var(--dark-text);
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Bouton de fermeture */
+.info-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-text);
+  cursor: pointer;
+}
+
+/* Classes utilitaires */
+.hidden {
+  display: none !important;
 }
