@@ -1033,3 +1033,25 @@ padding-left: calc(1rem - 4px); /* pour compenser la bordure */
 .welcome-btn i {
   font-size: 1.1rem;
 }
+.home-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.home-btn:hover {
+  background-color: var(--hover-green);
+}
