@@ -27,13 +27,14 @@ body {
 .welcome-image {
   flex: 1;
   height: 100%;
+  overflow: hidden;
 }
 
 .welcome-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  overflow: hidden;
+  display: block;
 }
 
 /* === Colonne droite : Contenu === */
@@ -62,7 +63,7 @@ body {
   font-weight: 700;
   margin-bottom: 2rem;
   color: var(--main-green);
-  font-style: bold;
+  font-style: italic;
 }
 
 .welcome-content p {
