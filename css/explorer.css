@@ -203,84 +203,85 @@ body {
   z-index: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.info-modal-content,
-.keyword-modal-content {
-  width: 400px;                    /* ✅ plus étroit */
-  max-height: 90vh;                /* ✅ plus haut si nécessaire */
-  overflow-y: auto;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-.info-modal-content a {
-  all: unset;
-  color: var(--link-green);
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.info-modal-content a:hover {
-  color: var(--hover-green);
-}
-
-.info-modal-content ul li {
-  margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
-  line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
-}
-
+/************************** Fenetres aide *************************/
+/* FENÊTRE MODALE CENTRÉE */
 .info-modal {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;  /* raccourci pour top/left/right/bottom: 0 */
   background-color: rgba(0, 0, 0, 0.5);
   display: flex !important;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
+
+/* CONTENU DES MODALES (toutes unifiées) */
+.info-modal-content,
+.keyword-modal-content,
+.help-modal-content {
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+
+/* CROIX DE FERMETURE BLEUE EN HAUT À GAUCHE */
 .info-close-btn {
   position: absolute;
   top: 10px;
-  right: 15px;                     /* ✅ à gauche */
+  left: 15px; /* ← correctif ici */
   font-size: 1.5rem;
   background: none;
   border: none;
-  color: #007bff;                 /* ✅ bleu */
+  color: #007bff;
   cursor: pointer;
 }
-.help-modal-content {
-  background-color: white;
+
+/* LIENS DANS MODALE */
+.info-modal-content a {
+  all: unset;
+  color: var(--link-green);
+  text-decoration: underline;
+  cursor: pointer;
 }
+.info-modal-content a:hover {
+  color: var(--hover-green);
+}
+
+/* LISTES UL */
+.info-modal-content ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .timeline-wrapper {
