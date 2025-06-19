@@ -1,8 +1,8 @@
-// ➕ Met à jour dynamiquement le nombre total d'événements depuis explorer.json
+// Met à jour dynamiquement le nombre total d'événements depuis explorer.json
+
 document.addEventListener("DOMContentLoaded", function () {
   const countEl = document.getElementById("event-count-number");
 
-  // Vérifie si on est bien sur la page d'accueil (présence du compteur)
   if (countEl) {
     fetch("explorer.json")
       .then((response) => {
