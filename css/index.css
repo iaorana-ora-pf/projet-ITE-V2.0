@@ -39,15 +39,17 @@ body {
 /* === Colonne droite : Contenu === */
 .welcome-content {
   flex: 1;
-  padding: 4rem 3rem;
-  color: black;
+  padding: 3rem 2rem;
+  color: var(--dark-text);
   display: flex;
   flex-direction: column;
-  justify-content: justify;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100vh;            /* 🔹 s'étend sur la hauteur de la fenêtre */
+  overflow-y: auto;         /* 🔹 active le défilement si jamais nécessaire */
+  box-sizing: border-box;   /* 🔹 évite que le padding fasse dépasser */
 }
-
 .welcome-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
