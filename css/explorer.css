@@ -1,17 +1,5 @@
-/* === Simplified & Sectioned CSS for explorer page === */
-
-/* === GENERAL === */
-/* === Simplified CSS for explorer page === */
-
-/*
- Nettoyé automatiquement par CodeNinja 🥷
- Fichier : index.css
- Date : Juin 2025
- Ne pas modifier cet en-tête à la main.
-*/
-
 :root {
---main-green: #048B9A;
+  --main-green: #048B9A;
   --hover-green: #02616B;
   --link-green: #048B9A;
   --light-bg: #EDE7E3;
