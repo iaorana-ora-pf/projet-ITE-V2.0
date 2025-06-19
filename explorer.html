@@ -10,15 +10,19 @@
 </head>
   
 <body>
-
+  <!-- Bouton Admin -->
+  <div class="some-container" style="position: relative;">
+   ² <a href="/admin" class="top-right-button">Admin</a>
+  </div>
+  
   <!-- ✅ Barre latérale -->
   <div class="side-panel" id="side-panel">
     <div class="side-scrollable-content">
-      <h3 class="title-3 inline-icon">Filtrer et trier</h3>
+      <h3 class="title-3">Filtrer et trier</h3>
       
       <!-- Bloc Catégories -->
       <div class="dropdown-checkbox">
-        <h4 class="title-4 inline-icon">
+        <h4 class="title-4">
           Catégories
           <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
         </h4>
@@ -27,7 +31,7 @@
 
       <!-- Bloc Mots-clés -->
       <div class="dropdown-checkbox">
-        <h4 class="title-4 inline-icon">
+        <h4 class="title-4">
           Mots-clés
           <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
         </h4>
@@ -41,9 +45,9 @@
       </div>
 
       <!-- Filtres actifs -->
-      <h4 class="title-4">Filtres sélectionnés :</h4>
-      <div id="active-filters-section">
-      <div id="active-filters"></div>
+      <div id="active-filters-section" class="filter-box-style">
+        <h4 class="title-4">Filtres sélectionnés</h4>
+        <div id="active-filters"></div>
       </div>
 
       <button class="button centered-button" onclick="resetFilters()">
@@ -55,10 +59,7 @@
     <div class="side-footer">© 2025 – Tous droits réservés</div>
   </div>
 
-  <!-- Bouton Admin -->
-  <button id="admin-toggle-btn" onclick="toggleAdmin()" style="position:fixed; bottom:10px; right:10px; opacity:0.2;">
-    🔧
-  </button>
+
 
   <!-- Modale Catégories -->
   <div class="info-modal hidden" id="infoModal">
