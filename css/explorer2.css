@@ -158,6 +158,8 @@ body {
   display: block;
   font-size: 0.9rem;
   font-family: var(--font-main);
+  line-height: 1.1; /* 🔽 réduit l’espacement vertical entre lignes */
+  margin-bottom: 0.1rem; /* facultatif, réduit encore entre les labels */
 }
 
 /* === SELECT (tri) dans une scrollable-box aussi) === */
