@@ -977,7 +977,8 @@ a.button {
   text-decoration: underline;
 }
 .timeline-layout {
-  display: flex;
+  background-color: white;
+ display: flex;
   align-items: stretch;
   justify-content: space-between;
   gap: 1.5rem;
@@ -986,6 +987,6 @@ a.button {
   padding: 0.75rem 1rem;
   min-height:0;
   margin-bottom: 1.5rem;
- flex: 1;
+  flex: 1;
   overflow: hidden;
 }
