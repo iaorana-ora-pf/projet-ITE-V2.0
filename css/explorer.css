@@ -11,15 +11,61 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-/* Espacement vertical entre chaque section de filtre */
-.side-scrollable-content > * {
-  margin-bottom: 1.5rem;
+/************************** Panneau latéral *************************/
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 340px;
+  background: url("../images/accueil.png") no-repeat center center;
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 100;
 }
-
-.side-scrollable-content > *:last-child {
-  margin-bottom: 0.3rem;
+.side-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);  /* ou rgba(0,0,0,.2) si tu veux sombre */
+  z-index: 0;
 }
-
+.side-panel .icon-btn {
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--main-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.title-3 {
+  text-align: left;
+  font-size: 1.3rem;
+  color: var(--main-green);
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+.title-4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--dark-text);
+  text-align: left;
+}
 .side-scrollable-content {
   flex: 1;
   overflow-y: auto;
@@ -27,6 +73,80 @@ body {
   padding: 2rem 1.5rem 1rem;
   box-sizing: border-box;
 }
+/* Espacement vertical entre chaque section de filtre */
+.side-scrollable-content > * {
+  margin-bottom: 1.5rem;
+}
+.side-scrollable-content > *:last-child {
+  margin-bottom: 0.3rem;
+}
+
+.dropdown-checkbox, .search-box {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  max-width: 340px;
+}
+.dropdown-checkbox div,
+.search-box textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 60px;
+  padding: 8px; /* ou 10px, choisis */
+  font-size: 0.9rem;
+  overflow-y: auto;
+}
+
+.search-box textarea {
+  resize: none;
+  padding: 8px 12px;
+  font-size: 1rem;
+  height: 45px;         /* ← Réduction ici */
+  min-height: 40px;     /* ← Sécurité */
+  line-height: 1.3;
+  font-family: inherit;
+}
+.search-box textarea::placeholder {
+  color: #1e2124;
+  font-size: 0.9rem;
+  opacity:0.8;
+}
+
+#active-filters-section {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  max-height: 120px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+#active-filters-section h4,
+.search-box h4 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: var(--dark-text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .info-modal-content,
 .keyword-modal-content {
   width: 400px;                    /* ✅ plus étroit */
@@ -79,25 +199,7 @@ body {
 .help-modal-content {
   background-color: white;
 }
-#active-filters-section {
-  min-height: 3rem; /* Réserve une hauteur même vide */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: opacity 0.3s ease;
-  max-height: 120px; /* par exemple */
-  overflow-y: auto;
-  max-width: 100%;
-  overflow-x: hidden;
-  background: white;                  /* ✅ fond blanc */
-  border: 1px solid #ccc;             /* ✅ bordure douce */
-  border-radius: 6px;
-  padding: 1rem;                      /* ✅ espace intérieur */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
 
-#active-filters-section.empty {
-  opacity: 0.3;
-}
 
 .timeline-wrapper {
   display: flex;
@@ -134,22 +236,13 @@ body {
  overflow-x: hidden;
 }
 
-.title-3 {
-  text-align: left;
-  font-size: 1.3rem;
-  color: var(--main-green);
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-}
+
 
 .title-3:empty,
 #event-count-text:empty {
   display: none;
 }
 
-.title-3.inline-icon {
-  margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
-}
 
 #event-count-text {
   text-align: center;
@@ -169,20 +262,7 @@ body {
   font-weight: 600;
 }
 
-.title-4 {
-  text-align: left;
-  font-size: 1.1rem;
-  color: var(--dark-text);
-  margin-top: 0.6rem;
-  margin-bottom: 0.25rem;
-}
-.title-4.inline-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 0.5rem; /* au lieu de 40px ! */
-  margin-top: 0.5rem;
-}
+
 .centered-button {
   display: block;
   margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
@@ -193,12 +273,7 @@ body {
   display: none !important;
 }
 
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 300px;
-  display: block;
-  min-width: 280px;
-}
+
 
 /* Modale d’info */
 
@@ -245,43 +320,10 @@ body {
   text-decoration: none;
 }
 
-.dropdown-checkbox, .search-box {
-  flex: 1 1 200px;
-  display: flex;
-  flex-direction: column;
-}
 
-.dropdown-checkbox div,
-.search-box textarea {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  height: 60px;                /* ✅ hauteur réduite */
-  padding: 8px;
-  font-size: 0.9rem;
-  overflow-y: auto;
-}
 
-.dropdown-checkbox div {
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
 
-.search-box textarea {
-  resize: none;
-  padding: 8px 12px;
-  font-size: 1rem;
-  height: 45px;         /* ← Réduction ici */
-  min-height: 40px;     /* ← Sécurité */
-  line-height: 1.3;
-}
 
-.search-box textarea::placeholder {
-  color: #1e2124;
-  font-size: 0.9rem;
-  opacity:0.8;
-}
 
 .remove-badge {
   margin-left: 0.5rem;
@@ -353,23 +395,7 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
-.side-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 340px;
-  background: url("../images/accueil.png") no-repeat center center;
-  background-size: cover;
-  backdrop-filter: blur(2px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  z-index: 100;
-}
+
 
 .side-footer {
   font-size: 0.75rem;
@@ -379,19 +405,7 @@ body {
   flex-shrink: 0;
 }
 
-.side-panel .icon-btn {
-  width: 44px;
-  height: 44px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--main-green);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-}
+
 
 .tooltip-floating {
   position: absolute;
@@ -406,13 +420,7 @@ body {
   z-index: 9999;
   margin-top: 8px;
 }
-.side-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.85);  /* ou rgba(0,0,0,.2) si tu veux sombre */
-  z-index: 0;
-}
+
 
 .side-scrollable-content,
 .side-footer {
