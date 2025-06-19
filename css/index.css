@@ -12,22 +12,21 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 /* === Mise en page principale === */
 .welcome-layout {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 5vh auto;
+  width: 100%;
+  height: 100vh;
 }
 
 /* === Colonne gauche : Image === */
 .welcome-image {
   flex: 1;
-  background-color: #f0f0f0;
+  height: 100%;
 }
 
 .welcome-image img {
@@ -39,25 +38,31 @@ body {
 /* === Colonne droite : Contenu === */
 .welcome-content {
   flex: 1;
-  padding: 3rem 2rem;
-  color: white;
+  padding: 4rem 3rem;
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .welcome-content h1 {
-  color: white;
-  text-align: center;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .event-count-highlight {
-  color: white;
-  text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
 /* === Boutons === */
@@ -66,29 +71,28 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .welcome-btn {
-  background-color: white;
-  color: var(--main-green);
+  background-color: black;
+  color: white;
   text-decoration: none;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   transition: background-color 0.3s ease;
-  font-weight: bold;
 }
 
 .welcome-btn:hover {
-  background-color: var(--light-bg);
+  background-color: #333;
 }
 
 .welcome-btn i {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 /* === Responsive === */
@@ -98,12 +102,11 @@ body {
   }
 
   .welcome-image {
-    height: 200px;
+    height: 40vh;
   }
 
   .welcome-content {
     padding: 2rem 1.5rem;
-    text-align: center;
   }
 
   .welcome-btn {
