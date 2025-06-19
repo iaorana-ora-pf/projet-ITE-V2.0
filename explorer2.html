@@ -19,29 +19,28 @@
 </header>
 
 
-  <!-- === SECTION DES FILTRES === -->
+ <!-- === SECTION DES FILTRES === -->
 <section class="filters-section">
   <h2 class="title-3">Filtres</h2>
 
-  <!-- Ligne contenant les 3 types de filtres -->
   <div class="filters-row">
 
     <!-- ✅ Bloc Catégories -->
     <div class="dropdown-checkbox">
-      <h4 class="title-4 inline-icon">
-        Catégories
+      <div class="filter-label">
+        <h4 class="title-4">Catégories</h4>
         <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
-      </h4>
-      <div id="categoryDropdown"></div>
+      </div>
+      <div id="categoryDropdown" class="scrollable-box"></div>
     </div>
 
     <!-- ✅ Bloc Mots-clés -->
     <div class="dropdown-checkbox">
-      <h4 class="title-4 inline-icon">
-        Mots-clés
+      <div class="filter-label">
+        <h4 class="title-4">Mots-clés</h4>
         <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
-      </h4>
-      <div id="keywordDropdown"></div>
+      </div>
+      <div id="keywordDropdown" class="scrollable-box"></div>
     </div>
 
     <!-- ✅ Bloc Recherche -->
@@ -49,6 +48,7 @@
       <h4 class="title-4">Chercher dans tous les champs</h4>
       <textarea id="searchInput" placeholder="Tapez le mot recherché" oninput="updateTimeline()"></textarea>
     </div>
+
   </div>
 
   <!-- ✅ Filtres sélectionnés -->
