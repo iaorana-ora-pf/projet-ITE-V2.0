@@ -60,10 +60,9 @@ h4 {
 }
 .centered-button {
   display: block;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 0 auto; /* top right bottom left */
   text-align: center;
 }
-
 /************************** Panneau latéral *************************/
 .side-panel {
   position: fixed;
