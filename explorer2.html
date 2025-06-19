@@ -12,14 +12,13 @@
  </head>
  <body>
 
-  
+  <div class="explorer-layout"> <!-- nouveau conteneur -->
   <!-- === Bandeau supérieur avec le titre principal === -->
-<header class="explorer-header">
-  <h1>Explorer les évènements </h1>
-</header>
 
 
- <!-- === SECTION DES FILTRES === -->
+ <!-- === SIDEBAR DE FILTRES === -->
+ <aside class="filters-sidebar" id="filtersSidebar">
+  
 <section class="filters-section">
   <h2 class="title-3">Filtres</h2>
 
@@ -85,7 +84,9 @@
   <!-- ✅ Contenu principal -->
   <main class="main-content">
    <div class="container timeline-wrapper">
-   
+   <header class="explorer-header">
+  <h1>Explorer les évènements </h1>
+</header>
     <!-- Zone pour afficher le nombre d’événements -->
     <div id="event-count-text">
     </div>
