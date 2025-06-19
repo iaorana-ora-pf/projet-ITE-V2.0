@@ -141,6 +141,18 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
   line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
 }
+.info-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 #active-filters-section {
   min-height: 3rem; /* Réserve une hauteur même vide */
   margin-top: 1rem;
@@ -456,11 +468,12 @@ a.button {
 }
 .filter-badge {
   display: inline-block;
-  background-color: #d0e9e9;
+  background-color: white;
+  border: 1px solid #ccc;
   color: var(--dark-text);
   padding: 0.4rem 0.75rem;
   margin: 0.3rem;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 500;
 }
