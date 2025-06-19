@@ -66,6 +66,7 @@ body {
   margin-bottom: 2rem;
   color: var(--main-green);
   font-style: bold;
+  text-align: center;
   flex-shrink: 1;
 }
 
