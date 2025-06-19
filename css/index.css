@@ -1,10 +1,10 @@
 :root {
-  --main-green: #36a7c3;
-  --hover-green: #4f98aa;
-  --link-green: #2a9d8f;
+  --main-green: #048B9A;
+  --hover-green: #02616B;
+  --link-green: #048B9A;
   --light-bg: #EDE7E3;
   --neutral-text: #5F5F5F;
-  --dark-text: #363B40;
+  --dark-text: #1e2124;
 }
 
 body {
