@@ -22,3 +22,39 @@ body {
   color: var(--dark-text);
   overflow: hidden;
 }
+/* === HEADER PRINCIPAL DE LA PAGE EXPLORATEUR === */
+.explorer-header {
+  background-color: var(--main-green); /* Fond teal / bleu-vert ITE */
+  color: white;                        /* Texte blanc pour contraste */
+  padding: 1.5rem;                     /* Espacement interne suffisant */
+  text-align: center;                 /* Centrage horizontal du titre */
+}
+
+/* Style du titre H1 dans le header */
+.explorer-header h1 {
+  margin: 0;                          /* Supprime marge par défaut */
+  font-size: 2rem;                    /* Taille confortable */
+  font-weight: 600;                   /* Gras modéré pour lisibilité */
+}
+
+/* === BOUTON FLOTTANT EN BAS À DROITE === */
+.floating-home-button {
+  position: fixed;              /* Fixé dans la fenêtre */
+  bottom: 1.5rem;               /* Espacement depuis le bas */
+  right: 1.5rem;                /* Espacement depuis la droite */
+  background-color: var(--main-green);  /* Couleur ITE */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;          /* Style arrondi élégant */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;                /* Au-dessus des autres éléments */
+  transition: background-color 0.3s ease;
+}
+
+/* Hover du bouton */
+.floating-home-button:hover {
+  background-color: var(--hover-green); /* Teinte foncée au survol */
+}
