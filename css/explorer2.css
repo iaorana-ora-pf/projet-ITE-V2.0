@@ -126,3 +126,40 @@ body {
 .centered-button:hover {
   background-color: var(--hover-green);
 }
+/* === STRUCTURE 2 COLONNES (sidebar + contenu) === */
+.explorer-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* === SIDEBAR À GAUCHE (Filtres) === */
+.filters-sidebar {
+  width: 320px;
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+/* === CONTENU PRINCIPAL (frise + fiche) === */
+.explorer-main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: var(--bg-white);
+}
+
+/* === FRISE === */
+.timeline {
+  border-left: 3px solid var(--main-green);
+  padding-left: 2rem;
+}
+
+/* === FICHE DÉTAILS === */
+.sidebar-details {
+  margin-top: 2rem;
+  background: var(--light-bg);
+  padding: 1rem;
+  border-radius: 10px;
+}
