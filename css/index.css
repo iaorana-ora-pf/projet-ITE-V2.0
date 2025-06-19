@@ -1,0 +1,115 @@
+:root {
+  --main-green: #166F76;
+  --hover-green: #128c8c;
+  --link-green: #2a9d8f;
+  --light-bg: #EDE7E3;
+  --neutral-text: #5F5F5F;
+  --dark-text: #363B40;
+}
+
+body {
+  background-color: #166F76;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ Fenêtre flottante d’accueil */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/tiare.png') repeat center center, #007b7f;
+  background-size: 180px;
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 3rem;
+  max-width: 900px;
+  width: 90%;
+  border-radius: 1.5rem;
+  text-align: justify;
+  margin: auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  animation: popupAnimation 0.5s ease-out;
+}
+
+.popup-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #166F76;
+  text-align: center;
+}
+
+.event-count-highlight {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #166F76;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+}
+
+.popup-description {
+  font-size: 1rem;
+  color: #363B40;
+  text-align: justify;
+}
+
+.popup-content .button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.popup-content a {
+  text-decoration: none;
+  flex: 1 1 220px;
+  max-width: 250px;
+}
+
+/* ✅ Boutons uniformes */
+.popup-btn {
+  background-color: #007b7f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-btn:hover {
+  background-color: #005f63;
+}
+
+.popup.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Animation */
+@keyframes popupAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
