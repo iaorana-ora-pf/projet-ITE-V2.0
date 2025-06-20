@@ -1,73 +1,71 @@
-/* ============================
-   1. GÉNÉRAL
-============================ */
+/* ===================== */
+/*        VARIABLES       */
+/* ===================== */
 :root {
   --main-green: #048B9A;
   --hover-green: #02616B;
-  --orange: orange;
+  --link-green: #048B9A;
+  --light-bg: #EDE7E3;
+  --neutral-text: #5F5F5F;
   --dark-text: #1e2124;
-  --gray-border: #ccc;
+  --highlight-orange: orange;
+  --sidebar-width: 340px;
 }
 
+/* ===================== */
+/*        GLOBALS         */
+/* ===================== */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   background-color: white;
-  font-size: 0.9rem;
+  color: var(--dark-text);
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+}
+
+h2, h3 {
+  font-weight: bold;
   color: var(--dark-text);
 }
 
 h2 {
   font-size: 1.4rem;
-  color: var(--main-green);
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin: 30px 0 10px;
 }
 
 h3 {
   font-size: 0.9rem;
-  font-weight: bold;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin: 30px 0 8px;
 }
 
-/* ============================
-   2. MISE EN PAGE GÉNÉRALE
-============================ */
-.container {
-  display: flex;
-  min-height: 100vh;
-  margin-left: 340px; /* espace réservé à la sidebar */
-}
-
-/* ============================
-   3. BARRE LATÉRALE
-============================ */
+/* ===================== */
+/*      SIDEBAR           */
+/* ===================== */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 340px;
+  width: var(--sidebar-width);
   height: 100vh;
-  padding: 20px;
-  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
-              url('../images/accueil.png') no-repeat center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
   background-size: cover;
+  padding: 20px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  font-size: 0.9rem;
 }
 
-/* ============================
-   4. MODULE : FILTRER & TRIER
-============================ */
-
-/* 4.1 Tri */
+/* Tri */
 .sort-container label {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   cursor: pointer;
 }
 
@@ -75,149 +73,117 @@ h3 {
   appearance: none;
   width: 18px;
   height: 18px;
-  border: 2px solid #666;
   border-radius: 50%;
-  margin-right: 8px;
-  background-color: transparent;
-  transition: background-color 0.2s;
+  border: 2px solid #666;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .sort-container input[type="radio"]:checked {
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: var(--highlight-orange);
+  border-color: var(--highlight-orange);
 }
 
 .sort-container input[type="radio"]:checked + span {
   font-weight: bold;
 }
 
-/* 4.2 Catégories */
+/* Catégories */
 .category-checkbox-group {
-  padding: 10px 0;
+  padding-left: 12px;
+  margin-bottom: 20px;
 }
 
-.category-checkbox-group label {
+.cat-check {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  cursor: pointer;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
-.category-checkbox-group input[type="checkbox"] {
+.cat-check input[type="checkbox"] {
   appearance: none;
   width: 18px;
   height: 18px;
   border: 2px solid #666;
   border-radius: 4px;
-  margin-right: 8px;
+  cursor: pointer;
   background-color: transparent;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
-.category-checkbox-group input[type="checkbox"]:checked {
-  background-color: var(--orange);
-  border-color: var(--orange);
+.cat-check input[type="checkbox"]:checked {
+  background-color: var(--highlight-orange);
+  border-color: var(--highlight-orange);
 }
 
-.category-checkbox-group label span {
-  flex-grow: 1;
-}
-
-.category-checkbox-group label.selected span {
+.cat-check.selected span {
   font-weight: bold;
 }
 
-.category-checkbox-group i {
-  font-size: 1rem;
-  margin-left: 6px;
+.cat-check span {
+  line-height: 1.2;
 }
 
-/* 4.3 Recherche */
+.cat-check i {
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+/* Info bouton */
+#category-info-btn {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Barre de recherche */
+.search-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
 .search-bar {
   width: 100%;
   padding: 8px;
-  margin-top: 10px;
   font-size: 0.9rem;
-  border: 1px solid var(--gray-border);
+  border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box;
+  margin-top: 6px;
 }
 
-.search-bar:focus {
-  outline: none;
-  border-color: var(--main-green);
-  box-shadow: 0 0 0 2px rgba(4, 139, 154, 0.2);
-}
-
-/* ============================
-   5. MODAL INFO
-============================ */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
-  font-size: 1rem;
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.modal-content h4 {
-  color: var(--main-green);
+/* Réinitialiser */
+.reset-btn {
   margin-top: 20px;
-}
-
-.modal-content a.fesp-link {
-  color: var(--main-green);
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.modal-content a.fesp-link:hover {
-  color: var(--hover-green);
-}
-
-/* bouton fermeture modal */
-.close {
-  float: right;
-  font-size: 1.4rem;
+  padding: 8px 10px;
+  width: 100%;
+  font-size: 0.9rem;
+  background-color: var(--main-green);
+  color: white;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-/* classe dynamique JS */
-.modal.show {
-  display: flex;
+.reset-btn:hover {
+  background-color: var(--hover-green);
 }
 
-/* ============================
-   6. TIMELINE
-============================ */
+/* ===================== */
+/*        TIMELINE        */
+/* ===================== */
 .timeline {
   flex: 1;
-  padding: 50px 60px 50px 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 50px 60px;
   position: relative;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 50%;
   top: 0;
+  left: 50%;
   transform: translateX(-50%);
   width: 4px;
   height: 100%;
@@ -227,12 +193,16 @@ h3 {
 .event {
   position: relative;
   width: 45%;
-  padding: 20px;
   background: white;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+}
+
+.event:hover {
+  transform: scale(1.02);
 }
 
 .event.left {
@@ -265,20 +235,71 @@ h3 {
   border-right-color: white;
 }
 
-.event:hover {
-  transform: scale(1.02);
-}
-
 .year {
   font-weight: bold;
   color: #5548e1;
   font-size: 1.1em;
-  margin-bottom: 5px;
 }
 
-/* ============================
-   7. RESPONSIVE
-============================ */
+/* ===================== */
+/*        MODAL           */
+/* ===================== */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  color: var(--dark-text);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content h4 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: var(--main-green);
+}
+
+.close {
+  float: right;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--dark-text);
+}
+
+.modal-content a.fesp-link {
+  color: var(--main-green);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.modal-content a.fesp-link:hover {
+  color: var(--hover-green);
+}
+
+/* ===================== */
+/*       RESPONSIVE       */
+/* ===================== */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -286,8 +307,8 @@ h3 {
   }
 
   .sidebar {
-    position: relative;
     width: 100%;
+    position: relative;
     height: auto;
   }
 
