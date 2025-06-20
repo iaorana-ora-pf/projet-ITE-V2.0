@@ -10,56 +10,60 @@
 <body>
   <div class="container">
     <aside class="sidebar" id="sidebar">
-  <h2>Filtrer et trier</h2>
-  
-  <div class="sort-container">
-  <h3>Trier du :</h3>
-  <label class="sort-option">
-  <input type="radio" name="sortOrder" value="desc" checked>
-  <span>Plus récent → Plus ancien</span>
-</label>
-<label class="sort-option">
-  <input type="radio" name="sortOrder" value="asc">
-  <span>Plus ancien → Plus récent</span>
-</label>
+      <h2 style="margin-top: 30px;">Filtrer et trier</h2>
 
-</div>  
-      
-<h3 style="display: flex; align-items: center; gap: 8px;">
-  Catégories
-  <i class="fas fa-circle-info" id="category-info-btn" title="À propos des catégories" style="color: #ccc; cursor: pointer;"></i>
-</h3>
+      <!-- TRI PAR ORDRE -->
+      <div class="sort-container">
+        <h3>Trier du :</h3>
+        <label class="sort-option">
+          <input type="radio" name="sortOrder" value="desc" checked>
+          <span>Plus récent → Plus ancien</span>
+        </label>
+        <label class="sort-option">
+          <input type="radio" name="sortOrder" value="asc">
+          <span>Plus ancien → Plus récent</span>
+        </label>
+      </div>
 
-<div class="category-checkbox-group" id="categoryCheckboxGroup">
-  <!-- cases à cocher injectées via JS -->
-</div>
-          
+      <!-- CATÉGORIES -->
+      <h3 style="display: flex; align-items: center; gap: 8px;">
+        Catégories
+        <i class="fas fa-circle-info" id="category-info-btn" title="À propos des catégories" style="color: #ccc; cursor: pointer;"></i>
+      </h3>
+
+      <div class="category-checkbox-group" id="categoryCheckboxGroup">
+        <!-- Cases à cocher injectées dynamiquement via JS -->
+      </div>
     </aside>
+
+    <!-- TIMELINE -->
     <main class="timeline" id="timeline">
-  <!-- JS injectera ici les événements -->
-</main>
+      <!-- JS injectera ici les événements -->
+    </main>
   </div>
 
-  <script src="./js/explorer2.js"></script>
-
-  <!-- Modal -->
-<div id="category-modal" class="modal hidden">
-  <div class="modal-content">
-    <span id="close-modal" class="close">&times;</span>
-    <h4><strong>À propos des catégories</strong></h4>
-    <p>
-      Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank">
-      Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :</p>
+  <!-- MODAL INFO CATÉGORIES -->
+  <div id="category-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h4><strong>À propos des catégories</strong></h4>
+      <p>
+        Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank" class="fesp-link">
+        Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :
+      </p>
       <ul>
         <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
         <li><strong>Données surveillance et recherche</strong> : production, analyse et utilisation de l'information sanitaire</li>
         <li><strong>Promotion de la santé et prévention</strong> : actions comportementales, sociales et populationnelles</li>
         <li><strong>Protection sanitaire et gestion des risques</strong> : réponse aux menaces sanitaires, environnementales ou réglementaires</li>
         <li><strong>Accès aux services et aux moyens</strong> : ressources humaines, infrastructures, technologies, accès aux soins</li>
-        </ul>
-        <p>La catégorie <strong>"Contexte"</strong> réunit les événements ayant un impact indirect sur la santé publique.<br><br>  
-         Vous pouvez sélectionner plusieurs options dans la liste, mais elles seront traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
+      </ul>
+      <p>La catégorie <strong>"Contexte"</strong> réunit les événements ayant un impact indirect sur la santé publique.<br><br>  
+      Vous pouvez sélectionner plusieurs options dans la liste, mais elles seront traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
+    </div>
   </div>
-</div>
+
+  <!-- JS -->
+  <script src="./js/explorer2.js"></script>
 </body>
 </html>
