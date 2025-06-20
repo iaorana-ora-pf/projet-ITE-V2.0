@@ -124,9 +124,14 @@
   border-radius: 6px;
 }
 .dropdown-checkbox div {
-  padding: 10px;
+  max-height: 150px;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
   font-size: 0.9rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 /* 📝 Zone de texte de recherche */
