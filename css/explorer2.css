@@ -113,6 +113,8 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
+  gap: 10px; /* ✅ espace uniforme entre checkbox, icône et texte */
+  font-size: 0.9rem;
   color: #1e2124; /* assure texte noir dans les labels */
 }
 
