@@ -11,6 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
  </head>
+ 
  <body>
  
   <!-------------------- ✅ Barre latérale ----------------------------------------->
@@ -21,11 +22,11 @@
 
      <!-- Trier par -->
    <div class="filter-box">
-     <h4 class="box-title">Trier par :</h4>
-       <select class="sort-select">
-        <option value="asc">Chronologique</option>
-        <option value="desc">Anti-chronologique</option>
-      </select>
+     <h4 class="box-title">Trier par ordre :</h4>
+       <select id="sortOrder" class="sort-select" onchange="updateTimeline()">
+          <option value="asc">Chronologique</option>
+          <option value="desc">Anti-chronologique</option>
+          </select>
    </div>
     
     <!-- catégorie-->
@@ -192,5 +193,9 @@
   </main>
   <script src="js/explorer.js">
   </script>
+  <!-- 🏠 Bouton flottant retour accueil -->
+<a href="index.html" class="floating-home-btn" title="Retour à l’accueil">
+  <i class="fas fa-home"></i>
+</a>
  </body>
 </html>
