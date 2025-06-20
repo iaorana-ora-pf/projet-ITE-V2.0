@@ -70,6 +70,7 @@ h3 {
   overflow-y: auto;
   padding: 20px 20px 0 20px; /* top right bottom left */
   flex-grow: 1;
+  box-sizing: border-box; 
 }
 .sidebar::-webkit-scrollbar {
   width: 6px;
