@@ -101,10 +101,31 @@ body {
   display: inline-block;
   margin-top: 2px; /* ajustable pour affiner le centrage */
 }
+/* 🟠 Commun à radio et checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 8px;
+  align-self: center;
+}
+
+/* Pour bien centrer les lignes */
 .sort-option,
 .cat-check {
   display: flex;
   align-items: center;
+  line-height: 1.4;
+  gap: 8px;
+}
+/* Réduire le saut visuel entre lignes */
+.sort-option span,
+.cat-check span {
+  display: inline-block;
+  line-height: 1;
+  padding-top: 1px;
 }
 .category-btn {
   display: block;
