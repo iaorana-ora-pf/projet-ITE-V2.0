@@ -2,41 +2,21 @@ let activeCategories = [];
 let eventsData = [];
 
 const categoryInfo = {
-  
-    "Accès": {
-    color: "#2a9d8f",
-    icon: "fa-hospital"
-  },
-  "Contexte": {
-    color: "#6c757d",
-    icon: "fa-landmark"
-  },
-  "Données et recherche": {
-    color: "#4b0082",
-    icon: "fa-database"
-  },
-  "Gouvernance et pilotage": {
-    color: "#007b7f",
-    icon: "fa-scale-balanced"
-  },
-  "Promotion et prévention": {
-    color: "#e76f51",
-    icon: "fa-heart-pulse"
-  },
-  "Protection et gestion des risques": {
-    color: "#f4a261",
-    icon: "fa-shield-alt"
-  }
+  "Accès": { color: "#2a9d8f", icon: "fa-hospital" },
+  "Contexte": { color: "#6c757d", icon: "fa-landmark" },
+  "Données et recherche": { color: "#4b0082", icon: "fa-database" },
+  "Gouvernance et pilotage": { color: "#007b7f", icon: "fa-scale-balanced" },
+  "Promotion et prévention": { color: "#e76f51", icon: "fa-heart-pulse" },
+  "Protection et gestion des risques": { color: "#f4a261", icon: "fa-shield-alt" }
 };
 
 fetch("data/events.json")
-  .then(response => response.json())
-.then(events => {
-  eventsData = events;
-  generateCategoryRadios(); // ✅ injecte les boutons radio
-  renderTimeline(eventsData, "desc");
-})
-  .catch(err => console.error("Erreur chargement JSON:", err));
+  .then(res => res.json())
+  .then(events => {
+    eventsData = events;
+    generateCategoryCheckboxes();
+    renderTimeline(eventsData, "desc");
+  });
 
 function renderTimeline(events, order = "desc") {
   const timeline = document.getElementById("timeline");
@@ -46,11 +26,11 @@ function renderTimeline(events, order = "desc") {
     order === "asc" ? a.year - b.year : b.year - a.year
   );
 
- const filtered = activeCategories.length
-  ? sorted.filter(event =>
-      event.categories?.some(cat => activeCategories.includes(cat))
-    )
-  : sorted;
+  const filtered = activeCategories.length
+    ? sorted.filter(event =>
+        event.categories?.some(cat => activeCategories.includes(cat))
+      )
+    : sorted;
 
   filtered.forEach(event => {
     const div = document.createElement("div");
@@ -74,7 +54,7 @@ function renderTimeline(events, order = "desc") {
   });
 }
 
-// Tri dynamique
+// Tri
 document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
   radio.addEventListener("change", () => {
     const selected = document.querySelector('input[name="sortOrder"]:checked').value;
@@ -82,60 +62,27 @@ document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Gestion de la modale "À propos des catégories"
-  const modal = document.getElementById("category-modal");
-  const openBtn = document.getElementById("category-info-btn");
-  const closeBtn = document.getElementById("close-modal");
+// ✅ Cases à cocher pour les catégories
+function generateCategoryCheckboxes() {
+  const group = document.getElementById("categoryCheckboxGroup");
+  if (!group) return;
 
-  if (openBtn && modal) {
-    openBtn.addEventListener("click", () => {
-      modal.classList.remove("hidden");
-    });
-  }
-
-  if (closeBtn && modal) {
-    closeBtn.addEventListener("click", () => {
-      modal.classList.add("hidden");
-    });
-  }
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
-    }
-  });
-});
-const categoryRadioGroup = document.getElementById("categoryRadioGroup");
-
-function generateCategoryRadios() {
-  const entries = Object.entries(categoryInfo).sort((a, b) => a[0].localeCompare(b[0]));
-
-  entries.forEach(([cat, info]) => {
+  Object.entries(categoryInfo).forEach(([cat, info]) => {
     const label = document.createElement("label");
-    label.className = "cat-radio";
+    label.className = "cat-check";
 
     label.innerHTML = `
-      <input type="radio" name="categoryFilter" value="${cat}">
-      <i class="fas ${info.icon}" style="color: ${info.color}; margin-right: 6px;"></i>
-      <span class="cat-label">${cat}</span>
+      <input type="checkbox" value="${cat}">
+      <i class="fas ${info.icon}" style="color: ${info.color};"></i>
+      <span>${cat}</span>
     `;
 
-    categoryRadioGroup.appendChild(label);
+    group.appendChild(label);
   });
 
-  // Gestion du filtrage
-  categoryRadioGroup.addEventListener("change", () => {
-    const selected = document.querySelector('input[name="categoryFilter"]:checked');
-    activeCategories = selected ? [selected.value] : [];
-    renderTimeline(eventsData, document.querySelector('input[name="sortOrder"]:checked').value);
-
-    // Mettre à jour le gras
-    document.querySelectorAll(".cat-radio").forEach(label => {
-      label.classList.remove("selected");
-    });
-    if (selected) {
-      selected.closest("label").classList.add("selected");
-    }
+  group.addEventListener("change", () => {
+    activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
+    const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
+    renderTimeline(eventsData, sortValue);
   });
 }
