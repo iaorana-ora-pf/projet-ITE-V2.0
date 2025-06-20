@@ -17,15 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(events => {
       eventsData = events;
       generateCategoryCheckboxes();
-      renderTimeline(eventsData, "desc");
+      const sortRadio = document.querySelector('input[name="sortOrder"]:checked');
+const sortValue = sortRadio ? sortRadio.value : "desc";
+renderTimeline(eventsData, sortValue);
     });
 
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
-    radio.addEventListener("change", () => {
-      const selected = document.querySelector('input[name="sortOrder"]:checked').value;
-      renderTimeline(eventsData, selected);
-    });
+  radio.addEventListener("change", () => {
+    const selected = document.querySelector('input[name="sortOrder"]:checked').value;
+    console.log("TRI choisi :", selected); // ← pour test console
+    renderTimeline(eventsData, selected);
   });
+});
 
   document.getElementById("searchInput").addEventListener("input", (e) => {
     searchQuery = e.target.value.toLowerCase().trim();
