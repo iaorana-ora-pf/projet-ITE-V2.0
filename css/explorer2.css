@@ -76,6 +76,9 @@ body {
   width: 16px;
   height: 16px;
 }
+.sort-option input[type="radio"]:checked + span {
+  font-weight: bold;
+}
 .category-btn {
   display: block;
   width: 90%;
