@@ -24,14 +24,16 @@ body {
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
+   position: fixed;
   top: 0;
   left: 0;
   width: 340px;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/accueil.png') no-repeat center center;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url('../images/accueil.png') no-repeat center center;
   background-size: cover;
-  color: white;
+  color: #333;
   padding: 20px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
