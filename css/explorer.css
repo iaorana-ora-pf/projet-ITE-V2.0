@@ -59,9 +59,10 @@ h4 {
   background-color: var(--hover-green);
 }
 .centered-button {
-  display: block;
-  margin: 2rem auto 0 auto; /* top right bottom left */
+   display: block;
+  margin: 3rem auto 2rem auto; /* ↑ top: 3rem, bottom: 2rem */
   text-align: center;
+}
 }
 /************************** Panneau latéral *************************/
 .side-panel {
