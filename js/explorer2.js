@@ -1,5 +1,6 @@
 let activeCategories = [];
 let eventsData = [];
+let searchQuery = "";
 
 const categoryInfo = {
   "Accès": { color: "#2a9d8f", icon: "fa-hospital" },
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderTimeline(eventsData, "desc");
     });
 
-  // Gestion du tri par radio
+  // Tri par date
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
     radio.addEventListener("change", () => {
       const selected = document.querySelector('input[name="sortOrder"]:checked').value;
@@ -27,21 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Gestion de la modale
+  // Recherche
+  document.getElementById("searchInput").addEventListener("input", (e) => {
+    searchQuery = e.target.value.toLowerCase().trim();
+    const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
+    renderTimeline(eventsData, sortValue);
+  });
+
+  // Modal
   const modal = document.getElementById("category-modal");
   const openBtn = document.getElementById("category-info-btn");
   const closeBtn = document.getElementById("close-modal");
 
-  if (openBtn && modal) {
-    openBtn.addEventListener("click", () => modal.classList.remove("hidden"));
-  }
-  if (closeBtn && modal) {
-    closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
-  }
+  if (openBtn && modal) openBtn.addEventListener("click", () => modal.classList.remove("hidden"));
+  if (closeBtn && modal) closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
   window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
-    }
+    if (e.target === modal) modal.classList.add("hidden");
   });
 });
 
@@ -53,11 +55,21 @@ function renderTimeline(events, order = "desc") {
     order === "asc" ? a.year - b.year : b.year - a.year
   );
 
-  const filtered = activeCategories.length
-    ? sorted.filter(event =>
-        event.categories?.some(cat => activeCategories.includes(cat))
-      )
-    : sorted;
+  const filtered = sorted.filter(event => {
+    const matchesCategory = activeCategories.length === 0 ||
+      event.categories?.some(cat => activeCategories.includes(cat));
+
+    const searchableFields = [
+      event.title,
+      event.shortDescription,
+      ...(event.categories || []),
+      ...(event.keywords || [])
+    ].join(" ").toLowerCase();
+
+    const matchesSearch = searchableFields.includes(searchQuery);
+
+    return matchesCategory && matchesSearch;
+  });
 
   filtered.forEach(event => {
     const div = document.createElement("div");
@@ -88,13 +100,11 @@ function generateCategoryCheckboxes() {
   Object.entries(categoryInfo).forEach(([cat, info]) => {
     const label = document.createElement("label");
     label.className = "cat-check";
-
-   label.innerHTML = `
-  <input type="checkbox" value="${cat}">
-  <span>${cat}</span>
-  <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 6px;"></i>
-`;
-
+    label.innerHTML = `
+      <input type="checkbox" value="${cat}">
+      <span>${cat}</span>
+      <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 6px;"></i>
+    `;
     group.appendChild(label);
   });
 
@@ -103,7 +113,6 @@ function generateCategoryCheckboxes() {
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
 
-    // Mise à jour visuelle des éléments cochés
     document.querySelectorAll(".cat-check").forEach(label => {
       const input = label.querySelector("input");
       if (input.checked) {
