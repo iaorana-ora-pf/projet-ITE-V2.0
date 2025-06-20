@@ -48,16 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderTimeline(events, order = "desc") {
-  document.getElementById("timeline-count").textContent = `La frise contient ${events.length} événements`;
-
   const timeline = document.getElementById("timeline");
   timeline.innerHTML = "";
-
-  // Texte en haut
-  const countText = document.createElement("div");
-  countText.classList.add("event-count");
-  countText.textContent = `La frise contient ${events.length} événements`;
-  timeline.appendChild(countText);
 
   const sorted = [...events].sort((a, b) =>
     order === "asc" ? a.year - b.year : b.year - a.year
@@ -69,15 +61,12 @@ function renderTimeline(events, order = "desc") {
 
     const searchableFields = [
       event.title,
-      event.shortDescription,
       ...(event.categories || []),
       ...(event.keywords || []),
       event.year.toString()
     ].join(" ").toLowerCase();
 
-    const matchesSearch = searchableFields.includes(searchQuery);
-
-    return matchesCategory && matchesSearch;
+    return matchesCategory && searchableFields.includes(searchQuery);
   });
 
   // Ligne centrale
@@ -85,29 +74,46 @@ function renderTimeline(events, order = "desc") {
   line.classList.add("timeline-line");
   timeline.appendChild(line);
 
-  filtered.forEach(event => {
-    const div = document.createElement("div");
-    const year = parseInt(event.year, 10);
-    div.classList.add("event", year % 2 !== 0 ? "left" : "right");
-
-    const catIcons = event.categories?.map(cat => {
-      const info = categoryInfo[cat];
-      return info
-        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
-        : '';
-    }).join("");
-
-    div.innerHTML = `
-      <div class="event-dot"></div>
-      <div class="year">${event.year}</div>
-      <div class="title"><a href="details/${event.id}.html">${event.title}</a></div>
-      ${event.shortDescription ? `<div class="desc">${event.shortDescription}</div>` : ''}
-      <div class="categories">${catIcons}</div>
-    `;
-
-    timeline.appendChild(div);
+  const grouped = {};
+  filtered.forEach(e => {
+    if (!grouped[e.year]) grouped[e.year] = [];
+    grouped[e.year].push(e);
   });
+
+  Object.entries(grouped).forEach(([year, events]) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "year-group";
+
+    const yearTitle = document.createElement("div");
+    yearTitle.className = "year";
+    yearTitle.textContent = year;
+    wrapper.appendChild(yearTitle);
+
+    events.forEach((event, idx) => {
+      const div = document.createElement("div");
+      div.classList.add("event", idx % 2 === 0 ? "left" : "right");
+
+      const catIcons = event.categories?.map(cat => {
+        const info = categoryInfo[cat];
+        return info
+          ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
+          : '';
+      }).join("");
+
+      div.innerHTML = `
+        <div class="event-dot"></div>
+        <div class="title"><a href="details/${event.id}.html">${event.title}</a> ${catIcons}</div>
+      `;
+
+      wrapper.appendChild(div);
+    });
+
+    timeline.appendChild(wrapper);
+  });
+
+  document.getElementById("timeline-count").textContent = `La frise contient ${filtered.length} événements`;
 }
+
 
 
 
