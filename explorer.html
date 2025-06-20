@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <div class="page-layout">
+  <main class="page-layout">
 
     <!-- ✅ Zone 1 : Barre latérale -->
-    <aside class="side-panel" id="side-panel">
-      <div class="side-scrollable-content">
+    <div class="side-panel">
+    <div class="side-scrollable-content">
         <h3 class="title-3">Trier et filtrer</h3>
 
         <div class="filter-box">
@@ -57,22 +57,22 @@
       <div class="side-footer">
         © 2025 – Tous droits réservés
       </div>
-    </aside>
+    </div>
+    <div class="side-footer">© 2025 – Tous droits réservés</div>
+  </div>
 
     <!-- ✅ Zone 2 : Frise -->
-    <section class="timeline" id="timeline">
+   <div class="timeline" id="timeline">
       <div id="event-count-text"></div>
       <!-- Les événements de la frise seront injectés ici -->
-    </section>
-
+   
     <!-- ✅ Zone 3 : Fiche -->
-    <aside class="event-details" id="event-details-container">
+     <div class="event-details" id="event-details-container">
       <p style="text-align:center; font-style:italic; color:#5F5F5F;">
         Cliquez sur un événement pour accéder à sa fiche détaillée puis utilisez les flèches “◀” et “▶” pour naviguer entre les événements (filtrés).
       </p>
-    </aside>
-
   </div>
+</main>
 
   <!-- Bouton Admin -->
   <button id="admin-toggle-btn" onclick="toggleAdmin()" style="position:fixed; bottom:10px; right:10px; opacity:0.2;">🔧</button>
