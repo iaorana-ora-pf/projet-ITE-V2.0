@@ -21,25 +21,25 @@
       <h3 class="title-3">Filtrer et trier</h3>
       
       <!-- Bloc Catégories -->
-      <div class="dropdown-checkbox filter-block">
+      <div class="dropdown-checkbox">
         <h4 class="title-4">
           Catégories
           <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories"></i>
         </h4>
-        <div id="categoryDropdown" class="filter-content"></div>
+       <div id="categoryDropdown" class="filter-content scrollable"></div>
       </div>
 
       <!-- Bloc Mots-clés -->
-      <div class="dropdown-checkbox filter-block">
+      <div class="dropdown-checkbox">
         <h4 class="title-4">
           Mots-clés
           <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés"></i>
         </h4>
-        <div id="keywordDropdown" class="filter-content"></div>
+        <div id="keywordDropdown" class="filter-content scrollable"></div>
       </div>
 
       <!-- Recherche -->
-     <div class="search-box filter-block">
+    <div class="search-box">
         <h4 class="title-4">Chercher dans tous les champs</h4>
        <div class="filter-content">
         <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
