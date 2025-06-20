@@ -1,10 +1,3 @@
-/*
- Nettoyé automatiquement par CodeNinja 🥷
- Fichier : index.css
- Date : Juin 2025
- Ne pas modifier cet en-tête à la main.
-*/
-
 :root {
   --main-green: #048B9A;
   --hover-green: #02616B;
@@ -16,16 +9,144 @@
 /*-----------------------------------
  OK
 -----------------------------------*/
+.title-3 {
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--main-green);
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+.title-4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  text-align: left;
+  font-size: 1rem;
+  color: var(--dark-text);
+
+  margin: 0.5rem 0; /* top-bottom : spacing harmonisé */
+}
+/*-----------------------------------Barre latérale -----------------------------------*/
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  width: 340px; /* ou ta valeur choisie */
+  background-color: #ede7e3;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;              /* ⛔ annule tout espacement interne */
+  margin: 0;               /* ⛔ supprime les marges externes */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.side-scrollable-content {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  padding: 1rem;
+}
+.side-panel-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.side-panel,
+.main-content,
+.timeline-layout {
+  height: 100%;
+}
+.side-panel-text {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--main-green);
+}
+.side-panel-buttons {
+  display: flex;
+  flex-direction: row; /* ✅ alignement horizontal */
+  gap: 1.3rem;            /* ✅ espace entre les boutons */
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;      /* ✅ au cas où ça déborde en hauteur */
+}
+.side-panel .icon-btn {
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--main-green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.layout-with-sidebar.sidebar-hidden .side-panel {
+  display: none;
+}
+.dropdown-checkbox,
+.search-box {
+  flex: 1 1 300px;
+  display: block;
+  min-width: 280px;
+}
+.4, .search-box {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-checkbox div,
+.search-box textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  height: 100px;
+}
+.dropdown-checkbox div {
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------
 ACCUEIL Fenêtre flottante
 -----------------------------------*/
-/* Espacement vertical entre chaque section de filtre */
-.side-scrollable-content > * {
-  margin-bottom: 1.5rem;
-}
-.side-scrollable-content > *:last-child {
-  margin-bottom: 0.3rem;
-}
+
 /* Style de la fenêtre flottante */
 .popup {
   position: fixed;
@@ -190,20 +311,12 @@ ACCUEIL Fenêtre flottante
   margin-top: 0;
   margin-bottom: 3rem;
 }
-.title-3 {
-  text-align: left;
-  font-size: 1.1rem;
-  color: var(--main-green);
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-}
+
 .title-3:empty,
 #event-count-text:empty {
   display: none;
 }
-.title-3.inline-icon {
-  margin-bottom: 1rem; /* ou 1.5rem pour plus d'espace */
-}
+
 #event-count-text {
   text-align: center;
   font-size: 1.3rem;
@@ -219,17 +332,7 @@ ACCUEIL Fenêtre flottante
   color: #007b7f;
   font-weight: 600;
 }
-.title-4 {
-  text-align: left;
-  font-size: 1rem;
-  color: var(--dark-text);
-  margin-top: 0.6rem;
-  margin-bottom: 0.25rem;
-}
-.side-panel-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
+
 .side-title {
   font-size: 1.8rem;
   color: var(--main-green);
@@ -273,12 +376,7 @@ ACCUEIL Fenêtre flottante
   gap: 2rem;
   align-items: flex-start;
 }
-.dropdown-checkbox,
-.search-box {
-  flex: 1 1 300px;
-  display: block;
-  min-width: 280px;
-}
+
 /* Modale d’info */
 .info-modal {
   position: fixed;
@@ -319,13 +417,7 @@ ACCUEIL Fenêtre flottante
   opacity: 0;
   pointer-events: none;
 }
-.title-4.inline-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 0.5rem; /* au lieu de 40px ! */
-  margin-top: 0.5rem;
-}
+
 /*-----------------------------------
   STRUCTURE GÉNÉRALE
 -----------------------------------*/
@@ -443,23 +535,7 @@ a.button {
   align-items: flex-start;
   gap: 2rem;
 }
-.dropdown-checkbox, .search-box {
-  flex: 1 1 250px;
-  display: flex;
-  flex-direction: column;
-}
-.dropdown-checkbox div,
-.search-box textarea {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  height: 100px;
-}
-.dropdown-checkbox div {
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 0.9rem;
-}
+
 .search-box textarea {
   resize: none;
   padding: 8px 12px;
@@ -768,36 +844,8 @@ a.button {
   color: var(--main-green);
   margin-right: 0.5rem;
 }
-.side-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  overflow-x: hidden;
-  width: 340px; /* ou ta valeur choisie */
-  background-color: #ede7e3;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;              /* ⛔ annule tout espacement interne */
-  margin: 0;               /* ⛔ supprime les marges externes */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-  word-wrap: break-word;
-  overflow: hidden;
-}
-.side-panel,
-.main-content,
-.timeline-layout {
-  height: 100%;
-}
-.side-scrollable-content {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1rem;
-}
+
+
 .side-footer {
   font-size: 0.75rem;
   color: #888;
@@ -805,58 +853,7 @@ a.button {
   padding: 1rem;
   flex-shrink: 0;
 }
-.side-panel-text {
-  font-weight: 600;
-  font-size: 1rem;
-  text-align: center;
-  margin: 1rem 0;
-  color: var(--main-green);
-}
-.side-panel-buttons {
-  display: flex;
-  flex-direction: row; /* ✅ alignement horizontal */
-  gap: 1.3rem;            /* ✅ espace entre les boutons */
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;      /* ✅ au cas où ça déborde en hauteur */
-}
-.side-panel-separator {
-  margin: 2rem 0 1rem;
-  text-align: center;
-}
-.side-panel .icon-btn {
-  width: 44px;
-  height: 44px;
-  font-size: 1.2rem;
-  border-radius: 50%;
-  background-color: var(--main-green);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
-}
-.side-panel .contribute-btn {
-  border-radius: 6px;
-  font-size: 1rem;
-  padding: 0.5rem 0.75rem;
-  width: auto;
-  background-color: #FE9C1A;
-}
-.side-panel .contribute-btn:hover {
-  background-color: #FEBB5F;
-}
-.close-side-panel {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: none;
-  color: #888;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-}
+
 /* Bouton flottant pour rouvrir */
 .open-panel-btn {
   position: fixed;
@@ -875,9 +872,7 @@ a.button {
   display: flex;
   height: 100vh;
 }
-.layout-with-sidebar.sidebar-hidden .side-panel {
-  display: none;
-}
+
 .layout-with-sidebar.sidebar-hidden .main-content {
   margin-left: 0;
   padding-left: 1.5rem; /* ou comme tu veux */
@@ -973,12 +968,7 @@ a.button {
   cursor: pointer;
   color: #666;
 }
-.title-4-inline {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
+
 .event-details-container p,
 .event-details-container ul,
 .event-details-container li,
