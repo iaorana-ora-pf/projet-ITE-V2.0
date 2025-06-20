@@ -76,8 +76,11 @@ function renderTimeline(events, order = "desc") {
 }
 
 // Tri dynamique
-document.getElementById("sortOrder").addEventListener("change", (e) => {
-  renderTimeline(eventsData, e.target.value);
+document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
+  radio.addEventListener("change", () => {
+    const selected = document.querySelector('input[name="sortOrder"]:checked').value;
+    renderTimeline(eventsData, selected);
+  });
 });
 
 // Générer les boutons de filtre
