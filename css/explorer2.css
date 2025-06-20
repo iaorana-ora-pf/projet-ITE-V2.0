@@ -149,12 +149,14 @@ h3 {
 }
 
 .search-bar {
-  width: 100%;
+  width: 90%;                   /* ✅ Réduit la largeur */
+  max-width: 280px;             /* Limite absolue */
   padding: 8px;
   font-size: 0.9rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 6px;
+  margin-left: 0;               /* ✅ Aligne bien à gauche */
 }
 
 /* Réinitialiser */
