@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderTimeline(events, order = "desc") {
+  document.getElementById("timeline-count").textContent = `La frise contient ${events.length} événements`;
+
   const timeline = document.getElementById("timeline");
   timeline.innerHTML = "";
 
