@@ -4,23 +4,23 @@ let activeCategory = null;
 
 
 const categoryInfo = {
-  "Gouvernance et pilotage stratégique": {
+  "Gouvernance et pilotage": {
     color: "#007b7f",
     icon: "fa-scale-balanced"
   },
-  "Données surveillance et recherche": {
+  "Données et recherche": {
     color: "#4b0082",
     icon: "fa-database"
   },
-  "Promotion de la santé et prévention": {
+  "Promotion et prévention": {
     color: "#e76f51",
     icon: "fa-heart-pulse"
   },
-  "Protection sanitaire et gestion des risques": {
+  "Protection et gestion des risques": {
     color: "#f4a261",
     icon: "fa-shield-alt"
   },
-  "Accès aux services et aux moyens": {
+  "Accès": {
     color: "#2a9d8f",
     icon: "fa-hospital"
   },
