@@ -124,3 +124,26 @@ function generateCategoryCheckboxes() {
     });
   });
 }
+// Réinitialisation des filtres
+document.getElementById("resetFilters").addEventListener("click", () => {
+  // 1. Décocher toutes les cases
+  document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => {
+    cb.checked = false;
+  });
+
+  // 2. Réinitialiser la variable activeCategories
+  activeCategories = [];
+
+  // 3. Réinitialiser la recherche
+  document.getElementById("searchInput").value = "";
+  searchQuery = "";
+
+  // 4. Réinitialiser les styles visuels (si des .selected sont appliqués)
+  document.querySelectorAll(".cat-check").forEach(label => {
+    label.classList.remove("selected");
+  });
+
+  // 5. Re-render la frise avec tri actuel
+  const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
+  renderTimeline(eventsData, sortValue);
+});
