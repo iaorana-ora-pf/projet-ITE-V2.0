@@ -175,7 +175,8 @@ h3 {
 .reset-btn {
   display: block;
   margin: 30px auto 0;     /* espace au-dessus + centrage */
-  padding: 8px 12px;
+   margin-bottom: 20px;
+  *padding: 8px 12px;
   font-size: 0.9rem;
   background-color: var(--main-green);
   color: white;
