@@ -74,7 +74,7 @@ function renderTimeline(events, order = "desc") {
 
   filtered.forEach(event => {
     const div = document.createElement("div");
-    div.classList.add("event", event.year % 2 === 0 ? "left" : "right");
+    div.classList.add("event", event.year % 2 === 0 ? "right" : "left");
 
     const catIcons = event.categories?.map(cat => {
       const info = categoryInfo[cat];
