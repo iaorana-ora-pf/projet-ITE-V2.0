@@ -34,13 +34,13 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
     url('../images/accueil.png') no-repeat center center;
   background-size: cover;
-  color:#1e2124
+  color:#1e2124;
   padding: 20px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 .sidebar h2 {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 0;
   font-size: 1.4em;
   text-align: center;
@@ -77,8 +77,20 @@ body {
   font-size: 1rem;
 }
 .sort-option input[type="radio"] {
-  width: 16px;
-  height: 16px;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 6px;
+  background-color: transparent;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+.sort-option input[type="radio"]:checked {
+  background-color: orange;
+  border-color: orange;
 }
 .sort-option input[type="radio"]:checked + span {
   font-weight: bold;
@@ -95,13 +107,11 @@ body {
   text-align: left;
 }
 .category-checkbox-group {
-  max-height: 120px;
-  overflow-y: auto;
   padding: 10px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   margin-bottom: 20px;
-  padding-left: 6px; 
+  padding-left: 12px; 
 }
 .cat-check {
   display: flex;
@@ -134,20 +144,15 @@ body {
   height: 18px;
   border: 2px solid #666;
   border-radius: 4px;
-  position: relative;
   cursor: pointer;
   margin-right: 4px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
 }
 
-.cat-check input[type="checkbox"]:checked::before {
-  content: "✕";
-  position: absolute;
-  top: -2px;
-  left: 2px;
-  color: orange;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 1;
+.cat-check input[type="checkbox"]:checked {
+  background-color: orange;
+  border-color: orange;
 }
 /* Timeline styling */
 .timeline {
