@@ -241,3 +241,20 @@ body {
   cursor: pointer;
   color: #1e2124;
 }
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .timeline {
+    padding: 30px 20px;
+  }
+  .event {
+    width: 100%;
+  }
+}
