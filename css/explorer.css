@@ -89,6 +89,7 @@ h4 {
   background: rgba(255, 255, 255, 0.9);  /* ou rgba(0,0,0,.2) si tu veux sombre */
   z-index: 0;
 }
+
 .side-panel .icon-btn {
   width: 44px;
   height: 44px;
@@ -103,10 +104,11 @@ h4 {
   text-decoration: none;
 }
 .side-scrollable-content {
-  flex: 1;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.5rem 1rem;
   overflow-y: auto;
   height: 100%;
-  padding: 2rem 1.5rem 1rem;
   box-sizing: border-box;
 }
 /* Espacement vertical entre chaque section de filtre */
