@@ -25,7 +25,7 @@ body {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  font-size: 1rem; /* 🟢 Par défaut, tout le texte est en 0.9rem */
+  font-size: 0.9rem; /* 🟢 Par défaut, tout le texte est en 0.9rem */
   top: 0;
   left: 0;
   width: 340px;
@@ -42,12 +42,12 @@ body {
 .sidebar h2 {
   margin-top: 30px;
   margin-bottom: 0;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   text-align: center;
   color: #048B9A;
 }
 .sidebar h3 {
-  font-size: 1rem;       /* ✅ même taille que "Trier par ordre" */
+  font-size: 0.9rem;       /* ✅ même taille que "Trier par ordre" */
   font-weight: bold;
   margin-top: 30px;
   margin-bottom: 8px;
@@ -57,7 +57,7 @@ body {
   background: none;           /* ✅ plus de fond blanc */
   padding: 0;  
   color: #000;
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: 0;
   margin-bottom: 20px;
   box-shadow: none;
@@ -74,7 +74,7 @@ body {
 .sort-option,
 .category-checkbox-group label {
   color: #1e2124;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .sort-option input[type="radio"] {
   appearance: none;
@@ -94,6 +94,17 @@ body {
 }
 .sort-option input[type="radio"]:checked + span {
   font-weight: bold;
+}
+.sort-option input[type="radio"],
+.cat-check input[type="checkbox"] {
+  vertical-align: middle;  /* 🔄 centre sur la ligne */
+  display: inline-block;
+  margin-top: 2px; /* ajustable pour affiner le centrage */
+}
+.sort-option,
+.cat-check {
+  display: flex;
+  align-items: center;
 }
 .category-btn {
   display: block;
@@ -117,7 +128,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 8px;
   color: #1e2124;
   padding-left: 6px;
