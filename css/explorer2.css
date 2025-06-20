@@ -62,9 +62,6 @@ body {
   margin-bottom: 20px;
   box-shadow: none;
 }
-.sort-container h3 {
-  margin-bottom: 8px;
-}
 
 .sort-container select {
   width: 100%;
