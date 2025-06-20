@@ -13,47 +13,46 @@
  </head>
  <body>
  
-  <!-- ✅ Barre latérale -->
+  <!-------------------- ✅ Barre latérale ----------------------------------------->
   <div class="side-panel" id="side-panel">
    <!-- Contenu scrollable -->
    <div class="side-scrollable-content">
-    <h3 class="title-3 inline-icon">
-     Filtres
-    </h3>
-    <!-- Bloc Catégories -->
+    <h3 class="title-3"> Trier et filtrer</h3>
+  
+    <!-- catégorie-->
     <div class="dropdown-checkbox">
-     <h4 class="title-4 inline-icon">
-      Catégories
-      <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories">
-      </i>
-     </h4>
-     <div id="categoryDropdown">
-     </div>
-    </div>
+      <h4 class="title-4">
+       Catégories
+        <i class="fa-solid fa-circle-info" onclick="toggleInfoModal()" title="À propos des catégories">      </i>
+      </h4>
+     <div id="categoryDropdown"></div>
+   </div>
+    
     <!-- Bloc Mots-clés -->
     <div class="dropdown-checkbox">
-     <h4 class="title-4 inline-icon">
-      Mots-clés
-      <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés">
-      </i>
-     </h4>
-     <div id="keywordDropdown">
-     </div>
+      <h4 class="title-4">
+       Mots-clés
+        <i class="fa-solid fa-circle-info" onclick="toggleKeywordModal()" title="À propos des mots-clés">
+        </i>
+       </h4>
+      <div id="keywordDropdown"></div>
     </div>
+    
     <!-- Bloc Recherche -->
     <div class="search-box">
-     <h4 class="title-4">
-      Chercher dans tous les champs
-     </h4>
-     <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
+      <h4 class="title-4">
+       Chercher dans tous les champs
+       </h4>
+       <textarea id="searchInput" oninput="updateTimeline()" placeholder="Tapez le mot recherché"></textarea>
     </div>
+    
     <!-- Filtres sélectionnés -->
     <div id="active-filters-section">
-     <h4 class="title-4">
-      Filtres sélectionnés :
-     </h4>
-     <div id="active-filters">
-     </div>
+      <h4 class="title-4">
+        Filtres sélectionnés :
+       </h4>
+        <div id="active-filters">
+       </div>
     </div>
     <!-- Bouton réinitialiser -->
     <button class="button centered-button" onclick="resetFilters()">
