@@ -241,6 +241,16 @@ body {
   cursor: pointer;
   color: #1e2124;
 }
+.modal-content a.fesp-link {
+  color: #048B9A;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.modal-content a.fesp-link:hover {
+  color: #02616B;
+  text-decoration: underline;
+}
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
