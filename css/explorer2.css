@@ -29,28 +29,17 @@ body {
   left: 0;
   width: 340px;
   height: 100vh;
-  background: #5548e1;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/accueil.pnj') no-repeat center center;
+  background-size: cover;
   color: white;
   padding: 20px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  transition: transform 0.3s ease;
-}
-
-.sidebar.hidden {
-  transform: translateX(-100%);
 }
 .sidebar h2 {
   margin-top: 0;
   font-size: 1.4em;
-}
-.sidebar button {
-  background: transparent;
-  border: none;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 1rem;
+  text-align: center;
 }
 .categories {
   margin-top: 10px;
