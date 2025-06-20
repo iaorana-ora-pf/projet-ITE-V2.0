@@ -25,7 +25,7 @@ body {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  font-size: 0.9rem; /* 🟢 Par défaut, tout le texte est en 0.9rem */
+  font-size: 1rem; /* 🟢 Par défaut, tout le texte est en 0.9rem */
   top: 0;
   left: 0;
   width: 340px;
@@ -34,7 +34,7 @@ body {
     linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
     url('../images/accueil.png') no-repeat center center;
   background-size: cover;
-  color: #333;
+  color:#1e2124
   padding: 20px;
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
@@ -71,7 +71,11 @@ body {
   font-size: 0.9rem;
   color: #1e2124;
 }
-
+.sort-option,
+.category-checkbox-group label {
+  color: #1e2124;
+  font-size: 1rem;
+}
 .sort-option input[type="radio"] {
   width: 16px;
   height: 16px;
@@ -101,9 +105,10 @@ body {
 .cat-check {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.9rem;
+  gap: 10px;
+  font-size: 1rem;
   margin-bottom: 8px;
+  color: #1e2124;
 }
 .cat-icon {
   font-size: 18px;
@@ -118,24 +123,29 @@ body {
   display: inline-block;
   line-height: 1.2;
 }
+.cat-check.selected span {
+  font-weight: bold;
+}
 .cat-check input[type="checkbox"] {
   appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #555;
-  border-radius: 3px;
-  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #666;
+  border-radius: 4px;
   position: relative;
   cursor: pointer;
+  margin-right: 4px;
 }
 
 .cat-check input[type="checkbox"]:checked::before {
-  content: "✓";
+  content: "✕";
   position: absolute;
   top: -2px;
-  left: 3px;
-  font-size: 14px;
-  color: var(--main-green);
+  left: 2px;
+  color: orange;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
 }
 /* Timeline styling */
 .timeline {
