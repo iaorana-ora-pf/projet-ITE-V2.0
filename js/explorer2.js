@@ -23,17 +23,3 @@ fetch("data/events.json")
     });
   })
   .catch(err => console.error("Erreur chargement JSON:", err));
-
-const timeline = document.getElementById("timeline");
-
-events.forEach(event => {
-  const div = document.createElement("div");
-  div.classList.add("event");
-  div.classList.add(event.year % 2 === 0 ? "left" : "right");
-  div.innerHTML = `<div class="year">${event.year}</div><div>${event.title}</div>`;
-  timeline.appendChild(div);
-});
-
-document.getElementById("toggleSidebar").addEventListener("click", () => {
-  document.getElementById("sidebar").classList.toggle("hidden");
-});
