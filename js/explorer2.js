@@ -85,4 +85,12 @@ function generateCategoryCheckboxes() {
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
   });
+  document.querySelectorAll(".cat-check").forEach(label => {
+  const input = label.querySelector("input");
+  if (input.checked) {
+    label.classList.add("selected");
+  } else {
+    label.classList.remove("selected");
+  }
+});
 }
