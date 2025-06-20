@@ -127,15 +127,15 @@ body {
 .cat-check {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   font-size: 0.9rem;
   margin-bottom: 8px;
   color: #1e2124;
-  padding-left: 6px;
+  padding-left: 2px;
 }
 .cat-icon {
-  font-size: 14px;
-  margin-right: 6px;
+  font-size: 12px;
+  margin-right: 4px;
 }
 .cat-check i {
   flex-shrink: 0;
