@@ -13,13 +13,13 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .container {
+  display: flex; /* ✅ sidebar + timeline côte à côte */
   min-height: 100vh;
   margin-left: 340px;
-  display: block;
 }
 
 /* Sidebar */
@@ -43,7 +43,7 @@ body {
   margin-bottom: 0;
   font-size: 1.4em;
   text-align: center;
-  color: #048B9A#1e2124;
+  color: #048B9A;
 }
 .sidebar h3 {
   margin-top: 30px;
