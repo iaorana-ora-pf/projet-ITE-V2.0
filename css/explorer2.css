@@ -101,14 +101,22 @@ body {
 .cat-check {
   display: flex;
   align-items: center;
+  gap: 8px;
   font-size: 0.9rem;
-  gap: 10px;
-  margin-bottom: 6px;
-  color: #1e2124;
+  margin-bottom: 8px;
 }
 .cat-icon {
   font-size: 18px;
   margin-right: 6px;
+}
+.cat-check i {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.cat-check span {
+  display: inline-block;
+  line-height: 1.2;
 }
 .cat-radio {
   display: flex;
