@@ -69,51 +69,41 @@ function renderTimeline(events, order = "desc") {
     return matchesCategory && searchableFields.includes(searchQuery);
   });
 
+  // Affiche une seule fois le compteur
+  const countText = document.createElement("div");
+  countText.classList.add("event-count");
+  countText.textContent = `La frise contient ${filtered.length} événements`;
+  timeline.appendChild(countText);
+
   // Ligne centrale
   const line = document.createElement("div");
   line.classList.add("timeline-line");
   timeline.appendChild(line);
 
-  const grouped = {};
-  filtered.forEach(e => {
-    if (!grouped[e.year]) grouped[e.year] = [];
-    grouped[e.year].push(e);
+  filtered.forEach((event, index) => {
+    const div = document.createElement("div");
+    const isLeft = index % 2 === 0;
+    div.classList.add("event", isLeft ? "left" : "right");
+
+    const catIcons = event.categories?.map(cat => {
+      const info = categoryInfo[cat];
+      return info
+        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
+        : '';
+    }).join("");
+
+    div.innerHTML = `
+      <div class="event-dot"></div>
+      <div class="year">${event.year}</div>
+      <div class="title"><a href="details/${event.id}.html">${event.title}</a> ${catIcons}</div>
+    `;
+
+    timeline.appendChild(div);
   });
 
-  Object.entries(grouped).forEach(([year, events]) => {
-    const wrapper = document.createElement("div");
-    wrapper.className = "year-group";
-
-    const yearTitle = document.createElement("div");
-    yearTitle.className = "year";
-    yearTitle.textContent = year;
-    wrapper.appendChild(yearTitle);
-
-    events.forEach((event, idx) => {
-      const div = document.createElement("div");
-      div.classList.add("event", idx % 2 === 0 ? "left" : "right");
-
-      const catIcons = event.categories?.map(cat => {
-        const info = categoryInfo[cat];
-        return info
-          ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
-          : '';
-      }).join("");
-
-      div.innerHTML = `
-        <div class="event-dot"></div>
-        <div class="title"><a href="details/${event.id}.html">${event.title}</a> ${catIcons}</div>
-      `;
-
-      wrapper.appendChild(div);
-    });
-
-    timeline.appendChild(wrapper);
-  });
-
+  // Mise à jour du titre principal
   document.getElementById("timeline-count").textContent = `La frise contient ${filtered.length} événements`;
 }
-
 
 
 
