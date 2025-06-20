@@ -51,6 +51,12 @@ function renderTimeline(events, order = "desc") {
   const timeline = document.getElementById("timeline");
   timeline.innerHTML = "";
 
+  // Texte en haut
+  const countText = document.createElement("div");
+  countText.classList.add("event-count");
+  countText.textContent = `La frise contient ${events.length} événements`;
+  timeline.appendChild(countText);
+
   const sorted = [...events].sort((a, b) =>
     order === "asc" ? a.year - b.year : b.year - a.year
   );
@@ -72,6 +78,11 @@ function renderTimeline(events, order = "desc") {
     return matchesCategory && matchesSearch;
   });
 
+  // Ligne centrale
+  const line = document.createElement("div");
+  line.classList.add("timeline-line");
+  timeline.appendChild(line);
+
   filtered.forEach(event => {
     const div = document.createElement("div");
     const year = parseInt(event.year, 10);
@@ -85,8 +96,9 @@ function renderTimeline(events, order = "desc") {
     }).join("");
 
     div.innerHTML = `
+      <div class="event-dot"></div>
       <div class="year">${event.year}</div>
-      <div class="title">${event.title}</div>
+      <div class="title"><a href="details/${event.id}.html">${event.title}</a></div>
       ${event.shortDescription ? `<div class="desc">${event.shortDescription}</div>` : ''}
       <div class="categories">${catIcons}</div>
     `;
@@ -94,6 +106,7 @@ function renderTimeline(events, order = "desc") {
     timeline.appendChild(div);
   });
 }
+
 
 
 function generateCategoryCheckboxes() {
