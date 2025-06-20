@@ -1,5 +1,7 @@
+let activeCategories = [];
 let eventsData = [];
 let activeCategory = null;
+
 
 const categoryInfo = {
   "Gouvernance et pilotage stratégique": {
@@ -32,7 +34,7 @@ fetch("data/events.json")
   .then(response => response.json())
   .then(events => {
     eventsData = events;
-    generateCategoryFilters();
+    generateCategoryCheckboxes();
     renderTimeline(eventsData, "desc");
   })
   .catch(err => console.error("Erreur chargement JSON:", err));
@@ -45,9 +47,11 @@ function renderTimeline(events, order = "desc") {
     order === "asc" ? a.year - b.year : b.year - a.year
   );
 
-  const filtered = activeCategory
-    ? sorted.filter(event => event.categories?.includes(activeCategory))
-    : sorted;
+  const filtered = activeCategories.length
+  ? sorted.filter(event =>
+      event.categories?.some(cat => activeCategories.includes(cat))
+    )
+  : sorted;
 
   filtered.forEach(event => {
     const div = document.createElement("div");
@@ -77,24 +81,26 @@ document.getElementById("sortOrder").addEventListener("change", (e) => {
 });
 
 // Générer les boutons de filtre
-function generateCategoryFilters() {
-  const container = document.querySelector(".category-filters");
+function generateCategoryCheckboxes() {
+  const container = document.querySelector(".category-checkboxes");
   if (!container) return;
 
   Object.entries(categoryInfo).forEach(([cat, info]) => {
-    const btn = document.createElement("button");
-    btn.textContent = cat;
-    btn.className = "category-btn";
-    btn.style.backgroundColor = info.color;
-    btn.dataset.cat = cat;
-    container.appendChild(btn);
+    const label = document.createElement("label");
+    label.className = "cat-check";
+
+    label.innerHTML = `
+      <input type="checkbox" value="${cat}" />
+      <i class="fas ${info.icon}" style="color: ${info.color}; margin-right: 8px;"></i>
+      ${cat}
+    `;
+
+    container.appendChild(label);
   });
 
-  container.addEventListener("click", (e) => {
-    if (e.target.matches("button")) {
-      const selected = e.target.dataset.cat;
-      activeCategory = (activeCategory === selected) ? null : selected;
-      renderTimeline(eventsData, document.getElementById("sortOrder").value);
-    }
+  container.addEventListener("change", () => {
+    const checked = [...container.querySelectorAll("input:checked")].map(cb => cb.value);
+    activeCategories = checked;
+    renderTimeline(eventsData, document.getElementById("sortOrder").value);
   });
 }
