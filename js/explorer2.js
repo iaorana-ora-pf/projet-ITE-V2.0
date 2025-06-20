@@ -1,4 +1,3 @@
-
 let activeCategories = [];
 let eventsData = [];
 let searchQuery = "";
@@ -19,12 +18,40 @@ document.addEventListener("DOMContentLoaded", () => {
       eventsData = events;
       generateCategoryCheckboxes();
       renderTimeline(eventsData, "desc");
-       });
+    });
 
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
-  radio.addEventListener("change", () => {
-    const selected = document.querySelector('input[name="sortOrder"]:checked').value;
-    renderTimeline(eventsData, selected);
+    radio.addEventListener("change", () => {
+      const selected = document.querySelector('input[name="sortOrder"]:checked').value;
+      renderTimeline(eventsData, selected);
+    });
+  });
+
+  document.getElementById("searchInput").addEventListener("input", (e) => {
+    searchQuery = e.target.value.toLowerCase().trim();
+    const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
+    renderTimeline(eventsData, sortValue);
+  });
+
+  document.getElementById("resetFilters").addEventListener("click", () => {
+    document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => {
+      cb.checked = false;
+    });
+    activeCategories = [];
+    searchQuery = "";
+    document.getElementById("searchInput").value = "";
+    renderTimeline(eventsData, document.querySelector('input[name="sortOrder"]:checked').value);
+    document.querySelectorAll(".cat-check").forEach(label => label.classList.remove("selected"));
+  });
+
+  const modal = document.getElementById("category-modal");
+  const openBtn = document.getElementById("category-info-btn");
+  const closeBtn = document.getElementById("close-modal");
+
+  if (openBtn && modal) openBtn.addEventListener("click", () => modal.classList.remove("hidden"));
+  if (closeBtn && modal) closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.add("hidden");
   });
 });
 
@@ -90,13 +117,13 @@ function renderTimeline(events, order = "desc") {
 
     timeline.appendChild(yearDiv);
   }
-}                           
+}
 
 function generateCategoryCheckboxes() {
   const group = document.getElementById("categoryCheckboxGroup");
   if (!group) return;
 
-  group.innerHTML = ""; // Efface les anciennes cases s'il y en a
+  group.innerHTML = "";
 
   Object.entries(categoryInfo).forEach(([cat, info]) => {
     const label = document.createElement("label");
@@ -109,16 +136,14 @@ function generateCategoryCheckboxes() {
     group.appendChild(label);
   });
 
-  // Gestion du filtre catégorie au clic
   group.addEventListener("change", () => {
     activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
 
-    // Mise à jour du style des cases sélectionnées
     document.querySelectorAll(".cat-check").forEach(label => {
       const input = label.querySelector("input");
       label.classList.toggle("selected", input.checked);
     });
   });
-}                          
+}
