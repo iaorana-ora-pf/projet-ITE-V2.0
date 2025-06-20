@@ -118,6 +118,24 @@ input:checked {
   border-radius: 6px;
   margin-bottom: 20px;
 }
+.search-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
 
 .timeline {
   position: relative;
