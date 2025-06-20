@@ -92,30 +92,24 @@ body {
   margin-right: 6px;
 }
 .category-checkboxes {
-    max-height: 120px;
+  max-height: 120px;
   overflow-y: auto;
-  background-color: #fff;          /* ✅ fond blanc */
-  color: #1e2124;                     /* ✅ texte noir */
+  background: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 20px;
-  font-size: 1rem;                 /* ✅ taille texte */
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* léger relief */
 }
 
 .cat-check {
   display: flex;
   align-items: center;
   font-size: 0.9rem;
-  color: #1e2124;
   margin-bottom: 6px;
+  color: #fff;
 }
 
 .cat-check input[type="checkbox"] {
-  margin-right: 6px;     /* ✅ réduit l’écart entre checkbox et icône */
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
+  margin-right: 8px;
 }
 .cat-check i {
   margin-right: 6px;     /* ✅ réduit l’écart entre icône et texte */
