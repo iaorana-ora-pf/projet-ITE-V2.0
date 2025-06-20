@@ -272,7 +272,13 @@
   min-height: 100%;
   background-color: transparent; /* supprime le fond bleu */
 }
-
+.timeline-layout {
+  display: flex;
+  align-items: stretch;
+  height: 100vh; /* 🔒 fixe la hauteur à 100% de l'écran */
+  overflow: hidden;
+  background-color: white;
+}
 
 
 
@@ -551,7 +557,7 @@ ACCUEIL Fenêtre flottante
   box-sizing: border-box;
 }
 body {
-  background-color:#048B9A;
+  background-color:#f0f0f0;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
@@ -699,12 +705,7 @@ a.button {
   LAYOUT FRISE
 -----------------------------------*/
 
-.timeline-layout {
-  display: flex;
-  align-items: stretch;
-  height: 100vh; /* 🔒 fixe la hauteur à 100% de l'écran */
-  overflow: hidden;
-}
+
 
 
 .timeline-year {
