@@ -98,16 +98,16 @@ function updateTimeline() {
   }
 
   // Étape 2 : trier par date
-  allEvents.sort((a, b) => {
-    const dateA = new Date(a.start || "0000-01-01");
-    const dateB = new Date(b.start || "0000-01-01");
-    return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
-  });
+allEvents.sort((a, b) => {
+  const dateA = new Date(a.start || "9999-01-01");
+  const dateB = new Date(b.start || "9999-01-01");
+  return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
+});
 
   // Étape 3 : regrouper par années
   const grouped = {};
   allEvents.forEach(e => {
-    const y = e.start?.slice(0, 4) || "Inconnue";
+    const year = a.start?.slice(0, 4) || "Inconnue";
     if (!grouped[y]) grouped[y] = [];
     grouped[y].push(e);
   });
