@@ -21,8 +21,12 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: white;
   color: var(--dark-text);
+  overflow: hidden;
 }
-
+html, body {
+  height: 100%;
+  overflow: hidden; /* bloque le scroll global */
+}
 .container {
   display: flex;
   min-height: 100vh;
@@ -54,6 +58,7 @@ h3 {
   overflow-y: auto;  
   width: var(--sidebar-width);
   height: 100vh;
+  overflow-y: auto; /* active le scroll uniquement ici */
   background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
   background-size: cover;
   padding: 20px;
