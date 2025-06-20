@@ -70,72 +70,57 @@ function getFilters() {
     search: normalize(document.getElementById("searchInput").value)
   };
 }
+
 function updateTimeline() {
   const container = document.getElementById("timeline");
   container.innerHTML = "";
-
   const filters = getFilters();
-  const sortOrder = document.querySelector(".sort-select")?.value || "asc";
 
-  // Étape 1 : collecter tous les événements filtrés
-  let allEvents = [];
   for (const year in events) {
     const filtered = events[year].filter(e =>
       (!filters.categories.length || (Array.isArray(e.category) ? e.category.some(c => filters.categories.includes(c)) : filters.categories.includes(e.category))) &&
       (!filters.keywords.length || filters.keywords.some(k => e.keywords.includes(k))) &&
-      (!filters.search || (
-        normalize(e.name).includes(filters.search) ||
-        normalize(e.description).includes(filters.search) ||
-        (Array.isArray(e.keywords) && e.keywords.some(k => normalize(k).includes(filters.search))) ||
-        (Array.isArray(e.sources) && e.sources.some(s => normalize(s).includes(filters.search))) ||
-        (Array.isArray(e.category) ? e.category.some(c => normalize(c).includes(filters.search)) : normalize(e.category).includes(filters.search)) ||
-        normalize(e.start).includes(filters.search) ||
-        normalize(e.end).includes(filters.search)
-      ))
+   (!filters.search || (
+  normalize(e.name).includes(filters.search) ||
+  normalize(e.description).includes(filters.search) ||
+  (Array.isArray(e.keywords) && e.keywords.some(k => normalize(k).includes(filters.search))) ||
+  (Array.isArray(e.sources) && e.sources.some(s => normalize(s).includes(filters.search))) ||
+  (Array.isArray(e.category) ? e.category.some(c => normalize(c).includes(filters.search)) : normalize(e.category).includes(filters.search)) ||
+  normalize(e.start).includes(filters.search) ||
+  normalize(e.end).includes(filters.search)
+))
     );
 
-    allEvents = allEvents.concat(filtered);
-  }
-
-  // Étape 2 : trier par date
-allEvents.sort((a, b) => {
-  const dateA = new Date(a.start || "9999-01-01");
-  const dateB = new Date(b.start || "9999-01-01");
-  return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
-});
-
-  // Étape 3 : regrouper par années
-  const grouped = {};
-  allEvents.forEach(e => {
-    const year = e.start?.slice(0, 4) || "Inconnue";
-if (!grouped[year]) grouped[year] = [];
-grouped[year].push(e);
-  });
-
-  // Étape 4 : afficher
-  for (const year of Object.keys(grouped).sort((a, b) => sortOrder === "asc" ? a - b : b - a)) {
-    const block = document.createElement("div");
-    block.className = "year-block";
-    block.innerHTML = `
+    if (filtered.length) {
+      const block = document.createElement("div");
+      block.className = "year-block";
+      block.innerHTML = `
       <h3 class="timeline-year">${year}</h3>
-      <ul class="event-grid">
-        ${grouped[year].map((ev, i) => {
-          const id = `event-${year}-${i}`;
-          window[id] = ev;
-          const isContext = Array.isArray(ev.category) ? ev.category.includes("Contexte") : ev.category === "Contexte";
-          const contextClass = isContext ? "context-event" : "";
-          const iconHTML = (Array.isArray(ev.category) ? ev.category : [ev.category])
-            .map(cat => getIconForCategory(cat)).join("");
-          return `<li class="${contextClass}" data-uid="${ev.name}-${year}" onclick='showDetails(window["${id}"], "${year}")'>${iconHTML}<span>${ev.name}</span></li>`;
-        }).join("")}
-      </ul>
-    `;
-    container.appendChild(block);
+        <ul class="event-grid">
+          ${filtered.map((ev, i) => {
+            const id = `event-${year}-${i}`;
+            window[id] = ev;
+            const isContext = Array.isArray(ev.category) ? ev.category.includes("Contexte") : ev.category === "Contexte";
+            const contextClass = isContext ? "context-event" : "";
+           const iconHTML = (Array.isArray(ev.category) ? ev.category : [ev.category])
+  .map(cat => getIconForCategory(cat)).join("");
+            return `<li class="${contextClass}" data-uid="${ev.name}-${year}" onclick='showDetails(window["${id}"], "${year}")'>${iconHTML}<span>${ev.name}</span></li>`;
+          }).join("")}
+        </ul>`;
+      container.appendChild(block);
+    }
   }
+ // Pansement : masque la colonne vide si aucun événement
+const timelineLayout = document.querySelector(".timeline-layout");
+const hasEvents = container.querySelectorAll(".year-block").length > 0;
 
+if (!hasEvents) {
+  timelineLayout.classList.add("no-events");
+} else {
+  timelineLayout.classList.remove("no-events");
+}
   updateDependentFilters();
   updateActiveFilterBadges();
-  
 const total = Object.values(events).flat().filter(e =>
   (!filters.categories.length || (Array.isArray(e.category) ? e.category.some(c => filters.categories.includes(c)) : filters.categories.includes(e.category))) &&
   (!filters.keywords.length || filters.keywords.some(k => e.keywords.includes(k))) &&
@@ -355,7 +340,22 @@ function toggleFilters() {
   const el = document.getElementById("filters");
   el.style.display = (el.style.display === "none" || el.style.display === "") ? "block" : "none";
 }
+function toggleSidePanel() {
+  const panel = document.getElementById('side-panel');
+  panel.style.display = (panel.style.display === 'none') ? 'flex' : 'none';
+}
+function toggleSidePanel() {
+  const panel = document.getElementById('side-panel');
+  const openBtn = document.getElementById('open-panel-btn');
 
+  if (panel.style.display === 'none') {
+    panel.style.display = 'flex';
+    openBtn.style.display = 'none';
+  } else {
+    panel.style.display = 'none';
+    openBtn.style.display = 'block';
+  }
+}
 function toggleSidePanel() {
   const layout = document.getElementById("app-layout");
   layout.classList.toggle("sidebar-hidden");
