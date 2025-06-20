@@ -1,3 +1,4 @@
+
 let activeCategories = [];
 let eventsData = [];
 let searchQuery = "";
@@ -90,3 +91,34 @@ function renderTimeline(events, order = "desc") {
     timeline.appendChild(yearDiv);
   }
 }                           
+
+function generateCategoryCheckboxes() {
+  const group = document.getElementById("categoryCheckboxGroup");
+  if (!group) return;
+
+  group.innerHTML = ""; // Efface les anciennes cases s'il y en a
+
+  Object.entries(categoryInfo).forEach(([cat, info]) => {
+    const label = document.createElement("label");
+    label.className = "cat-check";
+    label.innerHTML = `
+      <input type="checkbox" value="${cat}">
+      <span>${cat}</span>
+      <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 4px;"></i>
+    `;
+    group.appendChild(label);
+  });
+
+  // Gestion du filtre catégorie au clic
+  group.addEventListener("change", () => {
+    activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
+    const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
+    renderTimeline(eventsData, sortValue);
+
+    // Mise à jour du style des cases sélectionnées
+    document.querySelectorAll(".cat-check").forEach(label => {
+      const input = label.querySelector("input");
+      label.classList.toggle("selected", input.checked);
+    });
+  });
+}                          
