@@ -29,7 +29,7 @@ body {
   left: 0;
   width: 340px;
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/accueil.pnj') no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./images/accueil.png') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 20px;
