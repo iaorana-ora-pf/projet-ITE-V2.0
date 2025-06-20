@@ -1,9 +1,19 @@
+  :ROOT 
+  --main-green: #048B9A;
+  --hover-green: #02616B;
+  --link-green: #048B9A;
+  --light-bg: #EDE7E3;
+  --neutral-text: #5F5F5F;
+  --dark-text: #1e2124;
+}
+
 body {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f0f0ff, #e0e0ff);
-  color: #333;
-  overflow-x: hidden;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -14,7 +24,7 @@ body {
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background: #5548e1;
+  background: #048B9A;
   color: white;
   padding: 20px;
   transition: transform 0.3s ease;
