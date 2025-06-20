@@ -56,6 +56,17 @@ body {
   width: 90%;
   margin-bottom: 20px;
 }
+.sort-container h3 {
+  margin-bottom: 8px;
+}
+
+.sort-container select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
 .category-btn {
   display: block;
   width: 90%;
@@ -91,17 +102,7 @@ body {
 .cat-check input[type="checkbox"] {
   margin-right: 8px;
 }
-.sort-container h3 {
-  margin-bottom: 8px;
-}
 
-.sort-container select {
-  width: 100%;
-  padding: 6px;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
-}
 /* Timeline styling */
 .timeline {
   position: relative;
