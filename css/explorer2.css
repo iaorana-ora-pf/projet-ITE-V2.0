@@ -62,13 +62,23 @@ body {
   margin-bottom: 8px;
   color: #1e2124;
   font-size: 0.9rem;
+  justify-content: flex-start;  /* ✅ aligne à gauche */
 }
 
 .sort-option span,
 .cat-check span {
   line-height: 1.2;
 }
-
+.cat-check {
+  gap: 6px;
+  justify-content: flex-start;
+}
+.cat-check span {
+  flex: 1;
+}
+.cat-check i {
+  margin-left: auto;  /* ✅ pousse les icônes à droite */
+}
 input[type="radio"],
 input[type="checkbox"] {
   appearance: none;
