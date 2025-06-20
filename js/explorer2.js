@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Recherche
+  // Recherche texte + année
   document.getElementById("searchInput").addEventListener("input", (e) => {
     searchQuery = e.target.value.toLowerCase().trim();
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
@@ -63,7 +63,8 @@ function renderTimeline(events, order = "desc") {
       event.title,
       event.shortDescription,
       ...(event.categories || []),
-      ...(event.keywords || [])
+      ...(event.keywords || []),
+      event.year.toString()
     ].join(" ").toLowerCase();
 
     const matchesSearch = searchableFields.includes(searchQuery);
@@ -113,6 +114,7 @@ function generateCategoryCheckboxes() {
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
 
+    // Mettre en gras les catégories sélectionnées
     document.querySelectorAll(".cat-check").forEach(label => {
       const input = label.querySelector("input");
       if (input.checked) {
