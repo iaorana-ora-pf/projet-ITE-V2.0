@@ -245,9 +245,8 @@ html, body {
 .page-layout {
   display: grid;
   grid-template-columns: 340px 1fr 400px;
-  grid-template-rows: 100vh;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
 }
 .side-panel {
@@ -267,13 +266,14 @@ html, body {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
 }
+
 .event-details {
   background-color: white;
   overflow-y: auto;
   padding: 1.5rem;
   border-left: 1px solid #eee;
   box-shadow: -2px 0 6px rgba(0, 0, 0, 0.05);
-}
+
 
 @media (max-width: 768px) {
   .page-layout {
