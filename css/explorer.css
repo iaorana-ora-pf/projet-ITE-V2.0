@@ -6,12 +6,12 @@
 */
 
 :root {
-  --main-green: #166F76;
-  --hover-green: #128c8c;
-  --link-green: #2a9d8f;
+  --main-green: #048B9A;
+  --hover-green: #02616B;
+  --link-green: #048B9A;
   --light-bg: #EDE7E3;
   --neutral-text: #5F5F5F;
-  --dark-text: #363B40;
+  --dark-text: #1e2124;
 }
 /*-----------------------------------
  OK
@@ -54,7 +54,7 @@ ACCUEIL Fenêtre flottante
 .popup-content h1 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #166F76;
+  color: #048B9A;
   text-align: center;
   margin-top: 0;
 }
@@ -63,7 +63,7 @@ ACCUEIL Fenêtre flottante
   font-size: 1.2rem;         /* Texte un peu plus grand */
   font-weight: 500;
   text-align: center;
-  color: #166F76;               /* Couleur foncée lisible */
+  color: #048B9A;               /* Couleur foncée lisible */
   margin-top: 0;        /* Espace après les boutons info/mail */
   margin-bottom: 0;       /* Grand espace avant le bloc orange */
   line-height: 1.5;
@@ -71,12 +71,12 @@ ACCUEIL Fenêtre flottante
 /* Style du texte descriptif */
 .popup-description {
   font-size: 1rem;
-  color: #363B40;
+  color: #1e21240;
   text-align: justify;
 }
 /* Style des boutons dans la fenêtre flottante */
 .popup-btn {
-  background-color: #166F76;
+  background-color: #048B9A;
   color: white;
   border: none;
   padding: 15px 20px;
@@ -90,7 +90,7 @@ ACCUEIL Fenêtre flottante
 }
 /* Changement de couleur au survol des boutons */
 .popup-btn:hover {
-  background-color: #128c8c;
+  background-color: #02616B;
 }
 /* Conteneur pour les boutons (flexbox) */
 .popup-content .button-container {
@@ -333,7 +333,7 @@ ACCUEIL Fenêtre flottante
   box-sizing: border-box;
 }
 body {
-  background-color:#166F76;
+  background-color:#048B9A;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
@@ -469,7 +469,7 @@ a.button {
   line-height: 1.3;
 }
 .search-box textarea::placeholder {
-  color: #363B40;
+  color: #1e21240;
   font-size: 0.9rem;
   opacity:0.8;
 }
