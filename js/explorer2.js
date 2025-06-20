@@ -104,21 +104,28 @@ function generateCategoryCheckboxes() {
     renderTimeline(eventsData, document.getElementById("sortOrder").value);
   });
 }
-// Gestion de la modale "À propos des catégories"
-const modal = document.getElementById("category-modal");
-const openBtn = document.getElementById("category-info-btn");
-const closeBtn = document.getElementById("close-modal");
 
-openBtn.addEventListener("click", () => {
-  modal.classList.remove("hidden");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  // Gestion de la modale "À propos des catégories"
+  const modal = document.getElementById("category-modal");
+  const openBtn = document.getElementById("category-info-btn");
+  const closeBtn = document.getElementById("close-modal");
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.add("hidden");
+  if (openBtn && modal) {
+    openBtn.addEventListener("click", () => {
+      modal.classList.remove("hidden");
+    });
   }
+
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+  }
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
 });
