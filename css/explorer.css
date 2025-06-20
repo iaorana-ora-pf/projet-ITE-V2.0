@@ -275,11 +275,15 @@
 .timeline-layout {
   display: flex;
   align-items: stretch;
-  height: 100vh; /* 🔒 fixe la hauteur à 100% de l'écran */
+  height: 100%; /* 🔒 fixe la hauteur à 100% de l'écran */
   overflow: hidden;
   background-color: white;
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 
 
@@ -557,7 +561,7 @@ ACCUEIL Fenêtre flottante
   box-sizing: border-box;
 }
 body {
-  background-color:#f0f0f0;
+  background-color:white;
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding-top: 0;
@@ -589,11 +593,7 @@ a:hover {
   justify-content: flex-start;
   overflow: hidden; /* ✅ on bloque scroll ici pour gérer en dessous */
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 #page-wrapper {
   display: flex;
   flex-direction: column;
