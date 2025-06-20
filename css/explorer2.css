@@ -182,3 +182,45 @@ body {
   font-weight: bold;
   color: #5548e1;
 }
+/* MODAL OVERLAY */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* MODAL CONTENT */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-size: 0.95rem;
+  color: #333;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content h4 {
+  margin-top: 0;
+}
+
+.close {
+  float: right;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #888;
+}
