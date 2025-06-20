@@ -54,23 +54,24 @@ body {
   color: #1e2124;
 }
 .sort-container {
-  background-color: #fff;
+  background: none;           /* ✅ plus de fond blanc */
+  padding: 0;  
   color: #000;
   font-size: 1rem;
-  padding: 10px;
-  border-radius: 6px;
+  border-radius: 0;
   margin-bottom: 20px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: none;
 }
 .sort-container h3 {
   margin-bottom: 8px;
 }
 
 .sort-container select {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  width: 100%;
   font-size: 0.9rem;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   background-color: #fff;
   color: #000;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
