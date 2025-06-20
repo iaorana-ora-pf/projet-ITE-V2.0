@@ -107,9 +107,9 @@ allEvents.sort((a, b) => {
   // Étape 3 : regrouper par années
   const grouped = {};
   allEvents.forEach(e => {
-    const year = a.start?.slice(0, 4) || "Inconnue";
-    if (!grouped[y]) grouped[y] = [];
-    grouped[y].push(e);
+    const year = e.start?.slice(0, 4) || "Inconnue";
+if (!grouped[year]) grouped[year] = [];
+grouped[year].push(e);
   });
 
   // Étape 4 : afficher
@@ -355,22 +355,7 @@ function toggleFilters() {
   const el = document.getElementById("filters");
   el.style.display = (el.style.display === "none" || el.style.display === "") ? "block" : "none";
 }
-function toggleSidePanel() {
-  const panel = document.getElementById('side-panel');
-  panel.style.display = (panel.style.display === 'none') ? 'flex' : 'none';
-}
-function toggleSidePanel() {
-  const panel = document.getElementById('side-panel');
-  const openBtn = document.getElementById('open-panel-btn');
 
-  if (panel.style.display === 'none') {
-    panel.style.display = 'flex';
-    openBtn.style.display = 'none';
-  } else {
-    panel.style.display = 'none';
-    openBtn.style.display = 'block';
-  }
-}
 function toggleSidePanel() {
   const layout = document.getElementById("app-layout");
   layout.classList.toggle("sidebar-hidden");
