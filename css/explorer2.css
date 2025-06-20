@@ -17,29 +17,37 @@ body {
 }
 
 .container {
-  display: flex;
   min-height: 100vh;
+  margin-left: 340px;
+  display: block;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 100vh;
   background: #5548e1;
   color: white;
   padding: 20px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
   transition: transform 0.3s ease;
 }
 
 .sidebar.hidden {
   transform: translateX(-100%);
-  position: absolute;
-  z-index: 10;
 }
-
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.4em;
+}
 .sidebar button {
   background: transparent;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: white;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -49,10 +57,11 @@ body {
 .timeline {
   position: relative;
   flex: 1;
-  padding: 50px 20px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 60px;
 }
 
 .timeline::before {
