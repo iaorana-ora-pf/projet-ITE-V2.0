@@ -1,8 +1,5 @@
 let activeCategories = [];
 let eventsData = [];
-let activeCategory = null;
-let activeCategories = [];
-
 
 const categoryInfo = {
   
@@ -36,7 +33,6 @@ fetch("data/events.json")
   .then(response => response.json())
   .then(events => {
     eventsData = events;
-    generateCategoryCheckboxes();
     generateCategoryFilters();
     renderTimeline(eventsData, "desc");
   })
@@ -85,31 +81,6 @@ document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
     renderTimeline(eventsData, selected);
   });
 });
-
-// Générer les boutons de filtre
-function generateCategoryCheckboxes() {
-  const container = document.querySelector(".category-checkboxes");
-  if (!container) return;
-
-  Object.entries(categoryInfo).forEach(([cat, info]) => {
-    const label = document.createElement("label");
-    label.className = "cat-check";
-
-    label.innerHTML = `
-      <input type="checkbox" value="${cat}" />
-      <i class="fas ${info.icon}" style="color: ${info.color}; margin-right: 8px;"></i>
-      ${cat}
-    `;
-
-    container.appendChild(label);
-  });
-
-  container.addEventListener("change", () => {
-    const checked = [...container.querySelectorAll("input:checked")].map(cb => cb.value);
-    activeCategories = checked;
-    renderTimeline(eventsData, document.getElementById("sortOrder").value);
-  });
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   // Gestion de la modale "À propos des catégories"
