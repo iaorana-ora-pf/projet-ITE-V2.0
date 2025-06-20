@@ -1,4 +1,4 @@
-  :ROOT 
+:root {
   --main-green: #048B9A;
   --hover-green: #02616B;
   --link-green: #048B9A;
@@ -24,10 +24,16 @@ body {
 /* Sidebar */
 .sidebar {
   width: 250px;
-  background: #048B9A;
+  background: #5548e1;
   color: white;
   padding: 20px;
   transition: transform 0.3s ease;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+  position: absolute;
+  z-index: 10;
 }
 
 .sidebar button {
@@ -39,27 +45,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.sidebar h2 {
-  margin-top: 0;
-}
-
-.sidebar label {
-  display: block;
-  margin: 10px 0;
-}
-
-/* Hidden sidebar */
-.sidebar.hidden {
-  transform: translateX(-100%);
-  position: absolute;
-  z-index: 10;
-}
-
-/* Timeline area */
+/* Timeline styling */
 .timeline {
-  flex: 1;
-  padding: 50px;
   position: relative;
+  flex: 1;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .timeline::before {
@@ -67,35 +60,63 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
+  transform: translateX(-50%);
   width: 4px;
   height: 100%;
-  background: #888;
-  transform: translateX(-50%);
+  background-color: #bbb;
 }
 
 /* Event cards */
 .event {
-  width: 45%;
-  padding: 15px 20px;
-  margin: 20px 0;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   position: relative;
+  width: 45%;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.3s;
 }
 
-.event.right {
-  position: relative;
-  left: 50%;
-  transform: translateX(10%); /* corrige le chevauchement */
-  text-align: left;
+.event:hover {
+  transform: scale(1.02);
+}
+
+/* Arrow connector */
+.event::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
 }
 
 .event.left {
-  position: relative;
-  left: 0;
-  transform: translateX(-10%);
+  align-self: flex-start;
   text-align: right;
+}
+
+.event.left::after {
+  right: -20px;
+  border-left-color: white;
+}
+
+.event.right {
+  align-self: flex-end;
+  text-align: left;
+}
+
+.event.right::after {
+  left: -20px;
+  border-right-color: white;
+}
+
+.year {
+  font-weight: bold;
+  color: #5548e1;
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 
 .event .year {
