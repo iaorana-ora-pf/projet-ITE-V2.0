@@ -69,7 +69,7 @@ function renderTimeline(events, order = "desc") {
     return matchesCategory && searchableFields.includes(searchQuery);
   });
 
-  // ✅ Phrase "La frise contient X événements" — une seule fois en haut
+  // Compteur
   const countText = document.createElement("div");
   countText.classList.add("event-count");
   countText.textContent = `La frise contient ${filtered.length} événements`;
@@ -80,27 +80,45 @@ function renderTimeline(events, order = "desc") {
   line.classList.add("timeline-line");
   timeline.appendChild(line);
 
-  filtered.forEach((event, index) => {
-    const div = document.createElement("div");
-    const isLeft = index % 2 === 0;
-    div.classList.add("event", isLeft ? "left" : "right");
+  // Groupement par année
+  const grouped = {};
+  filtered.forEach(event => {
+    if (!grouped[event.year]) grouped[event.year] = [];
+    grouped[event.year].push(event);
+  });
 
-    const catIcons = event.categories?.map(cat => {
-      const info = categoryInfo[cat];
-      return info
-        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
-        : '';
-    }).join("");
+  Object.entries(grouped).forEach(([year, events]) => {
+    const yearWrapper = document.createElement("div");
+    yearWrapper.className = "year-group";
 
-    div.innerHTML = `
-      <div class="event-dot"></div>
-      <div class="year">${event.year}</div>
-      <div class="title"><a href="details/${event.id}.html">${event.title}</a> ${catIcons}</div>
-    `;
+    const yearTitle = document.createElement("div");
+    yearTitle.className = "year";
+    yearTitle.textContent = year;
+    yearWrapper.appendChild(yearTitle);
 
-    timeline.appendChild(div);
+    events.forEach((event, index) => {
+      const div = document.createElement("div");
+      div.classList.add("event", index % 2 === 0 ? "left" : "right");
+
+      const catIcons = event.categories?.map(cat => {
+        const info = categoryInfo[cat];
+        return info
+          ? `<span class="cat-icon" title="${cat}" style="color:${info.color}; margin-right: 8px;"><i class="fas ${info.icon}"></i></span>`
+          : '';
+      }).join("");
+
+      div.innerHTML = `
+        <div class="event-dot"></div>
+        <div class="title"><a href="details/${event.id}.html">${event.title}</a> ${catIcons}</div>
+      `;
+
+      yearWrapper.appendChild(div);
+    });
+
+    timeline.appendChild(yearWrapper);
   });
 }
+
 
 function generateCategoryCheckboxes() {
   const group = document.getElementById("categoryCheckboxGroup");
