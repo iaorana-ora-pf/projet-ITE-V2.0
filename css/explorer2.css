@@ -60,7 +60,13 @@ h3 {
   box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
 }
-
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
 /* Tri */
 .sort-container label {
   display: flex;
