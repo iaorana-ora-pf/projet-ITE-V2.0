@@ -64,7 +64,7 @@ h3 {
 .sort-container label {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* ✅ Aligne à gauche */
+  padding-left: 10px; /* ✅ Décale vers la droite */
   margin-bottom: 8px;
   cursor: pointer;
 }
