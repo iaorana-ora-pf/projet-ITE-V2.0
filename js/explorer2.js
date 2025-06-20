@@ -10,13 +10,40 @@ const categoryInfo = {
   "Protection et gestion des risques": { color: "#f4a261", icon: "fa-shield-alt" }
 };
 
-fetch("data/events.json")
-  .then(res => res.json())
-  .then(events => {
-    eventsData = events;
-    generateCategoryCheckboxes();
-    renderTimeline(eventsData, "desc");
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("data/events.json")
+    .then(res => res.json())
+    .then(events => {
+      eventsData = events;
+      generateCategoryCheckboxes();
+      renderTimeline(eventsData, "desc");
+    });
+
+  // Gestion du tri par radio
+  document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+      const selected = document.querySelector('input[name="sortOrder"]:checked').value;
+      renderTimeline(eventsData, selected);
+    });
   });
+
+  // Gestion de la modale
+  const modal = document.getElementById("category-modal");
+  const openBtn = document.getElementById("category-info-btn");
+  const closeBtn = document.getElementById("close-modal");
+
+  if (openBtn && modal) {
+    openBtn.addEventListener("click", () => modal.classList.remove("hidden"));
+  }
+  if (closeBtn && modal) {
+    closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
+  }
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+});
 
 function renderTimeline(events, order = "desc") {
   const timeline = document.getElementById("timeline");
@@ -54,15 +81,6 @@ function renderTimeline(events, order = "desc") {
   });
 }
 
-// Tri
-document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
-  radio.addEventListener("change", () => {
-    const selected = document.querySelector('input[name="sortOrder"]:checked').value;
-    renderTimeline(eventsData, selected);
-  });
-});
-
-// ✅ Cases à cocher pour les catégories
 function generateCategoryCheckboxes() {
   const group = document.getElementById("categoryCheckboxGroup");
   if (!group) return;
@@ -84,13 +102,15 @@ function generateCategoryCheckboxes() {
     activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
+
+    // Mise à jour visuelle des éléments cochés
+    document.querySelectorAll(".cat-check").forEach(label => {
+      const input = label.querySelector("input");
+      if (input.checked) {
+        label.classList.add("selected");
+      } else {
+        label.classList.remove("selected");
+      }
+    });
   });
-  document.querySelectorAll(".cat-check").forEach(label => {
-  const input = label.querySelector("input");
-  if (input.checked) {
-    label.classList.add("selected");
-  } else {
-    label.classList.remove("selected");
-  }
-});
 }
