@@ -98,7 +98,8 @@ function renderTimeline(events, order = "desc") {
 
     events.forEach((event, index) => {
       const div = document.createElement("div");
-      div.classList.add("event", index % 2 === 0 ? "left" : "right");
+      const isLeft = Math.random() > 0.5;
+div.classList.add("event", isLeft ? "left" : "right");
 
       const catIcons = event.categories?.map(cat => {
         const info = categoryInfo[cat];
