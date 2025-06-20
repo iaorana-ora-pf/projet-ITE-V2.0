@@ -55,15 +55,21 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
-  overflow-y: auto;  
   width: var(--sidebar-width);
   height: 100vh;
-  overflow-y: auto; /* active le scroll uniquement ici */
-  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), 
+              url('../images/accueil.png') no-repeat center center;
   background-size: cover;
-  padding: 20px;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+.sidebar-scroll {
+  overflow-y: auto;
+  padding: 20px;
+  flex-grow: 1;
 }
 .sidebar::-webkit-scrollbar {
   width: 6px;
@@ -173,23 +179,34 @@ h3 {
 
 /* Réinitialiser */
 .reset-btn {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding: 12px;
+  width: 90%;
   display: block;
-  margin: 30px auto 0;     /* espace au-dessus + centrage */
-   margin-bottom: 20px;
-  *padding: 8px 12px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 0.9rem;
   background-color: var(--main-green);
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  width: fit-content;       /* s’adapte au texte */
-  min-width: 160px;         /* optionnel pour cohérence */
   text-align: center;
 }
 
 .reset-btn:hover {
   background-color: var(--hover-green);
+}
+
+
+/* 🟦 Footer toujours visible */
+.sidebar-footer {
+  padding: 12px 20px;
+  font-size: 0.75rem;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  text-align: center;
 }
 
 /* ===================== */
