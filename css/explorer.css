@@ -34,10 +34,12 @@
   left: 0;
   width: 340px;
   height: 100vh;
-   background: url('../images/accueil.png') no-repeat center center;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+              url('../images/accueil.png'); /* remplace par ton chemin */
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.85); /* fallback + semi-transparent blanc */
-  backdrop-filter: blur(4px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: lighten;
   -webkit-backdrop-filter: blur(4px); /* compatibilité Safari */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
   z-index: 100;
@@ -52,17 +54,7 @@
   overflow: hidden;
   word-wrap: break-word;
 }
-.side-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
-  z-index: 0;
-}
-.side-scrollable-content {
-  position: relative;
-  z-index: 1;
-}
+
 /* ⬇️ Permet de scroller le contenu interne sans bouger la sidebar */
 .side-scrollable-content {
   flex: 1;
