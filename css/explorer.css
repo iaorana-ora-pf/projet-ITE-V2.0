@@ -284,6 +284,23 @@ html, body {
   margin: 0;
   padding: 0;
 }
+.layout-with-sidebar.sidebar-hidden .main-content {
+  margin-left: 0;
+  padding-left: 1.5rem; /* ou comme tu veux */
+}
+.main-content {
+  height: 100vh;
+  padding-left: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+
+
+
+
 
 
 
@@ -415,13 +432,7 @@ ACCUEIL Fenêtre flottante
   min-height: 0;
 }
 /* ✅ Corrige aussi le layout principal */
-.main-content {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding-left: 340px;
-  overflow: hidden;
-}
+
 
 }
 /* ✅ Scrolls indépendants */
@@ -584,14 +595,6 @@ a:hover {
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-.main-content {
-  height: 100vh; /* prend toute la hauteur de la fenêtre */
-  padding-left: 340px; /* largeur de ta sidebar */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden; /* ✅ on bloque scroll ici pour gérer en dessous */
 }
 
 #page-wrapper {
@@ -966,10 +969,7 @@ a.button {
   height: 100vh;
 }
 
-.layout-with-sidebar.sidebar-hidden .main-content {
-  margin-left: 0;
-  padding-left: 1.5rem; /* ou comme tu veux */
-}
+
 .side-btn {
   width: 70px;
   height: 70px;
