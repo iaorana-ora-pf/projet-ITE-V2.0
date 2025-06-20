@@ -265,8 +265,13 @@
   background-color: var(--hover-green); /* couleur plus foncée si définie */
 }
 
-
-
+.timeline-section {
+  flex: 1; /* ou 2 selon ton besoin d'espace */
+  overflow-y: auto;
+  padding: 2rem;
+  min-height: 100%;
+  background-color: transparent; /* supprime le fond bleu */
+}
 
 
 
@@ -410,11 +415,7 @@ ACCUEIL Fenêtre flottante
 
 }
 /* ✅ Scrolls indépendants */
-.timeline-section {
-  flex: 2;
-  overflow-y: auto;
-  min-height: 0;
-}
+
 .event-details-container {
   flex: 1;
   overflow-y: auto;
@@ -705,12 +706,7 @@ a.button {
   overflow: hidden;
 }
 
-.timeline-section {
-  flex: 1;
-  overflow-y: auto;
-  padding: 2rem;
-  min-height: 100%;
-}
+
 .timeline-year {
   font-size: 1.15rem;
   color: var(--main-green);
