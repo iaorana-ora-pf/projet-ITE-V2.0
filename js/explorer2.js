@@ -31,11 +31,11 @@ const categoryInfo = {
 
 fetch("data/events.json")
   .then(response => response.json())
-  .then(events => {
-    eventsData = events;
-    generateCategoryFilters();
-    renderTimeline(eventsData, "desc");
-  })
+.then(events => {
+  eventsData = events;
+  generateCategoryRadios(); // ✅ injecte les boutons radio
+  renderTimeline(eventsData, "desc");
+})
   .catch(err => console.error("Erreur chargement JSON:", err));
 
 function renderTimeline(events, order = "desc") {
