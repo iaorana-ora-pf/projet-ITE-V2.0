@@ -74,15 +74,18 @@ body {
   position: relative;
 }
 
-.event.left {
-  left: 0;
-  margin-right: auto;
-  text-align: right;
+.event.right {
+  position: relative;
+  left: 50%;
+  transform: translateX(10%); /* corrige le chevauchement */
+  text-align: left;
 }
 
-.event.right {
-  left: 50%;
-  margin-left: auto;
+.event.left {
+  position: relative;
+  left: 0;
+  transform: translateX(-10%);
+  text-align: right;
 }
 
 .event .year {
