@@ -52,7 +52,17 @@
   overflow: hidden;
   word-wrap: break-word;
 }
-
+.side-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+  z-index: 0;
+}
+.side-scrollable-content {
+  position: relative;
+  z-index: 1;
+}
 /* ⬇️ Permet de scroller le contenu interne sans bouger la sidebar */
 .side-scrollable-content {
   flex: 1;
