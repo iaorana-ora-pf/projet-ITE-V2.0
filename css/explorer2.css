@@ -77,7 +77,10 @@ body {
   flex: 1;
 }
 .cat-check i {
-  margin-left: auto;  /* ✅ pousse les icônes à droite */
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-left: 4px; /* ✅ petite marge à gauche du texte */
 }
 input[type="radio"],
 input[type="checkbox"] {
