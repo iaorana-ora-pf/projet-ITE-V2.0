@@ -149,9 +149,36 @@
   font-size: 0.9rem;
   opacity: 0.8;
 }
-
-
-
+#active-filters-section {
+  min-height: 3.5rem; /* Réserve une hauteur même vide */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.3s ease;
+}
+#active-filters-section.empty {
+  opacity: 0.3;
+}
+.centered-button {
+  display: block;
+  margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
+  text-align: center;
+}
+.keyword-tag {
+  background-color: white;         /* ✅ Fond blanc */
+  color: #000;                     /* 🖤 Texte noir (ou adapte à ta charte) */
+  border: 1px solid #ccc;          /* ➕ Contour léger optionnel */
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.keyword-tag .remove-btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: #006676;                 /* ou un gris/bleu plus neutre */
+}
 
 
 
@@ -286,15 +313,7 @@ ACCUEIL Fenêtre flottante
   margin-bottom: 0.4rem;  /* 🟢 espace vertical entre les lignes */
   line-height: 1.2;       /* 🟢 espace interne dans chaque ligne */
 }
-#active-filters-section {
-  min-height: 3.5rem; /* Réserve une hauteur même vide */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  transition: opacity 0.3s ease;
-}
-#active-filters-section.empty {
-  opacity: 0.3;
-}
+
 .timeline-wrapper {
   display: flex;
   flex-direction: column;
@@ -383,11 +402,7 @@ ACCUEIL Fenêtre flottante
   cursor: pointer;
   color: #5f5f5f;
 }
-.centered-button {
-  display: block;
-  margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
-  text-align: center;
-}
+
 .category-info-box {
   background-color: #fefefe;
   border: 1px solid #ccc;
