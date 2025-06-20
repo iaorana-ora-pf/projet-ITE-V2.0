@@ -79,7 +79,19 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+.sort-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #1e2124;
+}
 
+.sort-option input[type="radio"] {
+  width: 16px;
+  height: 16px;
+}
 .category-btn {
   display: block;
   width: 90%;
