@@ -18,17 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
       eventsData = events;
       generateCategoryCheckboxes();
       const sortRadio = document.querySelector('input[name="sortOrder"]:checked');
-const sortValue = sortRadio ? sortRadio.value : "desc";
-renderTimeline(eventsData, sortValue);
+      const sortValue = sortRadio ? sortRadio.value : "desc";
+      renderTimeline(eventsData, sortValue);
     });
 
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
-  radio.addEventListener("change", () => {
-    const selected = document.querySelector('input[name="sortOrder"]:checked').value;
-    console.log("TRI choisi :", selected); // ← pour test console
-    renderTimeline(eventsData, selected);
+    radio.addEventListener("change", () => {
+      const selected = document.querySelector('input[name="sortOrder"]:checked').value;
+      console.log("TRI choisi :", selected); // debug
+      renderTimeline(eventsData, selected);
+    });
   });
-});
 
   document.getElementById("searchInput").addEventListener("input", (e) => {
     searchQuery = e.target.value.toLowerCase().trim();
@@ -90,7 +90,14 @@ function renderTimeline(events, order = "desc") {
   });
 
   timeline.innerHTML = "";
-  for (const [year, items] of Object.entries(grouped)) {
+
+  const orderedYears = Object.keys(grouped).sort((a, b) =>
+    order === "asc" ? a - b : b - a
+  );
+
+  orderedYears.forEach(year => {
+    const items = grouped[year];
+
     const yearDiv = document.createElement("div");
     yearDiv.className = "year-block";
 
@@ -119,7 +126,7 @@ function renderTimeline(events, order = "desc") {
     });
 
     timeline.appendChild(yearDiv);
-  }
+  });
 }
 
 function generateCategoryCheckboxes() {
