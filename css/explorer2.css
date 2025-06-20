@@ -216,6 +216,23 @@ h3 {
 /* ===================== */
 /*       FRISE        */
 /* ===================== */
+#timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 80%;
+}
+
+#timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ccc;
+  transform: translateX(-50%);
+}
 
 #timeline-wrapper {
   height: 100vh;
@@ -238,29 +255,49 @@ h3 {
   text-align: center;
   margin-bottom: 30px;
 }
+
 #timeline-controls label {
   margin: 0 10px;
   font-weight: 500;
   cursor: pointer;
 }
 
+/* Blocs année alternés gauche/droite */
 .year-block {
-  background: #fdfdfb;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border-radius: 12px;
-  margin: 30px auto;
-  padding: 20px;
-  max-width: 800px;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  margin: 30px 0;
 }
 
+.year-block:nth-child(odd) {
+  left: 0;
+  text-align: left;
+}
+
+.year-block:nth-child(even) {
+  left: 50%;
+  text-align: right;
+}
+
+/* Rond pour l’année */
 .year-block .year-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--main-green);
-  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: #ff9900;
+  color: white;
   text-align: center;
+  font-weight: bold;
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 2;
 }
 
+/* Événements dans un style moderne, allégé */
 .event-item {
   padding: 12px 16px;
   margin: 10px 0;
@@ -269,16 +306,21 @@ h3 {
   border-radius: 6px;
   transition: background 0.2s;
   cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 .event-item:hover {
   background: #f3f3f3;
 }
+
 .event-title {
   font-weight: bold;
 }
+
 .event-icons {
   margin-left: 10px;
 }
+
 .event-icons .cat-icon {
   margin-right: 8px;
   font-size: 1rem;
