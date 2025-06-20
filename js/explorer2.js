@@ -1,6 +1,7 @@
 let activeCategories = [];
 let eventsData = [];
 let activeCategory = null;
+let activeCategories = [];
 
 
 const categoryInfo = {
@@ -36,6 +37,7 @@ fetch("data/events.json")
   .then(events => {
     eventsData = events;
     generateCategoryCheckboxes();
+    generateCategoryFilters();
     renderTimeline(eventsData, "desc");
   })
   .catch(err => console.error("Erreur chargement JSON:", err));
@@ -48,7 +50,7 @@ function renderTimeline(events, order = "desc") {
     order === "asc" ? a.year - b.year : b.year - a.year
   );
 
-  const filtered = activeCategories.length
+ const filtered = activeCategories.length
   ? sorted.filter(event =>
       event.categories?.some(cat => activeCategories.includes(cat))
     )
@@ -133,3 +135,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+const categoryRadioGroup = document.getElementById("categoryRadioGroup");
+
+function generateCategoryRadios() {
+  const entries = Object.entries(categoryInfo).sort((a, b) => a[0].localeCompare(b[0]));
+
+  entries.forEach(([cat, info]) => {
+    const label = document.createElement("label");
+    label.className = "cat-radio";
+
+    label.innerHTML = `
+      <input type="radio" name="categoryFilter" value="${cat}">
+      <i class="fas ${info.icon}" style="color: ${info.color}; margin-right: 6px;"></i>
+      <span class="cat-label">${cat}</span>
+    `;
+
+    categoryRadioGroup.appendChild(label);
+  });
+
+  // Gestion du filtrage
+  categoryRadioGroup.addEventListener("change", () => {
+    const selected = document.querySelector('input[name="categoryFilter"]:checked');
+    activeCategories = selected ? [selected.value] : [];
+    renderTimeline(eventsData, document.querySelector('input[name="sortOrder"]:checked').value);
+
+    // Mettre à jour le gras
+    document.querySelectorAll(".cat-radio").forEach(label => {
+      label.classList.remove("selected");
+    });
+    if (selected) {
+      selected.closest("label").classList.add("selected");
+    }
+  });
+}
