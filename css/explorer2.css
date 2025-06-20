@@ -316,11 +316,12 @@ h3 {
 }
 /* Compteur d’événements */
 .event-count {
-  text-align: center;
-  font-size: 1rem;
+   font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 40px;
-  color: var(--dark-text);
+  color: #048B9A;
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top: 30px;
 }
 /* Année en bleu */
 .year {
