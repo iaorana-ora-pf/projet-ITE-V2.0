@@ -12,13 +12,17 @@
     <aside class="sidebar" id="sidebar">
   <h2>Filtrer et trier</h2>
   
-      <div class="sort-container">
+  <div class="sort-container">
   <h3>Trier par ordre :</h3>
-  <select id="sortOrder">
-    <option value="desc">Plus récent → Plus ancien</option>
-    <option value="asc">Plus ancien → Plus récent</option>
-  </select>
-</div>
+  <label class="sort-option">
+    <input type="radio" name="sortOrder" value="desc" checked>
+    Plus récent → Plus ancien
+  </label>
+  <label class="sort-option">
+    <input type="radio" name="sortOrder" value="asc">
+    Plus ancien → Plus récent
+  </label>
+</div>  
       
   <h3>
     Filtrer par catégorie :
