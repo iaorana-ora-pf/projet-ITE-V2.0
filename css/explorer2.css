@@ -216,10 +216,22 @@ h3 {
 /* ===================== */
 .timeline {
   flex: 1;
-  padding: 50px 60px;
+  background-color: #fdf6f0;
+  padding: 60px 60px 100px;
   position: relative;
 }
-
+/* Ligne centrale */
+.timeline-line {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #ccc;
+  z-index: 1;
+}
 /* Trait de la frise */
 .timeline::before {
   content: '';
@@ -232,7 +244,26 @@ h3 {
   background-color: #048B9A;
   z-index: -1;
 }
+/* Rond sur la ligne */
+.event-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #048B9A;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: -7px;
+  z-index: 2;
+}
 
+.event.left .event-dot {
+  right: -7px;
+  left: auto;
+}
+
+.event.right .event-dot {
+  left: -7px;
+}
 /* Positionnement dans la frise */
 .event {
   position: relative;
@@ -282,13 +313,37 @@ h3 {
   left: -20px;
   border-right-color: white;
 }
-
-.year {
+/* Compteur d’événements */
+.event-count {
+  text-align: center;
+  font-size: 1rem;
   font-weight: bold;
-  color: #5548e1;
-  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: var(--dark-text);
+}
+/* Année en bleu */
+.year {
+  color: #1f53e4;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+/* Icônes */
+.categories .cat-icon {
+  margin-left: 6px;
+  font-size: 1rem;
 }
 
+/* Titre cliquable */
+.title a {
+  color: var(--dark-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+.title a:hover {
+  color: var(--main-green);
+  text-decoration: underline;
+}
 /* ===================== */
 /*        MODAL           */
 /* ===================== */
