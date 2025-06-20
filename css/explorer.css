@@ -150,6 +150,16 @@
   font-size: 0.9rem;
   opacity: 0.8;
 }
+#searchInput {
+  font-size: 0.9rem; /* pareil que les labels */
+  font-family: inherit;
+  padding: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
 #active-filters-section {
   min-height: 3.5rem; /* Réserve une hauteur même vide */
   margin-top: 1rem;
@@ -214,15 +224,12 @@
 }
 
 .sort-select {
+  font-size: 0.9rem;   /* identique à celle des filtres */
+  padding: 0.5em;
   width: 100%;
-  padding: 8px 10px;
-  font-size: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: white;
-  font-family: inherit;
-  color: inherit;
-  appearance: none; /* pour un style uniforme */
 }
 
 
