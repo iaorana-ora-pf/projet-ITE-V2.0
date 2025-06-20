@@ -1,10 +1,28 @@
-const events = [
-  { year: 1990, title: "Chute du Mur de Berlin", category: "Histoire" },
-  { year: 2001, title: "Premier iPod", category: "Sciences" },
-  { year: 2010, title: "Instagram est lancé", category: "Arts" },
-  { year: 2020, title: "Pandémie COVID-19", category: "Histoire" },
-  { year: 2024, title: "Lancement mission Mars", category: "Sciences" },
-];
+fetch("data/events.json")
+  .then(response => response.json())
+  .then(events => {
+    const timeline = document.getElementById("timeline");
+
+    events.forEach(event => {
+      const div = document.createElement("div");
+      div.classList.add("event");
+      div.classList.add(event.year % 2 === 0 ? "left" : "right");
+      
+      // Optionnel : ajouter description ou catégorie si tu enrichis le JSON
+      div.innerHTML = `
+        <div class="year">${event.year}</div>
+        <div class="title">${event.title}</div>
+        ${event.shortDescription ? `<div class="desc">${event.shortDescription}</div>` : ''}
+        ${event.categories ? `
+          <div class="categories">
+            ${event.categories.map(cat => `<img src="icons/${cat}.svg" alt="${cat}" title="${cat}" />`).join("")}
+          </div>` : ''}
+      `;
+      
+      timeline.appendChild(div);
+    });
+  })
+  .catch(err => console.error("Erreur chargement JSON:", err));
 
 const timeline = document.getElementById("timeline");
 
