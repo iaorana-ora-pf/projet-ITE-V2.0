@@ -87,6 +87,22 @@ body {
   cursor: pointer;
   text-align: left;
 }
+.category-checkbox-group {
+  max-height: 120px;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.cat-check {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 10px;
+  margin-bottom: 6px;
+  color: #1e2124;
+}
 .cat-icon {
   font-size: 18px;
   margin-right: 6px;
