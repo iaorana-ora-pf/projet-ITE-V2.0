@@ -161,16 +161,18 @@ h3 {
 
 /* Réinitialiser */
 .reset-btn {
-  margin: 40px auto 0;
-  padding: 6px 16px;
-  width: 100%;
+  display: block;
+  margin: 30px auto 0;     /* espace au-dessus + centrage */
+  padding: 8px 12px;
   font-size: 0.9rem;
   background-color: var(--main-green);
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  width: fit-content; 
+  width: fit-content;       /* s’adapte au texte */
+  min-width: 160px;         /* optionnel pour cohérence */
+  text-align: center;
 }
 
 .reset-btn:hover {
