@@ -160,12 +160,12 @@
   opacity: 0.3;
 }
 #active-filters > span {
+  font-size: 0.9rem; /* ✅ identique aux boîtes */
   background-color: white !important;
   color: #000;
   border: 1px solid #ccc;
   border-radius: 16px;
   padding: 6px 12px;
-  font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -186,7 +186,7 @@
   border: 1px solid #ccc;          /* ➕ Contour léger optionnel */
   padding: 6px 12px;
   border-radius: 16px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   display: inline-flex;
   align-items: center;
   gap: 8px;
