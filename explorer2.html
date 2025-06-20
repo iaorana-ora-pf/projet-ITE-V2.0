@@ -20,14 +20,38 @@
   </select>
 </div>
       
-<h3>Filtrer par catégorie :</h3>
+  <h3>
+    Filtrer par catégorie
+    <span id="category-info-btn" title="À propos des catégories">
+      <i class="fas fa-circle-info" style="color: #ccc; cursor: pointer; margin-left: 8px;"></i>
+    </span>
+  </h3>
   <div class="category-checkboxes">
   <!-- rempli dynamiquement via JS -->
 </div>
-      
+          
     </aside>
   </div>
 
   <script src="./js/explorer2.js"></script>
+
+  <!-- Modal -->
+<div id="category-modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-modal" class="close">&times;</span>
+    <h4>À propos des catégories</h4>
+    <p>
+      Ce filtre s’appuie sur les Fonctions Essentielles de Santé Publique (FESP) de l’OMS, regroupées en 5 grandes familles :</p>
+      <ul>
+        <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
+        <li><strong>Données surveillance et recherche</strong> : production, analyse et utilisation de l'information sanitaire</li>
+        <li><strong>Promotion de la santé et prévention</strong> : actions comportementales, sociales et populationnelles</li>
+        <li><strong>Protection sanitaire et gestion des risques</strong> : réponse aux menaces sanitaires, environnementales ou réglementaires</li>
+        <li><strong>Accès aux services et aux moyens</strong> : ressources humaines, infrastructures, technologies, accès aux soins</li>
+        <li><strong>Contexte</strong> : événements ayant un impact indirect sur la santé publique.</li>
+         </ul>
+      <p>Vous pouvez sélectionner plusieurs options dans la liste, mais elles seront traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
+  </div>
+</div>
 </body>
 </html>
