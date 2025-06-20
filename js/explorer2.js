@@ -4,13 +4,22 @@ let activeCategory = null;
 
 
 const categoryInfo = {
-  "Gouvernance et pilotage": {
-    color: "#007b7f",
-    icon: "fa-scale-balanced"
+  
+    "Accès": {
+    color: "#2a9d8f",
+    icon: "fa-hospital"
+  },
+  "Contexte": {
+    color: "#6c757d",
+    icon: "fa-landmark"
   },
   "Données et recherche": {
     color: "#4b0082",
     icon: "fa-database"
+  },
+  "Gouvernance et pilotage": {
+    color: "#007b7f",
+    icon: "fa-scale-balanced"
   },
   "Promotion et prévention": {
     color: "#e76f51",
@@ -19,14 +28,6 @@ const categoryInfo = {
   "Protection et gestion des risques": {
     color: "#f4a261",
     icon: "fa-shield-alt"
-  },
-  "Accès": {
-    color: "#2a9d8f",
-    icon: "fa-hospital"
-  },
-  "Contexte": {
-    color: "#6c757d",
-    icon: "fa-landmark"
   }
 };
 
