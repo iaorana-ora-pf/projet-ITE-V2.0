@@ -21,8 +21,8 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: white;
   color: var(--dark-text);
-  overflow: hidden;
-}
+  height: 100%;
+  }
 html, body {
   height: 100%;
   overflow: hidden; /* bloque le scroll global */
