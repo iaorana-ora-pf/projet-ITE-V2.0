@@ -124,7 +124,7 @@
   border-radius: 6px;
 }
 .dropdown-checkbox div {
-  max-height: 150px;
+  height: 110px;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 10px;
