@@ -47,10 +47,10 @@ body {
   color: #048B9A;
 }
 .sidebar h3 {
+  font-size: 1rem;       /* ✅ même taille que "Trier par ordre" */
+  font-weight: bold;
   margin-top: 30px;
-  margin-bottom: 5px;
-  font-size: 1.1em;
-  text-align: left;
+  margin-bottom: 8px;
   color: #1e2124;
 }
 .sort-container {
@@ -106,16 +106,22 @@ body {
 .cat-check {
   display: flex;
   align-items: center;
-  margin-bottom: 6px;
-  gap: 10px; /* ✅ espace uniforme entre checkbox, icône et texte */
   font-size: 0.9rem;
-  color: #1e2124; /* assure texte noir dans les labels */
+  color: #1e2124;
+  margin-bottom: 6px;
 }
 
 .cat-check input[type="checkbox"] {
-  margin-right: 8px;
+  margin-right: 6px;     /* ✅ réduit l’écart entre checkbox et icône */
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
-
+.cat-check i {
+  margin-right: 6px;     /* ✅ réduit l’écart entre icône et texte */
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
 /* Timeline styling */
 .timeline {
   position: relative;
@@ -191,10 +197,6 @@ body {
   margin-bottom: 5px;
 }
 
-.event .year {
-  font-weight: bold;
-  color: #5548e1;
-}
 /* MODAL OVERLAY */
 .modal {
   display: flex;
