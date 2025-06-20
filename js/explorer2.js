@@ -89,11 +89,11 @@ function generateCategoryCheckboxes() {
     const label = document.createElement("label");
     label.className = "cat-check";
 
-    label.innerHTML = `
-      <input type="checkbox" value="${cat}">
-      <i class="fas ${info.icon}" style="color: ${info.color};"></i>
-      <span>${cat}</span>
-    `;
+   label.innerHTML = `
+  <input type="checkbox" value="${cat}">
+  <span>${cat}</span>
+  <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 6px;"></i>
+`;
 
     group.appendChild(label);
   });
