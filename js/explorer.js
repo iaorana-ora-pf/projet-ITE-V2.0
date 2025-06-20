@@ -537,7 +537,7 @@ function sortTimeline() {
   // 🧹 Vide la frise et réinsère les événements dans l'ordre trié
   timelineContainer.innerHTML = "";
   events.forEach(event => timelineContainer.appendChild(event));
-}<script>
+}
 document.querySelector('.sort-select').addEventListener('change', function () {
   const order = this.value;
   const container = document.getElementById('timeline');
@@ -553,4 +553,3 @@ document.querySelector('.sort-select').addEventListener('change', function () {
   container.innerHTML = '';
   items.forEach(item => container.appendChild(item));
 });
-</script>
