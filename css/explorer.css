@@ -196,15 +196,13 @@
   font-weight: bold;
   color: #006676;                 /* ou un gris/bleu plus neutre */
 }
-
-
 .filter-box {
   flex: 1 1 300px;
   min-width: 280px;
   background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
   font-size: 0.9rem;
   box-sizing: border-box;
 }
