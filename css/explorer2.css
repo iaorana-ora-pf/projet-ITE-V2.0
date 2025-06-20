@@ -40,33 +40,37 @@ body {
 }
 .sidebar h2 {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   font-size: 1.4em;
   text-align: center;
   color: #048B9A#1e2124;
 }
 .sidebar h3 {
+  margin-top: 30px;
   margin-bottom: 30px;
   font-size: 1.1em;
   text-align: left;
   color: #1e2124;
 }
-.categories {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-}
-
-.categories img {
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
-}
 .sort-container {
   width: 90%;
   margin-bottom: 20px;
 }
-
+.category-btn {
+  display: block;
+  width: 90%;
+  margin-bottom: 8px;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+.cat-icon {
+  font-size: 18px;
+  margin-right: 6px;
+}
 .sort-container h3 {
   margin-bottom: 8px;
 }
