@@ -101,6 +101,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   margin-bottom: 20px;
+  padding-left: 6px; 
 }
 .cat-check {
   display: flex;
@@ -109,6 +110,7 @@ body {
   font-size: 1rem;
   margin-bottom: 8px;
   color: #1e2124;
+  padding-left: 6px;
 }
 .cat-icon {
   font-size: 18px;
