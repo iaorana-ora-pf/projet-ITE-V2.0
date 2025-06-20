@@ -15,19 +15,21 @@
   <div class="sort-container">
   <h3>Trier du :</h3>
   <label class="sort-option">
-    <input type="radio" name="sortOrder" value="desc" checked>
-    Plus récent → Plus ancien
-  </label>
-  <label class="sort-option">
-    <input type="radio" name="sortOrder" value="asc">
-    Plus ancien → Plus récent
-  </label>
+  <input type="radio" name="sortOrder" value="desc" checked>
+  <span>Plus récent → Plus ancien</span>
+</label>
+<label class="sort-option">
+  <input type="radio" name="sortOrder" value="asc">
+  <span>Plus ancien → Plus récent</span>
+</label>
+
 </div>  
       
-<h3>Catégories :</h3> 
-<span id="category-info-btn" title="À propos des catégories">
-  <i class="fas fa-circle-info" style="color: #ccc; cursor: pointer;"></i>
-</span>
+<h3 style="display: flex; align-items: center; gap: 6px;">
+  Catégories
+  <i class="fas fa-circle-info" id="category-info-btn" title="À propos des catégories"
+     style="color: #ccc; cursor: pointer;"></i>
+</h3>
 
 <div class="category-checkbox-group" id="categoryCheckboxGroup">
   <!-- cases à cocher injectées via JS -->
