@@ -69,7 +69,7 @@ function renderTimeline(events, order = "desc") {
     return matchesCategory && searchableFields.includes(searchQuery);
   });
 
-  // Affiche une seule fois le compteur
+  // ✅ Phrase "La frise contient X événements" — une seule fois en haut
   const countText = document.createElement("div");
   countText.classList.add("event-count");
   countText.textContent = `La frise contient ${filtered.length} événements`;
@@ -100,12 +100,7 @@ function renderTimeline(events, order = "desc") {
 
     timeline.appendChild(div);
   });
-
-  // Mise à jour du titre principal
-  document.getElementById("timeline-count").textContent = `La frise contient ${filtered.length} événements`;
 }
-
-
 
 function generateCategoryCheckboxes() {
   const group = document.getElementById("categoryCheckboxGroup");
@@ -116,8 +111,8 @@ function generateCategoryCheckboxes() {
     label.className = "cat-check";
     label.innerHTML = `
      <input type="checkbox" value="${cat}">
-  <span>${cat}</span><i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 2px;"></i>
-`;
+     <span>${cat}</span><i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 2px;"></i>
+    `;
     group.appendChild(label);
   });
 
@@ -126,7 +121,6 @@ function generateCategoryCheckboxes() {
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
 
-    // Mettre en gras les catégories sélectionnées
     document.querySelectorAll(".cat-check").forEach(label => {
       const input = label.querySelector("input");
       if (input.checked) {
@@ -137,26 +131,22 @@ function generateCategoryCheckboxes() {
     });
   });
 }
+
 // Réinitialisation des filtres
 document.getElementById("resetFilters").addEventListener("click", () => {
-  // 1. Décocher toutes les cases
   document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => {
     cb.checked = false;
   });
 
-  // 2. Réinitialiser la variable activeCategories
   activeCategories = [];
 
-  // 3. Réinitialiser la recherche
   document.getElementById("searchInput").value = "";
   searchQuery = "";
 
-  // 4. Réinitialiser les styles visuels (si des .selected sont appliqués)
   document.querySelectorAll(".cat-check").forEach(label => {
     label.classList.remove("selected");
   });
 
-  // 5. Re-render la frise avec tri actuel
   const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
   renderTimeline(eventsData, sortValue);
 });
