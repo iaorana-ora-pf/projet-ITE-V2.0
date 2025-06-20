@@ -159,8 +159,8 @@ h3 {
 
 /* Réinitialiser */
 .reset-btn {
-  margin-top: 20px;
-  padding: 8px 10px;
+  margin: 40px auto 0;
+  padding: 6px 16px;
   width: 100%;
   font-size: 0.9rem;
   background-color: var(--main-green);
@@ -168,6 +168,7 @@ h3 {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  width: fit-content; 
 }
 
 .reset-btn:hover {
