@@ -52,7 +52,17 @@ body {
   cursor: pointer;
   margin-bottom: 1rem;
 }
+.categories {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
 
+.categories img {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
+}
 /* Timeline styling */
 .timeline {
   position: relative;
