@@ -249,7 +249,7 @@ h3 {
 .event-dot {
   width: 14px;
   height: 14px;
-  background-color: #02616B;
+  background-color: orange;
   border-radius: 50%;
   position: absolute;
   top: 20px;
@@ -316,12 +316,12 @@ h3 {
 }
 /* Compteur d’événements */
 .event-count {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #048B9A;
+  color:  #1e2124;
   margin-bottom: 30px;
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 /* Année en bleu */
 .year {
