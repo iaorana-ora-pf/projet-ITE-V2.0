@@ -216,7 +216,7 @@ h3 {
 /* ===================== */
 .timeline {
   flex: 1;
-  background-color: #EDE7E3;
+  background-color: white;
   padding: 60px 60px 100px;
   position: relative;
 }
@@ -269,7 +269,7 @@ h3 {
 .event {
   position: relative;
   width: 45%;
-  background: white;
+  background: #fdfdfb;
   padding: 20px;
   border-radius: 12px;
   margin: 20px 0;
