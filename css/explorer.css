@@ -28,32 +28,7 @@
   margin: 0.5rem 0; /* top-bottom : spacing harmonisé */
 }
 /*-----------------------------------Barre latérale -----------------------------------*/
-.side-panel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 340px;
-  height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-              url('../images/accueil.png'); /* remplace par ton chemin */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: lighten;
-  -webkit-backdrop-filter: blur(4px); /* compatibilité Safari */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-  z-index: 100;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin: 0;
-  padding: 0;
-  flex-shrink: 0;
-  overflow: hidden;
-  word-wrap: break-word;
-}
 
 /* ⬇️ Permet de scroller le contenu interne sans bouger la sidebar */
 .side-scrollable-content {
@@ -66,12 +41,6 @@
   margin-top: 1.5rem; /* ajoute de l'espace avant chaque titre */
   margin-bottom: 0.5rem;
   font-size: 1rem;
-}
-/* 🧩 Layout global */
-.side-panel,
-.main-content,
-.timeline-layout {
-  height: 100%;
 }
 
 /* 📌 Textes & header */
@@ -265,43 +234,53 @@
   background-color: var(--hover-green); /* couleur plus foncée si définie */
 }
 
-.timeline-section {
-  flex: 1; /* ou 2 selon ton besoin d'espace */
-  overflow-y: auto;
-  padding: 2rem;
-  min-height: 100%;
-  background-color: transparent; /* supprime le fond bleu */
-}
-.timeline-layout {
-  display: flex;
-  align-items: stretch;
-  height: 100%; /* 🔒 fixe la hauteur à 100% de l'écran */
-  overflow: hidden;
-  background-color: white;
-}
+
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+   min-height: 100vh;
 }
-.layout-with-sidebar.sidebar-hidden .main-content {
-  margin-left: 0;
-  padding-left: 1.5rem; /* ou comme tu veux */
-}
-.main-content {
+.page-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr 400px;
+  grid-template-rows: 100vh;
   height: 100vh;
-  padding-left: 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  width: 100%;
   overflow: hidden;
 }
+.side-panel {
+  height: 100vh;
+  overflow-y: auto;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+              url('../images/accueil.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: lighten;
+}
+.timeline {
+  overflow-y: auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.event-details {
+  background-color: white;
+  overflow-y: auto;
+  padding: 1.5rem;
+  border-left: 1px solid #eee;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.05);
+}
 
-
-
-
-
-
+@media (max-width: 768px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
 
 
 
@@ -437,11 +416,7 @@ ACCUEIL Fenêtre flottante
 }
 /* ✅ Scrolls indépendants */
 
-.event-details-container {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 0;
-}
+
 /*-----------------------------------
  STOP OK
 -----------------------------------*/
@@ -762,21 +737,7 @@ a.button {
     display: none;
   }
 }
-/*-----------------------------------
-  DÉTAILS ÉVÉNEMENT
------------------------------------*/
-.event-details-container {
-  flex: 1;
-  overflow-y: auto;
-  height: 100%;
-  padding: 1.5rem;
-  max-width: 450px;
-  min-width: 300px;
-  width: 100%;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-}
+
 
 /*-----------------------------------
   INTRO & ENCART
