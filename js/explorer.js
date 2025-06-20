@@ -537,4 +537,20 @@ function sortTimeline() {
   // 🧹 Vide la frise et réinsère les événements dans l'ordre trié
   timelineContainer.innerHTML = "";
   events.forEach(event => timelineContainer.appendChild(event));
-}
+}<script>
+document.querySelector('.sort-select').addEventListener('change', function () {
+  const order = this.value;
+  const container = document.getElementById('timeline');
+  const items = Array.from(container.querySelectorAll('.event'));
+
+  items.sort((a, b) => {
+    const dateA = new Date(a.dataset.date);
+    const dateB = new Date(b.dataset.date);
+    return order === 'asc' ? dateA - dateB : dateB - dateA;
+  });
+
+  // Réinjecter les événements triés dans l'ordre
+  container.innerHTML = '';
+  items.forEach(item => container.appendChild(item));
+});
+</script>
