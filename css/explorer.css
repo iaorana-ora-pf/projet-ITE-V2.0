@@ -236,7 +236,28 @@
   border: 1px solid #ccc;
 }
 
+.floating-home-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-green); /* ou une couleur directe comme #048B9A */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 200;
+  transition: background-color 0.2s ease;
+}
 
+.floating-home-btn:hover {
+  background-color: var(--hover-green); /* couleur plus foncée si définie */
+}
 
 
 
@@ -756,18 +777,7 @@ a.button {
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
-/*-----------------------------------
-  BLOCS FLOTTANTS
------------------------------------*/
-.floating-buttons {
-  position: fixed;
-  top: 1rem;              /* ancré en haut */
-  right: 1rem;            /* aligné à droite */
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
-  z-index: 150;
-}
+
 /*-----------------------------------
   INTRO & ENCART
 -----------------------------------*/
