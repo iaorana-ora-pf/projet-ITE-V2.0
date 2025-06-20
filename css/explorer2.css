@@ -24,7 +24,8 @@ body {
 
 /* Sidebar */
 .sidebar {
-   position: fixed;
+  position: fixed;
+  font-size: 0.9rem; /* 🟢 Par défaut, tout le texte est en 0.9rem */
   top: 0;
   left: 0;
   width: 340px;
