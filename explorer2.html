@@ -4,70 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projet'ITE</title>
-  <link rel="stylesheet" href="./css/explorer2.css"/>
+  <link rel="stylesheet" href="./css/explorer2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar" id="sidebar">
-      <h2 style="margin-top: 30px;">Filtrer et trier</h2>
 
-      <!-- TRI PAR ORDRE -->
+    <!-- =================== -->
+    <!--      SIDEBAR        -->
+    <!-- =================== -->
+    <aside class="sidebar" id="sidebar">
+
+      <h2>Filtrer et trier</h2>
+
+      <!-- Tri -->
       <div class="sort-container">
         <h3>Trier du :</h3>
-        <label class="sort-option">
+        <label>
           <input type="radio" name="sortOrder" value="desc" checked>
           <span>Plus récent → Plus ancien</span>
         </label>
-        <label class="sort-option">
+        <label>
           <input type="radio" name="sortOrder" value="asc">
           <span>Plus ancien → Plus récent</span>
         </label>
       </div>
 
-      <!-- CATÉGORIES -->
-      <h3 style="display: flex; align-items: center; gap: 8px;">
+      <!-- Catégories -->
+      <h3>
         Catégories
-        <i class="fas fa-circle-info" id="category-info-btn" title="À propos des catégories" style="color: #ccc; cursor: pointer;"></i>
+        <i class="fas fa-circle-info" id="category-info-btn" title="À propos des catégories"></i>
       </h3>
       <div class="category-checkbox-group" id="categoryCheckboxGroup">
-        <!-- Cases à cocher injectées dynamiquement via JS -->
+        <!-- cases à cocher injectées via JS -->
       </div>
- <!-- RECHERCHE -->
-      <input id="searchInput" class="search-bar" type="text" placeholder="Rechercher par mots-clés..." />
-      
-   
-    
+
+      <!-- Recherche -->
+      <div class="search-title">Rechercher par mots-clés :</div>
+      <input id="searchInput" class="search-bar" type="text" placeholder="Ex. dates, titres, mots..." />
+
+      <!-- Bouton Réinitialiser -->
+      <button class="reset-btn" id="resetBtn">Réinitialiser</button>
     </aside>
 
-    <!-- TIMELINE -->
+    <!-- =================== -->
+    <!--     TIMELINE        -->
+    <!-- =================== -->
     <main class="timeline" id="timeline">
       <!-- JS injectera ici les événements -->
     </main>
   </div>
 
-  <!-- MODAL INFO CATÉGORIES -->
+  <!-- =================== -->
+  <!--     MODAL INFO      -->
+  <!-- =================== -->
   <div id="category-modal" class="modal hidden">
     <div class="modal-content">
       <span id="close-modal" class="close">&times;</span>
       <h4><strong>À propos des catégories</strong></h4>
       <p>
-        Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" target="_blank" class="fesp-link">
+        Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" 
+        target="_blank" class="fesp-link">
         Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :
       </p>
       <ul>
-        <li><strong>Gouvernance, et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
-        <li><strong>Données surveillance et recherche</strong> : production, analyse et utilisation de l'information sanitaire</li>
-        <li><strong>Promotion de la santé et prévention</strong> : actions comportementales, sociales et populationnelles</li>
-        <li><strong>Protection sanitaire et gestion des risques</strong> : réponse aux menaces sanitaires, environnementales ou réglementaires</li>
-        <li><strong>Accès aux services et aux moyens</strong> : ressources humaines, infrastructures, technologies, accès aux soins</li>
+        <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
+        <li><strong>Données, surveillance et recherche</strong> : information sanitaire</li>
+        <li><strong>Promotion de la santé et prévention</strong> : comportements et actions populationnelles</li>
+        <li><strong>Protection et gestion des risques</strong> : réponse aux menaces sanitaires</li>
+        <li><strong>Accès aux services</strong> : ressources humaines, infrastructures, soins</li>
       </ul>
-      <p>La catégorie <strong>"Contexte"</strong> réunit les événements ayant un impact indirect sur la santé publique.<br><br>  
-      Vous pouvez sélectionner plusieurs options dans la liste, mais elles seront traitées comme des choix séparés ("OU") et non combinés ("ET").</p>
+      <p>
+        La catégorie <strong>"Contexte"</strong> regroupe les événements à impact indirect sur la santé publique.<br><br>
+        Vous pouvez sélectionner plusieurs options. Les résultats affichent les événements correspondants à au moins une des catégories sélectionnées.
+      </p>
     </div>
   </div>
 
-  <!-- JS -->
+  <!-- JS Script -->
   <script src="./js/explorer2.js"></script>
 </body>
 </html>
