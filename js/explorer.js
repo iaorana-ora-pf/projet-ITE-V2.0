@@ -75,8 +75,12 @@ function updateTimeline() {
   const container = document.getElementById("timeline");
   container.innerHTML = "";
   const filters = getFilters();
+ const sortOrder = document.getElementById("sortOrder")?.value || "asc";
+const sortedYears = Object.keys(events).sort((a, b) => {
+  return sortOrder === "asc" ? a - b : b - a;
+});
 
-  for (const year in events) {
+ for (const year of sortedYears) {
     const filtered = events[year].filter(e =>
       (!filters.categories.length || (Array.isArray(e.category) ? e.category.some(c => filters.categories.includes(c)) : filters.categories.includes(e.category))) &&
       (!filters.keywords.length || filters.keywords.some(k => e.keywords.includes(k))) &&
