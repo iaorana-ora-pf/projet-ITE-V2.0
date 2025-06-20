@@ -71,6 +71,26 @@ body {
   font-size: 18px;
   margin-right: 6px;
 }
+.category-checkboxes {
+  max-height: 120px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.cat-check {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.cat-check input[type="checkbox"] {
+  margin-right: 8px;
+}
 .sort-container h3 {
   margin-bottom: 8px;
 }
