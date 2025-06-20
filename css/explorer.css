@@ -159,6 +159,22 @@
 #active-filters-section.empty {
   opacity: 0.3;
 }
+#active-filters > span {
+  background-color: white !important;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+#active-filters > span .remove-btn {
+  color: #006676;
+  font-weight: bold;
+  cursor: pointer;
+}
 .centered-button {
   display: block;
   margin: 2rem auto 0 auto; /* top: 2rem, horizontal: auto, bottom: 0 */
@@ -182,8 +198,34 @@
 }
 
 
+.filter-box {
+  flex: 1 1 300px;
+  min-width: 280px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+.box-title {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark-text);
+}
 
-
+.sort-select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  font-family: inherit;
+  color: inherit;
+  appearance: none; /* pour un style uniforme */
+}
 
 
 
