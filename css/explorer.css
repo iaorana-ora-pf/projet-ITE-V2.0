@@ -125,12 +125,8 @@ h4 {
   font-size: 0.9rem;
   min-height: 45px;
   color: var(--dark-text);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
-  box-sizing: border-box;
-}
+ }
+
 .filter-content .placeholder {
   color: #aaa;
   font-style: italic;
@@ -165,6 +161,14 @@ h4 {
 #active-filters-section {
   max-height: 100px;
   overflow-y: auto;
+}
+#active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 .side-footer {
   font-size: 0.75rem;
