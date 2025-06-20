@@ -1,0 +1,114 @@
+[
+  {
+    "id": "event001",
+    "year": 1966,
+    "title": "Début des essais nucléaires",
+    "shortDescription": "Début des essais nucléaires à Moruroa et Fangataufa.",
+    "longDescription": "Les essais atmosphériques français ont débuté en 1966 sur les atolls de Moruroa et Fangataufa. Ces essais ont eu un impact important sur la santé publique et l'environnement local.",
+    "keywords": ["essais", "radiations", "Moruroa"],
+    "categories": ["sante", "environnement"],
+    "sources": [
+      { "label": "ICAN France", "url": "https://icanfrance.org" }
+    ],
+    "resources": []
+  },
+  {
+    "id": "event002",
+    "year": 1975,
+    "title": "Création du Centre Hospitalier de Polynésie",
+    "shortDescription": "Mise en place du CHPF à Pirae.",
+    "longDescription": "Le CHPF devient le centre hospitalier de référence pour tout le territoire, améliorant la qualité et l’accessibilité des soins.",
+    "keywords": ["CHPF", "infrastructure"],
+    "categories": ["sante"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event003",
+    "year": 1983,
+    "title": "Campagne de vaccination contre la poliomyélite",
+    "shortDescription": "Vaccination massive des enfants contre la polio.",
+    "longDescription": "Une campagne de vaccination de grande ampleur a été menée en 1983 pour éradiquer la poliomyélite, en collaboration avec l’OMS.",
+    "keywords": ["vaccin", "polio"],
+    "categories": ["sante", "prevention"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event004",
+    "year": 1995,
+    "title": "Reprise des essais nucléaires",
+    "shortDescription": "Impact sanitaire et environnemental controversé.",
+    "longDescription": "La reprise des essais nucléaires a ravivé les inquiétudes sur les cancers et maladies génétiques liés aux radiations.",
+    "keywords": ["essais", "nucléaire"],
+    "categories": ["sante", "politique"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event005",
+    "year": 2002,
+    "title": "Création de la CPS",
+    "shortDescription": "Naissance de la Caisse de Prévoyance Sociale.",
+    "longDescription": "La CPS gère l’assurance maladie, les retraites et les accidents du travail pour la population.",
+    "keywords": ["assurance", "protection sociale"],
+    "categories": ["sante", "administration"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event006",
+    "year": 2013,
+    "title": "Épidémie de dengue",
+    "shortDescription": "Une épidémie majeure touche Tahiti et les îles.",
+    "longDescription": "Une forte épidémie de dengue de type 1 a affecté plusieurs milliers de personnes, nécessitant des mesures d’urgence sanitaire.",
+    "keywords": ["dengue", "épidémie"],
+    "categories": ["sante", "urgence"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event007",
+    "year": 2014,
+    "title": "Premiers cas de Zika",
+    "shortDescription": "Introduction du virus Zika en Polynésie.",
+    "longDescription": "Le virus Zika a émergé en 2014, provoquant des complications neurologiques et un renforcement de la surveillance épidémiologique.",
+    "keywords": ["zika", "vecteurs"],
+    "categories": ["sante", "alerte"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event008",
+    "year": 2015,
+    "title": "Campagne anti-tabac",
+    "shortDescription": "Lancement de la campagne 'Arrêtez de fumer'.",
+    "longDescription": "Campagne de santé publique visant à réduire la consommation de tabac, surtout chez les jeunes.",
+    "keywords": ["tabac", "prévention"],
+    "categories": ["sante", "prevention"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event009",
+    "year": 2020,
+    "title": "COVID-19 en Polynésie",
+    "shortDescription": "Premiers cas confirmés et confinement.",
+    "longDescription": "La Polynésie met en place un plan d’urgence sanitaire dès l’apparition du COVID-19, avec couvre-feux et vaccination massive.",
+    "keywords": ["covid", "pandémie"],
+    "categories": ["sante", "urgence"],
+    "sources": [],
+    "resources": []
+  },
+  {
+    "id": "event010",
+    "year": 2023,
+    "title": "Téléconsultation généralisée",
+    "shortDescription": "Accès à la santé à distance pour les archipels isolés.",
+    "longDescription": "Mise en œuvre de plateformes de téléconsultation pour améliorer la couverture médicale des îles éloignées.",
+    "keywords": ["téléconsultation", "numérique"],
+    "categories": ["sante", "technologie"],
+    "sources": [],
+    "resources": []
+  }
+]
