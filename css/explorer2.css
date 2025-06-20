@@ -52,25 +52,23 @@ h3 {
 /*      SIDEBAR           */
 /* ===================== */
 .sidebar {
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: var(--sidebar-width);
   height: 100vh;
   background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
   background-size: cover;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 0.9rem;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
-  padding: 0; /* on retire ici, et on le met dans le contenu scrollable */
-  overflow: hidden;
 }
 /* === CONTENU SCROLLABLE === */
 .sidebar-scroll {
   overflow-y: auto;
-  padding: 20px 20px 10px 20px; /* 🟢 Ajoute une marge interne gauche ici */
+  padding: 20px 20px 0 20px; /* top right bottom left */
   flex-grow: 1;
 }
 .sidebar::-webkit-scrollbar {
