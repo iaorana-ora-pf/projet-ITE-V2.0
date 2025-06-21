@@ -34,9 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("resetFilters").addEventListener("click", () => {
-    document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => {
-      cb.checked = false;
-    });
+    document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => cb.checked = false);
     activeCategories = [];
     searchQuery = "";
     document.getElementById("searchInput").value = "";
@@ -88,16 +86,19 @@ function renderTimeline(events, order = "desc") {
 
   timeline.innerHTML = "";
   for (const [year, items] of Object.entries(grouped)) {
+    const sideClass = year % 2 === 0 ? 'right' : 'left';
+
     const yearBlock = document.createElement("div");
-    yearBlock.className = `year-block ${year % 2 === 0 ? 'right' : 'left'}`;
+    yearBlock.className = `year-block ${sideClass}`;
+
+    // Rond contenant l'année, centré sur la frise
+    const yearCircle = document.createElement("div");
+    yearCircle.className = "timeline-circle";
+    yearCircle.textContent = year;
+    yearBlock.appendChild(yearCircle);
 
     const content = document.createElement("div");
     content.className = "block-content";
-
-    const yearTitle = document.createElement("div");
-    yearTitle.className = "year-title";
-    yearTitle.textContent = year;
-    content.appendChild(yearTitle);
 
     items.forEach(ev => {
       const evDiv = document.createElement("div");
