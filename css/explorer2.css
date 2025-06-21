@@ -220,7 +220,7 @@ h3 {
   position: relative;
   margin: 0 auto;
   padding: 40px 0;
-  width: 80%;
+  width: 90%;
 }
 
 #timeline::before {
@@ -232,53 +232,17 @@ h3 {
   width: 4px;
   background: #ccc;
   transform: translateX(-50%);
+  z-index: 0;
 }
 
-#timeline-wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  padding: 30px;
-  background: white;
-  flex-grow: 1;
-  width: 100%;
-}
-
-#timeline-header {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--main-green);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#timeline-controls {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-#timeline-controls label {
-  margin: 0 10px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-/* Blocs année alternés gauche/droite */
+/* Bloc année + événements */
 .year-block {
   position: relative;
   width: 50%;
-  padding: 20px;
-  margin: 60px 0;
+  padding: 30px 30px 30px;
+  box-sizing: border-box;
 }
 
-.year-block:nth-child(odd) {
-  left: 0;
-  text-align: left;
-}
-
-.year-block:nth-child(even) {
-  left: 50%;
-  text-align: right;
-}
 .year-block.left {
   left: 0;
   text-align: left;
@@ -288,40 +252,45 @@ h3 {
   left: 50%;
   text-align: right;
 }
-/* Rond pour l’année */
+
+/* Conteneur global (rond + événements) */
+.year-block .block-content {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 30px 20px 20px;
+  z-index: 1;
+}
+
+/* Rond centré sur la ligne */
 .year-block .year-title {
-   position: absolute;
-  top: -25px;
+  position: absolute;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: #ff9900;
+  transform: translate(-50%, -50%);
+  background-color: orange;
   color: white;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
   text-align: center;
   font-weight: bold;
   z-index: 2;
-  box-shadow: 0 0 0 4px white; /* Pour détacher visuellement du bloc */
+  box-shadow: 0 0 0 4px white;
 }
-.event-container {
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 20px;
-}
-/* Événements dans un style moderne, allégé */
+
+/* Événements individuels */
 .event-item {
-  padding: 12px 16px;
-  margin: 10px 0;
+  margin: 12px 0;
+  padding: 10px 14px;
   background: #f9f9f9;
   border-left: 4px solid var(--main-green);
   border-radius: 6px;
   transition: background 0.2s;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
 
 .event-item:hover {
@@ -336,7 +305,7 @@ h3 {
   margin-left: 10px;
 }
 
-.event-icons .cat-icon {
+.cat-icon {
   margin-right: 8px;
   font-size: 1rem;
 }
