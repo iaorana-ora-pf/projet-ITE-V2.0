@@ -220,7 +220,7 @@ h3 {
 #timeline {
   position: relative;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 40px 0;
   width: 90%;
 }
 #timeline-wrapper {
@@ -241,7 +241,6 @@ h3 {
   width: 4px;
   background: #ccc;
   transform: translateX(-50%);
-  z-index: 0;
 }
 #timeline-header {
   font-size: 1.4rem;
@@ -269,9 +268,10 @@ h3 {
 }
 .timeline-group {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  margin: 40px 0;
+  margin: 60px 0;
   position: relative;
 }
 
@@ -284,10 +284,11 @@ h3 {
 }
 
 .timeline-dot {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: orange;
+  z-index: 2;
 }
 
 .timeline-dot::before {
@@ -302,24 +303,28 @@ h3 {
   transform: translate(-50%, 0);
   z-index: 10;
 }
+.timeline-group.left .year-label {
+  text-align: right;
+}
 
+.timeline-group.right .year-label {
+  text-align: left;
+}
 .year-label {
-  width: 80px;
+  min-width: 80px;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  margin: 0 20px;
   color: var(--main-green);
 }
 .year-block {
-  width: 45%;
-  position: relative;
   background: #fdfdfb;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
-  margin: 30px 0;
-  padding: 20px;
-  z-index: 1;
-   max-width: 600px;
+  padding: 15px;
+  max-width: 500px;
+  flex-grow: 1;
 }
 .year-block.left {
   float: left;
@@ -334,14 +339,6 @@ h3 {
   text-align: left;
 }
 /* Titre année centré avec point orange sur la frise */
-.year-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: var(--main-green);
-  text-align: center;
-  position: relative;
-  margin-bottom: 20px;
-}
 .year-title::after {
   content: "";
   position: absolute;
