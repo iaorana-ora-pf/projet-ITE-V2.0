@@ -86,26 +86,20 @@ function renderTimeline(events, order = "desc") {
 
   timeline.innerHTML = "";
 for (const [year, items] of Object.entries(grouped)) {
-  const sideClass = year % 2 === 0 ? 'right' : 'left';
+  const sideClass = year % 2 === 0 ? "right" : "left";
 
-  const yearBlock = document.createElement("div");
-  yearBlock.className = `year-block ${sideClass}`;
+  const entry = document.createElement("div");
+  entry.className = `timeline-entry ${sideClass}`;
 
-  // Conteneur principal pour ligne + année + bloc événements
-  const wrapper = document.createElement("div");
-  wrapper.className = "timeline-entry";
+  // Rond central contenant l’année
+  const marker = document.createElement("div");
+  marker.className = "timeline-marker";
+  marker.textContent = year;
+  entry.appendChild(marker);
 
-  // Création du rond central sur la ligne
-  const yearMarker = document.createElement("div");
-  yearMarker.className = "timeline-marker";
-  yearMarker.innerHTML = `
-    <div class="timeline-circle">${year}</div>
-  `;
-  wrapper.appendChild(yearMarker);
-
-  // Création du bloc événement à gauche ou droite
-  const eventGroup = document.createElement("div");
-  eventGroup.className = "event-group";
+  // Bloc contenant tous les événements de l’année
+  const block = document.createElement("div");
+  block.className = "event-block";
 
   items.forEach(ev => {
     const evDiv = document.createElement("div");
@@ -120,12 +114,11 @@ for (const [year, items] of Object.entries(grouped)) {
     }).join("");
 
     evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
-    eventGroup.appendChild(evDiv);
+    block.appendChild(evDiv);
   });
 
-  yearBlock.appendChild(eventGroup);
-  wrapper.appendChild(yearBlock);
-  timeline.appendChild(wrapper);
+  entry.appendChild(block);
+  timeline.appendChild(entry);
 }
 }
 
