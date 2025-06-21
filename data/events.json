@@ -2,7 +2,6 @@
   "1772": [
     {
       "id": "event1",
-      "title": "Première épidémie de grippe à Tahiti",
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -16,13 +15,13 @@
           "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
         }
       ],
-      "added": "2025-06-21"
+      "added": "2025-06-21",
+      "name": "Première épidémie de grippe à Tahiti"
     }
   ],
   "1863": [
     {
       "id": "event2",
-      "title": "Épidémie de variole aux Marquises",
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -36,13 +35,13 @@
           "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
         }
       ],
-      "added": "2025-06-21"
+      "added": "2025-06-21",
+      "name": "Épidémie de variole aux Marquises"
     }
   ],
   "1918": [
     {
       "id": "event3",
-      "title": "Grippe espagnole en Polynésie",
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -56,13 +55,13 @@
           "url": "https://horizon.documentation.ird.fr"
         }
       ],
-      "added": "2025-06-21"
+      "added": "2025-06-21",
+      "name": "Grippe espagnole en Polynésie"
     }
   ],
   "1949": [
     {
       "id": "event4",
-      "title": "Création du Centre de Santé Scolaire",
       "categories": [
         "Accès"
       ],
@@ -77,397 +76,8 @@
           "url": "https://www.service-public.pf/dsp/centre-de-sante-scolaire/"
         }
       ],
-      "added": "2025-06-21"
-    }
-  ],
-  "1952": [
-    {
-      "id": "event5",
-      "title": "Campagne de vaccination contre la tuberculose",
-      "categories": [
-        "Promotion et prévention"
-      ],
-      "keywords": [
-        "vaccination",
-        "tuberculose"
-      ],
-      "sources": [
-        {
-          "label": "Archives Santé",
-          "url": "https://example.com/tuberculose"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "1966": [
-    {
-      "id": "event6",
-      "title": "Création du service de radioprotection",
-      "categories": [
-        "Protection et gestion des risques"
-      ],
-      "keywords": [
-        "nucléaire",
-        "radioprotection"
-      ],
-      "sources": [
-        {
-          "label": "Rapport ILM",
-          "url": "https://example.com/radio"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "1986": [
-    {
-      "id": "event7",
-      "title": "Baisse significative des maladies infectieuses",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "mortalité",
-        "infections"
-      ],
-      "sources": [
-        {
-          "label": "Atlas démographique",
-          "url": "https://example.com/atlas"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "1996": [
-    {
-      "id": "event8",
-      "title": "Programme d’allaitement maternel",
-      "categories": [
-        "Promotion et prévention"
-      ],
-      "keywords": [
-        "allaitement",
-        "enfant"
-      ],
-      "sources": [
-        {
-          "label": "Direction Santé",
-          "url": "https://example.com/allaitement"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2001": [
-    {
-      "id": "event9",
-      "title": "Schéma d’Organisation Sanitaire 2001-2007",
-      "categories": [
-        "Gouvernance"
-      ],
-      "keywords": [
-        "plan",
-        "organisation"
-      ],
-      "sources": [
-        {
-          "label": "Ministère Santé",
-          "url": "https://example.com/sos2001"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2003": [
-    {
-      "id": "event10",
-      "title": "Dépistage des cancers gynécologiques",
-      "categories": [
-        "Accès",
-        "Prévention"
-      ],
-      "keywords": [
-        "cancer",
-        "femme"
-      ],
-      "sources": [
-        {
-          "label": "Rapport Santé",
-          "url": "https://example.com/cancers"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2010": [
-    {
-      "id": "event11",
-      "title": "Enquête sur les maladies non transmissibles",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "facteurs de risque",
-        "enquête"
-      ],
-      "sources": [
-        {
-          "label": "BEH",
-          "url": "https://example.com/beh2010"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2014": [
-    {
-      "id": "event12",
-      "title": "Parcours santé au parc Paofai",
-      "categories": [
-        "Prévention"
-      ],
-      "keywords": [
-        "activité physique"
-      ],
-      "sources": [
-        {
-          "label": "Tahiti Infos",
-          "url": "https://tahiti-infos.com"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2015": [
-    {
-      "id": "event13",
-      "title": "Programme allaitement maternel",
-      "categories": [
-        "Prévention"
-      ],
-      "keywords": [
-        "allaitement",
-        "enfant"
-      ],
-      "sources": [
-        {
-          "label": "Programme AM",
-          "url": "https://example.com/am"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event14",
-      "title": "Données santé sur le cancer",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "cancer"
-      ],
-      "sources": [
-        {
-          "label": "Registre cancer",
-          "url": "https://example.com/cancer2015"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2016": [
-    {
-      "id": "event15",
-      "title": "Schéma organisation sanitaire 2016-2021",
-      "categories": [
-        "Gouvernance"
-      ],
-      "keywords": [
-        "organisation",
-        "planification"
-      ],
-      "sources": [
-        {
-          "label": "Ministère Santé",
-          "url": "https://example.com/sos2016"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event16",
-      "title": "Politique de santé 2016-2025",
-      "categories": [
-        "Gouvernance"
-      ],
-      "keywords": [
-        "politique",
-        "plan"
-      ],
-      "sources": [
-        {
-          "label": "Santé PF",
-          "url": "https://example.com/politique"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event17",
-      "title": "Enquête santé - Jeunes",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "adolescent",
-        "comportement"
-      ],
-      "sources": [
-        {
-          "label": "GSHS",
-          "url": "https://example.com/gshs"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2017": [
-    {
-      "id": "event18",
-      "title": "Dispositif école en santé",
-      "categories": [
-        "Prévention"
-      ],
-      "keywords": [
-        "école",
-        "adolescent"
-      ],
-      "sources": [
-        {
-          "label": "DSP",
-          "url": "https://example.com/ecole"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2018": [
-    {
-      "id": "event19",
-      "title": "Plan cancer 2018-2022",
-      "categories": [
-        "Gouvernance"
-      ],
-      "keywords": [
-        "cancer",
-        "plan"
-      ],
-      "sources": [
-        {
-          "label": "Plan cancer",
-          "url": "https://example.com/plan-cancer"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event20",
-      "title": "Schéma de prévention santé",
-      "categories": [
-        "Prévention"
-      ],
-      "keywords": [
-        "plan santé"
-      ],
-      "sources": [
-        {
-          "label": "Schéma prévention",
-          "url": "https://example.com/prevention"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2019": [
-    {
-      "id": "event21",
-      "title": "Dépistage du Rhumatisme Articulaire Aigu",
-      "categories": [
-        "Prévention"
-      ],
-      "keywords": [
-        "RAA",
-        "école"
-      ],
-      "sources": [
-        {
-          "label": "RAA PF",
-          "url": "https://example.com/raa"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2020": [
-    {
-      "id": "event22",
-      "title": "Registre des cancers - 1er rapport",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "cancer",
-        "registre"
-      ],
-      "sources": [
-        {
-          "label": "Registre",
-          "url": "https://example.com/registre"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2022": [
-    {
-      "id": "event23",
-      "title": "Campagne de dépistage des mélanomes",
-      "categories": [
-        "Prévention"
-      ],
-      "keywords": [
-        "peau",
-        "mélanome"
-      ],
-      "sources": [
-        {
-          "label": "Ligue contre le cancer",
-          "url": "https://example.com/melanome"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2024": [
-    {
-      "id": "event24",
-      "title": "Enquête Ea Piahi - Jeunes",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "jeunes",
-        "comportement"
-      ],
-      "sources": [
-        {
-          "label": "Ea Piahi",
-          "url": "https://example.com/piahi"
-        }
-      ],
-      "added": "2025-06-21"
+      "added": "2025-06-21",
+      "name": "Création du Centre de Santé Scolaire"
     }
   ]
 }
