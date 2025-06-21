@@ -1,59 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Ressources et Documents</title>
-  <link rel="stylesheet" href="styles.css"><!-- ajuste selon ton CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projet'ITE</title>
+  <link rel="stylesheet" href="./css/consulter.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Tu peux inclure ton header/navigation existante ici -->
-  <header>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="explorer.html">Explorer la frise</a>
-      <a href="resources.html" class="active">Ressources</a>
-    </nav>
-  </header>
+  <div class="container">
 
-  <main>
-    <h1>Ressources & Documents</h1>
-    <p>Retrouve ici tous les documents, images, vidéos et liens en lien avec les événements de notre frise.</p>
+    <!-- =================== -->
+    <!--      SIDEBAR        -->
+    <!-- =================== -->
+    <aside class="sidebar" id="sidebar">
+<div class="sidebar-scroll">
+      <h2>FIltrer et trier </h2>
 
-    <!-- Section de recherche/filtres -->
-    <input type="text" id="searchInput" placeholder="Rechercher un document...">
+        <!-- Footer -->
+        <div class="sidebar-footer">
+        <p>Projet'ITE - © 2025 – Tous droits réservés </p>
+        </div>
+    
+    </aside>
 
-    <!-- Liste des ressources -->
-    <ul id="resourceList">
-      <!-- Exemple d’éléments, à répliquer dynamiquement -->
-      <li data-keywords="discours direct entrée francais">
-        <strong>Discours d’entrée en guerre (1939)</strong><br>
-        <em>Discours prononcé par X le 3 septembre 1939.</em><br>
-        <a href="docs/discours1939.pdf" target="_blank">Télécharger/voir</a>
-      </li>
-      <li data-keywords="photo libération paris">
-        <strong>Photo – Libération de Paris (1944)</strong><br>
-        <em>Image historique, 25 août 1944.</em><br>
-        <a href="docs/liberation_paris.jpg" target="_blank">Voir</a>
-      </li>
-      <!-- ajoute autant de <li> que nécessaire -->
-    </ul>
-  </main>
+ <!-- =================== -->
+  <!--     Frise      -->
+  <!-- =================== -->
+    
 
-  <!-- footer similaire à ton site -->
-  <footer>
-    <p>&copy; 2025 Ton Projet</p>
-  </footer>
+  <a href="index.html" class="home-button" title="Retour à l'accueil">
+  <i class="fas fa-home"></i>
+</a>
 
-  <script>
-    // Script de recherche simple en JS
-    document.getElementById('searchInput').addEventListener('input', function() {
-      const filter = this.value.toLowerCase();
-      const items = document.querySelectorAll('#resourceList li');
-      items.forEach(li => {
-        const text = li.textContent.toLowerCase() + " " + li.dataset.keywords;
-        li.style.display = text.includes(filter) ? '' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>
