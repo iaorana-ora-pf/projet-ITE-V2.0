@@ -379,7 +379,7 @@ h3 {
 }
 .event-item:hover {
   transform: scale(1.05);
-  color: #007bff;
+  color: #048B9A;
   font-weight: bold;
   cursor: pointer;
 }
