@@ -100,7 +100,8 @@ function renderTimeline(events, order = "desc") {
   const yearLabel = document.createElement("div");
   yearLabel.className = "year-label";
   yearLabel.textContent = year;
-
+yearLabel.setAttribute("data-year", year);
+    
   const dot = document.createElement("div");
   dot.className = "timeline-dot";
 
