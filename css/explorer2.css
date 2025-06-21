@@ -234,7 +234,23 @@ h3 {
   transform: translateX(-50%);
   z-index: 0;
 }
-
+.timeline-circle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
 /* Bloc année + événements */
 .year-block {
   position: relative;
