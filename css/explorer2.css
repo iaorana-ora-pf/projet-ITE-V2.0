@@ -262,13 +262,7 @@ h3 {
   clear: both;
 }
 
-.timeline-group.right {
-  flex-direction: row;
-}
 
-.timeline-group.left {
-  flex-direction: row-reverse;
-}
 .timeline-dot {
   width: 16px;
   height: 16px;
@@ -314,14 +308,6 @@ h3 {
   color: #008b95;
   flex-shrink: 0;
 }
-.timeline-group.left .year-label {
-  text-align: right;
-}
-
-.timeline-group.right .year-label {
-  text-align: left;
-}
-
 .year-block {
   background: #fdfdfb;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -330,18 +316,7 @@ h3 {
   margin-left: 20px;
   flex: 1;
 }
-.year-block.left {
-  float: left;
-  clear: both;
-  text-align: left;
-}
 
-/* À DROITE */
-.year-block.right {
-  float: right;
-  clear: both;
-  text-align: left;
-}
 /* Titre année centré avec point orange sur la frise */
 .year-title::after {
   content: "";
@@ -356,14 +331,7 @@ h3 {
   border-radius: 50%;
   z-index: 5;
 }
-.year-block.left .year-title {
-  text-align: right;
-  padding-right: 40px;
-}
-.year-block.right .year-title {
-  text-align: left;
-  padding-left: 40px;
-}
+
 .year-block .year-title {
   font-size: 1.3rem;
   font-weight: bold;
