@@ -34,7 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("resetFilters").addEventListener("click", () => {
-    document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => cb.checked = false);
+    document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => {
+      cb.checked = false;
+    });
     activeCategories = [];
     searchQuery = "";
     document.getElementById("searchInput").value = "";
@@ -85,41 +87,34 @@ function renderTimeline(events, order = "desc") {
   });
 
   timeline.innerHTML = "";
-for (const [year, items] of Object.entries(grouped)) {
-  const sideClass = year % 2 === 0 ? "right" : "left";
+  for (const [year, items] of Object.entries(grouped)) {
+    const yearDiv = document.createElement("div");
+    const isEven = parseInt(year) % 2 === 0;
+    yearDiv.className = "year-block " + (isEven ? "right" : "left");
 
-  const entry = document.createElement("div");
-  entry.className = `timeline-entry ${sideClass}`;
+    const yearTitle = document.createElement("div");
+    yearTitle.className = "year-title";
+    yearTitle.textContent = year;
+    yearDiv.appendChild(yearTitle);
 
-  // Rond central contenant l’année
-  const marker = document.createElement("div");
-  marker.className = "timeline-marker";
-  marker.textContent = year;
-  entry.appendChild(marker);
+    items.forEach(ev => {
+      const evDiv = document.createElement("div");
+      evDiv.className = "event-item";
+      evDiv.onclick = () => window.open(`details/${ev.id}.html`, "_blank");
 
-  // Bloc contenant tous les événements de l’année
-  const block = document.createElement("div");
-  block.className = "event-block";
+      const icons = (ev.categories || []).map(cat => {
+        const info = categoryInfo[cat];
+        return info
+          ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
+          : '';
+      }).join("");
 
-  items.forEach(ev => {
-    const evDiv = document.createElement("div");
-    evDiv.className = "event-item";
-    evDiv.onclick = () => window.open(`details/${ev.id}.html`, "_blank");
+      evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
+      yearDiv.appendChild(evDiv);
+    });
 
-    const icons = (ev.categories || []).map(cat => {
-      const info = categoryInfo[cat];
-      return info
-        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
-        : '';
-    }).join("");
-
-    evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
-    block.appendChild(evDiv);
-  });
-
-  entry.appendChild(block);
-  timeline.appendChild(entry);
-}
+    timeline.appendChild(yearDiv);
+  }
 }
 
 function generateCategoryCheckboxes() {
@@ -131,11 +126,11 @@ function generateCategoryCheckboxes() {
   Object.entries(categoryInfo).forEach(([cat, info]) => {
     const label = document.createElement("label");
     label.className = "cat-check";
-    label.innerHTML = `
-      <input type="checkbox" value="${cat}">
-      <span>${cat}</span>
-      <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 4px;"></i>
-    `;
+    label.innerHTML = \`
+      <input type="checkbox" value="\${cat}">
+      <span>\${cat}</span>
+      <i class="fas \${info.icon}" style="color: \${info.color}; margin-left: 4px;"></i>
+    \`;
     group.appendChild(label);
   });
 
@@ -143,7 +138,6 @@ function generateCategoryCheckboxes() {
     activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
-
     document.querySelectorAll(".cat-check").forEach(label => {
       const input = label.querySelector("input");
       label.classList.toggle("selected", input.checked);
