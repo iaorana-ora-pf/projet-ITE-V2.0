@@ -231,6 +231,7 @@ h3 {
   flex-grow: 1;
   width: 100%;
 }
+
 #timeline::before {
   content: "";
   position: absolute;
@@ -265,6 +266,49 @@ h3 {
   content: "";
   display: table;
   clear: both;
+}
+.timeline-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.timeline-group.left {
+  flex-direction: row-reverse;
+}
+
+.timeline-group.right {
+  flex-direction: row;
+}
+
+.timeline-dot {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.timeline-dot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: orange;
+  border-radius: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+}
+
+.year-label {
+  width: 80px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--main-green);
 }
 .year-block {
   width: 45%;
