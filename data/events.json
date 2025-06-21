@@ -1,219 +1,621 @@
-[
-  {
-    "year": 1785,
-    "title": "Introduction de la variole par des navigateurs européens",
-    "categories": [
-      "Contexte",
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "variole",
-      "contagion",
-      "maladie"
-    ],
-    "sources": [
-      {
-        "label": "Rapport historique",
-        "url": "https://example.com/variole"
-      }
-    ],
-    "id": "event1",
-    "added": "2025-06-21"
-  },
-  {
-    "year": 1840,
-    "title": "Épidémie de typhoïde signalée à Tahiti",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "épidémie",
-      "typhoïde"
-    ],
-    "sources": [
-      {
-        "label": "Archives coloniales",
-        "url": "https://example.com/typhoide"
-      }
-    ],
-    "id": "event2",
-    "added": "2025-06-21"
-  },
-  {
-    "year": 1899,
-    "title": "Création du premier dispensaire public à Papeete",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "soins",
-      "infrastructure"
-    ],
-    "sources": [
-      {
-        "label": "Historique santé PF",
-        "url": "https://example.com/dispensaire"
-      }
-    ],
-    "id": "event3",
-    "added": "2025-06-21"
-  },
-  {
-    "year": 1918,
-    "title": "Grippe espagnole : forte mortalité à Tahiti",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "grippe",
-      "pandémie",
-      "mortalité"
-    ],
-    "sources": [
-      {
-        "label": "OMS",
-        "url": "https://example.com/grippe1918"
-      }
-    ],
-    "id": "event4",
-    "added": "2025-06-21"
-  },
-  {
-    "year": 1958,
-    "title": "Lutte contre la filariose lancée officiellement",
-    "categories": [
-      "Promotion et prévention",
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "filariose",
-      "parasites",
-      "programme"
-    ],
-    "sources": [
-      {
-        "label": "Ministère de la santé",
-        "url": "https://example.com/filariose"
-      }
-    ],
-    "id": "event5",
-    "added": "2025-06-21"
-  },
-  {
-    "year": 2020,
-    "title": "Premiers cas de COVID-19 en Polynésie française",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "covid",
-      "pandémie"
-    ],
-    "sources": [
-      {
-        "label": "Gouvernement PF",
-        "url": "https://example.com/covid2020"
-      }
-    ],
-    "id": "event6",
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event7",
-    "year": 1918,
-    "title": "Création d’un service de quarantaine à Tahiti",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "quarantaine",
-      "isolement"
-    ],
-    "sources": [
-      {
-        "label": "Journal historique",
-        "url": "https://example.com/quarantaine1918"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event8",
-    "year": 2020,
-    "title": "Déploiement du premier centre de dépistage mobile COVID",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "dépistage",
-      "mobile",
-      "covid"
-    ],
-    "sources": [
-      {
-        "label": "Bulletin COVID",
-        "url": "https://example.com/depistage2020"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event9",
-    "year": 2020,
-    "title": "Lancement d'une campagne de prévention sur les gestes barrières",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "gestes barrières",
-      "prévention",
-      "covid"
-    ],
-    "sources": [
-      {
-        "label": "Affiche santé",
-        "url": "https://example.com/gestes2020"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event10",
-    "year": 1983,
-    "title": "Épidémie de dengue dans les îles Sous-le-Vent",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "dengue",
-      "épidémie"
-    ],
-    "sources": [
-      {
-        "label": "Bulletin épidémiologique",
-        "url": "https://example.com/dengue1983"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event11",
-    "year": 1983,
-    "title": "Campagne d'information sur la dengue à Tahiti",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "dengue",
-      "information",
-      "sensibilisation"
-    ],
-    "sources": [
-      {
-        "label": "Ministère de la santé",
-        "url": "https://example.com/info1983"
-      }
-    ],
-    "added": "2025-06-21"
-  }
-]
+{
+  "2016": [
+    {
+      "keywords": [
+        "Schéma et plans"
+      ],
+      "description": "Le schéma d’organisation sanitaire (SOS) 2016-2021 donne les orientations en matière d’organisation et de répartition géographique de l’ensemble de l’offre de soins, y compris de prévention et de promotion de la santé, ainsi que de prévision d’évolution et d’objectifs opérationnels. Ce SOS a été prorogé en 2020 jusqu’à la publication d’un nouveau schéma, prévu au plus tard jusqu’au 15 janvier 2023. Un bilan à fin novembre 2021 démontrait une avancée satisfaisante des actions.",
+      "sources": [
+        {
+          "label": "SOS 2016-2021",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/06/Sche%CC%81ma-dorganisation-Sanitaire-en-PF-2016-2021-web.pdf"
+        },
+        {
+          "label": "Conseil des ministres du 15/12/2021",
+          "url": "https://www.presidence.pf/conseil_ministres/conseil-des-ministres-du-15-decembre-2021"
+        }
+      ],
+      "start": 2016,
+      "end": 2016,
+      "added": "2025-06-14",
+      "title": "Schéma d’Organisation Sanitaire de la Polynésie française 2016-2021",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    },
+    {
+      "keywords": [
+        "Plans et Programmes de Santé"
+      ],
+      "description": "La Politique de Santé de la Polynésie française 2016-2025 définit les orientations stratégiques à 10 ans des évolutions à conduire et des inflexions à accompagner. Les plus importantes d’entre elles sont traduites dans le projet de Schéma d’organisation sanitaire 2016-2021.",
+      "sources": [
+        {
+          "label": "Politique de Santé de la Polynésie française 2016-2025",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/06/La-politique-de-Sante%CC%81-en-PF-2016-2025-web.pdf"
+        }
+      ],
+      "start": 2016,
+      "end": 2016,
+      "added": "2025-06-14",
+      "title": "Politique de Santé de la Polynésie française 2016-2025",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    },
+    {
+      "keywords": [
+        "Enquêtes de santé",
+        "Adolescent",
+        "Comportement"
+      ],
+      "description": "L'enquête, élaboré sur le modèle GSHS de l'OMS, porte sur les comportements de santé des écoliers de 13 à 17 ans.",
+      "sources": [
+        {
+          "label": "Enquête Santé Jeune",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2018/06/GSHS_FrenchPolynesia_2018v2.pdf"
+        }
+      ],
+      "start": 2016,
+      "end": 2016,
+      "added": "2025-06-14",
+      "title": "Enquête santé - Jeunes",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    },
+    {
+      "keywords": [
+        "Enquêtes de santé",
+        "Adolescent"
+      ],
+      "description": "A propos des élèves polynésiens de 13 - 17 ans : \n43% sont en surpoids dont 20% au stade d’obésité\n44% ont consommé de l’alcool au cours des 30 derniers jours\n42% déclarent être en position sédentaire au moins trois heures par jour\n46% déclarent boire des boissons gazeuses sucrées au moins une fois par jour\n26% ont consommé du tabac",
+      "sources": [
+        {
+          "label": "Enquête Santé Jeune",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2018/06/GSHS_FrenchPolynesia_2018v2.pdf"
+        }
+      ],
+      "start": 2016,
+      "end": 2016,
+      "added": "2025-06-14",
+      "title": "Données sur la santé - Jeunes",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "2018": [
+    {
+      "keywords": [
+        "Plans et Programmes de Santé",
+        "Tumeurs"
+      ],
+      "description": "Le Plan Cancer 2018-2022 vise à améliorer l’efficacité des actions de prévention, l’accès au dépistage, la prise en charge du patient et enfin, la qualité et le confort de vie de ce dernier.",
+      "sources": [
+        {
+          "label": "Plan cancer 2018-2022",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/07/Plan-cancer-polyn%C3%A9sien-2018_2022_21juin.pdf"
+        }
+      ],
+      "start": 2018,
+      "end": 2018,
+      "added": "2025-06-14",
+      "title": "Plan cancer 2018-2022",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    },
+    {
+      "keywords": [
+        "Plans et Programmes de Santé"
+      ],
+      "description": "Le Schéma de Prévention et de Promotion de la Santé décline le cadre de la politique de prévention. Il en définit ses principes, ses objectifs, ses axes et les mesures prioritaires que le Pays, les communes, les organisations et la société civile auront à traduire en programmes cohérents d’actions locales ou territoriales.",
+      "sources": [
+        {
+          "label": "Schéma de Prévention et de Promotion de la Santé 2018-2022",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/12/Sch%C3%A9ma-Pr%C3%A9vention-2018-2022.pdf"
+        }
+      ],
+      "start": 2018,
+      "end": 2018,
+      "added": "2025-06-14",
+      "title": "Schéma de Prévention et de Promotion de la Santé 2018-2022",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    }
+  ],
+  "2001": [
+    {
+      "keywords": [
+        "Plans et Programmes de Santé"
+      ],
+      "description": "Le Schéma d’Organisation Sanitaire 2001-2007 a été prorogé jusque fin 2013 sans aucune révision.",
+      "sources": [
+        {
+          "label": "SOS2001-2007",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2017/06/La-politique-de-Sante%CC%81-en-PF-2016-2025-web.pdf"
+        }
+      ],
+      "start": 2001,
+      "end": 2001,
+      "added": "2025-06-14",
+      "title": "Schéma d’Organisation Sanitaire 2001-2007",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    }
+  ],
+  "2015": [
+    {
+      "keywords": [
+        "Plans et Programmes de Santé",
+        "Allaitement naturel"
+      ],
+      "description": "Le Programme polynésien pour la promotion de l'allaitement maternel 2015-2020 a pour objectif d'apporter toute l'aide nécessaire aux femmes qui ont le désir d'allaiter et de leur permettre de continuer aussi longtemps qu'elles le souhaitent.",
+      "sources": [
+        {
+          "label": "Programme polynésien pour la promotion de l'allaitement maternel 2015-2020",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2019/12/Programme-AM-2015-2020.pdf"
+        }
+      ],
+      "start": 2015,
+      "end": 2015,
+      "added": "2025-06-14",
+      "title": "Programme polynésien pour la promotion de l'allaitement maternel 2015-2020",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    },
+    {
+      "keywords": [
+        "Tumeurs"
+      ],
+      "description": "749 cas de cancers diagnostiqués en 2015.\nCette même année, d’après l’analyse des certificats médicaux de décès, 365 décès avaient pour cause initiale une tumeur maligne (162 chez la femme et 203 chez l’homme). Chez la femme, les 2 premières causes de décès par cancer en 2015 étaient le cancer du sein et le cancer broncho-pulmonaire. Chez l’homme, les 2 premières causes de décès par cancer en 2015 étaient le cancer broncho-pulmonaire et le cancer du foie.",
+      "sources": [
+        {
+          "label": "Statistiques du registre des cancers de Polynésie française Chiffres 2015",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2020/02/Chiffres2015_RCPF.pdf"
+        }
+      ],
+      "start": 2015,
+      "end": 2015,
+      "added": "2025-06-14",
+      "title": "Données sur la santé - Cancer",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    },
+    {
+      "keywords": [
+        "Secteur privé",
+        "Santé au travail"
+      ],
+      "description": "Les entreprises au travers d’un comité santé interne, proposent des réponses en fonction de leurs possibilités et des initiatives Ea’ttitude permettant des pratiques alimentaires saines et de l’activité physique, sur la base d’une consultation de leurs salariés, sur le bien-être et la santé au travail. En 2016, neuf entreprises volontaires étaient inscrites.",
+      "sources": [
+        {
+          "label": "Dossier de presse - Ea'ttidue",
+          "url": "http://archives2.presidence.pf/files/Dossier_de_presse_EAttitude_2016.pdf"
+        }
+      ],
+      "start": 2015,
+      "end": 2015,
+      "added": "2025-06-14",
+      "title": "Création du dispositif \"Entreprises actives\" pour la santé des salariés",
+      "categories": [
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ],
+  "1996": [
+    {
+      "keywords": [
+        "Plans et Programmes de Santé",
+        "Allaitement naturel"
+      ],
+      "description": "Le programme pour la promotion de l'allaitement maternelle et d'une nutrition saine chez le jeune enfant propose des lignes directrices pour guider les acteurs du domaine.",
+      "sources": [
+        {
+          "label": "Programme pour la promotion de l'allaitement maternelle et d'une nutrition saine chez le jeune enfant",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2019/12/Programme-AM-2015-2020.pdf"
+        }
+      ],
+      "start": 1996,
+      "end": 1996,
+      "added": "2025-06-14",
+      "title": "Démarrage du programme pour la promotion de l'allaitement maternelle et d'une nutrition saine chez le jeune enfant",
+      "categories": [
+        "Gouvernance et pilotage stratégique"
+      ]
+    }
+  ],
+  "2024": [
+    {
+      "keywords": [
+        "Enquêtes de santé",
+        "Adolescent",
+        "Comportement"
+      ],
+      "description": "L’enquête cible les élèves de la 5ème à la 1ère dans les établissements scolaires publics et privés des différents archipels de la Polynésie. Avec la participation de 3118 élèves, l’enquête de 2024 révèle des résultats encourageants, mais aussi des problématiques inquiétantes qui nécessitent des réponses adaptées.",
+      "sources": [
+        {
+          "label": "Enquête Ea Piahi",
+          "url": "https://www.calameo.com/read/0074445001db78a204940"
+        }
+      ],
+      "start": 2024,
+      "end": 2024,
+      "added": "2025-06-14",
+      "title": "Enquête Ea Piahi – Santé jeune",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    },
+    {
+      "keywords": [
+        "Enquêtes de santé",
+        "Adolescent",
+        "Comportement"
+      ],
+      "description": "Points positifs : Activité physique régulière, Bon soutien familial, Bonne santé perçue\n\nPoints d’alerte : Hausse de la consommation de cannabis, Usage excessif des écrans (sommeil, concentration), Santé mentale en dégradation (isolement, pensées suicidaires), Surpoids et obésité toujours préoccupants",
+      "sources": [
+        {
+          "label": "Enquête Ea Piahi",
+          "url": "https://www.calameo.com/read/0074445001db78a204940"
+        }
+      ],
+      "start": 2024,
+      "end": 2024,
+      "added": "2025-06-14",
+      "title": "Données sur la santé - Jeunes",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "2020": [
+    {
+      "keywords": [
+        "Tumeurs",
+        "Registres de Maladies"
+      ],
+      "description": "Le Registre des Cancers de Polynésie française (RCPf) a publié un premier rapport en 2020 présentant les données de 2015.",
+      "sources": [
+        {
+          "label": "Statistiques du registre des cancers de Polynésie française Chiffres 2015",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2020/02/Chiffres2015_RCPF.pdf"
+        }
+      ],
+      "start": 2020,
+      "end": 2020,
+      "added": "2025-06-14",
+      "title": "1er rapport du Registre des cancers",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "2010": [
+    {
+      "keywords": [
+        "Enquêtes de santé",
+        "Maladies non transmissibles",
+        "Facteurs de risque"
+      ],
+      "description": "En 2010, la Polynésie a réalisé cette enquête transversale fondée sur la méthodologie STEPwise de l’OMS. L’objectif était de cerner les facteurs de risque (tabac, obésité, hypertension, alimentation, sédentarité) des maladies non transmissibles à l’aide de questionnaires et de mesures physiques sur environ 3 500 adultes.",
+      "sources": [
+        "Bertrand S, Berry AL. Enquête santé 2010 en Polynésie française : surveillance des facteurs de risque des maladies non\ntransmissibles. Bull Épidémiol Hebd. 2013",
+        {
+          "label": "(28-29):326-32.",
+          "url": "https://beh.santepubliquefrance.fr/beh/2013/28-29/pdf/2013_28-29_1.pdf"
+        }
+      ],
+      "start": 2010,
+      "end": 2010,
+      "added": "2025-06-14",
+      "title": "Enquête santé - MNT",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "1772": [
+    {
+      "keywords": [
+        "Épidémies",
+        "Grippe humaine"
+      ],
+      "description": "Tahiti fut atteinte dès 1772 par une épidémie de grippe, et jusqu'en 1854, la\npopulation fut frappée à douze reprises au moins par des épisodes épidémiques.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1772,
+      "end": 1772,
+      "added": "2025-06-14",
+      "title": "1ere épidémie de grippe",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "1863": [
+    {
+      "keywords": [
+        "Épidémies",
+        "Variole"
+      ],
+      "description": "En août 1863, l’aviso Le Diamant accoste à Nuku Hiva avec à son bord des Polynésiens rapatriés du Pérou, dont plusieurs étaient infectés par la variole. Malgré les tentatives d’isolement, la maladie se propage rapidement à Nuku Hiva et Ua Pou, touchant surtout les populations indigènes. En mars 1864, Nuku Hiva aurait perdu la moitié de sa population (958 morts pour 998 survivants), et Ua Pou, les deux tiers.\nEn février 1864, un chirurgien est envoyé pour vacciner la population à Taiohae, alors que l’épidémie déclinait.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1863,
+      "end": 1864,
+      "added": "2025-06-14",
+      "title": "Épidémie de variole aux Marquises",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "1864": [
+    {
+      "keywords": [
+        "Épidémies",
+        "Variole"
+      ],
+      "description": "En août 1863, l’aviso Le Diamant accoste à Nuku Hiva avec à son bord des Polynésiens rapatriés du Pérou, dont plusieurs étaient infectés par la variole. Malgré les tentatives d’isolement, la maladie se propage rapidement à Nuku Hiva et Ua Pou, touchant surtout les populations indigènes. En mars 1864, Nuku Hiva aurait perdu la moitié de sa population (958 morts pour 998 survivants), et Ua Pou, les deux tiers.\nEn février 1864, un chirurgien est envoyé pour vacciner la population à Taiohae, alors que l’épidémie déclinait.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1863,
+      "end": 1864,
+      "added": "2025-06-14",
+      "title": "Épidémie de variole aux Marquises",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "1918": [
+    {
+      "keywords": [
+        "Épidémies",
+        "Grippe humaine"
+      ],
+      "description": "En novembre 1918, la grippe espagnole arrive à Tahiti via deux navires venus de San Francisco. L’alerte sanitaire tarde, et l’épidémie se propage rapidement, notamment à Tahiti, Moorea et les îles Sous-le-Vent. Les archipels périphériques (Tuamotu, Australes, Marquises) sont épargnés grâce à des mesures sanitaires. On estime à plus de 3 000 morts en un mois et jusqu’à 15 % de la population décimée dans certaines îles.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1918,
+      "end": 1918,
+      "added": "2025-06-14",
+      "title": "Epidémie de grippe espagnole",
+      "categories": [
+        "Données surveillance et recherche",
+        "Protection sanitaire et gestion des risques"
+      ]
+    }
+  ],
+  "1850": [
+    {
+      "keywords": [
+        "Maladies sexuellement transmissibles",
+        "Tuberculose",
+        "Dysenterie"
+      ],
+      "description": "Vers 1845–1865, la Polynésie française fait face à une forte prévalence des maladies sexuellement transmissibles. Près d’un tiers des hospitalisations à Tahiti sont dues à des infections vénériennes graves.\nParallèlement, la tuberculose devient une cause majeure de mortalité, touchant particulièrement Tahiti et les Marquises. Elle est responsable d’environ un tiers des décès, évoluant très rapidement. \nEnfin, la dysenterie sévit de manière endémique à Tahiti, avec des poussées épidémiques périodiques.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1850,
+      "end": 1850,
+      "added": "2025-06-14",
+      "title": "Maladies majeures vers 1850",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "1931": [
+    {
+      "keywords": [
+        "Mortalité"
+      ],
+      "description": "Entre 1922 et 1931, selon les statistiques démographiques de Papeete, 41,4 % des décès sont dus aux maladies infectieuses et parasitaires, dont la tuberculose. Les maladies respiratoires (14 %) et digestives (4,3 %) complètent ce tableau.\nEnsemble, ces trois causes représentent près des deux tiers des décès durant cette période.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1931,
+      "end": 1931,
+      "added": "2025-06-14",
+      "title": "Principales causes de mortalité",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "1986": [
+    {
+      "keywords": [
+        "Mortalité"
+      ],
+      "description": "Les maladies infectieuses ne représentent plus que 15,6 % des décès, soit une baisse de près de 90 % par rapport aux années 1920.\nCette réduction est liée aux progrès en vaccination, accès aux soins et surveillance sanitaire.",
+      "sources": [
+        {
+          "label": "Atlas de la Polynésie française \"L'histoire démographique\" 1993",
+          "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1986,
+      "end": 1986,
+      "added": "2025-06-14",
+      "title": "Principales causes de mortalité",
+      "categories": [
+        "Données surveillance et recherche"
+      ]
+    }
+  ],
+  "2017": [
+    {
+      "keywords": [
+        "Ecole et CJA en santé",
+        "Adolescent",
+        "Enfant",
+        "Milieu scolaire"
+      ],
+      "description": "Ces dispositifs ont pour objectif de promouvoir la santé à l’école, en permettant aux enfants d’acquérir dès le plus jeune âge des compétences et de développer des comportements favorables à leur santé et leur bien-être.\n",
+      "sources": [
+        {
+          "label": "Direction de la santé",
+          "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/"
+        },
+        {
+          "label": "Guide de présentation du dispositif école et CJA en santé",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2022/02/dsp-ecole-en-sante-guide-de-presentation.pdf"
+        }
+      ],
+      "start": 2017,
+      "end": 2017,
+      "added": "2025-06-14",
+      "title": "Création du dispositif \"Ecole et CJA en santé\"",
+      "categories": [
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ],
+  "2014": [
+    {
+      "keywords": [
+        "Exercice physique"
+      ],
+      "description": "Le ministère de la Santé a mis en place un fitness park et un parcours sportif dans le parc Paofai.",
+      "sources": [
+        {
+          "label": "Tahiti info",
+          "url": "https://www.tahiti-infos./Parcours-sante-Le-parc-Paofai-s-equipe-pour-le-sport-en-plein-air_a101528.html"
+        }
+      ],
+      "start": 2014,
+      "end": 2014,
+      "added": "2025-06-14",
+      "title": "Inauguration du parcours de santé dans les jardins de Paofai",
+      "categories": [
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ],
+  "2022": [
+    {
+      "keywords": [
+        "Tumeurs",
+        "Dépistage de masse",
+        "Peau"
+      ],
+      "description": "Depuis 2022, l’Institut du Cancer de Polynésie française a initié une campagne de détection précoce du mélanome. Dans ce cadre, des journées de sensibilisation ont été organisées en partenariat avec l’association La Ligue contre le cancer, visant à informer la population sur les signes d’alerte et les moyens de prévention. Des opérations de dépistage gratuites ont également été proposées sur l’ensemble des archipels.",
+      "sources": [
+        {
+          "label": "La politique de lutte contre le cancer en Polynésie française - Cous de comptes",
+          "url": "https://www.ccomptes.fr/sites/default/files/2024-10/PFR2024013.pdf"
+        }
+      ],
+      "start": 2022,
+      "end": 2022,
+      "added": "2025-06-14",
+      "title": "1ère campagne de détection précoce des mélanomes",
+      "categories": [
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ],
+  "2003": [
+    {
+      "keywords": [
+        "Tumeurs",
+        "Dépistage de masse",
+        "Femmes"
+      ],
+      "description": "Le dépistage gratuit des cancers gynécologiques a été institué par délibération du 6 novembre 2003. En application du plan cancer 2018-2022, les modalités de réalisation de ces dépistages ont été renforcées par la loi du Pays du 13 juin 2019 et par arrêté du 18 septembre 2020.",
+      "sources": [
+        {
+          "label": "La politique de lutte contre le cancer en Polynésie française - Cous de comptes",
+          "url": "https://www.ccomptes.fr/sites/default/files/2024-10/PFR2024013.pdf"
+        }
+      ],
+      "start": 2003,
+      "end": 2003,
+      "added": "2025-06-14",
+      "title": "Mise en place du dépistage gratuit des cancers gynécologiques",
+      "categories": [
+        "Accès aux services et aux moyens",
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ],
+  "2019": [
+    {
+      "keywords": [
+        "RAA",
+        "Dépistage de masse",
+        "Enfant",
+        "Milieu scolaire"
+      ],
+      "description": "La Direction de la Santé a lancé dès 2019 un programme de dépistage systématique en milieu scolaire, basé sur l’utilisation d’échographies cardiaques pour repérer précocement les anomalies valvulaires, beaucoup plus sensibles que l’auscultation traditionnelle à la stéthoscope. L’objectif initial était de couvrir tout le territoire d’ici 2023, bien que la pandémie de CoVID-19 ait entraîné quelques retards .",
+      "sources": [
+        {
+          "label": "Programme de lutte contre le RAA en Polynésie française",
+          "url": "https://www.service-public.pf/dsp/wp-content/uploads/sites/12/2024/09/2024-09-24-Outils-SSP-RAA.pdf"
+        }
+      ],
+      "start": 2019,
+      "end": 2019,
+      "added": "2025-06-14",
+      "title": "Mise en place du dépistage systématique du Rhumatisme Articulaire Aigu en milieu scolaire",
+      "categories": [
+        "Accès aux services et aux moyens",
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ],
+  "1949": [
+    {
+      "keywords": [
+        "Adolescent",
+        "Enfant",
+        "Milieu scolaire"
+      ],
+      "description": "Le Centre de Santé Scolaire (initialement appelé « Centre Médico-Scolaire ») a été créé en 1949 à l’initiative conjointe du Service social et du Service de Santé. Il avait pour mission de réaliser les vaccinations, tenir les dossiers médico-scolaires, assurer les soins d'urgence et émettre les certificats médicaux pour les enfants scolarisés. De 1947 à 1950, les vaccinations étaient réalisées par le Dispensaire de Vaiami et la gestion des dossiers médico-scolaires était faite par le Service social.",
+      "sources": [
+        {
+          "label": "Direction de la Santé",
+          "url": "https://www.service-public.pf/dsp/centre-de-sante-scolaire/?utm_source=chatgpt.com"
+        }
+      ],
+      "start": 1949,
+      "end": 1949,
+      "added": "2025-06-14",
+      "title": "Création du Centre de Santé Scolaire",
+      "categories": [
+        "Accès aux services et aux moyens",
+        "Promotion de la santé et prévention"
+      ]
+    }
+  ]
+}
