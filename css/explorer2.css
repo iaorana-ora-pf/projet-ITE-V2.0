@@ -226,6 +226,13 @@ h3 {
 #timeline-wrapper {
   position: relative;
   padding-left: 140px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  overflow-y: auto;
+  height: 100vh; /* Important pour le scroll */
+  background: white;
+  flex-grow: 1;
 }
 #timeline::before {
   content: "";
