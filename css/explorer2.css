@@ -216,7 +216,11 @@ h3 {
 /* ===================== */
 /*       FRISE        */
 /* ===================== */
-
+.frise-intro {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 1em;
+}
 #timeline {
   position: relative;
   margin: 60px auto;
