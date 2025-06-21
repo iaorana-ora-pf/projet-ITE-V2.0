@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modal) modal.classList.add("hidden");
   });
 });
-
 function renderTimeline(events, order = "desc") {
   const timeline = document.getElementById("timeline");
   if (!timeline) return;
@@ -94,14 +93,20 @@ function renderTimeline(events, order = "desc") {
 
   sortedYears.forEach(year => {
     const items = grouped[year];
-    const yearDiv = document.createElement("div");
     const isEven = parseInt(year) % 2 === 0;
-    yearDiv.className = "year-block " + (isEven ? "right" : "left");
 
-    const yearTitle = document.createElement("div");
-    yearTitle.className = "year-title";
-    yearTitle.textContent = year;
-    yearDiv.appendChild(yearTitle);
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "timeline-group " + (isEven ? "right" : "left");
+
+    const yearLabel = document.createElement("div");
+    yearLabel.className = "year-label";
+    yearLabel.textContent = year;
+
+    const dot = document.createElement("div");
+    dot.className = "timeline-dot";
+
+    const eventsBlock = document.createElement("div");
+    eventsBlock.className = "year-block";
 
     items.forEach(ev => {
       const evDiv = document.createElement("div");
@@ -115,13 +120,28 @@ function renderTimeline(events, order = "desc") {
           : '';
       }).join("");
 
-      evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
-      yearDiv.appendChild(evDiv);
+      evDiv.innerHTML = `
+        <div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>
+      `;
+      eventsBlock.appendChild(evDiv);
     });
 
-    timeline.appendChild(yearDiv);
+    if (isEven) {
+      groupDiv.appendChild(yearLabel);
+      groupDiv.appendChild(dot);
+      groupDiv.appendChild(eventsBlock);
+    } else {
+      groupDiv.appendChild(eventsBlock);
+      groupDiv.appendChild(dot);
+      groupDiv.appendChild(yearLabel);
+    }
+
+    timeline.appendChild(groupDiv);
   });
 }
+
+
+
 
 function generateCategoryCheckboxes() {
   const group = document.getElementById("categoryCheckboxGroup");
