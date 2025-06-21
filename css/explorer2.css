@@ -363,19 +363,25 @@ h3 {
   transform: translateX(-50%);
   z-index: 2;
 }
-
+.year-label[data-year$="0"] {
+  font-size: 1.4em;
+  color: orange;
+  font-weight: bold;
+}
 .event-item {
    padding: 6px 12px;
   margin: 4px 0;
   background: none;
-  border-left: 3px solid var(--main-green);
   border-radius: 0;
   box-shadow: none;
   transition: background 0.2s;
   cursor: pointer;
 }
 .event-item:hover {
-  background: #f9f9f9;
+  transform: scale(1.05);
+  color: #007bff;
+  font-weight: bold;
+  cursor: pointer;
 }
 .event-title {
   font-weight: bold;
