@@ -1,6 +1,5 @@
 [
   {
-    "id": "event1",
     "year": 1785,
     "title": "Introduction de la variole par des navigateurs européens",
     "categories": [
@@ -18,10 +17,10 @@
         "url": "https://example.com/variole"
       }
     ],
+    "id": "event1",
     "added": "2025-06-21"
   },
   {
-    "id": "event2",
     "year": 1840,
     "title": "Épidémie de typhoïde signalée à Tahiti",
     "categories": [
@@ -37,10 +36,10 @@
         "url": "https://example.com/typhoide"
       }
     ],
+    "id": "event2",
     "added": "2025-06-21"
   },
   {
-    "id": "event3",
     "year": 1899,
     "title": "Création du premier dispensaire public à Papeete",
     "categories": [
@@ -56,10 +55,10 @@
         "url": "https://example.com/dispensaire"
       }
     ],
+    "id": "event3",
     "added": "2025-06-21"
   },
   {
-    "id": "event4",
     "year": 1918,
     "title": "Grippe espagnole : forte mortalité à Tahiti",
     "categories": [
@@ -76,10 +75,10 @@
         "url": "https://example.com/grippe1918"
       }
     ],
+    "id": "event4",
     "added": "2025-06-21"
   },
   {
-    "id": "event5",
     "year": 1958,
     "title": "Lutte contre la filariose lancée officiellement",
     "categories": [
@@ -97,49 +96,89 @@
         "url": "https://example.com/filariose"
       }
     ],
+    "id": "event5",
     "added": "2025-06-21"
   },
   {
-    "id": "event6",
-    "year": 1962,
-    "title": "Création du Service d’hygiène en Polynésie",
+    "year": 2020,
+    "title": "Premiers cas de COVID-19 en Polynésie française",
     "categories": [
-      "Gouvernance et pilotage"
+      "Protection et gestion des risques"
     ],
     "keywords": [
-      "hygiène",
-      "administration"
+      "covid",
+      "pandémie"
     ],
     "sources": [
       {
-        "label": "Rapport santé",
-        "url": "https://example.com/hygiene1962"
+        "label": "Gouvernement PF",
+        "url": "https://example.com/covid2020"
       }
     ],
+    "id": "event6",
     "added": "2025-06-21"
   },
   {
     "id": "event7",
-    "year": 1975,
-    "title": "Campagne massive de vaccination contre la rougeole",
+    "year": 1918,
+    "title": "Création d’un service de quarantaine à Tahiti",
     "categories": [
-      "Promotion et prévention"
+      "Gouvernance et pilotage"
     ],
     "keywords": [
-      "vaccination",
-      "rougeole",
-      "prévention"
+      "quarantaine",
+      "isolement"
     ],
     "sources": [
       {
-        "label": "Santé publique PF",
-        "url": "https://example.com/rougeole"
+        "label": "Journal historique",
+        "url": "https://example.com/quarantaine1918"
       }
     ],
     "added": "2025-06-21"
   },
   {
     "id": "event8",
+    "year": 2020,
+    "title": "Déploiement du premier centre de dépistage mobile COVID",
+    "categories": [
+      "Accès"
+    ],
+    "keywords": [
+      "dépistage",
+      "mobile",
+      "covid"
+    ],
+    "sources": [
+      {
+        "label": "Bulletin COVID",
+        "url": "https://example.com/depistage2020"
+      }
+    ],
+    "added": "2025-06-21"
+  },
+  {
+    "id": "event9",
+    "year": 2020,
+    "title": "Lancement d'une campagne de prévention sur les gestes barrières",
+    "categories": [
+      "Promotion et prévention"
+    ],
+    "keywords": [
+      "gestes barrières",
+      "prévention",
+      "covid"
+    ],
+    "sources": [
+      {
+        "label": "Affiche santé",
+        "url": "https://example.com/gestes2020"
+      }
+    ],
+    "added": "2025-06-21"
+  },
+  {
+    "id": "event10",
     "year": 1983,
     "title": "Épidémie de dengue dans les îles Sous-le-Vent",
     "categories": [
@@ -158,422 +197,21 @@
     "added": "2025-06-21"
   },
   {
-    "id": "event9",
-    "year": 1992,
-    "title": "Création de la Direction de la santé",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "direction",
-      "santé",
-      "réforme"
-    ],
-    "sources": [
-      {
-        "label": "Journal officiel",
-        "url": "https://example.com/direction1992"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event10",
-    "year": 1998,
-    "title": "Mise en place du programme de santé scolaire",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "écoles",
-      "santé",
-      "enfants"
-    ],
-    "sources": [
-      {
-        "label": "Programme éducatif",
-        "url": "https://example.com/scolaire"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
     "id": "event11",
-    "year": 2003,
-    "title": "Épidémie de chikungunya à Tahiti",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "chikungunya",
-      "moustique"
-    ],
-    "sources": [
-      {
-        "label": "Institut Louis Malardé",
-        "url": "https://example.com/chikungunya"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event12",
-    "year": 2007,
-    "title": "Accréditation du Centre hospitalier de la Polynésie française",
-    "categories": [
-      "Accès",
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "accréditation",
-      "hôpital"
-    ],
-    "sources": [
-      {
-        "label": "CHPF",
-        "url": "https://example.com/accreditation"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event13",
-    "year": 2013,
-    "title": "Campagne contre le tabagisme chez les jeunes",
+    "year": 1983,
+    "title": "Campagne d'information sur la dengue à Tahiti",
     "categories": [
       "Promotion et prévention"
     ],
     "keywords": [
-      "tabac",
-      "jeunesse"
+      "dengue",
+      "information",
+      "sensibilisation"
     ],
     "sources": [
       {
-        "label": "Programme prévention",
-        "url": "https://example.com/tabac2013"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event14",
-    "year": 2020,
-    "title": "Premiers cas de COVID-19 en Polynésie française",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "covid",
-      "pandémie"
-    ],
-    "sources": [
-      {
-        "label": "Gouvernement PF",
-        "url": "https://example.com/covid2020"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event15",
-    "year": 2023,
-    "title": "Lancement du plan stratégique santé 2023–2028",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "stratégie",
-      "planification"
-    ],
-    "sources": [
-      {
-        "label": "Direction santé",
-        "url": "https://example.com/plan2023"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event16",
-    "year": 1880,
-    "title": "Événement de santé publique fictif #16",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 16",
-        "url": "https://example.com/source16"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event17",
-    "year": 1885,
-    "title": "Événement de santé publique fictif #17",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 17",
-        "url": "https://example.com/source17"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event18",
-    "year": 1890,
-    "title": "Événement de santé publique fictif #18",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 18",
-        "url": "https://example.com/source18"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event19",
-    "year": 1895,
-    "title": "Événement de santé publique fictif #19",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 19",
-        "url": "https://example.com/source19"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event20",
-    "year": 1900,
-    "title": "Événement de santé publique fictif #20",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 20",
-        "url": "https://example.com/source20"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event21",
-    "year": 1905,
-    "title": "Événement de santé publique fictif #21",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 21",
-        "url": "https://example.com/source21"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event22",
-    "year": 1910,
-    "title": "Événement de santé publique fictif #22",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 22",
-        "url": "https://example.com/source22"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event23",
-    "year": 1915,
-    "title": "Événement de santé publique fictif #23",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 23",
-        "url": "https://example.com/source23"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event24",
-    "year": 1920,
-    "title": "Événement de santé publique fictif #24",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 24",
-        "url": "https://example.com/source24"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event25",
-    "year": 1925,
-    "title": "Événement de santé publique fictif #25",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 25",
-        "url": "https://example.com/source25"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event26",
-    "year": 1930,
-    "title": "Événement de santé publique fictif #26",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 26",
-        "url": "https://example.com/source26"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event27",
-    "year": 1935,
-    "title": "Événement de santé publique fictif #27",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 27",
-        "url": "https://example.com/source27"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event28",
-    "year": 1940,
-    "title": "Événement de santé publique fictif #28",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 28",
-        "url": "https://example.com/source28"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event29",
-    "year": 1945,
-    "title": "Événement de santé publique fictif #29",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 29",
-        "url": "https://example.com/source29"
-      }
-    ],
-    "added": "2025-06-21"
-  },
-  {
-    "id": "event30",
-    "year": 1950,
-    "title": "Événement de santé publique fictif #30",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "santé",
-      "Polynésie"
-    ],
-    "sources": [
-      {
-        "label": "Source 30",
-        "url": "https://example.com/source30"
+        "label": "Ministère de la santé",
+        "url": "https://example.com/info1983"
       }
     ],
     "added": "2025-06-21"
