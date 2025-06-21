@@ -2,7 +2,8 @@
   "1772": [
     {
       "id": "event1",
-      "name": "Première épidémie de grippe à Tahiti",
+      "title": "Première épidémie de grippe à Tahiti",
+      "year": 1772,
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -22,7 +23,8 @@
   "1863": [
     {
       "id": "event2",
-      "name": "Épidémie de variole aux Marquises",
+      "title": "Épidémie de variole aux Marquises",
+      "year": 1863,
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -42,7 +44,8 @@
   "1918": [
     {
       "id": "event3",
-      "name": "Grippe espagnole en Polynésie",
+      "title": "Grippe espagnole en Polynésie",
+      "year": 1918,
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -57,36 +60,19 @@
         }
       ],
       "added": "2025-06-21"
-    },
-    {
-      "id": "event4",
-      "name": "Surmortalité infantile due à la grippe espagnole",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "grippe",
-        "mortalité infantile"
-      ],
-      "sources": [
-        {
-          "label": "Rapport OMS",
-          "url": "https://example.com/oms1918"
-        }
-      ],
-      "added": "2025-06-21"
     }
   ],
   "1949": [
     {
-      "id": "event5",
-      "name": "Création du Centre de Santé Scolaire",
+      "id": "event4",
+      "title": "Création du Centre de Santé Scolaire",
+      "year": 1949,
       "categories": [
         "Accès"
       ],
       "keywords": [
-        "santé scolaire",
-        "enfants",
+        "école",
+        "enfant",
         "prévention"
       ],
       "sources": [
@@ -100,8 +86,9 @@
   ],
   "1952": [
     {
-      "id": "event6",
-      "name": "Campagne de vaccination contre la tuberculose",
+      "id": "event5",
+      "title": "Campagne de vaccination contre la tuberculose",
+      "year": 1952,
       "categories": [
         "Promotion et prévention"
       ],
@@ -120,8 +107,9 @@
   ],
   "1966": [
     {
-      "id": "event7",
-      "name": "Création du service de radioprotection",
+      "id": "event6",
+      "title": "Création du service de radioprotection",
+      "year": 1966,
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -140,10 +128,11 @@
   ],
   "1986": [
     {
-      "id": "event8",
-      "name": "Baisse significative des maladies infectieuses",
+      "id": "event7",
+      "title": "Baisse significative des maladies infectieuses",
+      "year": 1986,
       "categories": [
-        "Surveillance"
+        "Données et recherche"
       ],
       "keywords": [
         "mortalité",
@@ -160,8 +149,9 @@
   ],
   "1996": [
     {
-      "id": "event9",
-      "name": "Programme d’allaitement maternel",
+      "id": "event8",
+      "title": "Programme d’allaitement maternel",
+      "year": 1996,
       "categories": [
         "Promotion et prévention"
       ],
@@ -180,10 +170,11 @@
   ],
   "2001": [
     {
-      "id": "event10",
-      "name": "Schéma d’Organisation Sanitaire 2001-2007",
+      "id": "event9",
+      "title": "Schéma d’Organisation Sanitaire 2001-2007",
+      "year": 2001,
       "categories": [
-        "Gouvernance"
+        "Gouvernance et pilotage"
       ],
       "keywords": [
         "plan",
@@ -200,11 +191,11 @@
   ],
   "2003": [
     {
-      "id": "event11",
-      "name": "Dépistage gratuit des cancers gynécologiques",
+      "id": "event10",
+      "title": "Dépistage des cancers gynécologiques",
+      "year": 2003,
       "categories": [
-        "Accès",
-        "Promotion et prévention"
+        "Accès"
       ],
       "keywords": [
         "cancer",
@@ -221,10 +212,11 @@
   ],
   "2010": [
     {
-      "id": "event12",
-      "name": "Enquête sur les maladies non transmissibles",
+      "id": "event11",
+      "title": "Enquête sur les maladies non transmissibles",
+      "year": 2010,
       "categories": [
-        "Surveillance"
+        "Données et recherche"
       ],
       "keywords": [
         "facteurs de risque",
@@ -241,17 +233,18 @@
   ],
   "2014": [
     {
-      "id": "event13",
-      "name": "Parcours santé dans les jardins de Paofai",
+      "id": "event12",
+      "title": "Parcours santé au parc Paofai",
+      "year": 2014,
       "categories": [
         "Promotion et prévention"
       ],
       "keywords": [
-        "exercice physique"
+        "activité physique"
       ],
       "sources": [
         {
-          "label": "Tahiti infos",
+          "label": "Tahiti Infos",
           "url": "https://tahiti-infos.com"
         }
       ],
@@ -260,32 +253,15 @@
   ],
   "2015": [
     {
-      "id": "event14",
-      "name": "Statistiques de santé : cancers en PF",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "cancer",
-        "statistiques"
-      ],
-      "sources": [
-        {
-          "label": "Registre cancer",
-          "url": "https://example.com/cancer"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event15",
-      "name": "Programme allaitement maternel 2015-2020",
+      "id": "event13",
+      "title": "Programme allaitement maternel",
+      "year": 2015,
       "categories": [
         "Promotion et prévention"
       ],
       "keywords": [
         "allaitement",
-        "santé infantile"
+        "enfant"
       ],
       "sources": [
         {
@@ -294,115 +270,258 @@
         }
       ],
       "added": "2025-06-21"
-    }
-  ],
-  "2020": [
+    },
     {
-      "id": "event16",
-      "name": "Événement de santé publique fictif 16",
+      "id": "event14",
+      "title": "Données santé sur le cancer",
+      "year": 2015,
       "categories": [
-        "Surveillance"
+        "Données et recherche"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "cancer"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Registre cancer",
+          "url": "https://example.com/cancer2015"
         }
       ],
       "added": "2025-06-21"
     },
     {
-      "id": "event21",
-      "name": "Événement de santé publique fictif 21",
+      "id": "event25",
+      "title": "Création du dispositif Entreprises actives",
+      "year": 2015,
       "categories": [
-        "Surveillance"
+        "Promotion et prévention"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "santé au travail",
+        "secteur privé"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Dossier de presse",
+          "url": "https://example.com/entreprises"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2016": [
+    {
+      "id": "event15",
+      "title": "Schéma organisation sanitaire 2016-2021",
+      "year": 2016,
+      "categories": [
+        "Gouvernance et pilotage"
+      ],
+      "keywords": [
+        "organisation",
+        "planification"
+      ],
+      "sources": [
+        {
+          "label": "Ministère Santé",
+          "url": "https://example.com/sos2016"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event16",
+      "title": "Politique de santé 2016-2025",
+      "year": 2016,
+      "categories": [
+        "Gouvernance et pilotage"
+      ],
+      "keywords": [
+        "politique",
+        "plan"
+      ],
+      "sources": [
+        {
+          "label": "Santé PF",
+          "url": "https://example.com/politique"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event17",
+      "title": "Enquête santé - Jeunes",
+      "year": 2016,
+      "categories": [
+        "Données et recherche"
+      ],
+      "keywords": [
+        "adolescent",
+        "comportement"
+      ],
+      "sources": [
+        {
+          "label": "GSHS",
+          "url": "https://example.com/gshs"
         }
       ],
       "added": "2025-06-21"
     },
     {
       "id": "event26",
-      "name": "Événement de santé publique fictif 26",
+      "title": "Données sur la santé des jeunes",
+      "year": 2016,
       "categories": [
-        "Surveillance"
+        "Données et recherche"
       ],
       "keywords": [
         "santé",
-        "événement"
+        "adolescents"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Enquête santé",
+          "url": "https://example.com/jeunesdata"
         }
       ],
       "added": "2025-06-21"
     }
   ],
-  "2021": [
+  "2017": [
     {
-      "id": "event17",
-      "name": "Événement de santé publique fictif 17",
+      "id": "event18",
+      "title": "Dispositif école en santé",
+      "year": 2017,
       "categories": [
-        "Surveillance"
+        "Promotion et prévention"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "école",
+        "adolescent"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "DSP",
+          "url": "https://example.com/ecole"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2018": [
+    {
+      "id": "event19",
+      "title": "Plan cancer 2018-2022",
+      "year": 2018,
+      "categories": [
+        "Gouvernance et pilotage"
+      ],
+      "keywords": [
+        "cancer",
+        "plan"
+      ],
+      "sources": [
+        {
+          "label": "Plan cancer",
+          "url": "https://example.com/plan-cancer"
         }
       ],
       "added": "2025-06-21"
     },
     {
-      "id": "event22",
-      "name": "Événement de santé publique fictif 22",
+      "id": "event20",
+      "title": "Schéma de prévention santé",
+      "year": 2018,
       "categories": [
-        "Surveillance"
+        "Promotion et prévention"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "plan santé"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Schéma prévention",
+          "url": "https://example.com/prevention"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event29",
+      "title": "Campagne contre le tabac",
+      "year": 2018,
+      "categories": [
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "tabac",
+        "sensibilisation"
+      ],
+      "sources": [
+        {
+          "label": "Direction santé",
+          "url": "https://example.com/tabac"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2019": [
+    {
+      "id": "event21",
+      "title": "Dépistage du Rhumatisme Articulaire Aigu",
+      "year": 2019,
+      "categories": [
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "RAA",
+        "école"
+      ],
+      "sources": [
+        {
+          "label": "RAA PF",
+          "url": "https://example.com/raa"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2020": [
+    {
+      "id": "event22",
+      "title": "Registre des cancers - 1er rapport",
+      "year": 2020,
+      "categories": [
+        "Données et recherche"
+      ],
+      "keywords": [
+        "cancer",
+        "registre"
+      ],
+      "sources": [
+        {
+          "label": "Registre",
+          "url": "https://example.com/registre"
         }
       ],
       "added": "2025-06-21"
     },
     {
       "id": "event27",
-      "name": "Événement de santé publique fictif 27",
+      "title": "COVID-19 : mesures sanitaires",
+      "year": 2020,
       "categories": [
-        "Surveillance"
+        "Protection et gestion des risques"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "pandémie",
+        "prévention"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "DSP",
+          "url": "https://example.com/covid19"
         }
       ],
       "added": "2025-06-21"
@@ -410,111 +529,39 @@
   ],
   "2022": [
     {
-      "id": "event18",
-      "name": "Événement de santé publique fictif 18",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "santé",
-        "événement"
-      ],
-      "sources": [
-        {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
       "id": "event23",
-      "name": "Événement de santé publique fictif 23",
+      "title": "Campagne de dépistage des mélanomes",
+      "year": 2022,
       "categories": [
-        "Surveillance"
+        "Promotion et prévention"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "peau",
+        "mélanome"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Ligue contre le cancer",
+          "url": "https://example.com/melanome"
         }
       ],
       "added": "2025-06-21"
     },
     {
       "id": "event28",
-      "name": "Événement de santé publique fictif 28",
+      "title": "Renforcement des moyens en télémédecine",
+      "year": 2022,
       "categories": [
-        "Surveillance"
+        "Accès"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "téléconsultation",
+        "innovation"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
-        }
-      ],
-      "added": "2025-06-21"
-    }
-  ],
-  "2023": [
-    {
-      "id": "event19",
-      "name": "Événement de santé publique fictif 19",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "santé",
-        "événement"
-      ],
-      "sources": [
-        {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event24",
-      "name": "Événement de santé publique fictif 24",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "santé",
-        "événement"
-      ],
-      "sources": [
-        {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event29",
-      "name": "Événement de santé publique fictif 29",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "santé",
-        "événement"
-      ],
-      "sources": [
-        {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Rapport santé numérique",
+          "url": "https://example.com/telemedecine"
         }
       ],
       "added": "2025-06-21"
@@ -522,55 +569,39 @@
   ],
   "2024": [
     {
-      "id": "event20",
-      "name": "Événement de santé publique fictif 20",
+      "id": "event24",
+      "title": "Enquête Ea Piahi - Jeunes",
+      "year": 2024,
       "categories": [
-        "Surveillance"
+        "Données et recherche"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "jeunes",
+        "comportement"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
-        }
-      ],
-      "added": "2025-06-21"
-    },
-    {
-      "id": "event25",
-      "name": "Événement de santé publique fictif 25",
-      "categories": [
-        "Surveillance"
-      ],
-      "keywords": [
-        "santé",
-        "événement"
-      ],
-      "sources": [
-        {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Ea Piahi",
+          "url": "https://example.com/piahi"
         }
       ],
       "added": "2025-06-21"
     },
     {
       "id": "event30",
-      "name": "Événement de santé publique fictif 30",
+      "title": "Publication du rapport sur la santé mentale",
+      "year": 2024,
       "categories": [
-        "Surveillance"
+        "Données et recherche"
       ],
       "keywords": [
-        "santé",
-        "événement"
+        "santé mentale",
+        "enquête"
       ],
       "sources": [
         {
-          "label": "Source fictive",
-          "url": "https://example.com/test"
+          "label": "Rapport santé mentale",
+          "url": "https://example.com/mental"
         }
       ],
       "added": "2025-06-21"
