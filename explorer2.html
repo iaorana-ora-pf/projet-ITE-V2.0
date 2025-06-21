@@ -1,96 +1,218 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projet'ITE6</title>
-  <link rel="stylesheet" href="./css/explorer2.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <div class="container">
-
-    <!-- =================== -->
-    <!--      SIDEBAR        -->
-    <!-- =================== -->
-    <aside class="sidebar" id="sidebar">
-<div class="sidebar-scroll">
-      <h2>Filtrer et trier</h2>
-
-      <!-- Tri -->
-      <div class="sort-container">
-        <h3>Trier du :</h3>
-        <label>
-          <input type="radio" name="sortOrder" value="desc" checked>
-          <span>Plus récent → Plus ancien</span>
-        </label>
-        <label>
-          <input type="radio" name="sortOrder" value="asc">
-          <span>Plus ancien → Plus récent</span>
-        </label>
-      </div>
-
-      <!-- Catégories -->
-      <h3>
-        Catégories
-        <i class="fas fa-circle-info" id="category-info-btn" title="À propos des catégories"></i>
-      </h3>
-      <div class="category-checkbox-group" id="categoryCheckboxGroup">
-        <!-- cases à cocher injectées via JS -->
-      </div>
-
-      <!-- Recherche -->
-      <div class="search-title">Rechercher par mots-clés :</div>
-      <input id="searchInput" class="search-bar" type="text" placeholder="Ex. dates, titres, mots..." />
-
-      <!-- Bouton Réinitialiser -->
-     <button class="reset-btn" id="resetFilters">Réinitialiser les filtres</button>
-
-      </div>
-      <!-- Footer -->
-        <div class="sidebar-footer">
-        <p>Projet'ITE - © 2025 – Tous droits réservés </p>
-        </div>
-    
-    </aside>
-
- <!-- =================== -->
-  <!--     Frise      -->
-  <!-- =================== -->
-     <section id="timeline-wrapper">
-      <div id="timeline-header">La frise contient 0 événements</div>
-       <p>Cliquez sur un événement pour en savoir plus </p>
-      <div id="timeline"></div>
-    </section>
-  </div> 
-  <!-- =================== -->
-  <!--     MODAL INFO      -->
-  <!-- =================== -->
-  <div id="category-modal" class="modal hidden">
-    <div class="modal-content">
-      <span id="close-modal" class="close">&times;</span>
-      <h4><strong>À propos des catégories</strong></h4>
-      <p>
-        Ce filtre s’appuie sur les <a href="https://iris.who.int/bitstream/handle/10665/376579/9789240091436-eng.pdf" 
-        target="_blank" class="fesp-link">
-        Fonctions Essentielles de Santé Publique (FESP)</a> de l’OMS, regroupées en 5 grandes familles :
-      </p>
-      <ul>
-        <li><strong>Gouvernance et pilotage stratégique</strong> : coordination, planification, participation, qualité et équité</li>
-        <li><strong>Données, surveillance et recherche</strong> : information sanitaire</li>
-        <li><strong>Promotion de la santé et prévention</strong> : comportements et actions populationnelles</li>
-        <li><strong>Protection et gestion des risques</strong> : réponse aux menaces sanitaires</li>
-        <li><strong>Accès aux services</strong> : ressources humaines, infrastructures, soins</li>
-      </ul>
-      <p>
-        La catégorie <strong>"Contexte"</strong> regroupe les événements à impact indirect sur la santé publique.<br><br>
-        Vous pouvez sélectionner plusieurs options.<br>
-        Les résultats affichent les événements correspondants à au moins une des catégories sélectionnées.
-      </p>
-    </div>
-  </div>
-
-  <!-- JS Script -->
-  <script src="./js/explorer2.js"></script>
-</body>
-</html>
+[
+  {
+    "id": "event1",
+    "year": 1785,
+    "title": "Introduction de la variole par des navigateurs européens",
+    "categories": ["Contexte", "Protection et gestion des risques"],
+    "keywords": ["variole", "contagion", "maladie"],
+    "sources": [{"label":"Rapport historique","url":"https://example.com/variole"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event2",
+    "year": 1840,
+    "title": "Épidémie de typhoïde signalée à Tahiti",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["épidémie","typhoïde"],
+    "sources": [{"label":"Archives coloniales","url":"https://example.com/typhoide"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event3",
+    "year": 1899,
+    "title": "Création du premier dispensaire public à Papeete",
+    "categories": ["Accès"],
+    "keywords": ["soins","infrastructure"],
+    "sources": [{"label":"Historique santé PF","url":"https://example.com/dispensaire"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event4",
+    "year": 1918,
+    "title": "Grippe espagnole : forte mortalité à Tahiti",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["grippe","pandémie","mortalité"],
+    "sources": [{"label":"OMS","url":"https://example.com/grippe1918"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event5",
+    "year": 1918,
+    "title": "Mise en quarantaine des navires à Papeete",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["quarantaine","port","contagion"],
+    "sources": [{"label":"Archives portuaires","url":"https://example.com/quarantaine1918"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event6",
+    "year": 1958,
+    "title": "Début du programme de lutte contre la filariose",
+    "categories": ["Promotion et prévention","Protection et gestion des risques"],
+    "keywords": ["filariose","parasites"],
+    "sources": [{"label":"Ministère Santé","url":"https://example.com/filariose"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event7",
+    "year": 1966,
+    "title": "Essais nucléaires : début des préoccupations sanitaires",
+    "categories": ["Contexte","Protection et gestion des risques"],
+    "keywords": ["nucléaire","exposition","risque"],
+    "sources": [{"label":"Rapport CIVEN","url":"https://example.com/nucleaire"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event8",
+    "year": 1971,
+    "title": "Création du Bureau de la Santé de Polynésie",
+    "categories": ["Gouvernance et pilotage"],
+    "keywords": ["administration","santé publique"],
+    "sources": [{"label":"Décret territorial","url":"https://example.com/bsp1971"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event9",
+    "year": 1983,
+    "title": "Vaccination rougeole en Polynésie",
+    "categories": ["Promotion et prévention"],
+    "keywords": ["rougeole","vaccination"],
+    "sources": [{"label":"Santé publique PF","url":"https://example.com/rougeole"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event10",
+    "year": 1992,
+    "title": "Création de la Direction de la Santé",
+    "categories": ["Gouvernance et pilotage"],
+    "keywords": ["réforme","institution"],
+    "sources": [{"label":"Journal officiel","url":"https://example.com/ds1992"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event11",
+    "year": 1995,
+    "title": "Campagne VIH/SIDA + dépistage gratuit",
+    "categories": ["Promotion et prévention","Accès"],
+    "keywords": ["VIH","dépistage","prévention"],
+    "sources": [{"label":"Programme VIH","url":"https://example.com/vih1995"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event12",
+    "year": 1996,
+    "title": "Épidémie dengue sérotype 2",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["dengue","DENV‑2"],
+    "sources": [{"label":"Institut Pasteur PMC","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6652116"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event13",
+    "year": 2003,
+    "title": "Épidémie de chikungunya",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["chikungunya","arbovirus"],
+    "sources": [{"label":"ILM","url":"https://example.com/chik2003"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event14",
+    "year": 2007,
+    "title": "Certification CHPF",
+    "categories": ["Accès","Gouvernance et pilotage"],
+    "keywords": ["CHPF","hôpital"],
+    "sources": [{"label":"CHPF","url":"https://example.com/chpf2007"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event15",
+    "year": 2013,
+    "title": "Épidémie de Zika (~32 000 cas)",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["Zika","épidémie"],
+    "sources": [{"label":"SPF 2014","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC6407142"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event16",
+    "year": 2013,
+    "title": "Premiers cas de dengue simultanés",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["dengue","co-circulation"],
+    "sources": [{"label":"SPF 2022","url":"https://example.com/dengue2013"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event17",
+    "year": 2014,
+    "title": "Chikungunya en Polynésie",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["chikungunya"],
+    "sources": [{"label":"SPF 2014","url":"https://example.com/chik2014"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event18",
+    "year": 2020,
+    "title": "Premiers cas COVID‑19 et confinement",
+    "categories": ["Protection et gestion des risques","Gouvernance et pilotage"],
+    "keywords": ["COVID‑19","confinement"],
+    "sources": [{"label":"Wikipedia PF","url":"https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19_en_Polyn%C3%A9sie_fran%C3%A7aise"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event19",
+    "year": 2020,
+    "title": "Mise en place du dispositif 'plan blanc' et ORSEC",
+    "categories": ["Gouvernance et pilotage"],
+    "keywords": ["plan blanc","ORSEC"],
+    "sources": [{"label":"Wikipedia PF","url":"https://fr.wikipedia.org/wiki/Pand%C3%A9mie_de_Covid-19_en_Polyn%C3%A9sie_fran%C3%A7aise"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event20",
+    "year": 2022,
+    "title": "Campagne de vaccination COVID‑19 étendue",
+    "categories": ["Promotion et prévention"],
+    "keywords": ["vaccination","COVID‑19"],
+    "sources": [{"label":"Campagne PF","url":"https://example.com/vaccination2022"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event21",
+    "year": 2022,
+    "title": "Introduction du pass sanitaire",
+    "categories": ["Gouvernance et pilotage"],
+    "keywords": ["pass sanitaire"],
+    "sources": [{"label":"Décret PF","url":"https://example.com/pass2022"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event22",
+    "year": 2024,
+    "title": "Circulation conjointe dengue, grippe, coqueluche (bulletin S4‑2025)",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["dengue","grippe","coqueluche"],
+    "sources": [{"label":"Bulletin ARASS","url":"https://www.service-public.pf/arass/wp-content/uploads/.../BSS04‑S04‑2025.pdf"}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event23",
+    "year": 2025,
+    "title": "Déclaration épidémie de grippe saisonnière (sem.3‑2025)",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["grippe","épidémie","2025"],
+    "sources": [{"label":"Bulletin ARASS","url":"https://www.service-public.pf/arass/..."}],
+    "added": "2025-06-20"
+  },
+  {
+    "id": "event24",
+    "year": 2025,
+    "title": "Début des cas de coqueluche confirmée (sem.4‑2025)",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["coqueluche"],
+    "sources": [{"label":"Bulletin ARASS","url":"https://www.service-public.pf/arass/..."}],
+    "added": "2025-06-20"
+  }
+]
