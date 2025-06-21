@@ -2,6 +2,7 @@
   "1772": [
     {
       "id": "event1",
+      "name": "Première épidémie de grippe à Tahiti",
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -15,13 +16,13 @@
           "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
         }
       ],
-      "added": "2025-06-21",
-      "name": "Première épidémie de grippe à Tahiti"
+      "added": "2025-06-21"
     }
   ],
   "1863": [
     {
       "id": "event2",
+      "name": "Épidémie de variole aux Marquises",
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -35,13 +36,13 @@
           "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
         }
       ],
-      "added": "2025-06-21",
-      "name": "Épidémie de variole aux Marquises"
+      "added": "2025-06-21"
     }
   ],
   "1918": [
     {
       "id": "event3",
+      "name": "Grippe espagnole en Polynésie",
       "categories": [
         "Protection et gestion des risques"
       ],
@@ -55,19 +56,37 @@
           "url": "https://horizon.documentation.ird.fr"
         }
       ],
-      "added": "2025-06-21",
-      "name": "Grippe espagnole en Polynésie"
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event4",
+      "name": "Surmortalité infantile due à la grippe espagnole",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "grippe",
+        "mortalité infantile"
+      ],
+      "sources": [
+        {
+          "label": "Rapport OMS",
+          "url": "https://example.com/oms1918"
+        }
+      ],
+      "added": "2025-06-21"
     }
   ],
   "1949": [
     {
-      "id": "event4",
+      "id": "event5",
+      "name": "Création du Centre de Santé Scolaire",
       "categories": [
         "Accès"
       ],
       "keywords": [
-        "école",
-        "enfant",
+        "santé scolaire",
+        "enfants",
         "prévention"
       ],
       "sources": [
@@ -76,8 +95,485 @@
           "url": "https://www.service-public.pf/dsp/centre-de-sante-scolaire/"
         }
       ],
-      "added": "2025-06-21",
-      "name": "Création du Centre de Santé Scolaire"
+      "added": "2025-06-21"
+    }
+  ],
+  "1952": [
+    {
+      "id": "event6",
+      "name": "Campagne de vaccination contre la tuberculose",
+      "categories": [
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "vaccination",
+        "tuberculose"
+      ],
+      "sources": [
+        {
+          "label": "Archives Santé",
+          "url": "https://example.com/tuberculose"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "1966": [
+    {
+      "id": "event7",
+      "name": "Création du service de radioprotection",
+      "categories": [
+        "Protection et gestion des risques"
+      ],
+      "keywords": [
+        "nucléaire",
+        "radioprotection"
+      ],
+      "sources": [
+        {
+          "label": "Rapport ILM",
+          "url": "https://example.com/radio"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "1986": [
+    {
+      "id": "event8",
+      "name": "Baisse significative des maladies infectieuses",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "mortalité",
+        "infections"
+      ],
+      "sources": [
+        {
+          "label": "Atlas démographique",
+          "url": "https://example.com/atlas"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "1996": [
+    {
+      "id": "event9",
+      "name": "Programme d’allaitement maternel",
+      "categories": [
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "allaitement",
+        "enfant"
+      ],
+      "sources": [
+        {
+          "label": "Direction Santé",
+          "url": "https://example.com/allaitement"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2001": [
+    {
+      "id": "event10",
+      "name": "Schéma d’Organisation Sanitaire 2001-2007",
+      "categories": [
+        "Gouvernance"
+      ],
+      "keywords": [
+        "plan",
+        "organisation"
+      ],
+      "sources": [
+        {
+          "label": "Ministère Santé",
+          "url": "https://example.com/sos2001"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2003": [
+    {
+      "id": "event11",
+      "name": "Dépistage gratuit des cancers gynécologiques",
+      "categories": [
+        "Accès",
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "cancer",
+        "femme"
+      ],
+      "sources": [
+        {
+          "label": "Rapport Santé",
+          "url": "https://example.com/cancers"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2010": [
+    {
+      "id": "event12",
+      "name": "Enquête sur les maladies non transmissibles",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "facteurs de risque",
+        "enquête"
+      ],
+      "sources": [
+        {
+          "label": "BEH",
+          "url": "https://example.com/beh2010"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2014": [
+    {
+      "id": "event13",
+      "name": "Parcours santé dans les jardins de Paofai",
+      "categories": [
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "exercice physique"
+      ],
+      "sources": [
+        {
+          "label": "Tahiti infos",
+          "url": "https://tahiti-infos.com"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2015": [
+    {
+      "id": "event14",
+      "name": "Statistiques de santé : cancers en PF",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "cancer",
+        "statistiques"
+      ],
+      "sources": [
+        {
+          "label": "Registre cancer",
+          "url": "https://example.com/cancer"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event15",
+      "name": "Programme allaitement maternel 2015-2020",
+      "categories": [
+        "Promotion et prévention"
+      ],
+      "keywords": [
+        "allaitement",
+        "santé infantile"
+      ],
+      "sources": [
+        {
+          "label": "Programme AM",
+          "url": "https://example.com/am"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2020": [
+    {
+      "id": "event16",
+      "name": "Événement de santé publique fictif 16",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event21",
+      "name": "Événement de santé publique fictif 21",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event26",
+      "name": "Événement de santé publique fictif 26",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2021": [
+    {
+      "id": "event17",
+      "name": "Événement de santé publique fictif 17",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event22",
+      "name": "Événement de santé publique fictif 22",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event27",
+      "name": "Événement de santé publique fictif 27",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2022": [
+    {
+      "id": "event18",
+      "name": "Événement de santé publique fictif 18",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event23",
+      "name": "Événement de santé publique fictif 23",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event28",
+      "name": "Événement de santé publique fictif 28",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2023": [
+    {
+      "id": "event19",
+      "name": "Événement de santé publique fictif 19",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event24",
+      "name": "Événement de santé publique fictif 24",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event29",
+      "name": "Événement de santé publique fictif 29",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    }
+  ],
+  "2024": [
+    {
+      "id": "event20",
+      "name": "Événement de santé publique fictif 20",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event25",
+      "name": "Événement de santé publique fictif 25",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
+    },
+    {
+      "id": "event30",
+      "name": "Événement de santé publique fictif 30",
+      "categories": [
+        "Surveillance"
+      ],
+      "keywords": [
+        "santé",
+        "événement"
+      ],
+      "sources": [
+        {
+          "label": "Source fictive",
+          "url": "https://example.com/test"
+        }
+      ],
+      "added": "2025-06-21"
     }
   ]
 }
