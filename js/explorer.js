@@ -12,7 +12,7 @@ const categoryInfo = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("data/events.json")
+  fetch("events.json")
     .then(res => res.json())
     .then(events => {
       eventsData = events;
