@@ -17,15 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(events => {
       eventsData = events;
       generateCategoryCheckboxes();
-      const sortRadio = document.querySelector('input[name="sortOrder"]:checked');
-      const sortValue = sortRadio ? sortRadio.value : "desc";
-      renderTimeline(eventsData, sortValue);
+      renderTimeline(eventsData, "desc");
     });
 
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
     radio.addEventListener("change", () => {
       const selected = document.querySelector('input[name="sortOrder"]:checked').value;
-      console.log("TRI choisi :", selected); // debug
       renderTimeline(eventsData, selected);
     });
   });
@@ -89,22 +86,26 @@ function renderTimeline(events, order = "desc") {
     grouped[event.year].push(event);
   });
 
-  timeline.innerHTML = "";
-
   const orderedYears = Object.keys(grouped).sort((a, b) =>
     order === "asc" ? a - b : b - a
   );
+
+  timeline.innerHTML = "";
 
   orderedYears.forEach(year => {
     const items = grouped[year];
 
     const yearDiv = document.createElement("div");
     yearDiv.className = "year-block";
+    yearDiv.classList.add(year % 2 === 0 ? "right" : "left");
 
     const yearTitle = document.createElement("div");
     yearTitle.className = "year-title";
     yearTitle.textContent = year;
     yearDiv.appendChild(yearTitle);
+
+    const container = document.createElement("div");
+    container.className = "event-container";
 
     items.forEach(ev => {
       const evDiv = document.createElement("div");
@@ -122,9 +123,10 @@ function renderTimeline(events, order = "desc") {
         <div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>
       `;
 
-      yearDiv.appendChild(evDiv);
+      container.appendChild(evDiv);
     });
 
+    yearDiv.appendChild(container);
     timeline.appendChild(yearDiv);
   });
 }
