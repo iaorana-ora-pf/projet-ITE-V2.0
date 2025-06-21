@@ -225,7 +225,16 @@ h3 {
   flex-grow: 1;
   width: 100%;
 }
-
+#timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ccc;
+  transform: translateX(-50%);
+}
 #timeline-header {
   font-size: 1.2rem;
   font-weight: bold;
@@ -245,12 +254,36 @@ h3 {
 }
 
 .year-block {
-  background: #fdfdfb;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  border-radius: 12px;
-  margin: 30px auto;
+  position: relative;
+  width: 45%;
   padding: 20px;
-  max-width: 800px;
+  background: #fdfdfb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin: 40px 0;
+}
+.year-block.left {
+  left: 0;
+  margin-left: 0;
+  margin-right: auto;
+  transform: translateX(-5%);
+  clear: both;
+}
+
+.year-block.right {
+  left: 50%;
+  margin-left: auto;
+  margin-right: 0;
+  transform: translateX(5%);
+  clear: both;
+}
+.year-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--main-green);
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
 }
 
 .year-block .year-title {
@@ -260,15 +293,26 @@ h3 {
   margin-bottom: 10px;
   text-align: center;
 }
+.year-title::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: orange;
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
 
 .event-item {
-  padding: 12px 16px;
-  margin: 10px 0;
   background: white;
   border-left: 4px solid var(--main-green);
+  padding: 10px 15px;
+  margin-bottom: 10px;
   border-radius: 6px;
-  transition: background 0.2s;
-  cursor: pointer;
 }
 .event-item:hover {
   background: #f3f3f3;
@@ -277,11 +321,10 @@ h3 {
   font-weight: bold;
 }
 .event-icons {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 .event-icons .cat-icon {
-  margin-right: 8px;
-  font-size: 1rem;
+  margin-right: 6px;
 }
 
 
