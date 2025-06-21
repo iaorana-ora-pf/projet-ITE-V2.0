@@ -235,38 +235,31 @@ h3 {
   z-index: 0;
 }
 .timeline-circle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  background-color: orange;
+  background: orange;
   color: white;
   font-weight: bold;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 /* Bloc année + événements */
 .year-block {
   position: relative;
   width: 50%;
-  padding: 30px 30px 30px;
-  box-sizing: border-box;
 }
-
 .year-block.left {
-  left: 0;
-  text-align: left;
+  justify-content: flex-start;
+  padding-right: 60px;
+  text-align: right;
 }
 
 .year-block.right {
-  left: 50%;
-  text-align: right;
+  margin-left: auto;
+  padding-left: 60px;
+  text-align: left;
 }
 
 /* Conteneur global (rond + événements) */
@@ -296,7 +289,12 @@ h3 {
   z-index: 2;
   box-shadow: 0 0 0 4px white;
 }
-
+.event-group {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 /* Événements individuels */
 .event-item {
   margin: 12px 0;
