@@ -1,221 +1,49 @@
-[
-  {
-    "id": "event001",
-    "year": 2019,
-    "title": "Événement Exemple 1",
-    "shortDescription": "Description courte de l'événement 1.",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "motclé1",
-      "exemple1"
-    ],
-    "source": "https://exemple.com/evenement1"
-  },
-  {
-    "id": "event002",
-    "year": 2023,
-    "title": "Événement Exemple 2",
-    "shortDescription": "Description courte de l'événement 2.",
-    "categories": [
-      "Contexte"
-    ],
-    "keywords": [
-      "motclé2",
-      "exemple2"
-    ],
-    "source": "https://exemple.com/evenement2"
-  },
-  {
-    "id": "event003",
-    "year": 2022,
-    "title": "Événement Exemple 3",
-    "shortDescription": "Description courte de l'événement 3.",
-    "categories": [
-      "Gouvernance et pilotage",
-      "Contexte"
-    ],
-    "keywords": [
-      "motclé3",
-      "exemple3"
-    ],
-    "source": "https://exemple.com/evenement3"
-  },
-  {
-    "id": "event004",
-    "year": 2007,
-    "title": "Événement Exemple 4",
-    "shortDescription": "Description courte de l'événement 4.",
-    "categories": [
-      "Gouvernance et pilotage",
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "motclé4",
-      "exemple4"
-    ],
-    "source": "https://exemple.com/evenement4"
-  },
-  {
-    "id": "event005",
-    "year": 2018,
-    "title": "Événement Exemple 5",
-    "shortDescription": "Description courte de l'événement 5.",
-    "categories": [
-      "Protection et gestion des risques",
-      "Contexte"
-    ],
-    "keywords": [
-      "motclé5",
-      "exemple5"
-    ],
-    "source": "https://exemple.com/evenement5"
-  },
-  {
-    "id": "event006",
-    "year": 2014,
-    "title": "Événement Exemple 6",
-    "shortDescription": "Description courte de l'événement 6.",
-    "categories": [
-      "Promotion et prévention",
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "motclé6",
-      "exemple6"
-    ],
-    "source": "https://exemple.com/evenement6"
-  },
-  {
-    "id": "event007",
-    "year": 2019,
-    "title": "Événement Exemple 7",
-    "shortDescription": "Description courte de l'événement 7.",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "motclé7",
-      "exemple7"
-    ],
-    "source": "https://exemple.com/evenement7"
-  },
-  {
-    "id": "event008",
-    "year": 2019,
-    "title": "Événement Exemple 8",
-    "shortDescription": "Description courte de l'événement 8.",
-    "categories": [
-      "Contexte",
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "motclé8",
-      "exemple8"
-    ],
-    "source": "https://exemple.com/evenement8"
-  },
-  {
-    "id": "event009",
-    "year": 2021,
-    "title": "Événement Exemple 9",
-    "shortDescription": "Description courte de l'événement 9.",
-    "categories": [
-      "Données et recherche",
-      "Accès"
-    ],
-    "keywords": [
-      "motclé9",
-      "exemple9"
-    ],
-    "source": "https://exemple.com/evenement9"
-  },
-  {
-    "id": "event010",
-    "year": 2011,
-    "title": "Événement Exemple 10",
-    "shortDescription": "Description courte de l'événement 10.",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "motclé10",
-      "exemple10"
-    ],
-    "source": "https://exemple.com/evenement10"
-  },
-  {
-    "id": "event011",
-    "year": 2008,
-    "title": "Événement Exemple 11",
-    "shortDescription": "Description courte de l'événement 11.",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "motclé11",
-      "exemple11"
-    ],
-    "source": "https://exemple.com/evenement11"
-  },
-  {
-    "id": "event012",
-    "year": 2009,
-    "title": "Événement Exemple 12",
-    "shortDescription": "Description courte de l'événement 12.",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "motclé12",
-      "exemple12"
-    ],
-    "source": "https://exemple.com/evenement12"
-  },
-  {
-    "id": "event013",
-    "year": 2021,
-    "title": "Événement Exemple 13",
-    "shortDescription": "Description courte de l'événement 13.",
-    "categories": [
-      "Accès",
-      "Données et recherche"
-    ],
-    "keywords": [
-      "motclé13",
-      "exemple13"
-    ],
-    "source": "https://exemple.com/evenement13"
-  },
-  {
-    "id": "event014",
-    "year": 2006,
-    "title": "Événement Exemple 14",
-    "shortDescription": "Description courte de l'événement 14.",
-    "categories": [
-      "Promotion et prévention",
-      "Données et recherche"
-    ],
-    "keywords": [
-      "motclé14",
-      "exemple14"
-    ],
-    "source": "https://exemple.com/evenement14"
-  },
-  {
-    "id": "event015",
-    "year": 2010,
-    "title": "Événement Exemple 15",
-    "shortDescription": "Description courte de l'événement 15.",
-    "categories": [
-      "Gouvernance et pilotage",
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "motclé15",
-      "exemple15"
-    ],
-    "source": "https://exemple.com/evenement15"
-  }
-]
+{
+  "1785": [
+    {
+      "id": "event1",
+      "title": "Introduction de la variole par des navigateurs européens",
+      "categories": ["Contexte", "Protection et gestion des risques"],
+      "keywords": ["variole", "contagion", "maladie"],
+      "sources": [
+        { "label": "Rapport historique", "url": "https://example.com/variole" }
+      ],
+      "added": "2025-06-20"
+    }
+  ],
+  "1840": [
+    {
+      "id": "event2",
+      "title": "Épidémie de typhoïde signalée à Tahiti",
+      "categories": ["Protection et gestion des risques"],
+      "keywords": ["épidémie", "typhoïde"],
+      "sources": [{ "label": "Archives coloniales", "url": "https://example.com/typhoide" }],
+      "added": "2025-06-20"
+    }
+  ],
+  "1899": [
+    {
+      "id": "event3",
+      "title": "Création du premier dispensaire public à Papeete",
+      "categories": ["Accès"],
+      "keywords": ["soins", "infrastructure"],
+      "sources": [{ "label": "Historique santé PF", "url": "https://example.com/dispensaire" }],
+      "added": "2025-06-20"
+    }
+  ],
+  "1918": [
+    {
+      "id": "event4",
+      "title": "Grippe espagnole : forte mortalité à Tahiti",
+      "categories": ["Protection et gestion des risques"],
+      "keywords": ["grippe", "pandémie", "mortalité"],
+      "sources": [{ "label": "OMS", "url": "https://example.com/grippe1918" }],
+      "added": "2025-06-20"
+    }
+  ],
+  "1958": [
+    {
+      "id": "event5",
+      "title": "Lutte contre la filariose lancée officiellement",
+      "categories": ["Promotion et prévention", "Protection et gestion des risques"],
+      "keywords": ["filariose", "paras]()
