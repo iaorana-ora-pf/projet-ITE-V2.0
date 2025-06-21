@@ -85,40 +85,48 @@ function renderTimeline(events, order = "desc") {
   });
 
   timeline.innerHTML = "";
-  for (const [year, items] of Object.entries(grouped)) {
-    const sideClass = year % 2 === 0 ? 'right' : 'left';
+for (const [year, items] of Object.entries(grouped)) {
+  const sideClass = year % 2 === 0 ? 'right' : 'left';
 
-    const yearBlock = document.createElement("div");
-    yearBlock.className = `year-block ${sideClass}`;
+  const yearBlock = document.createElement("div");
+  yearBlock.className = `year-block ${sideClass}`;
 
-    // Rond contenant l'année, centré sur la frise
-    const yearCircle = document.createElement("div");
-    yearCircle.className = "timeline-circle";
-    yearCircle.textContent = year;
-    yearBlock.appendChild(yearCircle);
+  // Conteneur principal pour ligne + année + bloc événements
+  const wrapper = document.createElement("div");
+  wrapper.className = "timeline-entry";
 
-    const content = document.createElement("div");
-    content.className = "block-content";
+  // Création du rond central sur la ligne
+  const yearMarker = document.createElement("div");
+  yearMarker.className = "timeline-marker";
+  yearMarker.innerHTML = `
+    <div class="timeline-circle">${year}</div>
+  `;
+  wrapper.appendChild(yearMarker);
 
-    items.forEach(ev => {
-      const evDiv = document.createElement("div");
-      evDiv.className = "event-item";
-      evDiv.onclick = () => window.open(`details/${ev.id}.html`, "_blank");
+  // Création du bloc événement à gauche ou droite
+  const eventGroup = document.createElement("div");
+  eventGroup.className = "event-group";
 
-      const icons = (ev.categories || []).map(cat => {
-        const info = categoryInfo[cat];
-        return info
-          ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
-          : '';
-      }).join("");
+  items.forEach(ev => {
+    const evDiv = document.createElement("div");
+    evDiv.className = "event-item";
+    evDiv.onclick = () => window.open(`details/${ev.id}.html`, "_blank");
 
-      evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
-      content.appendChild(evDiv);
-    });
+    const icons = (ev.categories || []).map(cat => {
+      const info = categoryInfo[cat];
+      return info
+        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
+        : '';
+    }).join("");
 
-    yearBlock.appendChild(content);
-    timeline.appendChild(yearBlock);
-  }
+    evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
+    eventGroup.appendChild(evDiv);
+  });
+
+  yearBlock.appendChild(eventGroup);
+  wrapper.appendChild(yearBlock);
+  timeline.appendChild(wrapper);
+}
 }
 
 function generateCategoryCheckboxes() {
