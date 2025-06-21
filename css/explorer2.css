@@ -224,25 +224,18 @@ h3 {
   width: 100%;
 }
 #timeline-wrapper {
-  height: 100vh;
-  overflow-y: auto;
-  padding: 30px;
-  background: white;
-  flex-grow: 1;
-  width: 100%;
+  position: relative;
+  padding-left: 140px;
 }
-
-
 #timeline::before {
-  content: '';
+  content: "";
   position: absolute;
-  left: 50%;
+  left: 100px; /* Position de la ligne */
   top: 0;
-  transform: translateX(-50%);
+  bottom: 0;
   width: 4px;
-  height: 100%;
-  background: #bbb;
-  z-index: 1;
+  background: #ccc;
+  z-index: 0;
 }
 #timeline-header {
   font-size: 1.4rem;
@@ -268,13 +261,7 @@ h3 {
   display: table;
   clear: both;
 }
-.timeline-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 30px 0;
-  width: 100%;
-}
+
 .timeline-group.right {
   flex-direction: row;
 }
@@ -282,16 +269,16 @@ h3 {
 .timeline-group.left {
   flex-direction: row-reverse;
 }
-
 .timeline-dot {
   width: 16px;
   height: 16px;
-  background-color: orange;
+  background: orange;
   border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
+  position: relative;
+  left: -8px; /* pour le centrer sur la ligne */
+  top: 5px;
+  z-index: 1;
+  flex-shrink: 0;
 }
 .timeline-group {
   position: relative;
@@ -300,6 +287,12 @@ h3 {
   justify-content: center;
   margin: 40px 0;
   width: 100%;
+}
+.timeline-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
 }
 .timeline-dot::before {
   content: "";
@@ -314,11 +307,12 @@ h3 {
   z-index: 10;
 }
 .year-label {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--main-green);
   width: 80px;
-  text-align: center;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #008b95;
+  flex-shrink: 0;
 }
 .timeline-group.left .year-label {
   text-align: right;
@@ -327,22 +321,14 @@ h3 {
 .timeline-group.right .year-label {
   text-align: left;
 }
-.year-label {
-  min-width: 80px;
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0 20px;
-  color: var(--main-green);
-}
+
 .year-block {
-background: #fdfdfb;
+  background: #fdfdfb;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   border-radius: 12px;
-  padding: 15px 20px;
-  width: 480px;               /* 🔧 Fixe la largeur */
-  margin: 0 10px;
-  flex-shrink: 0;
+  padding: 20px;
+  margin-left: 20px;
+  flex: 1;
 }
 .year-block.left {
   float: left;
