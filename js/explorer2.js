@@ -126,15 +126,9 @@ function renderTimeline(events, order = "desc") {
       eventsBlock.appendChild(evDiv);
     });
 
-    if (isEven) {
-      groupDiv.appendChild(yearLabel);
-      groupDiv.appendChild(dot);
-      groupDiv.appendChild(eventsBlock);
-    } else {
-      groupDiv.appendChild(eventsBlock);
-      groupDiv.appendChild(dot);
-      groupDiv.appendChild(yearLabel);
-    }
+ groupDiv.appendChild(yearLabel);
+groupDiv.appendChild(dot);
+groupDiv.appendChild(eventsBlock);
 
     timeline.appendChild(groupDiv);
   });
