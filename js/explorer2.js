@@ -92,46 +92,45 @@ function renderTimeline(events, order = "desc") {
   );
 
   sortedYears.forEach(year => {
-    const items = grouped[year];
-    const isEven = parseInt(year) % 2 === 0;
+  const items = grouped[year];
 
-    const groupDiv = document.createElement("div");
-    groupDiv.className = "timeline-group " + (isEven ? "right" : "left");
+  const groupDiv = document.createElement("div");
+  groupDiv.className = "timeline-group"; // <-- plus de left/right
 
-    const yearLabel = document.createElement("div");
-    yearLabel.className = "year-label";
-    yearLabel.textContent = year;
+  const yearLabel = document.createElement("div");
+  yearLabel.className = "year-label";
+  yearLabel.textContent = year;
 
-    const dot = document.createElement("div");
-    dot.className = "timeline-dot";
+  const dot = document.createElement("div");
+  dot.className = "timeline-dot";
 
-    const eventsBlock = document.createElement("div");
-    eventsBlock.className = "year-block";
+  const eventsBlock = document.createElement("div");
+  eventsBlock.className = "year-block";
 
-    items.forEach(ev => {
-      const evDiv = document.createElement("div");
-      evDiv.className = "event-item";
-      evDiv.onclick = () => window.open(`details/${ev.id}.html`, "_blank");
+  items.forEach(ev => {
+    const evDiv = document.createElement("div");
+    evDiv.className = "event-item";
+    evDiv.onclick = () => window.open(`details/${ev.id}.html`, "_blank");
 
-      const icons = (ev.categories || []).map(cat => {
-        const info = categoryInfo[cat];
-        return info
-          ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
-          : '';
-      }).join("");
+    const icons = (ev.categories || []).map(cat => {
+      const info = categoryInfo[cat];
+      return info
+        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
+        : '';
+    }).join("");
 
-      evDiv.innerHTML = `
-        <div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>
-      `;
-      eventsBlock.appendChild(evDiv);
-    });
-
- groupDiv.appendChild(yearLabel);
-groupDiv.appendChild(dot);
-groupDiv.appendChild(eventsBlock);
-
-    timeline.appendChild(groupDiv);
+    evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
+    eventsBlock.appendChild(evDiv);
   });
+
+  // Toujours la même structure
+  groupDiv.appendChild(yearLabel);
+  groupDiv.appendChild(dot);
+  groupDiv.appendChild(eventsBlock);
+
+  timeline.appendChild(groupDiv);
+});
+
 }
 
 
