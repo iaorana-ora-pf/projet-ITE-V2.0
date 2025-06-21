@@ -87,7 +87,13 @@ function renderTimeline(events, order = "desc") {
   });
 
   timeline.innerHTML = "";
-  for (const [year, items] of Object.entries(grouped)) {
+
+  const sortedYears = Object.keys(grouped).sort((a, b) =>
+    order === "asc" ? a - b : b - a
+  );
+
+  sortedYears.forEach(year => {
+    const items = grouped[year];
     const yearDiv = document.createElement("div");
     const isEven = parseInt(year) % 2 === 0;
     yearDiv.className = "year-block " + (isEven ? "right" : "left");
@@ -114,7 +120,7 @@ function renderTimeline(events, order = "desc") {
     });
 
     timeline.appendChild(yearDiv);
-  }
+  });
 }
 
 function generateCategoryCheckboxes() {
@@ -126,11 +132,11 @@ function generateCategoryCheckboxes() {
   Object.entries(categoryInfo).forEach(([cat, info]) => {
     const label = document.createElement("label");
     label.className = "cat-check";
-    label.innerHTML = \`
-      <input type="checkbox" value="\${cat}">
-      <span>\${cat}</span>
-      <i class="fas \${info.icon}" style="color: \${info.color}; margin-left: 4px;"></i>
-    \`;
+    label.innerHTML = `
+      <input type="checkbox" value="${cat}">
+      <span>${cat}</span>
+      <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 4px;"></i>
+    `;
     group.appendChild(label);
   });
 
