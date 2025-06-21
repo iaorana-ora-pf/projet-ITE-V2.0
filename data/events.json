@@ -1,49 +1,95 @@
-{
-  "1785": [
-    {
-      "id": "event1",
-      "title": "Introduction de la variole par des navigateurs européens",
-      "categories": ["Contexte", "Protection et gestion des risques"],
-      "keywords": ["variole", "contagion", "maladie"],
-      "sources": [
-        { "label": "Rapport historique", "url": "https://example.com/variole" }
-      ],
-      "added": "2025-06-20"
-    }
-  ],
-  "1840": [
-    {
-      "id": "event2",
-      "title": "Épidémie de typhoïde signalée à Tahiti",
-      "categories": ["Protection et gestion des risques"],
-      "keywords": ["épidémie", "typhoïde"],
-      "sources": [{ "label": "Archives coloniales", "url": "https://example.com/typhoide" }],
-      "added": "2025-06-20"
-    }
-  ],
-  "1899": [
-    {
-      "id": "event3",
-      "title": "Création du premier dispensaire public à Papeete",
-      "categories": ["Accès"],
-      "keywords": ["soins", "infrastructure"],
-      "sources": [{ "label": "Historique santé PF", "url": "https://example.com/dispensaire" }],
-      "added": "2025-06-20"
-    }
-  ],
-  "1918": [
-    {
-      "id": "event4",
-      "title": "Grippe espagnole : forte mortalité à Tahiti",
-      "categories": ["Protection et gestion des risques"],
-      "keywords": ["grippe", "pandémie", "mortalité"],
-      "sources": [{ "label": "OMS", "url": "https://example.com/grippe1918" }],
-      "added": "2025-06-20"
-    }
-  ],
-  "1958": [
-    {
-      "id": "event5",
-      "title": "Lutte contre la filariose lancée officiellement",
-      "categories": ["Promotion et prévention", "Protection et gestion des risques"],
-      "keywords": ["filariose", "paras]()
+[
+  {
+    "id": "event1",
+    "title": "Introduction de la variole par des navigateurs européens",
+    "categories": [
+      "Contexte",
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "variole",
+      "contagion",
+      "maladie"
+    ],
+    "sources": [
+      {
+        "label": "Rapport historique",
+        "url": "https://example.com/variole"
+      }
+    ],
+    "added": "2025-06-20",
+    "year": 1785
+  },
+  {
+    "id": "event2",
+    "title": "Épidémie de typhoïde signalée à Tahiti",
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "épidémie",
+      "typhoïde"
+    ],
+    "sources": [
+      {
+        "label": "Archives coloniales",
+        "url": "https://example.com/typhoide"
+      }
+    ],
+    "added": "2025-06-20",
+    "year": 1840
+  },
+  {
+    "id": "event3",
+    "title": "Création du premier dispensaire public à Papeete",
+    "categories": [
+      "Accès"
+    ],
+    "keywords": [
+      "soins",
+      "infrastructure"
+    ],
+    "sources": [
+      {
+        "label": "Historique santé PF",
+        "url": "https://example.com/dispensaire"
+      }
+    ],
+    "added": "2025-06-20",
+    "year": 1899
+  },
+  {
+    "id": "event4",
+    "title": "Grippe espagnole : forte mortalité à Tahiti",
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "grippe",
+      "pandémie",
+      "mortalité"
+    ],
+    "sources": [
+      {
+        "label": "OMS",
+        "url": "https://example.com/grippe1918"
+      }
+    ],
+    "added": "2025-06-20",
+    "year": 1918
+  },
+  {
+    "id": "event5",
+    "title": "Lutte contre la filariose lancée officiellement",
+    "categories": [
+      "Promotion et prévention",
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "filariose",
+      "paras"
+    ],
+    "year": 1958,
+    "added": "2025-06-21"
+  }
+]
