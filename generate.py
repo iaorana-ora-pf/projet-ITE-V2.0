@@ -8,9 +8,9 @@ json_file = "events.json"
 output_dir = "fiches"
 os.makedirs(output_dir, exist_ok=True)
 
-# Lire le template HTML externe
-with open("template.html", "r", encoding="utf-8") as tf:
-    template = tf.read()
+# Lire le template_fiche HTML externe
+with open("template_fiche.html", "r", encoding="utf-8") as tf:
+    template_fiche = tf.read()
 
 # 📦 Charger les événements
 with open(json_file, "r", encoding="utf-8") as f:
@@ -32,7 +32,7 @@ for i, event in enumerate(events):
     prev_link = f"{slugs[i-1]}.html" if i > 0 else "#"
     next_link = f"{slugs[i+1]}.html" if i < len(slugs) - 1 else "#"
 
-    html = template.format(
+    html = template_fiche.format(
         title=title,
         year=year,
         categories=categories,
