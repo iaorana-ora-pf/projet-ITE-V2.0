@@ -48,17 +48,3 @@ for i, event in enumerate(events):
         f.write(html)
 
 print(f"✅ {len(events)} fiches générées dans le dossier '{output_dir}/'")
-
-for event, slug in zip(events, slugs):
-    index_html += f'    <li><a href="fiches/{slug}.html">{event["title"]}</a></li>\n'
-
-index_html += """
-  </ul>
-</body>
-</html>
-"""
-
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(index_html)
-
-print("✅ index.html généré avec tous les liens vers /fiche/*.html")
