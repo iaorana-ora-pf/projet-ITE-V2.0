@@ -3,15 +3,6 @@ import os
 import re
 import unicodedata
 
-# 🔧 Convertit un titre en slug
-def slugify(text):
-    text = unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8')
-    text = re.sub(r'[^a-zA-Z0-9 -]', '', text)
-    text = text.lower()
-    text = re.sub(r'\s+', '-', text)
-    text = re.sub(r'-+', '-', text)
-    return text.strip('-')
-
 # 📂 Config
 json_file = "events.json"
 output_dir = "fiches"
@@ -75,18 +66,9 @@ template = """
 with open(json_file, "r", encoding="utf-8") as f:
     events = json.load(f)
 
-# 🔁 Générer les slugs avec année
-slugs = []
-for event in events:
-    year = event.get("year", "")
-    title = event.get("title", "")
-    combined = f"{year}-{title}"
-    slug = slugify(combined)
-    slugs.append(slug)
-
 # 🔁 Générer les pages HTML individuelles
 for i, event in enumerate(events):
-    slug = slugs[i]
+    slug = event["slug"]
     title = event.get("title", "")
     year = event.get("year", "")
     added = event.get("added", "")
