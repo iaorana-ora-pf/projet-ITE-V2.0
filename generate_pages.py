@@ -1,9 +1,4 @@
 import json
-import os
-
-json_file = "events.json"
-output_dir = "pages"
-os.makedirs(output_dir, exist_ok=True)
 
 template = """
 <!DOCTYPE html>
@@ -59,9 +54,11 @@ template = """
 </html>
 """
 
+# Charger JSON
 with open(json_file, "r", encoding="utf-8") as f:
     events = json.load(f)
 
+# Générer les fichiers avec slug
 for i, event in enumerate(events):
     title = event.get("title", "")
     year = event.get("year", "")
@@ -70,14 +67,15 @@ for i, event in enumerate(events):
     keywords = " ".join(f'<span class="keywords">{k}</span>' for k in event.get("keywords", []))
     source_url = event["sources"][0]["url"] if event.get("sources") else "#"
     description = event.get("description", "Aucune description disponible.")
+    slug = slugify(title)
 
-    prev_link = f"event{i}.html" if i > 0 else "#"
-    next_link = f"event{i+2}.html" if i < len(events) - 1 else "#"
+    prev_slug = slugify(events[i - 1]["title"]) if i > 0 else "#"
+    next_slug = slugify(events[i + 1]["title"]) if i < len(events) - 1 else "#"
 
-    filename = f"event{i+1}.html"
+    filename = f"{slug}.html"
     filepath = os.path.join(output_dir, filename)
 
-    page = template.format(
+    html = template.format(
         title=title,
         year=year,
         categories=categories,
@@ -85,11 +83,11 @@ for i, event in enumerate(events):
         added=added,
         source_url=source_url,
         description=description,
-        prev_link=prev_link,
-        next_link=next_link
+        prev_link=f"{prev_slug}.html" if prev_slug != "#" else "#",
+        next_link=f"{next_slug}.html" if next_slug != "#" else "#"
     )
 
     with open(filepath, "w", encoding="utf-8") as f:
-        f.write(page)
+        f.write(html)
 
-print(f"✅ {len(events)} pages générées avec description dans le dossier '{output_dir}/'")
+print(f"✅ {len(events)} fichiers HTML générés avec slugs dans /{output_dir}/")
