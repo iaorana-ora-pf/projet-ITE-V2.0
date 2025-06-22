@@ -1,52 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Liste des événements</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 2em; }
-    ul { padding-left: 1em; }
-    li { margin-bottom: 0.5em; }
-    a { text-decoration: none; color: #007acc; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <meta name="description" content="ITE est une base de connaissances sur la santé publique en Polynésie française." />
+  <title>Projet 'ITE</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <h1>📚 Tous les événements</h1>
-  <ul>
-    <li><a href="fiches/premiere-epidemie-de-grippe-a-tahiti.html">Première épidémie de grippe à Tahiti</a></li>
-    <li><a href="fiches/epidemie-de-variole-aux-marquises.html">Épidémie de variole aux Marquises</a></li>
-    <li><a href="fiches/grippe-espagnole-en-polynesie.html">Grippe espagnole en Polynésie</a></li>
-    <li><a href="fiches/mortalite-importante-liee-a-la-pandemie.html">Mortalité importante liée à la pandémie</a></li>
-    <li><a href="fiches/creation-du-centre-de-sante-scolaire.html">Création du Centre de Santé Scolaire</a></li>
-    <li><a href="fiches/campagne-de-vaccination-contre-la-tuberculose.html">Campagne de vaccination contre la tuberculose</a></li>
-    <li><a href="fiches/creation-du-service-de-radioprotection.html">Création du service de radioprotection</a></li>
-    <li><a href="fiches/baisse-des-maladies-infectieuses.html">Baisse des maladies infectieuses</a></li>
-    <li><a href="fiches/programme-dallaitement-maternel.html">Programme d’allaitement maternel</a></li>
-    <li><a href="fiches/schema-dorganisation-sanitaire.html">Schéma d’Organisation Sanitaire</a></li>
-    <li><a href="fiches/depistage-des-cancers-gynecologiques.html">Dépistage des cancers gynécologiques</a></li>
-    <li><a href="fiches/enquete-maladies-non-transmissibles.html">Enquête maladies non transmissibles</a></li>
-    <li><a href="fiches/parcours-sante-au-parc-paofai.html">Parcours santé au parc Paofai</a></li>
-    <li><a href="fiches/donnees-sur-le-cancer.html">Données sur le cancer</a></li>
-    <li><a href="fiches/relance-de-lallaitement-maternel.html">Relance de l’allaitement maternel</a></li>
-    <li><a href="fiches/politique-de-sante-2016-2025.html">Politique de santé 2016-2025</a></li>
-    <li><a href="fiches/enquete-sante-jeunes.html">Enquête santé jeunes</a></li>
-    <li><a href="fiches/dispositif-ecole-en-sante.html">Dispositif école en santé</a></li>
-    <li><a href="fiches/plan-cancer-2018-2022.html">Plan cancer 2018-2022</a></li>
-    <li><a href="fiches/schema-de-prevention-sante.html">Schéma de prévention santé</a></li>
-    <li><a href="fiches/depistage-rhumatisme-articulaire-aigu.html">Dépistage Rhumatisme Articulaire Aigu</a></li>
-    <li><a href="fiches/registre-des-cancers-1er-rapport.html">Registre des cancers - 1er rapport</a></li>
-    <li><a href="fiches/suivi-des-maladies-chroniques-renforce.html">Suivi des maladies chroniques renforcé</a></li>
-    <li><a href="fiches/campagne-de-depistage-des-melanomes.html">Campagne de dépistage des mélanomes</a></li>
-    <li><a href="fiches/sensibilisation-aux-cancers-de-la-peau.html">Sensibilisation aux cancers de la peau</a></li>
-    <li><a href="fiches/lancement-du-programme-sante-mentale.html">Lancement du programme santé mentale</a></li>
-    <li><a href="fiches/enquete-ea-piahi-sur-les-jeunes.html">Enquête Ea Piahi sur les jeunes</a></li>
-    <li><a href="fiches/bilan-des-plans-de-sante-publique-2016-2025.html">Bilan des plans de santé publique 2016-2025</a></li>
-    <li><a href="fiches/creation-dun-observatoire-de-sante.html">Création d’un observatoire de santé</a></li>
-    <li><a href="fiches/plan-regional-de-prevention-2025-2030.html">Plan régional de prévention 2025-2030</a></li>
+  <div class="welcome-layout">
+    <div class="welcome-image">
+      <img src="images/accueil.png" alt="Illustration ITE" />
+    </div>
 
-  </ul>
+    <div class="welcome-content">
+      <h1>Bienvenue sur 'ITE</h1>
+
+      <p class="event-count-highlight">
+        Explorez et plongez dans les détails de
+        <span id="event-count-number">0</span>
+        événements de santé publique en Polynésie française à travers une frise chronologique interactive.
+      </p>
+
+      <p>
+        'ITE est une base de connaissances qui rassemble, organise et partage des informations sur la santé publique en Polynésie française.
+        Grâce à ce projet, vous pouvez explorer les événements par année, catégorie ou mots-clés, et accéder à des fiches descriptives.
+        Les documents liés peuvent être consultés directement depuis ces fiches ou en naviguant dans la bibliothèque.<br><br>
+        Porté par Emmanuelle RUPP-TERRIS, ‘ITE est un projet personnel, collaboratif et en constante évolution. Il s'enrichit progressivement grâce
+        aux contributions et aux données collectées au fil du temps.<br>
+        N’hésitez pas à proposer un événement, chaque contribution sera étudiée avec attention.
+      </p>
+
+      <div class="welcome-buttons">
+        <a href="explorer.html" class="welcome-btn"><i class="fas fa-search"></i> Explorer</a>
+        <a href="consulter.html" class="welcome-btn"><i class="fas fa-file-alt"></i> Consulter</a>
+        <a href="https://forms.gle/KYdBJ4PTWJfuWVFU6" target="_blank" class="welcome-btn"><i class="fas fa-lightbulb"></i> Proposer</a>
+        <a href="mailto:contact@paanapf.com" class="welcome-btn"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
 </html>
