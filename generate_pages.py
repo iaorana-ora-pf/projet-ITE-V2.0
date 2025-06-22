@@ -75,9 +75,16 @@ template = """
 with open(json_file, "r", encoding="utf-8") as f:
     events = json.load(f)
 
-# 🔁 Générer les pages HTML individuelles
-slugs = [slugify(event["title"]) for event in events]
+# 🔁 Générer les slugs avec année
+slugs = []
+for event in events:
+    year = event.get("year", "")
+    title = event.get("title", "")
+    combined = f"{year}-{title}"
+    slug = slugify(combined)
+    slugs.append(slug)
 
+# 🔁 Générer les pages HTML individuelles
 for i, event in enumerate(events):
     slug = slugs[i]
     title = event.get("title", "")
