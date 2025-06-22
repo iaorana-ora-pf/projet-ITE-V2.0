@@ -129,7 +129,7 @@ index_html = """
 """
 
 for event, slug in zip(events, slugs):
-    index_html += f'    <li><a href="fiche/{slug}.html">{event["title"]}</a></li>\n'
+    index_html += f'    <li><a href="fiches/{slug}.html">{event["title"]}</a></li>\n'
 
 index_html += """
   </ul>
