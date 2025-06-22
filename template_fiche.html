@@ -6,21 +6,41 @@
   <title>{title}</title>
   <link rel="stylesheet" href="template_fiche.css">
 </head>
+
+<body>
+  <div class="container">
+    <!-- =================== -->
+    <!--      SIDEBAR        -->
+    <!-- =================== -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-scroll">
+        <h2>Informations</h2>
+
+        <div class="section"><strong>Année :</strong> {year}</div>
+        <div class="section"><strong>Catégories :</strong> {categories}</div>
+        <div class="section"><strong>Mots-clés :</strong> {keywords}</div>
+        <div class="section"><strong> Sources :</strong> <a href="{source_url}" target="_blank">Voir le document</a></div>
+        <div class="section"><strong>Informations validées au </strong> {added}</div> <br>
+        
+        <h2>Pour aller plus loin</h2>
+          <div class="nav-arrows">
+              <a href="{prev_link}">⬅️</a>
+              <a href="{next_link}">➡️</a>
+          </div>     
+      </div>
+      <!-- Footer -->
+        <div class="sidebar-footer">
+        <p>Projet'ITE - © 2025 – Tous droits réservés </p>
+        </div>
+    </aside>
+
+ <!-- =================== -->
+  <!--     Description -->
+  <!-- =================== -->
+     
 <body>
   <h1>{title}</h1>
+  <div class="section"><strong>Description :</strong> {description}</div>
 
-  <div class="section"><strong>📅 Année :</strong> {year}</div>
-  <div class="section"><strong>🏷️ Catégories :</strong> {categories}</div>
-  <div class="section"><strong>🗝️ Mots-clés :</strong> {keywords}</div>
-  <div class="section"><strong>📆 Date d’ajout :</strong> {added}</div>
-  <div class="section"><strong>🔗 Lien source :</strong> <a href="{source_url}" target="_blank">Voir le document</a></div>
-  <div class="section"><strong>📝 Description :</strong> {description}</div>
-
-  <hr />
-  <h2>Pour aller plus loin</h2>
-  <div class="nav-arrows">
-    <a href="{prev_link}">⬅️</a>
-    <a href="{next_link}">➡️</a>
-  </div>
 </body>
 </html>
