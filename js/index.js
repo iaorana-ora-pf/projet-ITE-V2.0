@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!countEl) return;
 
   try {
-    const response = await fetch("explorer.json");
-    if (!response.ok) throw new Error("explorer.json introuvable");
+    const response = await fetch("events.json");
+    if (!response.ok) throw new Error("events.json introuvable");
 
     const data = await response.json();
     const total = Object.values(data).flat().length;
