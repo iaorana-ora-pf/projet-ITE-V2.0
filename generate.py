@@ -66,6 +66,9 @@ template = """
 with open(json_file, "r", encoding="utf-8") as f:
     events = json.load(f)
 
+# ✅ Important : créer liste des slugs AVANT la boucle
+slugs = [event["slug"] for event in events]
+
 # 🔁 Générer les pages HTML individuelles
 for i, event in enumerate(events):
     slug = event["slug"]
