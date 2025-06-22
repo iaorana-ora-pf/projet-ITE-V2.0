@@ -1,0 +1,28 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 40px;
+  max-width: 800px;
+}
+h1 {
+  font-size: 2em;
+}
+.section {
+  margin-bottom: 1em;
+}
+.nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.nav-arrows a {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+.categories,
+.keywords {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 5px 10px;
+  margin-right: 8px;
+  border-radius: 5px;
+}
