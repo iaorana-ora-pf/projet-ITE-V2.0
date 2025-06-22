@@ -8,59 +8,9 @@ json_file = "events.json"
 output_dir = "fiches"
 os.makedirs(output_dir, exist_ok=True)
 
-# 📄 Template HTML des fiches
-template = """
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{title}</title>
-  <style>
-    body {{
-      font-family: 'Open Sans', sans-serif;
-      margin: 40px;
-      max-width: 800px;
-    }}
-    h1 {{ font-size: 2em; }}
-    .section {{ margin-bottom: 1em; }}
-    .nav-arrows {{
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }}
-    .nav-arrows a {{
-      font-size: 1.5em;
-      text-decoration: none;
-    }}
-    .categories, .keywords {{
-      display: inline-block;
-      background: #f0f0f0;
-      padding: 5px 10px;
-      margin-right: 8px;
-      border-radius: 5px;
-    }}
-  </style>
-</head>
-<body>
-  <h1>{title}</h1>
-
-  <div class="section"><strong>📅 Année :</strong> {year}</div>
-  <div class="section"><strong>🏷️ Catégories :</strong> {categories}</div>
-  <div class="section"><strong>🗝️ Mots-clés :</strong> {keywords}</div>
-  <div class="section"><strong>📆 Date d’ajout :</strong> {added}</div>
-  <div class="section"><strong>🔗 Lien source :</strong> <a href="{source_url}" target="_blank">Voir la source</a></div>
-  <div class="section"><strong>📝 Description :</strong> {description}</div>
-
-  <hr />
-  <h2>Pour aller plus loin</h2>
-  <div class="nav-arrows">
-    <a href="{prev_link}">⬅️</a>
-    <a href="{next_link}">➡️</a>
-  </div>
-</body>
-</html>
-"""
+# Lire le template HTML externe
+with open("template.html", "r", encoding="utf-8") as tf:
+    template = tf.read()
 
 # 📦 Charger les événements
 with open(json_file, "r", encoding="utf-8") as f:
@@ -98,27 +48,6 @@ for i, event in enumerate(events):
         f.write(html)
 
 print(f"✅ {len(events)} fiches générées dans le dossier '{output_dir}/'")
-
-# 🗂️ Générer la page index.html avec tous les liens
-index_html = """
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>Liste des événements</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 2em; }
-    ul { padding-left: 1em; }
-    li { margin-bottom: 0.5em; }
-    a { text-decoration: none; color: #007acc; }
-    a:hover { text-decoration: underline; }
-  </style>
-</head>
-<body>
-  <h1>📚 Tous les événements</h1>
-  <ul>
-"""
 
 for event, slug in zip(events, slugs):
     index_html += f'    <li><a href="fiches/{slug}.html">{event["title"]}</a></li>\n'
