@@ -16,6 +16,16 @@
         "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
       }
     ],
+    "more": [
+    {
+      "label": "Document PDF",
+      "url": "https://example.com/doc.pdf"
+    },
+    {
+      "label": "Page complémentaire",
+      "url": "https://example.com/page"
+    }
+  ]
     "added": "2025-06-21",
     "slug": "1772-premiere-epidemie-de-grippe-a-tahiti"
   },
