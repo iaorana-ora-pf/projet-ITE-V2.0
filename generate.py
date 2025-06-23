@@ -47,21 +47,21 @@ for i, event in enumerate(events):
     next_link = f"{slugs[i+1]}.html" if i < len(slugs) - 1 else "#"
 
     # 📚 Sources
-    sources_html = "<ul class='source-list'>" + "".join(
-        f"<li><a href='{src['url']}' target='_blank'>{src['label']}</a></li>"
-        for src in event.get("sources", [])
-    ) + "</ul>"
+   sources_html = "<ul class='list-disc source-list'>" + "".join(
+    f"<li><a href='{src['url']}' target='_blank'>{src['label']}</a></li>"
+    for src in event.get("sources", [])
+) + "</ul>"
 
     # 🗝️ Mots-clés
-    keywords_html = "<ul class='keyword-list'>" + "".join(
-        f"<li>{kw}</li>" for kw in event.get("keywords", [])
-    ) + "</ul>"
+    keywords_html = "<ul class='list-disc keyword-list'>" + "".join(
+    f"<li>{kw}</li>" for kw in event.get("keywords", [])
+) + "</ul>"
 
     # 📘 Pour aller plus loin
-    more_links_html = "<ul class='more-links-list'>" + "".join(
-        f"<li><a href='{link['url']}' target='_blank'>{link['label']}</a></li>"
-        for link in event.get("more", [])
-    ) + "</ul>" if event.get("more") else ""
+   more_links_html = "<ul class='list-disc more-links-list'>" + "".join(
+    f"<li><a href='{link['url']}' target='_blank'>{link['label']}</a></li>"
+    for link in event.get("more", [])
+) + "</ul>" if event.get("more") else ""
 
     # 🧩 Injecter dans le template
     html = template_fiche.format(
