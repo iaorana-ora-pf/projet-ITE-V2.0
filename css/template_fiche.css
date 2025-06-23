@@ -167,6 +167,17 @@ h2 {
   margin-top: 0.5em;
   line-height: 1.6;
 }
+.source-list a {
+  color:#1e2124; /* ou une autre couleur de ton choix */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.source-list a:hover {
+  color: orange; /* couleur au survol */
+  text-decoration: none;
+}
+
 /* ===================== */
 /*       Suggestion*/
 /* ===================== */
