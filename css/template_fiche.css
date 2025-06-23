@@ -67,11 +67,7 @@ h2 {
   margin-right: 8px;
   border-radius: 5px;
 }
-.fiche-content {
-  margin-left: 280px;
-  padding: 2em;
-  text-align: left;
-}
+
 .keywords {
   margin-left: 1em;
   line-height: 1.6em;
@@ -95,8 +91,10 @@ h2 {
 }
 .fiche-content {
   text-align: left;
+  margin-left: 100px;
+  padding: 2em;
+  
 }
-
 .event-title {
   text-align: center;
   color: var(--main-green); /* bleu turquoise */
@@ -148,9 +146,7 @@ h2 {
   margin-top: 0.3em;
 }
 
-.keyword-list li,
-.source-list li,
-.more-links-list li {
+.list-disc li {
   margin-bottom: 0.4em;
 }
 .section strong, .section span {
@@ -179,7 +175,6 @@ h2 {
 }
 .cat-label {
   display:  block;
-  align-items: center;
   margin-bottom: 6px;
   font-weight: normal;
   color: var(--dark-text);
@@ -317,3 +312,10 @@ h2 {
     position: relative;
     height: auto;
   }
+.container {
+  flex-direction: column;
+  margin-left: 0;
+}
+.fiche-content {
+  margin-left: 0;
+}
