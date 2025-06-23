@@ -27,7 +27,8 @@
       }
     ],
     "added": "2025-06-21",
-    "slug": "1772-premiere-epidemie-de-grippe-a-tahiti"
+    "slug": "1772-premiere-epidemie-de-grippe-a-tahiti",
+    "description": "Une épidémie de grippe frappe Tahiti pour la première fois, introduite par les contacts avec les navigateurs européens."
   },
   {
     "id": "event2",
@@ -53,7 +54,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Mise en place du premier dispensaire offrant un accès structuré aux soins de santé pour la population."
   },
   {
     "id": "event3",
@@ -79,7 +81,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "La grippe espagnole atteint la Polynésie, causant de lourdes pertes humaines dans une population peu immunisée."
   },
   {
     "id": "event4",
@@ -105,7 +108,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Fermeture temporaire des écoles pour limiter la propagation virale pendant la pandémie."
   },
   {
     "id": "event5",
@@ -130,7 +134,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Début des campagnes de vaccination à grande échelle pour prévenir des maladies infectieuses."
   },
   {
     "id": "event6",
@@ -156,7 +161,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Campagne nationale de sensibilisation et de traitement pour lutter contre la tuberculose."
   },
   {
     "id": "event7",
@@ -182,7 +188,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Ouverture d’un centre de santé communautaire pour renforcer l’accès local aux soins."
   },
   {
     "id": "event8",
@@ -208,7 +215,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Premiers signalements de cas de VIH marquant le début de la crise du sida."
   },
   {
     "id": "event9",
@@ -234,7 +242,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Création d'une base de données de santé facilitant la collecte et l’analyse des données épidémiologiques."
   },
   {
     "id": "event10",
@@ -260,7 +269,8 @@
       }
     ],
     "added": "2025-06-21",
-    "slug": "2000-plan-national-sante"
+    "slug": "2000-plan-national-sante",
+    "description": "Mise en place d’un plan stratégique de santé publique au niveau national."
   },
   {
     "id": "event11",
@@ -286,7 +296,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Implémentation des premiers systèmes d’information pour la gestion des données de santé."
   },
   {
     "id": "event12",
@@ -313,7 +324,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Déploiement des dossiers médicaux électroniques pour améliorer le suivi des patients."
   },
   {
     "id": "event13",
@@ -339,7 +351,8 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Lancement d’un programme national pour promouvoir une alimentation saine et équilibrée."
   },
   {
     "id": "event14",
@@ -365,7 +378,8 @@
       }
     ],
     "added": "2025-06-21",
-    "slug": "2020-gestion-de-la-crise-covid19"
+    "slug": "2020-gestion-de-la-crise-covid19",
+    "description": "Réponse sanitaire à la pandémie mondiale de COVID-19 en Polynésie."
   },
   {
     "id": "event15",
@@ -391,6 +405,7 @@
         "label": "En savoir plus",
         "url": "https://example.com/info"
       }
-    ]
+    ],
+    "description": "Création d’un observatoire pour surveiller et analyser les maladies chroniques en Polynésie."
   }
 ]
