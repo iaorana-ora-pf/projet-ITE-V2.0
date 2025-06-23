@@ -52,22 +52,22 @@ for i, event in enumerate(events):
         for src in event.get("sources", [])
     ) + "</ul>"
 
-   # 🗝️ Mots-clés affichés sur une seule ligne
-keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
+    # 🗝️ Mots-clés affichés sur une seule ligne
+    keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
 
     # 📘 Pour aller plus loin
-   more_links_html = "<ul class='source-list list-disc'>" + "".join(
+    more_links_html = "<ul class='source-list list-disc'>" + "".join(
         f"<li><a href='{link['url']}' target='_blank'>{link['label']}</a></li>"
         for link in event.get("more", [])
     ) + "</ul>" if event.get("more") else ""
 
     # 💡 Suggestion intelligente
     similar = find_similar_event(event, events)
-    suggestion_html = f"""
-    <a href="{similar['slug']}.html" class="suggestion-link">
-        {similar['title']} ({similar['year']})
-    </a>
-    """ if similar else ""
+    suggestion_html = (
+        f'<a href="{similar["slug"]}.html" class="suggestion-link">'
+        f'{similar["title"]} ({similar["year"]})</a>'
+        if similar else ""
+    )
 
     # 🧩 Injection dans le template
     html = template_fiche.format(
