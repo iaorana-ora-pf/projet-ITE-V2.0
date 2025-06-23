@@ -20,12 +20,22 @@ with open(json_file, "r", encoding="utf-8") as f:
 slugs = [event["slug"] for event in events]
 
 # 🔁 Générer les pages HTML individuelles
+category_info = {
+    "Accès": ("fa-hospital", "#2a9d8f"),
+    "Contexte": ("fa-landmark", "#6c757d"),
+    "Données et recherche": ("fa-database", "#4b0082"),
+    "Gouvernance et pilotage": ("fa-scale-balanced", "#007b7f"),
+    "Promotion et prévention": ("fa-heart-pulse", "#e76f51"),
+    "Protection et gestion des risques": ("fa-shield-alt", "#f4a261")
+}
 for i, event in enumerate(events):
     slug = event["slug"]
     title = event.get("title", "")
     year = event.get("year", "")
     added = event.get("added", "")
-    categories = " ".join(f'<span class="categories">{c}</span>' for c in event.get("categories", []))
+    categories = " ".join(
+    f'<span class="categories"><i class="fas {category_info[c][0]}" style="color:{category_info[c][1]}; margin-right:6px;"></i>{c}</span>'
+    for c in event.get("categories", []) if c in category_info)
     keywords = " ".join(f'<span class="keywords">{k}</span>' for k in event.get("keywords", []))
     source_url = event["sources"][0]["url"] if event.get("sources") else "#"
     description = event.get("description", "Aucune description disponible.")
