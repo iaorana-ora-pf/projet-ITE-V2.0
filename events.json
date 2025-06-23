@@ -3,68 +3,38 @@
     "id": "event1",
     "year": 1772,
     "title": "Première épidémie de grippe à Tahiti",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "grippe",
-      "épidémie"
-    ],
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["grippe", "épidémie"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
-      }
+      { "label": "Source", "url": "https://example.com/source1.pdf" }
     ],
     "more": [
-    {
-      "label": "Document PDF",
-      "url": "https://example.com/doc.pdf"
-    },
-    {
-      "label": "Page complémentaire",
-      "url": "https://example.com/page"
-    }
-  ]
+      { "label": "Document PDF", "url": "https://example.com/doc1.pdf" },
+      { "label": "Page complémentaire", "url": "https://example.com/page1" }
+    ],
     "added": "2025-06-21",
     "slug": "1772-premiere-epidemie-de-grippe-a-tahiti"
   },
   {
     "id": "event2",
-    "year": 1863,
-    "title": "Épidémie de variole aux Marquises",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "variole",
-      "épidémie"
-    ],
+    "year": 1800,
+    "title": "Création du premier dispensaire",
+    "categories": ["Accès"],
+    "keywords": ["dispensaire", "soins"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://horizon.documentation.ird.fr/exl-doc/pleins_textes/divers16-08/38895.pdf"
-      }
+      { "label": "Source", "url": "https://example.com/dispensaire" }
     ],
     "added": "2025-06-21",
-    "slug": "1863-epidemie-de-variole-aux-marquises"
+    "slug": "1800-creation-du-premier-dispensaire"
   },
   {
     "id": "event3",
     "year": 1918,
     "title": "Grippe espagnole en Polynésie",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "grippe",
-      "pandémie"
-    ],
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["pandémie", "grippe"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/grippe1918"
-      }
+      { "label": "Source", "url": "https://example.com/grippe1918" }
     ],
     "added": "2025-06-21",
     "slug": "1918-grippe-espagnole-en-polynesie"
@@ -72,538 +42,151 @@
   {
     "id": "event4",
     "year": 1918,
-    "title": "Mortalité importante liée à la pandémie",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "pandémie",
-      "mortalité"
-    ],
+    "title": "Fermeture des écoles pendant la pandémie",
+    "categories": ["Accès"],
+    "keywords": ["école", "pandémie"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/pandemie1918"
-      }
+      { "label": "Source", "url": "https://example.com/ecole1918" }
     ],
     "added": "2025-06-21",
-    "slug": "1918-mortalite-importante-liee-a-la-pandemie"
+    "slug": "1918-fermeture-des-ecoles-pendant-la-pandemie"
   },
   {
     "id": "event5",
-    "year": 1949,
-    "title": "Création du Centre de Santé Scolaire",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "école",
-      "enfant",
-      "prévention"
-    ],
+    "year": 1945,
+    "title": "Début de la vaccination généralisée",
+    "categories": ["Promotion et prévention"],
+    "keywords": ["vaccination"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://www.service-public.pf/dsp/centre-de-sante-scolaire/"
-      }
+      { "label": "Source", "url": "https://example.com/vaccination1945" }
     ],
     "added": "2025-06-21",
-    "slug": "1949-creation-du-centre-de-sante-scolaire"
+    "slug": "1945-debut-de-la-vaccination-generalisee"
   },
   {
     "id": "event6",
-    "year": 1952,
-    "title": "Campagne de vaccination contre la tuberculose",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "vaccination",
-      "tuberculose"
-    ],
+    "year": 1950,
+    "title": "Campagne de lutte contre la tuberculose",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["tuberculose", "campagne"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/tuberculose"
-      }
+      { "label": "Source", "url": "https://example.com/tuberculose" }
     ],
     "added": "2025-06-21",
-    "slug": "1952-campagne-de-vaccination-contre-la-tuberculose"
+    "slug": "1950-campagne-de-lutte-contre-la-tuberculose"
   },
   {
     "id": "event7",
-    "year": 1966,
-    "title": "Création du service de radioprotection",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "nucléaire",
-      "radioprotection"
-    ],
+    "year": 1960,
+    "title": "Création d’un centre de santé communautaire",
+    "categories": ["Accès"],
+    "keywords": ["centre de santé", "communautaire"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/radio"
-      }
+      { "label": "Source", "url": "https://example.com/centre-sante" }
     ],
     "added": "2025-06-21",
-    "slug": "1966-creation-du-service-de-radioprotection"
+    "slug": "1960-creation-centre-sante-communautaire"
   },
   {
     "id": "event8",
-    "year": 1986,
-    "title": "Baisse des maladies infectieuses",
-    "categories": [
-      "Surveillance"
-    ],
-    "keywords": [
-      "mortalité",
-      "infections"
-    ],
+    "year": 1975,
+    "title": "Émergence du VIH",
+    "categories": ["Données et recherche"],
+    "keywords": ["VIH", "infection"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/atlas"
-      }
+      { "label": "Source", "url": "https://example.com/vih" }
     ],
     "added": "2025-06-21",
-    "slug": "1986-baisse-des-maladies-infectieuses"
+    "slug": "1975-emergence-du-vih"
   },
   {
     "id": "event9",
-    "year": 1996,
-    "title": "Programme d’allaitement maternel",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "allaitement",
-      "enfant"
-    ],
+    "year": 1985,
+    "title": "Première base de données de santé",
+    "categories": ["Données et recherche"],
+    "keywords": ["données", "informatique"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/allaitement"
-      }
+      { "label": "Source", "url": "https://example.com/base-sante" }
     ],
     "added": "2025-06-21",
-    "slug": "1996-programme-dallaitement-maternel"
+    "slug": "1985-premiere-base-de-donnees-de-sante"
   },
   {
     "id": "event10",
-    "year": 2001,
-    "title": "Schéma d’Organisation Sanitaire",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "plan",
-      "organisation"
-    ],
+    "year": 2000,
+    "title": "Plan national santé",
+    "categories": ["Gouvernance et pilotage"],
+    "keywords": ["plan", "politique"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/sos2001"
-      }
+      { "label": "Source", "url": "https://example.com/plan-sante" }
+    ],
+    "more": [
+      { "label": "Résumé", "url": "https://example.com/plan-resume" }
     ],
     "added": "2025-06-21",
-    "slug": "2001-schema-dorganisation-sanitaire"
+    "slug": "2000-plan-national-sante"
   },
   {
     "id": "event11",
-    "year": 2003,
-    "title": "Dépistage des cancers gynécologiques",
-    "categories": [
-      "Accès",
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "cancer",
-      "femme"
-    ],
+    "year": 2000,
+    "title": "Introduction des systèmes d'information",
+    "categories": ["Gouvernance et pilotage"],
+    "keywords": ["système", "information"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/cancers"
-      }
+      { "label": "Source", "url": "https://example.com/infosystem" }
     ],
     "added": "2025-06-21",
-    "slug": "2003-depistage-des-cancers-gynecologiques"
+    "slug": "2000-introduction-systemes-information"
   },
   {
     "id": "event12",
     "year": 2010,
-    "title": "Enquête maladies non transmissibles",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "facteurs de risque",
-      "enquête"
-    ],
+    "title": "Déploiement des dossiers médicaux électroniques",
+    "categories": ["Accès", "Données et recherche"],
+    "keywords": ["dossier médical", "numérique"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/beh2010"
-      }
+      { "label": "Source", "url": "https://example.com/dme" }
     ],
     "added": "2025-06-21",
-    "slug": "2010-enquete-maladies-non-transmissibles"
+    "slug": "2010-deploiement-dossiers-medicaux-electroniques"
   },
   {
     "id": "event13",
-    "year": 2014,
-    "title": "Parcours santé au parc Paofai",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "activité physique"
-    ],
+    "year": 2015,
+    "title": "Programme nutrition santé",
+    "categories": ["Promotion et prévention"],
+    "keywords": ["nutrition", "prévention"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://tahiti-infos.com"
-      }
+      { "label": "Source", "url": "https://example.com/nutrition" }
     ],
     "added": "2025-06-21",
-    "slug": "2014-parcours-sante-au-parc-paofai"
+    "slug": "2015-programme-nutrition-sante"
   },
   {
     "id": "event14",
-    "year": 2015,
-    "title": "Données sur le cancer",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "cancer"
-    ],
+    "year": 2020,
+    "title": "Gestion de la crise COVID-19",
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["COVID-19", "crise sanitaire"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/cancer2015"
-      }
+      { "label": "Source", "url": "https://example.com/covid" }
+    ],
+    "more": [
+      { "label": "Mesures locales", "url": "https://example.com/mesures" }
     ],
     "added": "2025-06-21",
-    "slug": "2015-donnees-sur-le-cancer"
+    "slug": "2020-gestion-de-la-crise-covid19"
   },
   {
     "id": "event15",
-    "year": 2015,
-    "title": "Relance de l’allaitement maternel",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "allaitement"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/am"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2015-relance-de-lallaitement-maternel"
-  },
-  {
-    "id": "event16",
-    "year": 2016,
-    "title": "Politique de santé 2016-2025",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "plan",
-      "politique"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/politique"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2016-politique-de-sante-2016-2025"
-  },
-  {
-    "id": "event17",
-    "year": 2016,
-    "title": "Enquête santé jeunes",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "adolescent",
-      "comportement"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/gshs"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2016-enquete-sante-jeunes"
-  },
-  {
-    "id": "event18",
-    "year": 2017,
-    "title": "Dispositif école en santé",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "école",
-      "prévention"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/ecole"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2017-dispositif-ecole-en-sante"
-  },
-  {
-    "id": "event19",
-    "year": 2018,
-    "title": "Plan cancer 2018-2022",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "cancer",
-      "plan"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/plan-cancer"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2018-plan-cancer-2018-2022"
-  },
-  {
-    "id": "event20",
-    "year": 2018,
-    "title": "Schéma de prévention santé",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "plan santé"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/prevention"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2018-schema-de-prevention-sante"
-  },
-  {
-    "id": "event21",
-    "year": 2019,
-    "title": "Dépistage Rhumatisme Articulaire Aigu",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "RAA",
-      "école"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/raa"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2019-depistage-rhumatisme-articulaire-aigu"
-  },
-  {
-    "id": "event22",
-    "year": 2020,
-    "title": "Registre des cancers - 1er rapport",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "registre",
-      "cancer"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/registre"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2020-registre-des-cancers-1er-rapport"
-  },
-  {
-    "id": "event23",
-    "year": 2021,
-    "title": "Suivi des maladies chroniques renforcé",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "chronique",
-      "diabète"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/chronique"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2021-suivi-des-maladies-chroniques-renforce"
-  },
-  {
-    "id": "event24",
-    "year": 2022,
-    "title": "Campagne de dépistage des mélanomes",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "peau",
-      "mélanome"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/melanome"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2022-campagne-de-depistage-des-melanomes"
-  },
-  {
-    "id": "event25",
-    "year": 2022,
-    "title": "Sensibilisation aux cancers de la peau",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "cancer",
-      "peau"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/cancers-peau"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2022-sensibilisation-aux-cancers-de-la-peau"
-  },
-  {
-    "id": "event26",
     "year": 2023,
-    "title": "Lancement du programme santé mentale",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "santé mentale"
-    ],
+    "title": "Observatoire des maladies chroniques",
+    "categories": ["Données et recherche"],
+    "keywords": ["observatoire", "maladies chroniques"],
     "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/santementale"
-      }
+      { "label": "Source", "url": "https://example.com/observatoire" }
     ],
     "added": "2025-06-21",
-    "slug": "2023-lancement-du-programme-sante-mentale"
-  },
-  {
-    "id": "event27",
-    "year": 2024,
-    "title": "Enquête Ea Piahi sur les jeunes",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "jeunes",
-      "comportement"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/piahi"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2024-enquete-ea-piahi-sur-les-jeunes"
-  },
-  {
-    "id": "event28",
-    "year": 2025,
-    "title": "Bilan des plans de santé publique 2016-2025",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "bilan",
-      "santé publique"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/bilan"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2025-bilan-des-plans-de-sante-publique-2016-2025"
-  },
-  {
-    "id": "event29",
-    "year": 2025,
-    "title": "Création d’un observatoire de santé",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "observatoire",
-      "données"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/observatoire"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2025-creation-dun-observatoire-de-sante"
-  },
-  {
-    "id": "event30",
-    "year": 2025,
-    "title": "Plan régional de prévention 2025-2030",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "prévention",
-      "plan régional"
-    ],
-    "sources": [
-      {
-        "label": "Source",
-        "url": "https://example.com/prevention2030"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2025-plan-regional-de-prevention-2025-2030"
+    "slug": "2023-observatoire-maladies-chroniques"
   }
 ]
