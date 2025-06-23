@@ -18,16 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-const categoryContainer = document.getElementById("categories-with-icons");
-if (categoryContainer && event.categories) {
-  categoryContainer.innerHTML = event.categories.map(cat => {
-    const info = categoryInfo[cat];
-    return info
-      ? `<div class="category-item"><i class="fas ${info.icon}" style="color:${info.color};"></i> ${cat}</div>`
-      : `<div class="category-item">${cat}</div>`;
-  }).join("");
-}
-      
+     
       // ✅ Affiche les catégories avec icône et couleur
       const catEl = document.getElementById("categories-with-icons");
       if (catEl && event.categories) {
