@@ -29,6 +29,11 @@ for i, event in enumerate(events):
     keywords = " ".join(f'<span class="keywords">{k}</span>' for k in event.get("keywords", []))
     source_url = event["sources"][0]["url"] if event.get("sources") else "#"
     description = event.get("description", "Aucune description disponible.")
+    more_links = ""
+if event.get("more"):
+    more_links = "<div class='section'><strong>📘 Pour aller plus loin :</strong><br/>" + \
+        "".join(f'<a href="{link["url"]}" target="_blank">{link["label"]}</a><br/>' for link in event["more"]) + \
+        "</div>"
     prev_link = f"{slugs[i-1]}.html" if i > 0 else "#"
     next_link = f"{slugs[i+1]}.html" if i < len(slugs) - 1 else "#"
 
