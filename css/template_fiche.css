@@ -133,56 +133,12 @@ h2 {
   gap: 0.5em;
 }
 
-/* Navigation evenements*/
-.nav-arrows {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-.nav-arrows a {
-  font-size: 1.5em;
-  text-decoration: none;
-}
-.similar-nav {
-  display: flex;
-  justify-content: center; /* ✅ centre les flèches + texte */
-  align-items: center;
-  gap: 1.2em;
-  margin: 2em auto;
-  font-size: 1em;
-  text-align: center;
-}
-
-.similar-nav .nav-arrow {
-  background-color: #048B9A;
-  color: white;
-  padding: 0.6em 0.8em;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1.2em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-}
-
-.similar-nav .nav-arrow:hover {
-  background-color: #02616B;
-}
-
-.similar-nav .nav-text {
-  font-size: 0.9rem; /* ✅ texte réduit */
-  font-weight: normal;
-  color: var(--dark-text);
-}
 
 /* listes mots cles */
-.keyword-list {
-  list-style-type: disc;
-  padding-left: 1.2em;
+.keywords-inline {
+  margin-top: 0.5em;
   text-align: left;
-  margin-top: 0.3em;
-}
-.keyword-list li {
-  margin-bottom: 0.3em;
+  font-size: 0.95em;
 }
 /* liste */
 .list-disc {
