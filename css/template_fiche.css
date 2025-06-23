@@ -140,6 +140,12 @@ h2 {
 .cat-label i {
   margin-right: 6px;
 }
+.more-links-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0.5em;
+  line-height: 1.6;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
