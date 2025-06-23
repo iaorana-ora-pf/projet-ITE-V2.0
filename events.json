@@ -3,14 +3,28 @@
     "id": "event1",
     "year": 1772,
     "title": "Première épidémie de grippe à Tahiti",
-    "categories": ["Protection et gestion des risques"],
-    "keywords": ["grippe", "épidémie"],
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "grippe",
+      "épidémie"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/source1.pdf" }
+      {
+        "label": "Source",
+        "url": "https://example.com/source1.pdf"
+      }
     ],
     "more": [
-      { "label": "Document PDF", "url": "https://example.com/doc1.pdf" },
-      { "label": "Page complémentaire", "url": "https://example.com/page1" }
+      {
+        "label": "Document PDF",
+        "url": "https://example.com/doc1.pdf"
+      },
+      {
+        "label": "Page complémentaire",
+        "url": "https://example.com/page1"
+      }
     ],
     "added": "2025-06-21",
     "slug": "1772-premiere-epidemie-de-grippe-a-tahiti"
@@ -19,109 +33,231 @@
     "id": "event2",
     "year": 1800,
     "title": "Création du premier dispensaire",
-    "categories": ["Accès"],
-    "keywords": ["dispensaire", "soins"],
+    "categories": [
+      "Accès"
+    ],
+    "keywords": [
+      "dispensaire",
+      "soins"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/dispensaire" }
+      {
+        "label": "Source",
+        "url": "https://example.com/dispensaire"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1800-creation-du-premier-dispensaire"
+    "slug": "1800-creation-du-premier-dispensaire",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event3",
     "year": 1918,
     "title": "Grippe espagnole en Polynésie",
-    "categories": ["Protection et gestion des risques"],
-    "keywords": ["pandémie", "grippe"],
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "pandémie",
+      "grippe"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/grippe1918" }
+      {
+        "label": "Source",
+        "url": "https://example.com/grippe1918"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1918-grippe-espagnole-en-polynesie"
+    "slug": "1918-grippe-espagnole-en-polynesie",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event4",
     "year": 1918,
     "title": "Fermeture des écoles pendant la pandémie",
-    "categories": ["Accès"],
-    "keywords": ["école", "pandémie"],
+    "categories": [
+      "Accès"
+    ],
+    "keywords": [
+      "école",
+      "pandémie"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/ecole1918" }
+      {
+        "label": "Source",
+        "url": "https://example.com/ecole1918"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1918-fermeture-des-ecoles-pendant-la-pandemie"
+    "slug": "1918-fermeture-des-ecoles-pendant-la-pandemie",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event5",
     "year": 1945,
     "title": "Début de la vaccination généralisée",
-    "categories": ["Promotion et prévention"],
-    "keywords": ["vaccination"],
+    "categories": [
+      "Promotion et prévention"
+    ],
+    "keywords": [
+      "vaccination"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/vaccination1945" }
+      {
+        "label": "Source",
+        "url": "https://example.com/vaccination1945"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1945-debut-de-la-vaccination-generalisee"
+    "slug": "1945-debut-de-la-vaccination-generalisee",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event6",
     "year": 1950,
     "title": "Campagne de lutte contre la tuberculose",
-    "categories": ["Protection et gestion des risques"],
-    "keywords": ["tuberculose", "campagne"],
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "tuberculose",
+      "campagne"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/tuberculose" }
+      {
+        "label": "Source",
+        "url": "https://example.com/tuberculose"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1950-campagne-de-lutte-contre-la-tuberculose"
+    "slug": "1950-campagne-de-lutte-contre-la-tuberculose",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event7",
     "year": 1960,
     "title": "Création d’un centre de santé communautaire",
-    "categories": ["Accès"],
-    "keywords": ["centre de santé", "communautaire"],
+    "categories": [
+      "Accès"
+    ],
+    "keywords": [
+      "centre de santé",
+      "communautaire"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/centre-sante" }
+      {
+        "label": "Source",
+        "url": "https://example.com/centre-sante"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1960-creation-centre-sante-communautaire"
+    "slug": "1960-creation-centre-sante-communautaire",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event8",
     "year": 1975,
     "title": "Émergence du VIH",
-    "categories": ["Données et recherche"],
-    "keywords": ["VIH", "infection"],
+    "categories": [
+      "Données et recherche"
+    ],
+    "keywords": [
+      "VIH",
+      "infection"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/vih" }
+      {
+        "label": "Source",
+        "url": "https://example.com/vih"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1975-emergence-du-vih"
+    "slug": "1975-emergence-du-vih",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event9",
     "year": 1985,
     "title": "Première base de données de santé",
-    "categories": ["Données et recherche"],
-    "keywords": ["données", "informatique"],
+    "categories": [
+      "Données et recherche"
+    ],
+    "keywords": [
+      "données",
+      "informatique"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/base-sante" }
+      {
+        "label": "Source",
+        "url": "https://example.com/base-sante"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "1985-premiere-base-de-donnees-de-sante"
+    "slug": "1985-premiere-base-de-donnees-de-sante",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event10",
     "year": 2000,
     "title": "Plan national santé",
-    "categories": ["Gouvernance et pilotage"],
-    "keywords": ["plan", "politique"],
+    "categories": [
+      "Gouvernance et pilotage"
+    ],
+    "keywords": [
+      "plan",
+      "politique"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/plan-sante" }
+      {
+        "label": "Source",
+        "url": "https://example.com/plan-sante"
+      }
     ],
     "more": [
-      { "label": "Résumé", "url": "https://example.com/plan-resume" }
+      {
+        "label": "Résumé",
+        "url": "https://example.com/plan-resume"
+      }
     ],
     "added": "2025-06-21",
     "slug": "2000-plan-national-sante"
@@ -130,49 +266,103 @@
     "id": "event11",
     "year": 2000,
     "title": "Introduction des systèmes d'information",
-    "categories": ["Gouvernance et pilotage"],
-    "keywords": ["système", "information"],
+    "categories": [
+      "Gouvernance et pilotage"
+    ],
+    "keywords": [
+      "système",
+      "information"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/infosystem" }
+      {
+        "label": "Source",
+        "url": "https://example.com/infosystem"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "2000-introduction-systemes-information"
+    "slug": "2000-introduction-systemes-information",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event12",
     "year": 2010,
     "title": "Déploiement des dossiers médicaux électroniques",
-    "categories": ["Accès", "Données et recherche"],
-    "keywords": ["dossier médical", "numérique"],
+    "categories": [
+      "Accès",
+      "Données et recherche"
+    ],
+    "keywords": [
+      "dossier médical",
+      "numérique"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/dme" }
+      {
+        "label": "Source",
+        "url": "https://example.com/dme"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "2010-deploiement-dossiers-medicaux-electroniques"
+    "slug": "2010-deploiement-dossiers-medicaux-electroniques",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event13",
     "year": 2015,
     "title": "Programme nutrition santé",
-    "categories": ["Promotion et prévention"],
-    "keywords": ["nutrition", "prévention"],
+    "categories": [
+      "Promotion et prévention"
+    ],
+    "keywords": [
+      "nutrition",
+      "prévention"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/nutrition" }
+      {
+        "label": "Source",
+        "url": "https://example.com/nutrition"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "2015-programme-nutrition-sante"
+    "slug": "2015-programme-nutrition-sante",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   },
   {
     "id": "event14",
     "year": 2020,
     "title": "Gestion de la crise COVID-19",
-    "categories": ["Protection et gestion des risques"],
-    "keywords": ["COVID-19", "crise sanitaire"],
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "COVID-19",
+      "crise sanitaire"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/covid" }
+      {
+        "label": "Source",
+        "url": "https://example.com/covid"
+      }
     ],
     "more": [
-      { "label": "Mesures locales", "url": "https://example.com/mesures" }
+      {
+        "label": "Mesures locales",
+        "url": "https://example.com/mesures"
+      }
     ],
     "added": "2025-06-21",
     "slug": "2020-gestion-de-la-crise-covid19"
@@ -181,12 +371,26 @@
     "id": "event15",
     "year": 2023,
     "title": "Observatoire des maladies chroniques",
-    "categories": ["Données et recherche"],
-    "keywords": ["observatoire", "maladies chroniques"],
+    "categories": [
+      "Données et recherche"
+    ],
+    "keywords": [
+      "observatoire",
+      "maladies chroniques"
+    ],
     "sources": [
-      { "label": "Source", "url": "https://example.com/observatoire" }
+      {
+        "label": "Source",
+        "url": "https://example.com/observatoire"
+      }
     ],
     "added": "2025-06-21",
-    "slug": "2023-observatoire-maladies-chroniques"
+    "slug": "2023-observatoire-maladies-chroniques",
+    "more": [
+      {
+        "label": "En savoir plus",
+        "url": "https://example.com/info"
+      }
+    ]
   }
 ]
