@@ -190,12 +190,12 @@ h2 {
 
 .suggestion-link {
   font-weight: bold;
-  color: var(--main-green);
+  color: #1e2124;
   text-decoration: none;
 }
 .suggestion-link:hover {
-  color: var(--hover-green);
-  text-decoration: underline;
+  color:  orange;
+  text-decoration: none;
 }
 /* ===================== */
 /*       Footer     */
