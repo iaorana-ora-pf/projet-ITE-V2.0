@@ -55,6 +55,14 @@ h2 {
   display: inline;
   vertical-align: baseline;
 }
+.section-title {
+  display: block;
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+  color: var(--main-green);
+}
 .nav-arrows {
   display: flex;
   justify-content: space-between;
@@ -221,7 +229,7 @@ h2 {
 }
 
 .similar-nav .nav-text {
-  font-size: 1rem;
+  font-size: 0.9rem; /* ✅ texte réduit */
   font-weight: normal;
   color: var(--dark-text);
 }
