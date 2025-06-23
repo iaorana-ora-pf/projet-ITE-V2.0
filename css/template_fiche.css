@@ -226,7 +226,7 @@ h2 {
   line-height: 1.4em;
 }
 .event-title {
-  text-align: center;
+  text-align: center; !important;
   color: var(--main-green); /* bleu turquoise */
   font-size: 1.4rem;
   margin-bottom: 1.5rem;
