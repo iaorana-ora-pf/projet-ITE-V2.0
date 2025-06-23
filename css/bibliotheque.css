@@ -1,0 +1,51 @@
+:root {
+  --main-green: #048B9A;
+  --hover-green: #02616B;
+  --neutral-text: #5F5F5F;
+  --unavailable-gray: #888;
+}
+
+body {
+  margin: 0;
+  padding: 2em;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  color: var(--neutral-text);
+}
+
+.library-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  color: var(--main-green);
+  margin-bottom: 1em;
+}
+
+.library-list {
+  list-style-type: disc;
+  padding-left: 1.4em;
+  font-size: 1rem;
+  line-height: 1.8em;
+}
+
+.library-list li {
+  margin-bottom: 0.6em;
+}
+
+.library-list li.unavailable {
+  color: var(--unavailable-gray);
+  font-style: italic;
+}
+
+.library-list a {
+  color: var(--main-green);
+  text-decoration: none;
+}
+
+.library-list a:hover {
+  color: var(--hover-green);
+}
