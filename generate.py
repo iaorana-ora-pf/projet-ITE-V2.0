@@ -32,7 +32,14 @@ for i, event in enumerate(events):
     slug = event["slug"]
     title = event.get("title", "")
     year = event.get("year", "")
-    added = event.get("added", "")
+    from datetime import datetime
+
+# Formatage de la date si elle est présente
+raw_date = event.get("added", "")
+try:
+    added = datetime.strptime(raw_date, "%Y-%m-%d").strftime("%d/%m/%Y")
+except ValueError:
+    added = raw_date  # fallback si la date est mal formatée
     description = event.get("description", "Aucune description disponible.")
     sources_html = "<ul>" + "".join(
     f'<li><a href="{s["url"]}" target="_blank">{s["label"]}</a></li>'
