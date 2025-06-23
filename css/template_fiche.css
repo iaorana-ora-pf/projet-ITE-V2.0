@@ -38,70 +38,7 @@ h2 {
   font-weight: bold;
   color: var(--main-green);
 }
-.section {
-  margin-bottom: 15px;
-}
-.section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-}
-.section strong {
-  margin-right: 6px;
-  font-weight: bold;
-}
-.section strong,
-.section span {
-  display: inline;
-  vertical-align: baseline;
-}
-.section-title {
-  display: block;
-  font-weight: bold;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
-  font-size: 1rem;
-  color: 1e2124;
-}
-.nav-arrows {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-}
-.nav-arrows a {
-  font-size: 1.5em;
-  text-decoration: none;
-}
-.keyword-list {
-  list-style-type: disc;
-  padding-left: 1.2em;
-  text-align: left;
-  margin-top: 0.3em;
-}
-.keyword-list li {
-  margin-bottom: 0.3em;
-}
-.fiche-content h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--main-green);
-  margin-bottom: 20px;
-}
-.fiche-content {
-  text-align: left;
-  margin-left: 80px;
-  padding: 2em;
-}
-.fiche-content .section {
-  text-align: left;
-  line-height: 1.6em;
-}
-.event-title {
-  text-align: center;
-  color: var(--main-green); /* bleu turquoise */
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
+
 /* ===================== */
 /*      SIDEBAR           */
 /* ===================== */
@@ -135,37 +72,46 @@ h2 {
   background-color: #ccc;
   border-radius: 3px;
 }
-.category-item {
-  margin-bottom: 0.3em;
-  display: flex;
+
+
+/* Section */
+.section {
+  margin-bottom: 15px;
+}
+.section-label {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.4em;
+}
+.section strong {
+  margin-right: 6px;
+  font-weight: bold;
+}
+.section strong,
+.section span {
+  display: inline;
+  vertical-align: baseline;
+}
+.section-title {
+  display: block;
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+  color: 1e2124;
 }
 
-/* liste */
-.list-disc {
-  list-style-type: disc;
-  padding-left: 1.4em; /* homogénéisation */
-  margin-top: 0.5em;
-  text-align: left; /* ✅ */
-  line-height: 1.6; /* ✅ */
+/* Info bouton */
+#category-info-btn {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1rem;
 }
-
-.list-disc li {
-  margin-bottom: 0.4em;
+.info-icon {
+   color: #ccc;
+  cursor: pointer;
+  font-size: 1rem;
 }
-
-.pill {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 4px 6px 4px 0;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  font-size: 0.9em;
-  color: var(--dark-text);
-}
-
-
 /* catégories */
 .cat-label {
   display: block;
@@ -181,28 +127,23 @@ h2 {
 #categories-with-icons {
   margin-bottom: 1em; /* ajoute de l'air sous les catégories */
 }
-/* Info bouton */
-#category-info-btn {
-  color: #ccc;
-  cursor: pointer;
-  font-size: 1rem;
-}
-.info-icon {
-   color: #ccc;
-  cursor: pointer;
-  font-size: 1rem;
+.category-item {
+  margin-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
 }
 
-
-
-
-.more-links-list {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin-top: 0.5em;
-  line-height: 1.6;
+/* Navigation evenements*/
+.nav-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
 }
-
+.nav-arrows a {
+  font-size: 1.5em;
+  text-decoration: none;
+}
 .similar-nav {
   display: flex;
   justify-content: center; /* ✅ centre les flèches + texte */
@@ -234,7 +175,72 @@ h2 {
   color: var(--dark-text);
 }
 
-/* === FOOTER === */
+/* listes mots cles */
+.keyword-list {
+  list-style-type: disc;
+  padding-left: 1.2em;
+  text-align: left;
+  margin-top: 0.3em;
+}
+.keyword-list li {
+  margin-bottom: 0.3em;
+}
+/* liste */
+.list-disc {
+  list-style-type: disc;
+  padding-left: 1.4em; /* homogénéisation */
+  margin-top: 0.5em;
+  text-align: left; /* ✅ */
+  line-height: 1.6; /* ✅ */
+}
+
+.list-disc li {
+  margin-bottom: 0.4em;
+}
+.pill {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 4px 6px 4px 0;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-size: 0.9em;
+  color: var(--dark-text);
+}
+.more-links-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 0.5em;
+  line-height: 1.6;
+}
+
+/* ===================== */
+/*    Partie centrale     */
+/* ===================== */
+.fiche-content h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--main-green);
+  margin-bottom: 20px;
+}
+.fiche-content {
+  text-align: left;
+  margin-left: 15px;
+  padding: 2em;
+}
+.fiche-content .section {
+  text-align: left;
+  line-height: 1.6em;
+}
+.event-title {
+  text-align: center;
+  color: var(--main-green); /* bleu turquoise */
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===================== */
+/*       Footer     */
+/* ===================== */
 .sidebar-footer {
   padding: 20px;
   font-size: 0.75rem;
