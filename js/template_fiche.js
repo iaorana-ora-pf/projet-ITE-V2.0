@@ -37,6 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
         ).join("");
       }
 
+      // 🔍 Gestion du modal d'infos Mots-clés
+const motsModal = document.getElementById("mots-modal");
+const openKeywordsBtn = document.getElementById("keywords-info-btn");
+const closeKeywordsBtn = document.getElementById("close-keywords-modal");
+
+if (motsModal && openKeywordsBtn) {
+  openKeywordsBtn.addEventListener("click", () => {
+    motsModal.classList.remove("hidden");
+  });
+}
+if (motsModal && closeKeywordsBtn) {
+  closeKeywordsBtn.addEventListener("click", () => {
+    motsModal.classList.add("hidden");
+  });
+}
+window.addEventListener("click", (e) => {
+  if (e.target === motsModal) {
+    motsModal.classList.add("hidden");
+  }
+});
+      
       // ✅ Gestion du modal catégorie
       const modal = document.getElementById("category-modal");
       const openBtn = document.getElementById("category-info-btn");
