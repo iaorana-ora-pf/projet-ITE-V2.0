@@ -13,28 +13,49 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(events => {
       const slug = window.location.pathname.split("/").pop().replace(".html", "");
       const event = events.find(ev => ev.slug === slug);
-      if (!event) return;
+      if (!event) {
+        console.warn("Événement introuvable pour ce slug :", slug);
+        return;
+      }
 
-      // ✅ Affiche uniquement les catégories du JSON avec icône & couleur
+      // ✅ Affiche les catégories avec icône et couleur
       const catEl = document.getElementById("categories-with-icons");
       if (catEl && event.categories) {
         catEl.innerHTML = event.categories.map(cat => {
           const info = categoryInfo[cat] || {};
-          return `<span class="categories" title="${cat}" style="color:${info.color || '#000'};">
+          return `<span class="categories" title="${cat}" style="color:${info.color || '#666'};">
                     <i class="fas ${info.icon || 'fa-tag'}"></i> ${cat}
                   </span>`;
         }).join(" ");
       }
 
-      // ✅ Affiche les liens "Pour aller plus loin" comme Sources
+      // ✅ Affiche les liens "Pour aller plus loin"
       const moreEl = document.getElementById("more-links");
-      if (moreEl && event.more && event.more.length > 0) {
-        moreEl.innerHTML = `
-          <div class="section">
-            <strong>📘 Pour aller plus loin :</strong><br />
-            ${event.more.map(m => `<a href="${m.url}" target="_blank">${m.label}</a><br />`).join("")}
-          </div>
-        `;
+      if (moreEl && event.more?.length > 0) {
+        moreEl.innerHTML = event.more.map(m => 
+          `<li><a href="${m.url}" target="_blank">${m.label}</a></li>`
+        ).join("");
       }
+
+      // ✅ Gestion du modal catégorie
+      const modal = document.getElementById("category-modal");
+      const openBtn = document.getElementById("category-info-btn");
+      const closeBtn = document.getElementById("close-category-modal");
+
+      if (modal && openBtn) {
+        openBtn.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+        });
+      }
+      if (modal && closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          modal.classList.add("hidden");
+        });
+      }
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
     });
 });
