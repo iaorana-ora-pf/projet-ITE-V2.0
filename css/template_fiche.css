@@ -110,6 +110,16 @@ h2 {
   cursor: pointer;
   font-size: 1rem;
 }
+
+.cat-label {
+  margin-right: 0.5em;
+  font-weight: normal;
+  color: #222; /* texte noir */
+}
+
+.cat-label i {
+  margin-right: 4px;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
