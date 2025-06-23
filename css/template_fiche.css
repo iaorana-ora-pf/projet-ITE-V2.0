@@ -109,6 +109,25 @@ h2 {
   background-color: #ccc;
   border-radius: 3px;
 }
+.category-item {
+  margin-bottom: 0.3em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.keyword-list,
+.source-list,
+.more-links-list {
+  list-style-type: disc;
+  padding-left: 1.2em;
+  margin-top: 0.3em;
+}
+
+.keyword-list li,
+.source-list li,
+.more-links-list li {
+  margin-bottom: 0.4em;
+}
 /* === FOOTER === */
 .sidebar-footer {
   padding: 20px;
