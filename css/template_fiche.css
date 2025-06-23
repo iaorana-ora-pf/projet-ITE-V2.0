@@ -136,9 +136,10 @@ h2 {
 
 /* listes mots cles */
 .keywords-inline {
-  margin-top: 0.5em;
-  text-align: left;
-  font-size: 0.95em;
+  text-align: left; !important; 
+  padding-left: 0;
+  margin-left: 0;
+  display: block;
 }
 /* liste */
 .list-disc {
