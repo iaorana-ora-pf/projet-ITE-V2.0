@@ -215,19 +215,20 @@ h2 {
 /* ===================== */
 /*       Suggestion*/
 /* ===================== */
-.suggestion-section {
-  border-top: 3px solid orange;
-  margin-top: 2em;
-  padding-top: 1em;
+.suggestion-separator {
+  border: none;
+  height: 3px;
+  background-color: orange;
+  margin: 30px 0 15px;
 }
 
-.suggestion-section .suggestion-link {
-  color: var(--main-green);
+.suggestion-link {
   font-weight: bold;
+  color: var(--main-green);
   text-decoration: none;
 }
-
-.suggestion-section .suggestion-link:hover {
+.suggestion-link:hover {
+  color: var(--hover-green);
   text-decoration: underline;
 }
 /* ===================== */
