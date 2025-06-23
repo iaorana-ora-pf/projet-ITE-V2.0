@@ -69,6 +69,7 @@ categories_json = json.dumps(event.get("categories", []))
         keywords=keywords,
         added=added,
         source_url=source_url,
+        sources=sources_html,
         prev_link=prev_link,
         next_link=next_link,
         more_links=more_links_html
