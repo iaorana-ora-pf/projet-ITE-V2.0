@@ -119,7 +119,14 @@ h2 {
   cursor: pointer;
   font-size: 1rem;
 }
-
+.info-icon {
+   color: #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.info-icon:hover {
+  color: #0056b3;
+}
 .cat-label {
   display: inline-flex;
   align-items: center;
