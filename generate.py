@@ -55,11 +55,15 @@ for i, event in enumerate(events):
         ) + "</ul>"
 
     # 🧩 Remplir le template
+   import json
+
+categories_json = json.dumps(event.get("categories", []))
+    
     html = template_fiche.format(
         title=title,
         description=description,
         year=year,
-        categories=categories,
+        categories_json=categories_json,
         keywords=keywords,
         added=added,
         source_url=source_url,
