@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Première épidémie de grippe à Tahiti</title>
-  <link rel="stylesheet" href="../css/template_fiche.css">
+ <link rel="stylesheet" href="../css/template_fiche.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body data-categories='{categories_json}'>
+<body data-categories='["Protection et gestion des risques"]'>
   <div class="container">
     <!-- =================== -->
     <!--      SIDEBAR        -->
@@ -17,7 +17,7 @@
       <div class="sidebar-scroll">
         <h2>Informations</h2>
 
-        <div class="section"><strong>Année :</strong> 1772</div>
+        <div class="section"><strong>Année :</strong>1772</div>
         <div class="section">
   <strong>Catégories :</strong>
   <span id="category-info-btn" class="info-icon" title="À propos des catégories">
@@ -25,30 +25,31 @@
   </span>
   <span id="categories-with-icons"></span>
 </div>
-          
+        
 <div class="section">
   <strong>Mots-clés :</strong>
   <span id="keywords-info-btn" class="info-icon" title="À propos des mots-clés">
     <i class="fas fa-circle-info"></i>
   </span>
   <ul class="keyword-list">
-    {keywords}
+    <ul class='keyword-list'><li>grippe</li><li>épidémie</li></ul>
   </ul>
 </div>
         
-        <div class="section"><strong>Sources :</strong> {sources}</div>
-        <div class="section"><strong>Informations validées au </strong> 2025-06-21</div> <br>
-       <div class="section">
-  <div class="section">
+       <div class="section"><strong>Sources :</strong> <ul class='source-list'><li><a href='https://example.com/source1.pdf' target='_blank'>Source</a></li></ul></div>
+        <div class="section"><strong>Informations validées au </strong> 21/06/2025</div> <br>
+  
+        <div class="section">
   <strong>Pour aller plus loin :</strong>
   <ul id="more-links" class="more-links-list"></ul>
 </div>
-        <div class="similar-nav">
-  <a class="nav-arrow" href="{prev_link}" title="Évènement précédent">
+
+    <div class="similar-nav">
+  <a class="nav-arrow" href="#" title="Évènement précédent">
     <i class="fas fa-arrow-left"></i>
   </a>
   <span class="nav-text">Parcourir les évènements similaires</span>
-  <a class="nav-arrow" href="{next_link}" title="Évènement suivant">
+  <a class="nav-arrow" href="1800-creation-du-premier-dispensaire.html" title="Évènement suivant">
     <i class="fas fa-arrow-right"></i>
   </a>
 </div>  
@@ -57,17 +58,15 @@
         <div class="sidebar-footer">
         <p>Projet'ITE - © 2025 – Tous droits réservés </p>
         </div>
-         </aside>
+    </aside>
+
  <!-- =================== -->
   <!--     Description -->
   <!-- =================== -->
-   <main class="fiche-content">
-        <h1>Première épidémie de grippe à Tahiti</h1>
-        <div class="section"><strong>Description :</strong> Aucune description disponible.</div>
-          </main>
- 
-
-
+      <main class="fiche-content">  
+  <h1>Première épidémie de grippe à Tahiti</h1>
+   <div class="section"><strong>Description :</strong> Aucune description disponible.</div>
+ </main>
   <!-- =================== -->
   <!--     MODAL INFO  CAT    -->
   <!-- =================== -->
@@ -99,7 +98,7 @@
       <span id="close-keywords-modal" class="close">&times;</span>
       <h4><strong>À propos des mots-clés</strong></h4>
       <p>
-        Les mots-clés sont issus, autant que possible, du thésaurus <a href="https://https://decs.bvsalud.org" 
+        Les mots-clés sont issus, autant que possible, du thésaurus <a href="https://decs.bvsalud.org" 
         target="_blank" class="fesp-link">
         DeCS</a>.
       </p>
