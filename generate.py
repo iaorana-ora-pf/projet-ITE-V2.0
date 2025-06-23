@@ -6,12 +6,13 @@ from datetime import datetime
 def find_similar_event(current_event, all_events):
     def score(event):
         if event["id"] == current_event["id"]:
-    return (float('inf'), float('inf'), float('inf'))
+            return (float('inf'), float('inf'), float('inf'))  # exclure l’événement courant
+
         keywords_match = len(set(event.get("keywords", [])) & set(current_event.get("keywords", [])))
         categories_match = len(set(event.get("categories", [])) & set(current_event.get("categories", [])))
         year_diff = abs(event.get("year", 0) - current_event.get("year", 0))
         return (-keywords_match, -categories_match, year_diff)
-    
+
     sorted_events = sorted(all_events, key=score)
     return sorted_events[0] if sorted_events else None
 
