@@ -16,7 +16,7 @@
 /*        INITIAL        */
 /* ===================== */
 body {
-    margin: 0;
+  margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   background-color: white;
@@ -41,16 +41,20 @@ h2 {
 .section {
   margin-bottom: 15px;
 }
-.section strong {
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}.section-label {
+.section-label {
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
 }
-
+.section strong {
+  margin-right: 6px;
+  font-weight: bold;
+}
+.section strong,
+.section span {
+  display: inline;
+  vertical-align: baseline;
+}
 .nav-arrows {
   display: flex;
   justify-content: space-between;
@@ -60,26 +64,12 @@ h2 {
   font-size: 1.5em;
   text-decoration: none;
 }
-.categories,
-.keywords {
-  display: inline-block;
-  padding: 5px 10px;
-  margin-right: 8px;
-  border-radius: 5px;
-}
-
-.keywords {
-  margin-left: 1em;
-  line-height: 1.6em;
-  list-style-type: disc;
-}
 .keyword-list {
   list-style-type: disc;
   padding-left: 1.2em;
   text-align: left;
   margin-top: 0.3em;
 }
-
 .keyword-list li {
   margin-bottom: 0.3em;
 }
@@ -93,7 +83,10 @@ h2 {
   text-align: left;
   margin-left: 100px;
   padding: 2em;
-  
+}
+.fiche-content .section {
+  text-align: left;
+  line-height: 1.6em;
 }
 .event-title {
   text-align: center;
@@ -149,10 +142,17 @@ h2 {
 .list-disc li {
   margin-bottom: 0.4em;
 }
-.section strong, .section span {
-  display: inline;
-  vertical-align: baseline;
+
+.pill {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 4px 6px 4px 0;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  font-size: 0.9em;
+  color: var(--dark-text);
 }
+
 /* === FOOTER === */
 .sidebar-footer {
   padding: 20px;
@@ -188,6 +188,9 @@ h2 {
   padding-left: 20px;
   margin-top: 0.5em;
   line-height: 1.6;
+}
+#categories-with-icons {
+  margin-bottom: 1em; /* ajoute de l'air sous les catégories */
 }
 .similar-nav {
   display: flex;
@@ -306,16 +309,11 @@ h2 {
     flex-direction: column;
     margin-left: 0;
   }
-
   .sidebar {
     width: 100%;
     position: relative;
     height: auto;
   }
-.container {
-  flex-direction: column;
-  margin-left: 0;
-}
 .fiche-content {
   margin-left: 0;
 }
