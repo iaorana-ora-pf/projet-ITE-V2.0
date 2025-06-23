@@ -52,10 +52,8 @@ for i, event in enumerate(events):
         for src in event.get("sources", [])
     ) + "</ul>"
 
-    # 🗝️ Mots-clés
-    keywords_html = "<ul class='keyword-list list-disc'>" + "".join(
-        f"<li>{kw}</li>" for kw in event.get("keywords", [])
-    ) + "</ul>"
+   # 🗝️ Mots-clés affichés sur une seule ligne
+keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
 
     # 📘 Pour aller plus loin
     more_links_html = "<ul class='more-links-list list-disc'>" + "".join(
