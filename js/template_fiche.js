@@ -79,5 +79,37 @@ window.addEventListener("click", (e) => {
           modal.classList.add("hidden");
         }
       });
+
+      // === Navigation avec filtres depuis l'URL ===
+const urlParams = new URLSearchParams(window.location.search);
+const filterCat = urlParams.get("cat");
+const filterKw = urlParams.get("kw");
+
+if (filterCat || filterKw) {
+  const matches = events.filter(ev => {
+    const hasCat = filterCat ? ev.categories?.includes(filterCat) : true;
+    const hasKw = filterKw ? ev.keywords?.includes(filterKw) : true;
+    return hasCat && hasKw;
+  });
+
+  const currentIndex = matches.findIndex(ev => ev.slug === slug);
+  const prevEv = currentIndex > 0 ? matches[currentIndex - 1] : null;
+  const nextEv = currentIndex < matches.length - 1 ? matches[currentIndex + 1] : null;
+
+  const leftArrow = document.querySelector(".nav-arrow[href*='{prev_link}']");
+  const rightArrow = document.querySelector(".nav-arrow[href*='{next_link}']");
+
+  if (leftArrow && prevEv) {
+    leftArrow.href = `${prevEv.slug}.html?cat=${filterCat || ""}&kw=${filterKw || ""}`;
+  } else if (leftArrow) {
+    leftArrow.href = "#";
+  }
+
+  if (rightArrow && nextEv) {
+    rightArrow.href = `${nextEv.slug}.html?cat=${filterCat || ""}&kw=${filterKw || ""}`;
+  } else if (rightArrow) {
+    rightArrow.href = "#";
+  }
+}
     });
 });
