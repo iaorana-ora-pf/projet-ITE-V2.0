@@ -41,6 +41,11 @@ h2 {
 .section {
   margin-bottom: 15px;
 }
+.section strong {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
 .nav-arrows {
   display: flex;
   justify-content: space-between;
@@ -61,6 +66,7 @@ h2 {
 .fiche-content {
   margin-left: 280px;
   padding: 2em;
+  text-align: left;
 }
 .keywords {
   margin-left: 1em;
@@ -69,12 +75,19 @@ h2 {
 }
 .keyword-list {
   list-style-type: disc;
-  margin-left: 1em;
-  padding-left: 0.5em;
+  padding-left: 1.2em;
+  text-align: left;
+  margin-top: 0.3em;
 }
 
 .keyword-list li {
   margin-bottom: 0.3em;
+}
+.fiche-content h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--main-green);
+  margin-bottom: 20px;
 }
 /* ===================== */
 /*      SIDEBAR           */
@@ -149,9 +162,9 @@ h2 {
   font-size: 1rem;
 }
 .cat-label {
-  display: inline-flex;
+  display:  block;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   font-weight: normal;
   color: var(--dark-text);
 }
@@ -190,9 +203,9 @@ h2 {
 }
 
 .similar-nav .nav-text {
-  font-weight: bold;
-  color: #007f8c;
-  text-align: center;
+  font-weight: normal;
+  font-size: 0.9rem; /* même que sidebar */
+  color: var(--dark-text); /* texte neutre */
 }
 /* ===================== */
 /*       HOME       */
