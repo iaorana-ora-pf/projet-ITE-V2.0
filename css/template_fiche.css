@@ -62,6 +62,11 @@ h2 {
   margin-left: 280px;
   padding: 2em;
 }
+.keywords {
+  margin-left: 1em;
+  line-height: 1.6em;
+  list-style-type: disc;
+}
 .keyword-list {
   list-style-type: disc;
   margin-left: 1em;
