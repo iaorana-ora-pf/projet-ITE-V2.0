@@ -56,7 +56,7 @@ for i, event in enumerate(events):
 keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
 
     # 📘 Pour aller plus loin
-    more_links_html = "<ul class='more-links-list list-disc'>" + "".join(
+   more_links_html = "<ul class='source-list list-disc'>" + "".join(
         f"<li><a href='{link['url']}' target='_blank'>{link['label']}</a></li>"
         for link in event.get("more", [])
     ) + "</ul>" if event.get("more") else ""
