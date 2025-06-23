@@ -161,9 +161,6 @@ h3 {
   cursor: pointer;
   font-size: 1rem;
 }
-#category-info-btn :hover {
-  color: #0056b3;
-}
 /* Barre de recherche */
 .search-title {
   font-weight: bold;
