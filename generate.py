@@ -47,18 +47,26 @@ if event.get("more"):
     prev_link = f"{slugs[i-1]}.html" if i > 0 else "#"
     next_link = f"{slugs[i+1]}.html" if i < len(slugs) - 1 else "#"
 
+   # 🔍 Section "Pour aller plus loin"
+more_links_html = ""
+if event.get("more_links"):
+    more_links_html = "<ul>" + "".join(
+        f'<li><a href="{link["url"]}" target="_blank">{link["label"]}</a></li>'
+        for link in event["more_links"]
+    ) + "</ul>"
+    
     html = template_fiche.format(
         title=title,
         description=description,
-        year=year,
-        categories=categories,
-        keywords=keywords,
-        added=added,
-        source_url=source_url,
-        prev_link=prev_link,
-        next_link=next_link
-        more_links=more_links  # ✅ injecte ici
-    )
+    year=year,
+    categories=categories,
+    keywords=keywords,
+    added=added,
+    source_url=source_url,
+    prev_link=prev_link,
+    next_link=next_link,
+    more_links=more_links_html  # 👈 ajoute ceci
+)
 
     with open(os.path.join(output_dir, f"{slug}.html"), "w", encoding="utf-8") as f:
         f.write(html)
