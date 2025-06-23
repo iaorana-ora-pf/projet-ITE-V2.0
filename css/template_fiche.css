@@ -112,13 +112,15 @@ h2 {
 }
 
 .cat-label {
-  margin-right: 0.5em;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 4px;
   font-weight: normal;
-  color: #222; /* texte noir */
+  color: var(--dark-text);
 }
 
 .cat-label i {
-  margin-right: 4px;
+  margin-right: 6px;
 }
 /* ===================== */
 /*       HOME       */
