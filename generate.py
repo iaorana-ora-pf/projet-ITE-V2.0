@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 # 📂 Config
 json_file = "events.json"
@@ -32,14 +33,14 @@ for i, event in enumerate(events):
     slug = event["slug"]
     title = event.get("title", "")
     year = event.get("year", "")
-    from datetime import datetime
+   
 
 # Formatage de la date si elle est présente
 raw_date = event.get("added", "")
 try:
     added = datetime.strptime(raw_date, "%Y-%m-%d").strftime("%d/%m/%Y")
 except ValueError:
-    added = raw_date  # fallback si la date est mal formatée
+    added = raw_date# fallback si la date est mal formatée
     description = event.get("description", "Aucune description disponible.")
     sources_html = "<ul>" + "".join(
     f'<li><a href="{s["url"]}" target="_blank">{s["label"]}</a></li>'
@@ -66,21 +67,39 @@ except ValueError:
     # 🧩 Remplir le template
    import json
 
+# 🔗 More links
+more_links_html = ""
+if event.get("more"):
+    more_links_html = "<ul class='more-links-list'>" + "".join(
+        f"<li><a href='{link['url']}' target='_blank'>{link['label']}</a></li>"
+        for link in event["more"]
+    ) + "</ul>"
+
+# 🗝️ Keywords
+keywords_html = "<ul class='keyword-list'>" + "".join(
+    f"<li>{kw}</li>" for kw in event.get("keywords", [])
+) + "</ul>"
+
+# 📚 Sources
+sources_html = "<ul class='source-list'>" + "".join(
+    f"<li><a href='{src['url']}' target='_blank'>{src['label']}</a></li>"
+    for src in event.get("sources", [])
+) + "</ul>"
+
 categories_json = json.dumps(event.get("categories", []))
     
-    html = template_fiche.format(
-        title=title,
-        description=description,
-        year=year,
-        categories_json=categories_json,
-        keywords=keywords,
-        added=added,
-        source_url=source_url,
-        sources=sources_html,
-        prev_link=prev_link,
-        next_link=next_link,
-        more_links=more_links_html
-    )
+html = template_fiche.format(
+    title=title,
+    year=year,
+    categories_json=json.dumps(event.get("categories", [])),
+    keywords=keywords_html,
+    added=added,
+    source_url=sources_html,
+    description=description,
+    prev_link=prev_link,
+    next_link=next_link,
+    more_links=more_links_html
+)
 
     # 📄 Enregistrer le fichier HTML
     with open(os.path.join(output_dir, f"{slug}.html"), "w", encoding="utf-8") as f:
