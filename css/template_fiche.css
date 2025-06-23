@@ -212,7 +212,35 @@ h2 {
   margin-top: 0.5em;
   line-height: 1.6;
 }
+/* ===================== */
+/*       Suggestion*/
+/* ===================== */
+.suggestion-section {
+  border-top: 3px solid orange;
+  margin-top: 2em;
+  padding-top: 1em;
+}
 
+.suggestion-section .suggestion-link {
+  color: var(--main-green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.suggestion-section .suggestion-link:hover {
+  text-decoration: underline;
+}
+/* ===================== */
+/*       Footer     */
+/* ===================== */
+.sidebar-footer {
+  padding: 20px;
+  font-size: 0.75rem;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  margin-top: 10px; /* 🔵 espace ajouté au-dessus */
+}
 /* ===================== */
 /*    Partie centrale     */
 /* ===================== */
@@ -232,17 +260,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* ===================== */
-/*       Footer     */
-/* ===================== */
-.sidebar-footer {
-  padding: 20px;
-  font-size: 0.75rem;
-  background: #f8f8f8;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  margin-top: 10px; /* 🔵 espace ajouté au-dessus */
-}
+
 /* ===================== */
 /*       HOME       */
 /* ===================== */
