@@ -67,13 +67,13 @@ for i, event in enumerate(events):
     suggestion_html = ""
     if similar:
         suggestion_html = f"""
-        <div class="section">
-            <strong>Événement lié à découvrir :</strong><br>
-            <a href="{similar['slug']}.html" class="suggestion-link">
-                {similar['title']} ({similar['year']})
-            </a>
-        </div>
-        """
+    <div class="suggestion-section">
+        <strong>Événement lié à découvrir :</strong><br>
+        <a href="{similar['slug']}.html" class="suggestion-link">
+            {similar['title']} ({similar['year']})
+        </a>
+    </div>
+    """
 
     # 🧩 Injection dans le template
     html = template_fiche.format(
