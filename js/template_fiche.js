@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ).join("");
       }
 
-      // 🔍 Gestion du modal d'infos Mots-clés
+// 🧠 Gestion du modal d'infos Mots-clés
 const motsModal = document.getElementById("mots-modal");
 const openKeywordsBtn = document.getElementById("keywords-info-btn");
 const closeKeywordsBtn = document.getElementById("close-keywords-modal");
