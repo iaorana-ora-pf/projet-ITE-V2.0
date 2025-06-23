@@ -49,12 +49,12 @@ if event.get("more"):
 
     html = template_fiche.format(
         title=title,
+        description=description,
         year=year,
         categories=categories,
         keywords=keywords,
         added=added,
         source_url=source_url,
-        description=description,
         prev_link=prev_link,
         next_link=next_link
         more_links=more_links  # ✅ injecte ici
