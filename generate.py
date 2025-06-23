@@ -47,6 +47,7 @@ if event.get("more"):
         description=description,
         prev_link=prev_link,
         next_link=next_link
+        more_links=more_links  # ✅ injecte ici
     )
 
     with open(os.path.join(output_dir, f"{slug}.html"), "w", encoding="utf-8") as f:
