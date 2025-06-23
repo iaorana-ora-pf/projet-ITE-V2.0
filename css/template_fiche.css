@@ -116,7 +116,6 @@ h2 {
 .cat-label {
   display: block;
   margin-bottom: 6px;
-  margin-left: 10px; /* ✅ ESPACE AJOUTÉ ICI */
   font-weight: normal;
   color: var(--dark-text);
 }
