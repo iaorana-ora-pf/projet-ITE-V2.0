@@ -83,6 +83,9 @@ h2 {
   align-items: center;
   gap: 0.4em;
 }
+.section-label strong {
+  margin-right: 0.4em;
+}
 .section strong {
   margin-right: 6px;
   font-weight: bold;
