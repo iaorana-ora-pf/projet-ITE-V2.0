@@ -133,10 +133,14 @@ h2 {
   align-items: center;
   gap: 0.5em;
 }
+
+/* liste */
 .list-disc {
   list-style-type: disc;
-  padding-left: 1.2em;
-  margin-top: 0.3em;
+  padding-left: 1.4em; /* homogénéisation */
+  margin-top: 0.5em;
+  text-align: left; /* ✅ */
+  line-height: 1.6; /* ✅ */
 }
 
 .list-disc li {
@@ -153,14 +157,21 @@ h2 {
   color: var(--dark-text);
 }
 
-/* === FOOTER === */
-.sidebar-footer {
-  padding: 20px;
-  font-size: 0.75rem;
-  background: #f8f8f8;
-  border-top: 1px solid #ddd;
-  text-align: center;
-  margin-top: 10px; /* 🔵 espace ajouté au-dessus */
+
+/* catégories */
+.cat-label {
+  display: block;
+  margin-bottom: 6px;
+  margin-left: 10px; /* ✅ ESPACE AJOUTÉ ICI */
+  font-weight: normal;
+  color: var(--dark-text);
+}
+
+.cat-label i {
+  margin-right: 6px;
+}
+#categories-with-icons {
+  margin-bottom: 1em; /* ajoute de l'air sous les catégories */
 }
 /* Info bouton */
 #category-info-btn {
@@ -173,25 +184,17 @@ h2 {
   cursor: pointer;
   font-size: 1rem;
 }
-.cat-label {
-  display:  block;
-  margin-bottom: 6px;
-  font-weight: normal;
-  color: var(--dark-text);
-}
 
-.cat-label i {
-  margin-right: 6px;
-}
+
+
+
 .more-links-list {
   list-style-type: disc;
   padding-left: 20px;
   margin-top: 0.5em;
   line-height: 1.6;
 }
-#categories-with-icons {
-  margin-bottom: 1em; /* ajoute de l'air sous les catégories */
-}
+
 .similar-nav {
   display: flex;
   justify-content: center; /* ✅ centre les flèches + texte */
@@ -221,6 +224,16 @@ h2 {
   font-size: 1rem;
   font-weight: normal;
   color: var(--dark-text);
+}
+
+/* === FOOTER === */
+.sidebar-footer {
+  padding: 20px;
+  font-size: 0.75rem;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  margin-top: 10px; /* 🔵 espace ajouté au-dessus */
 }
 /* ===================== */
 /*       HOME       */
