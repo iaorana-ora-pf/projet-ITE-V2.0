@@ -94,6 +94,16 @@ h2 {
   color: var(--main-green);
   margin-bottom: 20px;
 }
+.fiche-content {
+  text-align: left;
+}
+
+.event-title {
+  text-align: center;
+  color: var(--main-green); /* bleu turquoise */
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 /* ===================== */
 /*      SIDEBAR           */
 /* ===================== */
@@ -189,11 +199,12 @@ h2 {
 }
 .similar-nav {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* ✅ centre les flèches + texte */
   align-items: center;
-  gap: 1.5em;
+  gap: 1.2em;
   margin: 2em auto;
-  font-size: 1.1em;
+  font-size: 1em;
+  text-align: center;
 }
 
 .similar-nav .nav-arrow {
@@ -212,9 +223,9 @@ h2 {
 }
 
 .similar-nav .nav-text {
+  font-size: 1rem;
   font-weight: normal;
-  font-size: 0.9rem; /* même que sidebar */
-  color: var(--dark-text); /* texte neutre */
+  color: var(--dark-text);
 }
 /* ===================== */
 /*       HOME       */
