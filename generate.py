@@ -44,8 +44,7 @@ for i, event in enumerate(events):
         for c in event.get("categories", []) if c in category_info
     )
 
-    keywords = " ".join(f'<span class="keywords">{k}</span>' for k in event.get("keywords", []))
-
+    keywords = "<ul>" + "".join(f'<li class="keywords">{k}</li>' for k in event.get("keywords", [])) + "</ul>"
     # 🔍 Pour aller plus loin (optionnel)
     more_links_html = ""
     if event.get("more"):
