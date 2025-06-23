@@ -54,7 +54,7 @@ for i, event in enumerate(events):
 
     # 🗝️ Mots-clés
     keywords_html = "<ul class='list-disc keyword-list'>" + "".join(
-    f"<li>{kw}</li>" for kw in event.get("keywords", [])
+    f"<li class="pill">{kw}</li>" for kw in event.get("keywords", [])
 ) + "</ul>"
 
     # 📘 Pour aller plus loin
