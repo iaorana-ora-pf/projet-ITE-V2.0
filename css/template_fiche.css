@@ -34,12 +34,12 @@ h1 {
 h2 {
   font-size: 1.4rem;
   text-align: center;
-  margin: 20px 0 10px;
+  margin: 20px 0 20px;
   font-weight: bold;
   color: var(--main-green);
 }
 .section {
-  margin-bottom: 1em;
+  margin-bottom: 15px;
 }
 .nav-arrows {
   display: flex;
@@ -100,6 +100,12 @@ h2 {
   text-align: center;
   margin-top: 10px; /* 🔵 espace ajouté au-dessus */
 }
+/* Info bouton */
+#category-info-btn {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
@@ -123,6 +129,62 @@ h2 {
   background-color: #02616B;
   transform: scale(1.1);
 }
+/* ===================== */
+/*        MODAL           */
+/* ===================== */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  color: var(--dark-text);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content h4 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: var(--main-green);
+}
+
+.close {
+  float: right;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--dark-text);
+}
+
+.modal-content a.fesp-link {
+  color: var(--main-green);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.modal-content a.fesp-link:hover {
+  color: var(--hover-green);
+}
+
 /* ===================== */
 /*       RESPONSIVE       */
 /* ===================== */
