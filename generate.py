@@ -64,14 +64,10 @@ keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords"
     # 💡 Suggestion intelligente
     similar = find_similar_event(event, events)
     suggestion_html = f"""
-<hr class="suggestion-separator">
-<div class="section">
-  <strong>Événement lié à découvrir :</strong><br>
-  <a href="{similar['slug']}.html" class="suggestion-link">
-    {similar['title']} ({similar['year']})
-  </a>
-</div>
-""" if similar else ""
+    <a href="{similar['slug']}.html" class="suggestion-link">
+        {similar['title']} ({similar['year']})
+    </a>
+    """ if similar else ""
 
     # 🧩 Injection dans le template
     html = template_fiche.format(
