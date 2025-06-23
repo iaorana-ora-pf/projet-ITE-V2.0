@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const catEl = document.getElementById("categories-with-icons");
       if (catEl && event.categories) {
         catEl.innerHTML = event.categories.map(cat => {
-          const info = categoryInfo[cat] || {};
-          return `<span class="cat-label" title="${cat}">
-          <i class="fas ${info.icon || 'fa-tag'}" style="color:${info.color || '#666'};"></i> ${cat}
-        </span>`;
-        }).join(" ");
+  const info = categoryInfo[cat] || {};
+  return `<span class="cat-label" title="${cat}">
+            <i class="fas ${info.icon || 'fa-tag'}" style="color:${info.color || '#666'};"></i> ${cat}
+          </span>`;
+}).join("<br>");
       }
 
       // ✅ Affiche les liens "Pour aller plus loin"
