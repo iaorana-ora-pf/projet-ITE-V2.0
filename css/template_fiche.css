@@ -45,7 +45,12 @@ h2 {
   display: block;
   margin-top: 20px;
   margin-bottom: 5px;
+}.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
 }
+
 .nav-arrows {
   display: flex;
   justify-content: space-between;
@@ -140,6 +145,10 @@ h2 {
 .source-list li,
 .more-links-list li {
   margin-bottom: 0.4em;
+}
+.section strong, .section span {
+  display: inline;
+  vertical-align: baseline;
 }
 /* === FOOTER === */
 .sidebar-footer {
