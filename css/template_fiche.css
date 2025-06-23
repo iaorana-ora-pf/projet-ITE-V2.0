@@ -216,12 +216,6 @@ h2 {
 /* ===================== */
 /*    Partie centrale     */
 /* ===================== */
-.fiche-content h1 {
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--main-green);
-  margin-bottom: 20px;
-}
 .fiche-content {
   text-align: left;
   margin-left: 15px;
@@ -229,12 +223,12 @@ h2 {
 }
 .fiche-content .section {
   text-align: left;
-  line-height: 1.6em;
+  line-height: 1.4em;
 }
 .event-title {
   text-align: center;
   color: var(--main-green); /* bleu turquoise */
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
 }
 
