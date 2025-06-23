@@ -34,7 +34,10 @@ for i, event in enumerate(events):
     year = event.get("year", "")
     added = event.get("added", "")
     description = event.get("description", "Aucune description disponible.")
-    source_url = event["sources"][0]["url"] if event.get("sources") else "#"
+    sources_html = "<ul>" + "".join(
+    f'<li><a href="{s["url"]}" target="_blank">{s["label"]}</a></li>'
+    for s in event.get("sources", [])
+) + "</ul>"
     prev_link = f"{slugs[i-1]}.html" if i > 0 else "#"
     next_link = f"{slugs[i+1]}.html" if i < len(slugs) - 1 else "#"
 
