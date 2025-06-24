@@ -42,7 +42,7 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
-  max-width: 1100px; /* réduit la largeur totale */
+  max-width: 1200px; /* réduit la largeur totale */
   margin: 0 auto;     /* centre le contenu */
   box-sizing: border-box;
 }
