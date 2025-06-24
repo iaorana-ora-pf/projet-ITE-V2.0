@@ -10,12 +10,13 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
-  background-color: #f9f9f9;
   margin: 0;
   padding: 0;
-  color: #1e2124;
-}
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  color: var(--dark-text);
+  height: 100%;
+  }
 
 .bibli-header {
   text-align: center;
@@ -78,23 +79,6 @@ body {
   object-fit: cover;
 }
 
-.doc-events {
-  font-size: 0.95em;
-  text-align: left;
-  width: 100%;
-}
-
-.doc-events ul {
-  padding-left: 1.2em;
-  margin: 0.5rem 0;
-  list-style-type: disc;
-}
-
-.doc-events li a {
-  color: #fff;
-  text-decoration: underline;
-}
-
 .doc-link {
   margin-top: auto;
   display: inline-block;
@@ -110,7 +94,41 @@ body {
 .doc-link:hover {
   background-color: #f0f0f0;
 }
+/* ===================== */
+/*       HOME       */
+/* ===================== */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #048B9A;
+  color: white;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
 
+.home-button:hover {
+  background-color: #02616B;
+  transform: scale(1.1);
+}
+/* ===================== */
+/*       Footer     */
+/* ===================== */
+.global-footer {
+  background-color: #f0f0f0;
+  color: var(--dark-text);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #ddd;
+  margin-top: 3rem;
+}
 @media (max-width: 600px) {
   #search-input {
     width: 95%;
