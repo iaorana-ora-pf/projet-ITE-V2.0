@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Documents et ressources</title>
+  <link rel="stylesheet" href="css/bibliotheque.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Documents et ressources</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="grid">
+        {% for doc in cards %}
+          <div class="card">
+            <h3>{{ doc.title }}</h3>
+            <p>{{ doc.description }}</p>
+            <a href="{{ doc.url }}" target="_blank">Voir le document</a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+
+  <footer class="sidebar-footer">
+    <p>Projet'ITE - © 2025 – Tous droits réservés</p>
+  </footer>
+
+  <a href="../index.html" class="home-button" title="Retour à l'accueil">
+    <i class="fas fa-home"></i>
+  </a>
+
+</body>
+</html>
