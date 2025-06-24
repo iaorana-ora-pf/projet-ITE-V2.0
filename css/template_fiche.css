@@ -200,15 +200,13 @@ h2 {
 /*       Footer     */
 /* ===================== */
 .global-footer {
-  background-color: #f0f0f0;
-  color: var(--dark-text);
-  font-size: 0.85rem;
+  margin-top: auto;
   text-align: center;
-  padding: 1rem 0;
-  border-top: 1px solid #ddd;
-  margin-top: 3rem;
+  padding: 1rem;
+  background: #f0f0f0;
+  color: #1e2124;
+  border-top: 1px solid #ccc;
 }
-
 /* ===================== */
 /*       HOME       */
 /* ===================== */
