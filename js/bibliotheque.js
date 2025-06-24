@@ -1,47 +1,17 @@
-async function loadBibliotheque() {
-  const response = await fetch('bibliotheque.json');
-  const events = await response.json();
-
-  const docsMap = new Map();
-
-  events.forEach(event => {
-    if (!event.sources) return;
-    event.sources.forEach(source => {
-      const id = source.id_doc;
-      if (!docsMap.has(id)) {
-        docsMap.set(id, {
-          id,
-          label: source.label,
-          url: source.url,
-          events: [],
-          image: 'https://via.placeholder.com/300x180?text=Document'
-        });
-      }
-     docsMap.get(id).events.push({
-  title: event.title,
-  url: `fiches/${event.slug}.html`
-});
-    });
-  });
+async function loadDocuments() {
+  const response = await fetch('documents.json'); // ← Ton nouveau JSON
+  const documents = await response.json();
 
   const container = document.getElementById('bibli-container');
   container.innerHTML = '';
 
-  docsMap.forEach(doc => {
+  documents.forEach(doc => {
     const card = document.createElement('div');
     card.className = 'bibli-card';
 
-    const eventsHTML = doc.events.map(ev =>
-      `<li><a href="${ev.url}">${ev.title}</a></li>`
-    ).join('');
-
     card.innerHTML = `
       <h2 class="doc-title">${doc.label}</h2>
-      <img src="${doc.image}" alt="Illustration" class="doc-img">
-      <div class="doc-events">
-        Mentionné dans :
-        <ul>${eventsHTML}</ul>
-      </div>
+      <img src="${doc.image}" alt="Illustration du document" class="doc-img">
       <a class="doc-link" href="${doc.url}" target="_blank">Voir le document</a>
     `;
 
@@ -50,7 +20,7 @@ async function loadBibliotheque() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadBibliotheque();
+  loadDocuments();
 
   document.getElementById('search-input').addEventListener('input', function () {
     const query = this.value.toLowerCase();
