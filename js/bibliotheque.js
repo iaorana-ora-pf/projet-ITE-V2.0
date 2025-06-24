@@ -22,6 +22,7 @@ async function loadDocuments() {
 document.addEventListener('DOMContentLoaded', () => {
   loadDocuments();
 
+  // Recherche
   document.getElementById('search-input').addEventListener('input', function () {
     const query = this.value.toLowerCase();
     document.querySelectorAll('.bibli-card').forEach(card => {
@@ -29,4 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.display = title.includes(query) ? 'block' : 'none';
     });
   });
+
+  // Scroll boutons
+  document.querySelector('.scroll-left').addEventListener('click', () => {
+    document.getElementById('bibli-container').scrollBy({ left: -300, behavior: 'smooth' });
+  });
+
+  document.querySelector('.scroll-right').addEventListener('click', () => {
+    document.getElementById('bibli-container').scrollBy({ left: 300, behavior: 'smooth' });
+  });
+});
+
 });
