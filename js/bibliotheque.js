@@ -1,5 +1,5 @@
 async function loadDocuments() {
-  const response = await fetch('documents.json'); // ← Ton nouveau JSON
+  const response = await fetch('bibliotheque.json'); // ← Ton nouveau JSON
   const documents = await response.json();
 
   const container = document.getElementById('bibli-container');
