@@ -23,39 +23,60 @@ body {
   color: var(--dark-text);
   height: 100%;
   }
-
+h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 20px 0 20px;
+  font-weight: bold;
+  color: #048B9A;
+}
 /* ====== Global Reset ====== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-}
-
 /* ====== Layout ====== */
 .container {
   display: flex;
-  flex-direction: row;
   min-height: 100vh;
+  margin-left: var(--sidebar-width);
 }
 
+* ===================== */
+/*      SIDEBAR           */
+/* ===================== */
 .sidebar {
-  width: 280px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-right: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  overflow: hidden; /* pour ne pas que tout déborde */
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
+  background-size: cover;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* === CONTENU SCROLLABLE === */
+.sidebar-scroll {
+   flex: 1;
+  overflow-y: auto;
+  padding: 20px 20px 0 20px; /* top right bottom left */
+  flex-grow: 1;
+  box-sizing: border-box; 
+}
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
 }
 
-.sidebar h2 {
-  font-size: 1.3em;
-  margin-bottom: 15px;
-  color: #222;
-}
 
 .filter-section {
   margin-bottom: 20px;
