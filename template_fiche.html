@@ -16,9 +16,9 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-scroll">
         <h2>Informations</h2>
-
+<!-- année -->
     <div class="section"><strong>Année : </strong> <span>{year}</span></div>
-
+<!-- catégories-->
     <div class="section">
   <span class="section-label">
     <strong>Catégories :</strong>
@@ -28,32 +28,51 @@
   </span>
   <div id="categories-with-icons"></div>
 </div>    
-        
+ <!-- mots clefs -->      
 <div class="section">
   <strong class="section-title">Mots-clés :</strong>
   <span id="keywords-info-btn" class="info-icon" title="À propos des mots-clés">
     <i class="fas fa-circle-info"></i>
   </span>
-  <ul class="keyword-list">
-    {keywords}
+  <div class="keyword-inline">
+    {% for kw in keywords %}
+      <span class="keyword-item">{{ kw }}</span>{% if not loop.last %}, {% endif %}
+    {% endfor %}
+  </div>
+</div>
+<!-- sources-->        
+<div class="section">
+  <strong class="section-title">Sources : <i class="fa-solid fa-link" style="color: #ccc;"></i></strong>
+  <ul class="source-list list-disc">
+    {% for src in sources %}
+      <li><a href="{{ src.url }}" target="_blank">{{ src.label }}</a></li>
+    {% endfor %}
   </ul>
 </div>
-        
-       <div class="section"><strong class="section-title">Sources : <i class="fa-solid fa-link" style="color: #ccc;"></i> </strong> {sources}</div>
-        <div class="section"><strong>Informations validées au </strong> {added}</div> <br>
-  
+<!-- validéss-->
+<div class="section"><strong>Informations validées au </strong> {added}</div> <br>
+  <!-- Pour aller plus loin-->
 <div class="section">
-  <strong class="section-title">
-    Pour aller plus loin : <i class="fa-solid fa-link" style="color: #ccc;"></i>
-  </strong>
-  {more_links}
+  <strong class="section-title">Pour aller plus loin : <i class="fa-solid fa-link" style="color: #ccc;"></i></strong>
+  <ul class="source-list list-disc">
+    {% for link in more_links %}
+      <li><a href="{{ link.url }}" target="_blank">{{ link.label }}</a></li>
+    {% endfor %}
+  </ul>
 </div>
 
-<hr class="suggestion-separator">
 
+<!-- Pour aller plus loin-->
+<hr class="suggestion-separator" />
 <h2>Événement lié à découvrir</h2>
 <div class="section">
-  {suggestion_block}
+  {% if suggestion_event %}
+    <a href="{{ suggestion_event.slug }}.html" class="suggestion-link">
+      {{ suggestion_event.title }} ({{ suggestion_event.year }})
+    </a>
+  {% else %}
+    <span>Aucune suggestion disponible.</span>
+  {% endif %}
 </div>
         
 </div>
