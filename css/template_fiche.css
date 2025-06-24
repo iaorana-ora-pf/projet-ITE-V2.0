@@ -9,7 +9,6 @@
   --neutral-text: #5F5F5F;
   --dark-text: #1e2124;
   --highlight-orange: orange;
-  --sidebar-width: 340px;
 }
 
 /* ===================== */
@@ -45,38 +44,6 @@ h2 {
 /* ===================== */
 /*      SIDEBAR           */
 /* ===================== */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--sidebar-width);
-  overflow: hidden; /* pour ne pas que tout déborde */
-  height: 100vh;
-  background: white;
-  background-size: cover;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-/* === CONTENU SCROLLABLE === */
-.sidebar-scroll {
-   flex: 1;
-  overflow-y: auto;
-  padding: 20px 20px 0 20px; /* top right bottom left */
-  flex-grow: 1;
-  box-sizing: border-box; 
-}
-.sidebar::-webkit-scrollbar {
-  width: 6px;
-}
-.sidebar::-webkit-scrollbar-thumb {
-  background-color: #ccc;
-  border-radius: 3px;
-}
-
-
 /* Section */
 .section {
   margin-bottom: 15px;
