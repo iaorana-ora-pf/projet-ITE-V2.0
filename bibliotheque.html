@@ -1,122 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Documents et ressources</title>
-  <link rel="stylesheet" href="css/bibliotheque.css" />
+  <meta charset="UTF-8">
+  <title>Documents et ressources5</title>
+  <link rel="stylesheet" href="../css/bibliotheque.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
 
-  <header>
-    <h1>Documents et ressources</h1>
-  </header>
-
-  <main>
+  <body>
     <div class="container">
-      <div class="grid">
-        
-          <div class="card">
-            <h3>Première épidémie de grippe à Tahiti</h3>
-            <p>Une épidémie de grippe frappe Tahiti pour la première fois, introduite par les contacts avec les navigateurs européens.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Création du premier dispensaire</h3>
-            <p>Mise en place du premier dispensaire offrant un accès structuré aux soins de santé pour la population.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Grippe espagnole en Polynésie</h3>
-            <p>La grippe espagnole atteint la Polynésie, causant de lourdes pertes humaines dans une population peu immunisée.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Fermeture des écoles pendant la pandémie</h3>
-            <p>Fermeture temporaire des écoles pour limiter la propagation virale pendant la pandémie.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Début de la vaccination généralisée</h3>
-            <p>Début des campagnes de vaccination à grande échelle pour prévenir des maladies infectieuses.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Campagne de lutte contre la tuberculose</h3>
-            <p>Campagne nationale de sensibilisation et de traitement pour lutter contre la tuberculose.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Création d’un centre de santé communautaire</h3>
-            <p>Ouverture d’un centre de santé communautaire pour renforcer l’accès local aux soins.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Émergence du VIH</h3>
-            <p>Premiers signalements de cas de VIH marquant le début de la crise du sida.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Première base de données de santé</h3>
-            <p>Création d'une base de données de santé facilitant la collecte et l’analyse des données épidémiologiques.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Plan national santé</h3>
-            <p>Mise en place d’un plan stratégique de santé publique au niveau national.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Introduction des systèmes d'information</h3>
-            <p>Implémentation des premiers systèmes d’information pour la gestion des données de santé.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Déploiement des dossiers médicaux électroniques</h3>
-            <p>Déploiement des dossiers médicaux électroniques pour améliorer le suivi des patients.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Programme nutrition santé</h3>
-            <p>Lancement d’un programme national pour promouvoir une alimentation saine et équilibrée.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Gestion de la crise COVID-19</h3>
-            <p>Réponse sanitaire à la pandémie mondiale de COVID-19 en Polynésie.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-          <div class="card">
-            <h3>Observatoire des maladies chroniques</h3>
-            <p>Création d’un observatoire pour surveiller et analyser les maladies chroniques en Polynésie.</p>
-            <a href="" target="_blank">Voir le document</a>
-          </div>
-        
-      </div>
-    </div>
-  </main>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-scroll">
+        <h2>Filtres</h2>
 
-  <footer class="sidebar-footer">
+        <div class="filter-section">Type de document :
+          <ul id="type-filter-list">
+            <!-- Dynamique via JS -->
+          </ul>
+        </div>
+
+        <div class="filter-section">
+          <label for="search-input">Rechercher par mot-clé :</label>
+          <input type="text" id="search-input" placeholder="Tapez un mot-clé...">
+        </div>
+ </div>
+          <footer class="sidebar-footer">
     <p>Projet'ITE - © 2025 – Tous droits réservés</p>
   </footer>
+        
+     
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h1 class="main-title">Documents et ressources</h1>
+
+      <!-- Navigation flèches -->
+      <div class="nav-arrows">
+        <button id="prev-doc"><i class="fas fa-chevron-left"></i></button>
+        <button id="next-doc"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <!-- Grille de cartes -->
+      <div class="card-grid" id="doc-container">
+        {cards}
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/bibliotheque.js"></script>
 
   <a href="../index.html" class="home-button" title="Retour à l'accueil">
     <i class="fas fa-home"></i>
   </a>
-
 </body>
 </html>
