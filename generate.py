@@ -47,27 +47,18 @@ for i, event in enumerate(events):
         added = raw_date
 
     # 📚 Sources
-    sources_html = "<ul class='source-list list-disc'>" + "".join(
-        f"<li><a href='{src['url']}' target='_blank'>{src['label']}</a></li>"
-        for src in event.get("sources", [])
-    ) + "</ul>"
+    sources = event.get("sources", [])
 
     # 🗝️ Mots-clés affichés sur une seule ligne
-   keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
+   keywords = event.get("keywords", [])
 
     # 📘 Pour aller plus loin
-    more_links_html = "<ul class='source-list list-disc'>" + "".join(
-        f"<li><a href='{link['url']}' target='_blank'>{link['label']}</a></li>"
-        for link in event.get("more", [])
-    ) + "</ul>" if event.get("more") else ""
+    more_links = event.get("more", [])
 
     # 💡 Suggestion intelligente
     similar = find_similar_event(event, events)
-    suggestion_html = (
-        f'<a href="{similar["slug"]}.html" class="suggestion-link">'
-        f'{similar["title"]} ({similar["year"]})</a>'
-        if similar else ""
-    )
+    suggestion_event = similar  # (ou None)
+ 
 
     # 🧩 Injection dans le template
     html = template_fiche.format(
@@ -75,10 +66,10 @@ for i, event in enumerate(events):
         year=year,
         added=added,
         description=description,
-        keywords=keywords_html,
-        sources=sources_html,
-        more_links=more_links_html,
-        suggestion_block=suggestion_html,
+        keywords=keywords,
+        sources=sources,
+        more_links=more_links,
+        suggestion_event=suggestion_event,
         categories_json=json.dumps(event.get("categories", []))
     )
 
