@@ -17,7 +17,12 @@ body {
   color: var(--dark-text);
   height: 100%;
   }
-
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 .bibli-header {
   text-align: center;
   padding: 2rem 1rem 1rem;
@@ -42,11 +47,11 @@ body {
 }
 
 .bibli-container {
+  flex: 1;
   display: flex;
+  overflow-x: auto;
   gap: 1rem;
-  overflow-x: auto;  /* active le scroll horizontal */
-  padding: 2rem;
-  scroll-snap-type: x mandatory; /* snap propre */
+  padding: 1rem;
 }
 
 .bibli-card {
