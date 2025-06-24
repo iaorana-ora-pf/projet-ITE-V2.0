@@ -97,12 +97,12 @@ h2 {
 }
 
 .main-title {
-  font-size: 1.2em;
   margin-bottom: 20px;
   color: var(--main-green);
-  text-align: center;
+  text-align: center; !important;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
 }
-
 /* Navigation */
 .nav-arrows {
   text-align: right;
