@@ -59,9 +59,20 @@ body {
   background-color: #ccc;
   border-radius: 3px;
 }
-
+h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 20px 0 20px;
+  font-weight: bold;
+  color: #048B9A;
+}
 .filter-section {
-  margin-bottom: 20px;
+  display: block;
+  font-weight: bold;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+  color: 1e2124;
 }
 .filter-section input[type="text"] {
   width: 100%;
@@ -81,7 +92,7 @@ body {
 /* ============ MAIN CONTENT ============ */
 .main-content {
   margin-left: var(--sidebar-width);
-  padding: 30px;
+  padding: 100px;
   flex: 1;
 }
 
