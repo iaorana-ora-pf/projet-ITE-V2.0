@@ -13,7 +13,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/source1.pdf"
+        "url": "https://example.com/source1.pdf",
+        "id_doc": "doc1",
+        "type": "rapport"
       }
     ],
     "more": [
@@ -44,7 +46,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/dispensaire"
+        "url": "https://example.com/dispensaire",
+        "id_doc": "doc2",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -71,7 +75,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/grippe1918"
+        "url": "https://example.com/grippe1918",
+        "id_doc": "doc3",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -98,7 +104,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/ecole1918"
+        "url": "https://example.com/ecole1918",
+        "id_doc": "doc4",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -124,7 +132,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/vaccination1945"
+        "url": "https://example.com/vaccination1945",
+        "id_doc": "doc5",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -151,7 +161,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/tuberculose"
+        "url": "https://example.com/tuberculose",
+        "id_doc": "doc6",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -178,7 +190,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/centre-sante"
+        "url": "https://example.com/centre-sante",
+        "id_doc": "doc7",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -205,7 +219,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/vih"
+        "url": "https://example.com/vih",
+        "id_doc": "doc8",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -232,7 +248,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/base-sante"
+        "url": "https://example.com/base-sante",
+        "id_doc": "doc9",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -259,7 +277,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/plan-sante"
+        "url": "https://example.com/plan-sante",
+        "id_doc": "doc10",
+        "type": "rapport"
       }
     ],
     "more": [
@@ -286,7 +306,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/infosystem"
+        "url": "https://example.com/infosystem",
+        "id_doc": "doc11",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -314,7 +336,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/dme"
+        "url": "https://example.com/dme",
+        "id_doc": "doc12",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -341,7 +365,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/nutrition"
+        "url": "https://example.com/nutrition",
+        "id_doc": "doc13",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
@@ -368,7 +394,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/covid"
+        "url": "https://example.com/covid",
+        "id_doc": "doc14",
+        "type": "rapport"
       }
     ],
     "more": [
@@ -395,7 +423,9 @@
     "sources": [
       {
         "label": "Source",
-        "url": "https://example.com/observatoire"
+        "url": "https://example.com/observatoire",
+        "id_doc": "doc15",
+        "type": "rapport"
       }
     ],
     "added": "2025-06-21",
