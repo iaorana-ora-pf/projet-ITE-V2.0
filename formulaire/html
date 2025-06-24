@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajouter un événement</title>
+  <link rel="stylesheet" href="./css/formulaire.css">
+</head>
+<body>
+  <h1>Ajouter un événement</h1>
+  <form action="https://docs.google.com/forms/d/e/TON_FORMULAIRE_GOOGLE_FORM_URL/formResponse" method="POST" target="_blank">
+    <label for="id">ID de l'événement</label>
+    <input type="text" name="entry.ID" id="id" required>
+
+    <label for="year">Année</label>
+    <input type="number" name="entry.YEAR" id="year" required>
+
+    <label for="title">Titre</label>
+    <input type="text" name="entry.TITLE" id="title" required>
+
+    <label for="description">Description</label>
+    <textarea name="entry.DESCRIPTION" id="description" rows="4" required></textarea>
+
+    <label for="categories">Catégories (ctrl/cmd + clic pour sélection multiple)</label>
+    <select name="entry.CATEGORIES" id="categories" multiple required>
+      <option value="Accès">Accès</option>
+      <option value="Protection et gestion des risques">Protection et gestion des risques</option>
+      <option value="Promotion et prévention">Promotion et prévention</option>
+      <option value="Données et recherche">Données et recherche</option>
+      <option value="Gouvernance et pilotage">Gouvernance et pilotage</option>
+    </select>
+
+    <label for="keywords">Mots-clés (séparés par des virgules)</label>
+    <input type="text" name="entry.KEYWORDS" id="keywords" required>
+
+    <label for="slug">Slug (URL)</label>
+    <input type="text" name="entry.SLUG" id="slug" required>
+
+    <label for="sources">Sources (ID des documents, séparés par des virgules)</label>
+    <input type="text" name="entry.SOURCES" id="sources" required>
+
+    <label for="more">Liens complémentaires (label|url, un par ligne)</label>
+    <textarea name="entry.MORE" id="more" rows="4" required></textarea>
+
+    <label for="added">Date d'ajout</label>
+    <input type="date" name="entry.ADDED" id="added" required>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <script src="./js/formulaire.js"></script>
+</body>
+</html>
