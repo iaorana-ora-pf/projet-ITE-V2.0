@@ -102,6 +102,7 @@ h2 {
 .main-content {
   flex: 1;
   padding: 30px;
+  margin-left: var(--sidebar-width); /* ✅ ajoute cette ligne */
 }
 
 .main-title {
