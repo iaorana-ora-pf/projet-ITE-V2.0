@@ -109,16 +109,31 @@ html, body {
 }
 .scroll-left { left: 10px; }
 .scroll-right { right: 10px; }
-
+.scroll-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
 .scroll-buttons button {
   background-color: orange;
   border: none;
-  padding: 10px;
-  margin: 10px;
-  font-size: 1.5rem;
-  cursor: pointer;
   border-radius: 50%;
+  width: 48px;
+  height: 48px;
   color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.scroll-buttons button:hover {
+  background-color: #d97706; /* orange foncé */
+  transform: scale(1.1);
 }
 /* ===================== */
 /*       HOME       */
