@@ -10,11 +10,28 @@
 
 <body data-categories='{{ categories_json }}'>
   <div class="container">
+
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-scroll">
+        <div class="sidebar-footer">
+          <p>Projet'ITE - © 2025 – Tous droits réservés</p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="fiche-content explorer-layout">
+
+      <!-- Card 1 : Titre + description -->
+      <div class="card">
+        <h1 class="event-title">{{ title }}</h1>
+        <div class="section">{{ description }}</div>
+      </div>
+
+      <!-- Card 2 : Informations principales -->
+      <div class="card">
         <h2>Informations</h2>
 
-        <div class="section"><strong>Année : </strong> <span>{{ year }}</span></div>
+        <div class="section"><strong>Année :</strong> <span>{{ year }}</span></div>
 
         <div class="section">
           <strong>Catégories :</strong>
@@ -35,7 +52,7 @@
         </div>
 
         <div class="section">
-          <strong>Sources : <i class="fa-solid fa-link" style="color: #ccc;"></i></strong>
+          <strong>Sources :</strong>
           <ul class="source-list list-disc">
             {% for src in sources %}
               <li><a href="{{ src.url }}" target="_blank">{{ src.label }}</a></li>
@@ -46,15 +63,17 @@
         <div class="section"><strong>Informations validées au </strong>{{ added }}</div>
 
         <div class="section">
-          <strong>Pour aller plus loin : <i class="fa-solid fa-link" style="color: #ccc;"></i></strong>
+          <strong>Pour aller plus loin :</strong>
           <ul class="source-list list-disc">
             {% for link in more_links %}
               <li><a href="{{ link.url }}" target="_blank">{{ link.label }}</a></li>
             {% endfor %}
           </ul>
         </div>
+      </div>
 
-        <hr class="suggestion-separator" />
+      <!-- Card 3 : Événement lié -->
+      <div class="card">
         <h2>Événement lié à découvrir</h2>
         <div class="section">
           {% if suggestion_event %}
@@ -67,14 +86,6 @@
         </div>
       </div>
 
-      <div class="sidebar-footer">
-        <p>Projet'ITE - © 2025 – Tous droits réservés</p>
-      </div>
-    </aside>
-
-    <main class="fiche-content">
-      <h1 class="event-title">{{ title }}</h1>
-      <div class="section">{{ description }}</div>
     </main>
   </div>
 
