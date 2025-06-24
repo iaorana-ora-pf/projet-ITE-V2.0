@@ -21,13 +21,14 @@ body {
 .bibli-header {
   text-align: center;
   padding: 2rem 1rem 1rem;
-  background-color: #EDE7E3;
+  background-color: white;
   color: white;
 }
 
 .bibli-header h1 {
   margin: 0 0 1rem;
   font-size: 2rem;
+  color: #048B9A;
 }
 
 #search-input {
@@ -49,8 +50,14 @@ body {
 }
 
 .bibli-card {
-  flex: 0 0 300px; /* largeur fixe de carte */
-  scroll-snap-align: start;
+  background-color: #EDE7E3;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bibli-card:hover {
@@ -72,19 +79,14 @@ body {
 }
 
 .doc-link {
-  margin-top: auto;
-  display: inline-block;
-  background: white;
-  color: #048B9A;
-  padding: 0.6rem 1.2rem;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
+  color: #1e2124;
   margin-top: 1rem;
+  transition: color 0.3s;
 }
 
 .doc-link:hover {
-  background-color: #f0f0f0;
+  color: orange;
 }
 .scroll-left, .scroll-right {
   position: absolute;
@@ -102,6 +104,17 @@ body {
 }
 .scroll-left { left: 10px; }
 .scroll-right { right: 10px; }
+
+.scroll-buttons button {
+  background-color: orange;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
@@ -129,14 +142,17 @@ body {
 /*       Footer     */
 /* ===================== */
 .global-footer {
-  background-color: #f0f0f0;
-  color: var(--dark-text);
-  font-size: 0.85rem;
+  margin-top: auto;
   text-align: center;
-  padding: 1rem 0;
-  border-top: 1px solid #ddd;
-  margin-top: 3rem;
+  padding: 1rem;
+  background: #f0f0f0;
+  color: #1e2124;
+  border-top: 1px solid #ccc;
 }
+/* ===================== */
+/*       Responsive    */
+/* ===================== */
+
 @media (max-width: 600px) {
   #search-input {
     width: 95%;
