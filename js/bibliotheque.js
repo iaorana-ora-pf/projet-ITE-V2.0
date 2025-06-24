@@ -17,10 +17,10 @@ async function loadBibliotheque() {
           image: 'https://via.placeholder.com/300x180?text=Document'
         });
       }
-      docsMap.get(id).events.push({
-        title: event.title,
-        url: `${event.slug}.html`
-      });
+     docsMap.get(id).events.push({
+  title: event.title,
+  url: `fiches/${event.slug}.html`
+});
     });
   });
 
