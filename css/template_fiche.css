@@ -10,18 +10,19 @@
   --dark-text: #1e2124;
   --highlight-orange: orange;
 }
-
 /* ===================== */
-/*        INITIAL        */
+/*       GLOBAL       */
 /* ===================== */
 body {
-  margin-left: 20px;  /* marge à gauche du body */
-  margin-right: 20px; /* marge à droite du body */
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 0;
   font-family: 'Lato', sans-serif;
-  background-color: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;;
   color: var(--dark-text);
   height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
   flex-direction: column;
 }
 html, body {
@@ -32,38 +33,58 @@ h1 {
 }
 h2 {
   font-size: 1.4rem;
-  text-align: center;
-  margin: 20px 0 20px;
-  font-weight: bold;
-  color: #048B9A;
-}
-.container {
-  flex: 1;
-  display: flex;
 }
 /* ===================== */
-/*      SIDEBAR           */
+/*    cartes       */
 /* ===================== */
+.explorer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Style de chaque card */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  overflow: hidden;
+}
+.card:first-child {
+  grid-row: 1 / span 2;
+}
+.card h2 {
+  color: var(--main-green);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.card .section {
+  margin-bottom: 1.2rem;
+}
+/* ===================== */
+/*      Contenu      */
+/* ===================== */
+
+
+.event-title {
+  text-align: center; !important;
+  color: var(--main-green); /* bleu turquoise */
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Section */
 .section {
   margin-bottom: 15px;
 }
-.section-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-}
-.section-label strong {
-  margin-right: 0.4em;
-}
 .section strong {
   margin-right: 6px;
   font-weight: bold;
-}
-.section strong,
-.section span {
-  display: inline;
-  vertical-align: baseline;
 }
 .section-title {
   display: block;
@@ -186,17 +207,6 @@ h2 {
   border-top: 1px solid #ddd;
   margin-top: 3rem;
 }
-/* ===================== */
-/*    Partie centrale     */
-/* ===================== */
-
-.event-title {
-  text-align: center; !important;
-  color: var(--main-green); /* bleu turquoise */
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-}
-
 
 /* ===================== */
 /*       HOME       */
@@ -222,109 +232,10 @@ h2 {
   transform: scale(1.1);
 }
 /* ===================== */
-/*        MODAL           */
+/*       RESPONSIVE       */
 /* ===================== */
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal.hidden {
-  display: none;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  font-size: 1rem;
-  color: var(--dark-text);
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-.modal-content h4 {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: var(--main-green);
-}
-
-.close {
-  float: right;
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: var(--dark-text);
-}
-
-.modal-content a.fesp-link {
-  color: var(--main-green);
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-.modal-content a.fesp-link:hover {
-  color: var(--hover-green);
-}
-/* ====== Nouvelle disposition en 3 cards ====== */
-.explorer-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-/* Style de chaque card */
-.card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  padding: 2rem;
-  overflow: hidden;
-}
-.card:first-child {
-  grid-row: 1 / span 2;
-}
-.card h2 {
-  color: var(--main-green);
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-.card .section {
-  margin-bottom: 1.2rem;
-}
-/* Responsive pour mobile : les 3 cards s'empilent */
 @media (max-width: 768px) {
   .explorer-layout {
     grid-template-columns: 1fr;
   }
-}
-/* ===================== */
-/*       RESPONSIVE       */
-/* ===================== */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    margin-left: 0;
-  }
-  .sidebar {
-    width: 100%;
-    position: relative;
-    height: auto;
-  }
-.fiche-content {
-  margin-left: 0;
 }
