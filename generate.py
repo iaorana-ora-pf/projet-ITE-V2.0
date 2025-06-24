@@ -53,7 +53,7 @@ for i, event in enumerate(events):
     ) + "</ul>"
 
     # 🗝️ Mots-clés affichés sur une seule ligne
-    keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
+   keywords_html = "<div class='keywords-inline'>" + ", ".join(event.get("keywords", [])) + "</div>"
 
     # 📘 Pour aller plus loin
     more_links_html = "<ul class='source-list list-disc'>" + "".join(
