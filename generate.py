@@ -49,16 +49,15 @@ for i, event in enumerate(events):
     # 📚 Sources
     sources = event.get("sources", [])
 
-    # 🗝️ Mots-clés affichés sur une seule ligne
-   keywords = event.get("keywords", [])
+    # 🗝️ Mots-clés
+    keywords = event.get("keywords", [])
 
     # 📘 Pour aller plus loin
     more_links = event.get("more", [])
 
     # 💡 Suggestion intelligente
     similar = find_similar_event(event, events)
-    suggestion_event = similar  # (ou None)
- 
+    suggestion_event = similar
 
     # 🧩 Injection dans le template
     html = template_fiche.format(
