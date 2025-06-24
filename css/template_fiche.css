@@ -24,11 +24,7 @@ body {
   color: var(--dark-text);
   height: 100%;
   }
-.container {
-  display: flex;
-  min-height: 100vh;
-  margin-left: var(--sidebar-width);
-}
+
 h1 {
   font-size: 2em;
 }
@@ -219,15 +215,7 @@ h2 {
 /* ===================== */
 /*    Partie centrale     */
 /* ===================== */
-.fiche-content {
-  text-align: left;
-  margin-left: 15px;
-  padding: 2em;
-}
-.fiche-content .section {
-  text-align: left;
-  line-height: 1.4em;
-}
+
 .event-title {
   text-align: center; !important;
   color: var(--main-green); /* bleu turquoise */
@@ -314,7 +302,42 @@ h2 {
 .modal-content a.fesp-link:hover {
   color: var(--hover-green);
 }
+/* ====== Nouvelle disposition en 3 cards ====== */
+.explorer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
 
+/* Style de chaque card */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+  overflow: hidden;
+}
+.card:first-child {
+  grid-row: 1 / span 2;
+}
+.card h2 {
+  color: var(--main-green);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.card .section {
+  margin-bottom: 1.2rem;
+}
+/* Responsive pour mobile : les 3 cards s'empilent */
+@media (max-width: 768px) {
+  .explorer-layout {
+    grid-template-columns: 1fr;
+  }
+}
 /* ===================== */
 /*       RESPONSIVE       */
 /* ===================== */
