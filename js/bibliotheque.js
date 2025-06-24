@@ -1,5 +1,5 @@
 async function loadBibliotheque() {
-  const response = await fetch('data/events.json');
+  const response = await fetch('events.json');
   const events = await response.json();
 
   const docsMap = new Map();
