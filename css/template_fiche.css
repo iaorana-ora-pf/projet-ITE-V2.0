@@ -23,8 +23,11 @@ body {
   background-color: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;;
   color: var(--dark-text);
   height: 100%;
-  }
-
+  flex-direction: column;
+}
+html, body {
+  height: 100%;
+}
 h1 {
   font-size: 2em;
 }
@@ -35,7 +38,10 @@ h2 {
   font-weight: bold;
   color: #048B9A;
 }
-
+.container {
+  flex: 1;
+  display: flex;
+}
 /* ===================== */
 /*      SIDEBAR           */
 /* ===================== */
