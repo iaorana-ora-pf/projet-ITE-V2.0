@@ -1,5 +1,5 @@
 async function loadDocuments() {
-  const response = await fetch('bibliotheque.json'); // ← Ton nouveau JSON
+  const response = await fetch('bibliotheque.json');
   const documents = await response.json();
 
   const container = document.getElementById('bibli-container');
@@ -39,6 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.scroll-right').addEventListener('click', () => {
     document.getElementById('bibli-container').scrollBy({ left: 300, behavior: 'smooth' });
   });
-});
-
 });
