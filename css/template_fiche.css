@@ -14,8 +14,8 @@
 /*       GLOBAL       */
 /* ===================== */
 body {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
   padding: 0;
   font-family: 'Lato', sans-serif;
   color: var(--dark-text);
@@ -42,8 +42,9 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 2rem;
+  max-width: 1100px; /* réduit la largeur totale */
+  margin: 0 auto;     /* centre le contenu */
   box-sizing: border-box;
-  width: 100%;
 }
 
 /* Style de chaque card */
@@ -52,7 +53,7 @@ h2 {
   backdrop-filter: blur(6px);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  padding: 2rem;
+  padding: 1.5rem;
   overflow: hidden;
 }
 .card:first-child {
@@ -64,7 +65,7 @@ h2 {
   margin-bottom: 1rem;
 }
 .card .section {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 /* ===================== */
 /*      Contenu      */
