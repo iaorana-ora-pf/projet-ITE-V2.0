@@ -1,6 +1,8 @@
-{
-  "id_doc": "doc1",
-  "label": "Schéma d’Organisation Sanitaire de la Polynésie française 2016–2021",
-  "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/482470b71b0474b60fbe0a3e5c10c2d324a44693/docs/SOS%202016-2021.pdf",
-  "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/SOS%202016-2021.png"
-}
+[
+  {
+    "id_doc": "doc1",
+    "label": "Schéma d’Organisation Sanitaire de la Polynésie française 2016–2021",
+    "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/482470b71b0474b60fbe0a3e5c10c2d324a44693/docs/SOS%202016-2021.pdf",
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/SOS%202016-2021.png"
+  }
+]
