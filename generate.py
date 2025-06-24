@@ -1,13 +1,13 @@
 import json
 import os
 from datetime import datetime
+from jinja2 import Environment, FileSystemLoader
 
 # 🔍 Trouver un événement proche
 def find_similar_event(current_event, all_events):
     def score(event):
         if event["id"] == current_event["id"]:
-            return (float('inf'), float('inf'), float('inf'))  # exclure l’événement courant
-
+            return (float('inf'), float('inf'), float('inf'))  # Exclure soi-même
         keywords_match = len(set(event.get("keywords", [])) & set(current_event.get("keywords", [])))
         categories_match = len(set(event.get("categories", [])) & set(current_event.get("categories", [])))
         year_diff = abs(event.get("year", 0) - current_event.get("year", 0))
@@ -16,64 +16,41 @@ def find_similar_event(current_event, all_events):
     sorted_events = sorted(all_events, key=score)
     return sorted_events[0] if sorted_events else None
 
-# 📂 Config
+# 📁 Dossiers
 json_file = "events.json"
+template_dir = "."
 output_dir = "fiches"
 os.makedirs(output_dir, exist_ok=True)
 
-# 📥 Lire le template HTML externe
-with open("template_fiche.html", "r", encoding="utf-8") as tf:
-    template_fiche = tf.read()
+# 🔧 Config Jinja2
+env = Environment(loader=FileSystemLoader(template_dir), autoescape=True)
+template = env.get_template("template_fiche.html")
 
-# 📦 Charger les événements
+# 📦 Charger les données
 with open(json_file, "r", encoding="utf-8") as f:
     events = json.load(f)
 
-# Liste des slugs pour navigation
-slugs = [event["slug"] for event in events]
+# 🔁 Générer les pages
+for event in events:
+    event["added_formatted"] = datetime.strptime(event["added"], "%Y-%m-%d").strftime("%d/%m/%Y") if event.get("added") else ""
 
-# 🔁 Générer les pages HTML
-for i, event in enumerate(events):
-    slug = event["slug"]
-    title = event.get("title", "")
-    year = event.get("year", "")
-    description = event.get("description", "Aucune description disponible.")
-
-    # 📅 Formatage de la date
-    raw_date = event.get("added", "")
-    try:
-        added = datetime.strptime(raw_date, "%Y-%m-%d").strftime("%d/%m/%Y")
-    except ValueError:
-        added = raw_date
-
-    # 📚 Sources
-    sources = event.get("sources", [])
-
-    # 🗝️ Mots-clés
-    keywords = event.get("keywords", [])
-
-    # 📘 Pour aller plus loin
-    more_links = event.get("more", [])
-
-    # 💡 Suggestion intelligente
     similar = find_similar_event(event, events)
-    suggestion_event = similar
 
-    # 🧩 Injection dans le template
-    html = template_fiche.format(
-        title=title,
-        year=year,
-        added=added,
-        description=description,
-        keywords=keywords,
-        sources=sources,
-        more_links=more_links,
-        suggestion_event=suggestion_event,
+    rendered = template.render(
+        title=event.get("title", ""),
+        year=event.get("year", ""),
+        added=event["added_formatted"],
+        description=event.get("description", "Aucune description disponible."),
+        keywords=event.get("keywords", []),
+        sources=event.get("sources", []),
+        more_links=event.get("more", []),
+        suggestion_event=similar,
+        categories=event.get("categories", []),
         categories_json=json.dumps(event.get("categories", []))
     )
 
-    # 📄 Enregistrement
-    with open(os.path.join(output_dir, f"{slug}.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+    # Sauvegarde HTML
+    with open(os.path.join(output_dir, f"{event['slug']}.html"), "w", encoding="utf-8") as f_out:
+        f_out.write(rendered)
 
 print(f"✅ {len(events)} fiches générées dans le dossier '{output_dir}/'")
