@@ -90,7 +90,7 @@ h2 {
 /* ============ MAIN CONTENT ============ */
 .main-content {
   margin-left: var(--sidebar-width);
-  padding: 100px;
+  padding: 20px 60px 40px 60px;;
   flex: 1;
 }
 
