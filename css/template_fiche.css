@@ -1,4 +1,4 @@
-/* ===================== */
+ /* ===================== */
 /*        VARIABLES       */
 /* ===================== */
 :root {
@@ -202,8 +202,9 @@ h2 {
 /*       Footer     */
 /* ===================== */
 .global-footer{
-  flex-shrink: 0;
-  width: 100%;
+   width: 100%;
+  position: relative;
+  margin-top: 2rem;
   text-align: center;
   padding: 0.6rem;
   background: #f0f0f0;
