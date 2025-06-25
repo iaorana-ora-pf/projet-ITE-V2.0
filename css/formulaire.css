@@ -39,6 +39,7 @@ h1 {
 
 form {
   max-width: 700px;
+  width: 100%;
   margin: 0 auto;
   background: #fff;
   border-radius: 10px;
