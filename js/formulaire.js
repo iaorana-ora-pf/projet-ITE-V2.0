@@ -38,3 +38,37 @@ document.addEventListener('DOMContentLoaded', () => {
     addedInput.value = today.toISOString().split('T')[0];
   });
 });
+document.getElementById("mon-formulaire").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = {
+    id: document.getElementById("event-id").value,
+    title: document.getElementById("event-title").value,
+    year: parseInt(document.getElementById("event-year").value),
+    slug: document.getElementById("event-slug").value,
+    description: document.getElementById("event-description").value,
+    categories: document.getElementById("event-categories").value.split(",").map(s => s.trim()),
+    keywords: document.getElementById("event-keywords").value.split(",").map(s => s.trim()),
+    sources: document.getElementById("event-sources").value.split(",").map(src => ({ label: src.trim() })),
+    more: document.getElementById("event-more").value.split(",").map(url => ({ label: "Pour aller plus loin", url: url.trim() })),
+    validated: false
+  };
+
+  try {
+    const response = await fetch("http://localhost:5000/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      alert("Événement enregistré !");
+    } else {
+      alert("Erreur : " + result.message);
+    }
+  } catch (err) {
+    console.error("Erreur d'envoi :", err);
+    alert("Erreur de connexion au serveur");
+  }
+});
