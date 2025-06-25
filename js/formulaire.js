@@ -72,3 +72,29 @@ document.getElementById("mon-formulaire").addEventListener("submit", async (e) =
     alert("Erreur de connexion au serveur");
   }
 });
+document.getElementById('download-json').addEventListener('click', () => {
+  const form = document.getElementById('event-form');
+  const formData = new FormData(form);
+  const json = {};
+
+  formData.forEach((value, key) => {
+    if (key.endsWith('[]')) {
+      const trueKey = key.replace('[]', '');
+      if (!json[trueKey]) json[trueKey] = [];
+      json[trueKey].push(value);
+    } else {
+      json[key] = value;
+    }
+  });
+
+  // Forcer des champs particuliers à être bien typés
+  json.year = parseInt(json.year || 0, 10);
+  json.validated = false;
+
+  const fileName = `${json.id || 'evenement'}.json`;
+  const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = fileName;
+  link.click();
+});
