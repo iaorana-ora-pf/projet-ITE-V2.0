@@ -200,12 +200,13 @@ h2 {
 /*       Footer     */
 /* ===================== */
 .global-footer {
-  margin-top: auto;
+  margin-top: 2rem;
   text-align: center;
-  padding: 1rem;
+  padding: 0.6rem;
   background: #f0f0f0;
   color: #1e2124;
   border-top: 1px solid #ccc;
+  font-size: 0.8rem;
 }
 /* ===================== */
 /*       HOME       */
