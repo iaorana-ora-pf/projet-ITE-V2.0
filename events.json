@@ -3,394 +3,55 @@
     "id": "event1",
     "year": 1772,
     "title": "Première épidémie de grippe à Tahiti",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "grippe",
-      "épidémie"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc1"
-      }
-    ],
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["grippe", "épidémie"],
+    "sources": [{"id_doc": "doc1"}],
     "more": [
-      {
-        "label": "Document PDF",
-        "url": "https://example.com/doc1.pdf"
-      },
-      {
-        "label": "Page complémentaire",
-        "url": "https://example.com/page1"
-      }
+      {"label": "Document PDF", "url": "https://example.com/doc1.pdf"},
+      {"label": "Page complémentaire", "url": "https://example.com/page1"}
     ],
     "added": "2025-06-21",
     "slug": "1772-premiere-epidemie-de-grippe-a-tahiti",
-    "description": "Une épidémie de grippe frappe Tahiti pour la première fois, introduite par les contacts avec les navigateurs européens."
+    "description": "Une épidémie de grippe frappe Tahiti pour la première fois, introduite par les contacts avec les navigateurs européens.",
+    "validated": false
   },
   {
     "id": "event2",
     "year": 1800,
     "title": "Création du premier dispensaire",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "dispensaire",
-      "soins"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc2"
-      }
-    ],
+    "categories": ["Accès"],
+    "keywords": ["dispensaire", "soins"],
+    "sources": [{"id_doc": "doc2"}],
     "added": "2025-06-21",
     "slug": "1800-creation-du-premier-dispensaire",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Mise en place du premier dispensaire offrant un accès structuré aux soins de santé pour la population."
+    "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
+    "description": "Mise en place du premier dispensaire offrant un accès structuré aux soins de santé pour la population.",
+    "validated": false
   },
   {
     "id": "event3",
     "year": 1918,
     "title": "Grippe espagnole en Polynésie",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "pandémie",
-      "grippe"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc3"
-      }
-    ],
+    "categories": ["Protection et gestion des risques"],
+    "keywords": ["pandémie", "grippe"],
+    "sources": [{"id_doc": "doc3"}],
     "added": "2025-06-21",
     "slug": "1918-grippe-espagnole-en-polynesie",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "La grippe espagnole atteint la Polynésie, causant de lourdes pertes humaines dans une population peu immunisée."
+    "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
+    "description": "La grippe espagnole atteint la Polynésie, causant de lourdes pertes humaines dans une population peu immunisée.",
+    "validated": false
   },
   {
     "id": "event4",
-    "year": 1918,
-    "title": "Fermeture des écoles pendant la pandémie",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "école",
-      "pandémie"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc4"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "1918-fermeture-des-ecoles-pendant-la-pandemie",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Fermeture temporaire des écoles pour limiter la propagation virale pendant la pandémie."
-  },
-  {
-    "id": "event5",
-    "year": 1945,
-    "title": "Début de la vaccination généralisée",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "vaccination"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc5"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "1945-debut-de-la-vaccination-generalisee",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Début des campagnes de vaccination à grande échelle pour prévenir des maladies infectieuses."
-  },
-  {
-    "id": "event6",
-    "year": 1950,
-    "title": "Campagne de lutte contre la tuberculose",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "tuberculose",
-      "campagne"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc6"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "1950-campagne-de-lutte-contre-la-tuberculose",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Campagne nationale de sensibilisation et de traitement pour lutter contre la tuberculose."
-  },
-  {
-    "id": "event7",
-    "year": 1960,
-    "title": "Création d’un centre de santé communautaire",
-    "categories": [
-      "Accès"
-    ],
-    "keywords": [
-      "centre de santé",
-      "communautaire"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc7"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "1960-creation-centre-sante-communautaire",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Ouverture d’un centre de santé communautaire pour renforcer l’accès local aux soins."
-  },
-  {
-    "id": "event8",
-    "year": 1975,
-    "title": "Émergence du VIH",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "VIH",
-      "infection"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc8"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "1975-emergence-du-vih",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Premiers signalements de cas de VIH marquant le début de la crise du sida."
-  },
-  {
-    "id": "event9",
-    "year": 1985,
-    "title": "Première base de données de santé",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "données",
-      "informatique"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc9"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "1985-premiere-base-de-donnees-de-sante",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Création d'une base de données de santé facilitant la collecte et l’analyse des données épidémiologiques."
-  },
-  {
-    "id": "event10",
-    "year": 2000,
-    "title": "Plan national santé",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "plan",
-      "politique"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc10"
-      }
-    ],
-    "more": [
-      {
-        "label": "Résumé",
-        "url": "https://example.com/plan-resume"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2000-plan-national-sante",
-    "description": "Mise en place d’un plan stratégique de santé publique au niveau national."
-  },
-  {
-    "id": "event11",
-    "year": 2000,
-    "title": "Introduction des systèmes d'information",
-    "categories": [
-      "Gouvernance et pilotage"
-    ],
-    "keywords": [
-      "système",
-      "information"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc11"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2000-introduction-systemes-information",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Implémentation des premiers systèmes d’information pour la gestion des données de santé."
-  },
-  {
-    "id": "event12",
-    "year": 2010,
-    "title": "Déploiement des dossiers médicaux électroniques",
-    "categories": [
-      "Accès",
-      "Données et recherche"
-    ],
-    "keywords": [
-      "dossier médical",
-      "numérique"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc12"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2010-deploiement-dossiers-medicaux-electroniques",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Déploiement des dossiers médicaux électroniques pour améliorer le suivi des patients."
-  },
-  {
-    "id": "event13",
-    "year": 2015,
-    "title": "Programme nutrition santé",
-    "categories": [
-      "Promotion et prévention"
-    ],
-    "keywords": [
-      "nutrition",
-      "prévention"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc13"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2015-programme-nutrition-sante",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Lancement d’un programme national pour promouvoir une alimentation saine et équilibrée."
-  },
-  {
-    "id": "event14",
-    "year": 2020,
-    "title": "Gestion de la crise COVID-19",
-    "categories": [
-      "Protection et gestion des risques"
-    ],
-    "keywords": [
-      "COVID-19",
-      "crise sanitaire"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc14"
-      }
-    ],
-    "more": [
-      {
-        "label": "Mesures locales",
-        "url": "https://example.com/mesures"
-      }
-    ],
-    "added": "2025-06-21",
-    "slug": "2020-gestion-de-la-crise-covid19",
-    "description": "Réponse sanitaire à la pandémie mondiale de COVID-19 en Polynésie."
-  },
-  {
-    "id": "event15",
     "year": 2023,
     "title": "Observatoire des maladies chroniques",
-    "categories": [
-      "Données et recherche"
-    ],
-    "keywords": [
-      "observatoire",
-      "maladies chroniques"
-    ],
-    "sources": [
-      {
-        "id_doc": "doc15"
-      }
-    ],
+    "categories": ["Données et recherche"],
+    "keywords": ["observatoire", "maladies chroniques"],
+    "sources": [{"id_doc": "doc15"}],
+    "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
     "added": "2025-06-21",
     "slug": "2023-observatoire-maladies-chroniques",
-    "more": [
-      {
-        "label": "En savoir plus",
-        "url": "https://example.com/info"
-      }
-    ],
-    "description": "Création d’un observatoire pour surveiller et analyser les maladies chroniques en Polynésie."
+    "description": "Création d’un observatoire pour surveiller et analyser les maladies chroniques en Polynésie.",
+    "validated": false
   }
 ]
