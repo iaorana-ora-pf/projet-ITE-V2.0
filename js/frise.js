@@ -14,11 +14,11 @@ const categoryInfo = {
 document.addEventListener("DOMContentLoaded", () => {
   fetch("events.json")
     .then(res => res.json())
-    .then(events => {
-      eventsData = events;
-      generateCategoryCheckboxes();
-      renderTimeline(eventsData, "desc");
-    });
+  .then(events => {
+  eventsData = events.filter(ev => ev.validated !== false);
+  generateCategoryCheckboxes();
+  renderTimeline(eventsData, "desc");
+});
 
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
     radio.addEventListener("change", () => {
