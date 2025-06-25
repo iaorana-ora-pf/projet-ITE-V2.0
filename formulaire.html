@@ -4,51 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Proposer un événement</title>
-  <link rel="stylesheet" href="../css/formulaire.css">
+  <link rel="stylesheet" href="css/formulaire.css" />
 </head>
 <body>
+
   <main class="form-container">
     <h1>Proposer un événement</h1>
-    <form action="<TON_URL_GOOGLE_SHEETS>" method="POST" id="event-form">
-      
-      <!-- Champs invisibles -->
-      <input type="hidden" name="id" id="event-id">
-      <input type="hidden" name="slug" id="event-slug">
-      <input type="hidden" name="added" id="event-added">
 
-      <!-- Champs visibles -->
-      <label>Titre de l'événement :
-        <input type="text" name="title" id="title" required>
-      </label>
+    <form id="event-form">
+      <!-- Titre -->
+      <label for="title">Titre de l'événement *</label>
+      <input type="text" id="title" name="title" required>
 
-      <label>Description :
-        <textarea name="description" required></textarea>
-      </label>
+      <!-- Année -->
+      <label for="year">Année *</label>
+      <input type="number" id="year" name="year" required>
 
-      <label>Année :
-        <input type="number" name="year" required>
-      </label>
+      <!-- Catégories -->
+      <label>Catégories *</label>
+      <div class="category-checkboxes">
+        <label><input type="checkbox" name="categories" value="Accès"> Accès</label>
+        <label><input type="checkbox" name="categories" value="Contexte"> Contexte</label>
+        <label><input type="checkbox" name="categories" value="Données et recherche"> Données et recherche</label>
+        <label><input type="checkbox" name="categories" value="Gouvernance et pilotage"> Gouvernance et pilotage</label>
+        <label><input type="checkbox" name="categories" value="Promotion et prévention"> Promotion et prévention</label>
+        <label><input type="checkbox" name="categories" value="Protection et gestion des risques"> Protection et gestion des risques</label>
+      </div>
 
-      <label>Catégories (séparées par des virgules) :
-        <input type="text" name="category">
-      </label>
+      <!-- Mots-clés -->
+      <label for="keywords">Mots-clés (séparés par des virgules)</label>
+      <input type="text" id="keywords" name="keywords">
 
-      <label>Mots-clés (séparés par des virgules) :
-        <input type="text" name="keywords">
-      </label>
+      <!-- Description -->
+      <label for="description">Description</label>
+      <textarea id="description" name="description" rows="4"></textarea>
 
-      <label>Sources (texte libre) :
-        <textarea name="sources" placeholder="Label | URL, Label | URL"></textarea>
-      </label>
+      <!-- Sources -->
+      <label for="sources">Sources (champ libre)</label>
+      <textarea id="sources" name="sources" rows="2"></textarea>
 
-      <label>Pour aller plus loin (optionnel) :
-        <textarea name="more_links" placeholder="Label | URL, Label | URL"></textarea>
-      </label>
+      <!-- Pour aller plus loin -->
+      <label for="more">Pour aller plus loin (champ libre)</label>
+      <textarea id="more" name="more" rows="2"></textarea>
 
-     </form>
-    <button type="button" id="download-json">Envoyer la proposition</button>
+      <!-- Champs techniques (invisibles pour l'utilisateur) -->
+      <input type="hidden" id="event-id" name="id">
+      <input type="hidden" id="event-slug" name="slug">
+      <input type="hidden" id="event-added" name="added">
+
+      <!-- Bouton -->
+      <button type="submit">Envoyer la proposition</button>
+    </form>
   </main>
 
-  <script src="../js/formulaire.js"></script>
+  <script src="js/formulaire.js"></script>
 </body>
 </html>
