@@ -1,10 +1,23 @@
+/* ===================== */
+/*        VARIABLES       */
+/* ===================== */
+:root {
+  --main-green: #048B9A;
+  --hover-green: #02616B;
+  --link-green: #048B9A;
+  --light-bg: #EDE7E3;
+  --neutral-text: #5F5F5F;
+  --dark-text: #1e2124;
+  --highlight-orange: orange;
+  --sidebar-width: 340px;
+}
 body {
-  font-family: 'Arial', sans-serif;
+  font-family:'Lato', sans-serif;
   background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
   background-size: cover;
   margin: 0;
   padding: 2rem;
-  color: #333;
+  color:  var(--dark-text);
 }
 
 h1 {
@@ -27,7 +40,11 @@ label {
   margin-top: 1.2rem;
   font-weight: bold;
   color: #048B9A;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
+}
+cat-label{
+  color:  var(--dark-text);;
+  margin-top: 0.3rem;
 }
 
 input[type="text"],
