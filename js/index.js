@@ -7,13 +7,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!response.ok) throw new Error("events.json introuvable");
 
     const data = await response.json();
-    const total = Object.values(data).flat().length;
-    countEl.textContent = total;
+    const allEvents = Object.values(data).flat();
+
+    // ✅ Ne compter que les événements validés
+    const validatedEvents = allEvents.filter(evt => evt.validated);
+    countEl.textContent = validatedEvents.length;
   } catch (err) {
     console.error("Erreur de chargement des événements :", err);
     countEl.textContent = "—";
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const adminBtn = document.getElementById("admin-access-btn");
