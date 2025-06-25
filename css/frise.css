@@ -391,7 +391,16 @@ h3 {
 .event-icons .cat-icon {
   margin-right: 6px;
 }
-
+.badge-nonvalide {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
