@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const code = document.getElementById("admin-code-input").value.trim();
 
       if (code === "bazinga") {
-        window.location.href = "explorer.html?admin=true";
+       window.location.href = "frise.html?admin=true";
       } else {
         errorMsg.textContent = "Code incorrect.";
       }
