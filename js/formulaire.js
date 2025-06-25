@@ -1,55 +1,40 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Remplissage automatique du champ 'added' avec la date du jour
-  const addedField = document.getElementById("added");
-  if (addedField) {
-    const today = new Date().toISOString().split("T")[0];
-    addedField.value = today;
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('event-form');
+  const titleInput = document.getElementById('title');
+  const idInput = document.getElementById('event-id');
+  const slugInput = document.getElementById('event-slug');
+  const addedInput = document.getElementById('event-added');
 
-  // 2. Préremplissage automatique de l'ID avec timestamp
-  const idField = document.getElementById("id");
-  if (idField) {
+  // Fonction pour générer l'ID au format evt-YYYYMMDD-HHMMSS
+  function generateEventId() {
     const now = new Date();
-    const id = `evt-${now.getFullYear()}${String(now.getMonth()+1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}-${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
-    idField.value = id;
+    const pad = n => n.toString().padStart(2, '0');
+    const id = `evt-${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+    return id;
   }
 
-  // 3. Génération automatique du slug depuis le titre
-  const titleField = document.getElementById("title");
-  const slugField = document.getElementById("slug");
-  if (titleField && slugField) {
-    titleField.addEventListener("input", () => {
-      const slug = titleField.value
-        .toLowerCase()
-        .normalize("NFD") // enlève les accents
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-+|-+$/g, "");
-      slugField.value = slug;
-    });
+  // Fonction pour créer un slug à partir du titre
+  function generateSlug(text) {
+    return text
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // enlever accents
+      .replace(/[^\w\s-]/g, '')                         // enlever ponctuation
+      .trim()
+      .replace(/\s+/g, '-')                             // espaces → tirets
+      .replace(/-+/g, '-');
   }
 
-  // 4. Validation basique des champs obligatoires
-  const form = document.getElementById("event-form");
-  form.addEventListener("submit", (e) => {
-    const requiredFields = ["id", "year", "title", "description", "slug"];
-    let valid = true;
+  // Mettre à jour automatiquement les champs cachés
+  titleInput.addEventListener('input', () => {
+    slugInput.value = generateSlug(titleInput.value);
+  });
 
-    requiredFields.forEach(fieldId => {
-      const input = document.getElementById(fieldId);
-      if (!input || input.value.trim() === "") {
-        input.style.borderColor = "red";
-        valid = false;
-      } else {
-        input.style.borderColor = "#ccc";
-      }
-    });
+  // À la soumission du formulaire : ajouter l'ID et la date
+  form.addEventListener('submit', () => {
+    idInput.value = generateEventId();
 
-    if (!valid) {
-      e.preventDefault();
-      alert("Merci de remplir tous les champs obligatoires.");
-    }
+    // Date d'ajout (au format YYYY-MM-DD)
+    const today = new Date();
+    addedInput.value = today.toISOString().split('T')[0];
   });
 });
