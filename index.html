@@ -42,5 +42,21 @@
   </div>
 
   <script src="js/index.js"></script>
+
+  <!-- Icône admin discrète en haut à droite -->
+<button id="admin-access-btn" title="Accès admin">
+  <i class="fas fa-spa"></i> <!-- Fleur stylisée -->
+</button>
+
+<!-- Modale de connexion admin -->
+<div id="admin-modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-admin-modal" class="close">&times;</span>
+    <h3>Accès administrateur</h3>
+    <input type="password" id="admin-code-input" placeholder="Entrez le code" />
+    <button id="validate-admin-code">Valider</button>
+    <p id="admin-error" class="error-msg hidden">Code incorrect.</p>
+  </div>
+</div>
 </body>
 </html>
