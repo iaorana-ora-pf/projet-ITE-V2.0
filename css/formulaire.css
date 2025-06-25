@@ -86,3 +86,38 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #02616B;
 }
+/* ===================== */
+/*       HOME       */
+/* ===================== */
+.home-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #048B9A;
+  color: white;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #02616B;
+  transform: scale(1.1);
+}
+/* ===================== */
+/*       Footer     */
+/* ===================== */
+.global-footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0.6rem;
+  background: #f0f0f0;
+  color: #1e2124;
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+}
