@@ -1,6 +1,7 @@
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f9f8f6;
+  background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
+  background-size: cover;
   margin: 0;
   padding: 2rem;
   color: #333;
@@ -25,7 +26,8 @@ label {
   display: block;
   margin-top: 1.2rem;
   font-weight: bold;
-  color: #555;
+  color: #048B9A;
+  margin-top: 0.5rem;
 }
 
 input[type="text"],
@@ -58,7 +60,8 @@ button[type="submit"] {
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
