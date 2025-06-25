@@ -190,7 +190,18 @@ body {
   color: red;
   margin-top: 0.5rem;
 }
-
+/* === Footer === */
+.global-footer {
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0.6rem;
+  background: #f0f0f0;
+  color: #1e2124;
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+}
 /* === Responsive === */
 @media (max-width: 768px) {
   .welcome-layout {
