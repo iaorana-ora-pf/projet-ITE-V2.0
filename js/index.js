@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 document.addEventListener("DOMContentLoaded", () => {
   const adminBtn = document.getElementById("admin-access-btn");
   const adminModal = document.getElementById("admin-modal");
-  const closeModal = document.getElementById("close-modal");
-  const submitBtn = document.getElementById("submit-admin-code");
+  const closeModal = document.getElementById("close-admin-modal");
+  const submitBtn = document.getElementById("validate-admin-code");
   const errorMsg = document.getElementById("admin-error");
 
   // Afficher la modale
