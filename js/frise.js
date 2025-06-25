@@ -1,3 +1,7 @@
+// Détecte si le mode admin est activé via l'URL
+const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+
+
 let activeCategories = [];
 let eventsData = [];
 let searchQuery = "";
@@ -58,23 +62,30 @@ function renderTimeline(events, order = "desc") {
   const timeline = document.getElementById("timeline");
   if (!timeline) return;
 
-  const sorted = [...events].sort((a, b) =>
-    order === "asc" ? a.year - b.year : b.year - a.year
-  );
+const sorted = [...events].sort((a, b) =>
+  order === "asc" ? a.year - b.year : b.year - a.year
+);
 
-  const filtered = sorted.filter(event => {
-    const matchesCategory = activeCategories.length === 0 ||
-      event.categories?.some(cat => activeCategories.includes(cat));
+// En mode normal, on filtre les événements non validés
+const filtered = sorted.filter(event => {
+  const matchesCategory = activeCategories.length === 0 ||
+    event.categories?.some(cat => activeCategories.includes(cat));
 
-    const searchableFields = [
-      event.title,
-      ...(event.categories || []),
-      ...(event.keywords || []),
-      event.year.toString()
-    ].join(" ").toLowerCase();
+  const searchableFields = [
+    event.title,
+    ...(event.categories || []),
+    ...(event.keywords || []),
+    event.year.toString()
+  ].join(" ").toLowerCase();
 
-    return matchesCategory && searchableFields.includes(searchQuery);
-  });
+  const matchesSearch = searchableFields.includes(searchQuery);
+
+  // En mode admin : on garde tout
+  // En mode normal : on filtre ceux non validés
+  const isVisible = isAdmin || event.validated === true;
+
+  return isVisible && matchesCategory && matchesSearch;
+});
 
   document.getElementById("timeline-header").textContent =
     `La frise contient ${filtered.length} événements`;
@@ -120,7 +131,12 @@ yearLabel.setAttribute("data-year", year);
         : '';
     }).join("");
 
-    evDiv.innerHTML = `<div class="event-title">${ev.title}<span class="event-icons">${icons}</span></div>`;
+    evDiv.innerHTML = `
+  <div class="event-title">
+    ${ev.title}
+    ${!ev.validated ? '<span class="badge-nonvalide">À valider</span>' : ''}
+    <span class="event-icons">${icons}</span>
+  </div>`;
     eventsBlock.appendChild(evDiv);
   });
 
