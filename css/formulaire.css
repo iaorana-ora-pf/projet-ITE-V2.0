@@ -9,7 +9,6 @@
   --neutral-text: #5F5F5F;
   --dark-text: #1e2124;
   --highlight-orange: orange;
-  --sidebar-width: 340px;
 }
 html, body {
   height: 100%;
@@ -26,7 +25,6 @@ body {
   background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('../images/accueil.png') no-repeat center center;
   background-size: cover;
   margin: 0;
-  padding: 2rem;
   color:  var(--dark-text);
 }
 
