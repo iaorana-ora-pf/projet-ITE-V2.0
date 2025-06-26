@@ -206,6 +206,10 @@ body {
   .welcome-image {
     height: 40vh;
   }
+ .welcome-image img {
+    max-height: 180px;
+    object-fit: contain;
+  }
 
   .welcome-content {
     padding: 2rem 1.5rem;
