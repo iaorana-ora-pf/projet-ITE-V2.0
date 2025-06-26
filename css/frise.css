@@ -489,26 +489,28 @@ h3 {
 @media (max-width: 768px) {
   .container {
     display: flex;
-    flex-direction: column !important; /* force l’empilement */
+    flex-direction: column;
     padding: 1rem;
     gap: 1.5rem;
   }
 
   .sidebar {
+    display: block !important;
     order: 1;
-    width: 100% !important;
+    width: 100%;
     max-width: 100%;
-    margin-bottom: 1rem;
   }
 
   #timeline-wrapper {
     order: 2;
     width: 100%;
+    display: block;
   }
 
   #timeline {
+    display: block;
     overflow-x: auto;
     width: 100%;
+    min-height: 300px;
   }
 }
-
