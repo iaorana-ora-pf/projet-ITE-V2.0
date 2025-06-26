@@ -82,7 +82,12 @@ body {
   max-width: 600px;
   text-align: left;
 }
-
+.welcome-content p:last-of-type {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 2rem;
+  text-align: center;
+}
 /* === Boutons === */
 .welcome-buttons {
   display: flex;
