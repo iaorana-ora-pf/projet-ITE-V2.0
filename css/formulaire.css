@@ -135,3 +135,26 @@ button[type="submit"]:hover {
   border-top: 1px solid #ccc;
   font-size: 0.8rem;
 }
+@media (max-width: 768px) {
+  .container, .grid, .bloc, .card {
+    width: 100% !important;
+    padding: 1rem;
+    margin: 0 auto;
+    flex-direction: column;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn, .button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input, textarea, select {
+    width: 100%;
+  }
+}
