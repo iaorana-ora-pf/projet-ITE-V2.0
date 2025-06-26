@@ -203,18 +203,23 @@ body {
     flex-direction: column;
   }
 
-  .welcome-image {
-    height: 40vh;
+   .welcome-image {
+    height: auto !important;       /* ✅ libère la hauteur */
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
   }
  .welcome-image img {
-    max-height: 180px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
     object-fit: contain;
   }
-
   .welcome-content {
     padding: 2rem 1.5rem;
   }
-
   .welcome-btn {
     width: 100%;
     justify-content: center;
