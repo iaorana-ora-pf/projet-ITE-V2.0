@@ -488,26 +488,25 @@ h3 {
 /* ===================== */
 @media (max-width: 768px) {
   html, body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  main, .frise-layout {
+    display: block;
+    height: auto;
+    overflow: visible;
   }
 
-  .frise-layout {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  .filtre-bar {
+    position: static;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
-  .global-footer {
-    margin-top: auto;
+  .frise-container {
+    overflow-x: auto;
+    width: 100%;
   }
 }
-
