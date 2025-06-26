@@ -109,7 +109,7 @@ document.getElementById('download-json').addEventListener('click', () => {
       message: form.message.value,
     };
 
-    fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbyZUYKa4F5JQKw8Uj3gqiTzd7ZBRbl1Vg9uyU-GVpMAImSgyD9EcpJPzQRTo-baVV-ZHg/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
