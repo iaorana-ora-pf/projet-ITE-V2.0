@@ -4,126 +4,70 @@ document.addEventListener('DOMContentLoaded', () => {
   const idInput = document.getElementById('event-id');
   const slugInput = document.getElementById('event-slug');
   const addedInput = document.getElementById('event-added');
+  const confirmation = document.getElementById('confirmation');
 
   // Fonction pour générer l'ID au format evt-YYYYMMDD-HHMMSS
   function generateEventId() {
     const now = new Date();
     const pad = n => n.toString().padStart(2, '0');
-    const id = `evt-${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
-    return id;
+    return `evt-${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
   }
 
   // Fonction pour créer un slug à partir du titre
   function generateSlug(text) {
     return text
       .toLowerCase()
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // enlever accents
-      .replace(/[^\w\s-]/g, '')                         // enlever ponctuation
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^\w\s-]/g, '')
       .trim()
-      .replace(/\s+/g, '-')                             // espaces → tirets
+      .replace(/\s+/g, '-')
       .replace(/-+/g, '-');
   }
 
-  // Mettre à jour automatiquement les champs cachés
-  titleInput.addEventListener('input', () => {
-    slugInput.value = generateSlug(titleInput.value);
-  });
-
-  // À la soumission du formulaire : ajouter l'ID et la date
-  form.addEventListener('submit', () => {
-    idInput.value = generateEventId();
-
-    // Date d'ajout (au format YYYY-MM-DD)
-    const today = new Date();
-    addedInput.value = today.toISOString().split('T')[0];
-  });
-});
-document.getElementById("mon-formulaire").addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = {
-    id: document.getElementById("event-id").value,
-    title: document.getElementById("event-title").value,
-    year: parseInt(document.getElementById("event-year").value),
-    slug: document.getElementById("event-slug").value,
-    description: document.getElementById("event-description").value,
-    categories: document.getElementById("event-categories").value.split(",").map(s => s.trim()),
-    keywords: document.getElementById("event-keywords").value.split(",").map(s => s.trim()),
-    sources: document.getElementById("event-sources").value.split(",").map(src => ({ label: src.trim() })),
-    more: document.getElementById("event-more").value.split(",").map(url => ({ label: "Pour aller plus loin", url: url.trim() })),
-    validated: false
-  };
-
-  try {
-    const response = await fetch("http://localhost:5000/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData)
-    });
-
-    const result = await response.json();
-    if (response.ok) {
-      alert("Événement enregistré !");
-    } else {
-      alert("Erreur : " + result.message);
-    }
-  } catch (err) {
-    console.error("Erreur d'envoi :", err);
-    alert("Erreur de connexion au serveur");
-  }
-});
-document.getElementById('download-json').addEventListener('click', () => {
-  const form = document.getElementById('event-form');
-  const formData = new FormData(form);
-  const json = {};
-
-  formData.forEach((value, key) => {
-    if (key.endsWith('[]')) {
-      const trueKey = key.replace('[]', '');
-      if (!json[trueKey]) json[trueKey] = [];
-      json[trueKey].push(value);
-    } else {
-      json[key] = value;
-    }
-  });
-
-  // Forcer des champs particuliers à être bien typés
-  json.year = parseInt(json.year || 0, 10);
-  json.validated = false;
-
-  const fileName = `${json.id || 'evenement'}.json`;
-  const blob = new Blob([JSON.stringify(json, null, 2)], { type: "application/json" });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = fileName;
-  link.click();
-});
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
+  // Générer automatiquement l’ID, le slug et la date à la soumission
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const form = e.target;
+    const now = new Date();
+    const eventId = generateEventId();
+    const eventSlug = generateSlug(titleInput.value);
+    const addedDate = now.toISOString().split('T')[0];
+
+    // Construire l'objet de données
     const data = {
-      nom: form.nom.value,
-      email: form.email.value,
-      message: form.message.value,
+      id: eventId,
+      title: titleInput.value,
+      year: parseInt(document.getElementById('year').value),
+      description: document.getElementById('description').value,
+      categories: Array.from(document.getElementById('categories').selectedOptions).map(opt => opt.value),
+      keywords: document.getElementById('keywords').value.split(',').map(k => k.trim()),
+      sources: document.getElementById('sources').value,
+      more: document.getElementById('more').value,
+      slug: eventSlug,
+      added: addedDate
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbyZUYKa4F5JQKw8Uj3gqiTzd7ZBRbl1Vg9uyU-GVpMAImSgyD9EcpJPzQRTo-baVV-ZHg/exec", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-    .then(res => res.text())
-    .then(txt => {
-      document.getElementById("form-status").textContent = "Merci ! Votre message a été envoyé.";
-      form.reset();
-    })
-    .catch(err => {
-      document.getElementById("form-status").textContent = "Erreur lors de l'envoi.";
-      console.error(err);
-    });
+    // ENVOI VERS GOOGLE APPS SCRIPT
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwH6-uUAG7wvRTRn1LHnWNWsEuB303XkxBXVQId5Cnv5we6iOFR_exNK3szQfUg-BJu/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" }
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        form.reset();
+        confirmation.textContent = "✅ Proposition envoyée avec succès !";
+        confirmation.classList.remove("hidden");
+      } else {
+        confirmation.textContent = "❌ Une erreur s’est produite.";
+        confirmation.classList.remove("hidden");
+      }
+    } catch (error) {
+      console.error("Erreur d’envoi :", error);
+      confirmation.textContent = "❌ Erreur de connexion.";
+      confirmation.classList.remove("hidden");
+    }
   });
-</script>
+});
