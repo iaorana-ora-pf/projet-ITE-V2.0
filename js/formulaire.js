@@ -46,8 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contributor: formData.get("contributor") || "",
       slug,
       added,
-      validated: false
-    };
+      };
 
     try {
       const response = await fetch("https://script.google.com/macros/s/AKfycbwA-h-F_jHf4Zm-rDN9i8wzJfdkvFe0hAbUKU2jkjANVgDF2O3K4dkEvJc1JrA8U4BY/exec", {
