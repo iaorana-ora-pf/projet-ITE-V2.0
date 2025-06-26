@@ -134,29 +134,12 @@ button[type="submit"]:hover {
   background: none;
   color: #777;
  }
+
+/* ===================== */
+/*      responsive     */
+/* ===================== */
 @media (max-width: 768px) {
-  .container, .grid, .bloc, .card {
-    width: 100% !important;
-    padding: 1rem;
-    margin: 0 auto;
-    flex-direction: column;
-    display: block;
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.2rem;
-  }
-
-  .btn, .button {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  input, textarea, select {
-    width: 100%;
-  }
-.checkbox-group {
+  .checkbox-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -165,10 +148,15 @@ button[type="submit"]:hover {
   .checkbox-group label {
     display: flex;
     align-items: center;
+    gap: 0.5em;
     font-size: 1rem;
+    line-height: 1.4;
+    padding-left: 0.2rem;
   }
 
   .checkbox-group input[type="checkbox"] {
-    margin-right: 0.5rem;
+    margin: 0;
+    width: auto;
   }
 }
+
