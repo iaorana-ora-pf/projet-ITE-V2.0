@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ENVOI VERS GOOGLE APPS SCRIPT
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbwH6-uUAG7wvRTRn1LHnWNWsEuB303XkxBXVQId5Cnv5we6iOFR_exNK3szQfUg-BJu/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbw5TjQ6TIIHA9fMDFKHSrMBYGmViLXMK2lh4bSI8F214UbuN0rZ6DBfYq91GFXrFU07/exec", {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" }
