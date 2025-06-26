@@ -230,10 +230,6 @@ body {
     padding: 0.4rem;
   }
 
-  h1 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
   .welcome-layout {
     flex-direction: column;
   }
@@ -249,5 +245,28 @@ body {
   .welcome-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .container, .grid, .bloc, .card {
+    width: 100% !important;
+    padding: 1rem;
+    margin: 0 auto;
+    flex-direction: column;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn, .button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input, textarea, select {
+    width: 100%;
   }
 }
