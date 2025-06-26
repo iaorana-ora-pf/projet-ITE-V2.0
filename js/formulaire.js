@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('event-form');
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Empêche le rechargement
+    e.preventDefault();
 
     const data = {
       id: document.getElementById('event-id').value,
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const result = await response.json();
 
       if (result.success) {
-        alert("✅ Événement envoyé avec succès !");
+        alert("✅ Proposition envoyée avec succès !");
         form.reset();
       } else {
         alert("❌ Erreur serveur : " + (result.error || "Envoi échoué."));
