@@ -487,39 +487,29 @@ h3 {
 /*       RESPONSIVE       */
 /* ===================== */
 @media (max-width: 768px) {
-  html, body {
-    height: auto;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
-
-  main, .frise-layout {
+  .frise-layout {
     display: flex;
     flex-direction: column;
-    height: auto;
-    overflow: visible;
+    align-items: stretch;
+    gap: 1.5rem;
     padding: 1rem;
-    gap: 1rem;
   }
 
-  .filtre-bar {
+  .filters-container {
     order: 1;
     width: 100%;
-    position: static;
-    margin-bottom: 1rem;
   }
 
-  .frise-container {
+  .timeline-container {
     order: 2;
     width: 100%;
     overflow-x: auto;
-    display: block;
   }
 
-  .global-footer {
-    margin-top: 2rem;
+  .timeline-container canvas,
+  .timeline-container svg {
+    max-width: 100%;
   }
 }
+
 
