@@ -485,11 +485,10 @@ h3 {
 /*       RESPONSIVE       */
 /* ===================== */
 @media (max-width: 768px) {
-  body, html {
-    height: auto;
+  html, body {
     min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   main {
@@ -503,10 +502,10 @@ h3 {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-y: auto;   /* ✅ autorise le scroll */
   }
 
   .global-footer {
-    margin-top: auto;   /* ✅ pousse le footer tout en bas */
+    margin-top: auto;
   }
 }
+
