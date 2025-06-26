@@ -2,14 +2,14 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ITE est une base de connaissances sur la santé publique en Polynésie française." />
   <title>Projet 'ITE</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
- <main class="welcome-layout">
+  <main class="welcome-layout">
     <div class="welcome-image">
       <img src="images/accueil.png" alt="Illustration ITE" />
     </div>
@@ -33,33 +33,33 @@
       </p>
 
       <div class="welcome-buttons">
-        <a href="frise.html" class="welcome-btn"><i class="fas fa-search"></i>Frise</a>
+        <a href="frise.html" class="welcome-btn"><i class="fas fa-search"></i> Frise</a>
         <a href="bibliotheque.html" class="welcome-btn"><i class="fas fa-file-alt"></i> Bibliothèque</a>
-        <a href="formulaire.html" class="welcome-btn"><i class="fas fa-lightbulb"></i>Formulaire</a>
+        <a href="formulaire.html" class="welcome-btn"><i class="fas fa-lightbulb"></i> Formulaire</a>
         <a href="mailto:contact@paanapf.com" class="welcome-btn"><i class="fas fa-envelope"></i> Contact</a>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="js/index.js"></script>
 
   <!-- Icône admin discrète en haut à droite -->
-<button id="admin-access-btn" title="Accès admin">
-  <i class="fas fa-spa"></i> <!-- Fleur stylisée -->
-</button>
+  <button id="admin-access-btn" title="Accès admin">
+    <i class="fas fa-spa"></i>
+  </button>
 
-<!-- Modale de connexion admin -->
-<div id="admin-modal" class="modal hidden">
-  <div class="modal-content">
-    <span id="close-admin-modal" class="close">&times;</span>
-    <h3>Accès administrateur</h3>
-    <input type="password" id="admin-code-input" placeholder="Entrez le code" />
-    <button id="validate-admin-code">Valider</button>
-    <p id="admin-error" class="error-msg hidden">Code incorrect.</p>
+  <!-- Modale de connexion admin -->
+  <div id="admin-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-admin-modal" class="close">&times;</span>
+      <h3>Accès administrateur</h3>
+      <input type="password" id="admin-code-input" placeholder="Entrez le code" />
+      <button id="validate-admin-code">Valider</button>
+      <p id="admin-error" class="error-msg hidden">Code incorrect.</p>
+    </div>
   </div>
-</main>
-  <!-- footer -->
-   <footer class="global-footer">
+
+  <footer class="global-footer">
     <p>Projet'ITE - © 2025 – Tous droits réservés</p>
   </footer>
 </body>
