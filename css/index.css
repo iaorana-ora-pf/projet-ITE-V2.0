@@ -199,26 +199,17 @@ body {
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .welcome-layout {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
-
   .welcome-image {
-    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 180px;     /* Limite la hauteur du bandeau */
+    overflow: hidden;      /* Coupe le reste si trop grand */
   }
 
- .welcome-image img {
+  .welcome-image img {
     width: 100%;
-    height: auto;
-    max-height: 160px;   /* 🔽 Limite la hauteur */
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;     /* Remplit le bloc en gardant une bonne apparence */
     display: block;
-    margin: 0 auto;
-  }
-
-  .welcome-content {
-    width: 100%;
   }
 }
+
