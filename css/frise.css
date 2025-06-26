@@ -486,22 +486,40 @@ h3 {
 /* ===================== */
 /*       RESPONSIVE       */
 /* ===================== */
+/* Version MOBILE uniquement */
 @media (max-width: 768px) {
-  #timeline-wrapper {
+  .frise-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .filters-section {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .timeline-section {
     width: 100%;
     overflow-x: auto;
     overflow-y: visible;
-    padding-bottom: 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #timeline-wrapper {
+    width: 100%;
+    overflow-x: auto;
   }
 
   #timeline {
     width: 100%;
+    min-height: 300px;
     overflow-x: auto;
-    box-sizing: border-box;
   }
 
   html, body {
-    max-width: 100%;
     overflow-x: hidden;
   }
 }
+
