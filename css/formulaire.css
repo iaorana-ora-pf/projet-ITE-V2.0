@@ -54,9 +54,12 @@ label {
   font-weight: bold;
   color: #048B9A;
 }
-cat-label{
-  color:  var(--dark-text);;
-  margin-top: 0.3rem;
+.category-checkboxes label {
+  font-weight: normal;
+  color: inherit; /* ou remplace par color: #000; si besoin */
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 input[type="text"],
