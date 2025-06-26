@@ -59,7 +59,7 @@ label {
   color: inherit; /* ou remplace par color: #000; si besoin */
   cursor: pointer;
   display: inline-block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 input[type="text"],
