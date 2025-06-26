@@ -504,7 +504,7 @@ h3 {
   #timeline-wrapper {
     order: 2;
     width: 100%;
-    display: block;
+    overflow-x: auto;
   }
 
   #timeline {
