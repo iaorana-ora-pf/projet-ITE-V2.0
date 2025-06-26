@@ -7,143 +7,128 @@
   --dark-text: #1e2124;
 }
 
-/* === Layout principal === */
-body, html {
+body {
+  background-color: white;
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fefdf3;
-  color: #2c2c2c;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
+/* === Mise en page principale === */
 .welcome-layout {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  justify-content: center;
-  min-height: 100vh;
   width: 100%;
-  box-sizing: border-box;
-  padding: 2rem;
-  gap: 2rem;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* === Partie gauche (image) === */
 .welcome-image {
   flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  overflow: hidden;
 }
 
 .welcome-image img {
   width: 100%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* === Partie droite (contenu) === */
+/* === Colonne droite : Contenu === */
 .welcome-content {
   flex: 1;
-  max-width: 700px;
+  padding: 3vh 2vw;
+  color: var(--dark-text);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.welcome-content h1,
+.event-count-highlight,
+.welcome-content p,
+.welcome-buttons {
+  flex-shrink: 1;
 }
 
 .welcome-content h1 {
-  color: #00707a;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
+  color: var(--main-green);
 }
 
 .event-count-highlight {
-  font-weight: bold;
-  color: #00707a;
-  font-size: 1.2rem;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--main-green);
+  display: block;
+  width: 100%;
+  text-align: center !important;
 }
 
+.welcome-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* === Boutons === */
 .welcome-buttons {
-  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
 .welcome-btn {
-  background-color: #00707a;
+  background-color: var(--main-green);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
   text-decoration: none;
-  display: inline-flex;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .welcome-btn:hover {
-  background-color: #005b65;
+  background-color: var(--hover-green);
 }
 
-/* === Footer === */
-.global-footer {
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  background-color: #f2f2f2;
-  color: #333;
-  margin-top: auto;
+.welcome-btn i {
+  font-size: 1.1rem;
 }
 
-/* === Admin modal === */
-.modal {
-  display: none;
-}
-
-.modal-content {
-  background: white;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.close {
-  float: right;
-  cursor: pointer;
-}
-
-/* === Responsive (mobile) === */
+/* === Responsive === */
 @media (max-width: 768px) {
   .welcome-layout {
     flex-direction: column;
-    padding: 1rem;
-    gap: 1.5rem;
   }
 
-  .welcome-image,
+  .welcome-image {
+    height: 40vh;
+  }
+
   .welcome-content {
-    flex: none;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .welcome-image img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .welcome-buttons {
-    justify-content: space-between;
+    padding: 2rem 1.5rem;
   }
 
   .welcome-btn {
-    flex: 1 1 48%;
-    text-align: center;
+    width: 100%;
     justify-content: center;
   }
 }
