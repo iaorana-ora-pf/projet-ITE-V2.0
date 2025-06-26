@@ -487,30 +487,21 @@ h3 {
 /*       RESPONSIVE       */
 /* ===================== */
 @media (max-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .sidebar {
-    order: 1;
-    width: 100%;
-    max-width: 100%;
-  }
-
   #timeline-wrapper {
-    order: 2;
     width: 100%;
     overflow-x: auto;
-    min-height: 300px;
-    border: 1px solid red; /* Pour test, tu pourras l’enlever après */
+    overflow-y: visible;
+    padding-bottom: 2rem;
   }
 
   #timeline {
     width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
   }
-  #timeline {
-  background-color: lightyellow;
-}
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 }
