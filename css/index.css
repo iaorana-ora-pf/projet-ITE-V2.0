@@ -201,27 +201,22 @@ body {
 @media (max-width: 768px) {
   .welcome-layout {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
-   .welcome-image {
-    height: auto !important;       /* ✅ libère la hauteur */
-    max-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
+  .welcome-image {
+    width: 100%;
+    margin-bottom: 1rem;
   }
- .welcome-image img {
-    max-height: 150px;
-    width: auto;
+
+  .welcome-image img {
+    width: 100%;
     height: auto;
     object-fit: contain;
   }
+
   .welcome-content {
-    padding: 2rem 1.5rem;
-  }
-  .welcome-btn {
     width: 100%;
-    justify-content: center;
   }
 }
