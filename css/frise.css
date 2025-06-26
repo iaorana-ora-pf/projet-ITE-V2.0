@@ -204,12 +204,14 @@ h3 {
 
 /* === FOOTER === */
 .sidebar-footer {
-  padding: 20px;
+  padding: 0.6rem;
   font-size: 0.75rem;
-  background: #f8f8f8;
-  border-top: 1px solid #ddd;
+  background: none;
   text-align: center;
-  margin-top: 10px; /* 🔵 espace ajouté au-dessus */
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  color: #777;
 }
 
 /* ===================== */
