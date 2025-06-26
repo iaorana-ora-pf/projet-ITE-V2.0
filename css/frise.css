@@ -485,14 +485,31 @@ h3 {
 /*       RESPONSIVE       */
 /* ===================== */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    margin-left: 0;
-  }
-
   .sidebar {
     width: 100%;
     position: relative;
     height: auto;
   }
 
+  .container, .grid, .bloc, .card {
+    width: 100% !important;
+    padding: 1rem;
+    margin: 0 auto;
+    flex-direction: column;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn, .button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  input, textarea, select {
+    width: 100%;
+  }
+}
