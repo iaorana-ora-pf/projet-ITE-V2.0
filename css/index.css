@@ -15,21 +15,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;     /* ✅ garde le scroll vertical */
+  overflow-y: auto;
 }
 main {
   flex: 1;
 }
 /* === Mise en page principale === */
 .welcome-layout {
-  display: flex;
+ display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
   flex: 1;
   align-items: stretch;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .welcome-image {
