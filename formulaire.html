@@ -1,71 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proposer un événement</title>
-  <link rel="stylesheet" href="../css/formulaire.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Soumettre un événement</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 1em; }
+    label { display: block; margin-top: 1em; font-weight: bold; }
+    input, textarea { width: 100%; padding: 0.5em; }
+    button { margin-top: 1em; padding: 0.7em 1.5em; }
+  </style>
 </head>
 <body>
 
-  <main class="form-container">
-    <h1>Proposer un événement</h1>
+  <h1>Soumettre un événement</h1>
+  <form id="event-form">
+    <label>Titre *</label>
+    <input type="text" name="title" required>
 
-    <form id="event-form">
-      <!-- Titre -->
-      <label for="title">Titre de l'événement *</label>
-      <input type="text" id="title" name="title" required>
+    <label>Année *</label>
+    <input type="number" name="year" required>
 
-      <!-- Année -->
-      <label for="year">Année *</label>
-      <input type="number" id="year" name="year" required>
+    <label>Description</label>
+    <textarea name="description"></textarea>
 
-      <!-- Catégories -->
-      <label>Catégories *</label>
-      <div class="category-checkboxes">
-        <cat-label><input type="checkbox" name="categories" value="Accès"> Accès</cat-label><br>
-        <cat-label><input type="checkbox" name="categories" value="Contexte"> Contexte</cat-label><br>
-        <cat-label><input type="checkbox" name="categories" value="Données et recherche"> Données et recherche</cat-label><br>
-        <cat-label><input type="checkbox" name="categories" value="Gouvernance et pilotage"> Gouvernance et pilotage</cat-label><br>
-        <cat-label><input type="checkbox" name="categories" value="Promotion et prévention"> Promotion et prévention</cat-label><br>
-        <cat-label><input type="checkbox" name="categories" value="Protection et gestion des risques"> Protection et gestion des risques</cat-label><br>
-      </div>
+    <label>Catégories (séparées par virgules)</label>
+    <input type="text" name="categories">
 
-      <!-- Mots-clés -->
-      <label for="keywords">Mots-clés (séparés par des virgules)</label>
-      <input type="text" id="keywords" name="keywords">
+    <label>Mots-clés (séparés par virgules)</label>
+    <input type="text" name="keywords">
 
-      <!-- Description -->
-      <label for="description">Description</label>
-      <textarea id="description" name="description" rows="4"></textarea>
+    <label>Sources (format : Label | URL, séparées par virgules)</label>
+    <input type="text" name="sources">
 
-      <!-- Sources -->
-      <label for="sources">Sources (champ libre)</label>
-      <textarea id="sources" name="sources" rows="2"></textarea>
+    <label>Pour aller plus loin</label>
+    <textarea name="more"></textarea>
 
-      <!-- Pour aller plus loin -->
-      <label for="more">Pour aller plus loin (champ libre)</label>
-      <textarea id="more" name="more" rows="2"></textarea>
+    <label>Contributeur *</label>
+    <input type="text" name="contributeur" required>
 
-      <!-- Champs techniques (invisibles pour l'utilisateur) -->
-      <input type="hidden" id="event-id" name="id">
-      <input type="hidden" id="event-slug" name="slug">
-      <input type="hidden" id="event-added" name="added">
+    <button type="submit">Envoyer</button>
+  </form>
 
-      <!-- Bouton -->
-      <button type="submit">Envoyer</button>
-    </form>
-    </main>
+  <script>
+    const form = document.getElementById('event-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  <footer class="global-footer">
-    <p>Projet'ITE - © 2025 – Tous droits réservés</p>
-  </footer>
+      const data = Object.fromEntries(new FormData(form).entries());
 
-  <a href="index.html" class="home-button" title="Retour à l'accueil">
-    <i class="fas fa-home"></i>
-  </a>
+      // Champs techniques automatiques
+      const now = new Date();
+      data.id = `evt-${now.toISOString().replace(/[-:.TZ]/g, '').slice(0, 14)}`;
+      data.slug = data.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s-]/g, '').trim().replace(/\s+/g, '-');
+      data.added = now.toISOString().split('T')[0];
+      data.validated = false;
 
-  <script src="../js/formulaire.js"></script>
+      // Nettoyage
+      data.categories = data.categories ? data.categories.split(',').map(c => c.trim()) : [];
+      data.keywords = data.keywords ? data.keywords.split(',').map(k => k.trim()) : [];
+      data.sources = data.sources ? data.sources.split(',').map(s => {
+        const [label, url] = s.split('|').map(x => x.trim());
+        return { label, url };
+      }) : [];
+
+      try {
+        await fetch('https://script.google.com/macros/s/AKfycbw5TjQ6TIIHA9fMDFKHSrMBYGmViLXMK2lh4bSI8F214UbuN0rZ6DBfYq91GFXrFU07/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        alert("Merci ! Votre proposition a bien été envoyée.");
+        form.reset();
+      } catch (err) {
+        alert("Erreur : impossible d’envoyer les données.");
+        console.error(err);
+      }
+    });
+  </script>
+
 </body>
 </html>
