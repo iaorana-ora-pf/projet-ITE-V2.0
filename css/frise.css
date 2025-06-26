@@ -517,11 +517,8 @@ h3 {
     overflow-y: visible !important;
   }
 
-  .sidebar-footer {
-    position: relative !important;
-    bottom: auto;
-    text-align: center;
-    margin-top: 2rem;
+ .sidebar-footer {
+    display: none !important;
   }
 }
 
