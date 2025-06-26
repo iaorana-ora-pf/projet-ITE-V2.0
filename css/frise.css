@@ -487,29 +487,32 @@ h3 {
 /*       RESPONSIVE       */
 /* ===================== */
 @media (max-width: 768px) {
-  .frise-layout {
+  .container {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: 1.5rem;
     padding: 1rem;
   }
 
-  .filters-container {
+  .sidebar {
     order: 1;
     width: 100%;
+    position: static;
+    max-width: 100%;
   }
 
-  .timeline-container {
+  #timeline-wrapper {
     order: 2;
     width: 100%;
     overflow-x: auto;
   }
 
-  .timeline-container canvas,
-  .timeline-container svg {
-    max-width: 100%;
+  #timeline {
+    overflow-x: scroll;
+  }
+
+  .sidebar-footer {
+    margin-top: 2rem;
+    text-align: center;
   }
 }
-
-
