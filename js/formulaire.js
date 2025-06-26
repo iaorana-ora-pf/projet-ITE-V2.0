@@ -98,3 +98,32 @@ document.getElementById('download-json').addEventListener('click', () => {
   link.download = fileName;
   link.click();
 });
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      nom: form.nom.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
+
+    fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then(res => res.text())
+    .then(txt => {
+      document.getElementById("form-status").textContent = "Merci ! Votre message a été envoyé.";
+      form.reset();
+    })
+    .catch(err => {
+      document.getElementById("form-status").textContent = "Erreur lors de l'envoi.";
+      console.error(err);
+    });
+  });
+</script>
