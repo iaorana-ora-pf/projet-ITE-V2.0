@@ -488,38 +488,41 @@ h3 {
 /* ===================== */
 /* Version MOBILE uniquement */
 @media (max-width: 768px) {
-  .frise-layout {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .filters-section {
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-  }
-
-  .timeline-section {
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: visible;
-    padding: 1rem;
-    box-sizing: border-box;
+  html, body {
+    height: auto !important;
+    overflow-y: auto !important;
   }
 
   #timeline-wrapper {
-    width: 100%;
-    overflow-x: auto;
+    height: auto !important;
+    padding: 1rem !important;
+    overflow-y: visible !important;
   }
 
-  #timeline {
-    width: 100%;
-    min-height: 300px;
-    overflow-x: auto;
+  .container {
+    flex-direction: column !important;
+    margin-left: 0 !important;
   }
 
-  html, body {
-    overflow-x: hidden;
+  .sidebar {
+    width: 100% !important;
+    position: relative !important;
+    height: auto !important;
+    background-size: cover;
+    box-shadow: none;
+  }
+
+  .sidebar-scroll {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+
+  .sidebar-footer {
+    position: relative !important;
+    bottom: auto;
+    text-align: center;
+    margin-top: 2rem;
   }
 }
+
 
