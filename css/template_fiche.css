@@ -204,17 +204,16 @@ h2 {
 /* ===================== */
 /*       Footer     */
 /* ===================== */
-.global-footer{
-   width: 100%;
+.global-footer {
+  font-size: 0.75rem;
+  width: 100%;
   position: relative;
   margin-top: 2rem;
   text-align: center;
   padding: 0.6rem;
-  background: #f0f0f0;
-  color: #1e2124;
-  border-top: 1px solid #ccc;
-  font-size: 0.8rem;
-}
+  background: none;
+  color: #777;
+ }
 /* ===================== */
 /*       HOME       */
 /* ===================== */
