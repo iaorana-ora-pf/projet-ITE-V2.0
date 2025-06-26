@@ -490,12 +490,10 @@ h3 {
   .container {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    gap: 1.5rem;
+    align-items: stretch;
   }
 
   .sidebar {
-    display: block !important;
     order: 1;
     width: 100%;
     max-width: 100%;
@@ -505,15 +503,14 @@ h3 {
     order: 2;
     width: 100%;
     overflow-x: auto;
+    min-height: 300px;
+    border: 1px solid red; /* Pour test, tu pourras l’enlever après */
   }
 
   #timeline {
-    display: block;
-    overflow-x: auto;
     width: 100%;
-    min-height: 300px;
   }
-  #timeline-wrapper {
-  border: 1px solid red;
+  #timeline {
+  background-color: lightyellow;
 }
 }
