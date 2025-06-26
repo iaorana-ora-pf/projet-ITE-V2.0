@@ -50,12 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbw5TjQ6TIIHA9fMDFKHSrMBYGmViLXMK2lh4bSI8F214UbuN0rZ6DBfYq91GFXrFU07/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+      const response = await fetch("https://script.google.com/macros/s/AKfycbwA-h-F_jHf4Zm-rDN9i8wzJfdkvFe0hAbUKU2jkjANVgDF2O3K4dkEvJc1JrA8U4BY/exec", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(data)
+});
 
       alert("✅ Merci ! Votre événement a bien été soumis.");
       form.reset();
