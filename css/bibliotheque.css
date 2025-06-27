@@ -60,7 +60,19 @@ html, body {
   text-align: center;
   transition: background-color 0.3s ease;
 }
+.search-sort-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* 🟢 espace horizontal entre input et select */
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
 
+.search-sort-container input,
+.search-sort-container select {
+  font-size: 1rem;
+}
 #sort-select:hover {
   background-color: #02616B;
 }
