@@ -16,5 +16,17 @@
     "label": "Communiqué de presse du CHPF - Journée du don d'organes 2022",
     "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/57d7f0bbacfb0da61874d7b06e978c5fc7a317b5/docs/chpf-communique-de-presse_don_organes-2022.pdf",
     "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/10122a06ffc3267839974e73ae73ded51067f0a7/images/chpf-communique-de-presse_don_organes-2022.png"
+   },
+  {
+    "id_doc": "doc4",
+    "label": "La grippe espagnole aux Iles-sous-le-Vent",
+    "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/docs/grippe-espagnole-ile-sous-le-vent.pdf",
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/images/grippe-espagnole-ile-sous-le-vent.png"
+   },
+  {
+    "id_doc": "doc5",
+    "label": "L'histoire démographique",
+    "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/docs/histoire-demographique.pdf",
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/images/histoire-demographique.png"
   }
 ]
