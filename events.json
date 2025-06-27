@@ -24,7 +24,7 @@
         "url": ""
       }
     ],
-    "validated": false
+    "validated": true
   },
   {
     "id": "event2",
@@ -53,6 +53,6 @@
         "url": ""
       }
     ],
-    "validated": false
+    "validated": true
   }
 ]
