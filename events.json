@@ -29,29 +29,61 @@
     "validated": false
   },
   {
-    "id": "event3",
-    "year": 1918,
-    "title": "Grippe espagnole en Polynésie",
-    "categories": ["Protection et gestion des risques"],
-    "keywords": ["pandémie", "grippe"],
-    "sources": [{"id_doc": "doc3"}],
-    "added": "2025-06-21",
-    "slug": "1918-grippe-espagnole-en-polynesie",
-    "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
-    "description": "La grippe espagnole atteint la Polynésie, causant de lourdes pertes humaines dans une population peu immunisée.",
-    "validated": false
+    "id": "1",
+    "title": "Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
+    "year": 2016,
+    "slug": "2016-publication-sos-2016-2021",
+    "added": "2025-06-26 00:00:00",
+    "description": "Le Schéma d’Organisation Sanitaire (SOS) 2016–2021 est le plan de réforme du système de santé en Polynésie française. Il fixe les grandes priorités pour améliorer les soins et l’accès à la santé, notamment dans les îles. \n\nIl propose 6 axes : mieux organiser les services, renforcer les soins de base, s’adapter aux nouveaux besoins (comme le cancer ou la santé mentale), développer la prévention (notamment contre le surpoids), mieux accompagner les personnes âgées, et créer un espace numérique de santé.",
+    "categories": [
+      "Gouvernance et pilotage"
+    ],
+    "keywords": [
+      "Stratégie",
+      "Schéma"
+    ],
+    "sources": [
+      {
+        "id_doc": "doc1"
+      }
+    ],
+    "more": [
+      {
+        "label": "nan",
+        "url": ""
+      }
+    ],
+    "validated": false,
+    "added_formatted": "26/06/2025"
   },
   {
-    "id": "event4",
-    "year": 2023,
-    "title": "Observatoire des maladies chroniques",
-    "categories": ["Données et recherche"],
-    "keywords": ["observatoire", "maladies chroniques"],
-    "sources": [{"id_doc": "doc15"}],
-    "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
-    "added": "2025-06-21",
-    "slug": "2023-observatoire-maladies-chroniques",
-    "description": "Création d’un observatoire pour surveiller et analyser les maladies chroniques en Polynésie.",
-    "validated": false
+    "id": "2",
+    "title": "Création de l'Institut du Cancer de la Polynésie française",
+    "year": 2021,
+    "slug": "2021-creation-icpf",
+    "added": "2025-06-26 00:00:00",
+    "description": "L’Institut du Cancer de Polynésie française (ICPF), créé en juillet 2021, est un établissement public dédié à la lutte contre le cancer.\nSa vocation est de faire progresser la lutte contre le cancer et de mettre à disposition des patients polynésiens les pratiques les plus récentes et les plus efficaces contre cette pathologie. \n\nDepuis le 1er janvier 2022, l’ICPF assure les missions suivantes :\n- Gestion du registre des cancers\n- Mise en œuvre des actions de dépistage et de prévention contre les cancers\n- Organisation et mise en œuvre de la coordination régionale des soins\n- Organisation et mise en œuvre d’une direction de la recherche et de l’innovation.\n\nL’ICPF fait partie du réseau UNICANCER, acteur majeur de la lutte contre le cancer.",
+    "categories": [
+      "Accès",
+      "Données et recherche",
+      "Promotion et prévention"
+    ],
+    "keywords": [
+      "Etablissement",
+      "Cancer"
+    ],
+    "sources": [
+      {
+        "id_doc": "Site internet de l'ICPF | https://www.icpf.pf"
+      }
+    ],
+    "more": [
+      {
+        "label": "nan",
+        "url": ""
+      }
+    ],
+    "validated": false,
+    "added_formatted": "26/06/2025"
   }
 ]
