@@ -15,7 +15,7 @@
     ],
     "sources": [
       {
-        "id_doc": "\"Schéma d'Organisation Sanitaire de Polynésie française 2016-2021 | https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/f9e59cc71db644651b4deb3a50f4d53c68c9ce7e/docs/SOS%202016-2021.pdf\""
+        "id_doc": "Schéma d'Organisation Sanitaire de Polynésie française 2016-2021 | https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/f9e59cc71db644651b4deb3a50f4d53c68c9ce7e/docs/SOS%202016-2021.pdf"
       }
     ],
     "more": [
@@ -24,7 +24,7 @@
         "url": ""
       }
     ],
-    "validated": true
+    "validated": false
   },
   {
     "id": "event2",
@@ -44,7 +44,7 @@
     ],
     "sources": [
       {
-        "id_doc": "\"Site internet de l'ICPF | https://www.icpf.pf\""
+        "id_doc": "Site internet de l'ICPF | https://www.icpf.pf"
       }
     ],
     "more": [
@@ -53,6 +53,139 @@
         "url": ""
       }
     ],
-    "validated": true
+    "validated": false
+  },
+  {
+    "id": "event3",
+    "title": "Création des dispositifs \"Ecole en santé\" et \"CJA en santé\"",
+    "year": 2017,
+    "slug": "2017-creation-ecole-cja-en-sante",
+    "added": "2025-06-27 00:00:00",
+    "description": "Les dispositfs \"Ecole en santé\" et \"CJA en santé\" (Centres\nde Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 à 17 ans. Ils proposent la mise en place de 10 actions prenant en compte les déterminants prioritaires de la santé des jeunes et en lien avec 10 thématiques (alimentation, activités physiques, lutte antivectorielle, etc. ). Ces actions sont identifiées, au sein de chaque établissement, par le comité de santé de l’école / du CJA.\n\nEn juin 2022, 35 établissements scolaires dont 9 hors îles du Vent participaient à ces dispositifs.",
+    "categories": [
+      "Promotion et prévention"
+    ],
+    "keywords": [
+      "Dispositif",
+      "Milieu scolaire",
+      "Enfant",
+      "Adolescent"
+    ],
+    "sources": [
+      {
+        "id_doc": "Polynésie 1ère | https://la1ere.franceinfo.fr/polynesie/tahiti/polynesie-francaise/ecole-en-sante-un-label-pour-mieux-apprendre-en-etant-mieux-1292388.html\""
+      },
+      {
+        "id_doc": "\"Direction de la santé : https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/\""
+      },
+      {
+        "id_doc": "\"Guide de présentation Ecole et CJA en santé : https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/7284417558a9a631a18ce533c49619c499f6deda/docs/guide-presentation-ecole-cja-en-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Des supports de communication et des outils d'accompagnement sont disponibles sur le site de la \"Direction de la santé",
+        "url": ""
+      },
+      {
+        "label": "Lien",
+        "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/\"."
+      }
+    ],
+    "validated": false
+  },
+  {
+    "id": "event4",
+    "title": "Première greffe réalisée en Polynésie française",
+    "year": 2013,
+    "slug": "2013-premiere-greffe",
+    "added": "2025-06-27 00:00:00",
+    "description": "La première greffe réalisée en Polynésie française a eu lieu en octobre 2013, 3 mois après l'adoption de la délibération \"relative au don et à l’utilisation des éléments et produits du corps humain\" visant à permettre l’activité de greffe rénale à Tahiti. Auparavant, les patients étaient évasanés en métropole. \nEn 2022, 131 greffes rénales avaient été réalisées à Tahiti dont 30 à partir de donneurs vivants (23%).",
+    "categories": [
+      "Accès"
+    ],
+    "keywords": [
+      "Greffe"
+    ],
+    "sources": [
+      {
+        "id_doc": "Tahiti Info | https://www.tahiti-infos.com/Le-don-d-organes-un-tapu-a-briser_a210167.html?utm_source=chatgpt.com"
+      },
+      {
+        "id_doc": "Communiqué de presse du CHPF| https://www.infirmiers.pf/wp-content/uploads/2022/10/CHPF_Communique%CC%81-de-Presse_Don_dorganes-Octobre2022.pdf?utm_source=chatgpt.com"
+      }
+    ],
+    "more": [
+      {
+        "label": "Reportage TNTV",
+        "url": ""
+      },
+      {
+        "label": "Lien",
+        "url": "https://www.youtube.com/watch?v=DPymhpBTkTs&t=33s"
+      }
+    ],
+    "validated": false
+  },
+  {
+    "id": "event5",
+    "title": "Epidémie de grippe espagnole",
+    "year": 1918,
+    "slug": "1918-epidemie-grippe-espagnole",
+    "added": "2025-06-27 00:00:00",
+    "description": "En novembre 1918, la grippe espagnole atteint la Polynésie française par un navire en provenance de San Francisco. \nLe virus se propagea rapidements ur l'ile de Tahiti, les îles Sous-le-Vent et l'île de Makatea.\nLes mesures sanitaires prises sauvèrent néanmoins de la maladie les habitants des\narchipels périphériques: Tuamotu, Australes et Marquises. \n\nL’épidémie fait environ 3 000 morts, soit près de 10 % de la population à l’époque. Les îles les plus durement touchées sont les Îles Sous-le-Vent, où certaines communautés perdent jusqu’à 40 % de leurs habitants, ainsi que Tahiti, avec environ 1 200 décès concentrés autour de Papeete.\n\nEntre novembre et fin décembre, l’épidémie fait environ 3 000 morts sur l'ensemble des îles touchées. On estime que 12 à 15 % de la population de Tahiti et Moorea a disparu (et 16 % à Tahaa, 14,4 % à Bora Bora, 12,6 % à Raïatea, 11,7 % à Huahine,\net 8,3 % à Maupiti).",
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "Epidémie",
+      "grippe"
+    ],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "La grippe espagnole aux Iles-sous-le-Vent",
+        "url": ""
+      },
+      {
+        "label": "Lien",
+        "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/docs/grippe-espagnole-ile-sous-le-vent.pdf"
+      }
+    ],
+    "validated": false
+  },
+  {
+    "id": "event6",
+    "title": "Premier statut d’autonomie interne",
+    "year": 1984,
+    "slug": "1984-staut-autonomie-interne",
+    "added": "2025-06-27 00:00:00",
+    "description": "Aux termes de l'article premier de la loi n° 84-820 du 6 septembre 1984, le territoire de la Polynésie française constitue« un territoire d'outre-mer doté de l'autonomie interne dans le cadre de la République ».\n\nLes institutions du territoire sont constituées du gouvernement du territoire, de l'assemblée territoriale et du comité économique, social et culturel.\n\nLe haut-commissaire a la charge des intérêts nationaux, du respect des lois et de l'ordre public ; il veille à l'exercice régulier de leurs compétences par les autorités territoriales. (Extrait du site internet du Haut-commissariat de Polynésie française)",
+    "categories": [
+      "Contexte"
+    ],
+    "keywords": [
+      "Autonomie"
+    ],
+    "sources": [
+      {
+        "id_doc": "Site internet du Haut-commissariat de Polynésie française | https://www.polynesie-francaise.pref.gouv.fr/Actions-de-l-Etat/Partenariat-Etat-Polynesie-francaise/Autonomie-et-repartition-des-competences?utm_source=chatgpt.com"
+      }
+    ],
+    "more": [
+      {
+        "label": "Loi n° 84-820 du 6 septembre 1984 portant statut du territoire de la Polynésie française (Arrêté de promulgation n° 2643 AA du 8 septembre 1984 et erratum JOPF 1984 n° 43, p. 1330)",
+        "url": ""
+      },
+      {
+        "label": "Lien",
+        "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=183960"
+      }
+    ],
+    "validated": false
   }
 ]
