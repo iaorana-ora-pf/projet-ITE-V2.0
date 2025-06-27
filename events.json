@@ -1,36 +1,7 @@
 [
   {
     "id": "event1",
-    "year": 1772,
-    "title": "Première épidémie de grippe à Tahiti",
-    "categories": ["Protection et gestion des risques"],
-    "keywords": ["grippe", "épidémie"],
-    "sources": [{"id_doc": "doc1"}],
-    "more": [
-      {"label": "Document PDF", "url": "https://example.com/doc1.pdf"},
-      {"label": "Page complémentaire", "url": "https://example.com/page1"}
-    ],
-    "added": "2025-06-21",
-    "slug": "1772-premiere-epidemie-de-grippe-a-tahiti",
-    "description": "Une épidémie de grippe frappe Tahiti pour la première fois, introduite par les contacts avec les navigateurs européens.",
-    "validated": true
-  },
-  {
-    "id": "event2",
-    "year": 1800,
-    "title": "Création du premier dispensaire",
-    "categories": ["Accès"],
-    "keywords": ["dispensaire", "soins"],
-    "sources": [{"id_doc": "doc2"}],
-    "added": "2025-06-21",
-    "slug": "1800-creation-du-premier-dispensaire",
-    "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
-    "description": "Mise en place du premier dispensaire offrant un accès structuré aux soins de santé pour la population.",
-    "validated": true
-  },
-  {
-    "id": "event3",
-    "title": "Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
+    "title": "TEST Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
     "year": 2016,
     "slug": "2016-publication-sos-2016-2021",
     "added": "2025-06-26 00:00:00",
@@ -44,7 +15,7 @@
     ],
     "sources": [
       {
-        "id_doc": "doc1"
+        "id_doc": "https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/79ae2bfe14fa08406a591cd7d23bf3df7af36960/docs/SOS%202016-2021.pdf"
       }
     ],
     "more": [
@@ -57,12 +28,12 @@
     "added_formatted": "26/06/2025"
   },
   {
-    "id": "event4",
+    "id": "event2",
     "title": "Création de l'Institut du Cancer de la Polynésie française",
     "year": 2021,
     "slug": "2021-creation-icpf",
     "added": "2025-06-26 00:00:00",
-    "description": "L’Institut du Cancer de Polynésie française (ICPF), créé en juillet 2021, est un établissement public dédié à la lutte contre le cancer.\nSa vocation est de faire progresser la lutte contre le cancer et de mettre à disposition des patients polynésiens les pratiques les plus récentes et les plus efficaces contre cette pathologie. \n\nDepuis le 1er janvier 2022, l’ICPF assure les missions suivantes :\n- Gestion du registre des cancers\n- Mise en œuvre des actions de dépistage et de prévention contre les cancers\n- Organisation et mise en œuvre de la coordination régionale des soins\n- Organisation et mise en œuvre d’une direction de la recherche et de l’innovation.\n\nL’ICPF fait partie du réseau UNICANCER, acteur majeur de la lutte contre le cancer.",
+    "description": "L’Institut du Cancer de Polynésie française (ICPF), créé en juillet 2021, est un établissement public dédié à la lutte contre le cancer.\nSa vocation est de faire progresser la lutte contre le cancer et de mettre à disposition des patients polynésiens les pratiques les plus récentes et les plus efficaces contre cette pathologie. \n\nDepuis janvier 2022, l’ICPF assure les missions suivantes :\n- Gestion du registre des cancers\n- Mise en œuvre des actions de dépistage et de prévention contre les cancers\n- Organisation et mise en œuvre de la coordination régionale des soins\n- Organisation et mise en œuvre d’une direction de la recherche et de l’innovation.\n\nL’ICPF fait partie du réseau UNICANCER, acteur majeur de la lutte contre le cancer.",
     "categories": [
       "Accès",
       "Données et recherche",
@@ -83,7 +54,6 @@
         "url": ""
       }
     ],
-    "validated": false,
-    "added_formatted": "26/06/2025"
+    "validated": false
   }
 ]
