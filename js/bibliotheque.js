@@ -1,9 +1,13 @@
-async function loadDocuments() {
+async function loadDocuments(sortOrder = 'az') {
   const response = await fetch('bibliotheque.json');
   let documents = await response.json();
 
-  // ✅ Tri alphabétique par label
-  documents.sort((a, b) => a.label.localeCompare(b.label));
+  // ✅ Tri dynamique
+  documents.sort((a, b) => {
+    return sortOrder === 'az'
+      ? a.label.localeCompare(b.label)
+      : b.label.localeCompare(a.label);
+  });
 
   const container = document.getElementById('bibli-container');
   container.innerHTML = '';
@@ -22,8 +26,16 @@ async function loadDocuments() {
   });
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
-  loadDocuments();
+  // Charger les documents en tri A-Z par défaut
+  loadDocuments('az');
+
+  // Tri dynamique A-Z / Z-A
+  document.getElementById('sort-select').addEventListener('change', function () {
+    const order = this.value;
+    loadDocuments(order);
+  });
 
   // Recherche
   document.getElementById('search-input').addEventListener('input', function () {
