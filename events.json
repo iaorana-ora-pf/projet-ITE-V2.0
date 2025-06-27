@@ -3,8 +3,8 @@
     "id": "event1",
     "title": "TEST Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
     "year": 2016,
-    "slug": "2016-publication-sos-2016-2021",
-    "added": "2025-06-26 00:00:00",
+    "slug": "test-publication-du-schéma-dorganisation-sanitaire-de-polynésie-française-2016-2021",
+    "added": "26/06/2025",
     "description": "Le Schéma d’Organisation Sanitaire (SOS) 2016–2021 est le plan de réforme du système de santé en Polynésie française. Il fixe les grandes priorités pour améliorer les soins et l’accès à la santé, notamment dans les îles. \n\nIl propose 6 axes : mieux organiser les services, renforcer les soins de base, s’adapter aux nouveaux besoins (comme le cancer ou la santé mentale), développer la prévention (notamment contre le surpoids), mieux accompagner les personnes âgées, et créer un espace numérique de santé.",
     "categories": [
       "Gouvernance et pilotage"
@@ -13,26 +13,18 @@
       "Stratégie",
       "Schéma"
     ],
-    "sources": [
-      {
-        "id_doc": "https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/79ae2bfe14fa08406a591cd7d23bf3df7af36960/docs/SOS%202016-2021.pdf"
-      }
-    ],
-    "more": [
-      {
-        "label": "nan",
-        "url": ""
-      }
-    ],
+    "sources": [],
+    "more": NaN,
     "validated": false,
-    "added_formatted": "26/06/2025"
+    "more_links": [],
+    "hash": "110c1785ab1996a3399a043344323c27"
   },
   {
     "id": "event2",
     "title": "Création de l'Institut du Cancer de la Polynésie française",
     "year": 2021,
-    "slug": "2021-creation-icpf",
-    "added": "2025-06-26 00:00:00",
+    "slug": "création-de-linstitut-du-cancer-de-la-polynésie-française",
+    "added": "26/06/2025",
     "description": "L’Institut du Cancer de Polynésie française (ICPF), créé en juillet 2021, est un établissement public dédié à la lutte contre le cancer.\nSa vocation est de faire progresser la lutte contre le cancer et de mettre à disposition des patients polynésiens les pratiques les plus récentes et les plus efficaces contre cette pathologie. \n\nDepuis janvier 2022, l’ICPF assure les missions suivantes :\n- Gestion du registre des cancers\n- Mise en œuvre des actions de dépistage et de prévention contre les cancers\n- Organisation et mise en œuvre de la coordination régionale des soins\n- Organisation et mise en œuvre d’une direction de la recherche et de l’innovation.\n\nL’ICPF fait partie du réseau UNICANCER, acteur majeur de la lutte contre le cancer.",
     "categories": [
       "Accès",
@@ -43,17 +35,10 @@
       "Etablissement",
       "Cancer"
     ],
-    "sources": [
-      {
-        "id_doc": "Site internet de l'ICPF | https://www.icpf.pf"
-      }
-    ],
-    "more": [
-      {
-        "label": "nan",
-        "url": ""
-      }
-    ],
-    "validated": false
+    "sources": [],
+    "more": NaN,
+    "validated": false,
+    "more_links": [],
+    "hash": "5e0a26b82c3ef0c7a58f395e1f3c42f8"
   }
 ]
