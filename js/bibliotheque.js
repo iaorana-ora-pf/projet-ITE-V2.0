@@ -1,6 +1,9 @@
 async function loadDocuments() {
   const response = await fetch('bibliotheque.json');
-  const documents = await response.json();
+  let documents = await response.json();
+
+  // ✅ Tri alphabétique par label
+  documents.sort((a, b) => a.label.localeCompare(b.label));
 
   const container = document.getElementById('bibli-container');
   container.innerHTML = '';
