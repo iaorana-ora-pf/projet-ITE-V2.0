@@ -29,7 +29,7 @@
     "validated": false
   },
   {
-    "id": "1",
+    "id": "event3",
     "title": "Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
     "year": 2016,
     "slug": "2016-publication-sos-2016-2021",
@@ -57,7 +57,7 @@
     "added_formatted": "26/06/2025"
   },
   {
-    "id": "2",
+    "id": "event4",
     "title": "Création de l'Institut du Cancer de la Polynésie française",
     "year": 2021,
     "slug": "2021-creation-icpf",
