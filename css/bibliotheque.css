@@ -45,47 +45,29 @@ html, body {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-#sort-select {
-  width: 200px;
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #048B9A;
-  color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  appearance: none;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.3s ease;
-}
 .search-sort-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;              /* 👈 espace horizontal */
+  gap: 1.2rem;              /* 👈 espace horizontal */
   margin-bottom: 1rem;
   flex-wrap: wrap;        /* 👈 pour que ça reste responsive */
-}
-#search-input {
-  flex: 1;
-  min-width: 250px;
-  max-width: 500px;
 }
 .search-sort-container input,
 .search-sort-container select {
   font-size: 1rem;
 }
 #sort-select {
+  height: 46px;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  font-size: 1rem;
   border: none;
-  background-color: #048B9A;
+  border-radius: 8px;
+  background-color: var(--main-green);
   color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: background-color 0.3s ease;
-  height: 46px;
 }
 
 .bibli-container {
