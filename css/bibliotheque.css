@@ -45,18 +45,23 @@ html, body {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.search-sort-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;              /* 👈 espace horizontal */
-  margin-bottom: 1rem;
-  flex-wrap: wrap;        /* 👈 pour que ça reste responsive */
-}
+
 .search-sort-container input,
 .search-sort-container select {
   font-size: 1rem;
 }
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.sort-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 #sort-select {
   height: 46px;
   padding: 0.6rem 1.2rem;
@@ -65,7 +70,7 @@ html, body {
   border-radius: 8px;
   background-color: var(--main-green);
   color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
