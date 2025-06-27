@@ -210,6 +210,25 @@ h2 {
   color: #f57c00; /* orange vif */
   cursor: pointer;
 }
+.fiche-more {
+  margin-top: 0.5rem; /* ✅ réduit l'espace au-dessus */
+  margin-bottom: 0.5rem; /* ✅ réduit l'espace en dessous */
+}
+
+.fiche-more strong {
+  margin-bottom: 0.2rem; /* si un <strong> est utilisé */
+  display: block;
+}
+
+.fiche-more ul {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-left: 1rem; /* conserve indentation des listes */
+}
+
+.fiche-more li {
+  margin-bottom: 0.2rem;
+}
 /* ===================== */
 /*       Suggestion*/
 /* ===================== */
