@@ -19,7 +19,7 @@ async function loadDocuments(sortOrder = 'az') {
     card.innerHTML = `
       <h2 class="doc-title">${doc.label}</h2>
       <img src="${doc.image}" alt="Illustration du document" class="doc-img">
-      <a class="doc-link" href="https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true" target="_blank">Télécharger le document</a>
+      <a class="doc-link" href="https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true" target="_blank">Voir le document</a>
     `;
 
     container.appendChild(card);
