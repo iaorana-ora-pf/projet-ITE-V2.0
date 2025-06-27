@@ -64,17 +64,28 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem; /* 🟢 espace horizontal entre input et select */
+  gap: 3rem;              /* 👈 espace horizontal */
   margin-bottom: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap;        /* 👈 pour que ça reste responsive */
 }
-
+#search-input {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+}
 .search-sort-container input,
 .search-sort-container select {
   font-size: 1rem;
 }
-#sort-select:hover {
-  background-color: #02616B;
+#sort-select {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #048B9A;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 46px;
 }
 
 .bibli-container {
