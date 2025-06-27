@@ -124,7 +124,22 @@ h2 {
   margin-right: 6px;
 }
 #categories-with-icons {
-  margin-bottom: 0.5em; /* ajoute de l'air sous les catégories */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px; /* moins d'espacement vertical */
+  margin-top: 4px;
+  row-gap: 4px;
+}
+#categories-with-icons .cat-icon {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  font-size: 0.9em;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 .category-item {
   margin-bottom: 0.3em;
