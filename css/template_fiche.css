@@ -199,7 +199,17 @@ h2 {
   color: orange; /* couleur au survol */
   text-decoration: none;
 }
+.link-source {
+  text-decoration: none;
+  font-weight: normal;
+  color: inherit;
+  transition: color 0.3s;
+}
 
+.link-source:hover {
+  color: #f57c00; /* orange vif */
+  cursor: pointer;
+}
 /* ===================== */
 /*       Suggestion*/
 /* ===================== */
