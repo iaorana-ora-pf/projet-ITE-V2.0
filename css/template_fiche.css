@@ -124,7 +124,7 @@ h2 {
   margin-right: 6px;
 }
 #categories-with-icons {
-  margin-bottom: 1em; /* ajoute de l'air sous les catégories */
+  margin-bottom: 0.5em; /* ajoute de l'air sous les catégories */
 }
 .category-item {
   margin-bottom: 0.3em;
