@@ -1,7 +1,7 @@
 [
   {
     "id": "event1",
-    "title": "Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
+    "title": "PROUT Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
     "year": 2016,
     "slug": "2016-publication-sos-2016-2021",
     "added": "2025-06-26 00:00:00",
@@ -15,12 +15,12 @@
     ],
     "sources": [
       {
-        "id_doc": "Schéma d'Organisation Sanitaire de Polynésie française 2016-2021 | https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/f9e59cc71db644651b4deb3a50f4d53c68c9ce7e/docs/SOS%202016-2021.pdf"
+        "id_doc": "\"Schéma d'Organisation Sanitaire de Polynésie française 2016-2021 | https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/f9e59cc71db644651b4deb3a50f4d53c68c9ce7e/docs/SOS%202016-2021.pdf\""
       }
     ],
     "more": [
       {
-        "label": "/",
+        "label": "nan",
         "url": ""
       }
     ],
@@ -44,7 +44,7 @@
     ],
     "sources": [
       {
-        "id_doc": "Site internet de l'ICPF | https://www.icpf.pf"
+        "id_doc": "\"Site internet de l'ICPF | https://www.icpf.pf\""
       }
     ],
     "more": [
