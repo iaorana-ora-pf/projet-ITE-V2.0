@@ -26,7 +26,7 @@
     "slug": "1800-creation-du-premier-dispensaire",
     "more": [{"label": "En savoir plus", "url": "https://example.com/info"}],
     "description": "Mise en place du premier dispensaire offrant un accès structuré aux soins de santé pour la population.",
-    "validated": false
+    "validated": true
   },
   {
     "id": "event3",
