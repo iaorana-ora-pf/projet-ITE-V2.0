@@ -64,7 +64,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* 🟢 espace horizontal entre input et select */
+  gap: 4rem; /* 🟢 espace horizontal entre input et select */
   margin-bottom: 1rem;
   flex-wrap: wrap;
 }
