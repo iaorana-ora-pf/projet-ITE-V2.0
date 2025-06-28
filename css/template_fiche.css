@@ -65,7 +65,7 @@ h2 {
   grid-row: 1 / span 2;
 }
 .card h2 {
-  color: var(--main-green);
+  color: orange;
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
