@@ -78,17 +78,24 @@ h2 {
 /* ===================== */
 /*      Contenu      */
 /* ===================== */
+.event-title:
+  color: #048B9A; /* noir */
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
 .event-title-with-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 6rem;
   margin-bottom: 1.5rem;
 }
 
 .event-title-with-logo .title-icon {
-  width: 40px;
-  height: 40px;
+width: 5rem;
+height: 5rem;
   object-fit: contain;
 }
 
