@@ -87,18 +87,23 @@ h2 {
 }
 /* Section */
 .section {
-  margin-bottom: 15px;
+  margin-bottom: 1.2rem;
+  display: block;
 }
+
 .section strong {
-  display: block; /* ✅ Fait passer à la ligne */
+  display: block;             /* ✅ Le titre (ex: Catégories :) sur sa ligne */
   margin-bottom: 0.4rem;
   font-weight: bold;
 }
+/* Tous les éléments de contenu après le titre */
 .section > *:not(strong) {
-  display: block;         /* ✅ Force retour à la ligne */
-  margin-left: 0;
-  margin-bottom: 0.6rem;  /* ✅ Espacement régulier */
+  display: block;             /* ✅ Forcer retour à la ligne */
+  margin: 0 0 0.6rem 0;
   line-height: 1.5;
+  word-wrap: break-word;      /* ✅ coupe les longs mots */
+  overflow-wrap: break-word;
+  white-space: normal;        /* ✅ empêche le scroll horizontal */
 }
 .section-title {
   display: block;
@@ -139,6 +144,14 @@ h2 {
   margin-top: 4px;
   row-gap: 4px;
 }
+/* Désactiver tout scroll horizontal éventuel */
+#categories-with-icons,
+.keywords-inline,
+.source-list,
+.more-links-list {
+  overflow-x: hidden !important;
+  white-space: normal !important;
+}
 #categories-with-icons .cat-icon {
   display: inline-flex;
   align-items: center;
@@ -160,6 +173,13 @@ h2 {
   margin: 0 6px 4px 0;
 }
 
+/* ✅ Style pour le texte de validation */
+.card .validation-info {
+  color: #777;                /* gris discret */
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 2rem;
+}
 /* listes mots cles */
 .keywords-inline {
   margin-top: 0.3em;
