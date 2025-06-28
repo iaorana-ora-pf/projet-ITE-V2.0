@@ -1,4 +1,4 @@
- /* ===================== */
+/* ===================== */
 /*        VARIABLES       */
 /* ===================== */
 :root {
@@ -199,12 +199,6 @@ h2 {
   color: orange; /* couleur au survol */
   text-decoration: none;
 }
-.link-source {
-  text-decoration: none;
-  font-weight: normal;
-  color: inherit;
-  transition: color 0.3s;
-}
 .source-label {
   display: flex;
   align-items: center;
@@ -228,10 +222,6 @@ h2 {
   text-decoration: none;
 }
 
-.link-source:hover {
-  color: #f57c00; /* orange vif */
-  cursor: pointer;
-}
 .fiche-more {
   margin-bottom: 0.5rem;
 }
