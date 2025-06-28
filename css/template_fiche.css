@@ -215,9 +215,9 @@ h2 {
 .fiche-more a,
 .suggestion-link {
   font-weight: normal;
-  color: #0056b3; /* bleu standard */
-  text-decoration: underline;
-  transition: color 0.2s ease;
+  color: #048B9A; /* bleu standard */
+  text-decoration:none;
+  transition: color 0.1s ease;
 }
 
 .link-source:hover,
