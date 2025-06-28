@@ -78,10 +78,10 @@ h2 {
 /* ===================== */
 /*      Contenu      */
 /* ===================== */
-.event-title:
-  color: #048B9A; /* noir */
+.event-title {
+  color: #048B9A;
   font-size: 1.3rem;
-  margin-bottom: 1rem;
+  margin: 0;
   display: inline-block;
 }
 
