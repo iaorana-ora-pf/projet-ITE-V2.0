@@ -160,7 +160,7 @@ h2 {
   border-radius: 4px;
   font-size: 0.9em;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal;
 }
 .category-item {
   margin-bottom: 0.3em;
@@ -235,9 +235,10 @@ h2 {
 }
 
 .sources-inline {
-  white-space: normal;
-  overflow-x: auto;
-  padding-bottom: 2px;
+   white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-x: hidden; /* ✅ désactive scroll */
 }
 .link-source,
 .fiche-more a,
