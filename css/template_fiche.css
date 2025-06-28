@@ -213,7 +213,7 @@ h2 {
 }
 
 .sources-inline {
-  white-space: nowrap;
+  white-space: normal;
   overflow-x: auto;
   padding-bottom: 2px;
 }
