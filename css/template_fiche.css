@@ -98,7 +98,6 @@ h2 {
 }
 /* Tous les éléments de contenu après le titre */
 .section > *:not(strong) {
-  display: block;             /* ✅ Forcer retour à la ligne */
   margin: 0 0 0.6rem 0;
   line-height: 1.5;
   word-wrap: break-word;      /* ✅ coupe les longs mots */
