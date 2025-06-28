@@ -87,22 +87,21 @@ h2 {
 }
 /* Section */
 .section {
-  margin-bottom: 1.2rem;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .section strong {
-  display: block;             /* ✅ Le titre (ex: Catégories :) sur sa ligne */
-  margin-bottom: 0.4rem;
+  display: inline;
   font-weight: bold;
-}
-/* Tous les éléments de contenu après le titre */
-.section > *:not(strong) {
-  margin: 0 0 0.6rem 0;
-  line-height: 1.5;
-  word-wrap: break-word;      /* ✅ coupe les longs mots */
-  overflow-wrap: break-word;
-  white-space: normal;        /* ✅ empêche le scroll horizontal */
+  margin: 0;
 }
 .section-title {
   display: block;
@@ -168,8 +167,14 @@ h2 {
   gap: 0.5em;
 }
 .cat-icon {
-  display: inline-block;
-  margin: 0 6px 4px 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #f3f3f3;
+  border-radius: 4px;
+  font-size: 0.9em;
+  white-space: normal;
+  line-height: 1.2;
 }
 
 /* ✅ Style pour le texte de validation */
