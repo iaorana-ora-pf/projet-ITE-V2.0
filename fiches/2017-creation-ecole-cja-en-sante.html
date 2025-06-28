@@ -56,11 +56,12 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
           </div>
         </div>
 
-        <div class="section">
-<strong>Sources :</strong>
-  <i class="fa-solid fa-link" style="color: #ccc; margin-left: 4px;"></i>
-  <div class="sources-inline">
-    {% if sources %}
+      <div class="section">
+  <div class="source-label">
+    <strong>Sources :</strong>
+    </div>
+  {% if sources %}
+    <div class="sources-inline">
       {% for src in sources %}
         {% if src.url %}
           <a href="{{ src.url }}" class="link-source" target="_blank">{{ src.label }}</a>{% if not loop.last %}, {% endif %}
@@ -68,12 +69,12 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
           {{ src.label }}{% if not loop.last %}, {% endif %}
         {% endif %}
       {% endfor %}
-    {% else %}
-      <span>Aucune source disponible.</span>
-    {% endif %}
-  </div>
-  
+    </div>
+  {% else %}
+    <p>Aucune source disponible.</p>
+  {% endif %}
 </div>
+
 
         <div class="section"><strong>Informations validées au </strong>27/06/2025</div>
 
