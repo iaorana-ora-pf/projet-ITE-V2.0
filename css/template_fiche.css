@@ -69,7 +69,7 @@ h2 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   display: inline-block;
-  border-bottom: 3px solid #EDE7E3; /* soulignement beige */
+  border-bottom: 3px solid orange; /* soulignement beige */
   padding-bottom: 2px;
 }
 .card .section {
