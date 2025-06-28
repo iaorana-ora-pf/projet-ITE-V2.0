@@ -64,7 +64,9 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
     <div class="sources-inline">
       {% for src in sources %}
         {% if src.url %}
-          <a href="{{ src.url }}" class="link-source" target="_blank">{{ src.label }}</a>{% if not loop.last %}, {% endif %}
+       <a href="{{ src.url }}" class="link-source" target="_blank">{{ src.label }}</a>
+
+      {% if not loop.last %}, {% endif %}
         {% else %}
           {{ src.label }}{% if not loop.last %}, {% endif %}
         {% endif %}
@@ -85,7 +87,8 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
       
         
           Des supports de communication et des outils d&#39;accompagnement sont disponibles sur le site de la         
-          <a href="https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/&#34;." class="link-source" target="_blank">Direction de la santé</a><br>
+          <a href="{{ link.url }}" class="link-source" target="_blank">{{ link.label }}</a>
+<br>
         
       
     </p>
@@ -98,9 +101,9 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
         <h2>Événement lié à découvrir</h2>
         <div class="section">
           
-            <a href="2021-creation-icpf.html" class="suggestion-link">
-              Création de l&#39;Institut du Cancer de la Polynésie française (2021)
-            </a>
+           <a href="{{ suggestion_event.slug }}.html" class="suggestion-link">
+  {{ suggestion_event.title }} ({{ suggestion_event.year }})
+</a>
           
         </div>
       </div>
