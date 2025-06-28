@@ -174,8 +174,8 @@ h2 {
 }
 
 /* ✅ Style pour le texte de validation */
-.card .validation-info {
-  color: #777;                /* gris discret */
+.validation-info {
+  color: #777;
   font-size: 0.8rem;
   text-align: right;
   margin-top: 2rem;
