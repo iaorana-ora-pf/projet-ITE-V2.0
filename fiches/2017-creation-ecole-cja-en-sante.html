@@ -83,15 +83,17 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
        <div class="section fiche-more">
   <strong>Pour aller plus loin :</strong>
   
-    <p>
-      
-        
-          Des supports de communication et des outils d&#39;accompagnement sont disponibles sur le site de la         
-          <a href="{{ link.url }}" class="link-source" target="_blank">{{ link.label }}</a>
-<br>
-        
-      
-    </p>
+<p>
+  Des supports de communication et des outils d&#39;accompagnement sont disponibles sur le site de&nbsp;
+  {% for link in more_links %}
+    {% if link.url %}
+      <a href="{{ link.url }}" class="link-source" target="_blank">{{ link.label }}</a>{% if not loop.last %}, {% endif %}
+    {% else %}
+      {{ link.label }}{% if not loop.last %}, {% endif %}
+    {% endif %}
+  {% endfor %}
+</p>
+
   
 </div>
 </div>
