@@ -78,22 +78,13 @@ h2 {
 /* ===================== */
 /*      Contenu      */
 /* ===================== */
-.event-title-with-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  margin-bottom: 3rem;
+
+.event-title {
   color: #048B9A;
   font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
-
-.event-title-with-logo .title-icon {
-width: 6rem;
-height: 6rem;
-  object-fit: contain;
-}
-
 /* Section */
 .section {
   margin-bottom: 15px;
