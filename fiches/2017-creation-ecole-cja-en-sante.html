@@ -57,20 +57,21 @@ de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 
         </div>
 
         <div class="section">
-  <strong style="margin-bottom: 2px;">Sources :</strong>
-<i class="fa-solid fa-link" style="color: #ccc; margin-left: 4px;"></i>
-
-  
-    <p>
-      
-        
-      <a href="https://la1ere.franceinfo.fr/polynesie/tahiti/polynesie-francaise/ecole-en-sante-un-label-pour-mieux-apprendre-en-etant-mieux-1292388.html;" class="link-source" target="_blank">Polynésie 1ère</a>
-      <a href="https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante" class="link-source" target="_blank"> Direction de la santé</a>
-     <a href="https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/bfd06b37cd74f266b766fa91b9ae0054b4710ac2/docs/guide-presentation-ecole-cja-en-sante.pdf" class="link-source" target="_blank"> Guide de présentation Ecole et CJA en santé</a>
-      
-        
-      
-    </p>
+<strong>Sources :</strong>
+  <i class="fa-solid fa-link" style="color: #ccc; margin-left: 4px;"></i>
+  <div class="sources-inline">
+    {% if sources %}
+      {% for src in sources %}
+        {% if src.url %}
+          <a href="{{ src.url }}" class="link-source" target="_blank">{{ src.label }}</a>{% if not loop.last %}, {% endif %}
+        {% else %}
+          {{ src.label }}{% if not loop.last %}, {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <span>Aucune source disponible.</span>
+    {% endif %}
+  </div>
   
 </div>
 
