@@ -205,6 +205,19 @@ h2 {
   color: inherit;
   transition: color 0.3s;
 }
+.sources-inline {
+  display: inline;
+}
+
+.sources-inline a {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: var(--link-color, #0056b3);
+}
+
+.sources-inline a:hover {
+  text-decoration: none;
+}
 
 .link-source:hover {
   color: #f57c00; /* orange vif */
