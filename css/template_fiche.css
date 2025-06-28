@@ -78,13 +78,18 @@ h2 {
 /* ===================== */
 /*      Contenu      */
 /* ===================== */
-
-
-.event-title {
-  text-align: center; !important;
-  color: var(--main-green); /* bleu turquoise */
-  font-size: 1.4rem;
+.event-title-with-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   margin-bottom: 1.5rem;
+}
+
+.event-title-with-logo .title-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 /* Section */
