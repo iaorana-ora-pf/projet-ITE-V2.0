@@ -78,12 +78,6 @@ h2 {
 /* ===================== */
 /*      Contenu      */
 /* ===================== */
-.event-title {
- 
-  margin: 0;
-  display: inline-block;
-}
-
 .event-title-with-logo {
   display: flex;
   align-items: center;
