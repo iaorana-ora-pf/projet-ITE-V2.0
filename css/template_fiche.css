@@ -211,24 +211,29 @@ h2 {
   cursor: pointer;
 }
 .fiche-more {
-  margin-top: 0.5rem; /* ✅ réduit l'espace au-dessus */
-  margin-bottom: 0.5rem; /* ✅ réduit l'espace en dessous */
+  margin-bottom: 0.5rem;
 }
 
 .fiche-more strong {
-  margin-bottom: 0.2rem; /* si un <strong> est utilisé */
   display: block;
-}
-
-.fiche-more ul {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-  padding-left: 1rem; /* conserve indentation des listes */
-}
-
-.fiche-more li {
   margin-bottom: 0.2rem;
 }
+
+.fiche-more p {
+  margin: 0.2rem 0;
+  line-height: 1.4;
+}
+
+.fiche-more a.link-source {
+  color: var(--link-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fiche-more a.link-source:hover {
+  color: var(--highlight-orange); /* orange au hover */
+}
+
 /* ===================== */
 /*       Suggestion*/
 /* ===================== */
