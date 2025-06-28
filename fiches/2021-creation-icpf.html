@@ -81,11 +81,19 @@ L’ICPF fait partie du réseau UNICANCER, acteur majeur de la lutte contre le c
 
         <div class="section"><strong>Informations validées au </strong>26/06/2025</div>
 
-       <div class="section fiche-more">
+      <div class="section fiche-more">
   <strong>Pour aller plus loin :</strong>
-  
-    <p>Aucune information complémentaire.</p>
-  
+  {% if more_links %}
+    {% for link in more_links %}
+      {% if link.url %}
+        <a href="{{ link.url }}" class="link-source" target="_blank">{{ link.label }}</a>{% if not loop.last %}, {% endif %}
+      {% else %}
+        {{ link.label }}{% if not loop.last %}, {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    /
+  {% endif %}
 </div>
 </div>
 
