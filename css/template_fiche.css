@@ -90,8 +90,15 @@ h2 {
   margin-bottom: 15px;
 }
 .section strong {
-  margin-right: 6px;
+  display: block; /* ✅ Fait passer à la ligne */
+  margin-bottom: 0.4rem;
   font-weight: bold;
+}
+.section > *:not(strong) {
+  display: block;         /* ✅ Force retour à la ligne */
+  margin-left: 0;
+  margin-bottom: 0.6rem;  /* ✅ Espacement régulier */
+  line-height: 1.5;
 }
 .section-title {
   display: block;
