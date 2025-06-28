@@ -255,6 +255,21 @@ h2 {
 .fiche-more a.link-source:hover {
   color: var(--highlight-orange); /* orange au hover */
 }
+.link-source,
+.fiche-more a,
+.suggestion-link {
+  font-weight: normal;
+  color: #0056b3; /* bleu standard */
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.link-source:hover,
+.fiche-more a:hover,
+.suggestion-link:hover {
+  color: orange;
+  text-decoration: none;
+}
 
 /* ===================== */
 /*       Suggestion*/
