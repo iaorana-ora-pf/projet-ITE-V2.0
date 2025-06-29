@@ -125,7 +125,7 @@
         "url": "https://www.youtube.com/watch?v=DPymhpBTkTs&t=33s"
       }
     ],
-    "validated": false
+    "validated": true
   },
   {
     "id": "event5",
@@ -186,6 +186,6 @@
         "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=183960"
       }
     ],
-    "validated": false
+    "validated": true
   }
 ]
