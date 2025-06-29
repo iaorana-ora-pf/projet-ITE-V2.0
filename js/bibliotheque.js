@@ -1,4 +1,4 @@
-const isAdmin = localStorage.getItem("isAdmin") === "true";
+const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
 
 async function loadDocuments(sortOrder = 'az') {
   const response = await fetch('bibliotheque.json');
