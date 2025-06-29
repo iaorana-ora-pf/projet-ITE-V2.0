@@ -122,7 +122,7 @@ h2 {
 
 .link-source:hover {
   color: var(--highlight-orange);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .validation-info {
@@ -140,7 +140,7 @@ h2 {
 
 .suggestion-link:hover {
   color: var(--highlight-orange);
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* ===================== */
 /*        FOOTER         */
