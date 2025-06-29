@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // ✅ Affiche les catégories
+          // ✅ Affiche les catégories
       const catEl = document.getElementById("categories-with-icons");
       if (catEl && event.categories) {
         catEl.innerHTML = event.categories.map(cat => {
