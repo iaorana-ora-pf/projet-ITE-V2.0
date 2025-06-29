@@ -49,10 +49,11 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 2rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
   align-items: stretch;
 }
 .card {
@@ -69,8 +70,9 @@ h2 {
 }
 .card:first-child {
   grid-column: 1 / 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / 3;
 }
+
 
 .card:nth-child(2) {
   grid-column: 2 / 3;
@@ -78,7 +80,7 @@ h2 {
 }
 
 .card:nth-child(3) {
-  grid-column: 2 / 3;
+   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
 
