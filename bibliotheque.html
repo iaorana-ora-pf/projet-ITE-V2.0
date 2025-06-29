@@ -42,9 +42,22 @@
   <a href="index.html" class="home-button" title="Retour à l'accueil">
     <i class="fas fa-home"></i>
   </a>
-<button id="admin-toggle-btn" title="Mode admin">
-  <i class="fas fa-user-shield"></i>
+<!-- Bouton Admin -->
+<button id="admin-access-btn" title="Accès admin">
+  <i class="fas fa-lock"></i>
 </button>
+
+<!-- Modal Admin -->
+<div id="admin-modal" class="admin-modal hidden">
+  <div class="admin-modal-content">
+    <span id="close-admin-modal" class="admin-close">&times;</span>
+    <h3>Entrer le code admin</h3>
+    <input type="password" id="admin-code-input" placeholder="Code secret">
+    <button id="validate-admin-code">Valider</button>
+    <div id="admin-error" class="admin-error-msg"></div>
+  </div>
+</div>
+
   <script src="./js/bibliotheque.js"></script>
 </body>
 </html>
