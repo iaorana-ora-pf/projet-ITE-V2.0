@@ -41,7 +41,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2rem;
+  display: inline-block;
+  font-size: 1.3rem;
   color: var(--dark-text);
   border-bottom: 3px solid var(--highlight-orange);
   padding-bottom: 4px;
@@ -111,7 +112,7 @@ h2 {
 }
 
 .keyword-item {
-  color: var(--highlight-orange);
+  color: #1e2124;
 }
 
 .link-source {
@@ -131,7 +132,16 @@ h2 {
   text-align: left;
   margin-top: 1.5rem;
 }
+.suggestion-link {
+  color: #048B9A; /* bleu par défaut, remplace si tu veux */
+  text-decoration: none;
+  font-weight: normal;
+}
 
+.suggestion-link:hover {
+  color: var(--highlight-orange);
+  text-decoration: underline;
+}
 /* ===================== */
 /*        FOOTER         */
 /* ===================== */
