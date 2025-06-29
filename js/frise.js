@@ -1,7 +1,4 @@
-
-// Détecte si le mode admin est activé via l'URL
-const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
-
+const isAdmin = localStorage.getItem("isAdmin") === "true";
 
 let activeCategories = [];
 let eventsData = [];
@@ -181,3 +178,17 @@ function generateCategoryCheckboxes() {
     });
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const adminBtn = document.getElementById("admin-toggle-btn");
+  if (adminBtn) {
+    adminBtn.addEventListener("click", () => {
+      const code = prompt("Code admin ?");
+      if (code === "bazinga") {
+        localStorage.setItem("isAdmin", "true");
+        window.location.reload();
+      } else {
+        alert("Code incorrect");
+      }
+    });
+  }
+});
