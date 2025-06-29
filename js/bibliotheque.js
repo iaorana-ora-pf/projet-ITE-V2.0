@@ -1,3 +1,6 @@
+// Détecte si le mode admin est activé via l'URL
+const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+
 async function loadDocuments(sortOrder = 'az') {
   const response = await fetch('bibliotheque.json');
   let documents = await response.json();
@@ -16,16 +19,43 @@ async function loadDocuments(sortOrder = 'az') {
     const card = document.createElement('div');
     card.className = 'bibli-card';
 
-    card.innerHTML = `
-      <h2 class="doc-title">${doc.label}</h2>
-      <img src="${doc.image}" alt="Illustration du document" class="doc-img">
-      <a class="doc-link" href="https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true" target="_blank">Voir le document</a>
-    `;
+    // ✅ Création du titre avec statut coloré si mode admin
+    const title = document.createElement('h2');
+    title.classList.add('doc-title');
+    title.textContent = doc.label;
+
+    if (isAdmin && doc.statut) {
+      const statutClass = {
+        'traite': 'statut-traite',
+        'a_finir': 'statut-a-finir',
+        'non_initie': 'statut-non-initie'
+      }[doc.statut];
+
+      if (statutClass) {
+        title.classList.add(statutClass);
+      }
+    }
+
+    // ✅ Création de l'image et du lien
+    const image = document.createElement('img');
+    image.src = doc.image;
+    image.alt = "Illustration du document";
+    image.className = 'doc-img';
+
+    const link = document.createElement('a');
+    link.className = 'doc-link';
+    link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+    link.target = '_blank';
+    link.textContent = "Voir le document";
+
+    // ✅ Ajout des éléments dans la carte
+    card.appendChild(title);
+    card.appendChild(image);
+    card.appendChild(link);
 
     container.appendChild(card);
   });
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   // Charger les documents en tri A-Z par défaut
