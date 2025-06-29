@@ -203,7 +203,7 @@ html, body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--main-green);
+  background-color: #EDE7E3;
   color: white;
   border-radius: 50%;
   padding: 12px;
