@@ -191,6 +191,13 @@ html, body {
   background-color: #02616B;
   transform: scale(1.1);
 }
+
+/* ===================== */
+/*       Admin    */
+/* ===================== */
+.admin-visible .statut-traite { color: green; }
+.admin-visible .statut-a-finir { color: orange; }
+.admin-visible .statut-non-initie { color: red; }
 /* ===================== */
 /*       Footer     */
 /* ===================== */
@@ -217,17 +224,6 @@ html, body {
     padding: 1rem;
   }
 }
-/* Statuts de traitement visibles en mode admin uniquement */
-.admin-visible .statut-traite {
-  color: green;
-}
-.admin-visible .statut-a-finir {
-  color: orange;
-}
-.admin-visible .statut-non-initie {
-  color: red;
-}
-
 @media (max-width: 768px) {
   .container, .grid, .bloc, .card {
     width: 100% !important;
