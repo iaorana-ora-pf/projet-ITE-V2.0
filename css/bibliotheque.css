@@ -198,6 +198,59 @@ html, body {
 .admin-visible .statut-traite { color: green; }
 .admin-visible .statut-a-finir { color: orange; }
 .admin-visible .statut-non-initie { color: red; }
+
+#admin-access-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--main-green);
+  color: white;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 20px;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.admin-modal {
+  position: fixed;
+  z-index: 99999;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-modal.hidden {
+  display: none;
+}
+
+.admin-modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.admin-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.admin-error-msg {
+  color: red;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
 /* ===================== */
 /*       Footer     */
 /* ===================== */
