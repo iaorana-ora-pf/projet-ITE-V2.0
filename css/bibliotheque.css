@@ -15,8 +15,7 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: white;
   color: var(--dark-text);
-  height: 100%;
-  }
+}
 html, body {
   height: 100%;
   margin: 0;
