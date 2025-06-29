@@ -1,4 +1,3 @@
-// ✅ Détection du mode admin depuis localStorage
 const isAdmin = localStorage.getItem("isAdmin") === "true";
 
 async function loadDocuments(sortOrder = 'az') {
@@ -83,5 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // ✅ Ajouter une classe au body pour activer un style admin visible
   if (isAdmin) {
     document.body.classList.add('admin-visible');
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const adminBtn = document.getElementById("admin-toggle-btn");
+  if (adminBtn) {
+    adminBtn.addEventListener("click", () => {
+      const code = prompt("Code admin ?");
+      if (code === "bazinga") {
+        localStorage.setItem("isAdmin", "true");
+        window.location.reload();
+      } else {
+        alert("Code incorrect");
+      }
+    });
   }
 });
