@@ -47,7 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const code = document.getElementById("admin-code-input").value.trim();
 
       if (code === "bazinga") {
-       window.location.href = "frise.html?admin=true";
+        localStorage.setItem("isAdmin", "true"); // ✅ Stockage local
+        adminModal.classList.add("hidden");
+        alert("✅ Mode admin activé. Vous pouvez maintenant accéder à la frise ou à la bibliothèque.");
+        // Option : redirection automatique vers la frise (décommenter si besoin)
+        // window.location.href = "frise.html";
       } else {
         errorMsg.textContent = "Code incorrect.";
       }
