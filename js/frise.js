@@ -1,4 +1,5 @@
-const isAdmin = localStorage.getItem("isAdmin") === "true";
+const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+
 
 let activeCategories = [];
 let eventsData = [];
