@@ -1,8 +1,7 @@
-// ✅ Mode admin via localStorage
-const isAdmin = localStorage.getItem("isAdmin") === "true";
-if (isAdmin) {
-  document.body.classList.add("admin-visible");
-}
+
+// Détecte si le mode admin est activé via l'URL
+const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+
 
 let activeCategories = [];
 let eventsData = [];
@@ -20,11 +19,11 @@ const categoryInfo = {
 document.addEventListener("DOMContentLoaded", () => {
   fetch("events.json")
     .then(res => res.json())
-    .then(events => {
-      eventsData = events;
-      generateCategoryCheckboxes();
-      renderTimeline(eventsData, "desc");
-    });
+  .then(events => {
+  eventsData = events;
+  generateCategoryCheckboxes();
+  renderTimeline(eventsData, "desc");
+});
 
   document.querySelectorAll('input[name="sortOrder"]').forEach(radio => {
     radio.addEventListener("change", () => {
@@ -60,14 +59,125 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modal) modal.classList.add("hidden");
   });
 });
-
 function renderTimeline(events, order = "desc") {
   const timeline = document.getElementById("timeline");
   if (!timeline) return;
 
-  const sorted = [...events].sort((a, b) =>
-    order === "asc" ? a.year - b.year : b.year - a.year
+const sorted = [...events].sort((a, b) =>
+  order === "asc" ? a.year - b.year : b.year - a.year
+);
+
+// En mode normal, on filtre les événements non validés
+const filtered = sorted.filter(event => {
+  const matchesCategory = activeCategories.length === 0 ||
+    event.categories?.some(cat => activeCategories.includes(cat));
+
+  const searchableFields = [
+    event.title,
+    ...(event.categories || []),
+    ...(event.keywords || []),
+    event.year.toString()
+  ].join(" ").toLowerCase();
+
+  const matchesSearch = searchableFields.includes(searchQuery);
+
+  // En mode admin : on garde tout
+  // En mode normal : on filtre ceux non validés
+  const isVisible = isAdmin || event.validated === true;
+
+  return isVisible && matchesCategory && matchesSearch;
+});
+
+  document.getElementById("timeline-header").textContent =
+    `La frise contient ${filtered.length} événements`;
+
+  const grouped = {};
+  filtered.forEach(event => {
+    if (!grouped[event.year]) grouped[event.year] = [];
+    grouped[event.year].push(event);
+  });
+
+  timeline.innerHTML = "";
+
+  const sortedYears = Object.keys(grouped).sort((a, b) =>
+    order === "asc" ? a - b : b - a
   );
 
-  const filtered = sorted.filter(event => {
-    const matchesCategory = activeCategorie
+  sortedYears.forEach(year => {
+  const items = grouped[year];
+
+  const groupDiv = document.createElement("div");
+  groupDiv.className = "timeline-group"; // <-- plus de left/right
+
+  const yearLabel = document.createElement("div");
+  yearLabel.className = "year-label";
+  yearLabel.textContent = year;
+yearLabel.setAttribute("data-year", year);
+    
+  const dot = document.createElement("div");
+  dot.className = "timeline-dot";
+
+  const eventsBlock = document.createElement("div");
+  eventsBlock.className = "year-block";
+
+  items.forEach(ev => {
+    const evDiv = document.createElement("div");
+    evDiv.className = "event-item";
+    evDiv.onclick = () => window.open(`fiches/${ev.slug}.html`, "_blank");
+
+    const icons = (ev.categories || []).map(cat => {
+      const info = categoryInfo[cat];
+      return info
+        ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
+        : '';
+    }).join("");
+
+    evDiv.innerHTML = `
+  <div class="event-title">
+    ${ev.title}
+    ${!ev.validated ? '<span class="badge-nonvalide">À valider</span>' : ''}
+    <span class="event-icons">${icons}</span>
+  </div>`;
+    eventsBlock.appendChild(evDiv);
+  });
+
+  // Toujours la même structure
+  groupDiv.appendChild(yearLabel);
+  groupDiv.appendChild(dot);
+  groupDiv.appendChild(eventsBlock);
+
+  timeline.appendChild(groupDiv);
+});
+
+}
+
+
+
+
+function generateCategoryCheckboxes() {
+  const group = document.getElementById("categoryCheckboxGroup");
+  if (!group) return;
+
+  group.innerHTML = "";
+
+  Object.entries(categoryInfo).forEach(([cat, info]) => {
+    const label = document.createElement("label");
+    label.className = "cat-check";
+    label.innerHTML = `
+      <input type="checkbox" value="${cat}">
+      <span>${cat}</span>
+      <i class="fas ${info.icon}" style="color: ${info.color}; margin-left: 4px;"></i>
+    `;
+    group.appendChild(label);
+  });
+
+  group.addEventListener("change", () => {
+    activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
+    const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
+    renderTimeline(eventsData, sortValue);
+    document.querySelectorAll(".cat-check").forEach(label => {
+      const input = label.querySelector("input");
+      label.classList.toggle("selected", input.checked);
+    });
+  });
+}
