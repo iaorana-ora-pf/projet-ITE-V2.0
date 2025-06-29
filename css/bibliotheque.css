@@ -203,8 +203,8 @@ html, body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #f4f4f4; /* Couleur pâle */
-  color: #555; /* Icône grise */
+  background-color: #EDE7E3; 
+  color: white;
   border: none;
   outline: none;
   border-radius: 50%;
