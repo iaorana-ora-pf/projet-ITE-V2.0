@@ -53,9 +53,16 @@ h2 {
   align-items: stretch;
 }
 .card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%; /* ✅ force la même hauteur */
 }
 .card:first-child {
   grid-column: 1 / 2;
