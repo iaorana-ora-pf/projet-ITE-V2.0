@@ -96,8 +96,20 @@
   <a href="index.html" class="home-button" title="Retour à l'accueil">
   <i class="fas fa-home"></i>
 </a>
-<button id="admin-toggle-btn" title="Mode admin">
-  <i class="fas fa-user-shield"></i>
+<!-- Bouton Admin -->
+<button id="admin-access-btn" title="Accès admin">
+  <i class="fas fa-lock"></i>
 </button>
+
+<!-- Modal de connexion Admin -->
+<div id="admin-modal" class="admin-modal hidden">
+  <div class="admin-modal-content">
+    <span id="close-admin-modal" class="close-btn">&times;</span>
+    <h3>Accès administrateur</h3>
+    <input type="password" id="admin-code-input" placeholder="Code secret">
+    <button id="validate-admin-code">Valider</button>
+    <p id="admin-error" class="admin-error"></p>
+  </div>
+</div>
 </body>
 </html>
