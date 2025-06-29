@@ -1,5 +1,5 @@
-// Détecte si le mode admin est activé via l'URL
-const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
+// ✅ Détection du mode admin depuis localStorage
+const isAdmin = localStorage.getItem("isAdmin") === "true";
 
 async function loadDocuments(sortOrder = 'az') {
   const response = await fetch('bibliotheque.json');
@@ -19,7 +19,7 @@ async function loadDocuments(sortOrder = 'az') {
     const card = document.createElement('div');
     card.className = 'bibli-card';
 
-    // ✅ Création du titre avec statut coloré si mode admin
+    // ✅ Titre avec statut coloré si mode admin
     const title = document.createElement('h2');
     title.classList.add('doc-title');
     title.textContent = doc.label;
@@ -36,7 +36,7 @@ async function loadDocuments(sortOrder = 'az') {
       }
     }
 
-    // ✅ Création de l'image et du lien
+    // ✅ Image et lien vers le PDF (affiché via Google Viewer)
     const image = document.createElement('img');
     image.src = doc.image;
     image.alt = "Illustration du document";
@@ -48,7 +48,7 @@ async function loadDocuments(sortOrder = 'az') {
     link.target = '_blank';
     link.textContent = "Voir le document";
 
-    // ✅ Ajout des éléments dans la carte
+    // ✅ Ajout dans la carte
     card.appendChild(title);
     card.appendChild(image);
     card.appendChild(link);
@@ -58,16 +58,12 @@ async function loadDocuments(sortOrder = 'az') {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Charger les documents en tri A-Z par défaut
-  loadDocuments('az');
+  loadDocuments('az'); // Chargement initial
 
-  // Tri dynamique A-Z / Z-A
   document.getElementById('sort-select').addEventListener('change', function () {
-    const order = this.value;
-    loadDocuments(order);
+    loadDocuments(this.value);
   });
 
-  // Recherche
   document.getElementById('search-input').addEventListener('input', function () {
     const query = this.value.toLowerCase();
     document.querySelectorAll('.bibli-card').forEach(card => {
@@ -76,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Scroll boutons
   document.querySelector('.scroll-left').addEventListener('click', () => {
     document.getElementById('bibli-container').scrollBy({ left: -300, behavior: 'smooth' });
   });
@@ -84,4 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.scroll-right').addEventListener('click', () => {
     document.getElementById('bibli-container').scrollBy({ left: 300, behavior: 'smooth' });
   });
+
+  // ✅ Ajouter une classe au body pour activer un style admin visible
+  if (isAdmin) {
+    document.body.classList.add('admin-visible');
+  }
 });
