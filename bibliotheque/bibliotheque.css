@@ -136,7 +136,7 @@ html, body {
 }
 
 .doc-img {
-  max-height: 120px;
+  max-height: 110px;
   object-fit: contain;
   margin-top: auto;
 }
