@@ -1,54 +1,38 @@
 const isAdmin = new URLSearchParams(window.location.search).get("admin") === "true";
 let isListView = false;
-let allDocuments = [];
 
-async function loadDocuments(sortOrder = "az", filterQuery = "") {
-  if (allDocuments.length === 0) {
-    const response = await fetch("./bibliotheque/bibliotheque.json");
-    allDocuments = await response.json();
-  }
+async function loadDocuments(sortOrder = "az") {
+  const response = await fetch("./bibliotheque/bibliotheque.json");
+  let documents = await response.json();
 
-  // Filtrer selon la recherche
-  let filteredDocs = allDocuments.filter(doc =>
-    doc.label.toLowerCase().includes(filterQuery.toLowerCase())
-  );
-
-  // Trier
-  filteredDocs.sort((a, b) =>
-    sortOrder === "az" ? a.label.localeCompare(b.label) : b.label.localeCompare(a.label)
-  );
+  documents.sort((a, b) => {
+    return sortOrder === "az"
+      ? a.label.localeCompare(b.label)
+      : b.label.localeCompare(a.label);
+  });
 
   const container = document.getElementById("bibli-container");
   container.innerHTML = "";
 
-  // Affichage selon le mode
-  filteredDocs.forEach(doc => {
+  // Toggle list/grid class
+  container.classList.toggle("list-mode", isListView);
+
+  documents.forEach((doc) => {
+    let element;
+
     if (isListView) {
-      const link = document.createElement("a");
-      link.href = doc.url;
-      link.textContent = doc.label;
-      link.className = "doc-list-item";
-      link.target = "_blank";
-      container.appendChild(link);
+      element = document.createElement("a");
+      element.href = doc.url;
+      element.className = "doc-list-item";
+      element.textContent = doc.label;
+      element.target = "_blank";
     } else {
-      const card = document.createElement("div");
-      card.className = "bibli-card";
+      element = document.createElement("div");
+      element.className = "bibli-card";
 
       const title = document.createElement("h2");
       title.className = "doc-title";
       title.textContent = doc.label;
-
-      // Code couleur (mode admin)
-      if (isAdmin && doc.statut) {
-        const statusClass = {
-          "traite": "statut-traite",
-          "a_finir": "statut-a-finir",
-          "non_initie": "statut-non-initie"
-        }[doc.statut];
-        if (statusClass) {
-          title.classList.add(statusClass);
-        }
-      }
 
       const link = document.createElement("a");
       link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
@@ -60,11 +44,11 @@ async function loadDocuments(sortOrder = "az", filterQuery = "") {
       img.className = "doc-img";
 
       link.appendChild(img);
-      card.appendChild(title);
-      card.appendChild(link);
-
-      container.appendChild(card);
+      element.appendChild(title);
+      element.appendChild(link);
     }
+
+    container.appendChild(element);
   });
 }
 
@@ -73,27 +57,58 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
   const toggleBtn = document.getElementById("toggle-view");
 
-  loadDocuments(sortSelect.value);
+  loadDocuments();
 
   sortSelect.addEventListener("change", () => {
-    loadDocuments(sortSelect.value, searchInput.value);
+    loadDocuments(sortSelect.value);
   });
 
   searchInput.addEventListener("input", () => {
-    loadDocuments(sortSelect.value, searchInput.value);
+    const query = searchInput.value.toLowerCase();
+    document.querySelectorAll("#bibli-container > *").forEach((el) => {
+      el.style.display = el.textContent.toLowerCase().includes(query) ? "block" : "none";
+    });
   });
 
-toggleBtn.addEventListener("click", () => {
-  isListView = !isListView;
-  toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
-  loadDocuments(sortSelect.value, searchInput.value);
+  toggleBtn.addEventListener("click", () => {
+    isListView = !isListView;
+    toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+    loadDocuments(sortSelect.value);
+  });
 
-  const container = document.getElementById("bibli-container");
-  if (isListView) {
-    container.classList.add("list-mode");
-  } else {
-    container.classList.remove("list-mode");
+  // Admin modal access
+  const adminBtn = document.getElementById("admin-access-btn");
+  const adminModal = document.getElementById("admin-modal");
+  const closeModal = document.getElementById("close-admin-modal");
+  const submitBtn = document.getElementById("validate-admin-code");
+  const errorMsg = document.getElementById("admin-error");
+
+  if (adminBtn && adminModal) {
+    adminBtn.addEventListener("click", () => {
+      adminModal.classList.remove("hidden");
+      errorMsg.textContent = "";
+      document.getElementById("admin-code-input").value = "";
+    });
+
+    closeModal.addEventListener("click", () => {
+      adminModal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === adminModal) {
+        adminModal.classList.add("hidden");
+      }
+    });
+
+    submitBtn.addEventListener("click", () => {
+      const code = document.getElementById("admin-code-input").value.trim();
+      if (code === "bazinga") {
+        const url = new URL(window.location.href);
+        url.searchParams.set("admin", "true");
+        window.location.href = url.toString();
+      } else {
+        errorMsg.textContent = "Code incorrect.";
+      }
+    });
   }
-});
-
 });
