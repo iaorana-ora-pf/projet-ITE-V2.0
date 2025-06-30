@@ -173,13 +173,15 @@ html, body {
   border-radius: 9px;
   padding: 1rem;
   width: 100%;
-  max-width: 300px;
+  max-width: unset;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+ overflow-x: unset !important;   /* tu l’avais déjà */
+  white-space: normal !important;
 }
 
 .bibli-card:hover {
@@ -194,47 +196,7 @@ html, body {
   display: block;
 }
 .scroll-left, .scroll-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #048B9A;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  z-index: 999;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.scroll-left { left: 10px; }
-.scroll-right { right: 10px; }
-.scroll-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem 0;
-}
-.scroll-buttons button {
-  background-color: orange;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  color: white;
-  font-size: 1.25rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s, transform 0.2s;
-}
 
-.scroll-buttons button:hover {
-  background-color: #d97706; /* orange foncé */
-  transform: scale(1.1);
-}
 #bibli-container.grid-view .bibli-card {
   width: 100%;
 }
