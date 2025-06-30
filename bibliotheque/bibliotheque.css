@@ -98,17 +98,16 @@ html, body {
 }
 
 .bibli-container {
-  flex: 1;
   display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .bibli-card {
   background-color: #EDE7E3; /* fond beige clair */
-  border-radius: 10px;
-  padding: 1.5rem;
+  border-radius: 8px;
+  padding: 1rem;
   width: 280px; /* largeur fixe */
   height: 300px; /* hauteur fixe */
   display: flex;
@@ -117,6 +116,7 @@ html, body {
   justify-content: space-between;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
+  text-align: center;
 }
 
 .bibli-card:hover {
@@ -131,10 +131,11 @@ html, body {
 
 .doc-img {
   max-width: 100%;
-  max-height: 180px; /* Limite la hauteur */
+  max-height: 160px; /* Limite la hauteur */
   object-fit: contain;
-  margin: 0 auto 1rem;
   display: block;
+  width: auto;
+  margin-top: auto;
 }
 
 .doc-link {
