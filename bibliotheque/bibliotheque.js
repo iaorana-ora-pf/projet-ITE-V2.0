@@ -83,17 +83,17 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDocuments(sortSelect.value, searchInput.value);
   });
 
-  toggleBtn.addEventListener("click", () => {
-    isListView = !isListView;
-    toggleBtn.textContent = isListView ? "Grille" : "Liste";
-    loadDocuments(sortSelect.value, searchInput.value);
+toggleBtn.addEventListener("click", () => {
+  isListView = !isListView;
+  toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+  loadDocuments(sortSelect.value, searchInput.value);
 
-    // Adapter le style du container
-    const container = document.getElementById("bibli-container");
-    if (isListView) {
-      container.classList.add("list-mode");
-    } else {
-      container.classList.remove("list-mode");
-    }
-  });
+  const container = document.getElementById("bibli-container");
+  if (isListView) {
+    container.classList.add("list-mode");
+  } else {
+    container.classList.remove("list-mode");
+  }
+});
+
 });
