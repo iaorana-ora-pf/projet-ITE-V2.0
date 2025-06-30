@@ -34,7 +34,9 @@ html, body {
   font-size: 2rem;
   color: #048B9A;
 }
-
+/* ===================== */
+/*      filtres   */
+/* ===================== */
 #search-input {
   width: 80%;
   max-width: 600px;
@@ -43,7 +45,7 @@ html, body {
   border: none;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+
 
 .search-sort-container input,
 .search-sort-container select {
@@ -132,7 +134,7 @@ html, body {
 
 .doc-img {
   max-width: 100%;
-  max-height: 180px; /* Limite la hauteur */
+  max-height: 160px; /* Limite la hauteur */
   object-fit: contain;
   margin: 0 auto 1rem;
   display: block;
@@ -143,7 +145,7 @@ html, body {
   text-decoration: none;
   color: #1e2124;
   margin-top: 1rem;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 .doc-link:hover {
