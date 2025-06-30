@@ -238,6 +238,22 @@ html, body {
   background-color: #d97706; /* orange foncé */
   transform: scale(1.1);
 }
+#bibli-container.grid-view .bibli-card {
+  width: 100%;
+}
+
+#bibli-container.list-view .bibli-card {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+#bibli-container.list-view .doc-img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
 /* ===================== */
 /*       HOME       */
 /* ===================== */
