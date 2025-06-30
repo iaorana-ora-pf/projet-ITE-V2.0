@@ -43,7 +43,7 @@ html, body {
 }
 
 .search-input {
-  flex: 1; /* prend tout l'espace restant */
+   width: 30rem; /* 👉 réduis ici la largeur (ex: 30rem, ou 400px) */
   padding: 0.8rem 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
