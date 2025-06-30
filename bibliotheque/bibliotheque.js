@@ -20,13 +20,14 @@ async function loadDocuments(sortOrder = "az") {
   documents.forEach((doc) => {
     let element;
 
-    if (isListView) {
-      element = document.createElement("a");
-      element.href = doc.url;
-      element.className = "doc-list-item";
-      element.textContent = doc.label;
-      element.target = "_blank";
-    } else {
+if (isListView) {
+  element = document.createElement("a");
+  element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+  element.className = "doc-list-item";
+  element.textContent = doc.label;
+  element.target = "_blank";
+}
+else {
       element = document.createElement("div");
       element.className = "bibli-card";
 
