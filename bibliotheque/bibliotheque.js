@@ -84,12 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (isAdmin) document.body.classList.add('admin-visible');
 
-  const gridBtn = document.getElementById('grid-view');
-const listBtn = document.getElementById('list-view');
-const viewContainer = document.getElementById('bibli-container');
+const gridBtn = document.getElementById("grid-view");
+const listBtn = document.getElementById("list-view");
+const viewContainer = document.getElementById("bibli-container");
 
-
-  if (gridBtn && listBtn && viewContainer) {
+if (gridBtn && listBtn && viewContainer) {
   gridBtn.addEventListener("click", () => {
     viewContainer.classList.remove("list-view");
     viewContainer.classList.add("grid-view");
