@@ -1,9 +1,8 @@
-const isAdmin = new URLSearchParams(window.location.search).get("admin") === "true";
 let isListView = false;
 
 async function loadDocuments(sortOrder = "az") {
   const response = await fetch("./bibliotheque/bibliotheque.json");
-  let documents = await response.json();
+  const documents = await response.json();
 
   documents.sort((a, b) => {
     return sortOrder === "az"
@@ -15,68 +14,62 @@ async function loadDocuments(sortOrder = "az") {
   container.innerHTML = "";
 
   documents.forEach((doc) => {
-    let element;
-
     if (isListView) {
-      element = document.createElement("a");
-      element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
-      element.className = "doc-list-item";
-      element.textContent = doc.label;
-      element.target = "_blank";
+      const link = document.createElement("a");
+      link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+      link.target = "_blank";
+      link.className = "doc-list-item";
+      link.textContent = doc.label;
+      container.appendChild(link);
     } else {
-      element = document.createElement("div");
-      element.className = "bibli-card";
+      const card = document.createElement("div");
+      card.className = "bibli-card";
 
       const title = document.createElement("h2");
       title.className = "doc-title";
       title.textContent = doc.label;
 
-      const link = document.createElement('a');
+      const link = document.createElement("a");
       link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
       link.target = "_blank";
 
-      const img = document.createElement('img');
+      const img = document.createElement("img");
       img.src = doc.image;
       img.alt = "Illustration du document";
-      img.className = 'doc-img';
+      img.className = "doc-img";
 
       link.appendChild(img);
-
-      element.appendChild(title);
-      element.appendChild(link);
+      card.appendChild(title);
+      card.appendChild(link);
+      container.appendChild(card);
     }
+  });
 
-    container.appendChild(element);
+  applySearchFilter(); // re-applique filtre après render
+}
+
+function applySearchFilter() {
+  const query = document.getElementById("search-input").value.toLowerCase();
+  const items = document.querySelectorAll("#bibli-container > *");
+
+  items.forEach((el) => {
+    const visible = el.textContent.toLowerCase().includes(query);
+    el.style.display = visible ? "" : "none";
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const sortSelect = document.getElementById("sort-select");
+  const toggleViewBtn = document.getElementById("toggle-view");
   const searchInput = document.getElementById("search-input");
-  const toggleBtn = document.getElementById("toggle-view");
   const instructions = document.getElementById("bibli-instructions");
 
-  const updateInstructions = () => {
-    if (instructions) {
-      instructions.textContent = isListView
-        ? "Pour accéder au document, cliquer sur le titre."
-        : "Pour accéder au document, cliquer sur l'image correspondante.";
-    }
-  };
-
-  const updateToggleButtonText = () => {
-    toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
-  };
-
-  const applySearchFilter = () => {
-    const query = searchInput.value.toLowerCase();
-    document.querySelectorAll("#bibli-container > *").forEach((el) => {
-      const visible = el.textContent.toLowerCase().includes(query);
-      el.classList.toggle("hidden", !visible);
-    });
-  };
-
-  loadDocuments();
+  function updateViewText() {
+    instructions.textContent = isListView
+      ? "Pour accéder au document, cliquer sur le titre."
+      : "Pour accéder au document, cliquer sur l'image correspondante.";
+    toggleViewBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+  }
 
   sortSelect.addEventListener("change", () => {
     loadDocuments(sortSelect.value);
@@ -84,49 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchInput.addEventListener("input", applySearchFilter);
 
-  toggleBtn.addEventListener("click", () => {
+  toggleViewBtn.addEventListener("click", () => {
     isListView = !isListView;
-    updateToggleButtonText();
-    updateInstructions();
-    loadDocuments(sortSelect.value).then(applySearchFilter);
+    updateViewText();
+    loadDocuments(sortSelect.value);
   });
 
-  updateToggleButtonText();
-  updateInstructions();
-
-  // Admin modal
-  const adminBtn = document.getElementById("admin-access-btn");
-  const adminModal = document.getElementById("admin-modal");
-  const closeModal = document.getElementById("close-admin-modal");
-  const submitBtn = document.getElementById("validate-admin-code");
-  const errorMsg = document.getElementById("admin-error");
-
-  if (adminBtn && adminModal) {
-    adminBtn.addEventListener("click", () => {
-      adminModal.classList.remove("hidden");
-      errorMsg.textContent = "";
-      document.getElementById("admin-code-input").value = "";
-    });
-
-    closeModal.addEventListener("click", () => {
-      adminModal.classList.add("hidden");
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === adminModal) {
-        adminModal.classList.add("hidden");
-      }
-    });
-
-    submitBtn.addEventListener("click", () => {
-      const code = document.getElementById("admin-code-input").value.trim();
-      if (code === "bazinga") {
-        const url = new URL(window.location.href);
-        url.searchParams.set("admin", "true");
-        window.location.href = url.toString();
-      } else {
-        errorMsg.textContent = "Code incorrect.";
-      }
-    });
-  }
+  updateViewText();
+  loadDocuments();
 });
