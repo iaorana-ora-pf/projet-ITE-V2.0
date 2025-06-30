@@ -158,7 +158,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 colonnes fixes */
   gap: 1.5rem;
-  padding: 1rem 1rem 1rem 2.5rem; 
+  padding: 1rem 1rem 1rem 3rem; 
   max-height: 75vh;       /* zone scrollable */
   overflow-y: auto;
   overflow-x: hidden;     /* désactive le scroll horizontal */
