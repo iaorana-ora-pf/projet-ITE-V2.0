@@ -37,8 +37,11 @@ html, body {
 
 #bibli-container {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem;
+  overflow-x: unset !important;
+  white-space: normal !important;
 }
 
 .grid-view {
@@ -164,12 +167,6 @@ html, body {
   font-weight: bold;
   cursor: pointer;
 }
-#bibli-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-}
 
 .bibli-card {
   background-color: white;
@@ -253,7 +250,25 @@ html, body {
   max-width: 120px;
   max-height: 120px;
 }
+#bibli-container.grid-view .bibli-card {
+  flex-direction: column;
+  max-width: 100%;
+}
 
+#bibli-container.list-view {
+  grid-template-columns: 1fr;
+}
+
+#bibli-container.list-view .bibli-card {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+#bibli-container.list-view .doc-img {
+  max-width: 120px;
+  max-height: 120px;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
