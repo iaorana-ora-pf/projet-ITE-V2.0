@@ -14,20 +14,16 @@ async function loadDocuments(sortOrder = "az") {
   const container = document.getElementById("bibli-container");
   container.innerHTML = "";
 
-  // Toggle list/grid class
-  container.classList.toggle("list-mode", isListView);
-
   documents.forEach((doc) => {
     let element;
 
-if (isListView) {
-  element = document.createElement("a");
-  element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
-  element.className = "doc-list-item";
-  element.textContent = doc.label;
-  element.target = "_blank";
-}
-else {
+    if (isListView) {
+      element = document.createElement("a");
+      element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+      element.className = "doc-list-item";
+      element.textContent = doc.label;
+      element.target = "_blank";
+    } else {
       element = document.createElement("div");
       element.className = "bibli-card";
 
@@ -35,16 +31,17 @@ else {
       title.className = "doc-title";
       title.textContent = doc.label;
 
-      const link = document.createElement("a");
+      const link = document.createElement('a');
       link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
       link.target = "_blank";
 
-      const img = document.createElement("img");
+      const img = document.createElement('img');
       img.src = doc.image;
       img.alt = "Illustration du document";
-      img.className = "doc-img";
+      img.className = 'doc-img';
 
       link.appendChild(img);
+
       element.appendChild(title);
       element.appendChild(link);
     }
@@ -57,6 +54,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const sortSelect = document.getElementById("sort-select");
   const searchInput = document.getElementById("search-input");
   const toggleBtn = document.getElementById("toggle-view");
+  const instructions = document.getElementById("bibli-instructions");
+
+  const updateInstructions = () => {
+    if (instructions) {
+      instructions.textContent = isListView
+        ? "Pour accéder au document, cliquer sur le titre."
+        : "Pour accéder au document, cliquer sur l'image correspondante.";
+    }
+  };
+
+  const updateToggleButtonText = () => {
+    toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+  };
+
+  const applySearchFilter = () => {
+    const query = searchInput.value.toLowerCase();
+    document.querySelectorAll("#bibli-container > *").forEach((el) => {
+      const visible = el.textContent.toLowerCase().includes(query);
+      el.classList.toggle("hidden", !visible);
+    });
+  };
 
   loadDocuments();
 
@@ -64,29 +82,19 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDocuments(sortSelect.value);
   });
 
-const items = document.querySelectorAll("#bibli-container > *");
-items.forEach((el) => {
-  const match = el.textContent.toLowerCase().includes(query);
-  el.style.display = match ? "" : "none";
-});
-
-  });
+  searchInput.addEventListener("input", applySearchFilter);
 
   toggleBtn.addEventListener("click", () => {
-  isListView = !isListView;
-  toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+    isListView = !isListView;
+    updateToggleButtonText();
+    updateInstructions();
+    loadDocuments(sortSelect.value).then(applySearchFilter);
+  });
 
-  const instruction = document.getElementById("doc-instruction");
-  if (instruction) {
-    instruction.innerHTML = isListView
-      ? "<em>Pour accéder au document, cliquer sur le titre.</em>"
-      : "<em>Pour accéder au document, cliquer sur l'image correspondante</em>";
-  }
+  updateToggleButtonText();
+  updateInstructions();
 
-  loadDocuments(sortSelect.value);
-});
-
-  // Admin modal access
+  // Admin modal
   const adminBtn = document.getElementById("admin-access-btn");
   const adminModal = document.getElementById("admin-modal");
   const closeModal = document.getElementById("close-admin-modal");
