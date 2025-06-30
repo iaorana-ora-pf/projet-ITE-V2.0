@@ -110,10 +110,10 @@ body {
   transition: background-color 0.2s ease;
 }
 .welcome-btn:hover {
-  background-color: var(--hover-green);
+  background-color: orange;
 }
 .welcome-btn i {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 /* === Responsive === */
 @media (max-width: 768px) {
