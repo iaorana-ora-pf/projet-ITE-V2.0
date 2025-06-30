@@ -142,7 +142,9 @@ html, body {
   object-fit: contain;
   margin-top: auto; /* pour rester en bas */
 }
-
+.hidden {
+  display: none !important;
+}
 
 .doc-link {
   margin-top: auto; /* pousse en bas */
