@@ -47,52 +47,16 @@ html, body {
   justify-content: center;
 }
 
-.search-input {
+#search-input {
   width: 30rem; /* 👉 réduis ici la largeur (ex: 30rem, ou 400px) */
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
+   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-#search-input {
-  width: 80%;
   max-width: 600px;
   padding: 0.8rem 1rem;
   padding-right: 2rem; /* espace pour la croix */
   font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.sort-dropdown {
-  background-color: #048B9A;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  min-width: 160px;  /* force une largeur mini */
-  text-align: center;
-   font-size: 1rem;
-  white-space: nowrap;
-}
-.search-sort-container input,
-.search-sort-container select {
-  font-size: 1rem;
-}
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.sort-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
 #sort-select {
   height: 46px;
   padding: 0.6rem 1.2rem;
@@ -263,14 +227,6 @@ display: block;
   }
 }
 @media (max-width: 768px) {
-  .container, .grid, .bloc, .card {
-    width: 100% !important;
-    padding: 1rem;
-    margin: 0 auto;
-    flex-direction: column;
-    display: block;
-    box-sizing: border-box;
-  }
 
   h1, h2, h3 {
     font-size: 1.2rem;
