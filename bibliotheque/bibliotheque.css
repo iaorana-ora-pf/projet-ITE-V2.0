@@ -58,6 +58,7 @@ html, body {
   width: 80%;
   max-width: 600px;
   padding: 0.8rem 1rem;
+  padding-right: 2rem; /* espace pour la croix */
   font-size: 1rem;
   border: none;
   border-radius: 8px;
@@ -104,7 +105,18 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+  user-select: none;
+}
 
+.clear-btn:hover {
+  color: #333;
+}
 /* Style unifié pour TOUS les boutons */
 .search-sort-bar button {
   background-color: #048B9A;
