@@ -73,7 +73,30 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.search-sort-bar {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* l’espacement entre les deux éléments */
+  margin-bottom: 2rem; /* optionnel, pour espacer du reste */
+}
 
+.search-input {
+  flex: 1; /* prend tout l'espace restant */
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.sort-dropdown {
+  background-color: #048B9A;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
 .bibli-container {
   flex: 1;
   display: flex;
