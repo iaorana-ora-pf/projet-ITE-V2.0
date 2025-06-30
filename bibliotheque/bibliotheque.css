@@ -114,11 +114,11 @@ html, body {
 }
 
 .bibli-card {
-  background-color: #EDE7E3;
+  background-color:white;
   border-radius: 10px;
   padding: 1.5rem;
   width: 80%; /* prend toute la largeur de sa cellule */
-  height: 200px; /* taille fixe */
+  height: 180px; /* taille fixe */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,7 +126,7 @@ html, body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .bibli-card:hover {
-  background-color: white; /* fond beige clair */
+  background-color: #EDE7E3; /* fond beige clair */
 }
 
 .bibli-card h2 {
@@ -136,7 +136,7 @@ html, body {
 }
 
 .doc-img {
-  max-height: 150px;
+  max-height: 130px;
   object-fit: contain;
   margin-top: auto;
 }
