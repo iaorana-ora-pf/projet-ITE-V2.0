@@ -56,7 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
   const toggleViewBtn = document.getElementById("toggle-view");
   const toggleSortBtn = document.getElementById("toggle-sort");
- 
+ const clearBtn = document.getElementById("clear-search"); // 👉 AJOUT ICI
+  clearBtn.addEventListener("click", () => {
+    searchInput.value = "";
+    searchInput.dispatchEvent(new Event("input")); // relance le filtre
+  });
   loadDocuments();
 
   // 🔍 Recherche
