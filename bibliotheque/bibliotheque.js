@@ -31,19 +31,18 @@ async function loadDocuments(sortOrder = "az") {
       title.className = "doc-title";
       title.textContent = doc.label;
 
+      const link = document.createElement("a");
+      link.href = doc.url;
+      link.target = "_blank";
+
       const img = document.createElement("img");
       img.src = doc.image;
       img.alt = "Illustration";
       img.className = "doc-img";
 
-      const link = document.createElement("a");
-      link.href = doc.url;
-      link.textContent = "Voir le document";
-      link.className = "doc-link";
-      link.target = "_blank";
+      link.appendChild(img);
 
       element.appendChild(title);
-      element.appendChild(img);
       element.appendChild(link);
     }
 
