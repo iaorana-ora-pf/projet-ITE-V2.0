@@ -77,7 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', function () {
       const query = this.value.toLowerCase();
       document.querySelectorAll('.bibli-card').forEach(card => {
-        const title = card.querySelector('.doc-title').textContent.toLowerCase();
+       const titleEl = card.querySelector('.doc-title');
+const title = titleEl ? titleEl.textContent.toLowerCase() : '';
+
         card.style.display = title.includes(query) ? 'block' : 'none';
       });
     });
