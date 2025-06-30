@@ -17,10 +17,11 @@ body {
   color: var(--dark-text);
   height: 100%;
   }
-body, html {
-  overflow-x: hidden;
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 .bibli-header {
   text-align: center;
@@ -97,36 +98,31 @@ body, html {
 }
 
 .bibli-container {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-height: 75vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 1rem;
-}
-#bibli-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 4 par ligne */
-  gap: 1.5rem;
-  max-height: 75vh; /* hauteur visible */
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding: 1rem;
-}
-.bibli-card {
-  height: 360px; /* taille fixe */
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.doc-title {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  min-height: 60px; /* pour fixer l’espace du titre */
+.bibli-card {
+  background-color: #EDE7E3; /* fond beige clair */
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px; /* largeur fixe */
+  height: 300px; /* hauteur fixe */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
+
+.bibli-card:hover {
+  background-color: white; /* fond beige clair */
+}
+
 .bibli-card h2 {
   font-size: 1.2rem;
   text-align: center;
@@ -134,12 +130,11 @@ body, html {
 }
 
 .doc-img {
+  max-width: 100%;
+  max-height: 180px; /* Limite la hauteur */
   object-fit: contain;
-  height: 180px;
-  margin-top: auto;
-}
-.hidden {
-  display: none !important;
+  margin: 0 auto 1rem;
+  display: block;
 }
 
 .doc-link {
