@@ -71,10 +71,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   toggleBtn.addEventListener("click", () => {
-    isListView = !isListView;
-    toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
-    loadDocuments(sortSelect.value);
-  });
+  isListView = !isListView;
+  toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+
+  const instruction = document.getElementById("doc-instruction");
+  if (instruction) {
+    instruction.innerHTML = isListView
+      ? "<em>Pour accéder au document, cliquer sur le titre.</em>"
+      : "<em>Pour accéder au document, cliquer sur l'image correspondante</em>";
+  }
+
+  loadDocuments(sortSelect.value);
+});
 
   // Admin modal access
   const adminBtn = document.getElementById("admin-access-btn");
