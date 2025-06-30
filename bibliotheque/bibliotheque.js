@@ -74,12 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDocuments(sortSelect.value);
   });
 
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    document.querySelectorAll("#bibli-container > *").forEach((el) => {
-      el.style.display = el.textContent.toLowerCase().includes(query) ? "block" : "none";
-    });
+ searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  document.querySelectorAll("#bibli-container > *").forEach((el) => {
+    const match = el.textContent.toLowerCase().includes(query);
+    el.classList.toggle("hidden", !match);
   });
+});
 
   toggleBtn.addEventListener("click", () => {
     isListView = !isListView;
