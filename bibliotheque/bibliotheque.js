@@ -3,7 +3,7 @@ const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'tr
 
 async function loadDocuments(sortOrder = 'az') {
   try {
-    const response = await fetch('./bibliotheque.json');
+    const response = await fetch('./bibliotheque/bibliotheque.json');
     const documents = await response.json();
 
     // Tri
