@@ -1,4 +1,4 @@
- :root {
+:root {
   --main-green: #048B9A;
   --hover-green: #02616B;
   --link-green: #048B9A;
@@ -15,7 +15,8 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: white;
   color: var(--dark-text);
-}
+  height: 100%;
+  }
 html, body {
   height: 100%;
   margin: 0;
@@ -35,75 +36,6 @@ html, body {
   color: #048B9A;
 }
 
-#bibli-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
-  overflow-x: unset !important;
-  white-space: normal !important;
-}
-
-.grid-view {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.list-view {
-  grid-template-columns: 1fr;
-}
-
-.document-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: box-shadow 0.3s;
-  background: white;
-  padding-bottom: 1rem;
-}
-
-.document-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.document-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.document-card h3 {
-  font-size: 1rem;
-  margin: 1rem 0 0 0;
-  text-align: center;
-}
-
-.view-toggle {
-  display: flex;
-  gap: 1rem;
-  margin: 1rem 2rem;
-}
-
-.view-toggle button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: white;
-}
-
-.view-toggle .active {
-  background: #eee;
-  font-weight: bold;
-}
-/* ===================== */
-/*      filtres   */
-/* ===================== */
 #search-input {
   width: 80%;
   max-width: 600px;
@@ -142,94 +74,99 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.search-sort-bar {
+
+.bibli-container {
+  flex: 1;
   display: flex;
-  align-items: center;
-  gap: 5rem;
-  margin: 2rem 0;
-  justify-content: center;
-}
-
-.search-input {
-  width: 30rem; /* 👉 réduis ici la largeur (ex: 30rem, ou 400px) */
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.sort-dropdown {
-  background-color: #048B9A;
-  color: white;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .bibli-card {
-  background-color: white;
-  border-radius: 9px;
-  padding: 1rem;
-  width: 100%;
-  max-width: unset;
+  background-color: #EDE7E3; /* fond beige clair */
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px; /* largeur fixe */
+  height: 350px; /* hauteur fixe */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
- overflow-x: unset !important;   /* tu l’avais déjà */
-  white-space: normal !important;
 }
 
 .bibli-card:hover {
   transform: translateY(-4px);
 }
 
+.bibli-card h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .doc-img {
   max-width: 100%;
-  max-height: 160px; /* Limite la hauteur */
+  max-height: 180px; /* Limite la hauteur */
   object-fit: contain;
   margin: 0 auto 1rem;
   display: block;
 }
+
+.doc-link {
+  margin-top: auto; /* pousse en bas */
+  text-decoration: none;
+  color: #1e2124;
+  margin-top: 1rem;
+  transition: color 0.3s;
+}
+
+.doc-link:hover {
+  color: orange;
+}
 .scroll-left, .scroll-right {
-
-#bibli-container.grid-view .bibli-card {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #048B9A;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
-
-#bibli-container.list-view .bibli-card {
-  flex-direction: row;
-  align-items: flex-start;
+.scroll-left { left: 10px; }
+.scroll-right { right: 10px; }
+.scroll-buttons {
+  display: flex;
+  justify-content: center;
   gap: 1rem;
-  max-width: 100%;
+  margin: 1rem 0;
+}
+.scroll-buttons button {
+  background-color: orange;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-#bibli-container.list-view .doc-img {
-  max-width: 120px;
-  max-height: 120px;
-}
-#bibli-container.grid-view .bibli-card {
-  flex-direction: column;
-  max-width: 100%;
-}
-
-#bibli-container.list-view {
-  grid-template-columns: 1fr;
-}
-
-#bibli-container.list-view .bibli-card {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-#bibli-container.list-view .doc-img {
-  max-width: 120px;
-  max-height: 120px;
+.scroll-buttons button:hover {
+  background-color: #d97706; /* orange foncé */
+  transform: scale(1.1);
 }
 /* ===================== */
 /*       HOME       */
