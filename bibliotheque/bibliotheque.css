@@ -104,6 +104,21 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.sort-toggle-btn {
+  background-color: #048B9A;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.sort-toggle-btn:hover {
+  background-color: #02616B;
+}
 /* ===================== */
 /*       CARDS      */
 /* ===================== */
