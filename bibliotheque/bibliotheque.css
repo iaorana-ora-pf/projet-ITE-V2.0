@@ -104,37 +104,24 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.sort-toggle-btn {
+
+/* Style unifié pour TOUS les boutons */
+.search-sort-bar button {
   background-color: #048B9A;
   color: white;
-  padding: 0.8rem 1.2rem;
   border: none;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
-  font-weight: bold;
   font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-.sort-toggle-btn:hover {
-  background-color: #02616B;
-}
-button.sort-dropdown,
-button#toggle-view {
-  background-color: #048B9A;  /* bleu principal */
-  color: white;               /* texte blanc */
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
-button.sort-dropdown:hover,
-button#toggle-view:hover {
-  background-color: #02616B; /* bleu foncé au survol */
-  transform: scale(1.05);
+
+.search-sort-bar button:hover {
+  background-color: #02616B;
 }
 /* ===================== */
 /*       CARDS      */
