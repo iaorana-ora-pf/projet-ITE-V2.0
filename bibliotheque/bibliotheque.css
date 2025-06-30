@@ -164,36 +164,29 @@ html, body {
   font-weight: bold;
   cursor: pointer;
 }
-.bibli-container {
-  flex: 1;
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 1rem;
+#bibli-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .bibli-card {
-  background-color: #EDE7E3; /* fond beige clair */
+  background-color: white;
   border-radius: 9px;
-  padding: 1.5rem;
-  width: 280px; /* largeur fixe */
-  height: 300px; /* hauteur fixe */
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  justify-content: flex-start;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s ease;
 }
 
 .bibli-card:hover {
   transform: translateY(-4px);
-}
-
-.bibli-card h2 {
-  font-size: 1.2rem;
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 .doc-img {
@@ -202,18 +195,6 @@ html, body {
   object-fit: contain;
   margin: 0 auto 1rem;
   display: block;
-}
-
-.doc-link {
-  margin-top: auto; /* pousse en bas */
-  text-decoration: none;
-  color: #1e2124;
-  margin-top: 1rem;
-  transition: color 0.2s;
-}
-
-.doc-link:hover {
-  color: orange;
 }
 .scroll-left, .scroll-right {
   position: absolute;
