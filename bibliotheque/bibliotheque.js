@@ -82,17 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const scrollLeft = document.querySelector('.scroll-left');
-  const scrollRight = document.querySelector('.scroll-right');
-  if (scrollLeft && scrollRight) {
-    scrollLeft.addEventListener('click', () => {
-      document.getElementById('bibli-container').scrollBy({ left: -300, behavior: 'smooth' });
-    });
-    scrollRight.addEventListener('click', () => {
-      document.getElementById('bibli-container').scrollBy({ left: 300, behavior: 'smooth' });
-    });
-  }
-
   if (isAdmin) document.body.classList.add('admin-visible');
 
   const gridBtn = document.getElementById('grid-view');
