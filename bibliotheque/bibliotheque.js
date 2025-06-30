@@ -27,25 +27,25 @@ async function loadDocuments() {
       element.textContent = doc.label;
       element.target = "_blank";
     } else {
-      element = document.createElement("div");
-      element.className = "bibli-card";
-
-      const title = document.createElement("h2");
-      title.className = "doc-title";
-      title.textContent = doc.label;
-
       const link = document.createElement("a");
-      link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
-      link.target = "_blank";
+link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+link.target = "_blank";
+link.className = "bibli-card"; // Le lien devient la carte entière
+link.style.textDecoration = "none"; // retire soulignement
 
-      const img = document.createElement("img");
-      img.src = doc.image;
-      img.alt = "Illustration du document";
-      img.className = "doc-img";
+const title = document.createElement("h2");
+title.className = "doc-title";
+title.textContent = doc.label;
 
-      link.appendChild(img);
-      element.appendChild(title);
-      element.appendChild(link);
+const img = document.createElement("img");
+img.src = doc.image;
+img.alt = "Illustration du document";
+img.className = "doc-img";
+
+link.appendChild(title);
+link.appendChild(img);
+element = link;
+
     }
 
     container.appendChild(element);
