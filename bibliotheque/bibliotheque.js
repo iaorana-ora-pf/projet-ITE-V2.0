@@ -1,33 +1,32 @@
 const isAdmin = new URLSearchParams(window.location.search).get("admin") === "true";
 let isListView = false;
+let currentSort = "az"; // Tri par défaut
 
-async function loadDocuments(sortOrder = "az") {
+async function loadDocuments() {
   const response = await fetch("./bibliotheque/bibliotheque.json");
   let documents = await response.json();
 
+  // Tri
   documents.sort((a, b) => {
-    return sortOrder === "az"
+    return currentSort === "az"
       ? a.label.localeCompare(b.label)
       : b.label.localeCompare(a.label);
   });
 
   const container = document.getElementById("bibli-container");
   container.innerHTML = "";
-
-  // Toggle list/grid class
   container.classList.toggle("list-mode", isListView);
 
   documents.forEach((doc) => {
     let element;
 
-if (isListView) {
-  element = document.createElement("a");
-  element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
-  element.className = "doc-list-item";
-  element.textContent = doc.label;
-  element.target = "_blank";
-}
-else {
+    if (isListView) {
+      element = document.createElement("a");
+      element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+      element.className = "doc-list-item";
+      element.textContent = doc.label;
+      element.target = "_blank";
+    } else {
       element = document.createElement("div");
       element.className = "bibli-card";
 
@@ -54,38 +53,43 @@ else {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const sortSelect = document.getElementById("sort-select");
   const searchInput = document.getElementById("search-input");
-  const toggleBtn = document.getElementById("toggle-view");
+  const toggleViewBtn = document.getElementById("toggle-view");
+  const toggleSortBtn = document.getElementById("toggle-sort");
+  const instruction = document.getElementById("doc-instruction");
 
   loadDocuments();
 
-  sortSelect.addEventListener("change", () => {
-    loadDocuments(sortSelect.value);
-  });
-
+  // 🔍 Recherche
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.toLowerCase();
     document.querySelectorAll("#bibli-container > *").forEach((el) => {
-      el.style.display = el.textContent.toLowerCase().includes(query) ? "block" : "none";
+      el.style.display = el.textContent.toLowerCase().includes(query) ? "" : "none";
     });
   });
 
-  toggleBtn.addEventListener("click", () => {
-  isListView = !isListView;
-  toggleBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
+  // 🔄 Vue Grille / Liste
+  toggleViewBtn.addEventListener("click", () => {
+    isListView = !isListView;
+    toggleViewBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
 
-  const instruction = document.getElementById("doc-instruction");
-  if (instruction) {
-    instruction.innerHTML = isListView
-      ? "<em>Pour accéder au document, cliquer sur le titre.</em>"
-      : "<em>Pour accéder au document, cliquer sur l'image correspondante</em>";
-  }
+    if (instruction) {
+      instruction.innerHTML = isListView
+        ? "<em>Pour accéder au document, cliquer sur le titre.</em>"
+        : "<em>Pour accéder au document, cliquer sur l'image correspondante</em>";
+    }
 
-  loadDocuments(sortSelect.value);
-});
+    loadDocuments();
+  });
 
-  // Admin modal access
+  // 🔃 Tri A ↔ Z
+  toggleSortBtn.addEventListener("click", () => {
+    currentSort = currentSort === "az" ? "za" : "az";
+    toggleSortBtn.textContent = currentSort === "az" ? "Tri A → Z" : "Tri Z → A";
+    loadDocuments();
+  });
+
+  // 🔐 Admin access modal
   const adminBtn = document.getElementById("admin-access-btn");
   const adminModal = document.getElementById("admin-modal");
   const closeModal = document.getElementById("close-admin-modal");
