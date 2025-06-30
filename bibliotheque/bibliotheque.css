@@ -143,6 +143,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: inherit;
 }
 .bibli-card:hover {
   background-color: #EDE7E3; /* fond beige clair */
@@ -152,6 +153,7 @@ html, body {
   font-size: 1rem;
   text-align: center;
   margin-bottom: 1rem;
+  color: #1e2124; /* ou var(--dark-text) si tu préfères */
 }
 
 .doc-img {
