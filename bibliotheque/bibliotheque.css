@@ -71,6 +71,8 @@ html, body {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  min-width: 160px;  /* force une largeur mini */
+  text-align: center;
 }
 .search-sort-container input,
 .search-sort-container select {
