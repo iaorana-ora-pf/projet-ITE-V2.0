@@ -118,13 +118,14 @@ html, body {
 
 .clear-btn {
   position: absolute;
-  right: 12px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 1.2rem;
-  color: #999;
+  color: orange;
   display: none;
+  font-weight: bold;
 }
 
 #search-input:not(:placeholder-shown) + .clear-btn {
