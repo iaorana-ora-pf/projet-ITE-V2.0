@@ -121,7 +121,7 @@ yearLabel.setAttribute("data-year", year);
   items.forEach(ev => {
     const evDiv = document.createElement("div");
     evDiv.className = "event-item";
-    evDiv.onclick = () => window.open(`fiches/${ev.slug}.html`, "_blank");
+    evDiv.onclick = () => window.open(`fiches/${ev.id}.html`, "_blank");
 
     const icons = (ev.categories || []).map(cat => {
       const info = categoryInfo[cat];
