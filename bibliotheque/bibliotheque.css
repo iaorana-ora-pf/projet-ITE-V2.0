@@ -140,18 +140,26 @@ html, body {
   object-fit: contain;
   margin-top: auto;
 }
+/* 📋 Mode liste simple */
+.list-mode {
+  display: block !important;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
 .doc-list-item {
   display: block;
-  margin-bottom: 0.75rem;
   font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
   color: #048B9A;
   text-decoration: none;
-  padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
+  transition: background-color 0.2s;
 }
+
 .doc-list-item:hover {
+  background-color: #f0f0f0;
   color: var(--highlight-orange);
-  background: #f5f0ed;
 }
 /* ===================== */
 /*       HOME       */
