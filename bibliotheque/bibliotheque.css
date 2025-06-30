@@ -218,11 +218,7 @@ display: block;
 /* ===================== */
 
 @media (max-width: 600px) {
-  #search-input {
-    width: 95%;
-  }
-
-  .bibli-card {
+   .bibli-card {
     padding: 1rem;
   }
   .bibli-container {
@@ -237,6 +233,12 @@ display: block;
     font-size: 1rem;
     width: 100%;
     max-width: 300px;
+  }
+   #search-input {
+    width: 90%;
+    max-width: 100%;
+    font-size: 1rem;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 768px) {
