@@ -96,22 +96,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if (isAdmin) document.body.classList.add('admin-visible');
 
   const gridBtn = document.getElementById('grid-view');
-  const listBtn = document.getElementById('list-view');
-  const container = document.getElementById('bibli-container');
+const listBtn = document.getElementById('list-view');
+const viewContainer = document.getElementById('bibli-container');
 
-  if (gridBtn && listBtn && container) {
-    gridBtn.addEventListener('click', () => {
-      container.classList.remove('list-view');
-      container.classList.add('grid-view');
-      gridBtn.classList.add('active');
-      listBtn.classList.remove('active');
-    });
 
-    listBtn.addEventListener('click', () => {
-      container.classList.remove('grid-view');
-      container.classList.add('list-view');
-      listBtn.classList.add('active');
-      gridBtn.classList.remove('active');
-    });
-  }
+  if (gridBtn && listBtn && viewContainer) {
+  gridBtn.addEventListener("click", () => {
+    viewContainer.classList.remove("list-view");
+    viewContainer.classList.add("grid-view");
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
+  });
+
+  listBtn.addEventListener("click", () => {
+    viewContainer.classList.remove("grid-view");
+    viewContainer.classList.add("list-view");
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
+  });
+}
+
 });
