@@ -104,16 +104,12 @@ html, body {
   gap: 1rem;
   padding: 1rem;
 }
-.doc-title {
-  font-size: 1.1rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  flex-shrink: 0;
-}
+
 .bibli-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 220px; /
   height: 350px; /* fixe la hauteur */
   padding: 1rem;
   background:  #EDE7E3;
