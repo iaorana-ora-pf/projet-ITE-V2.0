@@ -64,11 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDocuments(sortSelect.value);
   });
 
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    document.querySelectorAll("#bibli-container > *").forEach((el) => {
-      el.style.display = el.textContent.toLowerCase().includes(query) ? "block" : "none";
-    });
+const items = document.querySelectorAll("#bibli-container > *");
+items.forEach((el) => {
+  const match = el.textContent.toLowerCase().includes(query);
+  el.style.display = match ? "" : "none";
+});
+
   });
 
   toggleBtn.addEventListener("click", () => {
