@@ -11,9 +11,9 @@
 <body>
   <header class="bibli-header">
     <h1>Documents et ressources</h1>
-  <div class="search-sort-bar">
   <button id="toggle-view">Vue en liste</button>
-  <button id="sort-toggle">Tri A → Z</button>
+  <button id="toggle-sort" class="sort-toggle">Trier de A à Z</button>
+   <div class="search-sort-bar">
   <input type="text" id="search-input" placeholder="Rechercher un document...">
 </div>
 
@@ -27,7 +27,7 @@
     <p>Projet'ITE - © 2025 – Tous droits réservés -  <a href="mailto:contact@paanapf.com"><i class="fas fa-envelope" style="color: #048B9A;"></i></a> </p>
   </footer>
 
-  <a href="./index.html" class="home-button" title="Retour à l'accueil">
+  <a href="./index.html" class="home-button" title="Accueil">
     <i class="fas fa-home"></i>
   </a>
 <!-- Bouton Admin -->
@@ -35,17 +35,6 @@
   <i class="fas fa-lock"></i>
 </button>
 
-<!-- Modal Admin -->
-<div id="admin-modal" class="admin-modal hidden">
-  <div class="admin-modal-content">
-    <span id="close-admin-modal" class="admin-close">&times;</span>
-    <h3>Entrer le code admin</h3>
-    <input type="password" id="admin-code-input" placeholder="Code secret">
-    <button id="validate-admin-code">Valider</button>
-    <div id="admin-error" class="admin-error-msg"></div>
-  </div>
-</div>
-
-  <script src="./bibliotheque/bibliotheque.js"></script>
+<script src="./bibliotheque/bibliotheque.js"></script>
 </body>
 </html>
