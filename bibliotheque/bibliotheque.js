@@ -14,38 +14,53 @@ async function loadDocuments(sortOrder = 'az') {
   const container = document.getElementById('bibli-container');
   container.innerHTML = '';
 
-  documents.forEach(doc => {
-    const card = document.createElement('a');
-    card.className = 'bibli-card';
-    card.href = doc.url;
-    card.target = '_blank';
+documents.forEach(doc => {
+  const card = document.createElement('div');
+  card.className = 'bibli-card';
 
-    const image = document.createElement('img');
-    image.src = doc.image;
-    image.alt = "Illustration du document";
-    image.className = 'doc-img';
+  // Lien cliquable autour de l'image
+  const imageLink = document.createElement('a');
+  imageLink.href = doc.url;
+  imageLink.target = '_blank';
+  imageLink.rel = 'noopener noreferrer';
 
-    const title = document.createElement('h2');
-    title.classList.add('doc-title');
-    title.textContent = doc.label;
+  const image = document.createElement('img');
+  image.src = doc.image;
+  image.alt = "Illustration du document";
+  image.className = 'doc-img';
 
-    // Statut pour admin
-    if (isAdmin && doc.statut) {
-      const statutClass = {
-        'traite': 'statut-traite',
-        'a_finir': 'statut-a-finir',
-        'non_initie': 'statut-non-initie'
-      }[doc.statut];
-      if (statutClass) {
-        title.classList.add(statutClass);
-      }
+  imageLink.appendChild(image);
+  card.appendChild(imageLink);
+
+  // Lien cliquable autour du titre
+  const titleLink = document.createElement('a');
+  titleLink.href = doc.url;
+  titleLink.target = '_blank';
+  titleLink.rel = 'noopener noreferrer';
+
+  const title = document.createElement('h2');
+  title.classList.add('doc-title');
+  title.textContent = doc.label;
+
+  // Ajout du statut si admin
+  if (isAdmin && doc.statut) {
+    const statutClass = {
+      'traite': 'statut-traite',
+      'a_finir': 'statut-a-finir',
+      'non_initie': 'statut-non-initie'
+    }[doc.statut];
+    if (statutClass) {
+      title.classList.add(statutClass);
     }
+  }
 
-    card.appendChild(image);
-    card.appendChild(title);
-    container.appendChild(card);
-  });
-}
+  titleLink.appendChild(title);
+  card.appendChild(titleLink);
+
+  container.appendChild(card);
+});
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   loadDocuments('az'); // Initial load
