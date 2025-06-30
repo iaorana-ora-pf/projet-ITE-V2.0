@@ -120,7 +120,7 @@ html, body {
 }
 
 .bibli-card:hover {
-  background-color: #5F5F5F; /* fond beige clair */
+  background-color: white; /* fond beige clair */
 }
 
 .bibli-card h2 {
