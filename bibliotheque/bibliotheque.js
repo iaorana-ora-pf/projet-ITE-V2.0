@@ -15,90 +15,98 @@ async function loadDocuments(sortOrder = 'az') {
   container.innerHTML = '';
 
   documents.forEach(doc => {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
     card.className = 'bibli-card';
+    card.href = doc.url;
+    card.target = '_blank';
 
-    // ✅ Titre avec statut coloré si mode admin
+    const image = document.createElement('img');
+    image.src = doc.image;
+    image.alt = "Illustration du document";
+    image.className = 'doc-img';
+
     const title = document.createElement('h2');
     title.classList.add('doc-title');
     title.textContent = doc.label;
 
+    // Statut pour admin
     if (isAdmin && doc.statut) {
       const statutClass = {
         'traite': 'statut-traite',
         'a_finir': 'statut-a-finir',
         'non_initie': 'statut-non-initie'
       }[doc.statut];
-
       if (statutClass) {
         title.classList.add(statutClass);
       }
     }
 
-    // ✅ Image et lien vers le PDF (affiché via Google Viewer)
-    const image = document.createElement('img');
-    image.src = doc.image;
-    image.alt = "Illustration du document";
-    image.className = 'doc-img';
-
-    const link = document.createElement('a');
-    link.className = 'doc-link';
-    link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
-    link.target = '_blank';
-    link.textContent = "Voir le document";
-
-    // ✅ Ajout dans la carte
-    card.appendChild(title);
     card.appendChild(image);
-    card.appendChild(link);
-
+    card.appendChild(title);
     container.appendChild(card);
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  loadDocuments('az'); // Chargement initial
+  loadDocuments('az'); // Initial load
 
-  document.getElementById('sort-select').addEventListener('change', function () {
-    loadDocuments(this.value);
-  });
-
-  document.getElementById('search-input').addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    document.querySelectorAll('.bibli-card').forEach(card => {
-      const title = card.querySelector('.doc-title').textContent.toLowerCase();
-      card.style.display = title.includes(query) ? 'block' : 'none';
+  const sortSelect = document.getElementById('sort-select');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', function () {
+      loadDocuments(this.value);
     });
-  });
+  }
 
-  document.querySelector('.scroll-left').addEventListener('click', () => {
-    document.getElementById('bibli-container').scrollBy({ left: -300, behavior: 'smooth' });
-  });
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      const query = this.value.toLowerCase();
+      document.querySelectorAll('.bibli-card').forEach(card => {
+        const title = card.querySelector('.doc-title').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'block' : 'none';
+      });
+    });
+  }
 
-  document.querySelector('.scroll-right').addEventListener('click', () => {
-    document.getElementById('bibli-container').scrollBy({ left: 300, behavior: 'smooth' });
-  });
+  // Scroll arrows
+  const scrollLeft = document.querySelector('.scroll-left');
+  const scrollRight = document.querySelector('.scroll-right');
+  if (scrollLeft && scrollRight) {
+    scrollLeft.addEventListener('click', () => {
+      document.getElementById('bibli-container').scrollBy({ left: -300, behavior: 'smooth' });
+    });
+    scrollRight.addEventListener('click', () => {
+      document.getElementById('bibli-container').scrollBy({ left: 300, behavior: 'smooth' });
+    });
+  }
 
-  // ✅ Ajouter une classe au body pour activer un style admin visible
+  // Admin style activation
   if (isAdmin) {
     document.body.classList.add('admin-visible');
   }
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const adminBtn = document.getElementById("admin-toggle-btn");
-  if (adminBtn) {
-    adminBtn.addEventListener("click", () => {
-      const code = prompt("Code admin ?");
-      if (code === "bazinga") {
-        localStorage.setItem("isAdmin", "true");
-        window.location.reload();
-      } else {
-        alert("Code incorrect");
-      }
+
+  // Vue grille/liste
+  const gridBtn = document.getElementById("grid-view");
+  const listBtn = document.getElementById("list-view");
+  const container = document.getElementById("bibli-container");
+
+  if (gridBtn && listBtn && container) {
+    gridBtn.addEventListener("click", () => {
+      container.classList.remove("list-view");
+      container.classList.add("grid-view");
+      gridBtn.classList.add("active");
+      listBtn.classList.remove("active");
+    });
+
+    listBtn.addEventListener("click", () => {
+      container.classList.remove("grid-view");
+      container.classList.add("list-view");
+      listBtn.classList.add("active");
+      gridBtn.classList.remove("active");
     });
   }
-});
-document.addEventListener("DOMContentLoaded", () => {
+
+  // Admin modal (sécurité par code)
   const adminBtn = document.getElementById("admin-access-btn");
   const adminModal = document.getElementById("admin-modal");
   const closeModal = document.getElementById("close-admin-modal");
@@ -134,31 +142,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-const container = document.getElementById("bibli-container");
-const gridBtn = document.getElementById("grid-view");
-const listBtn = document.getElementById("list-view");
-
-gridBtn.addEventListener("click", () => {
-  container.classList.remove("list-view");
-  container.classList.add("grid-view");
-  gridBtn.classList.add("active");
-  listBtn.classList.remove("active");
-});
-
-listBtn.addEventListener("click", () => {
-  container.classList.remove("grid-view");
-  container.classList.add("list-view");
-  listBtn.classList.add("active");
-  gridBtn.classList.remove("active");
-});
-function createCard(doc) {
-  const card = document.createElement("a");
-  card.className = "document-card";
-  card.href = doc.lien;
-  card.target = "_blank";
-  card.innerHTML = `
-    <img src="${doc.image}" alt="Aperçu du document">
-    <h3>${doc.titre}</h3>
-  `;
-  document.getElementById("bibli-container").appendChild(card);
-}
