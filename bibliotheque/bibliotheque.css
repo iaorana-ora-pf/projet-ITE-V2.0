@@ -105,18 +105,33 @@ html, body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.clear-btn {
-  position: absolute;
-  right: 10px;
-  font-size: 1.2rem;
-  color: #999;
-  cursor: pointer;
-  user-select: none;
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
 }
 
-.clear-btn:hover {
-  color: #333;
+#search-input {
+  width: 100%;
+  padding-right: 2rem; /* espace pour la croix */
 }
+
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #999;
+  display: none;
+}
+
+#search-input:not(:placeholder-shown) + .clear-btn {
+  display: block;
+}
+
+
 /* Style unifié pour TOUS les boutons */
 .search-sort-bar button {
   background-color: #048B9A;
