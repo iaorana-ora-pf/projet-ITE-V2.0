@@ -105,11 +105,12 @@ html, body {
 /* ===================== */
 .bibli-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* jusqu'à 4 par ligne */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* max 4 par ligne */
   gap: 1.5rem;
   padding: 1rem;
-  max-height: 75vh;
+  max-height: 75vh;       /* zone scrollable */
   overflow-y: auto;
+  overflow-x: hidden;     /* désactive le scroll horizontal */
 }
 
 .bibli-card {
