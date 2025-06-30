@@ -56,8 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
   const toggleViewBtn = document.getElementById("toggle-view");
   const toggleSortBtn = document.getElementById("toggle-sort");
-  const instruction = document.getElementById("doc-instruction");
-
+ 
   loadDocuments();
 
   // 🔍 Recherche
@@ -72,12 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleViewBtn.addEventListener("click", () => {
     isListView = !isListView;
     toggleViewBtn.textContent = isListView ? "Vue en grille" : "Vue en liste";
-
-    if (instruction) {
-      instruction.innerHTML = isListView
-        ? "<em>Pour accéder au document, cliquer sur le titre.</em>"
-        : "<em>Pour accéder au document, cliquer sur l'image correspondante</em>";
-    }
 
     loadDocuments();
   });
