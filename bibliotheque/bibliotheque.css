@@ -152,18 +152,16 @@ html, body {
 }
 
 .doc-list-item {
-  display: block;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid #ddd;
-  color: #048B9A;
+display: block;
+  padding: 0.6rem 1rem;
+  font-size: 1.1rem;
+  color: var(--main-green);
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: color 0.3s;
 }
 
 .doc-list-item:hover {
-  background-color: #f0f0f0;
-  color: var(--highlight-orange);
+  color: orange;
 }
 /* ===================== */
 /*       HOME       */
