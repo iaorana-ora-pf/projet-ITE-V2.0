@@ -117,7 +117,7 @@ html, body {
   background-color:white;
   border-radius: 10px;
   padding: 1.5rem;
-  width: 80%; /* prend toute la largeur de sa cellule */
+  width: 70%; /* prend toute la largeur de sa cellule */
   height: 180px; /* taille fixe */
   display: flex;
   flex-direction: column;
