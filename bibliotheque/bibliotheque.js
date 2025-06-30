@@ -134,3 +134,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+const container = document.getElementById("bibli-container");
+const gridBtn = document.getElementById("grid-view");
+const listBtn = document.getElementById("list-view");
+
+gridBtn.addEventListener("click", () => {
+  container.classList.remove("list-view");
+  container.classList.add("grid-view");
+  gridBtn.classList.add("active");
+  listBtn.classList.remove("active");
+});
+
+listBtn.addEventListener("click", () => {
+  container.classList.remove("grid-view");
+  container.classList.add("list-view");
+  listBtn.classList.add("active");
+  gridBtn.classList.remove("active");
+});
+function createCard(doc) {
+  const card = document.createElement("a");
+  card.className = "document-card";
+  card.href = doc.lien;
+  card.target = "_blank";
+  card.innerHTML = `
+    <img src="${doc.image}" alt="Aperçu du document">
+    <h3>${doc.titre}</h3>
+  `;
+  document.getElementById("bibli-container").appendChild(card);
+}
