@@ -76,3 +76,39 @@ document.addEventListener("DOMContentLoaded", () => {
     loadDocuments(sortSelect.value);
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const adminBtn = document.getElementById("admin-access-btn");
+  const adminModal = document.getElementById("admin-modal");
+  const closeModal = document.getElementById("close-admin-modal");
+  const submitBtn = document.getElementById("validate-admin-code");
+  const errorMsg = document.getElementById("admin-error");
+
+  if (adminBtn && adminModal) {
+    adminBtn.addEventListener("click", () => {
+      adminModal.classList.remove("hidden");
+      errorMsg.textContent = "";
+      document.getElementById("admin-code-input").value = "";
+    });
+
+    closeModal.addEventListener("click", () => {
+      adminModal.classList.add("hidden");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === adminModal) {
+        adminModal.classList.add("hidden");
+      }
+    });
+
+    submitBtn.addEventListener("click", () => {
+      const code = document.getElementById("admin-code-input").value.trim();
+      if (code === "bazinga") {
+        const url = new URL(window.location.href);
+        url.searchParams.set("admin", "true");
+        window.location.href = url.toString();
+      } else {
+        errorMsg.textContent = "Code incorrect.";
+      }
+    });
+  }
+});
