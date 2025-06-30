@@ -30,7 +30,18 @@ async function loadDocuments(sortOrder = "az") {
       const title = document.createElement("h2");
       title.className = "doc-title";
       title.textContent = doc.label;
+// Coloration conditionnelle si mode admin activé
+if (isAdmin && doc.statut) {
+  const statutClass = {
+    'traite': 'statut-traite',
+    'a_finir': 'statut-a-finir',
+    'non_initie': 'statut-non-initie'
+  }[doc.statut];
 
+  if (statutClass) {
+    title.classList.add(statutClass);
+  }
+}
       const link = document.createElement('a');
 link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
 link.target = "_blank";
