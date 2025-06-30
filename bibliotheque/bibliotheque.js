@@ -31,16 +31,18 @@ async function loadDocuments(sortOrder = "az") {
       title.className = "doc-title";
       title.textContent = doc.label;
 
-      const link = document.createElement("a");
-      link.href = doc.url;
-      link.target = "_blank";
+      const link = document.createElement('a');
+link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+link.target = "_blank";
 
-      const img = document.createElement("img");
-      img.src = doc.image;
-      img.alt = "Illustration";
-      img.className = "doc-img";
+const img = document.createElement('img');
+img.src = doc.image;
+img.alt = "Illustration du document";
+img.className = 'doc-img';
 
-      link.appendChild(img);
+link.appendChild(img);
+
+      
 
       element.appendChild(title);
       element.appendChild(link);
