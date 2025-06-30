@@ -81,5 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleSortBtn.textContent = currentSort === "az" ? "Tri A → Z" : "Tri Z → A";
     loadDocuments();
   });
-
+  }
+});
   
