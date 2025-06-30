@@ -76,12 +76,13 @@ html, body {
 .search-sort-bar {
   display: flex;
   align-items: center;
-  gap: 4rem; /* l’espacement entre les deux éléments */
-  margin-bottom: 2rem; /* optionnel, pour espacer du reste */
+  gap: 5rem;
+  margin: 2rem 0;
+  justify-content: center;
 }
 
 .search-input {
-  flex: 1; /* prend tout l'espace restant */
+  width: 30rem; /* 👉 réduis ici la largeur (ex: 30rem, ou 400px) */
   padding: 0.8rem 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
