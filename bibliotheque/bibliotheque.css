@@ -225,6 +225,19 @@ display: block;
   .bibli-card {
     padding: 1rem;
   }
+  .bibli-container {
+    grid-template-columns: 1fr; /* 1 carte par ligne */
+    padding-bottom: 6rem;
+  }
+  .search-sort-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .search-sort-bar button {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
 }
 @media (max-width: 768px) {
 
