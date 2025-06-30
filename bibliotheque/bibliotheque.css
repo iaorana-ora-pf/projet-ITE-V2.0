@@ -140,6 +140,19 @@ html, body {
   object-fit: contain;
   margin-top: auto;
 }
+.doc-list-item {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #048B9A;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+.doc-list-item:hover {
+  color: var(--highlight-orange);
+  background: #f5f0ed;
+}
 /* ===================== */
 /*       HOME       */
 /* ===================== */
