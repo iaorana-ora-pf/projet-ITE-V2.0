@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projet'ITE</title>
-  <link rel="stylesheet" href="./css/frise.css" />
+  <link rel="stylesheet" href="./frise/frise.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -91,25 +91,11 @@
   </div>
 
   <!-- JS Script -->
-  <script src="./js/frise.js"></script>
+  <script src="./frise/frise.js"></script>
 
-  <a href="index.html" class="home-button" title="Retour à l'accueil">
+  <a href="index.html" class="home-button" title="Accueil">
   <i class="fas fa-home"></i>
 </a>
-<!-- Bouton Admin -->
-<button id="admin-access-btn" title="Accès admin">
-  <i class="fas fa-lock"></i>
-</button>
 
-<!-- Modal de connexion Admin -->
-<div id="admin-modal" class="admin-modal hidden">
-  <div class="admin-modal-content">
-    <span id="close-admin-modal" class="close-btn">&times;</span>
-    <h3>Accès administrateur</h3>
-    <input type="password" id="admin-code-input" placeholder="Code secret">
-    <button id="validate-admin-code">Valider</button>
-    <p id="admin-error" class="admin-error"></p>
-  </div>
-</div>
 </body>
 </html>
