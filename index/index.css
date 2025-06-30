@@ -100,14 +100,14 @@ body {
   background-color: var(--main-green);
   color: white;
   text-decoration: none;
-  padding: 0.9rem 1.5rem;
+  padding: 0.9rem 1.2rem;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 .welcome-btn:hover {
   background-color: var(--hover-green);
