@@ -11,14 +11,16 @@
 <body>
   <header class="bibli-header">
     <h1>Documents et ressources</h1>
-   <p><em style="color: black;">Pour accéder au document, cliquer sur l'image correspondante.</em></p>
-  <div class="search-sort-bar">
-  <input id="search-input" type="text" placeholder="Rechercher un document..." class="search-input" />
+   <p><em>Pour accéder au document, cliquer sur l'image correspondante.</em></p>
+ <div class="search-sort-bar">
+  <input type="text" id="search-input" placeholder="Rechercher un document..." class="search-input" />
+  
   <select id="sort-select" class="sort-dropdown">
     <option value="az">Trier A → Z</option>
     <option value="za">Trier Z → A</option>
   </select>
-   <button id="toggle-view">Liste</button> <!-- 👈 Nouveau bouton -->
+  
+  <button id="toggle-view" class="sort-dropdown">Vue en liste</button>
 </div>
 
   </header>
