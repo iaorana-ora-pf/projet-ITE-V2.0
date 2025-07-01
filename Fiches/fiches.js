@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const suggestionEl = document.querySelector(".suggestion-link");
   const currentSlug = window.location.pathname.split("/").pop();
 
-  fetch("../events.json")
+  fetch("../output/index.html")
     .then(resp => resp.text())
     .then(html => {
       const parser = new DOMParser();
