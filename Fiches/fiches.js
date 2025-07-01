@@ -8,7 +8,7 @@ const categoryInfo = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Récupère les catégories depuis l'attribut HTML data-categories
+  // Affichage des catégories avec icônes
   const catEl = document.getElementById("categories-with-icons");
   const bodyCat = document.body.dataset.categories;
 
@@ -26,24 +26,28 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Catégories mal formatées :", bodyCat);
   }
 
-  // Suggestion d'événement aléatoire dans le dossier output
+  // Suggestion d’un autre événement depuis events.json
   const suggestionEl = document.querySelector(".suggestion-link");
-  const currentSlug = window.location.pathname.split("/").pop();
+  const currentId = document.body.dataset.id;
+  const currentCategories = JSON.parse(document.body.dataset.categories || "[]");
 
-  fetch("../output/index.html")
-    .then(resp => resp.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, "text/html");
-      const links = [...doc.querySelectorAll("a")]
-        .map(a => a.getAttribute("href"))
-        .filter(href => href.endsWith(".html") && href.split("/").pop() !== currentSlug);
+  fetch("../output/events.json")
+    .then(resp => resp.json())
+    .then(events => {
+      const sameCat = events.filter(e =>
+        e.id !== currentId &&
+        e.categories.some(cat => currentCategories.includes(cat))
+      );
 
-      if (links.length > 0 && suggestionEl) {
-        const choice = links[Math.floor(Math.random() * links.length)];
-        const label = choice.replace(".html", "").replace(/-/g, " ");
-        suggestionEl.href = choice;
-        suggestionEl.textContent = label.charAt(0).toUpperCase() + label.slice(1);
+      let suggestion = sameCat.length > 0
+        ? sameCat[Math.floor(Math.random() * sameCat.length)]
+        : events.find(e => e.id !== currentId);
+
+      if (suggestion && suggestionEl) {
+        suggestionEl.href = `../output/${suggestion.id}.html`;
+        suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
+      } else if (suggestionEl) {
+        suggestionEl.textContent = "Pas d'autre événement";
       }
     });
 });
