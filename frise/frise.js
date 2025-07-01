@@ -1,6 +1,3 @@
-const isAdmin = new URLSearchParams(window.location.search).get('admin') === 'true';
-
-
 let activeCategories = [];
 let eventsData = [];
 let searchQuery = "";
@@ -79,11 +76,7 @@ const filtered = sorted.filter(event => {
 
   const matchesSearch = searchableFields.includes(searchQuery);
 
-  // En mode admin : on garde tout
-  // En mode normal : on filtre ceux non validés
-  const isVisible = isAdmin || event.validated === true;
-
-  return isVisible && matchesCategory && matchesSearch;
+  return matchesCategory && matchesSearch;
 });
 
   document.getElementById("timeline-header").textContent =
@@ -133,7 +126,6 @@ yearLabel.setAttribute("data-year", year);
     evDiv.innerHTML = `
   <div class="event-title">
     ${ev.title}
-    ${!ev.validated ? '<span class="badge-nonvalide">À valider</span>' : ''}
     <span class="event-icons">${icons}</span>
   </div>`;
     eventsBlock.appendChild(evDiv);
