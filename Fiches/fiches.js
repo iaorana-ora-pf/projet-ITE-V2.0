@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const doc = parser.parseFromString(html, "text/html");
       const links = [...doc.querySelectorAll("a")]
         .map(a => a.getAttribute("href"))
-        .filter(href => href.endsWith(".html") && href !== currentSlug);
+        .filter(href => href.endsWith(".html") && href.split("/").pop() !== currentSlug);
 
       if (links.length > 0 && suggestionEl) {
         const choice = links[Math.floor(Math.random() * links.length)];
