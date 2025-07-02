@@ -3,7 +3,7 @@
     "id": "1918-epidemie-grippe-espagnole",
     "title": "Epidémie de grippe espagnole",
     "year": 1918,
-    "description": "En novembre 1918, la grippe espagnole atteint la Polynésie française par un navire en provenance de San Francisco.Le virus se propage rapidements ur l'île de Tahiti, les îles Sous-le-Vent et l'île de Makatea.Les mesures sanitaires prises permettent d'épargner les habitants des Tuamotu, des Australes et des Marquises.L’épidémie fait environ 3 000 morts sur l'ensemble des îles touchées, soit près de 10 % de la population à l’époque.Les îles les plus durement touchées sont les Îles Sous-le-Vent, où certaines communautés perdent jusqu’à 40 % de leurs habitants, ainsi que Tahiti, avec environ 1 200 décès concentrés autour de Papeete.",
+    "description": "En novembre 1918, la grippe espagnole atteint la Polynésie française par un navire en provenance de San Francisco.Le virus se propage rapidement  sur l'île de Tahiti, les îles Sous-le-Vent et l'île de Makatea.Les mesures sanitaires prises permettent d'épargner les habitants des Tuamotu, des Australes et des Marquises.L’épidémie fait environ 3 000 morts sur l'ensemble des îles touchées, soit près de 10 % de la population à l’époque.Les îles les plus durement touchées sont les Îles Sous-le-Vent, où certaines communautés perdent jusqu’à 40 % de leurs habitants, ainsi que Tahiti, avec environ 1 200 décès concentrés autour de Papeete.",
     "image": "",
     "categories": [
       "Protection et gestion des risques"
@@ -14,16 +14,16 @@
     ],
     "sources": [
       {
-        "id_doc": "L'histoire démographique | https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/docs/histoire-demographique.pdf"
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
       }
     ],
     "more": [
       {
         "label": "La grippe espagnole aux Iles-sous-le-Vent",
-        "url": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/ced0798b82535fcf64ee8bef298d3c68b0ca2bf9/docs/grippe-espagnole-ile-sous-le-vent.pdf"
+        "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/grippe-espagnole-ile-sous-le-vent.pdf"
       }
     ],
-    "added": "30/06/2025"
+    "added": "01/07/2025"
   },
   {
     "id": "1984-statut-autonomie-interne",
@@ -35,11 +35,12 @@
       "Contexte"
     ],
     "keywords": [
-      "Autonomie"
+      "Autonomie",
+      "Législation"
     ],
     "sources": [
       {
-        "id_doc": "Site internet du Haut-commissariat de Polynésie française | https://www.polynesie-francaise.pref.gouv.fr/Actions-de-l-Etat/Partenariat-Etat-Polynesie-francaise/Autonomie-et-repartition-des-competences?utm_source=chatgpt.com"
+        "id_doc": "Site internet du Haut-commissariat de Polynésie française | https://www.polynesie-francaise.pref.gouv.fr/Actions-de-l-Etat/Partenariat-Etat-Polynesie-francaise/Autonomie-et-repartition-des-competences"
       }
     ],
     "more": [
@@ -48,7 +49,7 @@
         "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=183960"
       }
     ],
-    "added": "30/06/2025"
+    "added": "01/07/2025"
   },
   {
     "id": "2013-premiere-greffe",
@@ -60,69 +61,81 @@
       "Accès"
     ],
     "keywords": [
-      "Greffe"
+      "Greffe",
+      "Législation"
     ],
     "sources": [
       {
-        "id_doc": "Tahiti Info | https://www.infirmiers.pf/wp-content/uploads/2022/10/CHPF_Communique%CC%81-de-Presse_Don_dorganes-Octobre2022.pdf?utm_source=chatgpt.com"
+        "id_doc": "Communiqué de presse du CHPF | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/chpf-communique-de-presse_don_organes-2022.pdf"
       }
     ],
     "more": [
+      {
+        "label": "Tahiti Info",
+        "url": "https://www.tahiti-infos.com/Le-don-d-organes-un-tapu-a-briser_a210167.html"
+      },
       {
         "label": "Reportage TNTV",
         "url": "https://www.youtube.com/watch?v=DPymhpBTkTs&t=33s"
       }
     ],
-    "added": "30/06/2025"
+    "added": "01/07/2025"
   },
   {
     "id": "2016-publication-sos-2016-2021",
     "title": "Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
     "year": 2016,
-    "description": "Le Schéma d’Organisation Sanitaire (SOS) 2016–2021 est le plan de réforme du système de santé en Polynésie française. Il fixe les grandes priorités pour améliorer les soins et l’accès à la santé, notamment dans les îles. Il propose 6 axes : mieux organiser les services, renforcer les soins de base, s’adapter aux nouveaux besoins (comme le cancer ou la santé mentale), développer la prévention (notamment contre le surpoids), mieux accompagner les personnes âgées, et créer un espace numérique de santé.",
+    "description": "Le Schéma d’Organisation Sanitaire (SOS) 2016–2021 est un plan de réforme du système de santé en Polynésie française. Il fixe les grandes priorités pour améliorer les soins et l’accès à la santé, notamment dans les îles. Il propose 6 axes : mieux organiser les services, renforcer les soins de base, s’adapter aux nouveaux besoins (comme le cancer ou la santé mentale), développer la prévention (notamment contre le surpoids), mieux accompagner les personnes âgées, et créer un espace numérique de santé.",
     "image": "",
     "categories": [
       "Gouvernance et pilotage"
     ],
     "keywords": [
       "Stratégie",
-      "Schéma"
+      "Système de santé"
     ],
     "sources": [
       {
-        "id_doc": "Schéma d'Organisation Sanitaire de Polynésie française 2016-2021 | https://github.com/iaorana-ora-pf/projet-ITE-V2.0/blob/f9e59cc71db644651b4deb3a50f4d53c68c9ce7e/docs/SOS%202016-2021.pdf"
+        "id_doc": "Schéma d'Organisation Sanitaire de Polynésie française 2016-2021 | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/SOS 2016-2021.pdf"
       }
     ],
     "more": [],
-    "added": "30/06/2025"
+    "added": "01/07/2025"
   },
   {
     "id": "2017-creation-ecole-cja-en-sante",
     "title": "Création des dispositifs \"Ecole en santé\" et \"CJA en santé\"",
     "year": 2017,
-    "description": "Les dispositfs \"Ecole en santé\" et \"CJA en santé\" (Centresde Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 à 17 ans. Ils proposent la mise en place de 10 actions prenant en compte les déterminants prioritaires de la santé des jeunes et en lien avec 10 thématiques (alimentation, activités physiques, lutte antivectorielle, etc. ). Ces actions sont identifiées, au sein de chaque établissement, par le comité de santé de l’école / du CJA.En juin 2022, 35 établissements scolaires dont 9 hors îles du Vent participaient à ces dispositifs.",
+    "description": "Les dispositifs \"Ecole en santé\" et \"CJA en santé\" (Centres de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 à 17 ans. Ils proposent la mise en place d'actions prenant en compte les déterminants prioritaires de la santé des jeunes, en lien avec 10 thématiques (alimentation, activités physiques, lutte antivectorielle, etc. ). Ces actions sont identifiées, au sein de chaque établissement, par le comité de santé de l’école / du CJA.En juin 2022, 35 établissements scolaires dont 9 hors îles du Vent participaient à ces dispositifs.",
     "image": "",
     "categories": [
       "Promotion et prévention"
     ],
     "keywords": [
-      "Dispositif",
       "Milieu scolaire",
       "Enfant",
       "Adolescent"
     ],
     "sources": [
       {
-        "id_doc": "Polynésie 1ère | https://la1ere.franceinfo.fr/polynesie/tahiti/polynesie-francaise/ecole-en-sante-un-label-pour-mieux-apprendre-en-etant-mieux-1292388.html"
+        "id_doc": "Guide de présentation Ecole et CJA en santé | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/guide-presentation-ecole-cja-en-sante.pdf"
       }
     ],
     "more": [
       {
-        "label": "Des supports de communication et des outils d'accompagnement sont disponibles sur le site de la \"Direction de la santé",
+        "label": "Direction de la santé",
+        "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante"
+      },
+      {
+        "label": "Polynésie 1ère",
+        "url": "https://la1ere.franceinfo.fr/polynesie/tahiti/polynesie-francaise/ecole-en-sante-un-label-pour-mieux-apprendre-en-etant-mieux-1292388.html"
+      },
+      {
+        "label": "Direction de la santé",
         "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante/"
       }
     ],
-    "added": "30/06/2025"
+    "added": "01/07/2025"
   },
   {
     "id": "2021-creation-icpf",
@@ -141,10 +154,15 @@
     ],
     "sources": [
       {
-        "id_doc": "Site internet de l'ICPF | https://www.icpf.pf"
+        "id_doc": "Site internet de l'ICPF | https://www.icpf.pf/institut/"
       }
     ],
-    "more": [],
-    "added": "30/06/2025"
+    "more": [
+      {
+        "label": "Site internet de l'ICPF",
+        "url": "https://www.icpf.pf"
+      }
+    ],
+    "added": "01/07/2025"
   }
 ]
