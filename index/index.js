@@ -9,12 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await response.json();
     const allEvents = Object.values(data).flat();
 
-    // ✅ Ne compter que les événements validés
-    const validatedEvents = allEvents.filter(evt => evt.validated);
-    countEl.textContent = validatedEvents.length;
+    // ✅ Compter tous les événements, validés ou non
+    countEl.textContent = allEvents.length;
   } catch (err) {
     console.error("Erreur de chargement des événements :", err);
     countEl.textContent = "—";
   }
 });
-
