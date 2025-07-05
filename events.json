@@ -164,5 +164,69 @@
       }
     ],
     "added": "01/07/2025"
+  },
+   {
+    "id": "1863-epidemie-variole-marquises",
+    "title": "Epidémie de variole aux  Marquises",
+    "year": 1863,
+    "description": "En août 1863, le navire français Le Diamant accoste à Nuku Hiva avec à son bord des Polynésiens rapatriés du Pérou, dont plusieurs sont contaminés par la variole. Malgré des tentatives d’isolement, la maladie se propage rapidement. Dès début septembre, les premiers cas apparaissent à terre, marquant le début d’une épidémie meurtrière. La variole atteint rapidement d’autres baies de Nuku Hiva puis l’île voisine de Ua Pou, notamment à cause de déplacements maritimes.En décembre, la maladie fait rage : les missionnaires recensent des centaines de morts. En mars 1864, le bilan est dramatique : Nuku Hiva aurait perdu près de la moitié de sa population (958 morts sur 1956 habitants), Ua Pou les deux tiers. Les personnes âgées sont les plus touchées, tandis que les enfants, bien que massivement malades, résistent davantage. L’épidémie s’éteint en février 1864, peu avant l’arrivée d’un médecin chargé de vacciner la population.",
+    "image": "",
+    "categories": [
+      "Protection et gestion des risques"
+    ],
+    "keywords": [
+      "Epidémie",
+      "Variole",
+      "Mortalité"
+    ],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [],
+    "added": "05/07/2025"
+  },
+  {
+    "id": "1907-premier-recensement",
+    "title": "Premier recensement sur l'ensemble du territoire",
+    "year": 1907,
+    "description": "Le recensement de 1907 est le premier à couvrir l’ensemble du Territoire. Avant cela, les données disponibles proviennent de sources variées — navigateurs, explorateurs, commerçants, puis missionnaires — mais sont souvent imprécises et incomplètes. Le premier véritable recensement a lieu en 1848 à Tahiti et Moorea, effectué de manière systématique, case par case. En 1848, on dénombra à Tahiti 8 082 autochtones et 475 étrangers.Par la suite, deux types de données coexistent : les recensements administratifs et les registres de l’état civil, établis progressivement dans chaque île. Ces registres consignent chaque année les naissances, décès et changements de résidence. Toutefois, les résultats publiés restent partiels, souvent limités à des tableaux sommaires regroupés par archipel, et de nombreux relevés demeurent inexploités.",
+    "image": "",
+    "categories": [
+      "Contexte"
+    ],
+    "keywords": [
+      "Démographie"
+    ],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [],
+    "added": "05/07/2025"
+  },
+  {
+    "id": "1931-causes-mortalite",
+    "title": "Évolution des causes de mortalité",
+    "year": 1931,
+    "description": "L’analyse des Statistiques Démographiques et Sanitaires de Papeete, publiées en 1931, met en lumière les principales causes de décès entre 1922 et 1931. Les maladies infectieuses et parasitaires, en particulier la tuberculose, dominent largement, suivies des affections respiratoires et digestives. Ensemble, ces trois groupes représentent près des deux tiers des décès à cette époque. En comparaison, ces mêmes causes ne représentent plus que 15,6 % des décès en 1986. La chute est particulièrement marquée pour les maladies infectieuses, dont la part a été divisée par dix. Il est à noter également, dans les années 1920, l'importance des affections de la période périnatale.",
+    "image": "",
+    "categories": [
+      "Données et recherche"
+    ],
+    "keywords": [
+      "Mortalité",
+      "Tuberculose",
+      "Affections respiratoires et digestives"
+    ],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [],
+    "added": "05/07/2025"
   }
 ]
