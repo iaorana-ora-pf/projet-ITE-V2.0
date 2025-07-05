@@ -188,27 +188,6 @@
     "added": "05/07/2025"
   },
   {
-    "id": "1907-premier-recensement",
-    "title": "Premier recensement sur l'ensemble du territoire",
-    "year": 1907,
-    "description": "Le recensement de 1907 est le premier à couvrir l’ensemble du Territoire. Avant cela, les données disponibles proviennent de sources variées — navigateurs, explorateurs, commerçants, puis missionnaires — mais sont souvent imprécises et incomplètes. Le premier véritable recensement a lieu en 1848 à Tahiti et Moorea, effectué de manière systématique, case par case. En 1848, on dénombra à Tahiti 8 082 autochtones et 475 étrangers.Par la suite, deux types de données coexistent : les recensements administratifs et les registres de l’état civil, établis progressivement dans chaque île. Ces registres consignent chaque année les naissances, décès et changements de résidence. Toutefois, les résultats publiés restent partiels, souvent limités à des tableaux sommaires regroupés par archipel, et de nombreux relevés demeurent inexploités.",
-    "image": "",
-    "categories": [
-      "Contexte",
-      "Données et recherche"
-    ],
-    "keywords": [
-      "Démographie"
-    ],
-    "sources": [
-      {
-        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
-      }
-    ],
-    "more": [],
-    "added": "05/07/2025"
-  },
-  {
     "id": "1931-causes-mortalite",
     "title": "Évolution des causes de mortalité",
     "year": 1931,
