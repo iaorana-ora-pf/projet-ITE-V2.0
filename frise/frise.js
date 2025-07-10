@@ -1,4 +1,4 @@
-let activeCategories = [];
+let activeThemes = [];
 let eventsData = [];
 let searchQuery = "";
 function normalize(str) {
@@ -10,21 +10,23 @@ function normalize(str) {
     .replace(/[^a-z0-9 ]/g, "");     // supprime ponctuation
 }
 
-const categoryInfo = {
-  "Accès": { color: "#2a9d8f", icon: "fa-hospital" },
-  "Contexte": { color: "#6c757d", icon: "fa-landmark" },
-  "Données et recherche": { color: "#4b0082", icon: "fa-database" },
-  "Gouvernance et pilotage": { color: "#007b7f", icon: "fa-scale-balanced" },
-  "Promotion et prévention": { color: "#e76f51", icon: "fa-heart-pulse" },
-  "Protection et gestion des risques": { color: "#f4a261", icon: "fa-shield-alt" }
-};
+const themeInfo = {
+    "Accès aux soins": { "color": "#1E1E2F", "icon": "fa-syringue" },
+    "Contexte": { "color": "#2C2C2C", "icon": "fa-landmark" },
+    "Gouvernance et pilotage": { "color": "#014421", "icon": "fa-scale-balanced" },
+    "Indicateurs": { "color": "#003B46", "icon": "fa-solid fa-list-ol" },    
+    "Prévention": { "color": "#3B0A28", "icon": "fa-solid fa-triangle-exclamation" },
+    "Professionnels de santé": { "color": "#2E003E", "icon": "fa-stethoscope" },
+    "Promotion de la santé": { "color": "#001F3F", "icon": "fa-thumbs-up" },
+    "Structure de santé": { "color": "#1A1A1A", "icon": "fa-hospital" }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch("./events.json")
     .then(res => res.json())
   .then(events => {
   eventsData = events;
-  generateCategoryCheckboxes();
+  generateThemeCheckboxes();
   renderTimeline(eventsData, "desc");
 });
 
@@ -42,10 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("resetFilters").addEventListener("click", () => {
-    document.querySelectorAll('#categoryCheckboxGroup input[type="checkbox"]').forEach(cb => {
+    document.querySelectorAll('#themeCheckboxGroup input[type="checkbox"]').forEach(cb => {
       cb.checked = false;
     });
-    activeCategories = [];
+    activeThemes = [];
     searchQuery = "";
     document.getElementById("searchInput").value = "";
     renderTimeline(eventsData, document.querySelector('input[name="sortOrder"]:checked').value);
@@ -72,12 +74,12 @@ const sorted = [...events].sort((a, b) =>
 
 // En mode normal, on filtre les événements non validés
 const filtered = sorted.filter(event => {
-  const matchesCategory = activeCategories.length === 0 ||
-    event.categories?.some(cat => activeCategories.includes(cat));
+  const matchesCategory = activeThemes.length === 0 ||
+    event.theme?.some(cat => activeThemes.includes(cat));
 
   const searchableFields = [
     event.title,
-    ...(event.categories || []),
+    ...(event.theme || []),
     ...(event.keywords || []),
     event.year.toString()
   ].join(" ").toLowerCase();
@@ -125,7 +127,7 @@ yearLabel.setAttribute("data-year", year);
     evDiv.onclick = () => window.open(`/${ev.id}.html`, "_blank");
 
     const icons = (ev.categories || []).map(cat => {
-      const info = categoryInfo[cat];
+      const info = themeInfo[cat];
       return info
         ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
         : '';
@@ -152,13 +154,13 @@ yearLabel.setAttribute("data-year", year);
 
 
 
-function generateCategoryCheckboxes() {
-  const group = document.getElementById("categoryCheckboxGroup");
+function generateThemeCheckboxes() {
+  const group = document.getElementById("themeCheckboxGroup");
   if (!group) return;
 
   group.innerHTML = "";
 
-  Object.entries(categoryInfo).forEach(([cat, info]) => {
+  Object.entries(themeInfo).forEach(([cat, info]) => {
     const label = document.createElement("label");
     label.className = "cat-check";
     label.innerHTML = `
@@ -170,7 +172,7 @@ function generateCategoryCheckboxes() {
   });
 
   group.addEventListener("change", () => {
-    activeCategories = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
+    activeThemes = [...group.querySelectorAll("input:checked")].map(cb => cb.value);
     const sortValue = document.querySelector('input[name="sortOrder"]:checked').value;
     renderTimeline(eventsData, sortValue);
     document.querySelectorAll(".cat-check").forEach(label => {
