@@ -3,7 +3,7 @@ let isListView = false;
 let currentSort = "az"; // Tri par défaut
 
 async function loadDocuments() {
-  const response = await fetch("bibliotheque.json");
+  const response = await fetch("./bibliotheque/bibliotheque.json");
   let documents = await response.json();
 
   // Tri
