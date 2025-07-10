@@ -1,6 +1,14 @@
 let activeCategories = [];
 let eventsData = [];
 let searchQuery = "";
+function normalize(str) {
+  return str
+    .toLowerCase()
+    .normalize("NFD")               // décompose les accents
+    .replace(/[\u0300-\u036f]/g, "") // supprime les accents
+    .replace(/s\b/g, "")             // supprime les 's' en fin de mot
+    .replace(/[^a-z0-9 ]/g, "");     // supprime ponctuation
+}
 
 const categoryInfo = {
   "Accès": { color: "#2a9d8f", icon: "fa-hospital" },
@@ -74,7 +82,7 @@ const filtered = sorted.filter(event => {
     event.year.toString()
   ].join(" ").toLowerCase();
 
-  const matchesSearch = searchableFields.includes(searchQuery);
+  const matchesSearch = normalize(searchableFields).includes(normalize(searchQuery));
 
   return matchesCategory && matchesSearch;
 });
