@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Suggestion d’un autre événement depuis events.json
 const suggestionEl = document.querySelector(".suggestion-link");
+  if (suggestionEl) {
+  suggestionEl.style.display = "none"; // Masquer initialement
+}
 const currentId = document.body.dataset.id;
 const currentCategories = JSON.parse(document.body.dataset.categories || "[]");
 
@@ -39,9 +42,12 @@ fetch(`../events.json?ts=${Date.now()}`)
     }
 
     if (suggestion && suggestionEl) {
-      suggestionEl.href = `${suggestion.id}.html`;
-      suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
-    } else if (suggestionEl) {
+  suggestionEl.href = `../output/${suggestion.id}.html`;
+  suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
+  suggestionEl.style.display = ""; // Affiche seulement quand prêt
+} 
+    
+    else if (suggestionEl) {
       suggestionEl.textContent = "Pas d'autre événement";
     }
   });
