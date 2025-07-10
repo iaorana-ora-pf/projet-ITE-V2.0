@@ -15,7 +15,7 @@ const suggestionEl = document.querySelector(".suggestion-link");
 const currentId = document.body.dataset.id;
 const currentCategories = JSON.parse(document.body.dataset.categories || "[]");
 
-fetch(`../output/events.json?ts=${Date.now()}`)
+fetch(`../events.json?ts=${Date.now()}`)
   .then(resp => resp.json())
   .then(events => {
     // Score de pertinence par nombre de catégories communes
