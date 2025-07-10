@@ -42,7 +42,7 @@ fetch(`../events.json?ts=${Date.now()}`)
     }
 
     if (suggestion && suggestionEl) {
-  suggestionEl.href = `../output/${suggestion.id}.html`;
+  suggestionEl.href = `../${suggestion.id}.html`;
   suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
   suggestionEl.style.display = ""; // Affiche seulement quand prêt
 } 
