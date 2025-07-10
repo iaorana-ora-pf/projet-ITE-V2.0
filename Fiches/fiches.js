@@ -10,28 +10,40 @@ const categoryInfo = {
 document.addEventListener("DOMContentLoaded", () => {
  
 
-  // Suggestion d’un autre événement depuis events.json
-  const suggestionEl = document.querySelector(".suggestion-link");
-  const currentId = document.body.dataset.id;
-  const currentCategories = JSON.parse(document.body.dataset.categories || "[]");
+// Suggestion d’un autre événement depuis events.json
+const suggestionEl = document.querySelector(".suggestion-link");
+const currentId = document.body.dataset.id;
+const currentCategories = JSON.parse(document.body.dataset.categories || "[]");
 
-  fetch(`../output/events.json?ts=${Date.now()}`)
-    .then(resp => resp.json())
-    .then(events => {
-      const sameCat = events.filter(e =>
-        e.id !== currentId &&
-        e.categories.some(cat => currentCategories.includes(cat))
-      );
+fetch(`../output/events.json?ts=${Date.now()}`)
+  .then(resp => resp.json())
+  .then(events => {
+    // Score de pertinence par nombre de catégories communes
+    const scored = events
+      .filter(e => e.id !== currentId)
+      .map(e => {
+        const common = e.categories.filter(cat => currentCategories.includes(cat)).length;
+        return { ...e, score: common };
+      })
+      .filter(e => e.score > 0)
+      .sort((a, b) => b.score - a.score);
 
-    let suggestion = sameCat.length > 0
-      ? sameCat[Math.floor(Math.random() * sameCat.length)]
-      : events.filter(e => e.id !== currentId)[Math.floor(Math.random() * (events.length - 1))];
+    let suggestion;
+    if (scored.length > 0) {
+      const topScore = scored[0].score;
+      const topSuggestions = scored.filter(e => e.score === topScore);
+      suggestion = topSuggestions[Math.floor(Math.random() * topSuggestions.length)];
+    } else {
+      const fallback = events.filter(e => e.id !== currentId);
+      suggestion = fallback[Math.floor(Math.random() * fallback.length)];
+    }
 
-      if (suggestion && suggestionEl) {
-        suggestionEl.href = `../output/${suggestion.id}.html`;
-        suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
-      } else if (suggestionEl) {
-        suggestionEl.textContent = "Pas d'autre événement";
-      }
-    });
+    if (suggestion && suggestionEl) {
+      suggestionEl.href = `../output/${suggestion.id}.html`;
+      suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
+    } else if (suggestionEl) {
+      suggestionEl.textContent = "Pas d'autre événement";
+    }
+  });
+
 });
