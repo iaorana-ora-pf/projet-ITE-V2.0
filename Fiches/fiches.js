@@ -8,23 +8,7 @@ const categoryInfo = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Affichage des catégories avec icônes
-  const catEl = document.getElementById("categories-with-icons");
-  const bodyCat = document.body.dataset.categories;
-
-  try {
-    const categories = JSON.parse(bodyCat);
-    if (catEl && categories) {
-      catEl.innerHTML = categories.map(cat => {
-        const info = categoryInfo[cat] || {};
-        return `<span class="cat-icon" title="${cat}">
-                  <i class="fas ${info.icon || 'fa-tag'}" style="color:${info.color || '#666'};"></i> ${cat}
-                </span>`;
-      }).join(" ");
-    }
-  } catch (e) {
-    console.warn("Catégories mal formatées :", bodyCat);
-  }
+ 
 
   // Suggestion d’un autre événement depuis events.json
   const suggestionEl = document.querySelector(".suggestion-link");
@@ -37,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const sameCat = events.filter(e =>
         e.id !== currentId &&
         e.categories.some(cat => currentCategories.includes(cat))
-      ;
+      );
 
     let suggestion = sameCat.length > 0
       ? sameCat[Math.floor(Math.random() * sameCat.length)]
