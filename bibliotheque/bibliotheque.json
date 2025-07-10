@@ -9,30 +9,30 @@
     "id_doc": "doc2",
     "label": "Guide de présentation des dispositifs Ecole et CJA en santé",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/guide-presentation-ecole-cja-en-sante.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/images/guide-presentation-ecole-cja-en-sante.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/guide-presentation-ecole-cja-en-sante.png"
   },
   {
     "id_doc": "doc3",
     "label": "Communiqué de presse du CHPF - Journée du don d'organes 2022",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/chpf-communique-de-presse_don_organes-2022.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/images/chpf-communique-de-presse_don_organes-2022.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/chpf-communique-de-presse_don_organes-2022.png"
   },
   {
     "id_doc": "doc4",
     "label": "La grippe espagnole aux Iles-sous-le-Vent",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/grippe-espagnole-ile-sous-le-vent.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/images/grippe-espagnole-ile-sous-le-vent.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/grippe-espagnole-ile-sous-le-vent.png"
   },
   {
     "id_doc": "doc5",
     "label": "L'histoire démographique",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/images/histoire-demographique.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/histoire-demographique.png"
   },
   {
     "id_doc": "doc6",
     "label": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/images/gille-bernard-sante-polynesie.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/gille-bernard-sante-polynesie.png"
   }
 ]
