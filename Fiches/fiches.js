@@ -31,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentId = document.body.dataset.id;
   const currentCategories = JSON.parse(document.body.dataset.categories || "[]");
 
-  fetch("../output/events.json")
+  fetch(`../output/events.json?ts=${Date.now()}`)
     .then(resp => resp.json())
     .then(events => {
       const sameCat = events.filter(e =>
         e.id !== currentId &&
         e.categories.some(cat => currentCategories.includes(cat))
-      );
+      ;
 
-      let suggestion = sameCat.length > 0
-        ? sameCat[Math.floor(Math.random() * sameCat.length)]
-        : events.find(e => e.id !== currentId);
+    let suggestion = sameCat.length > 0
+      ? sameCat[Math.floor(Math.random() * sameCat.length)]
+      : events.filter(e => e.id !== currentId)[Math.floor(Math.random() * (events.length - 1))];
 
       if (suggestion && suggestionEl) {
         suggestionEl.href = `../output/${suggestion.id}.html`;
