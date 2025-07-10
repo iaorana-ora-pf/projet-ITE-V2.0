@@ -21,18 +21,18 @@
     "id_doc": "doc4",
     "label": "La grippe espagnole aux Iles-sous-le-Vent",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/grippe-espagnole-ile-sous-le-vent.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/grippe-espagnole-ile-sous-le-vent.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/main/images/grippe-espagnole-ile-sous-le-vent.png"
   },
   {
     "id_doc": "doc5",
     "label": "L'histoire démographique",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/histoire-demographique.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/main/images/histoire-demographique.png"
   },
   {
     "id_doc": "doc6",
     "label": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf",
-    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/3a10b020a546cdea46df9eed5dbdc717c7522ebf/images/gille-bernard-sante-polynesie.png"
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/main/images/gille-bernard-sante-polynesie.png"
   }
 ]
