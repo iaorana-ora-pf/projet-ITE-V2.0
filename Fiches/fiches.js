@@ -39,7 +39,7 @@ fetch(`../events.json?ts=${Date.now()}`)
     }
 
     if (suggestion && suggestionEl) {
-      suggestionEl.href = `../output/${suggestion.id}.html`;
+      suggestionEl.href = `${suggestion.id}.html`;
       suggestionEl.textContent = `${suggestion.year} – ${suggestion.title}`;
     } else if (suggestionEl) {
       suggestionEl.textContent = "Pas d'autre événement";
