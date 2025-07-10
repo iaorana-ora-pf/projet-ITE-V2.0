@@ -22,13 +22,13 @@ async function loadDocuments() {
 
     if (isListView) {
       element = document.createElement("a");
-      element.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+      element.href = doc.url;
       element.className = "doc-list-item";
       element.textContent = doc.label;
       element.target = "_blank";
     } else {
       const link = document.createElement("a");
-link.href = `https://docs.google.com/viewer?url=${encodeURIComponent(doc.url)}&embedded=true`;
+link.href = doc.url;
 link.target = "_blank";
 link.className = "bibli-card"; // Le lien devient la carte entière
 link.style.textDecoration = "none"; // retire soulignement
