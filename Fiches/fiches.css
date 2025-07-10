@@ -119,6 +119,24 @@ h2 {
 .category-tag i {
   margin-right: 6px;
 }
+.section .category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3em 0.8em;
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: white;
+  margin: 0.3em 0.3em 0 0;
+  white-space: nowrap;
+}
+
+.section #categories-with-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
 .link-source {
   color: var(--main-green);
   text-decoration: none;
