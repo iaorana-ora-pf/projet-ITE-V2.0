@@ -99,7 +99,7 @@ h2 {
 /* mise en ligne des contenus */
 .section span,
 .section a,
-#categories-with-icons span,
+.category-tag,
 .keyword-item {
   display: inline;
   white-space: normal;
@@ -107,14 +107,18 @@ h2 {
   line-height: 1.5;
 }
 
-#categories-with-icons {
-  display: inline;
+.category-tag {
+  display: inline-block;
+  color: white;
+  padding: 4px 10px;
+  margin: 4px 6px 4px 0;
+  border-radius: 20px;
+  font-size: 0.85em;
+  white-space: nowrap;
 }
-
-.keyword-item {
-  color: #1e2124;
+.category-tag i {
+  margin-right: 6px;
 }
-
 .link-source {
   color: var(--main-green);
   text-decoration: none;
