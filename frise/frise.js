@@ -10,15 +10,39 @@ function normalize(str) {
     .replace(/[^a-z0-9 ]/g, "");     // supprime ponctuation
 }
 
-const themeInfo = {
-    "Accès aux soins": { "color": "#1E1E2F", "icon": "fa-syringue" },
-    "Contexte": { "color": "#2C2C2C", "icon": "fa-landmark" },
-    "Gouvernance et pilotage": { "color": "#014421", "icon": "fa-scale-balanced" },
-    "Indicateurs": { "color": "#003B46", "icon": "fa-solid fa-list-ol" },    
-    "Prévention": { "color": "#3B0A28", "icon": "fa-solid fa-triangle-exclamation" },
-    "Professionnels de santé": { "color": "#2E003E", "icon": "fa-stethoscope" },
-    "Promotion de la santé": { "color": "#001F3F", "icon": "fa-thumbs-up" },
-    "Structure de santé": { "color": "#1A1A1A", "icon": "fa-hospital" }
+const themeInfo ={
+  "Accès aux soins": {
+    "color": "#C62828",  // rouge profond
+    "icon": "fa-solid fa-syringe"
+  },
+  "Contexte": {
+    "color": "#EF6C00",  // orange foncé
+    "icon": "fa-solid fa-landmark"
+  },
+  "Gouvernance et pilotage": {
+    "color": "#00695C",  // vert sarcelle foncé
+    "icon": "fa-solid fa-scale-balanced"
+  },
+  "Indicateurs": {
+    "color": "#1565C0",  // bleu royal foncé
+    "icon": "fa-solid fa-list-ol"
+  },
+  "Prévention": {
+    "color": "#6A1B9A",  // violet foncé
+    "icon": "fa-solid fa-triangle-exclamation"
+  },
+  "Professionnels de santé": {
+    "color": "#4527A0",  // indigo foncé
+    "icon": "fa-solid fa-stethoscope"
+  },
+  "Promotion de la santé": {
+    "color": "#2E7D32",  // vert profond
+    "icon": "fa-solid fa-thumbs-up"
+  },
+  "Structure de santé": {
+    "color": "#B71C1C",  // rouge brique foncé
+    "icon": "fa-solid fa-hospital"
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
