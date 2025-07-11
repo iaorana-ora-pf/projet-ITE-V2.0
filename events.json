@@ -4,9 +4,8 @@
     "title": "Installation du premier médecin à Tahiti",
     "year": 1836,
     "description": "Arrivé à Tahiti en 1836, le Dr Francis Johnstone, premier médecin résident de l'île, soigne la colonie anglaise de pasteurs ainsi que la Reine Pomaré IV, lorsque celle-ci accepte la médecine occidentale. Avec son épouse Elisa Hunter, sage-femme, infirmière et interprète, il crée une petite clinique privée. Chirurgien et pharmacien, il vendait — parfois à prix fort — des remèdes à base de mercure aux Tahitiens.Botaniste passionné, il constitue un précieux herbier et un répertoire de pharmacopée indigène, tous inhumés avec lui à sa mort en 1855.",
-    "image": "",
-    "categories": [
-      "Accès"
+    "theme": [
+      "Professionnels de santé"
     ],
     "keywords": [],
     "sources": [
@@ -15,17 +14,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1842-epidemie-variole-tahiti",
     "title": "Epidémie de variole à Tahiti",
     "year": 1842,
     "description": "En 1842, une épidémie de variole est introduite à Tahiti par un charpentier anglais installé à Papeete, qui contracte la maladie à bord d’un navire américain contaminé.Il meurt rapidement, et le virus se propage dans la population, faisant de nombreuses victimes.",
-    "image": "",
-    "categories": [
-      "Données et recherche",
-      "Protection et gestion des risques"
+    "theme": [
+      "Pathologies"
     ],
     "keywords": [],
     "sources": [
@@ -34,16 +31,16 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1843-premiere-infirmerie-tahiti",
     "title": "Premiere infirmerie à Papeete",
     "year": 1843,
     "description": "En 1843, l’un des premiers bâtiments construits à Papeete par les sapeurs du contre-amiral Bruat est un \"hôpital\" provisoire, qui est une simple case en bambou au cœur du camp militaire.Les blessés y sont soignés par 4 religieuses infirmières.",
-    "image": "",
-    "categories": [
-      "Accès"
+    "theme": [
+      "Structures de santé",
+      "Professionnels de santé"
     ],
     "keywords": [],
     "sources": [
@@ -52,16 +49,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1850-maladies-endémiques",
-    "title": "Maladies endémiques à Tahiti",
+    "title": "Maladies endémiques à Tahiti dans les années 1850",
     "year": 1850,
-    "description": "Vers 1850, plusieurs maladies endémiques affectent durablement la population de Tahiti.La syphilis est très répandue, touchant toutes les couches de la société, y compris la famille royale. Les coliques sèches, causant de violentes douleurs abdominales, sont fréquentes et particulièrement redoutées ; on les attribuera plus tard à une intoxication au plomb. Le féfé (filariose) est également courant, provoquant des gonflements impressionnants des jambes ou du scrotum, mais il suscite peu d’inquiétude chez les personnes atteintes. Enfin, la lèpre, bien que peu signalée dans les rapports médicaux de l’époque, semble présente dans l’île. Les malades continuent souvent à vivre au sein de leur famille jusqu’à des stades très avancés de la maladie.",
-    "image": "",
-    "categories": [
-      "Données et recherche"
+    "description": "Vers 1850, plusieurs maladies affectent la population de Tahiti.La syphilis est très répandue, touchant toutes les couches de la société, y compris la famille royale. Les coliques sèches, causant de violentes douleurs abdominales, sont fréquentes et particulièrement redoutées ; on les attribuera plus tard à une intoxication au plomb. Le féfé (filariose) est également courant, provoquant des gonflements impressionnants des jambes ou du scrotum, mais il suscite peu d’inquiétude chez les personnes atteintes. Enfin, la lèpre, bien que peu signalée dans les rapports médicaux de l’époque, semble présente dans l’île. Les malades continuent souvent à vivre au sein de leur famille jusqu’à des stades très avancés de la maladie.",
+    "theme": [
+      "Pathologies"
     ],
     "keywords": [],
     "sources": [
@@ -70,18 +66,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1854-epidemie-rougeole-tahiti",
     "title": "Epidémie de rougeole à Tahiti",
     "year": 1854,
     "description": "En 1854, une violente épidémie de rougeole frappe Tahiti, touchant surtout la population autochtone. Malgré la fièvre, de nombreuses personnes se baignaient dans les rivières, aggravant la situation. L’épidémie cause environ 800 morts, sur une population de moins de 10 000 habitants. À Papara, on compte un décès pour sept habitants. L’administration est paralysée : chefs, juges et mutoi sont parmi les victimes. De nouveaux épisodes de rougeole seront signalés en 1861 et 1873, touchant l’ensemble de l’île.",
-    "image": "",
-    "categories": [
-      "Données et recherche",
-      "Protection et gestion des risques",
-      ""
+    "theme": [
+      "Pathologies"
     ],
     "keywords": [],
     "sources": [
@@ -90,16 +83,16 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1854-premier-dispensaire",
     "title": "Création d’un dispensaire pour femmes autochtones",
     "year": 1854,
     "description": "Face à la forte prévalence de la syphilis, le docteur Prat ouvre en 1854 un dispensaire réservé aux femmes autochtones dans l’enceinte de l’hôpital de Papeete.Installé dans des cases modestes mais sécurisées, il peut accueillir environ 25 patientes. Le traitement, à base de préparations mercurielles, bromure et iodure de potassium, est assuré par Prat, tandis que des religieuses prennent soin des malades.En 1855, 40 des 47 femmes traitées sont déclarées guéries. Mais rapidement, fugues, scandales nocturnes et perte de discipline décrédibilisent l’établissement. En 1860, le dispensaire ferme ses portes.",
-    "image": "",
-    "categories": [
-      "Accès"
+    "theme": [
+      "Structures de santé",
+      "Professionnels de santé"
     ],
     "keywords": [],
     "sources": [
@@ -108,16 +101,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1854-syphilis",
     "title": "Recrudescence de la  syphilis",
     "year": 1854,
-    "description": "À partir des années 1850, la syphilis se répand largement à Tahiti.En 1854, le médecin Prat estime que la moitié de la population, y compris la famille royale, est infectée. Vingt ans plus tard, la situation est jugée encore plus préoccupante. Les données de 1859 indiquent que 222 femmes sur 430 examinées sont atteintes de maladies vénériennes, avec une prévalence encore plus forte chez les hommes.Les baleiniers et navires marchands venant de San Francisco, Sydney ou Valparaíso sont considérés comme les principaux vecteurs de cette propagation. Les militaires ne sont pas épargnés : en 1864, sur 125 malades accueillis à l'hôpital militaire, 47 étaient vénériens.Les autorités locales reconnaissent l’ampleur du phénomène, souvent jugé difficile à contenir, tant il est ancré dans le quotidien de l'île.",
-    "image": "",
-    "categories": [
-      "Données et recherche"
+    "description": "À partir des années 1850, la syphilis se répand largement à Tahiti.En 1854, le médecin Prat estime que la moitié de la population, y compris la famille royale, est infectée. Vingt ans plus tard, la situation est jugée encore plus préoccupante. Les données de 1859 indiquent que 222 femmes sur 430 examinées sont atteintes de maladies vénériennes, avec une prévalence encore plus forte chez les hommes.Les baleiniers et navires marchands venant de San Francisco, Sydney ou Valparaíso sont considérés comme les principaux vecteurs de cette propagation. Les militaires ne sont pas épargnés : en 1864, sur 125 malades accueillis à l'hôpital militaire, 47 étaient vénériens.Les autorités locales reconnaissent l’ampleur du phénomène, souvent jugé difficile à contenir.",
+    "theme": [
+      "Pathologies"
     ],
     "keywords": [],
     "sources": [
@@ -126,16 +118,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1863-epidemie-variole-marquises",
     "title": "Epidémie de variole aux  Marquises",
     "year": 1863,
     "description": "En août 1863, le navire français Le Diamant accoste à Nuku Hiva avec à son bord des Polynésiens rapatriés du Pérou, dont plusieurs sont contaminés par la variole. Malgré des tentatives d’isolement, la maladie se propage rapidement. Dès début septembre, les premiers cas apparaissent à terre, marquant le début d’une épidémie meurtrière. La variole atteint rapidement d’autres baies de Nuku Hiva puis l’île voisine de Ua Pou, notamment à cause de déplacements maritimes.En décembre, la maladie fait rage : les missionnaires recensent des centaines de morts. En mars 1864, le bilan est dramatique : Nuku Hiva aurait perdu près de la moitié de sa population (958 morts sur 1956 habitants), Ua Pou les deux tiers. Les personnes âgées sont les plus touchées, tandis que les enfants, bien que massivement malades, résistent davantage. L’épidémie s’éteint en février 1864, peu avant l’arrivée d’un médecin chargé de vacciner la population.",
-    "image": "",
-    "categories": [
-      "Protection et gestion des risques"
+    "theme": [
+      "Pathologies"
     ],
     "keywords": [],
     "sources": [
@@ -144,16 +135,16 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1863-premier-hopital-tahiti",
     "title": "Premier hôpital de Tahiti",
     "year": 1863,
     "description": "L’hôpital est désormais un bâtiment en dur, situé près du siège du gouvernement, et géré par 8 à 10 religieuses. Le personnel médical reste limité : un chirurgien-chef, deux chirurgiens de 3e classe et un pharmacien. Cette situation inquiète le gouverneur, qui alerte Paris sur l’insuffisance des effectifs dans un territoire dépourvu de médecins civils.Le coût des soins est élevé : une journée d’hospitalisation revient à 8,15 francs pour un malade ordinaire et 10,15 francs pour un officier. En 1864, une salle pour les autochtones de 4 lits est ouverte, avec des soins simplifiés à 4,75 francs la journée. Pour y parvenir, l’administration supprime les aliments légers, réduit la literie et limite les médicaments au strict nécessaire.",
-    "image": "",
-    "categories": [
-      "Accès"
+    "theme": [
+      "Structures de santé",
+      "Professionnels de santé"
     ],
     "keywords": [],
     "sources": [
@@ -162,18 +153,16 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1863-variole-tahiti",
     "title": "Alerte à la variole à Tahiti et lancement de la vaccination",
     "year": 1863,
     "description": "Le 1er octobre 1863, l’arrivée à Papeete du navire Le Diamant, en provenance de Callao via Payta, provoque une vive inquiétude. Le bâtiment rapatrie des Polynésiens enlevés par des recruteurs péruviens. En mer, une épidémie de variole éclate parmi eux, faisant 21 morts. Le capitaine débarque les passagers aux Marquises, avant de continuer vers Tahiti. Une quarantaine stricte est imposée ; l’équipage, resté sain, obtient finalement la libre pratique.Peu après, une rumeur de variole circule à Papeete. Une enquête médicale menée par les docteurs Delaporte, Prat et Johnstone ne relève aucun cas. L’épisode incite les autorités à renforcer les règles sanitaires et à relancer la vaccination.Une première tentative en 1853, avec un vaccin envoyé d’Honolulu, échoue. Il faut attendre six mois et l’envoi d’un vaccin efficace par le Dr Pretot de Valparaíso pour lancer une campagne à grande échelle.Médecins et pharmaciens parcourent les districts et plus de 2 000 enfants sont vaccinés, et de nombreux parents, généralement coopératifs, acceptent également la vaccination.",
-    "image": "",
-    "categories": [
-      "Données et recherche",
-      "Protection et gestion des risques",
-      "Promotion et prévention"
+    "theme": [
+      "Pathologies",
+      "Prévention"
     ],
     "keywords": [],
     "sources": [
@@ -182,16 +171,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1877-premiers-soins-dentaires",
     "title": "Premiers soins dentaires à Tahiti",
     "year": 1877,
     "description": "En 1877, William Davis, un dentiste anglais, s’installe brièvement à Papeete. Il publie des annonces dans la presse locale pour proposer ses services, marquant l’apparition des premiers soins dentaires dans l’île.",
-    "image": "",
-    "categories": [
-      "Accès"
+    "theme": [
+      "Professionnels de santé"
     ],
     "keywords": [],
     "sources": [
@@ -200,17 +188,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1907-premier-recensement",
     "title": "Premier recensement sur l'ensemble du territoire",
     "year": 1907,
     "description": "Le recensement de 1907 est le premier à couvrir l’ensemble du Territoire. Avant cela, les données disponibles proviennent de sources variées — navigateurs, explorateurs, commerçants, puis missionnaires — mais sont souvent imprécises et incomplètes. Le premier véritable recensement a lieu en 1848 à Tahiti et Moorea, effectué de manière systématique, case par case. En 1848, on dénombra à Tahiti 8 082 autochtones et 475 étrangers.Par la suite, deux types de données coexistent : les recensements administratifs et les registres de l’état civil, établis progressivement dans chaque île. Ces registres consignent chaque année les naissances, décès et changements de résidence. Toutefois, les résultats publiés restent partiels, souvent limités à des tableaux sommaires regroupés par archipel, et de nombreux relevés demeurent inexploités.",
-    "image": "",
-    "categories": [
-      "Contexte",
-      "Données et recherche"
+    "theme": [
+      "Indicateurs"
     ],
     "keywords": [],
     "sources": [
@@ -219,16 +205,16 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1918-epidemie-grippe-espagnole",
     "title": "Epidémie de grippe espagnole",
     "year": 1918,
     "description": "En novembre 1918, la grippe espagnole atteint la Polynésie française par un navire en provenance de San Francisco.Le virus se propage rapidement  sur l'île de Tahiti, les îles Sous-le-Vent et l'île de Makatea.Les mesures sanitaires prises permettent d'épargner les habitants des Tuamotu, des Australes et des Marquises.L’épidémie fait environ 3 000 morts sur l'ensemble des îles touchées, soit près de 10 % de la population à l’époque.Les îles les plus durement touchées sont les Îles Sous-le-Vent, où certaines communautés perdent jusqu’à 40 % de leurs habitants, ainsi que Tahiti, avec environ 1 200 décès concentrés autour de Papeete.",
-    "image": "",
-    "categories": [
-      "Protection et gestion des risques"
+    "theme": [
+      "Pathologies",
+      "Prévention"
     ],
     "keywords": [],
     "sources": [
@@ -242,16 +228,15 @@
         "url": "'https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/grippe-espagnole-ile-sous-le-vent.pdf"
       }
     ],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1931-causes-mortalite",
     "title": "Évolution des causes de mortalité",
     "year": 1931,
     "description": "L’analyse des Statistiques Démographiques et Sanitaires de Papeete, publiées en 1931, met en lumière les principales causes de décès entre 1922 et 1931. Les maladies infectieuses et parasitaires, en particulier la tuberculose, dominent largement, suivies des affections respiratoires et digestives. Ensemble, ces trois groupes représentent près des deux tiers des décès à cette époque. En comparaison, ces mêmes causes ne représentent plus que 15,6 % des décès en 1986. La chute est particulièrement marquée pour les maladies infectieuses, dont la part a été divisée par dix.Il est à noter également, dans les années 1920, l'importance des affections de la période périnatale.",
-    "image": "",
-    "categories": [
-      "Données et recherche"
+    "theme": [
+      "Indicateurs"
     ],
     "keywords": [],
     "sources": [
@@ -260,15 +245,14 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "1984-statut-autonomie-interne",
     "title": "Premier statut d’autonomie interne",
     "year": 1984,
     "description": "Aux termes de l'article premier de la loi n° 84-820 du 6 septembre 1984, le territoire de la Polynésie française constitue« un territoire d'outre-mer doté de l'autonomie interne dans le cadre de la République ».Les institutions du territoire sont constituées du gouvernement du territoire, de l'assemblée territoriale et du comité économique, social et culturel.Le haut-commissaire a la charge des intérêts nationaux, du respect des lois et de l'ordre public ; il veille à l'exercice régulier de leurs compétences par les autorités territoriales. (Extrait du site internet du Haut-commissariat de Polynésie française)",
-    "image": "",
-    "categories": [
+    "theme": [
       "Contexte"
     ],
     "keywords": [],
@@ -283,16 +267,15 @@
         "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=183960"
       }
     ],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "2013-premiere-greffe",
     "title": "Première greffe réalisée en Polynésie française",
     "year": 2013,
     "description": "La première greffe réalisée en Polynésie française a eu lieu en octobre 2013, 3 mois après l'adoption de la délibération \"relative au don et à l’utilisation des éléments et produits du corps humain\" visant à permettre l’activité de greffe rénale à Tahiti.Auparavant, les patients étaient évasanés en métropole. En 2022, 131 greffes rénales avaient été réalisées à Tahiti dont 30 à partir de donneurs vivants (23%).",
-    "image": "",
-    "categories": [
-      "Accès"
+    "theme": [
+      "Accès aux soins"
     ],
     "keywords": [],
     "sources": [
@@ -310,15 +293,14 @@
         "url": "https://www.youtube.com/watch?v=DPymhpBTkTs&t=33s"
       }
     ],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "2016-publication-sos-2016-2021",
     "title": "Publication du Schéma d'Organisation Sanitaire de Polynésie française 2016-2021",
     "year": 2016,
     "description": "Le Schéma d’Organisation Sanitaire (SOS) 2016–2021 est un plan de réforme du système de santé en Polynésie française.Il fixe les grandes priorités pour améliorer les soins et l’accès à la santé, notamment dans les îles. Il propose 6 axes : mieux organiser les services, renforcer les soins de base, s’adapter aux nouveaux besoins (comme le cancer ou la santé mentale), développer la prévention (notamment contre le surpoids), mieux accompagner les personnes âgées, et créer un espace numérique de santé.",
-    "image": "",
-    "categories": [
+    "theme": [
       "Gouvernance et pilotage"
     ],
     "keywords": [],
@@ -328,16 +310,15 @@
       }
     ],
     "more": [],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "2017-creation-ecole-cja-en-sante",
     "title": "Création des dispositifs \"Ecole en santé\" et \"CJA en santé\"",
     "year": 2017,
     "description": "Les dispositifs \"Ecole en santé\" et \"CJA en santé\" (Centres de Jeunes Adolescents) visent à promouvoir la santé globale des élèves de 3 à 17 ans. Ils proposent la mise en place d'actions prenant en compte les déterminants prioritaires de la santé des jeunes, en lien avec 10 thématiques (alimentation, activités physiques, lutte antivectorielle, etc. ). Ces actions sont identifiées, au sein de chaque établissement, par le comité de santé de l’école / du CJA.En juin 2022, 35 établissements scolaires dont 9 hors îles du Vent participaient à ces dispositifs.",
-    "image": "",
-    "categories": [
-      "Promotion et prévention"
+    "theme": [
+      "Promotion de la santé"
     ],
     "keywords": [],
     "sources": [
@@ -355,18 +336,15 @@
         "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante"
       }
     ],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   },
   {
     "id": "2021-creation-icpf",
     "title": "Création de l'Institut du Cancer de la Polynésie française",
     "year": 2021,
     "description": "L’Institut du Cancer de Polynésie française (ICPF), créé en juillet 2021, est un établissement public dédié à la lutte contre le cancer.Sa vocation est de faire progresser la lutte contre le cancer et de mettre à disposition des patients polynésiens les pratiques les plus récentes et les plus efficaces contre cette pathologie.Depuis le 1er janvier 2022, l’ICPF assure les missions suivantes :- Gestion du registre des cancers- Mise en œuvre des actions de dépistage et de prévention contre les cancers- Organisation et mise en œuvre de la coordination régionale des soins- Organisation et mise en œuvre d’une direction de la recherche et de l’innovation.L’ICPF fait partie du réseau UNICANCER, acteur majeur de la lutte contre le cancer.",
-    "image": "",
-    "categories": [
-      "Accès",
-      "Données et recherche",
-      "Promotion et prévention"
+    "theme": [
+      "Structures de santé"
     ],
     "keywords": [],
     "sources": [
@@ -380,6 +358,6 @@
         "url": "https://www.icpf.pf"
       }
     ],
-    "added": "09/07/2025"
+    "added": "10/07/2025"
   }
 ]
