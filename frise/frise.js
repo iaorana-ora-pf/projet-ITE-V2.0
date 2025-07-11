@@ -10,7 +10,7 @@ function normalize(str) {
     .replace(/[^a-z0-9 ]/g, "");     // supprime ponctuation
 }
 
-const themeInfo = THEME_ICONS = {
+const themeInfo = {
     "Accès aux soins": {
         "color": "#C62828",  // rouge profond
         "icon": "fa-solid fa-syringe"
