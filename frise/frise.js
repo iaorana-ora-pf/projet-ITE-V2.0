@@ -11,40 +11,40 @@ function normalize(str) {
 }
 
 const themeInfo = {
-    "Accès aux soins": {
-        "color": "#C62828",  // rouge profond
+    "Accès aux soins": { //  rouge
+        "color": "#C00000",
         "icon": "fa-solid fa-syringe"
     },
     "Contexte": {
-        "color": "#EF6C00",  //  orange foncé
+        "color": "#404040",  //  gris
         "icon": "fa-solid fa-landmark"
     },
     "Gouvernance et pilotage": {
-        "color": "#00695C",   // sarcelle foncé
+        "color": "#05676C",  // bleu vert
         "icon": "fa-solid fa-scale-balanced"
     },
     "Indicateurs": {
-        "color": "#1565C0",   // bleu royal foncé
+        "color": "#0B5294",  //  bleu 
         "icon": "fa-solid fa-list-ol"
     },
     "Pathologies": {
-        "color": "#4E342E",  // brun cacao foncé (remplace #6d597a, trop clair)
+        "color": "#A66500",// orange
         "icon": "fa-solid fa-virus"
     },
     "Prévention": {
-        "color": "#6A1B9A",   // violet foncé
+        "color": "#005E00",  // vert
         "icon": "fa-solid fa-triangle-exclamation"
     },
     "Professionnels de santé": {
-        "color": "#4527A0",   //  indigo foncé
+        "color": "#7030A0",  // violet
         "icon": "fa-solid fa-stethoscope"
     },
     "Promotion de la santé": {
-        "color": "#2E7D32",   //  vert forêt
+        "color": "#003400", // vert forêt
         "icon": "fa-solid fa-thumbs-up"
     },
     "Structures de santé": {
-        "color": "#B71C1C",   //  rouge brique foncé
+        "color": "#787800",  // marron clair
         "icon": "fa-solid fa-hospital"
     }
 }
