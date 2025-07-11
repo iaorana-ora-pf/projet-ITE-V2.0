@@ -105,12 +105,12 @@ const filtered = sorted.filter(event => {
   const matchesCategory = activeThemes.length === 0 ||
     event.theme?.some(cat => activeThemes.includes(cat));
 
-  const searchableFields = [
-    event.title,
-    ...(event.theme || []),
-    ...(event.keywords || []),
-    event.year.toString()
-  ].join(" ").toLowerCase();
+const searchableFields = [
+  event.title || "",
+  event.description || "",
+  ...(event.theme || []),
+  event.year?.toString() || ""
+].join(" ").toLowerCase();
 
   const matchesSearch = normalize(searchableFields).includes(normalize(searchQuery));
 
