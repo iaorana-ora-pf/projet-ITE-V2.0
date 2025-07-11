@@ -10,39 +10,43 @@ function normalize(str) {
     .replace(/[^a-z0-9 ]/g, "");     // supprime ponctuation
 }
 
-const themeInfo ={
-  "Accès aux soins": {
-    "color": "#C62828",  // rouge profond
-    "icon": "fa-solid fa-syringe"
-  },
-  "Contexte": {
-    "color": "#EF6C00",  // orange foncé
-    "icon": "fa-solid fa-landmark"
-  },
-  "Gouvernance et pilotage": {
-    "color": "#00695C",  // vert sarcelle foncé
-    "icon": "fa-solid fa-scale-balanced"
-  },
-  "Indicateurs": {
-    "color": "#1565C0",  // bleu royal foncé
-    "icon": "fa-solid fa-list-ol"
-  },
-  "Prévention": {
-    "color": "#6A1B9A",  // violet foncé
-    "icon": "fa-solid fa-triangle-exclamation"
-  },
-  "Professionnels de santé": {
-    "color": "#4527A0",  // indigo foncé
-    "icon": "fa-solid fa-stethoscope"
-  },
-  "Promotion de la santé": {
-    "color": "#2E7D32",  // vert profond
-    "icon": "fa-solid fa-thumbs-up"
-  },
-  "Structure de santé": {
-    "color": "#B71C1C",  // rouge brique foncé
-    "icon": "fa-solid fa-hospital"
-  }
+const themeInfo = THEME_ICONS = {
+    "Accès aux soins": {
+        "color": "#C62828",  # rouge profond
+        "icon": "fa-solid fa-syringe"
+    },
+    "Contexte": {
+        "color": "#EF6C00",  # orange foncé
+        "icon": "fa-solid fa-landmark"
+    },
+    "Gouvernance et pilotage": {
+        "color": "#00695C",  # sarcelle foncé
+        "icon": "fa-solid fa-scale-balanced"
+    },
+    "Indicateurs": {
+        "color": "#1565C0",  # bleu royal foncé
+        "icon": "fa-solid fa-list-ol"
+    },
+    "Pathologies": {
+        "color": "#4E342E",  # brun cacao foncé (remplace #6d597a, trop clair)
+        "icon": "fa-solid fa-virus"
+    },
+    "Prévention": {
+        "color": "#6A1B9A",  # violet foncé
+        "icon": "fa-solid fa-triangle-exclamation"
+    },
+    "Professionnels de santé": {
+        "color": "#4527A0",  # indigo foncé
+        "icon": "fa-solid fa-stethoscope"
+    },
+    "Promotion de la santé": {
+        "color": "#2E7D32",  # vert forêt
+        "icon": "fa-solid fa-thumbs-up"
+    },
+    "Structures de santé": {
+        "color": "#B71C1C",  # rouge brique foncé
+        "icon": "fa-solid fa-hospital"
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
