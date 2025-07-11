@@ -150,7 +150,7 @@ yearLabel.setAttribute("data-year", year);
     evDiv.className = "event-item";
     evDiv.onclick = () => window.open(`/${ev.id}.html`, "_blank");
 
-    const icons = (ev.categories || []).map(cat => {
+    const icons = (ev.theme || []).map(cat => {
       const info = themeInfo[cat];
       return info
         ? `<span class="cat-icon" title="${cat}" style="color:${info.color};"><i class="fas ${info.icon}"></i></span>`
