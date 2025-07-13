@@ -11,27 +11,27 @@ function normalize(str) {
 }
 
 const themeInfo = {
-    "Accès aux soins": { //  rouge
+   "Accès aux soins": { // rouge
         "color": "#C00000",
         "icon": "fa-solid fa-syringe"
     },
-    "Contexte": {
-        "color": "#404040",  //  gris
+    "Contexte historique et institutionnel": {
+        "color": "#404040",  // gris
         "icon": "fa-solid fa-landmark"
     },
-    "Gouvernance et pilotage": {
+    "Gouvernance et politiques": {
         "color": "#05676C",  // bleu vert
         "icon": "fa-solid fa-scale-balanced"
     },
     "Indicateurs": {
-        "color": "#0B5294",  //  bleu 
+        "color": "#0B5294",  // bleu 
         "icon": "fa-solid fa-list-ol"
     },
     "Pathologies": {
-        "color": "#A66500",// orange
+        "color": "#A66500",  // orange
         "icon": "fa-solid fa-virus"
     },
-    "Prévention": {
+    "Prévention et promotion": {
         "color": "#005E00",  // vert
         "icon": "fa-solid fa-triangle-exclamation"
     },
@@ -39,9 +39,9 @@ const themeInfo = {
         "color": "#7030A0",  // violet
         "icon": "fa-solid fa-stethoscope"
     },
-    "Promotion de la santé": {
-        "color": "#003400", // vert forêt
-        "icon": "fa-solid fa-thumbs-up"
+    "Protection sociale": {
+        "color": "#003400",  // vert forêt
+        "icon": "fa-solid fa-people-group"
     },
     "Structures de santé": {
         "color": "#787800",  // marron clair
