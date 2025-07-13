@@ -14,7 +14,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1836-premier-medecin-tahiti",
@@ -31,7 +31,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1842-epidemie-variole-tahiti",
@@ -48,7 +48,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1843-premiere-infirmerie-tahiti",
@@ -66,7 +66,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1848-premier-veritable-recensement",
@@ -83,10 +83,27 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1850-maladies-endémiques",
+    "id": "1850-alerte-syphilis",
+    "title": "Alerte sur la recrudescence massive de la syphilis à Tahiti",
+    "year": 1850,
+    "description": "À partir des années 1850, la syphilis se répand largement à Tahiti, au point de devenir une préoccupation sanitaire majeure.En 1854, le médecin Prat estime que la moitié de la population est infectée, y compris la famille royale.Vingt ans plus tard, la situation est jugée encore plus préoccupante.Les données de 1859 révèlent que 222 femmes sur 430 examinées souffrent de maladies vénériennes, et la prévalence est encore plus élevée chez les hommes.Les baleiniers et navires marchands en provenance de San Francisco, Sydney et Valparaíso sont considérés comme les principaux vecteurs de la maladie.Les militaires ne sont pas épargnés : en 1864, sur 125 malades accueillis à l’hôpital militaire, 47 sont atteints de maladies vénériennes.Les autorités locales reconnaissent l’ampleur du phénomène, souvent jugé difficile à maîtriser.",
+    "theme": [
+      "Pathologies"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "O’Reilly, Patrick. “IX. Hygiène et médecine”. La vie à Tahiti au temps de la reine Pomaré, Société des Océanistes, 1975 | https://books.openedition.org/sdo/927"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1850-maladies-endemiques",
     "title": "Maladies endémiques à Tahiti dans les années 1850",
     "year": 1850,
     "description": "Vers 1850, plusieurs maladies affectent la population de Tahiti.La syphilis est très répandue, touchant toutes les couches de la société, y compris la famille royale. Les coliques sèches, causant de violentes douleurs abdominales, sont fréquentes et particulièrement redoutées ; on les attribuera plus tard à une intoxication au plomb. Le féfé (filariose) est également courant, provoquant des gonflements impressionnants des jambes ou du scrotum, mais il suscite peu d’inquiétude chez les personnes atteintes. Enfin, la lèpre, bien que peu signalée dans les rapports médicaux de l’époque, semble présente dans l’île. Les malades continuent souvent à vivre au sein de leur famille jusqu’à des stades très avancés de la maladie.",
@@ -100,7 +117,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1854-epidemie-rougeole-tahiti",
@@ -117,7 +134,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1854-premier-dispensaire",
@@ -134,24 +151,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
-  },
-  {
-    "id": "1854-syphilis",
-    "title": "Recrudescence de la  syphilis",
-    "year": 1854,
-    "description": "À partir des années 1850, la syphilis se répand largement à Tahiti.En 1854, le médecin Prat estime que la moitié de la population, y compris la famille royale, est infectée. Vingt ans plus tard, la situation est jugée encore plus préoccupante. Les données de 1859 indiquent que 222 femmes sur 430 examinées sont atteintes de maladies vénériennes, avec une prévalence encore plus forte chez les hommes.Les baleiniers et navires marchands venant de San Francisco, Sydney ou Valparaíso sont considérés comme les principaux vecteurs de cette propagation. Les militaires ne sont pas épargnés : en 1864, sur 125 malades accueillis à l'hôpital militaire, 47 étaient vénériens.Les autorités locales reconnaissent l’ampleur du phénomène, souvent jugé difficile à contenir.",
-    "theme": [
-      "Pathologies"
-    ],
-    "keywords": [],
-    "sources": [
-      {
-        "id_doc": "O’Reilly, Patrick. “IX. Hygiène et médecine”. La vie à Tahiti au temps de la reine Pomaré, Société des Océanistes, 1975 | https://books.openedition.org/sdo/927"
-      }
-    ],
-    "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1863-epidemie-variole-marquises",
@@ -168,7 +168,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1863-premier-hopital-tahiti",
@@ -186,7 +186,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1863-variole-tahiti",
@@ -204,13 +204,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1877-premier-dentiste",
     "title": "Premiers dentiste civil à Tahiti",
     "year": 1877,
-    "description": "En 1877, William Davis, un dentiste anglais, s’installe brièvement à Papeete. Il publie des annonces dans la presse locale pour proposer ses services, marquant l’apparition des premiers soins dentaires dans l’île.",
+    "description": "En 1877, William Davis, un dentiste anglais, s’installe brièvement à Papeete.Il publie des annonces dans la presse locale pour proposer ses services, marquant ainsi l’apparition des premiers soins dentaires civils à Tahiti.Cette initiative constitue une étape pionnière dans l’histoire des professions de santé en Polynésie française, bien avant l’institutionnalisation des soins bucco-dentaires.",
     "theme": [
       "Professionnels de santé"
     ],
@@ -221,13 +221,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1884-construction-hopital-vaiami",
     "title": "Construction de l'hôpital Vaiami",
     "year": 1884,
-    "description": "En 1884 est construit l'hôpital Vaiami qui restera l'hôpital principal de Tahitijusqu'en 1971.",
+    "description": "En 1884, est construit l’hôpital Vaiami à Papeete, sur l’emplacement d’un ancien camp militaire.Il deviendra l’établissement hospitalier principal de Tahiti, jouant un rôle central dans l’organisation des soins jusqu’en 1971, date de l’ouverture de l'hôpital de Mamao.",
     "theme": [
       "Structures de santé"
     ],
@@ -238,13 +238,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1918-construction-leproserie-hiva-hoa",
     "title": "Construction d'une léproserie à Hiva Hoa",
     "year": 1918,
-    "description": "En 1918, on dénombre 66 lépreux contre 230 en 1895.",
+    "description": "Après 1918, une léproserie est construite à Hiva Oa, dans l’archipel des Marquises, pour répondre à l’endémie de lèpre qui touche la population depuis la fin du XIXe siècle.À cette date, on ne recense plus que 66 cas de lèpre, contre 230 en 1895, ce qui montre un net recul de la maladie.Cette structure sanitaire marque un tournant dans la prise en charge des maladies infectieuses dans les archipels éloignés",
     "theme": [
       "Structures de santé"
     ],
@@ -255,7 +255,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1918-epidemie-grippe-espagnole",
@@ -278,13 +278,13 @@
         "url": "'https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/grippe-espagnole-ile-sous-le-vent.pdf"
       }
     ],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1920-nombre-professionnels-santé",
-    "title": "Nombre de professionnels de santé",
+    "id": "1920-effectif-professionnels-sante",
+    "title": "Effectifs très limités de professionnels de santé",
     "year": 1920,
-    "description": "En 1920, on recensait 10 professionnels de santé : - 4 médecins publics- 2 médecins libéraux-  et 4 infirmiers.",
+    "description": "En 1920, la Polynésie française ne compte que 10 professionnels de santé :- 4 médecins publics,- 2 médecins libéraux,- et 4 infirmiers.Ce chiffre témoigne de la fragilité du système de soins à cette époque, dans un contexte marqué par les épidémies et un accès aux soins très limité, notamment dans les archipels éloignés.",
     "theme": [
       "Professionnels de santé"
     ],
@@ -295,13 +295,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1923-medecin-civil-hiva-hoa",
-    "title": "Affectation d'un médecin civil à Hiva Hoa",
+    "title": "Premier médecin civil affecté au groupe nord des Marquises",
     "year": 1923,
-    "description": "En 1918, le résident en poste à Hiva Oa est un médecin des troupes coloniales. Ce n’est qu’en 1923 qu’un médecin civil est affecté au groupe nord des Marquises.",
+    "description": "En 1923, un médecin civil est affecté pour la première fois au groupe nord des Marquises.Jusqu’à cette date, les soins à Hiva Oa étaient assurés par un médecin des troupes coloniales, encore en poste en 1918.Cette affectation marque une étape dans l'encadrement médical des archipels éloignés, longtemps livrés à eux-mêmes face aux épidémies.",
     "theme": [
       "Professionnels de santé"
     ],
@@ -312,13 +312,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1926-depeuplement-extreme-des-marquises",
-    "title": "Dépeuplement extrême de l'archipel des Marquises",
-    "year": 1926,
-    "description": "En 1926, la population des Marquises représente 2 080 personnes, soit à peine 2 % de la population estimée à la fin du XVIIIe siècle (environ 80 000 personnes).Ce déclin résulte de nombreuses épidémies depuis le XIXe siècle, dont l'épidémie de variolede 1863.",
+    "id": "1926-debut-rebond-demographique",
+    "title": "Début du rebond démographique et amorce de la transition sanitaire",
+    "year": 1945,
+    "description": "En 1926, les établissements français d’Océanie (EFO) amorcent un rebond démographique, avec une population qui passe de 24 000 habitants cette année-là à près de 44 000 en 1936 pour l’ensemble des archipels.À partir de 1945, l'accroissement naturel est de 2 à 3 % par an, lié à un taux de fécondité élevé (6,3 enfants par femme) et à une forte baisse de la mortalité :- le taux de mortalité chute de 20 ‰ en 1945 à 10 ‰ en 1960,- et l’espérance de vie passe de 44 ans à 54 ans entre 1945 et 1958.A partir de 1956, la mortalité infantile diminue nettement, ce qui renforce la croissance naturelle et conduit à une population très jeune : dans les années 1960, 55 % des habitants ont moins de 20 ans.",
     "theme": [
       "Indicateurs"
     ],
@@ -329,13 +329,30 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1926-populations-marquises",
+    "title": "Niveau historiquement bas de la population aux Marquises",
+    "year": 1926,
+    "description": "En 1926, la population des Marquises est estimée à 2 080 personnes, soit à peine 2 % de la population estimée à la fin du XVIIIe siècle (environ 80 000 habitants).Ce dépeuplement extrême est la conséquence directe de nombreuses épidémies survenues au XIXe siècle, dont la plus meurtrière fut celle de variole en 1863, importée par un navire en provenance du Pérou.",
+    "theme": [
+      "Indicateurs"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
   },
   {
     "id": "1931-causes-mortalite",
-    "title": "Prinicipales causes de décés au début du XXème siècle",
+    "title": "Principales causes de décès en Polynésie française",
     "year": 1931,
-    "description": "Selon les Statistiques Démographiques et Sanitaires de Papeete, publiées en 1931, les principales causes de décès entre 1922 et 1931 sont : - Les maladies infectieuses et parasitaires, en particulier la tuberculose (en majorité)- les affections respiratoires- les affections digestives. Ensemble, ces trois groupes représentent près des deux tiers des décès. Il est à noter également, dans les années 1920, l'importance des affections de la période périnatale.",
+    "description": "En 1931, les Statistiques Démographiques et Sanitaires de Papeete révèlent que, pour la période 1922 à 1931, les maladies infectieuses et parasitaires, en particulier la tuberculose, constituent la principale cause de décès en Polynésie française.Elles sont suivies par les affections respiratoires et les affections digestives.Ensemble, ces trois groupes représentent près des deux tiers des décès enregistrés sur la période.Il est à noter également, dans les années 1920, l'importance des affections de la période périnatale.",
     "theme": [
       "Indicateurs"
     ],
@@ -346,30 +363,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
-  },
-  {
-    "id": "1935-offre-lits-hospitaliers",
-    "title": "Nombre de lits hospitaliers",
-    "year": 1935,
-    "description": "En 1935, on démonbre 60 lits hospitaliers.",
-    "theme": [
-      "Structures de santé"
-    ],
-    "keywords": [],
-    "sources": [
-      {
-        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
-      }
-    ],
-    "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1935-premiere-infirmerie-ua-pou",
     "title": "Ouverture de la première infirmerie à Ua Pou",
     "year": 1935,
-    "description": "En 1935, la première infirmerie est ouverte à Ua Pou.",
+    "description": "En 1935, la première infirmerie est ouverte sur l’île de Ua Pou, dans l’archipel des Marquises.",
     "theme": [
       "Structures de santé"
     ],
@@ -380,13 +380,30 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1939-nombre-professionnels-santé",
-    "title": "Nombre de professionnels de santé",
-    "year": 1939,
-    "description": "En 1939, la Polynésie française compte 9 professionnels de santé pour l’ensemble du territoire.",
+    "id": "1956-naissance-protection-sociale",
+    "title": "Naissance de la protection sociale",
+    "year": 1956,
+    "description": "La loi-cadre du 23 juin 1956 autorise le gouverneur des EFO à organiser les assurances sociales.Elle marque le point de départ d’un système structuré de protection sociale en Polynésie française.Dès le 28 septembre 1956, deux arrêtés créent la Caisse de compensation des prestations familiales (CCPF) et un régime de prestations familiales pour les salariés.La CCPF (futur CPS) est un organisme de droit privé à mission de service public, géré par les partenaires sociaux sous tutelle du gouverneur.La protection sociale sera renforcée par d'autres textes comme le décret du 24 février 1957 relatif aux accidents professionnels des salariés, et la délibération de l'assemblée territoriale du 24 août 1967 concernant l'assurance vieillesse qui va créer la CPS.",
+    "theme": [
+      "Accès aux soins"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1960-densite-professionnels-sante",
+    "title": "Progression du personnel infirmier en Polynésie française",
+    "year": 1960,
+    "description": "En 1960, la Polynésie française compte 19 infirmiers, contre seulement 9 professionnels de santé au total en 1939.Cette progression du nombre d’infirmiers a joué un rôle central dans l’amélioration de la santé publique dans les îles, aux côtés de l’augmentation du nombre de sages-femmes.",
     "theme": [
       "Professionnels de santé"
     ],
@@ -397,13 +414,132 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1945-rebond-demographique",
-    "title": "Rebond démographique et transition sanitaire dans les EFO",
-    "year": 1945,
-    "description": "À partir de 1945, les établissements français d’Océanie (EFO) connaissent une forte croissance naturelle de 2 à 3 % par an. Cette dynamique s’explique par un taux de fécondité élevé (6,3 enfants par femme) et une baisse significative de la mortalité : le taux de mortalité passe de 20 ‰ en 1945 à 10 ‰ en 1960, tandis que l’espérance de vie progresse de 44 ans à 54 ans entre 1945 et 1958.Cette transition démographique s’inscrit dans une évolution amorcée dès l’entre-deux-guerres, avec une population passant de 24 000 habitants en 1926 à près de 44 000 en 1936 pour l’ensemble des archipels.La baisse de la mortalité infantile à partir de 1956 vient renforcer cette croissance, donnant naissance à une population très jeune : dans les années 1960, 55 % des habitants ont moins de 20 ans.",
+    "id": "1960-offre-lits-hospitaliers",
+    "title": "Augmentation du nombre de lits hospitaliers",
+    "year": 1960,
+    "description": "À la fin des années 1950, la Polynésie française dispose de 450 lits hospitaliers répartis sur quatre îles.Cette capacité marque une forte progression par rapport à 1935, où l’on ne comptait que 60 lits.Cette évolution traduit un renforcement important des infrastructures de soins, en lien avec la croissance démographique et les besoins sanitaires du territoire.",
+    "theme": [
+      "Structures de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1965-cardella",
+    "title": "Ouverture de la clinique Cardella",
+    "year": 1965,
+    "description": "Ouverture de la clinique Cardella",
+    "theme": [
+      "Structures de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1966-jean-prince",
+    "title": "Ouverture de l'hôpital militaire Jean-Prince",
+    "year": 1966,
+    "description": "En 1966, l'hôpital militaire Jean-Prince ouvre à Pirae.Il fermera ses portes en 1988.",
+    "theme": [
+      "Structures de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1966-maladies-infectieuses",
+    "title": "Les maladies infectieuses et les intoxications dominent le paysage sanitaire",
+    "year": 1966,
+    "description": "En 1966, le rapport annuel de la santé publique dresse un constat sur les pathologies dominantes à cette époque.Les maladies infectieuses arrivent alors en tête des motifs d’hospitalisation :- La tuberculose représente à elle seule 22 000 journées d’hospitalisation,- La lèpre, plus de 20 000,- La typhoïde provoque 1 145 hospitalisations,- La syphilis fait l’objet de 2 255 diagnostics,La filariose et le rhumatisme articulaire aigu restent également très présents.À cela s’ajoutent des pathologies métaboliques émergentes (obésité, diabète, hypertension, goutte, asthme), ainsi que de nombreuses parasitoses intestinales et cas de ciguatera, notamment aux Tuamotu.Les intoxications dues au \"raau Tahiti\", une pharmacopée traditionnelle, causent une mortalité infantile préoccupante. Entre 1966 et 1970, 43 décès d’enfants au CHT sont liés à ces remèdes, et en février 1970, la clinique Cardella signale 27 décès infantiles du même type.La psychiatrie mobilise également 10 000 journées d’hospitalisation, sur un total annuel de 197 000, soulignant une pression croissante sur le système de soins mentaux.Ce tableau montre que la transition épidémiologique est en cours, mais que les maladies infectieuses restent largement dominantes dans le paysage sanitaire polynésien des années 1960.",
+    "theme": [
+      "Pathologies"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1967-creation-cps",
+    "title": "Création de la Caisse de prévoyance sociale (CPS)",
+    "year": 1967,
+    "description": "En 1967, la Caisse de prévoyance sociale (CPS) est officiellement créée comme un organisme social de droit privé à mission de service public, sous la tutelle du gouvernement de la Polynésie française.Elle a pour mission la gestion de l’ensemble des régimes sociaux du pays ( recouvrement des cotisations, paiement des prestations sociales et de santé, etc.).Plusieurs délibérations viennent renforcer son rôle :- 25 janvier 1974 : création de l’assurance volontaire pour les salariés,- 14 février 1974 : assurance invalidité obligatoire pour les travailleurs salariés,- 7 octobre 1976 : assurance volontaire obligatoire pour les travailleurs salariés,- 15 avril 1979 : création du Régime de protection sociale en milieu rural (RPSMR) pour les agriculteurs, pêcheurs et artisans.",
+    "theme": [
+      "Accès aux soins"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1971-mamao",
+    "title": "Ouverture du centre hospitalier de Mamao",
+    "year": 1971,
+    "description": "Le centre hospitalier de Mamao  a été construit à partir de 1966 et a ouvert ses portes en 1971-1972.",
+    "theme": [
+      "Structures de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1982-clinique-paofai",
+    "title": "Ouverture de la clinique Paofai",
+    "year": 1982,
+    "description": "La clinique Paofai a ouvert ses portes en 1982.",
+    "theme": [
+      "Structures de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1983-doublement-population",
+    "title": "Doublement de la population en Polynésie française",
+    "year": 1983,
+    "description": "Entre 1956 et 1983, la population polynésienne double, passant de 76 327 à 167 000 habitants.Le taux d’accroissement naturel est d'environ 2,5 %, confirmant la poursuite de la croissance rapide engagée depuis les années 1950.Ce essor démographique remarquable s’explique par une combinaison de forte fécondité et de recul de la mortalité, dans un contexte de modernisation sanitaire.",
     "theme": [
       "Indicateurs"
     ],
@@ -414,30 +550,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1960-densite-professionnels-santé",
-    "title": "Nombre de professionnels de santé",
-    "year": 1960,
-    "description": "En 1960, il ya 19 infirmiers.",
-    "theme": [
-      "Professionnels de santé"
-    ],
-    "keywords": [],
-    "sources": [
-      {
-        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
-      }
-    ],
-    "more": [],
-    "added": "10/07/2025"
-  },
-  {
-    "id": "1960-offre-lits-hospitaliers",
-    "title": "Nombre de lits hospitaliers",
-    "year": 1960,
-    "description": "A la fin des années 1950, on démonbre 450 lits hospitaliers répartis sur quatre îles.",
+    "id": "1983-lits-hospitaliers",
+    "title": "Plus de 1 000 lits hospitaliers",
+    "year": 1983,
+    "description": "En 1983, la Polynésie française atteint 1 027 lits hospitaliers disponibles :- 843 lits dans le secteur public,- 184 lits dans des établissements privés à Tahiti.Le réseau hospitalier se  structure autour de plusieurs établissements : le CHPF, les hôpitaux de Taravao, Taiohae, Raiatea, Moorea, et plusieurs cliniques privées comme Cardella et Paofai.",
     "theme": [
       "Structures de santé"
     ],
@@ -448,13 +567,13 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "1984-statut-autonomie-interne",
     "title": "Premier statut d’autonomie interne",
     "year": 1984,
-    "description": "Aux termes de l'article premier de la loi n° 84-820 du 6 septembre 1984, le territoire de la Polynésie française constitue« un territoire d'outre-mer doté de l'autonomie interne dans le cadre de la République ».Les institutions du territoire sont constituées du gouvernement du territoire, de l'assemblée territoriale et du comité économique, social et culturel.Le haut-commissaire a la charge des intérêts nationaux, du respect des lois et de l'ordre public ; il veille à l'exercice régulier de leurs compétences par les autorités territoriales. (Extrait du site internet du Haut-commissariat de Polynésie française)",
+    "description": "Le 6 septembre 1984, la loi n° 84-820 établit le premier statut d’autonomie interne de la Polynésie française.Selon son article premier, la Polynésie devient « un territoire d'outre-mer doté de l'autonomie interne dans le cadre de la République ».Les institutions du territoire sont alors constituées du gouvernement du territoire, de l'assemblée territoriale et du comité économique, social et culturel.Le haut-commissaire reste responsable des intérêts nationaux, du respect des lois, de l’ordre public, et veille à l’exercice régulier des compétences par les autorités territoriales.",
     "theme": [
       "Contexte"
     ],
@@ -470,13 +589,13 @@
         "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=183960"
       }
     ],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
-    "id": "1986-causes-mortalite",
-    "title": "Prinicipales causes de décés au fin du XXème siècle",
+    "id": "1986-recul-mortalite-maladies-infectieuses",
+    "title": "Fort recul de la mortalité due aux maladies infectieuses",
     "year": 1986,
-    "description": "Les maladies infectieuses et parasitaires, en particulier la tuberculose, les affections respiratoires et les affections digestives représentent  15,6 % des décès en 1986 contre près des deux tiers des décès entre 1922 et 1931. La chute est particulièrement marquée pour les maladies infectieuses, dont la part a été divisée par dix.",
+    "description": "En 1986, les maladies infectieuses et parasitaires (notamment la tuberculose)  les affections respiratoires et les affections digestives ne représentent plus que 15,6 % des décès en Polynésie française.Cela marque une chute spectaculaire par rapport à la période 1922–1931, durant laquelle ces maladies étaient responsables de près des deux tiers des décès.La baisse est particulièrement marquée pour les maladies infectieuses, dont la part a été divisée par dix au cours du XXe siècle.Cet événement témoigne d’une transition sanitaire majeure, liée aux progrès en médecine, à la vaccination, à l’hygiène et à la prévention.",
     "theme": [
       "Indicateurs"
     ],
@@ -487,7 +606,160 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1988-chute-natalite",
+    "title": "Chute de la natalité",
+    "year": 1988,
+    "description": "En 1988, l’indice conjoncturel de fécondité chute à 3,6 enfants par femme, contre 6,3 dans les années 1970.Ce recul s’explique par l’élévation du niveau de vie, la généralisation de la contraception, et le développement de l’emploi féminin.Cet événement marque le passage d’une société à forte natalité vers une société en phase de stabilisation démographique, typique des transitions de fécondité dans les sociétés en modernisation.",
+    "theme": [
+      "Indicateurs"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1994-creation-rspf",
+    "title": "Création du Régime de solidarité de la Polynésie française (RSPF)",
+    "year": 1994,
+    "description": "Le 3 février 1994, la protection sociale généralisée (PSG) est instituée en Polynésie française par délibération de l’Assemblée de la Polynésie française, avec la création du Régime de solidarité de la Polynésie française (RSPF).Ce nouveau régime, financé par la contribution de solidarité territoriale (CST), l’État et diverses taxes, permet à des personnes sans cotisations d’accéder aux soins dans le secteur privé, en plus des structures publiques.",
+    "theme": [
+      "Accès aux soins"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1995-depenses-sante",
+    "title": "Forte augmentation des dépenses de santé",
+    "year": 1995,
+    "description": "On observe dès les années 90, une augmentation rapide et durable des dépenses de santé.Elles vont doubler entre 1988 (4,8 milliards CFP) et 1995 (10,5 milliards), puis atteindre 21,5 milliards en 1996, 25,4 milliards en 1998, pour culminer à près de 51 milliards en 2009.La population couverte n’a été multiplié que de 1,4 entre 1996 et 2009 (de 200  765 à 262  634 personnes), alors que les dépenses ont été multipliées par 2,3.",
+    "theme": [
+      "Accès aux soins"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "1995-lits-hospitaliers",
+    "title": "Baisse du nombre de lits hospitalier",
+    "year": 1995,
+    "description": "En 1995, on dénombre 766 lits hospitaliers disponibles, soit près de 25 % de moins qu’en 1983.Le secteur public passe de 843 à 555 lits, dont 400 concentrés au CHPF et 15 à Moorea.Le secteur privé, lui, progresse légèrement à 211 lits.",
+    "theme": [
+      "Structures de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "2003-praticiens-liberaux",
+    "title": "Forte augmentation du nombre de praticiens libéraux",
+    "year": 2003,
+    "description": "Entre 1993 et 2003, le nombre de professionnels de santé libéraux en Polynésie française augmente de 50 %.Cette évolution s’inscrit dans le contexte de la généralisation de la protection sociale (RSPF, 1994), qui permet à un nombre croissant de patients d’accéder gratuitement aux soins en secteur privé.En 2002, les soins en secteur privé dépassent pour la première fois ceux du CHPF (Centre hospitalier de Polynésie française), représentant 43 % des dépenses de santé, contre 34 % en 1996.",
+    "theme": [
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "2006-maladies-chroniques",
+    "title": "Les maladies chroniques sont la principale charge sanitaire",
+    "year": 2006,
+    "description": "En 2006, les grandes endémies historiques (lèpre, typhoïde, tuberculose) sont maîtrisées en Polynésie française, grâce à la vaccination généralisée et au développement des structures de santé.Cependant, certaines maladies infectieuses persistent, comme le rhumatisme articulaire aigu (RAA), la filariose, la tuberculose, le SIDA et la leptospirose, qui restent des préoccupations de santé publique.Les pathologies les plus répandues et les plus coûteuses sont l'insuffisance rénale, les maladies coronariennes, les cancers, en forte hausse avec plus de 525 cas diagnostiqués en 2005 pour 42 en 1966.En parallèle, certaines maladies chroniques deviennent les principales causes de décès. En 2007, sur 1 152 décès de causes connues, les cancers sont responsables de 308 décès, suivis par les maladies cardio-vasculaires (292 cas), les blessures et causes externes (132 cas), et les pathologies respiratoires (101 cas).L'obésité et les pathologies de surcharge sont signalées comme prioritaires par les 500 professionnels de santé interrogés lors de la préparation du Plan santé 2001–2005.Pour la population générale, notamment les adolescents, les violences conjugales et l’alcoolisme sont perçus comme des urgences sanitaires majeures.Ce changement marque une transition épidémiologique complète : des maladies infectieuses aux maladies chroniques, dans un contexte de vieillissement de la population, de sédentarité, et de changements alimentaires profonds.",
+    "theme": [
+      "Pathologies"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "2008-esperance-vie",
+    "title": "L’espérance de vie atteint un niveau record en Polynésie française",
+    "year": 2008,
+    "description": "En 2008, l’espérance de vie en Polynésie française atteint un niveau record, avec 78,2 ans pour les femmes et 73 ans pour les hommes, contre respectivement 65 et 60 ans dans les années 1980.Cette évolution résulte d’une progression régulière de la longévité de 3,4 mois par an depuis 1998. Ce progrès s’accompagne d’un vieillissement accéléré de la population, qui soulève des enjeux majeurs pour le financement des dépenses de santé et des retraites dans les années à venir.",
+    "theme": [
+      "Indicateurs"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "2008-ralentissement-croissance-demographique",
+    "title": "Ralentissement net de la croissance démographique",
+    "year": 2008,
+    "description": "En 2008, le taux de croissance de la population polynésienne tombe à 1,3 % par an.Ce ralentissement confirme l’entrée dans une nouvelle phase de transition démographique, où la fécondité se rapproche du seuil de renouvellement.",
+    "theme": [
+      "Indicateurs"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "L'histoire démographique | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/histoire-demographique.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
+  },
+  {
+    "id": "2010-cout-psg",
+    "title": "Augmentation du coût de la PSG",
+    "year": 2010,
+    "description": "Entre 1995 et 2010, les dépenses liées à la protection sociale généralisée (PSG) en Polynésie française passent de 40,8 milliards CFP à 103,4 milliards CFP, soit une hausse de 150 %.Cette augmentation dépasse largement la croissance démographique du système :- en 1995, 189 700 personnes étaient couvertes ;- en 2010, elles sont 262  600 (soit +38 %).Cette évolution est liée à :- la montée en charge du secteur privé,- l’accès généralisé aux soins permis par le RSPF,- et au vieillissement de la population entraînant plus de pathologies chroniques.",
+    "theme": [
+      "Accès aux soins"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf"
+      }
+    ],
+    "more": [],
+    "added": "13/07/2025"
   },
   {
     "id": "2013-premiere-greffe",
@@ -513,7 +785,7 @@
         "url": "https://www.youtube.com/watch?v=DPymhpBTkTs&t=33s"
       }
     ],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "2016-publication-sos-2016-2021",
@@ -530,7 +802,7 @@
       }
     ],
     "more": [],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "2017-creation-ecole-cja-en-sante",
@@ -556,7 +828,7 @@
         "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante"
       }
     ],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   },
   {
     "id": "2021-creation-icpf",
@@ -578,6 +850,6 @@
         "url": "https://www.icpf.pf"
       }
     ],
-    "added": "10/07/2025"
+    "added": "13/07/2025"
   }
 ]
