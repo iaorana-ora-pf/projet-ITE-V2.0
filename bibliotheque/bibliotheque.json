@@ -34,5 +34,11 @@
     "label": "Santé publique et démographie en Polynésie française du 18ème siècle à nos jours",
     "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf",
     "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/main/images/gille-bernard-sante-polynesie.png"
-  }
+  },
+   {
+    "id_doc": "doc7",
+    "label": "Déficit des législations des professions de santé",
+    "url": "https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/gille-bernard-sante-polynesie.pdf",
+    "image": "https://raw.githubusercontent.com/iaorana-ora-pf/projet-ITE-V2.0/main/images/gille-bernard-sante-polynesie.png"
+  }  
 ]
