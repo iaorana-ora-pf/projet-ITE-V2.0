@@ -14,7 +14,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1836-premier-medecin-tahiti",
@@ -31,7 +31,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1842-epidemie-variole-tahiti",
@@ -48,7 +48,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1843-premiere-infirmerie-tahiti",
@@ -65,7 +65,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1848-premier-veritable-recensement",
@@ -82,7 +82,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1850-alerte-syphilis",
@@ -99,7 +99,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1850-maladies-endemiques",
@@ -116,7 +116,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1854-epidemie-rougeole-tahiti",
@@ -133,7 +133,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1854-premier-dispensaire",
@@ -150,7 +150,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1863-epidemie-variole-marquises",
@@ -167,7 +167,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1863-premier-hopital-tahiti",
@@ -184,7 +184,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1863-variole-tahiti",
@@ -202,7 +202,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1877-premier-dentiste",
@@ -219,7 +219,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1884-construction-hopital-vaiami",
@@ -236,7 +236,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1918-construction-leproserie-hiva-hoa",
@@ -253,7 +253,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1918-epidemie-grippe-espagnole",
@@ -275,7 +275,7 @@
         "url": "'https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/grippe-espagnole-ile-sous-le-vent.pdf"
       }
     ],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1920-effectif-professionnels-sante",
@@ -292,7 +292,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1923-medecin-civil-hiva-hoa",
@@ -309,7 +309,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1926-debut-rebond-demographique",
@@ -326,7 +326,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1926-populations-marquises",
@@ -343,7 +343,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1931-causes-mortalite",
@@ -360,7 +360,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1935-premiere-infirmerie-ua-pou",
@@ -377,7 +377,53 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
+  },
+  {
+    "id": "1952-legislation-professions-medicales",
+    "title": "Application en Polynésie française de la législation sur les professions médicales",
+    "year": 1952,
+    "description": "Le décret n° 52-964 du 28 juillet 1952 rend applicable en Polynésie française l’ordonnance n° 45-2184 du 24 septembre 1945 relative à l'organisation des professions médicales.",
+    "theme": [
+      "Gouvernance et politiques",
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Déficit des législations des professions de santé en Polynésie française | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/xavier-malatre-deficit-legislation-professions-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Décret n°52-964 du 9 août 1952",
+        "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000867830"
+      }
+    ],
+    "added": "26/07/2025"
+  },
+  {
+    "id": "1954-legislation-pharmacie",
+    "title": "Application en Polynésie française de la législation sur l’exercice de la pharmacie",
+    "year": 1954,
+    "description": "La loi n° 54-418 du 15 avril 1954 rend applicables en Polynésie française certaines dispositions du code de la santé publique relatives à l’exercice de la profession de pharmacien. Elle constitue le fondement juridique de la pratique pharmaceutique dans le territoire.",
+    "theme": [
+      "Gouvernance et politiques",
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Déficit des législations des professions de santé en Polynésie française | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/xavier-malatre-deficit-legislation-professions-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Loi n°54-418 du 15 avril 1954",
+        "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000509967"
+      }
+    ],
+    "added": "26/07/2025"
   },
   {
     "id": "1956-naissance-protection-sociale",
@@ -394,7 +440,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1960-nombre-professionnels-sante",
@@ -411,7 +457,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1960-offre-lits-hospitaliers",
@@ -428,7 +474,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1965-cardella",
@@ -445,7 +491,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1966-jean-prince",
@@ -462,7 +508,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1966-maladies-infectieuses",
@@ -479,7 +525,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1967-creation-cps",
@@ -496,7 +542,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1971-mamao",
@@ -513,7 +559,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1982-clinique-paofai",
@@ -530,7 +576,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1983-doublement-population",
@@ -547,7 +593,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1983-lits-hospitaliers",
@@ -564,7 +610,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1984-statut-autonomie-interne",
@@ -586,7 +632,7 @@
         "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=183960"
       }
     ],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1986-recul-mortalite-maladies-infectieuses",
@@ -603,7 +649,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1988-diminution-natalite",
@@ -620,7 +666,30 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
+  },
+  {
+    "id": "1988-encadrement-exercice-pharmaceutique",
+    "title": "Encadrement spécifique de l’exercice pharmaceutique en Polynésie française",
+    "year": 1988,
+    "description": "La délibération n° 88-153 AT du 20 octobre 1988 fixe un cadre réglementaire propre à l’exercice de la pharmacie en Polynésie française. Elle précise notamment les conditions d’exercice et d’installation des pharmaciens.Ce texte est par la suite modifié à plusieurs reprises (en 2001, 2002, 2003 et 2004) pour ajuster ses dispositions aux évolutions du secteur.",
+    "theme": [
+      "Gouvernance et politiques",
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Déficit des législations des professions de santé en Polynésie française | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/xavier-malatre-deficit-legislation-professions-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Arrêté n° 610 CM du 9 mai 1989 portant application de la délibération n° 88-153 AT du 20 octobre 1988 relative à certaines dispositions concernant l'exercice de la pharmacie",
+        "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=149897&idr=937&np=1"
+      }
+    ],
+    "added": "26/07/2025"
   },
   {
     "id": "1994-creation-rspf",
@@ -637,7 +706,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1995-depenses-sante",
@@ -654,7 +723,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "1995-lits-hospitaliers",
@@ -671,7 +740,34 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
+  },
+  {
+    "id": "1996-adoption-code-deontologie-medicale",
+    "title": "Adoption du code de déontologie médicale en Polynésie française",
+    "year": 1996,
+    "description": "En octobre 1996, une délibération de l’Assemblée de la Polynésie française établit le code de déontologie médicale applicable localement.",
+    "theme": [
+      "Gouvernance et politiques",
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Déficit des législations des professions de santé en Polynésie française | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/xavier-malatre-deficit-legislation-professions-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Délibération n° 96-115 APF du 10 octobre 1996 portant code de déontologie médicale",
+        "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=181257"
+      },
+      {
+        "label": "Délibération n° 96-116 APF du 10 octobre 1996 portant code de déontologie des chirurgiens-dentistes",
+        "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=181258"
+      }
+    ],
+    "added": "26/07/2025"
   },
   {
     "id": "2003-praticiens-liberaux",
@@ -688,7 +784,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2006-maladies-chroniques",
@@ -705,7 +801,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2008-esperance-vie",
@@ -722,7 +818,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2008-ralentissement-croissance-demographique",
@@ -739,7 +835,61 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
+  },
+  {
+    "id": "2009-encadrement-profession-infirmier",
+    "title": "Encadrement législatif et déontologique de la profession d’infirmier en Polynésie française",
+    "year": 2009,
+    "description": "En 2009, la loi du pays n° 2009-2 du 28 janvier établit le cadre d’exercice de la profession d’infirmier en Polynésie française. Elle définit les conditions d’exercice (diplôme, inscription à l’Ordre, enregistrement à la Direction de la santé) et met en place l’Ordre des infirmiers, dont le premier conseil est élu en septembre 2009.Ce cadre est complété par la délibération n° 2009-14 APF du 14 mai adoptant le code de déontologie infirmier, ainsi que par l’arrêté n° 449 CM du 2 avril précisant les actes que les infirmiers peuvent réaliser de manière autonome ou sur prescription médicale.",
+    "theme": [
+      "Gouvernance et politiques",
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Déficit des législations des professions de santé en Polynésie française | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/xavier-malatre-deficit-legislation-professions-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Loi du Pays n° 2009-2 du 28 janvier 2009 relative à la profession d'infirmier en Polynésie française",
+        "url": "https://dev2lexpol.cloud.pf/LexpolAfficheTexte.php?texte=217379&idr=938&np=1"
+      },
+      {
+        "label": "Délibération n° 2009-14 APF du 14 mai 2009 relative au code déontologie des infirmiers",
+        "url": "https://dev2lexpol.cloud.pf/LexpolAfficheTexte.php?texte=236984&idr=941&np=1"
+      },
+      {
+        "label": "Arrêté n° 449 CM du 2 avril 2009 relatif aux actes professionnels et à l'exercice de la profession d'infirmier",
+        "url": "https://dev2lexpol.cloud.pf/LexpolAfficheTexte.php?texte=231278&idr=942&np=1"
+      }
+    ],
+    "added": "26/07/2025"
+  },
+  {
+    "id": "2009-extension-competence-sages-femmes",
+    "title": "Extension des compétences des sages-femmes en Polynésie française",
+    "year": 2009,
+    "description": "La loi du pays n° 2009-14 APF du 3 août 2009, complétée par plusieurs arrêtés, modifie le champ d’intervention des sages-femmes en Polynésie française.Ce texte permet notamment d’aligner certaines compétences sur celles reconnues en métropole : réalisation de vaccinations, prescription de dispositifs médicaux.Il introduit également une extension de leurs missions en matière de dépistage des cancers gynécologiques et de protection infantile, sous condition d'exercice en structure publique et de formation spécifique.",
+    "theme": [
+      "Gouvernance et politiques",
+      "Professionnels de santé"
+    ],
+    "keywords": [],
+    "sources": [
+      {
+        "id_doc": "Déficit des législations des professions de santé en Polynésie française | https://cdn.jsdelivr.net/gh/iaorana-ora-pf/projet-ITE-V2.0/docs/xavier-malatre-deficit-legislation-professions-sante.pdf"
+      }
+    ],
+    "more": [
+      {
+        "label": "Loi du Pays n° 2009-14 du 3 août 2009 portant modification de l'ordonnance n° 45-2184 du 24 septembre 1945 modifiée relative à l'exercice et à l'organisation des professions de médecin, de chirurgien-dentiste et de sage-femme",
+        "url": "https://lexpol.cloud.pf/LexpolAfficheTexte.php?texte=245526"
+      }
+    ],
+    "added": "26/07/2025"
   },
   {
     "id": "2010-cout-psg",
@@ -756,7 +906,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2013-premiere-greffe",
@@ -782,7 +932,7 @@
         "url": "https://www.youtube.com/watch?v=DPymhpBTkTs&t=33s"
       }
     ],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2016-publication-sos-2016-2021",
@@ -799,7 +949,7 @@
       }
     ],
     "more": [],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2017-creation-ecole-cja-en-sante",
@@ -825,7 +975,7 @@
         "url": "https://www.service-public.pf/dsp/dispositifs/label-ecole-cja-sante"
       }
     ],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   },
   {
     "id": "2021-creation-icpf",
@@ -847,6 +997,6 @@
         "url": "https://www.icpf.pf"
       }
     ],
-    "added": "13/07/2025"
+    "added": "26/07/2025"
   }
 ]
